@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Leitor e Exibidor de arquivos .class: Código-Fonte de include/I_LECLASS.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Leitor e Exibidor de arquivos .class
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">I_LECLASS.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i___l_e_c_l_a_s_s_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef I_LECLASS</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define I_LECLASS</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(LCLASS_SERV) &amp;&amp; defined(ECLASS_SERV) &amp;&amp; defined(OPCLASS_SERV)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define EXT4</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_i___l_e_c_l_a_s_s_8h.html#a96842be40dbf0eab67687ef7ab7d608e">   17</a></span>&#160;<span class="preprocessor">#define EXT4 extern</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include&lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html">IP_LECLASS.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span><a class="code" href="_i___l_e_c_l_a_s_s_8h.html#a96842be40dbf0eab67687ef7ab7d608e">EXT4</a> <span class="keywordtype">void</span> <a class="code" href="_i___l_e_c_l_a_s_s_8h.html#a5f8afd04c8b74958686cd1a231d7d3de">LECLASS_leitor</a>(<a class="code" href="structarq_class.html">ArqClass</a>* arq_class, <span class="keyword">const</span> <span class="keywordtype">char</span>* arquivo_entrada);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span><a class="code" href="_i___l_e_c_l_a_s_s_8h.html#a96842be40dbf0eab67687ef7ab7d608e">EXT4</a> <span class="keywordtype">void</span> <a class="code" href="_i___l_e_c_l_a_s_s_8h.html#a756f567aefc768359ad2922ac2135b4e">LECLASS_exibidor</a>(<a class="code" href="structarq_class.html">ArqClass</a>* arq_class);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span><a class="code" href="_i___l_e_c_l_a_s_s_8h.html#a96842be40dbf0eab67687ef7ab7d608e">EXT4</a> <span class="keywordtype">void</span> <a class="code" href="_i___l_e_c_l_a_s_s_8h.html#a70b83886ad59a9fccf0fc86292b736da">LECLASS_free</a>(<a class="code" href="structarq_class.html">ArqClass</a>* arq_class);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="_i___l_e_c_l_a_s_s_8h_html_a756f567aefc768359ad2922ac2135b4e"><div class="ttname"><a href="_i___l_e_c_l_a_s_s_8h.html#a756f567aefc768359ad2922ac2135b4e">LECLASS_exibidor</a></div><div class="ttdeci">EXT4 void LECLASS_exibidor(ArqClass *arq_class)</div><div class="ttdef"><b>Definition:</b> M_ECLASS.c:182</div></div>
+<div class="ttc" id="_i___l_e_c_l_a_s_s_8h_html_a5f8afd04c8b74958686cd1a231d7d3de"><div class="ttname"><a href="_i___l_e_c_l_a_s_s_8h.html#a5f8afd04c8b74958686cd1a231d7d3de">LECLASS_leitor</a></div><div class="ttdeci">EXT4 void LECLASS_leitor(ArqClass *arq_class, const char *arquivo_entrada)</div><div class="ttdef"><b>Definition:</b> M_LCLASS.c:186</div></div>
+<div class="ttc" id="_i___l_e_c_l_a_s_s_8h_html_a96842be40dbf0eab67687ef7ab7d608e"><div class="ttname"><a href="_i___l_e_c_l_a_s_s_8h.html#a96842be40dbf0eab67687ef7ab7d608e">EXT4</a></div><div class="ttdeci">#define EXT4</div><div class="ttdef"><b>Definition:</b> I_LECLASS.h:17</div></div>
+<div class="ttc" id="_i_p___l_e_c_l_a_s_s_8h_html"><div class="ttname"><a href="_i_p___l_e_c_l_a_s_s_8h.html">IP_LECLASS.h</a></div><div class="ttdoc">Interface de Persistencia do Leitor e Exibidor de arquivos ".class". </div></div>
+<div class="ttc" id="structarq_class_html"><div class="ttname"><a href="structarq_class.html">arqClass</a></div><div class="ttdoc">Estrutura de Arquivo .class. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:126</div></div>
+<div class="ttc" id="_i___l_e_c_l_a_s_s_8h_html_a70b83886ad59a9fccf0fc86292b736da"><div class="ttname"><a href="_i___l_e_c_l_a_s_s_8h.html#a70b83886ad59a9fccf0fc86292b736da">LECLASS_free</a></div><div class="ttdeci">EXT4 void LECLASS_free(ArqClass *arq_class)</div><div class="ttdef"><b>Definition:</b> M_OPCLASS.c:81</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

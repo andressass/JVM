@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "exibeCtePool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "arq_class-&gt;constant_pool[15]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "INTUSU_executar:M_INTUSU.c">
+      </ContextState>
+      <ContextState
+         contextName = "LeCtePool:M_LOGNEG.c">
+      </ContextState>
+      <ContextState
+         contextName = "leCampMetd:M_LOGNEG.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "fi-&gt;attributes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "freeAtributo:M_OPCLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "arquivoParaArqClass:M_LCLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "freeCtePool:M_OPCLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "leCtePool:M_LCLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cp - constant_pool + constant_pool_count - 1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "leAtributo:M_LOGNEG.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "atributo-&gt;info[9]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ArquivoParaArqClass:M_LOGNEG.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "arq_class-&gt;attributes[0]-&gt;info[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,126 @@
+\hypertarget{_m___o_p_c_l_a_s_s_8c}{}\section{Referência do Arquivo src/\+M\+\_\+\+O\+P\+C\+L\+A\+S\+S.c}
+\label{_m___o_p_c_l_a_s_s_8c}\index{src/\+M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{src/\+M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}}
+
+
+Modulo Operador de estruturas \char`\"{}.\+class\char`\"{}.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{_m___o_p_c_l_a_s_s_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___o_p_c_l_a_s_s_8c_a53dd9ee430ed991e734e2538e2bc6634}{O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___o_p_c_l_a_s_s_8c_a3b121ea135557153f073dd0e34eb25b7}{free\+Cte\+Pool} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\item 
+void \hyperlink{_m___o_p_c_l_a_s_s_8c_ad23f55e21744a24fca5c3e869be6a739}{free\+Atributo} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a4c2796d61bb99bf730b1807fc838c847}{attribute\+\_\+info} $\ast$atributo)
+\item 
+void \hyperlink{_m___o_p_c_l_a_s_s_8c_a51ca8230624e33739ad1d9c32681ff24}{free\+Camp\+Metd} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} count, \hyperlink{_e___l_e_c_l_a_s_s_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{field\+\_\+or\+\_\+method} $\ast$f\+\_\+or\+\_\+m)
+\item 
+void \hyperlink{_m___o_p_c_l_a_s_s_8c_a9a9eeb4c3b6d71246f2adc5c907ec55e}{L\+E\+C\+L\+A\+S\+S\+\_\+free} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo Operador de estruturas \char`\"{}.\+class\char`\"{}. 
+
+Modulo responsavel por implementar os metodos relacionados a manutencao de uma estrutura Arq\+Class 
+
+\subsection{Definições e macros}
+\hypertarget{_m___o_p_c_l_a_s_s_8c_a53dd9ee430ed991e734e2538e2bc6634}{}\index{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}!O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V@{O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}}
+\index{O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V@{O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}!M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+P\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}\label{_m___o_p_c_l_a_s_s_8c_a53dd9ee430ed991e734e2538e2bc6634}
+
+
+\subsection{Funções}
+\hypertarget{_m___o_p_c_l_a_s_s_8c_ad23f55e21744a24fca5c3e869be6a739}{}\index{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}!free\+Atributo@{free\+Atributo}}
+\index{free\+Atributo@{free\+Atributo}!M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{free\+Atributo(attribute\+\_\+info $\ast$atributo)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Atributo (
+\begin{DoxyParamCaption}
+\item[{{\bf attribute\+\_\+info} $\ast$}]{atributo}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_c_l_a_s_s_8c_ad23f55e21744a24fca5c3e869be6a739}
+Metodo que libera recursivamente uma estrutura de atributo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq} & Arquivo a ser lido. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___o_p_c_l_a_s_s_8c_a51ca8230624e33739ad1d9c32681ff24}{}\index{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}!free\+Camp\+Metd@{free\+Camp\+Metd}}
+\index{free\+Camp\+Metd@{free\+Camp\+Metd}!M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{free\+Camp\+Metd(u2 count, field\+\_\+or\+\_\+method $\ast$f\+\_\+or\+\_\+m)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Camp\+Metd (
+\begin{DoxyParamCaption}
+\item[{{\bf u2}}]{count, }
+\item[{{\bf field\+\_\+or\+\_\+method} $\ast$}]{f\+\_\+or\+\_\+m}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_c_l_a_s_s_8c_a51ca8230624e33739ad1d9c32681ff24}
+Metodo que libera recursivamente uma estrutura de campo ou metodo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em count} & Numero de estruturas a serem liberadas. \\
+\hline
+{\em f\+\_\+or\+\_\+m} & Ponteiro para as estruturas a serem liberadas. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{_m___o_p_c_l_a_s_s_8c_a51ca8230624e33739ad1d9c32681ff24_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___o_p_c_l_a_s_s_8c_a3b121ea135557153f073dd0e34eb25b7}{}\index{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}!free\+Cte\+Pool@{free\+Cte\+Pool}}
+\index{free\+Cte\+Pool@{free\+Cte\+Pool}!M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{free\+Cte\+Pool(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Cte\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_c_l_a_s_s_8c_a3b121ea135557153f073dd0e34eb25b7}
+Metodo que libera as estruturas de um pool de constantes recursivamente.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura contendo o cte\+Poll a ser liberado. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___o_p_c_l_a_s_s_8c_a9a9eeb4c3b6d71246f2adc5c907ec55e}{}\index{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+free@{L\+E\+C\+L\+A\+S\+S\+\_\+free}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+free@{L\+E\+C\+L\+A\+S\+S\+\_\+free}!M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+O\+P\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+free(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_c_l_a_s_s_8c_a9a9eeb4c3b6d71246f2adc5c907ec55e}
+Metodo responsavel por prover o servico de liberacao recursiva de uma estrutura \char`\"{}.\+class\char`\"{}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura inicializada do tipo Arq\+Class a ser liberada. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___o_p_c_l_a_s_s_8c_a9a9eeb4c3b6d71246f2adc5c907ec55e_cgraph}
+\end{center}
+\end{figure}
+
+

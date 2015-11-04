@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Leitor e Exibidor de arquivos .class: Código-Fonte de include/IP_LECLASS.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Leitor e Exibidor de arquivos .class
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">IP_LECLASS.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_p___l_e_c_l_a_s_s_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef IP_LECLASS</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define IP_LECLASS</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef P_LECLASS_SERV</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define EXT2</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_i_p___l_e_c_l_a_s_s_8h.html#ad7b65f22fe3a91d067e8ed32676ef2f5">   16</a></span>&#160;<span class="preprocessor">#define EXT2 extern</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include&lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include&lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_e___l_e_c_l_a_s_s_8h.html">E_LECLASS.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span><a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#ad7b65f22fe3a91d067e8ed32676ef2f5">EXT2</a> FILE* <a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1">obter_entrada</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * nome_arquivo);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span><a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#ad7b65f22fe3a91d067e8ed32676ef2f5">EXT2</a> <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> <a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5">u1Le</a>(FILE *arquivo);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span><a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#ad7b65f22fe3a91d067e8ed32676ef2f5">EXT2</a> <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22">u2Le</a>(FILE *arquivo);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span><a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#ad7b65f22fe3a91d067e8ed32676ef2f5">EXT2</a> <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc">u4Le</a>(FILE *arquivo);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="_i_p___l_e_c_l_a_s_s_8h_html_a96774639729d84c50fcd1c9251096c22"><div class="ttname"><a href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22">u2Le</a></div><div class="ttdeci">EXT2 u2 u2Le(FILE *arquivo)</div><div class="ttdef"><b>Definition:</b> MP_LECLASS.c:36</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_aedf6ddc03df8caaaccbb4c60b9a9b850"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a></div><div class="ttdeci">unsigned int u4</div><div class="ttdoc">Representa 3 bytes. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:36</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_a5f223212eef04d10a4550ded680cb1cf"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a></div><div class="ttdeci">unsigned short u2</div><div class="ttdoc">Representa 2 bytes. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:35</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html">E_LECLASS.h</a></div><div class="ttdoc">Estruturas do Leitor e Exibidor de arquivos ".class". </div></div>
+<div class="ttc" id="_i_p___l_e_c_l_a_s_s_8h_html_a35f40c339d5d328a776498dddde97abc"><div class="ttname"><a href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc">u4Le</a></div><div class="ttdeci">EXT2 u4 u4Le(FILE *arquivo)</div><div class="ttdef"><b>Definition:</b> MP_LECLASS.c:47</div></div>
+<div class="ttc" id="_i_p___l_e_c_l_a_s_s_8h_html_a0b696ac754cb3058e2b140d8c952f5d5"><div class="ttname"><a href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5">u1Le</a></div><div class="ttdeci">EXT2 u1 u1Le(FILE *arquivo)</div><div class="ttdef"><b>Definition:</b> MP_LECLASS.c:29</div></div>
+<div class="ttc" id="_i_p___l_e_c_l_a_s_s_8h_html_a71742ecf4d2dd4d17ec28441f94ba9b1"><div class="ttname"><a href="_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1">obter_entrada</a></div><div class="ttdeci">EXT2 FILE * obter_entrada(const char *nome_arquivo)</div><div class="ttdef"><b>Definition:</b> MP_LECLASS.c:17</div></div>
+<div class="ttc" id="_i_p___l_e_c_l_a_s_s_8h_html_ad7b65f22fe3a91d067e8ed32676ef2f5"><div class="ttname"><a href="_i_p___l_e_c_l_a_s_s_8h.html#ad7b65f22fe3a91d067e8ed32676ef2f5">EXT2</a></div><div class="ttdeci">#define EXT2</div><div class="ttdef"><b>Definition:</b> IP_LECLASS.h:16</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_a216a9f8b04b4f0af84a4ca9d1d85a6ca"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a></div><div class="ttdeci">unsigned char u1</div><div class="ttdoc">Representa 1 byte. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

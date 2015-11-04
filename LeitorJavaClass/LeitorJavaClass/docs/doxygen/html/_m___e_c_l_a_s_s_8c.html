@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Leitor e Exibidor de arquivos .class: Referência do Arquivo src/M_ECLASS.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Leitor e Exibidor de arquivos .class
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo M_ECLASS.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo Exibidor de arquivos ".class".  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_i___l_e_c_l_a_s_s_8h_source.html">../include/I_LECLASS.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para M_ECLASS.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___e_c_l_a_s_s_8c__incl.png" border="0" usemap="#src_2_m___e_c_l_a_s_s_8c" alt=""/></div>
+<map name="src_2_m___e_c_l_a_s_s_8c" id="src_2_m___e_c_l_a_s_s_8c">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="65,79,225,104"/>
+<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="89,152,201,177"/>
+<area shape="rect" id="node6" href="_e___l_e_c_l_a_s_s_8h.html" title="Estruturas do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="91,225,199,251"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a774e5c0f9952b7fc4c00b000d714d2d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a774e5c0f9952b7fc4c00b000d714d2d1">ECLASS_SERV</a></td></tr>
+<tr class="separator:a774e5c0f9952b7fc4c00b000d714d2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a1635f324e84de6fd96505e01968b7333"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333">u4ToDouble</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> high_bytes, <a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> low_bytes)</td></tr>
+<tr class="separator:a1635f324e84de6fd96505e01968b7333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1709d62d399fb8ed1300e6b237d4fcc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc">u4ToFLoat</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> bytes)</td></tr>
+<tr class="separator:ac1709d62d399fb8ed1300e6b237d4fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca36942ccf6d00fdf3463c5e2f4e0d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#aca36942ccf6d00fdf3463c5e2f4e0d68">exibeCtePool</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class)</td></tr>
+<tr class="separator:aca36942ccf6d00fdf3463c5e2f4e0d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1d65b65ac971d3c55ee1e611321a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#abc1d65b65ac971d3c55ee1e611321a8b">LECLASS_exibidor</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class)</td></tr>
+<tr class="separator:abc1d65b65ac971d3c55ee1e611321a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo Exibidor de arquivos ".class". </p>
+<p>Modulo responsavel por implementar os metodos relacionados a exibicao de um arquivo ".class". </p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="a774e5c0f9952b7fc4c00b000d714d2d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ECLASS_SERV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="aca36942ccf6d00fdf3463c5e2f4e0d68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exibeCtePool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramname"><em>arq_class</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que que realiza a exibicao do pool de constantes de uma estrutura ArqClass</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arq_class</td><td>Estrutura ArqClass contendo o ponteiro para o pool de constantes a ser exibido </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph" alt=""/></div>
+<map name="_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph" id="_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph">
+<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="158,5,242,31"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="154,55,246,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abc1d65b65ac971d3c55ee1e611321a8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LECLASS_exibidor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramname"><em>arq_class</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo responsavel por prover o servico de exibicao de uma estrutura ".class"</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arq_class</td><td>Estrutura inicializada do tipo ArqClass a ser exibida. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b_cgraph" alt=""/></div>
+<map name="_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b_cgraph" id="_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b_cgraph">
+<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#aca36942ccf6d00fdf3463c5e2f4e0d68" title="exibeCtePool" alt="" coords="189,31,289,56"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="342,5,426,31"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="337,55,430,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1635f324e84de6fd96505e01968b7333"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double u4ToDouble </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
+          <td class="paramname"><em>high_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
+          <td class="paramname"><em>low_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que que realiza a conversao de um u4 (little-endian) para um double em big-endian order</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">high_bytes</td><td>Bytes de mais alta ordem </td></tr>
+    <tr><td class="paramname">low_bytes</td><td>Bytes de mais baixa ordem </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac1709d62d399fb8ed1300e6b237d4fcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float u4ToFLoat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
+          <td class="paramname"><em>bytes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que que realiza a conversao de um u4 (little-endian) para um float em big-endian order</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>Bytes em u4 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

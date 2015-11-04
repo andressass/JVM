@@ -1,0 +1,174 @@
+\hypertarget{_e___l_e_c_l_a_s_s_8h}{}\section{Referência do Arquivo include/\+E\+\_\+\+L\+E\+C\+L\+A\+S\+S.h}
+\label{_e___l_e_c_l_a_s_s_8h}\index{include/\+E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{include/\+E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+
+
+Estruturas do Leitor e Exibidor de arquivos \char`\"{}.\+class\char`\"{}.  
+
+
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___l_e_c_l_a_s_s_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structconst_pool}{const\+Pool}
+\begin{DoxyCompactList}\small\item\em Estrutura do Pool de Constantes. \end{DoxyCompactList}\item 
+struct \hyperlink{structattribute}{attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura de Atributos. \end{DoxyCompactList}\item 
+struct \hyperlink{structfield_and_method}{field\+And\+Method}
+\begin{DoxyCompactList}\small\item\em Estrutura de Campos e Metodos. \end{DoxyCompactList}\item 
+struct \hyperlink{structarq_class}{arq\+Class}
+\begin{DoxyCompactList}\small\item\em Estrutura de Arquivo .class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a72b5b534aa409975da610a36f648fa0a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}~7
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a008d43478c2e2973e7413f5d1c48095d}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}~9
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a2a179cf178ea867c6ab1700508c269dd}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}~10
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_ac0e92044d246c6e4d691116f89a70ebb}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}~11
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a0a7acbe175de56072a2f0a1a051418e1}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}~8
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a856a6553a55d721970ca5450eb1ccd2c}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}~3
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_ab914627ce5b25c4acfc98f2eacb78473}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}~4
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a426ca017b895fc522671a561d460be7a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}~5
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}~6
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a5b6ba749976ae61415983ca0b890c91a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}~12
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_afc46559a7d3f7baf519fc183c2fad2b4}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}~1
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1}
+\begin{DoxyCompactList}\small\item\em Representa 1 byte. \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2}
+\begin{DoxyCompactList}\small\item\em Representa 2 bytes. \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4}
+\begin{DoxyCompactList}\small\item\em Representa 3 bytes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structconst_pool}{const\+Pool} \hyperlink{_e___l_e_c_l_a_s_s_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura do Pool de Constantes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structattribute}{attribute} \hyperlink{_e___l_e_c_l_a_s_s_8h_a4c2796d61bb99bf730b1807fc838c847}{attribute\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura de Atributos. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{_e___l_e_c_l_a_s_s_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{field\+\_\+or\+\_\+method}
+\begin{DoxyCompactList}\small\item\em Estrutura de Campos e Metodos. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{_e___l_e_c_l_a_s_s_8h_a53c0da222997bf70321f1aebc84d8e02}{field\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura utilizada para a representacao de um campo. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{_e___l_e_c_l_a_s_s_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info}
+\item 
+typedef struct \hyperlink{structarq_class}{arq\+Class} \hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class}
+\begin{DoxyCompactList}\small\item\em Estrutura de Arquivo .class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estruturas do Leitor e Exibidor de arquivos \char`\"{}.\+class\char`\"{}. 
+
+Arquivo com a definicao das estruturas, tipos e constantes associadas ao sistema. 
+
+\subsection{Definições e macros}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a72b5b534aa409975da610a36f648fa0a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class~7}\label{_e___l_e_c_l_a_s_s_8h_a72b5b534aa409975da610a36f648fa0a}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double~6}\label{_e___l_e_c_l_a_s_s_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a008d43478c2e2973e7413f5d1c48095d}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref~9}\label{_e___l_e_c_l_a_s_s_8h_a008d43478c2e2973e7413f5d1c48095d}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_ab914627ce5b25c4acfc98f2eacb78473}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float~4}\label{_e___l_e_c_l_a_s_s_8h_ab914627ce5b25c4acfc98f2eacb78473}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a856a6553a55d721970ca5450eb1ccd2c}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer~3}\label{_e___l_e_c_l_a_s_s_8h_a856a6553a55d721970ca5450eb1ccd2c}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_ac0e92044d246c6e4d691116f89a70ebb}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref~11}\label{_e___l_e_c_l_a_s_s_8h_ac0e92044d246c6e4d691116f89a70ebb}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a426ca017b895fc522671a561d460be7a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long~5}\label{_e___l_e_c_l_a_s_s_8h_a426ca017b895fc522671a561d460be7a}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a2a179cf178ea867c6ab1700508c269dd}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref~10}\label{_e___l_e_c_l_a_s_s_8h_a2a179cf178ea867c6ab1700508c269dd}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a5b6ba749976ae61415983ca0b890c91a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type~12}\label{_e___l_e_c_l_a_s_s_8h_a5b6ba749976ae61415983ca0b890c91a}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a0a7acbe175de56072a2f0a1a051418e1}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String~8}\label{_e___l_e_c_l_a_s_s_8h_a0a7acbe175de56072a2f0a1a051418e1}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_afc46559a7d3f7baf519fc183c2fad2b4}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8~1}\label{_e___l_e_c_l_a_s_s_8h_afc46559a7d3f7baf519fc183c2fad2b4}
+
+
+\subsection{Definições dos tipos}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!Arq\+Class@{Arq\+Class}}
+\index{Arq\+Class@{Arq\+Class}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{Arq\+Class}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf arq\+Class}  {\bf Arq\+Class}}\label{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}
+
+
+Estrutura de Arquivo .class. 
+
+Estrutura utilizada para a representacao de um arquivo \char`\"{}.\+class\char`\"{}. \hypertarget{_e___l_e_c_l_a_s_s_8h_a4c2796d61bb99bf730b1807fc838c847}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!attribute\+\_\+info@{attribute\+\_\+info}}
+\index{attribute\+\_\+info@{attribute\+\_\+info}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{attribute\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf attribute}  {\bf attribute\+\_\+info}}\label{_e___l_e_c_l_a_s_s_8h_a4c2796d61bb99bf730b1807fc838c847}
+
+
+Estrutura de Atributos. 
+
+Estrutura utilizada para a representacao de um atributo de um arquivo \char`\"{}.\+class\char`\"{}. \hypertarget{_e___l_e_c_l_a_s_s_8h_aafdf80b0992e652420382fcf19b9d074}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!cp\+\_\+info@{cp\+\_\+info}}
+\index{cp\+\_\+info@{cp\+\_\+info}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{cp\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf const\+Pool}  {\bf cp\+\_\+info}}\label{_e___l_e_c_l_a_s_s_8h_aafdf80b0992e652420382fcf19b9d074}
+
+
+Estrutura do Pool de Constantes. 
+
+Estrutura utilizada para a representacao de um pool de constantes. \hypertarget{_e___l_e_c_l_a_s_s_8h_a53c0da222997bf70321f1aebc84d8e02}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!field\+\_\+info@{field\+\_\+info}}
+\index{field\+\_\+info@{field\+\_\+info}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{field\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method} {\bf field\+\_\+info}}\label{_e___l_e_c_l_a_s_s_8h_a53c0da222997bf70321f1aebc84d8e02}
+
+
+Estrutura utilizada para a representacao de um campo. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!field\+\_\+or\+\_\+method@{field\+\_\+or\+\_\+method}}
+\index{field\+\_\+or\+\_\+method@{field\+\_\+or\+\_\+method}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{field\+\_\+or\+\_\+method}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method}  {\bf field\+\_\+or\+\_\+method}}\label{_e___l_e_c_l_a_s_s_8h_aea7ef0bb5a23a224f7241ece56f10ea7}
+
+
+Estrutura de Campos e Metodos. 
+
+Estrutura utilizada para a representacao de um campo ou metodo. \hypertarget{_e___l_e_c_l_a_s_s_8h_a02c1a928a94e9fab2c72044003c7bce6}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!method\+\_\+info@{method\+\_\+info}}
+\index{method\+\_\+info@{method\+\_\+info}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{method\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method} {\bf method\+\_\+info}}\label{_e___l_e_c_l_a_s_s_8h_a02c1a928a94e9fab2c72044003c7bce6}
+Estrutura utilizada para a representacao de um metodo. \hypertarget{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!u1@{u1}}
+\index{u1@{u1}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{u1}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf u1}}\label{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}
+
+
+Representa 1 byte. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!u2@{u2}}
+\index{u2@{u2}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{u2}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf u2}}\label{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}
+
+
+Representa 2 bytes. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!u4@{u4}}
+\index{u4@{u4}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{u4}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf u4}}\label{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}
+
+
+Representa 3 bytes. 
+

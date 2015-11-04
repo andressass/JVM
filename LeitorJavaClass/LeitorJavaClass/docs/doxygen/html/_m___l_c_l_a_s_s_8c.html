@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Leitor e Exibidor de arquivos .class: Referência do Arquivo src/M_LCLASS.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Leitor e Exibidor de arquivos .class
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo M_LCLASS.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo Leitor de arquivos ".class".  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_i___l_e_c_l_a_s_s_8h_source.html">../include/I_LECLASS.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para M_LCLASS.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c__incl.png" border="0" usemap="#src_2_m___l_c_l_a_s_s_8c" alt=""/></div>
+<map name="src_2_m___l_c_l_a_s_s_8c" id="src_2_m___l_c_l_a_s_s_8c">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="65,79,225,104"/>
+<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="89,152,201,177"/>
+<area shape="rect" id="node6" href="_e___l_e_c_l_a_s_s_8h.html" title="Estruturas do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="91,225,199,251"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a63e30b35681eedc08a91b95e9bd42bf5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a63e30b35681eedc08a91b95e9bd42bf5">LCLASS_SERV</a></td></tr>
+<tr class="separator:a63e30b35681eedc08a91b95e9bd42bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a50c482c15a4017df4fd222c4b0a3dadb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb">leCtePool</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> constant_pool_count, FILE *arq)</td></tr>
+<tr class="separator:a50c482c15a4017df4fd222c4b0a3dadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ddcf9bd8c7747e8d415137eca98245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245">leAtributo</a> (FILE *arq)</td></tr>
+<tr class="separator:a79ddcf9bd8c7747e8d415137eca98245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab0c537035a6f26fb2d2f3e91732fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5">leCampMetd</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> count, FILE *arq)</td></tr>
+<tr class="separator:a5ab0c537035a6f26fb2d2f3e91732fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1d33407dd7bba86c0edfb22d91a097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a4f1d33407dd7bba86c0edfb22d91a097">arquivoParaArqClass</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class, FILE *arq)</td></tr>
+<tr class="separator:a4f1d33407dd7bba86c0edfb22d91a097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308bf0c21f8e4dd4aff138987fc4c793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a308bf0c21f8e4dd4aff138987fc4c793">LECLASS_leitor</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class, const char *arq)</td></tr>
+<tr class="separator:a308bf0c21f8e4dd4aff138987fc4c793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo Leitor de arquivos ".class". </p>
+<p>Modulo responsavel por implementar os metodos relacionados a exibicao de um arquivo ".class". </p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="a63e30b35681eedc08a91b95e9bd42bf5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCLASS_SERV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a4f1d33407dd7bba86c0edfb22d91a097"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arquivoParaArqClass </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramname"><em>arq_class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>arq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que realiza a leitura de um arquivo ".class" preeenchendo uma estrutura ArqClass.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arq_class</td><td>Estrutura de arquivo ".class" a ser preenchida </td></tr>
+    <tr><td class="paramname">arq</td><td>Arquivo ".class" a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c_a4f1d33407dd7bba86c0edfb22d91a097_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a4f1d33407dd7bba86c0edfb22d91a097_cgraph" alt=""/></div>
+<map name="_m___l_c_l_a_s_s_8c_a4f1d33407dd7bba86c0edfb22d91a097_cgraph" id="_m___l_c_l_a_s_s_8c_a4f1d33407dd7bba86c0edfb22d91a097_cgraph">
+<area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="473,20,524,46"/>
+<area shape="rect" id="node4" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="473,120,524,146"/>
+<area shape="rect" id="node5" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="346,20,425,46"/>
+<area shape="rect" id="node7" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="201,120,298,146"/>
+<area shape="rect" id="node8" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245" title="leAtributo" alt="" coords="346,70,424,95"/>
+<area shape="rect" id="node3" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="572,20,623,46"/>
+<area shape="rect" id="node6" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="473,70,524,95"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a79ddcf9bd8c7747e8d415137eca98245"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a>* leAtributo </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>arq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que le o um atributo de um arquivo ".class", retornando um ponteiro para uma estrutura inicializada de atributo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arq</td><td>Arquivo a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph" alt=""/></div>
+<map name="_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph" id="_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph">
+<area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="131,5,182,31"/>
+<area shape="rect" id="node3" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="131,55,182,80"/>
+<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="131,104,182,129"/>
+<area shape="rect" id="node4" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="230,55,281,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ab0c537035a6f26fb2d2f3e91732fb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a>* leCampMetd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>arq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que le o uma estrutura referente a um campo ou metodo de um arquivo ".class", retornando um ponteiro para uma estrutura inicializada de campo ou metodo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>Numero de metodos ou campos a serem lidos. </td></tr>
+    <tr><td class="paramname">arq</td><td>Arquivo a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph" alt=""/></div>
+<map name="_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph" id="_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph">
+<area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="276,5,327,31"/>
+<area shape="rect" id="node3" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245" title="leAtributo" alt="" coords="150,56,228,81"/>
+<area shape="rect" id="node4" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="276,55,327,80"/>
+<area shape="rect" id="node6" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="276,104,327,129"/>
+<area shape="rect" id="node5" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="375,55,426,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a308bf0c21f8e4dd4aff138987fc4c793"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LECLASS_leitor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramname"><em>arq_class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arquivo_entrada</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo responsavel por prover o servico de leitura de um arquivo ".class", preenchendo uma estrutura ArqClass.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arq_class</td><td>Estrutura inicializada do tipo ArqClass a ser preenchida. </td></tr>
+    <tr><td class="paramname">arquivo_entrada</td><td>Arquivo ".class" a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c_a308bf0c21f8e4dd4aff138987fc4c793_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a308bf0c21f8e4dd4aff138987fc4c793_cgraph" alt=""/></div>
+<map name="_m___l_c_l_a_s_s_8c_a308bf0c21f8e4dd4aff138987fc4c793_cgraph" id="_m___l_c_l_a_s_s_8c_a308bf0c21f8e4dd4aff138987fc4c793_cgraph">
+<area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1" title="obter_entrada" alt="" coords="192,20,297,46"/>
+<area shape="rect" id="node3" href="_m___l_c_l_a_s_s_8c.html#a4f1d33407dd7bba86c0edfb22d91a097" title="arquivoParaArqClass" alt="" coords="171,70,318,95"/>
+<area shape="rect" id="node4" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="638,20,689,46"/>
+<area shape="rect" id="node6" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="638,120,689,146"/>
+<area shape="rect" id="node7" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="511,20,590,46"/>
+<area shape="rect" id="node9" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="366,120,463,146"/>
+<area shape="rect" id="node10" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245" title="leAtributo" alt="" coords="512,70,590,95"/>
+<area shape="rect" id="node5" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="737,20,788,46"/>
+<area shape="rect" id="node8" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="638,70,689,95"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a50c482c15a4017df4fd222c4b0a3dadb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a>* leCtePool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramname"><em>constant_pool_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>arq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que le o pool de constantes de constantes de um arquivo, retornando um ponteiro para uma estrutura inicializada de pool de constantes.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">constant_pool_count</td><td>Contador do pool de constantes. </td></tr>
+    <tr><td class="paramname">arq</td><td>Arquivo a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c_a50c482c15a4017df4fd222c4b0a3dadb_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a50c482c15a4017df4fd222c4b0a3dadb_cgraph" alt=""/></div>
+<map name="_m___l_c_l_a_s_s_8c_a50c482c15a4017df4fd222c4b0a3dadb_cgraph" id="_m___l_c_l_a_s_s_8c_a50c482c15a4017df4fd222c4b0a3dadb_cgraph">
+<area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="132,5,183,31"/>
+<area shape="rect" id="node3" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="132,55,183,80"/>
+<area shape="rect" id="node4" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="132,104,183,129"/>
+<area shape="rect" id="node5" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="231,104,282,129"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

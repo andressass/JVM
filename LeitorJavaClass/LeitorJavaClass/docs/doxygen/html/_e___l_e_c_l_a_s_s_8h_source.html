@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Leitor e Exibidor de arquivos .class: Código-Fonte de include/E_LECLASS.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Leitor e Exibidor de arquivos .class
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">E_LECLASS.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_e___l_e_c_l_a_s_s_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef E_LECLASS_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define E_LECLASS_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//Tags do Pool de Constantes</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a72b5b534aa409975da610a36f648fa0a">   18</a></span>&#160;<span class="preprocessor">#define CONSTANT_Class              7</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a008d43478c2e2973e7413f5d1c48095d">   19</a></span>&#160;<span class="preprocessor">#define CONSTANT_Fieldref           9</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a2a179cf178ea867c6ab1700508c269dd">   20</a></span>&#160;<span class="preprocessor">#define CONSTANT_Methodref          10</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#ac0e92044d246c6e4d691116f89a70ebb">   21</a></span>&#160;<span class="preprocessor">#define CONSTANT_InterfaceMethodref 11</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a0a7acbe175de56072a2f0a1a051418e1">   22</a></span>&#160;<span class="preprocessor">#define CONSTANT_String             8</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a856a6553a55d721970ca5450eb1ccd2c">   23</a></span>&#160;<span class="preprocessor">#define CONSTANT_Integer            3</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#ab914627ce5b25c4acfc98f2eacb78473">   24</a></span>&#160;<span class="preprocessor">#define CONSTANT_Float              4</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a426ca017b895fc522671a561d460be7a">   25</a></span>&#160;<span class="preprocessor">#define CONSTANT_Long               5</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#ab49341c3b4ade4bfa1a64be8d2f73ae1">   26</a></span>&#160;<span class="preprocessor">#define CONSTANT_Double             6</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a5b6ba749976ae61415983ca0b890c91a">   27</a></span>&#160;<span class="preprocessor">#define CONSTANT_NameAndType        12</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#afc46559a7d3f7baf519fc183c2fad2b4">   28</a></span>&#160;<span class="preprocessor">#define CONSTANT_Utf8               1</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//Tipos de dados</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">   36</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structconst_pool.html">   44</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structconst_pool.html">constPool</a>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structconst_pool.html#a876197bb013e214c071ab56d1de8ed25">   45</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> <a class="code" href="structconst_pool.html#a876197bb013e214c071ab56d1de8ed25">tag</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">union</span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structconst_pool.html#af3f5f8cd6fcae23720d11786466944e1">   48</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#af3f5f8cd6fcae23720d11786466944e1">name_index</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        } <a class="code" href="structconst_pool.html#a3735adf769a89a8579d9c729d9ea852b">Class</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structconst_pool.html#ac2f1017863a461470285ceffa2487892">   51</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#ac2f1017863a461470285ceffa2487892">class_index</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structconst_pool.html#a3dde2ae699efaa1736b684038ea4f3de">   52</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#a3dde2ae699efaa1736b684038ea4f3de">name_and_type_index</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        } <a class="code" href="structconst_pool.html#a2d445b84752ddea1db4ef9f3ce2fee02">Fieldref</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#af3f5f8cd6fcae23720d11786466944e1">name_index</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structconst_pool.html#a09a23db7ae9a3429931f2a5447f9f7fe">   56</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#a09a23db7ae9a3429931f2a5447f9f7fe">descriptor_index</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        } <a class="code" href="structconst_pool.html#a727268ed0e1405a5eaab1aa5ad3cba74">NameAndType</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structconst_pool.html#addff2c24e88a3e8686a219fe6a9bbcd3">   59</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#addff2c24e88a3e8686a219fe6a9bbcd3">lenght</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structconst_pool.html#ae5e4f8056a2790c12bc61d9ba0582050">   60</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>* <a class="code" href="structconst_pool.html#ae5e4f8056a2790c12bc61d9ba0582050">bytes</a>; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        } <a class="code" href="structconst_pool.html#ab18ebde1a84b99d3dc0b70b1df46be82">Utf8</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#ac2f1017863a461470285ceffa2487892">class_index</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#a3dde2ae699efaa1736b684038ea4f3de">name_and_type_index</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        } <a class="code" href="structconst_pool.html#aedc243e8e674b59f15d83255f4fff7f6">Methodref</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#ac2f1017863a461470285ceffa2487892">class_index</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#a3dde2ae699efaa1736b684038ea4f3de">name_and_type_index</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        } <a class="code" href="structconst_pool.html#aba9741376f8030471992d6b68fb4142b">InterfaceMethodref</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structconst_pool.html#a1bb9e94f3cb54a3e19bde3d251379ac0">   71</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structconst_pool.html#a1bb9e94f3cb54a3e19bde3d251379ac0">string_index</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        } <a class="code" href="structconst_pool.html#ab014bc483e8b8803ecf0c288495b5a5e">String</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structconst_pool.html#ab5efc0514165cbdfb4ba3521cd70821b">   74</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="structconst_pool.html#ab5efc0514165cbdfb4ba3521cd70821b">bytes</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        } <a class="code" href="structconst_pool.html#ae32ce70f2995b3b811d6ae719d62c6ef">Integer</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="structconst_pool.html#ae5e4f8056a2790c12bc61d9ba0582050">bytes</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        } <a class="code" href="structconst_pool.html#aaba15c27d5b0f572a54d68643aa577fa">Float</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structconst_pool.html#a5c4154d878bdc78c47829c3003008bcd">   80</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="structconst_pool.html#a5c4154d878bdc78c47829c3003008bcd">high_bytes</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structconst_pool.html#a55d572db573fd39218d7e3233a7590fa">   81</a></span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="structconst_pool.html#a55d572db573fd39218d7e3233a7590fa">low_bytes</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        } <a class="code" href="structconst_pool.html#a2ff4c34ed23a88cc0e355b0111ce8957">Long</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="structconst_pool.html#a5c4154d878bdc78c47829c3003008bcd">high_bytes</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> <a class="code" href="structconst_pool.html#a55d572db573fd39218d7e3233a7590fa">low_bytes</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        } <a class="code" href="structconst_pool.html#a860c917cdbc43a11bbe5411a3329129a">Double</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    } <a class="code" href="structconst_pool.html#ab327fbd2fec182d523b180c4d941d7f5">u</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structattribute.html">   96</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structattribute.html">attribute</a>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structattribute.html#a55761ad4a2ed18b8f88baf6ac062cb46">   97</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structattribute.html#a55761ad4a2ed18b8f88baf6ac062cb46">attribute_name_index</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="structattribute.html#a3d9b605228c53c92be5e5b49ff24a35c">   98</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>  <a class="code" href="structattribute.html#a3d9b605228c53c92be5e5b49ff24a35c">attribute_length</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structattribute.html#ac749b125ccc9eda0cfe9deb4fe4aeda9">   99</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>* <a class="code" href="structattribute.html#ac749b125ccc9eda0cfe9deb4fe4aeda9">info</a>;   </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="structfield_and_method.html">  108</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structfield_and_method.html">fieldAndMethod</a>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="structfield_and_method.html#a04b1604b7553b064887cc578d441d7aa">  109</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structfield_and_method.html#a04b1604b7553b064887cc578d441d7aa">access_flags</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structfield_and_method.html#ac636d7076db5a2ce9891613be8ad9b00">  110</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structfield_and_method.html#ac636d7076db5a2ce9891613be8ad9b00">name_index</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structfield_and_method.html#a61c33b04e96966edbfd142eea9992834">  111</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structfield_and_method.html#a61c33b04e96966edbfd142eea9992834">descriptor_index</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structfield_and_method.html#a0b45411cd7a3167fdcfad1af18a799e5">  112</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> <a class="code" href="structfield_and_method.html#a0b45411cd7a3167fdcfad1af18a799e5">attributes_count</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structfield_and_method.html#a1f7d8a1e074f71abf5ba94e0afee627a">  113</a></span>&#160;    <a class="code" href="structattribute.html">attribute_info</a>** <a class="code" href="structfield_and_method.html#a1f7d8a1e074f71abf5ba94e0afee627a">attributes</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;} <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a53c0da222997bf70321f1aebc84d8e02">  116</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structfield_and_method.html">fieldAndMethod</a> <a class="code" href="structfield_and_method.html">field_info</a>; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="_e___l_e_c_l_a_s_s_8h.html#a02c1a928a94e9fab2c72044003c7bce6">  117</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structfield_and_method.html">fieldAndMethod</a> <a class="code" href="structfield_and_method.html">method_info</a>; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="structarq_class.html">  126</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structarq_class.html">arqClass</a> {</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structarq_class.html#af2bde90f63d048e444c9437063394b4f">  127</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>                  <a class="code" href="structarq_class.html#af2bde90f63d048e444c9437063394b4f">magic</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="structarq_class.html#a90b447e4eea035e1dd5fb45360a6a09f">  128</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a90b447e4eea035e1dd5fb45360a6a09f">minor_version</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="structarq_class.html#a0aeda33023ba35d892279365630779d3">  129</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a0aeda33023ba35d892279365630779d3">major_version</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="structarq_class.html#a42ffae9572594b9a62b2e8af085a4b69">  130</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a42ffae9572594b9a62b2e8af085a4b69">constant_pool_count</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="structarq_class.html#acf360846d7875335092462ec84c5d130">  131</a></span>&#160;    <a class="code" href="structconst_pool.html">cp_info</a>*            <a class="code" href="structarq_class.html#acf360846d7875335092462ec84c5d130">constant_pool</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="structarq_class.html#a2d74614ed3f671871c0385e5233a8250">  132</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a2d74614ed3f671871c0385e5233a8250">access_flags</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="structarq_class.html#a0fa1b4b35fcc35e25fff7563f1ce7b2b">  133</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a0fa1b4b35fcc35e25fff7563f1ce7b2b">this_class</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="structarq_class.html#a7bd81d496166908031c40895ed667ada">  134</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a7bd81d496166908031c40895ed667ada">super_class</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="structarq_class.html#a1e2038132261e59417016cd623005f56">  135</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a1e2038132261e59417016cd623005f56">interfaces_count</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="structarq_class.html#ae20e5a978fd46334f0253968c13bf8ac">  136</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>*                 <a class="code" href="structarq_class.html#ae20e5a978fd46334f0253968c13bf8ac">interfaces</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="structarq_class.html#ae453fb7f35aaaaf1beed2bcb0457ddb2">  137</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#ae453fb7f35aaaaf1beed2bcb0457ddb2">fields_count</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="structarq_class.html#af9ed878ae2a6fe25020d83ce00f4407d">  138</a></span>&#160;    <a class="code" href="structfield_and_method.html">field_info</a>*         <a class="code" href="structarq_class.html#af9ed878ae2a6fe25020d83ce00f4407d">fields</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="structarq_class.html#a0cdd803ff7b2a6a229c048bb51f1febc">  139</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a0cdd803ff7b2a6a229c048bb51f1febc">methods_count</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="structarq_class.html#a849a70430b6245a2cc8b43a2516c5f00">  140</a></span>&#160;    <a class="code" href="structfield_and_method.html">method_info</a>*        <a class="code" href="structarq_class.html#a849a70430b6245a2cc8b43a2516c5f00">methods</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="structarq_class.html#a4510e8903370aa3575adaa708e4bfed8">  141</a></span>&#160;    <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>                  <a class="code" href="structarq_class.html#a4510e8903370aa3575adaa708e4bfed8">attributes_count</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="structarq_class.html#aacb6074d36dde206bc823e0b30d473b5">  142</a></span>&#160;    <a class="code" href="structattribute.html">attribute_info</a>**    <a class="code" href="structarq_class.html#aacb6074d36dde206bc823e0b30d473b5">attributes</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;} <a class="code" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structarq_class_html_a1e2038132261e59417016cd623005f56"><div class="ttname"><a href="structarq_class.html#a1e2038132261e59417016cd623005f56">arqClass::interfaces_count</a></div><div class="ttdeci">u2 interfaces_count</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:135</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_aedf6ddc03df8caaaccbb4c60b9a9b850"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a></div><div class="ttdeci">unsigned int u4</div><div class="ttdoc">Representa 3 bytes. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:36</div></div>
+<div class="ttc" id="structconst_pool_html_a1bb9e94f3cb54a3e19bde3d251379ac0"><div class="ttname"><a href="structconst_pool.html#a1bb9e94f3cb54a3e19bde3d251379ac0">constPool::string_index</a></div><div class="ttdeci">u2 string_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:71</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_a5f223212eef04d10a4550ded680cb1cf"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a></div><div class="ttdeci">unsigned short u2</div><div class="ttdoc">Representa 2 bytes. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:35</div></div>
+<div class="ttc" id="structarq_class_html_af2bde90f63d048e444c9437063394b4f"><div class="ttname"><a href="structarq_class.html#af2bde90f63d048e444c9437063394b4f">arqClass::magic</a></div><div class="ttdeci">u4 magic</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:127</div></div>
+<div class="ttc" id="structarq_class_html_acf360846d7875335092462ec84c5d130"><div class="ttname"><a href="structarq_class.html#acf360846d7875335092462ec84c5d130">arqClass::constant_pool</a></div><div class="ttdeci">cp_info * constant_pool</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:131</div></div>
+<div class="ttc" id="structconst_pool_html_ab014bc483e8b8803ecf0c288495b5a5e"><div class="ttname"><a href="structconst_pool.html#ab014bc483e8b8803ecf0c288495b5a5e">constPool::String</a></div><div class="ttdeci">struct constPool::@0::@7 String</div></div>
+<div class="ttc" id="structconst_pool_html_aba9741376f8030471992d6b68fb4142b"><div class="ttname"><a href="structconst_pool.html#aba9741376f8030471992d6b68fb4142b">constPool::InterfaceMethodref</a></div><div class="ttdeci">struct constPool::@0::@6 InterfaceMethodref</div></div>
+<div class="ttc" id="structconst_pool_html_ab18ebde1a84b99d3dc0b70b1df46be82"><div class="ttname"><a href="structconst_pool.html#ab18ebde1a84b99d3dc0b70b1df46be82">constPool::Utf8</a></div><div class="ttdeci">struct constPool::@0::@4 Utf8</div></div>
+<div class="ttc" id="structconst_pool_html_ae32ce70f2995b3b811d6ae719d62c6ef"><div class="ttname"><a href="structconst_pool.html#ae32ce70f2995b3b811d6ae719d62c6ef">constPool::Integer</a></div><div class="ttdeci">struct constPool::@0::@8 Integer</div></div>
+<div class="ttc" id="structattribute_html_ac749b125ccc9eda0cfe9deb4fe4aeda9"><div class="ttname"><a href="structattribute.html#ac749b125ccc9eda0cfe9deb4fe4aeda9">attribute::info</a></div><div class="ttdeci">u1 * info</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:99</div></div>
+<div class="ttc" id="structfield_and_method_html_a61c33b04e96966edbfd142eea9992834"><div class="ttname"><a href="structfield_and_method.html#a61c33b04e96966edbfd142eea9992834">fieldAndMethod::descriptor_index</a></div><div class="ttdeci">u2 descriptor_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:111</div></div>
+<div class="ttc" id="structconst_pool_html_a2d445b84752ddea1db4ef9f3ce2fee02"><div class="ttname"><a href="structconst_pool.html#a2d445b84752ddea1db4ef9f3ce2fee02">constPool::Fieldref</a></div><div class="ttdeci">struct constPool::@0::@2 Fieldref</div></div>
+<div class="ttc" id="structarq_class_html_a2d74614ed3f671871c0385e5233a8250"><div class="ttname"><a href="structarq_class.html#a2d74614ed3f671871c0385e5233a8250">arqClass::access_flags</a></div><div class="ttdeci">u2 access_flags</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:132</div></div>
+<div class="ttc" id="structfield_and_method_html"><div class="ttname"><a href="structfield_and_method.html">fieldAndMethod</a></div><div class="ttdoc">Estrutura de Campos e Metodos. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:108</div></div>
+<div class="ttc" id="structconst_pool_html_ac2f1017863a461470285ceffa2487892"><div class="ttname"><a href="structconst_pool.html#ac2f1017863a461470285ceffa2487892">constPool::class_index</a></div><div class="ttdeci">u2 class_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:51</div></div>
+<div class="ttc" id="structattribute_html_a55761ad4a2ed18b8f88baf6ac062cb46"><div class="ttname"><a href="structattribute.html#a55761ad4a2ed18b8f88baf6ac062cb46">attribute::attribute_name_index</a></div><div class="ttdeci">u2 attribute_name_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:97</div></div>
+<div class="ttc" id="structattribute_html"><div class="ttname"><a href="structattribute.html">attribute</a></div><div class="ttdoc">Estrutura de Atributos. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:96</div></div>
+<div class="ttc" id="structconst_pool_html_a727268ed0e1405a5eaab1aa5ad3cba74"><div class="ttname"><a href="structconst_pool.html#a727268ed0e1405a5eaab1aa5ad3cba74">constPool::NameAndType</a></div><div class="ttdeci">struct constPool::@0::@3 NameAndType</div></div>
+<div class="ttc" id="structarq_class_html_a4510e8903370aa3575adaa708e4bfed8"><div class="ttname"><a href="structarq_class.html#a4510e8903370aa3575adaa708e4bfed8">arqClass::attributes_count</a></div><div class="ttdeci">u2 attributes_count</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:141</div></div>
+<div class="ttc" id="structconst_pool_html_addff2c24e88a3e8686a219fe6a9bbcd3"><div class="ttname"><a href="structconst_pool.html#addff2c24e88a3e8686a219fe6a9bbcd3">constPool::lenght</a></div><div class="ttdeci">u2 lenght</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:59</div></div>
+<div class="ttc" id="structconst_pool_html_af3f5f8cd6fcae23720d11786466944e1"><div class="ttname"><a href="structconst_pool.html#af3f5f8cd6fcae23720d11786466944e1">constPool::name_index</a></div><div class="ttdeci">u2 name_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:48</div></div>
+<div class="ttc" id="structconst_pool_html_a55d572db573fd39218d7e3233a7590fa"><div class="ttname"><a href="structconst_pool.html#a55d572db573fd39218d7e3233a7590fa">constPool::low_bytes</a></div><div class="ttdeci">u4 low_bytes</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:81</div></div>
+<div class="ttc" id="structconst_pool_html_aedc243e8e674b59f15d83255f4fff7f6"><div class="ttname"><a href="structconst_pool.html#aedc243e8e674b59f15d83255f4fff7f6">constPool::Methodref</a></div><div class="ttdeci">struct constPool::@0::@5 Methodref</div></div>
+<div class="ttc" id="structarq_class_html_ae453fb7f35aaaaf1beed2bcb0457ddb2"><div class="ttname"><a href="structarq_class.html#ae453fb7f35aaaaf1beed2bcb0457ddb2">arqClass::fields_count</a></div><div class="ttdeci">u2 fields_count</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:137</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_aafdf80b0992e652420382fcf19b9d074"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a></div><div class="ttdeci">struct constPool cp_info</div><div class="ttdoc">Estrutura do Pool de Constantes. </div></div>
+<div class="ttc" id="structarq_class_html_a849a70430b6245a2cc8b43a2516c5f00"><div class="ttname"><a href="structarq_class.html#a849a70430b6245a2cc8b43a2516c5f00">arqClass::methods</a></div><div class="ttdeci">method_info * methods</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:140</div></div>
+<div class="ttc" id="structfield_and_method_html_a0b45411cd7a3167fdcfad1af18a799e5"><div class="ttname"><a href="structfield_and_method.html#a0b45411cd7a3167fdcfad1af18a799e5">fieldAndMethod::attributes_count</a></div><div class="ttdeci">u2 attributes_count</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:112</div></div>
+<div class="ttc" id="structconst_pool_html_ae5e4f8056a2790c12bc61d9ba0582050"><div class="ttname"><a href="structconst_pool.html#ae5e4f8056a2790c12bc61d9ba0582050">constPool::bytes</a></div><div class="ttdeci">u1 * bytes</div><div class="ttdoc">bytes[length] </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:60</div></div>
+<div class="ttc" id="structconst_pool_html_a876197bb013e214c071ab56d1de8ed25"><div class="ttname"><a href="structconst_pool.html#a876197bb013e214c071ab56d1de8ed25">constPool::tag</a></div><div class="ttdeci">u1 tag</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:45</div></div>
+<div class="ttc" id="structconst_pool_html_a2ff4c34ed23a88cc0e355b0111ce8957"><div class="ttname"><a href="structconst_pool.html#a2ff4c34ed23a88cc0e355b0111ce8957">constPool::Long</a></div><div class="ttdeci">struct constPool::@0::@10 Long</div></div>
+<div class="ttc" id="structarq_class_html_aacb6074d36dde206bc823e0b30d473b5"><div class="ttname"><a href="structarq_class.html#aacb6074d36dde206bc823e0b30d473b5">arqClass::attributes</a></div><div class="ttdeci">attribute_info ** attributes</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:142</div></div>
+<div class="ttc" id="structarq_class_html_a7bd81d496166908031c40895ed667ada"><div class="ttname"><a href="structarq_class.html#a7bd81d496166908031c40895ed667ada">arqClass::super_class</a></div><div class="ttdeci">u2 super_class</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:134</div></div>
+<div class="ttc" id="structconst_pool_html_a09a23db7ae9a3429931f2a5447f9f7fe"><div class="ttname"><a href="structconst_pool.html#a09a23db7ae9a3429931f2a5447f9f7fe">constPool::descriptor_index</a></div><div class="ttdeci">u2 descriptor_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:56</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_a4c2796d61bb99bf730b1807fc838c847"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a></div><div class="ttdeci">struct attribute attribute_info</div><div class="ttdoc">Estrutura de Atributos. </div></div>
+<div class="ttc" id="structarq_class_html_af9ed878ae2a6fe25020d83ce00f4407d"><div class="ttname"><a href="structarq_class.html#af9ed878ae2a6fe25020d83ce00f4407d">arqClass::fields</a></div><div class="ttdeci">field_info * fields</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:138</div></div>
+<div class="ttc" id="structconst_pool_html_ab327fbd2fec182d523b180c4d941d7f5"><div class="ttname"><a href="structconst_pool.html#ab327fbd2fec182d523b180c4d941d7f5">constPool::u</a></div><div class="ttdeci">union constPool::@0 u</div></div>
+<div class="ttc" id="structattribute_html_a3d9b605228c53c92be5e5b49ff24a35c"><div class="ttname"><a href="structattribute.html#a3d9b605228c53c92be5e5b49ff24a35c">attribute::attribute_length</a></div><div class="ttdeci">u4 attribute_length</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:98</div></div>
+<div class="ttc" id="structarq_class_html"><div class="ttname"><a href="structarq_class.html">arqClass</a></div><div class="ttdoc">Estrutura de Arquivo .class. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:126</div></div>
+<div class="ttc" id="structconst_pool_html"><div class="ttname"><a href="structconst_pool.html">constPool</a></div><div class="ttdoc">Estrutura do Pool de Constantes. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:44</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_a58bbd58859ab48cb1bd6c2ffb5874839"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a></div><div class="ttdeci">struct arqClass ArqClass</div><div class="ttdoc">Estrutura de Arquivo .class. </div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_a216a9f8b04b4f0af84a4ca9d1d85a6ca"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a></div><div class="ttdeci">unsigned char u1</div><div class="ttdoc">Representa 1 byte. </div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:34</div></div>
+<div class="ttc" id="structconst_pool_html_a5c4154d878bdc78c47829c3003008bcd"><div class="ttname"><a href="structconst_pool.html#a5c4154d878bdc78c47829c3003008bcd">constPool::high_bytes</a></div><div class="ttdeci">u4 high_bytes</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:80</div></div>
+<div class="ttc" id="structconst_pool_html_a3dde2ae699efaa1736b684038ea4f3de"><div class="ttname"><a href="structconst_pool.html#a3dde2ae699efaa1736b684038ea4f3de">constPool::name_and_type_index</a></div><div class="ttdeci">u2 name_and_type_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:52</div></div>
+<div class="ttc" id="structfield_and_method_html_a04b1604b7553b064887cc578d441d7aa"><div class="ttname"><a href="structfield_and_method.html#a04b1604b7553b064887cc578d441d7aa">fieldAndMethod::access_flags</a></div><div class="ttdeci">u2 access_flags</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:109</div></div>
+<div class="ttc" id="structarq_class_html_a0aeda33023ba35d892279365630779d3"><div class="ttname"><a href="structarq_class.html#a0aeda33023ba35d892279365630779d3">arqClass::major_version</a></div><div class="ttdeci">u2 major_version</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:129</div></div>
+<div class="ttc" id="structconst_pool_html_ab5efc0514165cbdfb4ba3521cd70821b"><div class="ttname"><a href="structconst_pool.html#ab5efc0514165cbdfb4ba3521cd70821b">constPool::bytes</a></div><div class="ttdeci">u4 bytes</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:74</div></div>
+<div class="ttc" id="structconst_pool_html_aaba15c27d5b0f572a54d68643aa577fa"><div class="ttname"><a href="structconst_pool.html#aaba15c27d5b0f572a54d68643aa577fa">constPool::Float</a></div><div class="ttdeci">struct constPool::@0::@9 Float</div></div>
+<div class="ttc" id="_e___l_e_c_l_a_s_s_8h_html_aea7ef0bb5a23a224f7241ece56f10ea7"><div class="ttname"><a href="_e___l_e_c_l_a_s_s_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a></div><div class="ttdeci">struct fieldAndMethod field_or_method</div><div class="ttdoc">Estrutura de Campos e Metodos. </div></div>
+<div class="ttc" id="structarq_class_html_ae20e5a978fd46334f0253968c13bf8ac"><div class="ttname"><a href="structarq_class.html#ae20e5a978fd46334f0253968c13bf8ac">arqClass::interfaces</a></div><div class="ttdeci">u2 * interfaces</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:136</div></div>
+<div class="ttc" id="structconst_pool_html_a3735adf769a89a8579d9c729d9ea852b"><div class="ttname"><a href="structconst_pool.html#a3735adf769a89a8579d9c729d9ea852b">constPool::Class</a></div><div class="ttdeci">struct constPool::@0::@1 Class</div></div>
+<div class="ttc" id="structarq_class_html_a90b447e4eea035e1dd5fb45360a6a09f"><div class="ttname"><a href="structarq_class.html#a90b447e4eea035e1dd5fb45360a6a09f">arqClass::minor_version</a></div><div class="ttdeci">u2 minor_version</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:128</div></div>
+<div class="ttc" id="structfield_and_method_html_ac636d7076db5a2ce9891613be8ad9b00"><div class="ttname"><a href="structfield_and_method.html#ac636d7076db5a2ce9891613be8ad9b00">fieldAndMethod::name_index</a></div><div class="ttdeci">u2 name_index</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:110</div></div>
+<div class="ttc" id="structconst_pool_html_a860c917cdbc43a11bbe5411a3329129a"><div class="ttname"><a href="structconst_pool.html#a860c917cdbc43a11bbe5411a3329129a">constPool::Double</a></div><div class="ttdeci">struct constPool::@0::@11 Double</div></div>
+<div class="ttc" id="structarq_class_html_a42ffae9572594b9a62b2e8af085a4b69"><div class="ttname"><a href="structarq_class.html#a42ffae9572594b9a62b2e8af085a4b69">arqClass::constant_pool_count</a></div><div class="ttdeci">u2 constant_pool_count</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:130</div></div>
+<div class="ttc" id="structfield_and_method_html_a1f7d8a1e074f71abf5ba94e0afee627a"><div class="ttname"><a href="structfield_and_method.html#a1f7d8a1e074f71abf5ba94e0afee627a">fieldAndMethod::attributes</a></div><div class="ttdeci">attribute_info ** attributes</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:113</div></div>
+<div class="ttc" id="structarq_class_html_a0fa1b4b35fcc35e25fff7563f1ce7b2b"><div class="ttname"><a href="structarq_class.html#a0fa1b4b35fcc35e25fff7563f1ce7b2b">arqClass::this_class</a></div><div class="ttdeci">u2 this_class</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:133</div></div>
+<div class="ttc" id="structarq_class_html_a0cdd803ff7b2a6a229c048bb51f1febc"><div class="ttname"><a href="structarq_class.html#a0cdd803ff7b2a6a229c048bb51f1febc">arqClass::methods_count</a></div><div class="ttdeci">u2 methods_count</div><div class="ttdef"><b>Definition:</b> E_LECLASS.h:139</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEA1C8821BDD042E00A383E0 /* M_INTUSU.c in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C87D1BDD042E00A383E0 /* M_INTUSU.c */; };
+		CEA1C8831BDD042E00A383E0 /* M_LCLASS.c in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C87E1BDD042E00A383E0 /* M_LCLASS.c */; };
+		CEA1C8841BDD042E00A383E0 /* MP_LECLASS.c in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C87F1BDD042E00A383E0 /* MP_LECLASS.c */; };
+		CEA1C8851BDD042E00A383E0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C8801BDD042E00A383E0 /* main.c */; };
+		CEEF06371BE402EA00EE0297 /* M_ECLASS.c in Sources */ = {isa = PBXBuildFile; fileRef = CEEF06351BE402EA00EE0297 /* M_ECLASS.c */; };
+		CEEF06391BE420F400EE0297 /* M_OPCLASS.c in Sources */ = {isa = PBXBuildFile; fileRef = CEEF06381BE420F400EE0297 /* M_OPCLASS.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEA1C8671BDD039C00A383E0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CEA1C8691BDD039C00A383E0 /* LeitorJavaClass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeitorJavaClass; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA1C8771BDD042300A383E0 /* E_LECLASS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = E_LECLASS.h; path = include/E_LECLASS.h; sourceTree = "<group>"; };
+		CEA1C8791BDD042300A383E0 /* I_INTUSU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = I_INTUSU.h; path = include/I_INTUSU.h; sourceTree = "<group>"; };
+		CEA1C87A1BDD042300A383E0 /* I_LECLASS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = I_LECLASS.h; path = include/I_LECLASS.h; sourceTree = "<group>"; };
+		CEA1C87B1BDD042300A383E0 /* IP_LECLASS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IP_LECLASS.h; path = include/IP_LECLASS.h; sourceTree = "<group>"; };
+		CEA1C87D1BDD042E00A383E0 /* M_INTUSU.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INTUSU.c; path = src/M_INTUSU.c; sourceTree = "<group>"; };
+		CEA1C87E1BDD042E00A383E0 /* M_LCLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_LCLASS.c; path = src/M_LCLASS.c; sourceTree = "<group>"; };
+		CEA1C87F1BDD042E00A383E0 /* MP_LECLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = MP_LECLASS.c; path = src/MP_LECLASS.c; sourceTree = "<group>"; };
+		CEA1C8801BDD042E00A383E0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
+		CEEF06351BE402EA00EE0297 /* M_ECLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_ECLASS.c; path = src/M_ECLASS.c; sourceTree = "<group>"; };
+		CEEF06381BE420F400EE0297 /* M_OPCLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPCLASS.c; path = src/M_OPCLASS.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA1C8661BDD039C00A383E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA1C8601BDD039C00A383E0 = {
+			isa = PBXGroup;
+			children = (
+				CEA1C86B1BDD039C00A383E0 /* LeitorJavaClass */,
+				CEA1C86A1BDD039C00A383E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA1C86A1BDD039C00A383E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1C8691BDD039C00A383E0 /* LeitorJavaClass */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA1C86B1BDD039C00A383E0 /* LeitorJavaClass */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1C8751BDD040E00A383E0 /* src */,
+				CEA1C8731BDD040100A383E0 /* include */,
+			);
+			path = LeitorJavaClass;
+			sourceTree = "<group>";
+		};
+		CEA1C8731BDD040100A383E0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1C8771BDD042300A383E0 /* E_LECLASS.h */,
+				CEA1C8791BDD042300A383E0 /* I_INTUSU.h */,
+				CEA1C87A1BDD042300A383E0 /* I_LECLASS.h */,
+				CEA1C87B1BDD042300A383E0 /* IP_LECLASS.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		CEA1C8751BDD040E00A383E0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1C87D1BDD042E00A383E0 /* M_INTUSU.c */,
+				CEA1C87E1BDD042E00A383E0 /* M_LCLASS.c */,
+				CEEF06381BE420F400EE0297 /* M_OPCLASS.c */,
+				CEEF06351BE402EA00EE0297 /* M_ECLASS.c */,
+				CEA1C87F1BDD042E00A383E0 /* MP_LECLASS.c */,
+				CEA1C8801BDD042E00A383E0 /* main.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEA1C8681BDD039C00A383E0 /* LeitorJavaClass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA1C8701BDD039C00A383E0 /* Build configuration list for PBXNativeTarget "LeitorJavaClass" */;
+			buildPhases = (
+				CEA1C8651BDD039C00A383E0 /* Sources */,
+				CEA1C8661BDD039C00A383E0 /* Frameworks */,
+				CEA1C8671BDD039C00A383E0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeitorJavaClass;
+			productName = LeitorJavaClass;
+			productReference = CEA1C8691BDD039C00A383E0 /* LeitorJavaClass */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA1C8611BDD039C00A383E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Rondinele Prado";
+				TargetAttributes = {
+					CEA1C8681BDD039C00A383E0 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = CEA1C8641BDD039C00A383E0 /* Build configuration list for PBXProject "LeitorJavaClass" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEA1C8601BDD039C00A383E0;
+			productRefGroup = CEA1C86A1BDD039C00A383E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA1C8681BDD039C00A383E0 /* LeitorJavaClass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA1C8651BDD039C00A383E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEF06371BE402EA00EE0297 /* M_ECLASS.c in Sources */,
+				CEA1C8851BDD042E00A383E0 /* main.c in Sources */,
+				CEA1C8841BDD042E00A383E0 /* MP_LECLASS.c in Sources */,
+				CEA1C8821BDD042E00A383E0 /* M_INTUSU.c in Sources */,
+				CEA1C8831BDD042E00A383E0 /* M_LCLASS.c in Sources */,
+				CEEF06391BE420F400EE0297 /* M_OPCLASS.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CEA1C86E1BDD039C00A383E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CEA1C86F1BDD039C00A383E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CEA1C8711BDD039C00A383E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEA1C8721BDD039C00A383E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA1C8641BDD039C00A383E0 /* Build configuration list for PBXProject "LeitorJavaClass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA1C86E1BDD039C00A383E0 /* Debug */,
+				CEA1C86F1BDD039C00A383E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA1C8701BDD039C00A383E0 /* Build configuration list for PBXNativeTarget "LeitorJavaClass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA1C8711BDD039C00A383E0 /* Debug */,
+				CEA1C8721BDD039C00A383E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEA1C8611BDD039C00A383E0 /* Project object */;
+}

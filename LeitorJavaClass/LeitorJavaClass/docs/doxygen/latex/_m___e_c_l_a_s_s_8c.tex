@@ -1,0 +1,127 @@
+\hypertarget{_m___e_c_l_a_s_s_8c}{}\section{Referência do Arquivo src/\+M\+\_\+\+E\+C\+L\+A\+S\+S.c}
+\label{_m___e_c_l_a_s_s_8c}\index{src/\+M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{src/\+M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+
+
+Modulo Exibidor de arquivos \char`\"{}.\+class\char`\"{}.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{_m___e_c_l_a_s_s_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___e_c_l_a_s_s_8c_a774e5c0f9952b7fc4c00b000d714d2d1}{E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{u4\+To\+Double} (\hyperlink{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} high\+\_\+bytes, \hyperlink{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} low\+\_\+bytes)
+\item 
+float \hyperlink{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{u4\+To\+F\+Loat} (\hyperlink{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} bytes)
+\item 
+void \hyperlink{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{exibe\+Cte\+Pool} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\item 
+void \hyperlink{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b}{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo Exibidor de arquivos \char`\"{}.\+class\char`\"{}. 
+
+Modulo responsavel por implementar os metodos relacionados a exibicao de um arquivo \char`\"{}.\+class\char`\"{}. 
+
+\subsection{Definições e macros}
+\hypertarget{_m___e_c_l_a_s_s_8c_a774e5c0f9952b7fc4c00b000d714d2d1}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V@{E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}}
+\index{E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V@{E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+C\+L\+A\+S\+S\+\_\+\+S\+E\+R\+V}\label{_m___e_c_l_a_s_s_8c_a774e5c0f9952b7fc4c00b000d714d2d1}
+
+
+\subsection{Funções}
+\hypertarget{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!exibe\+Cte\+Pool@{exibe\+Cte\+Pool}}
+\index{exibe\+Cte\+Pool@{exibe\+Cte\+Pool}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{exibe\+Cte\+Pool(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void exibe\+Cte\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}
+Metodo que que realiza a exibicao do pool de constantes de uma estrutura Arq\+Class
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura Arq\+Class contendo o ponteiro para o pool de constantes a ser exibido \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+exibidor (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b}
+Metodo responsavel por prover o servico de exibicao de uma estrutura \char`\"{}.\+class\char`\"{}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura inicializada do tipo Arq\+Class a ser exibida. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+Double@{u4\+To\+Double}}
+\index{u4\+To\+Double@{u4\+To\+Double}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{u4\+To\+Double(u4 high\+\_\+bytes, u4 low\+\_\+bytes)}]{\setlength{\rightskip}{0pt plus 5cm}double u4\+To\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf u4}}]{high\+\_\+bytes, }
+\item[{{\bf u4}}]{low\+\_\+bytes}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}
+Metodo que que realiza a conversao de um u4 (little-\/endian) para um double em big-\/endian order
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em high\+\_\+bytes} & Bytes de mais alta ordem \\
+\hline
+{\em low\+\_\+bytes} & Bytes de mais baixa ordem \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+F\+Loat@{u4\+To\+F\+Loat}}
+\index{u4\+To\+F\+Loat@{u4\+To\+F\+Loat}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{u4\+To\+F\+Loat(u4 bytes)}]{\setlength{\rightskip}{0pt plus 5cm}float u4\+To\+F\+Loat (
+\begin{DoxyParamCaption}
+\item[{{\bf u4}}]{bytes}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}
+Metodo que que realiza a conversao de um u4 (little-\/endian) para um float em big-\/endian order
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bytes} & Bytes em u4 \\
+\hline
+\end{DoxyParams}
