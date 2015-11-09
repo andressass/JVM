@@ -19,8 +19,10 @@ FILE* obter_entrada(const char *arq){
    FILE *arquivo; // Arquivo a ser carregado e retornado
 
    arquivo = fopen(arq, "rb");
+    
+    if (arquivo) return arquivo;
 
-return arquivo;
+return NULL;
 
 }
 

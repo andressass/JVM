@@ -7,11 +7,13 @@ Modulo Exibidor de arquivos \char`\"{}.\+class\char`\"{}.
 
 {\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:\nopagebreak
+{\ttfamily \#include $<$wchar.\+h$>$}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=312pt]{_m___e_c_l_a_s_s_8c__incl}
+\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Definições e Macros}
@@ -26,9 +28,15 @@ double \hyperlink{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{u4\+To\
 \item 
 float \hyperlink{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{u4\+To\+F\+Loat} (\hyperlink{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} bytes)
 \item 
+void \hyperlink{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}{Print\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} codepoint)
+\item 
+void \hyperlink{_m___e_c_l_a_s_s_8c_a5e73293a31bb86c3a64a12edfc9d71d4}{Bytes\+To\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$codepoints, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$count, \hyperlink{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytes, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} lenght)
+\item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{exibe\+Cte\+Pool} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
 \item 
-void \hyperlink{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b}{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\hyperlink{_e___l_e_c_l_a_s_s_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado} \hyperlink{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195}{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\item 
+void \hyperlink{_m___e_c_l_a_s_s_8c_ad138b019f1004b7a5dc6cb9467c96ae0}{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado} \hyperlink{_e___l_e_c_l_a_s_s_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado})
 \end{DoxyCompactItemize}
 
 
@@ -44,7 +52,42 @@ Modulo responsavel por implementar os metodos relacionados a exibicao de um arqu
 
 
 \subsection{Funções}
-\hypertarget{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!exibe\+Cte\+Pool@{exibe\+Cte\+Pool}}
+\hypertarget{_m___e_c_l_a_s_s_8c_a5e73293a31bb86c3a64a12edfc9d71d4}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!Bytes\+To\+Code\+Point@{Bytes\+To\+Code\+Point}}
+\index{Bytes\+To\+Code\+Point@{Bytes\+To\+Code\+Point}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{Bytes\+To\+Code\+Point(u2 $\ast$codepoints, u2 $\ast$count, u1 $\ast$bytes, u2 lenght)}]{\setlength{\rightskip}{0pt plus 5cm}void Bytes\+To\+Code\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf u2} $\ast$}]{codepoints, }
+\item[{{\bf u2} $\ast$}]{count, }
+\item[{{\bf u1} $\ast$}]{bytes, }
+\item[{{\bf u2}}]{lenght}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_a5e73293a31bb86c3a64a12edfc9d71d4}
+Metodo que que realiza a conversao de um vetor de bytes para um code point, o qual pode representar tanto caracteres A\+S\+C\+I\+I quanto Unicode.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em codepoints} & Vetor a receber os code points. \\
+\hline
+{\em count} & Tamanho to vetor de code points. \\
+\hline
+{\em bytes} & Array de bytes a ser convertido. \\
+\hline
+{\em length} & Tamanho do array de bytes. \\
+\hline
+\end{DoxyParams}
+$<$ Indice do vetor codepoint
+
+$<$ $\vert$110$\vert$bits 10-\/6$\vert$
+
+$<$ $\vert$10$\vert$bits 5-\/0$\vert$
+
+$<$ $\vert$110$\vert$bits 15-\/12$\vert$
+
+$<$ $\vert$10$\vert$bits 11-\/6$\vert$
+
+$<$ $\vert$10$\vert$bits 5-\/0$\vert$
+
+$<$ Count deve receber o numero de elementos do array code points \hypertarget{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!exibe\+Cte\+Pool@{exibe\+Cte\+Pool}}
 \index{exibe\+Cte\+Pool@{exibe\+Cte\+Pool}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
 \subsubsection[{exibe\+Cte\+Pool(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void exibe\+Cte\+Pool (
 \begin{DoxyParamCaption}
@@ -58,24 +101,39 @@ Metodo que que realiza a exibicao do pool de constantes de uma estrutura Arq\+Cl
 {\em arq\+\_\+class} & Estrutura Arq\+Class contendo o ponteiro para o pool de constantes a ser exibido \\
 \hline
 \end{DoxyParams}
+$<$ Inicializamos um vetor de code points 
 
-
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=261pt]{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph}
+\includegraphics[width=290pt]{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}}
+\hypertarget{_m___e_c_l_a_s_s_8c_ad138b019f1004b7a5dc6cb9467c96ae0}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao(resultado resultado)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao (
+\begin{DoxyParamCaption}
+\item[{{\bf resultado}}]{resultado}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_ad138b019f1004b7a5dc6cb9467c96ae0}
+Metodo responsavel por prover o servico de exibicao de resuldados de erro de operacoes
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em resultado} & Tipo resultado a ser decodificado e exibido \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}}
 \index{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+exibidor (
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf resultado} L\+E\+C\+L\+A\+S\+S\+\_\+exibidor (
 \begin{DoxyParamCaption}
 \item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
 \end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b}
+)}\label{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195}
 Metodo responsavel por prover o servico de exibicao de uma estrutura \char`\"{}.\+class\char`\"{}
 
 
@@ -83,17 +141,35 @@ Metodo responsavel por prover o servico de exibicao de uma estrutura \char`\"{}.
 {\em arq\+\_\+class} & Estrutura inicializada do tipo Arq\+Class a ser exibida. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Resultado da operacao 
+\end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c_abc1d65b65ac971d3c55ee1e611321a8b_cgraph}
+\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195_cgraph}
 \end{center}
 \end{figure}
 
 
+\hypertarget{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!Print\+Code\+Point@{Print\+Code\+Point}}
+\index{Print\+Code\+Point@{Print\+Code\+Point}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{Print\+Code\+Point(u2 codepoint)}]{\setlength{\rightskip}{0pt plus 5cm}void Print\+Code\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf u2}}]{codepoint}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}
+Metodo que que realiza a exibicao de um caracter referente a um codepoint.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em codepoint} & code point a ser impresso. \\
+\hline
+\end{DoxyParams}
 \hypertarget{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+Double@{u4\+To\+Double}}
 \index{u4\+To\+Double@{u4\+To\+Double}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
 \subsubsection[{u4\+To\+Double(u4 high\+\_\+bytes, u4 low\+\_\+bytes)}]{\setlength{\rightskip}{0pt plus 5cm}double u4\+To\+Double (
@@ -102,13 +178,13 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf u4}}]{low\+\_\+bytes}
 \end{DoxyParamCaption}
 )}\label{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}
-Metodo que que realiza a conversao de um u4 (little-\/endian) para um double em big-\/endian order
+Metodo que que realiza a conversao de um u4 (little-\/endian) para um double em big-\/endian order.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em high\+\_\+bytes} & Bytes de mais alta ordem \\
+{\em high\+\_\+bytes} & Bytes de mais alta ordem. \\
 \hline
-{\em low\+\_\+bytes} & Bytes de mais baixa ordem \\
+{\em low\+\_\+bytes} & Bytes de mais baixa ordem. \\
 \hline
 \end{DoxyParams}
 \hypertarget{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+F\+Loat@{u4\+To\+F\+Loat}}
@@ -118,10 +194,10 @@ Metodo que que realiza a conversao de um u4 (little-\/endian) para um double em 
 \item[{{\bf u4}}]{bytes}
 \end{DoxyParamCaption}
 )}\label{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}
-Metodo que que realiza a conversao de um u4 (little-\/endian) para um float em big-\/endian order
+Metodo que que realiza a conversao de um u4 (little-\/endian) para um float em big-\/endian order.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em bytes} & Bytes em u4 \\
+{\em bytes} & Bytes em u4. \\
 \hline
 \end{DoxyParams}

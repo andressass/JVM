@@ -65,8 +65,12 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/LeitorJavaClass/LeitorJavaClass/docs/HelloWorld.class"
+            argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/LeitorJavaClass/LeitorJavaClass/docs/HelloWorld.class"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/LeitorJavaClass/LeitorJavaClass/README.txt"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

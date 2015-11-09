@@ -151,14 +151,22 @@ field_or_method* leCampMetd(u2 count, FILE* arq){
  *
  * \param arq_class Estrutura de arquivo ".class" a ser preenchida
  * \param arq       Arquivo ".class" a ser lido.
+ * \return          Resultado da operacao
  */
-void arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
+resultado arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
     
+    //Lemos e verificamos o Magic e as versoes
     arq_class->magic = u4Le(arq);
+    if (arq_class->magic != 0xcafebabe) return LECLASS_ERRO_ArqInvalido;
     arq_class->minor_version = u2Le(arq);
+    if (arq_class->minor_version < LECLASS_MIN_Version) return LECLASS_ERRO_ArqVersIncmp;
     arq_class->major_version = u2Le(arq);
+    if (arq_class->major_version > LECLASS_MAJ_Version) return LECLASS_ERRO_ArqVersIncmp;
+    
+    //Constant pool
     arq_class->constant_pool_count = u2Le(arq);
     arq_class->constant_pool = leCtePool(arq_class->constant_pool_count, arq); //Lemos o constant pool
+
     arq_class->access_flags = u2Le(arq);
     arq_class->this_class = u2Le(arq);
     arq_class->super_class = u2Le(arq);
@@ -181,21 +189,27 @@ void arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
     arq_class->attributes = (attribute_info **)
                             malloc(arq_class->attributes_count * sizeof(attribute_info*));
     for (int i = 0; i < arq_class->attributes_count; i++) arq_class->attributes[i] = leAtributo(arq);
+    
+    return LECLASS_SUCESSO;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void LECLASS_leitor(ArqClass* arq_class, const char* arq){
+resultado LECLASS_leitor(ArqClass* arq_class, const char* arq){
 
     FILE *entrada;
 
     //Obtemos o arquivo de entrada
     entrada = obter_entrada(arq);
-    if (entrada == NULL) return;
+    
+    //Erro de abertura de arquivo
+    if (!entrada) return LECLASS_ERRO_ArqAbertura;
 
     //Lemos os dados e salvamos na estrutura ArqClass
-    arquivoParaArqClass(arq_class, entrada);
+    resultado result = arquivoParaArqClass(arq_class, entrada);
     
     fclose(entrada);
+    
+    return result;
 
 }

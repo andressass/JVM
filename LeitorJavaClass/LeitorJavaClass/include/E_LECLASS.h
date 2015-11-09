@@ -13,6 +13,24 @@
 
 
 //--------------------------------------------------------------------------------------------------
+// Definicoes de sucesso e erro de operacoes
+
+//Erros de arquivo
+#define LECLASS_ERRO_ArqAbertura        1 //!< Erro de abertura do arquivo
+#define LECLASS_ERRO_ArqInvalido        2 //!< Arquivo em formato invalido
+#define LECLASS_ERRO_ArqVersIncmp       3 //!< Arquivo possui versao imcompativel
+#define LECLASS_SUCESSO                 0
+
+
+//--------------------------------------------------------------------------------------------------
+// Definicoes de prerequisitos do sistema
+
+//Erros de arquivo
+#define LECLASS_MIN_Version        0
+#define LECLASS_MAJ_Version        48
+
+
+//--------------------------------------------------------------------------------------------------
 //Tags do Pool de Constantes
 
 #define CONSTANT_Class              7
@@ -34,6 +52,7 @@
 typedef unsigned char u1; //!< Representa 1 byte
 typedef unsigned short u2; //!< Representa 2 bytes
 typedef unsigned int  u4; //!< Representa 3 bytes
+typedef unsigned short resultado; //!< Representa o resultado de uma operacao
 
 
 //--------------------------------------------------------------------------------------------------

@@ -13,13 +13,14 @@
 
 #include "../include/I_LECLASS.h"
 #include <string.h>
+#include <wchar.h>
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que que realiza a conversao de um u4 (little-endian) para um double em big-endian order
+ * Metodo que que realiza a conversao de um u4 (little-endian) para um double em big-endian order.
  *
- * \param high_bytes    Bytes de mais alta ordem
- * \param low_bytes     Bytes de mais baixa ordem
+ * \param high_bytes    Bytes de mais alta ordem.
+ * \param low_bytes     Bytes de mais baixa ordem.
  */
 double u4ToDouble(u4 high_bytes, u4 low_bytes){
     double resultado;
@@ -39,9 +40,9 @@ double u4ToDouble(u4 high_bytes, u4 low_bytes){
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que que realiza a conversao de um u4 (little-endian) para um float em big-endian order
+ * Metodo que que realiza a conversao de um u4 (little-endian) para um float em big-endian order.
  *
- * \param bytes    Bytes em u4
+ * \param bytes    Bytes em u4.
  */
 float u4ToFLoat(u4 bytes){
     
@@ -55,6 +56,64 @@ float u4ToFLoat(u4 bytes){
     memcpy(&resultado, &b, sizeof(resultado));
     
     return resultado;
+}
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que que realiza a exibicao de um caracter referente a um codepoint.
+ *
+ * \param codepoint code point a ser impresso.
+ */
+void PrintCodePoint(u2 codepoint){
+    
+    u1 high_byte = (codepoint >> 8);
+    u1 low_byte = codepoint;
+    
+    wprintf(L"%c%c", high_byte, low_byte);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que que realiza a conversao de um vetor de bytes para um code point, o qual pode 
+ * representar tanto caracteres ASCII quanto Unicode.
+ *
+ * \param codepointsAddress Endereco receber o vetor de code points.
+ * \param count      Tamanho to vetor de code points.
+ * \param bytes      Array de bytes a ser convertido.
+ * \param length     Tamanho do array de bytes.
+ */
+void BytesToCodePoint(u2** codepointsAddress, u2* count, u1* bytes, u2 lenght){
+    
+    u2 j = 0; //Indice do vetor codepoint
+    u2* codepoints = (u2 *) malloc(sizeof(u2));
+    
+    for(int i=0; i < lenght; i++){
+        
+        //Code points no intervalo de '\u0001' a '\u007F' sao representados por um unico byte
+        if ((bytes[i] & 0x80) == 0) {
+            codepoints[j++] = bytes[i];
+            
+        }
+        //Code points no intervalo de '\u0080' a '\u07FF' sao representados por um par de bytes
+        else if ((bytes[i] & 0xE0) == 0xc0){
+            u1 x = bytes[i]; // |110|bits 10-6|
+            u2 y = bytes[++i]; // |10|bits 5-0|
+            codepoints[j++] = ((x & 0x1f) << 6) + (y & 0x3f);
+            
+        }
+        //Code points no intervalo de '\u0800' a '\uFFFF' sao representados por 3 bytes
+        else if ((bytes[i] & 0xE0) == 0xE0){
+            u1 x = bytes[i]; // |110|bits 15-12|
+            u2 y = bytes[++i]; // |10|bits 11-6|
+            u2 z = bytes[++i]; // |10|bits 5-0|
+            codepoints[j++] = ((x & 0xf) << 12) + ((y & 0x3f) << 6) + (z & 0x3f);
+        }
+        codepoints = realloc(codepoints, (j+1) * sizeof(u2));
+    }
+    *count = j+1; // Count deve receber o numero de elementos do array code points
+    *codepointsAddress = codepoints;
 }
 
 
@@ -104,7 +163,11 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 lenght: %d", cp->u.Utf8.lenght);
                 printf("\n\tu1 bytes[%d]: ", cp->u.Utf8.lenght);
-                for(int i=0; i < cp->u.Utf8.lenght; i++) printf ("%c", cp->u.Utf8.bytes[i]);
+                u2 count;
+                u2* codepoints; //Inicializamos um vetor de code points
+                BytesToCodePoint(&codepoints, &count, cp->u.Utf8.bytes, cp->u.Utf8.lenght);
+                for (int i = 0; i < count; i++) PrintCodePoint(codepoints[i]);
+                free(codepoints);
                 printf("\n}\n");
                 break;
                 
@@ -179,7 +242,7 @@ void exibeCtePool(ArqClass* arq_class){
 
 
 //--------------------------------------------------------------------------------------------------
-void LECLASS_exibidor(ArqClass* arq_class){
+resultado LECLASS_exibidor(ArqClass* arq_class){
     
     printf("\n####################################################\n");
     printf("DETALHES DO ARQUIVO .CLASS");
@@ -195,8 +258,32 @@ void LECLASS_exibidor(ArqClass* arq_class){
     printf("\n----------------------------------------------------\n");
     printf("\n####################################################\n");
     
+    return LECLASS_SUCESSO;
+
 }
 
+
+//--------------------------------------------------------------------------------------------------
+void LECLASS_exibeErroOperacao(resultado resultado){
+    
+    switch (resultado) {
+        case LECLASS_ERRO_ArqAbertura:
+            printf("\nErro de abertura do arquivo.\n");
+            break;
+            
+        case LECLASS_ERRO_ArqInvalido:
+            printf("\nArquivo .class invalido.\n");
+            break;
+            
+        case LECLASS_ERRO_ArqVersIncmp:
+            printf("\nA versao do arquivo .class eh imcompativel.\n");
+            break;
+            
+        default:
+            break;
+    }
+
+}
 
 
 

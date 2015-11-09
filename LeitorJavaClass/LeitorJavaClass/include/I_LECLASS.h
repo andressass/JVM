@@ -29,8 +29,9 @@
  *
  * \param arq_class         Estrutura inicializada do tipo ArqClass a ser preenchida.
  * \param arquivo_entrada   Arquivo ".class" a ser lido.
+ * \return Resultado da operacao
  */
-EXT4 void LECLASS_leitor(ArqClass* arq_class, const char* arquivo_entrada);
+EXT4 resultado LECLASS_leitor(ArqClass* arq_class, const char* arquivo_entrada);
 
 
 //--------------------------------------------------------------------------------------------------
@@ -38,8 +39,10 @@ EXT4 void LECLASS_leitor(ArqClass* arq_class, const char* arquivo_entrada);
  * Metodo responsavel por prover o servico de exibicao de uma estrutura ".class"
  *
  * \param arq_class         Estrutura inicializada do tipo ArqClass a ser exibida.
+ * \return Resultado da operacao
  */
-EXT4 void LECLASS_exibidor(ArqClass* arq_class);
+EXT4 resultado LECLASS_exibidor(ArqClass* arq_class);
+
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -48,5 +51,16 @@ EXT4 void LECLASS_exibidor(ArqClass* arq_class);
  * \param arq_class         Estrutura inicializada do tipo ArqClass a ser liberada.
  */
 EXT4 void LECLASS_free(ArqClass* arq_class);
+
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por prover o servico de exibicao de resuldados de erro de operacoes
+ *
+ * \param resultado         Tipo resultado a ser decodificado e exibido 
+ */
+EXT4 void LECLASS_exibeErroOperacao(resultado resultado);
+
 
 #endif
