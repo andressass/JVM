@@ -8,8 +8,7 @@ Modulo Exibidor de arquivos \char`\"{}.\+class\char`\"{}.
 {\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
 {\ttfamily \#include $<$wchar.\+h$>$}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:
-\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +29,7 @@ float \hyperlink{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{u4\+To\+
 \item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}{Print\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} codepoint)
 \item 
-void \hyperlink{_m___e_c_l_a_s_s_8c_a5e73293a31bb86c3a64a12edfc9d71d4}{Bytes\+To\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$codepoints, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$count, \hyperlink{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytes, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} lenght)
+void \hyperlink{_m___e_c_l_a_s_s_8c_a53d95a404a611cbe5897840b6a9b4c9e}{Bytes\+To\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$$\ast$codepoints\+Address, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$count, \hyperlink{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytes, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} lenght)
 \item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{exibe\+Cte\+Pool} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
 \item 
@@ -52,21 +51,21 @@ Modulo responsavel por implementar os metodos relacionados a exibicao de um arqu
 
 
 \subsection{Funções}
-\hypertarget{_m___e_c_l_a_s_s_8c_a5e73293a31bb86c3a64a12edfc9d71d4}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!Bytes\+To\+Code\+Point@{Bytes\+To\+Code\+Point}}
+\hypertarget{_m___e_c_l_a_s_s_8c_a53d95a404a611cbe5897840b6a9b4c9e}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!Bytes\+To\+Code\+Point@{Bytes\+To\+Code\+Point}}
 \index{Bytes\+To\+Code\+Point@{Bytes\+To\+Code\+Point}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{Bytes\+To\+Code\+Point(u2 $\ast$codepoints, u2 $\ast$count, u1 $\ast$bytes, u2 lenght)}]{\setlength{\rightskip}{0pt plus 5cm}void Bytes\+To\+Code\+Point (
+\subsubsection[{Bytes\+To\+Code\+Point(u2 $\ast$$\ast$codepoints\+Address, u2 $\ast$count, u1 $\ast$bytes, u2 lenght)}]{\setlength{\rightskip}{0pt plus 5cm}void Bytes\+To\+Code\+Point (
 \begin{DoxyParamCaption}
-\item[{{\bf u2} $\ast$}]{codepoints, }
+\item[{{\bf u2} $\ast$$\ast$}]{codepoints\+Address, }
 \item[{{\bf u2} $\ast$}]{count, }
 \item[{{\bf u1} $\ast$}]{bytes, }
 \item[{{\bf u2}}]{lenght}
 \end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_a5e73293a31bb86c3a64a12edfc9d71d4}
+)}\label{_m___e_c_l_a_s_s_8c_a53d95a404a611cbe5897840b6a9b4c9e}
 Metodo que que realiza a conversao de um vetor de bytes para um code point, o qual pode representar tanto caracteres A\+S\+C\+I\+I quanto Unicode.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em codepoints} & Vetor a receber os code points. \\
+{\em codepoints\+Address} & Endereco receber o vetor de code points. \\
 \hline
 {\em count} & Tamanho to vetor de code points. \\
 \hline
@@ -75,19 +74,7 @@ Metodo que que realiza a conversao de um vetor de bytes para um code point, o qu
 {\em length} & Tamanho do array de bytes. \\
 \hline
 \end{DoxyParams}
-$<$ Indice do vetor codepoint
-
-$<$ $\vert$110$\vert$bits 10-\/6$\vert$
-
-$<$ $\vert$10$\vert$bits 5-\/0$\vert$
-
-$<$ $\vert$110$\vert$bits 15-\/12$\vert$
-
-$<$ $\vert$10$\vert$bits 11-\/6$\vert$
-
-$<$ $\vert$10$\vert$bits 5-\/0$\vert$
-
-$<$ Count deve receber o numero de elementos do array code points \hypertarget{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!exibe\+Cte\+Pool@{exibe\+Cte\+Pool}}
+\hypertarget{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!exibe\+Cte\+Pool@{exibe\+Cte\+Pool}}
 \index{exibe\+Cte\+Pool@{exibe\+Cte\+Pool}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
 \subsubsection[{exibe\+Cte\+Pool(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}void exibe\+Cte\+Pool (
 \begin{DoxyParamCaption}
@@ -101,10 +88,9 @@ Metodo que que realiza a exibicao do pool de constantes de uma estrutura Arq\+Cl
 {\em arq\+\_\+class} & Estrutura Arq\+Class contendo o ponteiro para o pool de constantes a ser exibido \\
 \hline
 \end{DoxyParams}
-$<$ Inicializamos um vetor de code points 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -146,8 +132,7 @@ Resultado da operacao
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

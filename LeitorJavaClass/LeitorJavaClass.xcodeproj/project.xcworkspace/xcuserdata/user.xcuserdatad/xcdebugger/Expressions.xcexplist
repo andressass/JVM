@@ -28,6 +28,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "PrintCodePoint:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = " low_byte | 0x00e4">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "exibeCtePool:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString

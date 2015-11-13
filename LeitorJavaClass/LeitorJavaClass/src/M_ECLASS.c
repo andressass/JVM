@@ -67,9 +67,10 @@ float u4ToFLoat(u4 bytes){
  */
 void PrintCodePoint(u2 codepoint){
     
-    u1 high_byte = (codepoint >> 8);
-    u1 low_byte = codepoint;
+    wchar_t low_byte = (codepoint << 8);
+    wchar_t high_byte = codepoint;
     
+    //Imprimimos o caractere de 16bits
     wprintf(L"%c%c", high_byte, low_byte);
 }
 
@@ -112,7 +113,7 @@ void BytesToCodePoint(u2** codepointsAddress, u2* count, u1* bytes, u2 lenght){
         }
         codepoints = realloc(codepoints, (j+1) * sizeof(u2));
     }
-    *count = j+1; // Count deve receber o numero de elementos do array code points
+    *count = j; // Count deve receber o numero de elementos do array code points
     *codepointsAddress = codepoints;
 }
 
@@ -258,7 +259,7 @@ resultado LECLASS_exibidor(ArqClass* arq_class){
     printf("\n----------------------------------------------------\n");
     printf("\n####################################################\n");
     
-    return LECLASS_SUCESSO;
+    return LinkageSuccess;
 
 }
 
@@ -267,15 +268,15 @@ resultado LECLASS_exibidor(ArqClass* arq_class){
 void LECLASS_exibeErroOperacao(resultado resultado){
     
     switch (resultado) {
-        case LECLASS_ERRO_ArqAbertura:
+        case LinkageError_NoClassDefFoundError:
             printf("\nErro de abertura do arquivo.\n");
             break;
             
-        case LECLASS_ERRO_ArqInvalido:
+        case LinkageError_ClassFormatError:
             printf("\nArquivo .class invalido.\n");
             break;
             
-        case LECLASS_ERRO_ArqVersIncmp:
+        case LinkageError_UnsupportedClassVersionError:
             printf("\nA versao do arquivo .class eh imcompativel.\n");
             break;
             

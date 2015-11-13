@@ -34,7 +34,7 @@ void INTUSU_executar(int argc, char **argv){
     
     //Executamos a leitura do arquivo
     result = LECLASS_leitor(arq_class, argv[1]);
-    if (result != LECLASS_SUCESSO) {
+    if (result != LinkageSuccess) {
         //Caso ocorra algum erro na leitura do arquivo
         LECLASS_exibeErroOperacao(result);
         free(arq_entrada);

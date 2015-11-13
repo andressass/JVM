@@ -15,11 +15,12 @@
 //--------------------------------------------------------------------------------------------------
 // Definicoes de sucesso e erro de operacoes
 
-//Erros de arquivo
-#define LECLASS_ERRO_ArqAbertura        1 //!< Erro de abertura do arquivo
-#define LECLASS_ERRO_ArqInvalido        2 //!< Arquivo em formato invalido
-#define LECLASS_ERRO_ArqVersIncmp       3 //!< Arquivo possui versao imcompativel
-#define LECLASS_SUCESSO                 0
+//Erros do leitor .class
+#define LinkageError_ClassFormatError                   1 //!< Arquivo em corrompido
+#define LinkageError_UnsupportedClassVersionError       2 //!< Arquivo possui versao nao suportada
+#define LinkageError_ClassCirculatityError              3 //!< Classe seria a sua propria superclasse
+#define LinkageError_NoClassDefFoundError               4 //!< Erro de abertura do arquivo
+#define LinkageSuccess                                  0 //!< Sucesso na operacao
 
 
 //--------------------------------------------------------------------------------------------------
