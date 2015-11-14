@@ -27,7 +27,7 @@ double \hyperlink{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{u4\+To\
 \item 
 float \hyperlink{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{u4\+To\+F\+Loat} (\hyperlink{_e___l_e_c_l_a_s_s_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} bytes)
 \item 
-void \hyperlink{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}{Print\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} codepoint)
+wchar\+\_\+t $\ast$ \hyperlink{_m___e_c_l_a_s_s_8c_a698faad292c00a0814650b0b31784e3a}{Get\+U\+T\+F8\+From\+Constant\+Pool} (\hyperlink{_e___l_e_c_l_a_s_s_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} tag)
 \item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_a53d95a404a611cbe5897840b6a9b4c9e}{Bytes\+To\+Code\+Point} (\hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$$\ast$codepoints\+Address, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} $\ast$count, \hyperlink{_e___l_e_c_l_a_s_s_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytes, \hyperlink{_e___l_e_c_l_a_s_s_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} lenght)
 \item 
@@ -90,15 +90,34 @@ Metodo que que realiza a exibicao do pool de constantes de uma estrutura Arq\+Cl
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=290pt]{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph}
+\includegraphics[width=332pt]{_m___e_c_l_a_s_s_8c_aca36942ccf6d00fdf3463c5e2f4e0d68_cgraph}
 \end{center}
 \end{figure}
 
 
+\hypertarget{_m___e_c_l_a_s_s_8c_a698faad292c00a0814650b0b31784e3a}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!Get\+U\+T\+F8\+From\+Constant\+Pool@{Get\+U\+T\+F8\+From\+Constant\+Pool}}
+\index{Get\+U\+T\+F8\+From\+Constant\+Pool@{Get\+U\+T\+F8\+From\+Constant\+Pool}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{Get\+U\+T\+F8\+From\+Constant\+Pool(cp\+\_\+info $\ast$cp, u2 tag)}]{\setlength{\rightskip}{0pt plus 5cm}wchar\+\_\+t$\ast$ Get\+U\+T\+F8\+From\+Constant\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf cp\+\_\+info} $\ast$}]{cp, }
+\item[{{\bf u2}}]{tag}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_a698faad292c00a0814650b0b31784e3a}
+Metodo que que obtem uma string de codepoints no pool de constantes apontada pela tag
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tag} & tag do vetor de char no pool de constantes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string de codepoints. 
+\end{DoxyReturn}
 \hypertarget{_m___e_c_l_a_s_s_8c_ad138b019f1004b7a5dc6cb9467c96ae0}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}}
 \index{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
 \subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao(resultado resultado)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao (
@@ -132,7 +151,8 @@ Resultado da operacao
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -141,20 +161,6 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!Print\+Code\+Point@{Print\+Code\+Point}}
-\index{Print\+Code\+Point@{Print\+Code\+Point}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{Print\+Code\+Point(u2 codepoint)}]{\setlength{\rightskip}{0pt plus 5cm}void Print\+Code\+Point (
-\begin{DoxyParamCaption}
-\item[{{\bf u2}}]{codepoint}
-\end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_a17862db7f3dd94e38d5e48e2e0815978}
-Metodo que que realiza a exibicao de um caracter referente a um codepoint.
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em codepoint} & code point a ser impresso. \\
-\hline
-\end{DoxyParams}
 \hypertarget{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+Double@{u4\+To\+Double}}
 \index{u4\+To\+Double@{u4\+To\+Double}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
 \subsubsection[{u4\+To\+Double(u4 high\+\_\+bytes, u4 low\+\_\+bytes)}]{\setlength{\rightskip}{0pt plus 5cm}double u4\+To\+Double (

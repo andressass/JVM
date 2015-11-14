@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tag',['tag',['../structconst_pool.html#a876197bb013e214c071ab56d1de8ed25',1,'constPool']]],
-  ['this_5fclass',['this_class',['../structarq_class.html#a0fa1b4b35fcc35e25fff7563f1ce7b2b',1,'arqClass']]]
+  ['string',['String',['../structconst_pool.html#ab014bc483e8b8803ecf0c288495b5a5e',1,'constPool']]],
+  ['string_5findex',['string_index',['../structconst_pool.html#a1bb9e94f3cb54a3e19bde3d251379ac0',1,'constPool']]],
+  ['super_5fclass',['super_class',['../structarq_class.html#a7bd81d496166908031c40895ed667ada',1,'arqClass']]]
 ];

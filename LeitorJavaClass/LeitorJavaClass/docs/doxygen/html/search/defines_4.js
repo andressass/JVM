@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['lclass_5fserv',['LCLASS_SERV',['../_m___l_c_l_a_s_s_8c.html#a63e30b35681eedc08a91b95e9bd42bf5',1,'M_LCLASS.c']]],
-  ['leclass_5fmaj_5fversion',['LECLASS_MAJ_Version',['../_e___l_e_c_l_a_s_s_8h.html#abe281d98b3eeea824560a7ef86ad31d6',1,'E_LECLASS.h']]],
-  ['leclass_5fmin_5fversion',['LECLASS_MIN_Version',['../_e___l_e_c_l_a_s_s_8h.html#a78decb34a8bb27d808f38e1868067523',1,'E_LECLASS.h']]],
-  ['linkageerror_5fclasscirculatityerror',['LinkageError_ClassCirculatityError',['../_e___l_e_c_l_a_s_s_8h.html#a84afc176e011aed99b5e4489dbc458a5',1,'E_LECLASS.h']]],
-  ['linkageerror_5fclassformaterror',['LinkageError_ClassFormatError',['../_e___l_e_c_l_a_s_s_8h.html#adf8d1e9df57a99c0db1f29004a0aa4b1',1,'E_LECLASS.h']]],
-  ['linkageerror_5fnoclassdeffounderror',['LinkageError_NoClassDefFoundError',['../_e___l_e_c_l_a_s_s_8h.html#a7702c0fb4e152844097e16d7a7375462',1,'E_LECLASS.h']]],
-  ['linkageerror_5funsupportedclassversionerror',['LinkageError_UnsupportedClassVersionError',['../_e___l_e_c_l_a_s_s_8h.html#a2c193d3567a29d04f3549afab80a390a',1,'E_LECLASS.h']]],
-  ['linkagesuccess',['LinkageSuccess',['../_e___l_e_c_l_a_s_s_8h.html#a21842132ee76c8a0d12ca8e62a361062',1,'E_LECLASS.h']]]
+  ['float_5fmax_5fnan1',['FLOAT_MAX_NaN1',['../_e___l_e_c_l_a_s_s_8h.html#af69cb76c45ad4d64c74642f68c72d9b5',1,'E_LECLASS.h']]],
+  ['float_5fmax_5fnan2',['FLOAT_MAX_NaN2',['../_e___l_e_c_l_a_s_s_8h.html#a86f777d5c10e16be7fbcf8f7d86769b6',1,'E_LECLASS.h']]],
+  ['float_5fmin_5fnan1',['FLOAT_MIN_NaN1',['../_e___l_e_c_l_a_s_s_8h.html#a6a6ecc0fe8f7f8e3eb84b358c079121b',1,'E_LECLASS.h']]],
+  ['float_5fmin_5fnan2',['FLOAT_MIN_NaN2',['../_e___l_e_c_l_a_s_s_8h.html#a82ddf66cfbc511ee205cc251911d814b',1,'E_LECLASS.h']]],
+  ['float_5fnegative_5finfity',['FLOAT_Negative_infity',['../_e___l_e_c_l_a_s_s_8h.html#a7280d0f656c133a8e672cd6651814820',1,'E_LECLASS.h']]],
+  ['float_5fpositive_5finfity',['FLOAT_Positive_infity',['../_e___l_e_c_l_a_s_s_8h.html#a70f89fe4e0367e1d2fb93d0a275c449e',1,'E_LECLASS.h']]]
 ];
