@@ -16,7 +16,7 @@
 // Definicoes de sucesso e erro de operacoes
 
 //Erros do leitor .class
-#define LinkageError_ClassFormatError                   1 //!< Arquivo em corrompido
+#define LinkageError_ClassFormatError                   1 //!< Arquivo corrompido
 #define LinkageError_UnsupportedClassVersionError       2 //!< Arquivo possui versao nao suportada
 #define LinkageError_ClassCirculatityError              3 //!< Classe seria a sua propria superclasse
 #define LinkageError_NoClassDefFoundError               4 //!< Erro de abertura do arquivo
@@ -52,7 +52,7 @@
 
 typedef unsigned char u1; //!< Representa 1 byte
 typedef unsigned short u2; //!< Representa 2 bytes
-typedef unsigned int  u4; //!< Representa 3 bytes
+typedef unsigned int  u4; //!< Representa 4 bytes
 typedef unsigned short resultado; //!< Representa o resultado de uma operacao
 
 
@@ -119,6 +119,7 @@ typedef struct attribute{
     u1* info;   
 
 } attribute_info;
+
 
 //--------------------------------------------------------------------------------------------------
 //! Estrutura de Campos e Metodos
