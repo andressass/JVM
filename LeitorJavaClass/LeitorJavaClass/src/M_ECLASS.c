@@ -61,19 +61,22 @@ float u4ToFLoat(u4 bytes){
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que que realiza a exibicao de um caracter referente a um codepoint.
+ * Metodo que que obtem uma string de codepoints no pool de constantes apontada pela tag
  *
- * \param codepoint code point a ser impresso.
+ * \param tag   tag do vetor de char no pool de constantes.
+*  \return      string de codepoints.
  */
-void PrintCodePoint(u2 codepoint){
+wchar_t * GetUTF8FromConstantPool(cp_info* cp, u2 tag){
     
-    wchar_t low_byte = (codepoint << 8);
-    wchar_t high_byte = codepoint;
+    int i;
+    wchar_t* string = (wchar_t * ) malloc( (cp[tag-1].u.Utf8.lenght+1) * sizeof(wchar_t));
     
-    //Imprimimos o caractere de 16bits
-    wprintf(L"%c%c", high_byte, low_byte);
+    for (i = 0; i < cp[tag-1].u.Utf8.lenght; i++) string[i] = cp[tag-1].u.Utf8.bytes[i];
+    
+    string[i] = '\0'; //Ultimo caractere
+    
+    return string;
 }
-
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -140,6 +143,7 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("CONSTANT_Class_info {");
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 name_index: %d", cp->u.Class.name_index);
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool, cp->u.Class.name_index));
                 printf("\n}\n");
                 break;
                 
@@ -147,7 +151,18 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("CONSTANT_Fieldref_info {");
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 class_index: %d", cp->u.Fieldref.class_index);
+                
+                //Imprimimos o nome da classe indicada por class_index
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.Fieldref.class_index-1].u.Class.name_index));
+                
                 printf("\n\tu2 name_and_type_index: %d", cp->u.Fieldref.name_and_type_index);
+
+                //Imprimimos os atributos de name and type do indice name_and_type_index
+                printf(" (\"%ls\"", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.Fieldref.name_and_type_index-1].u.NameAndType.name_index));
+                printf(" \"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.Fieldref.name_and_type_index-1].u.NameAndType.descriptor_index));
                 printf("\n}\n");
                 break;
                 
@@ -155,7 +170,11 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("CONSTANT_NameAndType_info {");
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 name_index: %d", cp->u.NameAndType.name_index);
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                        cp->u.NameAndType.name_index));
                 printf("\n\tu2 descriptor_index: %d", cp->u.NameAndType.descriptor_index);
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         cp->u.NameAndType.descriptor_index));
                 printf("\n}\n");
                 break;
                 
@@ -164,11 +183,7 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 lenght: %d", cp->u.Utf8.lenght);
                 printf("\n\tu1 bytes[%d]: ", cp->u.Utf8.lenght);
-                u2 count;
-                u2* codepoints; //Inicializamos um vetor de code points
-                BytesToCodePoint(&codepoints, &count, cp->u.Utf8.bytes, cp->u.Utf8.lenght);
-                for (int i = 0; i < count; i++) PrintCodePoint(codepoints[i]);
-                free(codepoints);
+                printf("%ls", GetUTF8FromConstantPool(cp,1));
                 printf("\n}\n");
                 break;
                 
@@ -176,7 +191,18 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("CONSTANT_Methodref_info {");
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 class_index: %d", cp->u.Methodref.class_index);
+
+                //Imprimimos o nome da classe indicada por class_index
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.Methodref.class_index-1].u.Class.name_index));
+                
                 printf("\n\tu2 name_and_type_index: %d", cp->u.Methodref.name_and_type_index);
+                
+                //Imprimimos os atributos de name and type indice name_and_type_index
+                printf(" (\"%ls\"", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.Methodref.name_and_type_index-1].u.NameAndType.name_index));
+                printf(" \"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.Methodref.name_and_type_index-1].u.NameAndType.descriptor_index));
                 printf("\n}\n");
                 break;
                 
@@ -184,7 +210,18 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("CONSTANT_InterfaceMethodref_info {");
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 class_index: %d", cp->u.InterfaceMethodref.class_index);
+                
+                //Imprimimos o nome da classe indicada por class_index
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.InterfaceMethodref.class_index-1].u.Class.name_index));
+                
                 printf("\n\tu2 name_and_type_index: %d", cp->u.InterfaceMethodref.name_and_type_index);
+
+                //Imprimimos os atributos de name and type indice name_and_type_index
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.InterfaceMethodref.name_and_type_index-1].u.NameAndType.name_index));
+                printf(" (\"%ls\")", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         arq_class->constant_pool[cp->u.InterfaceMethodref.name_and_type_index-1].u.NameAndType.descriptor_index));
                 printf("\n}\n");
                 break;
                 
@@ -192,6 +229,8 @@ void exibeCtePool(ArqClass* arq_class){
                 printf("CONSTANT_String_info {");
                 printf("\n\tu1 tag: %d", cp->tag);
                 printf("\n\tu2 string_index: %d", cp->u.String.string_index);
+                printf(" (%ls)", GetUTF8FromConstantPool(arq_class->constant_pool,
+                                                         cp->u.String.string_index));
                 printf("\n}\n");
                 break;
                 

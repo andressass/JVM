@@ -28,10 +28,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PrintCodePoint:M_ECLASS.c">
+         contextName = "LeCtePool:M_LOGNEG.c">
+      </ContextState>
+      <ContextState
+         contextName = "printDouble:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = " low_byte | 0x00e4">
+               value = "DOUBLE_Positive_infity">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GetUTF8FromConstantPool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cp[tag-1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -39,7 +50,7 @@
          contextName = "exibeCtePool:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "arq_class-&gt;constant_pool[15]">
+               value = "arq_class-&gt;constant_pool[38]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -47,24 +58,24 @@
          contextName = "main:main.c">
       </ContextState>
       <ContextState
-         contextName = "leAtributo:M_LOGNEG.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "atributo-&gt;info[9]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "BytesToCodePoint:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "&amp;codepoints">
+               value = "bytes[1]">
             </PersistentString>
             <PersistentString
                value = "*codepoints">
             </PersistentString>
             <PersistentString
-               value = "bytes[1]">
+               value = "&amp;codepoints">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "leAtributo:M_LOGNEG.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "atributo-&gt;info[9]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -80,7 +91,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LeCtePool:M_LOGNEG.c">
+         contextName = "PrintCodePoint:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = " low_byte | 0x00e4">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

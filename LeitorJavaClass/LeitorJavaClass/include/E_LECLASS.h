@@ -48,6 +48,26 @@
 
 
 //--------------------------------------------------------------------------------------------------
+//Definicoes de constantes para ponto flutuante
+#define FLOAT_Positive_infity 0x7f800000 //!< Float infinito positivo
+#define FLOAT_Negative_infity 0xff800000 //!< Float infinito negativo
+#define FLOAT_MIN_NaN1        0x7f800001 //!< Float valor minimo da primeira faixa de NaN
+#define FLOAT_MAX_NaN1        0x7fffffff //!< Float valor maximo da primeira faixa de NaN
+#define FLOAT_MIN_NaN2        0xff800001 //!< Float valor minimo da segunda faixa de NaN
+#define FLOAT_MAX_NaN2        0xffffffff //!< Float valor maximo da segunda faixa de NaN
+
+
+//--------------------------------------------------------------------------------------------------
+//Definicoes de constantes para double
+#define DOUBLE_Positive_infity 0x7ff0000000000000 //!< Double infinito positivo
+#define DOUBLE_Negative_infity 0xfff0000000000000 //!< Double infinito negativo
+#define DOUBLE_MIN_NaN1        0x7ff0000000000001 //!< Double valor minimo da primeira faixa de NaN
+#define DOUBLE_MAX_NaN1        0x7fffffffffffffff //!< Double valor maximo da primeira faixa de NaN
+#define DOUBLE_MIN_NaN2        0xfff0000000000001 //!< Double valor minimo da segunda faixa de NaN
+#define DOUBLE_MAX_NaN2        0xffffffffffffffff //!< Double valor maximo da segunda faixa de NaN
+
+
+//--------------------------------------------------------------------------------------------------
 //Tipos de dados
 
 typedef unsigned char u1; //!< Representa 1 byte
