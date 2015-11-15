@@ -5,7 +5,8 @@
 Estruturas do Leitor e Exibidor de arquivos \char`\"{}.\+class\char`\"{}.  
 
 
-Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,9 +38,9 @@ struct \hyperlink{structarq_class}{arq\+Class}
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a21842132ee76c8a0d12ca8e62a361062}{Linkage\+Success}~0
 \begin{DoxyCompactList}\small\item\em Sucesso na operacao. \end{DoxyCompactList}\item 
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a78decb34a8bb27d808f38e1868067523}{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}~0
-\item 
+\begin{DoxyCompactList}\small\item\em Versao minima compativel. \end{DoxyCompactList}\item 
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_abe281d98b3eeea824560a7ef86ad31d6}{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}~48
-\item 
+\begin{DoxyCompactList}\small\item\em Versao maxima compativel. \end{DoxyCompactList}\item 
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a72b5b534aa409975da610a36f648fa0a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}~7
 \item 
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a008d43478c2e2973e7413f5d1c48095d}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}~9
@@ -61,6 +62,38 @@ struct \hyperlink{structarq_class}{arq\+Class}
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a5b6ba749976ae61415983ca0b890c91a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}~12
 \item 
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_afc46559a7d3f7baf519fc183c2fad2b4}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}~1
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a0fdbb084daf13068941396db9988bb8d}{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}~0x0001
+\begin{DoxyCompactList}\small\item\em Publica\+: pode ser acessada de fora do pacote. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_ab4a89247b3598c31a5999c76bf168a6a}{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}~0x0002
+\begin{DoxyCompactList}\small\item\em Privada\+: contexto restrito a definição da classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}~0x0004
+\begin{DoxyCompactList}\small\item\em Protegida\+: pode ser usada na classe e nas subclasses. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}~0x0008
+\begin{DoxyCompactList}\small\item\em Estatica\+: variavel de classe e nao de instancia. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_ad170615172fa272627b79f604e3471b9}{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}~0x0010
+\begin{DoxyCompactList}\small\item\em Final\+: não pode ter subclasses. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a64ab0ee48e02f736237394d4580bad5a}{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}~0x0020
+\begin{DoxyCompactList}\small\item\em invokespecial. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a6eb88a744819be2fd9b240ed56bbb421}{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}~0x0020
+\begin{DoxyCompactList}\small\item\em executado (Thread). \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}~0x0040
+\begin{DoxyCompactList}\small\item\em Nao pode ser colocada em cache. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a79b164828e45ca7eb81b895b8ee4960e}{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}~0x0080
+\begin{DoxyCompactList}\small\item\em persistente. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a21cd44dc8506e7f393a8e90936a22613}{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}~0x0100
+\begin{DoxyCompactList}\small\item\em Implementado em linguagem nao Java (C, C++, Assembly). \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_aca0c3297ae6a71033cf324d99793189a}{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}~0x0200
+\begin{DoxyCompactList}\small\item\em Eh interface, nao uma classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a638658b616d4e7c16078f606224dc9ba}{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}~0x0400
+\begin{DoxyCompactList}\small\item\em Declarada abstrata\+: nao pode ser instanciada. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a896d91d006ed72a57d9ce427f7699555}{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}~0x0800
+\begin{DoxyCompactList}\small\item\em utiliza modo de ponto flutuante F\+P-\/strict (nao normalizado). \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}{A\+T\+T\+\_\+\+Code}~L\char`\"{}Code\char`\"{}
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a8f0a19953f3ccdd14497a060827d39e1}{A\+T\+T\+\_\+\+Constant\+Value}~L\char`\"{}Constant\+Value\char`\"{}
+\item 
+\#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a996f9f84aa48010d2d92c7f65e5375e7}{A\+T\+T\+\_\+\+Exceptions}~L\char`\"{}Exeptions\char`\"{}
 \item 
 \#define \hyperlink{_e___l_e_c_l_a_s_s_8h_a70f89fe4e0367e1d2fb93d0a275c449e}{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}~0x7f800000
 \begin{DoxyCompactList}\small\item\em Float infinito positivo. \end{DoxyCompactList}\item 
@@ -117,6 +150,106 @@ Estruturas do Leitor e Exibidor de arquivos \char`\"{}.\+class\char`\"{}.
 Arquivo com a definicao das estruturas, tipos e constantes associadas ao sistema. 
 
 \subsection{Definições e macros}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a638658b616d4e7c16078f606224dc9ba}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}}
+\index{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T~0x0400}\label{_e___l_e_c_l_a_s_s_8h_a638658b616d4e7c16078f606224dc9ba}
+
+
+Declarada abstrata\+: nao pode ser instanciada. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_ad170615172fa272627b79f604e3471b9}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+F\+I\+N\+A\+L@{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}}
+\index{A\+C\+C\+\_\+\+F\+I\+N\+A\+L@{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+F\+I\+N\+A\+L~0x0010}\label{_e___l_e_c_l_a_s_s_8h_ad170615172fa272627b79f604e3471b9}
+
+
+Final\+: não pode ter subclasses. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_aca0c3297ae6a71033cf324d99793189a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E@{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}}
+\index{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E@{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E~0x0200}\label{_e___l_e_c_l_a_s_s_8h_aca0c3297ae6a71033cf324d99793189a}
+
+
+Eh interface, nao uma classe. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a21cd44dc8506e7f393a8e90936a22613}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E@{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}}
+\index{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E@{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E~0x0100}\label{_e___l_e_c_l_a_s_s_8h_a21cd44dc8506e7f393a8e90936a22613}
+
+
+Implementado em linguagem nao Java (C, C++, Assembly). 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_ab4a89247b3598c31a5999c76bf168a6a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E@{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}}
+\index{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E@{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E~0x0002}\label{_e___l_e_c_l_a_s_s_8h_ab4a89247b3598c31a5999c76bf168a6a}
+
+
+Privada\+: contexto restrito a definição da classe. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D@{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}}
+\index{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D@{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D~0x0004}\label{_e___l_e_c_l_a_s_s_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}
+
+
+Protegida\+: pode ser usada na classe e nas subclasses. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a0fdbb084daf13068941396db9988bb8d}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C@{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}}
+\index{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C@{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C~0x0001}\label{_e___l_e_c_l_a_s_s_8h_a0fdbb084daf13068941396db9988bb8d}
+
+
+Publica\+: pode ser acessada de fora do pacote. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C@{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}}
+\index{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C@{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C~0x0008}\label{_e___l_e_c_l_a_s_s_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}
+
+
+Estatica\+: variavel de classe e nao de instancia. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a896d91d006ed72a57d9ce427f7699555}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T@{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}}
+\index{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T@{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T~0x0800}\label{_e___l_e_c_l_a_s_s_8h_a896d91d006ed72a57d9ce427f7699555}
+
+
+utiliza modo de ponto flutuante F\+P-\/strict (nao normalizado). 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a64ab0ee48e02f736237394d4580bad5a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+S\+U\+P\+E\+R@{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}}
+\index{A\+C\+C\+\_\+\+S\+U\+P\+E\+R@{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+U\+P\+E\+R~0x0020}\label{_e___l_e_c_l_a_s_s_8h_a64ab0ee48e02f736237394d4580bad5a}
+
+
+invokespecial. 
+
+Chama metodos de superclasse via a instrucao \hypertarget{_e___l_e_c_l_a_s_s_8h_a6eb88a744819be2fd9b240ed56bbb421}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D@{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}}
+\index{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D@{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D~0x0020}\label{_e___l_e_c_l_a_s_s_8h_a6eb88a744819be2fd9b240ed56bbb421}
+
+
+executado (Thread). 
+
+Sincronizado\+: requer um monitor antes de ser \hypertarget{_e___l_e_c_l_a_s_s_8h_a79b164828e45ca7eb81b895b8ee4960e}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T@{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}}
+\index{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T@{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T~0x0080}\label{_e___l_e_c_l_a_s_s_8h_a79b164828e45ca7eb81b895b8ee4960e}
+
+
+persistente. 
+
+não pode ser lida ou gravada por um gerente de objetos \hypertarget{_e___l_e_c_l_a_s_s_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E@{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}}
+\index{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E@{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E~0x0040}\label{_e___l_e_c_l_a_s_s_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}
+
+
+Nao pode ser colocada em cache. 
+
+\hypertarget{_e___l_e_c_l_a_s_s_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+T\+T\+\_\+\+Code@{A\+T\+T\+\_\+\+Code}}
+\index{A\+T\+T\+\_\+\+Code@{A\+T\+T\+\_\+\+Code}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+T\+T\+\_\+\+Code}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Code~L\char`\"{}Code\char`\"{}}\label{_e___l_e_c_l_a_s_s_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a8f0a19953f3ccdd14497a060827d39e1}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+T\+T\+\_\+\+Constant\+Value@{A\+T\+T\+\_\+\+Constant\+Value}}
+\index{A\+T\+T\+\_\+\+Constant\+Value@{A\+T\+T\+\_\+\+Constant\+Value}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+T\+T\+\_\+\+Constant\+Value}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Constant\+Value~L\char`\"{}Constant\+Value\char`\"{}}\label{_e___l_e_c_l_a_s_s_8h_a8f0a19953f3ccdd14497a060827d39e1}
+\hypertarget{_e___l_e_c_l_a_s_s_8h_a996f9f84aa48010d2d92c7f65e5375e7}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!A\+T\+T\+\_\+\+Exceptions@{A\+T\+T\+\_\+\+Exceptions}}
+\index{A\+T\+T\+\_\+\+Exceptions@{A\+T\+T\+\_\+\+Exceptions}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{A\+T\+T\+\_\+\+Exceptions}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Exceptions~L\char`\"{}Exeptions\char`\"{}}\label{_e___l_e_c_l_a_s_s_8h_a996f9f84aa48010d2d92c7f65e5375e7}
 \hypertarget{_e___l_e_c_l_a_s_s_8h_a72b5b534aa409975da610a36f648fa0a}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}}
 \index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
 \subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class~7}\label{_e___l_e_c_l_a_s_s_8h_a72b5b534aa409975da610a36f648fa0a}
@@ -237,9 +370,17 @@ Float infinito positivo.
 \hypertarget{_e___l_e_c_l_a_s_s_8h_abe281d98b3eeea824560a7ef86ad31d6}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}}
 \index{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
 \subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version~48}\label{_e___l_e_c_l_a_s_s_8h_abe281d98b3eeea824560a7ef86ad31d6}
+
+
+Versao maxima compativel. 
+
 \hypertarget{_e___l_e_c_l_a_s_s_8h_a78decb34a8bb27d808f38e1868067523}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}}
 \index{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
 \subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version~0}\label{_e___l_e_c_l_a_s_s_8h_a78decb34a8bb27d808f38e1868067523}
+
+
+Versao minima compativel. 
+
 \hypertarget{_e___l_e_c_l_a_s_s_8h_a84afc176e011aed99b5e4489dbc458a5}{}\index{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!Linkage\+Error\+\_\+\+Class\+Circulatity\+Error@{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}}
 \index{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error@{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}!E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{E\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
 \subsubsection[{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Class\+Circulatity\+Error~3}\label{_e___l_e_c_l_a_s_s_8h_a84afc176e011aed99b5e4489dbc458a5}

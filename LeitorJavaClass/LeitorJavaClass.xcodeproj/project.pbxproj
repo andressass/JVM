@@ -37,6 +37,7 @@
 		CEA1C87E1BDD042E00A383E0 /* M_LCLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_LCLASS.c; path = src/M_LCLASS.c; sourceTree = "<group>"; };
 		CEA1C87F1BDD042E00A383E0 /* MP_LECLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = MP_LECLASS.c; path = src/MP_LECLASS.c; sourceTree = "<group>"; };
 		CEA1C8801BDD042E00A383E0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
+		CEE512111BF81CE80012627A /* OPCODES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPCODES.h; path = include/OPCODES.h; sourceTree = "<group>"; };
 		CEEF06351BE402EA00EE0297 /* M_ECLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_ECLASS.c; path = src/M_ECLASS.c; sourceTree = "<group>"; };
 		CEEF06381BE420F400EE0297 /* M_OPCLASS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPCLASS.c; path = src/M_OPCLASS.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA1C8771BDD042300A383E0 /* E_LECLASS.h */,
+				CEE512111BF81CE80012627A /* OPCODES.h */,
 				CEA1C8791BDD042300A383E0 /* I_INTUSU.h */,
 				CEA1C87A1BDD042300A383E0 /* I_LECLASS.h */,
 				CEA1C87B1BDD042300A383E0 /* IP_LECLASS.h */,

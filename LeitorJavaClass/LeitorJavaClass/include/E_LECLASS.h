@@ -26,9 +26,8 @@
 //--------------------------------------------------------------------------------------------------
 // Definicoes de prerequisitos do sistema
 
-//Erros de arquivo
-#define LECLASS_MIN_Version        0
-#define LECLASS_MAJ_Version        48
+#define LECLASS_MIN_Version        0 //!< Versao minima compativel
+#define LECLASS_MAJ_Version        48 //!< Versao maxima compativel
 
 
 //--------------------------------------------------------------------------------------------------
@@ -48,7 +47,36 @@
 
 
 //--------------------------------------------------------------------------------------------------
+//Flags de acesso
+
+#define ACC_PUBLIC                  0x0001 //!< Publica: pode ser acessada de fora do pacote.
+#define ACC_PRIVATE                 0x0002 //!< Privada: contexto restrito a definição da classe.
+#define ACC_PROTECTED               0x0004 //!< Protegida: pode ser usada na classe e nas subclasses.
+#define ACC_STATIC                  0x0008 //!< Estatica: variavel de classe e nao de instancia.
+#define ACC_FINAL                   0x0010 //!< Final: não pode ter subclasses.
+#define ACC_SUPER                   0x0020 //!< Chama metodos de superclasse via a instrucao
+                                           //!< invokespecial.
+#define ACC_SYNCHRONIZED            0x0020 //!< Sincronizado: requer um monitor antes de ser
+                                           //!< executado (Thread).
+#define ACC_VOLATILE                0x0040 //!< Nao pode ser colocada em cache.
+#define ACC_TRANSIENT               0x0080 //!< não pode ser lida ou gravada por um gerente de objetos
+                                           //!< persistente.
+#define ACC_NATIVE                  0x0100 //!< Implementado em linguagem nao Java (C, C++, Assembly).
+#define ACC_INTERFACE               0x0200 //!< Eh interface, nao uma classe.
+#define ACC_ABSTRACT                0x0400 //!< Declarada abstrata: nao pode ser instanciada.
+#define ACC_STRICT                  0x0800 //!< utiliza modo de ponto flutuante FP-strict (nao normalizado).
+
+
+//--------------------------------------------------------------------------------------------------
+//Definicoes de tipos de atributos
+#define ATT_Code            L"Code"
+#define ATT_ConstantValue   L"ConstantValue"
+#define ATT_Exceptions      L"Exeptions"
+
+
+//--------------------------------------------------------------------------------------------------
 //Definicoes de constantes para ponto flutuante
+
 #define FLOAT_Positive_infity 0x7f800000 //!< Float infinito positivo
 #define FLOAT_Negative_infity 0xff800000 //!< Float infinito negativo
 #define FLOAT_MIN_NaN1        0x7f800001 //!< Float valor minimo da primeira faixa de NaN
@@ -59,6 +87,7 @@
 
 //--------------------------------------------------------------------------------------------------
 //Definicoes de constantes para double
+
 #define DOUBLE_Positive_infity 0x7ff0000000000000 //!< Double infinito positivo
 #define DOUBLE_Negative_infity 0xfff0000000000000 //!< Double infinito negativo
 #define DOUBLE_MIN_NaN1        0x7ff0000000000001 //!< Double valor minimo da primeira faixa de NaN

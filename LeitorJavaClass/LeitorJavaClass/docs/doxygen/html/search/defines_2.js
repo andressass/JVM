@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['double_5fmax_5fnan1',['DOUBLE_MAX_NaN1',['../_e___l_e_c_l_a_s_s_8h.html#aa7bf3d349f152b93b71fbfe317d64d6b',1,'E_LECLASS.h']]],
-  ['double_5fmax_5fnan2',['DOUBLE_MAX_NaN2',['../_e___l_e_c_l_a_s_s_8h.html#a99ba49afff5f9b4d6bc7f7937495b586',1,'E_LECLASS.h']]],
-  ['double_5fmin_5fnan1',['DOUBLE_MIN_NaN1',['../_e___l_e_c_l_a_s_s_8h.html#af20d602144fa8e75fbc475a9a3e84387',1,'E_LECLASS.h']]],
-  ['double_5fmin_5fnan2',['DOUBLE_MIN_NaN2',['../_e___l_e_c_l_a_s_s_8h.html#a27e21f5880b4253eb503ebb93aeffe4a',1,'E_LECLASS.h']]],
-  ['double_5fnegative_5finfity',['DOUBLE_Negative_infity',['../_e___l_e_c_l_a_s_s_8h.html#a437b56271f6e80eb3f2beb8e442f8d12',1,'E_LECLASS.h']]],
-  ['double_5fpositive_5finfity',['DOUBLE_Positive_infity',['../_e___l_e_c_l_a_s_s_8h.html#ab5bc910e1a8dfa7e2bfc3685acbb655b',1,'E_LECLASS.h']]]
+  ['constant_5fclass',['CONSTANT_Class',['../_e___l_e_c_l_a_s_s_8h.html#a72b5b534aa409975da610a36f648fa0a',1,'E_LECLASS.h']]],
+  ['constant_5fdouble',['CONSTANT_Double',['../_e___l_e_c_l_a_s_s_8h.html#ab49341c3b4ade4bfa1a64be8d2f73ae1',1,'E_LECLASS.h']]],
+  ['constant_5ffieldref',['CONSTANT_Fieldref',['../_e___l_e_c_l_a_s_s_8h.html#a008d43478c2e2973e7413f5d1c48095d',1,'E_LECLASS.h']]],
+  ['constant_5ffloat',['CONSTANT_Float',['../_e___l_e_c_l_a_s_s_8h.html#ab914627ce5b25c4acfc98f2eacb78473',1,'E_LECLASS.h']]],
+  ['constant_5finteger',['CONSTANT_Integer',['../_e___l_e_c_l_a_s_s_8h.html#a856a6553a55d721970ca5450eb1ccd2c',1,'E_LECLASS.h']]],
+  ['constant_5finterfacemethodref',['CONSTANT_InterfaceMethodref',['../_e___l_e_c_l_a_s_s_8h.html#ac0e92044d246c6e4d691116f89a70ebb',1,'E_LECLASS.h']]],
+  ['constant_5flong',['CONSTANT_Long',['../_e___l_e_c_l_a_s_s_8h.html#a426ca017b895fc522671a561d460be7a',1,'E_LECLASS.h']]],
+  ['constant_5fmethodref',['CONSTANT_Methodref',['../_e___l_e_c_l_a_s_s_8h.html#a2a179cf178ea867c6ab1700508c269dd',1,'E_LECLASS.h']]],
+  ['constant_5fnameandtype',['CONSTANT_NameAndType',['../_e___l_e_c_l_a_s_s_8h.html#a5b6ba749976ae61415983ca0b890c91a',1,'E_LECLASS.h']]],
+  ['constant_5fstring',['CONSTANT_String',['../_e___l_e_c_l_a_s_s_8h.html#a0a7acbe175de56072a2f0a1a051418e1',1,'E_LECLASS.h']]],
+  ['constant_5futf8',['CONSTANT_Utf8',['../_e___l_e_c_l_a_s_s_8h.html#afc46559a7d3f7baf519fc183c2fad2b4',1,'E_LECLASS.h']]]
 ];

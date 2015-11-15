@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opclass_5fserv',['OPCLASS_SERV',['../_m___o_p_c_l_a_s_s_8c.html#a53dd9ee430ed991e734e2538e2bc6634',1,'M_OPCLASS.c']]]
+  ['min_5fentr',['MIN_ENTR',['../_m___i_n_t_u_s_u_8c.html#a8a77c0b1d6a683f33ec42d4f8841e46c',1,'M_INTUSU.c']]]
 ];

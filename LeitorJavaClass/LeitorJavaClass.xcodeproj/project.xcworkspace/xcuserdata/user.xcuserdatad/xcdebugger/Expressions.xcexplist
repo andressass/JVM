@@ -3,48 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "leCampMetd:M_LOGNEG.c">
+         contextName = "leCtePool:M_LCLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "fi-&gt;attributes">
+               value = "cp - constant_pool + constant_pool_count - 1">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "arquivoParaArqClass:M_LCLASS.c">
-      </ContextState>
-      <ContextState
-         contextName = "freeCtePool:M_OPCLASS.c">
-      </ContextState>
-      <ContextState
-         contextName = "freeAtributo:M_OPCLASS.c">
-      </ContextState>
-      <ContextState
-         contextName = "ArquivoParaArqClass:M_LOGNEG.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "arq_class-&gt;attributes[0]-&gt;info[1]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "LeCtePool:M_LOGNEG.c">
-      </ContextState>
-      <ContextState
-         contextName = "printDouble:M_ECLASS.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "DOUBLE_Positive_infity">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GetUTF8FromConstantPool:M_ECLASS.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "cp[tag-1]">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "exibeCtePool:M_ECLASS.c">
@@ -56,6 +23,28 @@
       </ContextState>
       <ContextState
          contextName = "main:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "leAtributo:M_LOGNEG.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "atributo-&gt;info[9]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "printCodeAttributes:M_ECLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "GetUTF8FromConstantPool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cp[tag-1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "printCodeAttibutes:M_ECLASS.c">
       </ContextState>
       <ContextState
          contextName = "BytesToCodePoint:M_ECLASS.c">
@@ -72,10 +61,76 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "leAtributo:M_LOGNEG.c">
+         contextName = "ArquivoParaArqClass:M_LOGNEG.c">
          <PersistentStrings>
             <PersistentString
-               value = "atributo-&gt;info[9]">
+               value = "arq_class-&gt;attributes[0]-&gt;info[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "leCampMetd:M_LOGNEG.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "fi-&gt;attributes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "printByteCode:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "getOpcodeName(mnemonic)">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeAttributesNumber(mnemonic)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "freeAtributo:M_OPCLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "exibeAtributo:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "attribute-&gt;info[index]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LeCtePool:M_LOGNEG.c">
+      </ContextState>
+      <ContextState
+         contextName = "getOpcodeAttributesNumber:OPCODES.h">
+         <PersistentStrings>
+            <PersistentString
+               value = "opcode">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeName(opcode)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "freeCtePool:M_OPCLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "PrintCodePoint:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = " low_byte | 0x00e4">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "printCodeExceptions:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;c">
+            </PersistentString>
+            <PersistentString
+               value = "&amp;code + exception_table_length">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -83,18 +138,10 @@
          contextName = "INTUSU_executar:M_INTUSU.c">
       </ContextState>
       <ContextState
-         contextName = "leCtePool:M_LCLASS.c">
+         contextName = "printDouble:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "cp - constant_pool + constant_pool_count - 1">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PrintCodePoint:M_ECLASS.c">
-         <PersistentStrings>
-            <PersistentString
-               value = " low_byte | 0x00e4">
+               value = "DOUBLE_Positive_infity">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -65,7 +65,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/LeitorJavaClass/LeitorJavaClass/docs/HelloWorld3.class"
+            argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/LeitorJavaClass/LeitorJavaClass/docs/HelloWorld4.class"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/user/Documents/UnB/2013-2/TR2/ClienteServidor17-12\ Rondinele/SAWClient1/bin/HttpClient.class "
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

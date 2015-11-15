@@ -3,7 +3,7 @@
  *
  *  \brief Modulo Leitor de arquivos ".class".
  *
- *  Modulo responsavel por implementar os metodos relacionados a exibicao de um arquivo ".class".
+ *  Modulo responsavel por implementar os metodos relacionados a leitura de um arquivo ".class".
  */
 //##################################################################################################
 
