@@ -14,8 +14,8 @@
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que le o pool de constantes de constantes de um arquivo, retornando um ponteiro para uma
- * estrutura inicializada de pool de constantes.
+ * Metodo que le o pool de constantes de constantes de um arquivo ".class", retornando um ponteiro 
+ * para uma estrutura inicializada de pool de constantes.
  *
  * \param constant_pool_count   Contador do pool de constantes.
  * \param arq                   Arquivo a ser lido.
