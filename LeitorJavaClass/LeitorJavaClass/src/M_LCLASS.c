@@ -37,7 +37,6 @@ cp_info* leCtePool(u2 constant_pool_count, FILE* arq){
                 break;
                 
             case CONSTANT_Fieldref:
-                cp->u.Fieldref.class_index = (u2) (malloc(sizeof(u2)));
                 cp->u.Fieldref.class_index = u2Le(arq);
                 cp->u.Fieldref.name_and_type_index = u2Le(arq);
                 break;

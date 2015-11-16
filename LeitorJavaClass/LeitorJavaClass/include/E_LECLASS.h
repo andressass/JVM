@@ -110,6 +110,7 @@ typedef unsigned short resultado; //!< Representa o resultado de uma operacao
 /*! 
  * Estrutura utilizada para a representacao de um pool de constantes.
  */
+
 typedef struct constPool{
     u1 tag;
     union{
@@ -162,6 +163,7 @@ typedef struct constPool{
 /*!
  * Estrutura utilizada para a representacao de um atributo de um arquivo ".class".
  */
+
 typedef struct attribute{
     u2 attribute_name_index;
     u4  attribute_length;
@@ -193,6 +195,7 @@ typedef struct fieldAndMethod method_info; //!< Estrutura utilizada para a repre
 /*!
  * Estrutura utilizada para a representacao de um arquivo ".class".
  */
+
 typedef struct arqClass {
     u4                  magic;
     u2                  minor_version;

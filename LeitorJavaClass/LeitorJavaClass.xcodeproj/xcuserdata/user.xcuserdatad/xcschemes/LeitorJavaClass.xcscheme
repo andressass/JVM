@@ -66,11 +66,11 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/LeitorJavaClass/LeitorJavaClass/docs/HelloWorld4.class"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/user/Documents/UnB/2013-2/TR2/ClienteServidor17-12\ Rondinele/SAWClient1/bin/HttpClient.class "
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/LeitorJavaClass/LeitorJavaClass/README.txt"

@@ -1,6 +1,8 @@
 #############################################################################
 # lClass - Leitor e exibidor de Arquivos .class
 # Aluno(s):	Andressa Sousa da Silveira 10/0053971
+#	     	Christoffer Leite 11/0146093
+#	     	Gabriel Dantas 11/0118111
 #	     	Rondinele Barbosa Prado 10/0039880
 #	    
 #############################################################################
@@ -11,19 +13,30 @@
 
 Para compilar digite:
 
-	$ make all
+	Em sistemas unix:
+		$ make all_unix
+
+	Em sistemas Windows:
+		$ make all_win
 
 
 Para executar digite:
 
-	$ /.lclass <arquivo_entrada>
-ou
+	Em sistemas unix:
+		$ /.lclass <arquivo_entrada>
 
-	$ ./bin/lclass <arquivo_entrada>
+		ou
 
-exemplo
+		$ .lclass <arquivo_entrada>
 
-	$ ./lclass docs/HelloWorld.class
+		exemplo
+
+		$ ./lclass docs/HelloWorld.class
+
+
+	Em sistemas Windows:
+		$. a.exe <arquivo_entrada>
+
 
 
 #----------------------------------------------------------------------------
