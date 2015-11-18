@@ -342,13 +342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeitorJavaClass/src/main.c"
-            timestampString = "467950588.356445"
+            timestampString = "469561895.909878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "main()"
-            landmarkType = "7">
+            startingLineNumber = "36"
+            endingLineNumber = "36">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
