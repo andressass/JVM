@@ -1,7 +1,7 @@
 //#################################################################################################
-/*! \file E_LECLASS.h
+/*! \file E_JVM.h
  *
- *  \brief Estruturas do Leitor e Exibidor de arquivos ".class".
+ *  \brief Estruturas da JVM.
  * 
  *  Arquivo com a definicao das estruturas, tipos e constantes associadas ao
  *  sistema.

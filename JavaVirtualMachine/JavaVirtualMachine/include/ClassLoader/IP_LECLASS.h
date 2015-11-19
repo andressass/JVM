@@ -18,7 +18,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include "../Estruturas/E_LECLASS.h"
+#include "../Estruturas/E_JVM.h"
 
 
 //--------------------------------------------------------------------------------------------------
