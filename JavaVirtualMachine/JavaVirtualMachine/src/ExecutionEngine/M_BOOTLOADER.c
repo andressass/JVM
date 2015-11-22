@@ -11,8 +11,6 @@
 
 #include <stdio.h>
 
-#include "../../include/MemoryUnit/I_MEMORYUNIT.h"
-
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
