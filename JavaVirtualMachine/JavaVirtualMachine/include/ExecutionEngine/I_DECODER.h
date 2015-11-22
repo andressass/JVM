@@ -10,7 +10,7 @@
 
 #ifndef I_DECODER_h
 #define I_DECODER_h
-#ifdef P_LECLASS_SERV
+#ifdef M_DECODER_SERV
 #define EXT7
 #else
 #define EXT7 extern
