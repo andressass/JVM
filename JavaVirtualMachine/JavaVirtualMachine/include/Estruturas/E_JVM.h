@@ -221,8 +221,61 @@ typedef struct arqClass {
     
 } ArqClass;
 
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura da FieldsTable
+/*!
+ * 
+ */
+typedef struct FieldsTable{
+    String name;
+    void  *memoryAddress;
+} FieldsTable;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura da Handler
+/*!
+ * 
+ */
+typedef struct Handler{
+    FieldsTable *fieldsTable;
+} Handler;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura do Object
+/*!
+ * 
+ */
+typedef struct Object{
+    Handler *handler;
+} Object;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura da ObjectList
+/*!
+ * 
+ */
+typedef struct ObjectList{
+    struct ObjectList *objectList;
+    Object *object;
+} ObjectList;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura da JavaClass
+/*!
+ * A StaticFieldsTable do JavaClass foi generalizada como uma FieldsTable normal
+ */
 typedef struct JavaClass{
+    ObjectList *objectList;
+    ArqClass *arqClass;
+    FieldsTable *staticFieldsTable;
+    // Att0?
 }JavaClass;
+
 
 //--------------------------------------------------------------------------------------------------
 //! Estrutura da ClassTable
@@ -233,6 +286,19 @@ typedef struct ClassTable{
     String name;
     JavaClass *javaClass;
 }ClassTable;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura da MethodArea
+/*!
+ * 
+ */
+typedef struct MethodArea{
+    int classCount;
+    ClassTable *classTable;
+} MethodArea;
+
+
 //--------------------------------------------------------------------------------------------------
 //! Estrutura da Stack
 /*!
@@ -249,6 +315,8 @@ typedef struct OperandStack{
     Stack *operandStack;
     u4 *top;
 }OperandStack;
+
+
 //--------------------------------------------------------------------------------------------------
 //! Estrutura da Frame
 /*!
@@ -266,6 +334,8 @@ typedef struct VMStack{
     Frame *top;
     Stack *stack;
 }VMStack;
+
+
 //--------------------------------------------------------------------------------------------------
 //! Estrutura da Thread
 /*!
@@ -275,5 +345,6 @@ typedef struct Thread{
     void *PC;
     VMStack *vmStack;
 }Thread;
+
 
 #endif
