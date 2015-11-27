@@ -61,15 +61,7 @@ float u4ToFLoat(u4 bytes){
 
 
 //--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura 
- * CONST_UTF8 apontada pelo indice passado
- *
- * \param cp      ponteiro para o pool de constantes
- * \param index   indice da estrutura UTF8_Info no pool de constantes.
-*  \return        string de char de 16bits (w_char_t).
- */
-wchar_t * GetUTF8FromConstantPool(cp_info* cp, u2 index){
+wchar_t * getUnicodeFromConstantPool(cp_info* cp, u2 index){
     
     int i;
     wchar_t* string = (wchar_t * ) malloc( (cp[index-1].u.Utf8.lenght+1) * sizeof(wchar_t));
@@ -83,6 +75,22 @@ wchar_t * GetUTF8FromConstantPool(cp_info* cp, u2 index){
 
 
 //--------------------------------------------------------------------------------------------------
+char * getUTF8FromConstantPool(cp_info* cp, u2 index){
+    
+    wchar_t *unicode = getUnicodeFromConstantPool(cp, index);
+    char * result = (char*) malloc(wcslen(unicode) * sizeof(char));
+    
+    wcstombs(result, unicode, wcslen(unicode));
+    
+    free(unicode);
+    
+    return result;
+}
+
+
+
+
+//--------------------------------------------------------------------------------------------------
 /*!
  * Metodo que que realiza a exibicao dos campos nome e descritor de uma estrutura NameAndType do 
  * pool de constantes
@@ -91,10 +99,16 @@ wchar_t * GetUTF8FromConstantPool(cp_info* cp, u2 index){
  * \param tag   tag do NameAndType no pool de constantes.
  */
 void printNameAndTypeInfoFromConstantPool(cp_info* cp, u2 index ){
-    printf(" (Name: \"%ls\"", GetUTF8FromConstantPool(cp, cp[index-1].u.NameAndType.name_index));
-    printf(" Descr: \"%ls\")", GetUTF8FromConstantPool(cp, cp[index-1].u.NameAndType.descriptor_index));
+    printf(" (Name: \"%ls\"", getUnicodeFromConstantPool(cp, cp[index-1].u.NameAndType.name_index));
+    printf(" Descr: \"%ls\")", getUnicodeFromConstantPool(cp, cp[index-1].u.NameAndType.descriptor_index));
 }
 
+
+//--------------------------------------------------------------------------------------------------
+char* getClassNameFromConstantPool(cp_info* cp, u2 index){
+    
+    return  getUTF8FromConstantPool(cp, cp[index-1].u.Class.name_index);
+}
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -111,7 +125,7 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("CONSTANT_Class_info {");
             printf("\n\tu1 tag: %d", cp->tag);
             printf("\n\tu2 name_index: %d", cp->u.Class.name_index);
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool, cp->u.Class.name_index));
+            printf(" (\"%ls\")", getUnicodeFromConstantPool(constant_pool, cp->u.Class.name_index));
             printf("\n}\n");
             break;
             
@@ -121,8 +135,8 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("\n\tu2 class_index: %d", cp->u.Fieldref.class_index);
             
             //Imprimimos o nome da classe indicada por class_index
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool,
-                                                         constant_pool[cp->u.Fieldref.class_index-1].u.Class.name_index));
+            printf(" (\"%s\")", getClassNameFromConstantPool(constant_pool,
+                                                         cp->u.Fieldref.class_index));
             
             printf("\n\tu2 name_and_type_index: %d", cp->u.Fieldref.name_and_type_index);
             
@@ -136,10 +150,10 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("CONSTANT_NameAndType_info {");
             printf("\n\tu1 tag: %d", cp->tag);
             printf("\n\tu2 name_index: %d", cp->u.NameAndType.name_index);
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool,
+            printf(" (\"%ls\")", getUnicodeFromConstantPool(constant_pool,
                                                          cp->u.NameAndType.name_index));
             printf("\n\tu2 descriptor_index: %d", cp->u.NameAndType.descriptor_index);
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool,
+            printf(" (\"%ls\")", getUnicodeFromConstantPool(constant_pool,
                                                          cp->u.NameAndType.descriptor_index));
             printf("\n}\n");
             break;
@@ -149,7 +163,7 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("\n\tu1 tag: %d", cp->tag);
             printf("\n\tu2 lenght: %d", cp->u.Utf8.lenght);
             printf("\n\tu1 bytes[%d]: ", cp->u.Utf8.lenght);
-            printf("\"%ls\"", GetUTF8FromConstantPool(cp,1));
+            printf("\"%ls\"", getUnicodeFromConstantPool(cp,1));
             printf("\n}\n");
             break;
             
@@ -159,8 +173,8 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("\n\tu2 class_index: %d", cp->u.Methodref.class_index);
             
             //Imprimimos o nome da classe indicada por class_index
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool,
-                                                         constant_pool[cp->u.Methodref.class_index-1].u.Class.name_index));
+            printf(" (\"%s\")", getClassNameFromConstantPool(constant_pool,
+                                                             cp->u.Methodref.class_index));
             
             printf("\n\tu2 name_and_type_index: %d", cp->u.Methodref.name_and_type_index);
             
@@ -176,8 +190,8 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("\n\tu2 class_index: %d", cp->u.InterfaceMethodref.class_index);
             
             //Imprimimos o nome da classe indicada por class_index
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool,
-                                                         constant_pool[cp->u.InterfaceMethodref.class_index-1].u.Class.name_index));
+            printf(" (\"%s\")", getClassNameFromConstantPool(constant_pool,
+                                                             cp->u.InterfaceMethodref.class_index));
             
             printf("\n\tu2 name_and_type_index: %d", cp->u.InterfaceMethodref.name_and_type_index);
             
@@ -191,7 +205,7 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("CONSTANT_String_info {");
             printf("\n\tu1 tag: %d", cp->tag);
             printf("\n\tu2 string_index: %d", cp->u.String.string_index);
-            printf(" (\"%ls\")", GetUTF8FromConstantPool(constant_pool,
+            printf(" (\"%ls\")", getUnicodeFromConstantPool(constant_pool,
                                                          cp->u.String.string_index));
             printf("\n}\n");
             break;
@@ -301,7 +315,7 @@ void exibeInterfaces(ArqClass* arq_class){
     
     for (int i = 0; i < arq_class->interfaces_count; i++) {
         printf("\n %d (\"%ls\")", arq_class->interfaces[i],
-        GetUTF8FromConstantPool(arq_class->constant_pool,
+        getUnicodeFromConstantPool(arq_class->constant_pool,
                                 arq_class->constant_pool[arq_class->interfaces[i]-1].u.Class.name_index));
     }
 }
@@ -444,7 +458,7 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
     
     //Exibimos o nome
     printf("\n\t\tNAME_INDEX:\t\t %d ", attribute->attribute_name_index);
-    printf("(\"%ls\")", GetUTF8FromConstantPool(cp, attribute->attribute_name_index));
+    printf("(\"%ls\")", getUnicodeFromConstantPool(cp, attribute->attribute_name_index));
     
     //tamanho em bytes do restande do atributo
     printf("\n\t\tATTRIBUTES_LENGHT:\t %d ", attribute->attribute_length);
@@ -452,7 +466,7 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
     //Verificamos qual o tipo de atributo
     
     //Caso seja ConstantValue
-    if (wcscmp(GetUTF8FromConstantPool(cp, attribute->attribute_name_index), ATT_ConstantValue)==0) {
+    if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_ConstantValue)==0) {
         u2 constantvalue_index = attribute->info[0];
         constantvalue_index = constantvalue_index << 8 | attribute->info[1];
         printf("\n\t\tCONSTANT_VALUE INDEX:\t\t %d ", constantvalue_index);
@@ -462,7 +476,7 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
         
     }
     //Caso seja CODE
-    else if (wcscmp(GetUTF8FromConstantPool(cp, attribute->attribute_name_index), ATT_Code)==0) {
+    else if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_Code)==0) {
         int index = 0;
         
         u2 max_stack = attribute->info[index++];
@@ -500,7 +514,7 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
         
     }
     //Caso seja Exception
-    else if (wcscmp(GetUTF8FromConstantPool(cp, attribute->attribute_name_index), ATT_Exceptions)==0) {
+    else if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_Exceptions)==0) {
         
         int index = 0;
         
@@ -555,12 +569,12 @@ void exibeCampMetd(field_or_method* fm, u2 count, cp_info* cp){
         
         //Exibimos o nome
         printf("\n\tNAME_INDEX:\t\t %d ", fm[i].name_index);
-        printf("(\"%ls\")", GetUTF8FromConstantPool(cp,
+        printf("(\"%ls\")", getUnicodeFromConstantPool(cp,
                                                     fm[i].name_index));
         
         //Exibimos o descritor
         printf("\n\tDESCRIPTOR_INDEX:\t %d ", fm[i].descriptor_index);
-        printf("(\"%ls\")", GetUTF8FromConstantPool(cp,
+        printf("(\"%ls\")", getUnicodeFromConstantPool(cp,
                                                     fm[i].descriptor_index));
         
         //Exibimos os atributos
@@ -622,11 +636,11 @@ resultado LECLASS_exibidor(ArqClass* arq_class){
     
     printf("\nTHIS_CLASS:\t %d ", arq_class->this_class);
     printf("(\"%ls\")",
-           GetUTF8FromConstantPool(arq_class->constant_pool,
+           getUnicodeFromConstantPool(arq_class->constant_pool,
                                    arq_class->constant_pool[arq_class->this_class-1].u.Class.name_index));
     printf("\nSUPER_CLASS:\t %d ", arq_class->super_class);
     printf("(\"%ls\")",
-           GetUTF8FromConstantPool(arq_class->constant_pool,
+           getUnicodeFromConstantPool(arq_class->constant_pool,
                                    arq_class->constant_pool[arq_class->super_class-1].u.Class.name_index));
     
     printf("\nINTERFACES_COUNT: %d", arq_class->interfaces_count);
@@ -660,19 +674,19 @@ resultado LECLASS_exibidor(ArqClass* arq_class){
 
 
 //--------------------------------------------------------------------------------------------------
-void LECLASS_exibeErroOperacao(resultado resultado){
+void LECLASS_exibeErroOperacao(resultado resultado, const char* fileName){
     
     switch (resultado) {
         case LinkageError_NoClassDefFoundError:
-            printf("\nErro de abertura do arquivo.\n");
+            printf("\nErro de abertura do arquivo \"%s\".\n", fileName);
             break;
             
         case LinkageError_ClassFormatError:
-            printf("\nArquivo .class invalido.\n");
+            printf("\nArquivo .class invalido. Arquivo:\"%s\".\n", fileName);
             break;
             
         case LinkageError_UnsupportedClassVersionError:
-            printf("\nA versao do arquivo .class eh imcompativel.\n");
+            printf("\nA versao do arquivo .class eh imcompativel. Arquivo: \"%s\".\n", fileName);
             break;
             
         default:

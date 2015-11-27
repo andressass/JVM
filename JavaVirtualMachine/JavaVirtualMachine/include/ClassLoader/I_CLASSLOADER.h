@@ -24,9 +24,10 @@
  * Metodo que, dado um nome qualificado de classe, retorna uma estrutura JavaClass preenchida
  *
  * \param qualifiedName Nome qualificado da classe a ser carregada
+  * \param environment Ambiente de execucao atual
  * \return Estrutura arqClass preenchida com os dados da classe carregada 
  */
-EXT9 JavaClass* loadCLass(const char* qualifiedName);
+EXT9 JavaClass* loadCLass(const char* qualifiedName, Environment* environment);
 
 
 //--------------------------------------------------------------------------------------------------

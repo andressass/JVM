@@ -16,11 +16,15 @@
 // Definicoes de sucesso e erro de operacoes
 
 //Erros do leitor .class
-#define LinkageError_ClassFormatError                   1 //!< Arquivo corrompido
-#define LinkageError_UnsupportedClassVersionError       2 //!< Arquivo possui versao nao suportada
-#define LinkageError_ClassCirculatityError              3 //!< Classe seria a sua propria superclasse
-#define LinkageError_NoClassDefFoundError               4 //!< Erro de abertura do arquivo
-#define LinkageSuccess                                  0 //!< Sucesso na operacao
+#define LinkageSuccess                              0 //!< Sucesso na operacao
+#define LinkageError_ClassFormatError               1 //!< Arquivo corrompido
+#define LinkageError_UnsupportedClassVersionError   2 //!< Arquivo possui versao nao suportada
+#define LinkageError_ClassCirculatityError          3 //!< Classe seria a sua propria superclasse
+#define LinkageError_NoClassDefFoundError           4 //!< Erro de abertura do arquivo
+
+//Erros do inicializador de classes
+#define InitializerSuccess                          10 //!< Sucesso na operacao
+#define InitializerError                            11 //!< Sucesso na inicializacao da classe
 
 
 //--------------------------------------------------------------------------------------------------
@@ -227,8 +231,10 @@ typedef struct arqClass {
  * 
  */
 typedef struct FieldsTable{
-    String name;
-    void  *memoryAddress;
+    char* name; //!< Aponta para o nome do campo
+    char* descriptor; //!< Aponta para o descritor do campo
+    void* memoryAddress; //!< Endereco de memoria contendo o valor do campo
+    field_info* fieldInfo; //!< Aponta para a estrutura field_info referente ao campo
 } FieldsTable;
 
 
@@ -344,6 +350,17 @@ typedef struct Thread{
     void *PC;
     VMStack *vmStack;
 }Thread;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura do ambiente de execucao da JVM
+/*!
+ * Estrura que apresenta um ambiente de execucao, a qual contem uma thread e uma area de metodos 
+ */
+typedef struct Environment{
+    Thread *thread; //!< Referencia para a thread em execucao
+    MethodArea* methodArea; //!< Referencia para a area de metodos
+}Environment;
 
 
 //--------------------------------------------------------------------------------------------------

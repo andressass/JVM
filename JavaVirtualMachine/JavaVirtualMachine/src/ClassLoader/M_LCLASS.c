@@ -11,6 +11,7 @@
 #define LCLASS_SERV
 
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include <string.h>
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -158,9 +159,7 @@ resultado arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
     arq_class->magic = u4Le(arq);
     if (arq_class->magic != 0xcafebabe) return LinkageError_ClassFormatError;
     arq_class->minor_version = u2Le(arq);
-    if (arq_class->minor_version < LECLASS_MIN_Version) return LinkageError_UnsupportedClassVersionError;
     arq_class->major_version = u2Le(arq);
-    if (arq_class->major_version > LECLASS_MAJ_Version) return LinkageError_UnsupportedClassVersionError;
     
     //Constant pool
     arq_class->constant_pool_count = u2Le(arq);
@@ -169,6 +168,7 @@ resultado arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
     arq_class->access_flags = u2Le(arq);
     arq_class->this_class = u2Le(arq);
     arq_class->super_class = u2Le(arq);
+    
     
     //Lemos as interfaces
     arq_class->interfaces_count = u2Le(arq);

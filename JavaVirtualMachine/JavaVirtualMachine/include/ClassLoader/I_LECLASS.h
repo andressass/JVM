@@ -59,8 +59,46 @@ EXT4 void LECLASS_free(ArqClass* arq_class);
  * Metodo responsavel por prover o servico de exibicao de resuldados de erro de operacoes
  *
  * \param resultado         Tipo resultado a ser decodificado e exibido 
+ * \param resultado         Nome do arquivo
  */
-EXT4 void LECLASS_exibeErroOperacao(resultado resultado);
+EXT4 void LECLASS_exibeErroOperacao(resultado resultado, const char* fileName);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura
+ * CONST_UTF8 referente ao nome da classe apontada pelo indice passado
+ *
+ * \param cp      ponteiro para o pool de constantes
+ * \param index   indice da classe no pool de constantes.
+ *  \return        string de char de 16bits (w_char_t).
+ */
+EXT4 char* getClassNameFromConstantPool(cp_info* cp, u2 index);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura
+ * CONST_UTF8 apontada pelo indice passado
+ *
+ * \param cp      ponteiro para o pool de constantes
+ * \param index   indice da estrutura UTF8_Info no pool de constantes.
+ *  \return        string de char de 16bits (w_char_t).
+ */
+EXT4 wchar_t * getUnicodeFromConstantPool(cp_info* cp, u2 index);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que que obtem uma string de caracteres UTF8 no pool de constantes de uma estrutura
+ * CONST_UTF8 apontada pelo indice passado
+ *
+ * \param cp      ponteiro para o pool de constantes
+ * \param index   indice da estrutura UTF8_Info no pool de constantes.
+ *  \return        string de char de 8bits (char *).
+ */
+EXT4 char * getUTF8FromConstantPool(cp_info* cp, u2 index);
+
+
 
 
 #endif

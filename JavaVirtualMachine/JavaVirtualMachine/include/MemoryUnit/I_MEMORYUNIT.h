@@ -9,7 +9,7 @@
 
 #ifndef I_MEMORYUNIT_h
 #define I_MEMORYUNIT_h
-#ifdef M_MEMORYUNIT_SERV
+#if defined(LCLASS_SERV) && defined(OPTHREAD_SERV)
 #define EX10
 #else
 #define EXT10 extern
@@ -77,9 +77,10 @@ EXT10 Frame* getCurrentFrame(Thread* thread);
  * estrutura na area de metodos. Caso a classe nao seja encontrada, retorna nulo.
  *
  * \param qualifiedName Nome qualificado da classe a ser procurada
+ * \param methodArea Area de metodos a ser utulizada na busca
  * \return Endereco da estrutura JavaClass (ou nulo se nao existe)
  */
-EXT10 JavaClass* findJavaClass(const char* qualifiedName);
+EXT10 JavaClass* findJavaClass(const char* qualifiedName, MethodArea* methodArea);
 
 
 
