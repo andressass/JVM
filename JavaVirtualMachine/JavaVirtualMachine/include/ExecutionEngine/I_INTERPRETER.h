@@ -22,10 +22,9 @@
 /*!
  * Metodo responsavel por executar uma thread.
  *
- * \param thread  Thread a ser executada.
- * \param Ponteiro Area de metodos a ser utilizada durante a execucao.
+ * \param enviroment  Estrutura contendo a thread e a area de metodos a ser executada
  */
-EXT8 void execute(Thread* thread, MethodArea* methodArea);
+EXT8 void execute(Environment* environment);
 
 
 #endif /* I_INTERPRETER_h */
