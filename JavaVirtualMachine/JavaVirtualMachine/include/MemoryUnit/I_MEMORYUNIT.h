@@ -42,13 +42,13 @@ EXT10 MethodArea* newMethodArea();
  * Metodo responsavel por criar e inicializar um novo frame para um metodo e o empilhar na pilha da
  * thread.
  *
- * \param thread Thread contendo a pilha JVM a ser utilizada no empilhamento do frame
+ * \param environment Thread e area de metodos do ambiente em execucao
  * \param className Nome qualificado da classe que contem o metodo a ser empilhado
  * \param methodName Nome do metodo a ser empilhado
  * \param methodDescriptor Descritor do metodo a ser executado (polimorfismo)
  */
-EXT10 void pushFrame(Thread* thread, const char* className, const char* methodName,
-                            const char*  MethodDescriptor);
+EXT10 void pushFrame(Environment* environment, const char* className, const char* methodName,
+                            const char*  methodDescriptor);
 
 
 //--------------------------------------------------------------------------------------------------
@@ -80,8 +80,60 @@ EXT10 Frame* getCurrentFrame(Thread* thread);
  * \param methodArea Area de metodos a ser utulizada na busca
  * \return Endereco da estrutura JavaClass (ou nulo se nao existe)
  */
-EXT10 JavaClass* findJavaClass(const char* qualifiedName, MethodArea* methodArea);
+EXT10 JavaClass* findJavaClassOnMethodArea(const char* qualifiedName, MethodArea* methodArea);
 
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que recebe o nome de uma classe como parametro e retorna uma referencia para esta
+ * estrutura. Caso esta estrutura nao esteja na area de metodos, ela eh carregada.
+ *
+ * \param qualifiedName Nome qualificado da classe a ser procurada
+ * \param environment Thread e area de metodos do ambiente em execucao
+ * \return Endereco da estrutura JavaClass (ou nulo se nao existe)
+ */
+EXT10 JavaClass* getClass(const char* qualifiedName, Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que recebe uma referencia para uma classe e a adiciona na area de metodos recebida como
+ * parametro.
+ *
+ * \param javaClass Estrutura a ser inserida na area de metodos
+ * \param methodArea Area de metodos a receber a estrutura javaClass
+ */
+EXT10 void addJavaClassToMethodArea(JavaClass* javaClass, MethodArea* methodArea);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado um ponteiro para uma estrutura javaClass, busca e retorna uma referencia para
+ * a estrutura method_info referente ao metodo buscado
+ *
+ * \param javaClass Estrutura javaClass da classe que contem o metodo
+ * \param methodName Nome do metodo a ser empilhado
+ * \param methodDescriptor Descritor do metodo a ser executado (polimorfismo)
+ * \return Referencia para uma estrutura method_info referente ao metodo buscado
+ */
+EXT10 method_info* getMethodInfoFromClass(JavaClass* javaClass,
+                                const char* methodName,
+                                const char* methodDescriptor);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado um ponteiro para uma estrutura method_info, busca e retorna uma referencia para
+ * o atributo code, o qual estara preenchido.
+ *
+ * \param javaClass Estrutura javaClass da classe que contem o metodo
+ * \param methodName Nome do metodo a ser empilhado
+ * \param methodDescriptor Descritor do metodo a ser executado (polimorfismo)
+ * \return Referencia para uma estrutura CodeAttribute referente ao metodo buscado
+ */
+EXT10 CodeAttribute* getCodeAttributeFromMethod(JavaClass* javaClass,
+                                          const char* methodName,
+                                          const char* methodDescriptor);
 
 
 //--------------------------------------------------------------------------------------------------
@@ -89,11 +141,11 @@ EXT10 JavaClass* findJavaClass(const char* qualifiedName, MethodArea* methodArea
  * Metodo que retorna o byte do atributo CODE apontado por PC da estrutura MethodInfo passada como
  * parametro.
  *
- * \param method Endereco da estrutura MethodInfo contendo o atributo CODE a ser utilizado
+ * \param methodInfo Endereco da estrutura MethodInfo contendo o atributo CODE a ser utilizado
  * \param pc Endereco da intrucao (indice do byte no vetor de bytes PC)
  * \return Opcode que esta na posicao apontada por PC
  */
-EXT10 u1 getByteCodeFromMethod(method_info* method, void* pc);
+EXT10 u1 getByteCodeFromMethod(method_info* methodInfo, void* pc);
 
 
 //--------------------------------------------------------------------------------------------------
@@ -103,9 +155,10 @@ EXT10 u1 getByteCodeFromMethod(method_info* method, void* pc);
  *
  * \param className Nome qualificado da classe que possui o atributo
  * \param attributeName Nome do atributo de classe
+ * \param environment Thread e area de metodos do ambiente em execucao
  * \return Endereco de memoria contendo o valor do atributo
  */
-EXT10 void* getClassAttributeReference(const char* className, const char* attributeName);
+EXT10 void* getClassAttributeReference(const char* className, const char* attributeNamem, Environment* environment);
 
 
 //--------------------------------------------------------------------------------------------------
@@ -127,9 +180,10 @@ EXT10 void* getObjectAttributeReference(Object* object, const char* attributeNam
  * objetos.
  *
  * \param className Nome qualificado da classe que possui o atributo
+ * \param environment Thread e area de metodos do ambiente em execucao
  * \return Endereco do objeto
  */
-EXT10 Object* newObjectFromClass(const char* className);
+EXT10 Object* newObjectFromClass(const char* className, Environment* environment );
 
 
 //--------------------------------------------------------------------------------------------------
@@ -151,5 +205,6 @@ EXT10 void pushInOperandStack(Thread* thread, u4 value);
  * \return Valor que foi desempilhado
  */
 EXT10 u4 popFromOperandStack(Thread* thread);
+
 
 #endif /* I_MEMORYUNIT_h */

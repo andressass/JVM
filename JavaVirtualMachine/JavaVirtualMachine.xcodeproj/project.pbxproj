@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE8EFA961C092E8600F1010B /* M_INTERPRETER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */; };
 		CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB3F21C08A019004DBA0C /* M_OPMETHODAREA.c */; };
 		CE9FB3F51C08BC61004DBA0C /* M_OPTHREAD.c in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB3F41C08BC61004DBA0C /* M_OPTHREAD.c */; };
 		CEAC72201BFCFE68006F4F9B /* M_ECLASS.c in Sources */ = {isa = PBXBuildFile; fileRef = CEAC721B1BFCFE68006F4F9B /* M_ECLASS.c */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		CE33EE631BFCFB2400A4003B /* JavaVirtualMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JavaVirtualMachine; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INTERPRETER.c; path = src/ExecutionEngine/M_INTERPRETER.c; sourceTree = "<group>"; };
 		CE9FB3F21C08A019004DBA0C /* M_OPMETHODAREA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPMETHODAREA.c; path = src/MemoryUnit/M_OPMETHODAREA.c; sourceTree = "<group>"; };
 		CE9FB3F41C08BC61004DBA0C /* M_OPTHREAD.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPTHREAD.c; path = src/MemoryUnit/M_OPTHREAD.c; sourceTree = "<group>"; };
 		CEA0E8BB1C01F3F4008656B1 /* I_DECODER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = I_DECODER.h; path = include/ExecutionEngine/I_DECODER.h; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAC722C1BFD6BD5006F4F9B /* M_BOOTLOADER.c */,
+				CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */,
 			);
 			name = ExecutionEngine;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8EFA961C092E8600F1010B /* M_INTERPRETER.c in Sources */,
 				CE9FB3F51C08BC61004DBA0C /* M_OPTHREAD.c in Sources */,
 				CEAC72241BFCFE68006F4F9B /* MP_LECLASS.c in Sources */,
 				CEAC722D1BFD6BD5006F4F9B /* M_BOOTLOADER.c in Sources */,

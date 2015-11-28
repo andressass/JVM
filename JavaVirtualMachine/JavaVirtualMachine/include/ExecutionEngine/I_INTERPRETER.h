@@ -9,7 +9,7 @@
 
 #ifndef I_INTERPRETER_h
 #define I_INTERPRETER_h
-#ifdef M_INTERPRETER_SERV
+#ifdef INTERPRETER_SERV
 #define EXT8
 #else
 #define EXT8 extern
@@ -20,7 +20,7 @@
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo responsavel por executar uma thread.
+ * Metodo responsavel por executar um ambiente de execucao.
  *
  * \param enviroment  Estrutura contendo a thread e a area de metodos a ser executada
  */

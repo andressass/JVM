@@ -180,6 +180,37 @@ typedef struct attribute{
 
 
 //--------------------------------------------------------------------------------------------------
+//! Estrutura de uma tabela de excessoes
+/*!
+ * Estrutura utilizada para a representacao de uma tabela de excessoes de um atributo do tipo code
+ */
+typedef struct ExceptionTable{
+    u2 start_pc;
+    u2 end_pc;
+    u2 handler_pc;
+    u2 catch_type;
+}	ExceptionTable;
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura do Atributo code
+/*!
+ * Estrutura utilizada para a representacao de um atributo do tipo code
+ */
+typedef struct CodeAttribute{
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 max_stack;
+    u2 max_locals;
+    u4 code_length;
+    u1* code;
+    u2 exception_table_length;
+    ExceptionTable* exception_table;
+    u2 attributes_count;
+    u1* attributes;
+} CodeAttribute;
+
+
+//--------------------------------------------------------------------------------------------------
 //! Estrutura de Campos e Metodos
 /*!
  * Estrutura utilizada para a representacao de um campo ou metodo.
@@ -288,7 +319,7 @@ typedef struct JavaClass{
  * ClassTable mesmo sem a criacao do JavaClass
  */
 typedef struct ClassTable{
-    String name;
+    char* name;
     JavaClass *javaClass;
 }ClassTable;
 
@@ -330,14 +361,14 @@ typedef struct OperandStack{
 typedef struct Frame{
     JavaClass *javaClass;
     method_info *method_info;
-    void *returnPC;
+    int returnPC;
     u4 *localVariablesVector;
     OperandStack *opStk;
 }Frame;
 
 typedef struct VMStack{
     Frame *top;
-    Stack *stack;
+    struct VMStack *next;
 }VMStack;
 
 
@@ -347,7 +378,7 @@ typedef struct VMStack{
  * Construcao da estrutura de Thread
  */
 typedef struct Thread{
-    void *PC;
+    int PC;
     VMStack *vmStack;
 }Thread;
 

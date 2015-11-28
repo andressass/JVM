@@ -99,6 +99,17 @@ EXT4 wchar_t * getUnicodeFromConstantPool(cp_info* cp, u2 index);
 EXT4 char * getUTF8FromConstantPool(cp_info* cp, u2 index);
 
 
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo code,
+ * preenche e retorna uma estritura
+ * CodeAttribute.
+ *
+ * \param cp    ponteiro para o pool de constantes
+ * \param tag   tag do NameAndType no pool de constantes.
+ */
+EXT4 CodeAttribute* parseCode(u1* info);
+
 
 
 #endif

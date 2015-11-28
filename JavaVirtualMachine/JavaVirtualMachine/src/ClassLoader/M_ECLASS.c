@@ -80,14 +80,12 @@ char * getUTF8FromConstantPool(cp_info* cp, u2 index){
     wchar_t *unicode = getUnicodeFromConstantPool(cp, index);
     char * result = (char*) malloc(wcslen(unicode) * sizeof(char));
     
-    wcstombs(result, unicode, wcslen(unicode));
+    wcstombs(result, unicode, wcslen(unicode)+1);
     
     free(unicode);
     
     return result;
 }
-
-
 
 
 //--------------------------------------------------------------------------------------------------
@@ -108,6 +106,79 @@ void printNameAndTypeInfoFromConstantPool(cp_info* cp, u2 index ){
 char* getClassNameFromConstantPool(cp_info* cp, u2 index){
     
     return  getUTF8FromConstantPool(cp, cp[index-1].u.Class.name_index);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado uma referencia para uma lista de tabela de excecoes e seu respectivo tamanho, 
+ * cria, preenche e retorna uma referencia para um vetor de estruturas exception table.
+ *
+ * \param code Ponteiro para o vetor que contem as excetion_tables
+ * \param exception_table_length Numero de elementos na tabela de excessoes
+ * \param cp ponteiro para o pool de constantes
+ * \return Ponteiro para um vetor de tabela de excessoes preenchida
+ */
+ExceptionTable* parseExceptionTables(u1* exceptionTableList, u2 exception_table_length){
+    
+    u1* c = exceptionTableList;
+    ExceptionTable* exceptionTable = (ExceptionTable*)
+                                    malloc(exception_table_length * sizeof(ExceptionTable));
+    
+    for ( int i = 0; i < exception_table_length; i++) {
+        
+        exceptionTable[i].start_pc = *c++;
+        exceptionTable[i].start_pc = exceptionTable[i].start_pc << 8 | *c++;
+        
+        exceptionTable[i].end_pc = *c++;
+        exceptionTable[i].end_pc = exceptionTable[i].end_pc << 8 | *c++;
+        
+        exceptionTable[i].handler_pc = *c++;
+        exceptionTable[i].handler_pc = exceptionTable[i].handler_pc << 8 | *c++;
+        
+        exceptionTable[i].catch_type = *c++;
+        exceptionTable[i].catch_type = exceptionTable[i].catch_type << 8 | *c++;
+        
+    }
+    
+    return exceptionTable;
+}
+
+
+//--------------------------------------------------------------------------------------------------
+CodeAttribute* parseCode(u1* info){
+    CodeAttribute* code = (CodeAttribute*) malloc(sizeof(CodeAttribute));
+    
+    int index = 0;
+    
+    code->max_stack = info[index++];
+    code->max_stack = code->max_stack << 8 | info[index++];
+    
+    code->max_locals = info[index++];
+    code->max_locals = code->max_locals << 8 | info[index++];
+    
+    code->code_length = info[index++];
+    code->code_length = code->code_length << 8 | info[index++];
+    code->code_length = code->code_length << 8 | info[index++];
+    code->code_length = code->code_length << 8 | info[index++];
+    
+    
+    code->code = &info[index];
+    
+    index += code->code_length;
+    
+    code->exception_table_length = info[index++];
+    code->exception_table_length = code->exception_table_length << 8 | info[index++];
+    
+    code->exception_table = parseExceptionTables(&info[index], code->exception_table_length);
+    
+    index += code->exception_table_length * 4 * sizeof(u2); //Tamanho da Tabela de excessao = 4*u2
+    
+    code->attributes_count = info[index++];
+    code->attributes_count = code->attributes_count << 8 | info[index++];
+    code->attributes = &info[index];
+    
+    return code;
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -414,37 +485,23 @@ void printCodeAttributes(u1* code, u4 attributes_count, cp_info* cp){
 /*!
  * Metodo que que realiza a exibicao das tabelas de excessoes de um Atributo CODE
  *
- * \param code Ponteiro para o vetor de atributos de code
+ * \param code Ponteiro para uma lista de exceptionTables
  * \param exception_table_length Numero de elementos na tabela de excessoes
  * \param cp ponteiro para o pool de constantes
  */
-void printCodeExceptions(u1* code, u2 exception_table_length, cp_info* cp){
-    
-    u1* c = code;
+void printCodeExceptions(ExceptionTable* excTable, u2 exception_table_length, cp_info* cp){
     
     printf("\n\t\t{");
     
     for ( int i = 0; i < exception_table_length; i++) {
         printf("\n\t\t\t{");
-        u2 start_pc = *c++;
-        start_pc = start_pc << 8 | *c++;
-        printf("\n\t\t\tSTART_PC: %d", start_pc);
+        printf("\n\t\t\tSTART_PC: %d", excTable[i].start_pc);
+        printf("\n\t\t\tEND_PC: %d", excTable[i].end_pc);
+        printf("\n\t\t\tHANDLER_PC: %d", excTable[i].handler_pc);
+        printf("\n\t\t\tCATCH_TYPE: %d", excTable[i].catch_type);
         
-        u2 end_pc = *c++;
-        end_pc = end_pc << 8 | *c++;
-        printf("\n\t\t\tEND_PC: %d", end_pc);
-        
-        u2 handler_pc = *c++;
-        handler_pc = handler_pc << 8 | *c++;
-        printf("\n\t\t\tHANDLER_PC: %d", handler_pc);
-        
-
-        u2 catch_type = *c++;
-        catch_type = catch_type << 8 | *c++;
-        printf("\n\t\t\tCATCH_TYPE: %d", catch_type);
-            
         printf("\n(((((((((((((((\n");
-        printFromPool(&cp[catch_type], cp);
+        printFromPool(&cp[excTable[i].catch_type], cp);
         printf(")))))))))))))))\n");
         printf("\n\t\t\t}");
     }
@@ -477,41 +534,22 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
     }
     //Caso seja CODE
     else if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_Code)==0) {
-        int index = 0;
         
-        u2 max_stack = attribute->info[index++];
-        max_stack = max_stack << 8 | attribute->info[index++];
-        printf("\n\t\tMAX_STACK:\t\t %d ", max_stack);
+        CodeAttribute* code = parseCode(attribute->info);
         
-        u2 max_locals = attribute->info[index++];
-        max_locals = max_locals << 8 | attribute->info[index++];
-        printf("\n\t\tMAX_LOCALS:\t\t %d ", max_locals);
+        printf("\n\t\tMAX_STACK:\t\t %d ", code->max_stack);
         
-        u4 code_lenght = attribute->info[index++];
-        code_lenght = code_lenght << 8 | attribute->info[index++];
-        code_lenght = code_lenght << 8 | attribute->info[index++];
-        code_lenght = code_lenght << 8 | attribute->info[index++];
+        printf("\n\t\tMAX_LOCALS:\t\t %d ", code->max_locals);
         
-        printf("\n\t\tCODE_LENGHT:\t\t %d ", code_lenght);
-        printByteCodes(&attribute->info[index], code_lenght);
+        printf("\n\t\tCODE_LENGHT:\t\t %d ", code->code_length);
+     
+        printByteCodes(code->code, code->code_length);
         
-        index += code_lenght;
+        printf("\n\t\tEXCEPTION_TABLE_LENGHT:\t %d ", code->exception_table_length);
+        printCodeExceptions(code->exception_table, code->exception_table_length, cp);
         
-        u2 exception_table_lenght = attribute->info[index++];
-        exception_table_lenght = exception_table_lenght << 8 | attribute->info[index++];
-        
-        printf("\n\t\tEXCEPTION_TABLE_LENGHT:\t %d ", exception_table_lenght);
-        printCodeExceptions(&attribute->info[index], exception_table_lenght, cp);
-        
-        index += exception_table_lenght * 4 * sizeof(u2); //Tamanho da Tabela de excessao = 4*u2
-        
-        u2 attributes_count = attribute->info[index++];
-        attributes_count = attributes_count << 8 | attribute->info[index++];
-        printf("\n\t\tATTRIBUTES_COUNT:\t %d ", attributes_count);
-        printCodeAttributes(&attribute->info[index], attributes_count, cp);
-
-        index += attributes_count;
-        
+        printf("\n\t\tATTRIBUTES_COUNT:\t %d ", code->attributes_count);
+        printCodeAttributes(code->attributes, code->attributes_count, cp);
     }
     //Caso seja Exception
     else if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_Exceptions)==0) {

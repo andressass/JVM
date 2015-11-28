@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "classPreparing:M_CLASSLOADER.c">
+      </ContextState>
+      <ContextState
+         contextName = "getUTF8FromConstantPool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cp[12]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "loadCLass:M_CLASSLOADER.c">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

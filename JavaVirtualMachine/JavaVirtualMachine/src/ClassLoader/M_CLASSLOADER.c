@@ -192,7 +192,7 @@ void classSuperClassChecker(ArqClass* arqClass, Environment* enviroment){
     char* superClassName = getClassNameFromConstantPool(arqClass->constant_pool, arqClass->super_class);
     JavaClass* superClass;
     //Verificamos se a superclasse ja fora carregada. Caso nao, carregamos recursivamente
-    if(findJavaClass(superClassName, enviroment->methodArea) == NULL) superClass = loadCLass(superClassName, enviroment);
+    if(findJavaClassOnMethodArea(superClassName, enviroment->methodArea) == NULL) superClass = loadCLass(superClassName, enviroment);
     
     if (superClass == NULL){
         //TODO: ERROR_REPORT();
@@ -221,8 +221,8 @@ int classInitializer(JavaClass* javaClass, Environment* environment){
     //Verificacao e carregamento de superclasses
     classSuperClassChecker(javaClass->arqClass, environment);
     
-    //Executamos o metodo <clinit> da classe
-    pushFrame(environment->thread, getClassNameFromConstantPool(javaClass->arqClass->constant_pool, javaClass->arqClass->this_class), "<clinit>", "()V");
+    //Empilhamos o metodo <clinit> da classe
+    pushFrame(environment, getClassNameFromConstantPool(javaClass->arqClass->constant_pool, javaClass->arqClass->this_class), "<clinit>", "()V");
     
     return InitializerSuccess;
     
@@ -237,7 +237,15 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     int opResult; //!< Resultado das operacoes (checagem de erros)
     
     //!LOADING - Fazemos a leitura do arquivo .class
-    opResult = LECLASS_leitor(arqClass, qualifiedName);
+    char* classExtension = ".class";
+    
+    //Nome completo do arquivo
+    char* fileName = (char*)malloc((strlen(qualifiedName)+strlen(classExtension)) * sizeof(char));
+    strcat(fileName, qualifiedName);
+    strcat(fileName, classExtension);
+    
+    //Lemos o arquivo .class
+    opResult = LECLASS_leitor(arqClass, fileName);
     
     //Caso tenha ocorrido algum erro de leitura, apontamos
     if (opResult != LinkageSuccess) {
@@ -260,6 +268,10 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     classPreparing(javaClass);
 
     //INITIALIZATION - Executamos o o inicializador estatico <clinit>
+
+    //Adicionamos a classe carregada na area de metodos
+    addJavaClassToMethodArea(javaClass, environment->methodArea);
+
     classInitializer(javaClass, environment);
     
     //Retornamos a estrutura inicializada
