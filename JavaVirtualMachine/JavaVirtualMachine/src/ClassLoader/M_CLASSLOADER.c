@@ -74,17 +74,17 @@ int classGetFieldDescriptorSize(char* descriptor){
     else if (strcmp(descriptor, "Z")== 0){
         return 1;
     }
-//    //Arrays
-//    else if (descriptor[0] == '['){
-//        int dimension;
-//        //Calculamos a dimensao do array
-//        for (dimension = 1; dimension < strlen(descriptor) ; dimension++) {
-//            if(descriptor[dimension] != '[') break;
-//        }
-//        //verificamos o tamanho do elemento do array e multiplicamos pela dimensao dele
-//        return dimension * classGetFieldDescriptorSize(&descriptor[dimension]);
-//    }
-//    //Referencias
+    //    //Arrays
+    //    else if (descriptor[0] == '['){
+    //        int dimension;
+    //        //Calculamos a dimensao do array
+    //        for (dimension = 1; dimension < strlen(descriptor) ; dimension++) {
+    //            if(descriptor[dimension] != '[') break;
+    //        }
+    //        //verificamos o tamanho do elemento do array e multiplicamos pela dimensao dele
+    //        return dimension * classGetFieldDescriptorSize(&descriptor[dimension]);
+    //    }
+    //    //Referencias
     else return 4;
 }
 
@@ -93,7 +93,7 @@ int classGetFieldDescriptorSize(char* descriptor){
 /*!
  * Método que aloca o espaco de memoria necessarios para um determinado campo baseado no descritor
  *
- * \param memoryAddress Referencia para o ponteiro de memoria a receber o endereco do espaco 
+ * \param memoryAddress Referencia para o ponteiro de memoria a receber o endereco do espaco
  *        alocado
  * \param descriptor Descritor do campo
  */
@@ -136,6 +136,52 @@ void classInitializeField(void* memoryAddress, char* descriptor){
 
 
 //--------------------------------------------------------------------------------------------------
+Fields* classInitializeFields(JavaClass* javaClass, u2 flagsAccept, u2 flagsRegect){
+    
+    //Numero de campos
+    int fieldsCount = javaClass->arqClass->fields_count;
+    
+    //Resultado
+    Fields* fields;
+    
+    //Alocamos espaco na tabela de campos para o numero de campos
+    fields = (Fields*) malloc(sizeof(Fields));
+    fields->fieldsCount = 0;
+    
+    fields->fieldsTable = (FieldsTable*) malloc(sizeof(FieldsTable));
+    
+    //Inicializamos cada campo estatico da classe
+    for (int i = 0; i < fieldsCount; i++) {
+        
+        //Verificamos as condicoes das flags
+        if (javaClass->arqClass->fields[i].access_flags & flagsAccept &&
+            !(javaClass->arqClass->fields[i].access_flags & flagsRegect)){
+            
+            //Redimensionamos a tabela de atributos estaticos da classe
+            fields->fieldsTable = (FieldsTable*) realloc(fields->fieldsTable, fields->fieldsCount * sizeof(FieldsTable));
+            
+            //Referencia para as informacoes do campo na estrutura de .class
+            field_info* fieldInfo = &javaClass->arqClass->fields[i];
+            
+            //Passamos uma referencia para o nome
+            fields->fieldsTable[i].name =
+            getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
+                                    fieldInfo->name_index);
+            
+            //Passamos uma referencia para o descritor do campo
+            fields->fieldsTable[i].descriptor =
+            getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
+                                    fieldInfo->descriptor_index);
+            
+            //Alocamos o espaco de memoria para o campo
+            classInitializeField(fields->fieldsTable[i].memoryAddress,
+                                 fields->fieldsTable[i].descriptor);
+        }
+    }
+    return fields;
+}
+
+//--------------------------------------------------------------------------------------------------
 /*!
  * Método que aloca todos os espaços de memoria necessarios para a classe e inicializa os campos
  * estaticos com os valores default
@@ -145,34 +191,8 @@ void classInitializeField(void* memoryAddress, char* descriptor){
  */
 int classPreparing(JavaClass* javaClass){
     
-    //Numero de campos
-    int fieldsCount = javaClass->arqClass->fields_count;
-    
-    //Alocamos espaco na tabela de campos para o numero de campos
-    javaClass->staticFieldsTable = (FieldsTable*) malloc(fieldsCount*sizeof(FieldsTable));
-    
-    //Inicializamos cada campo
-    for (int i = 0; i < fieldsCount; i++) {
-        
-        //Referencia para as informacoes do campo na estrutura de .class
-        field_info* fieldInfo = &javaClass->arqClass->fields[i];
-        
-        //Passamos uma referencia para o nome
-        javaClass->staticFieldsTable[i].name =
-        getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
-                                fieldInfo->name_index);
-        
-        //Passamos uma referencia para o descritor do campo
-        javaClass->staticFieldsTable[i].descriptor =
-        getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
-                                fieldInfo->descriptor_index);
-        
-        
-        //Alocamos o espaco de memoria para o campo
-        classInitializeField(javaClass->staticFieldsTable[i].memoryAddress,
-                             javaClass->staticFieldsTable[i].descriptor);
-    }
-    
+    javaClass->staticFields = classInitializeFields(javaClass, ACC_STATIC, ACC_FINAL);
+   
     return LinkageSuccess;
     
 }
@@ -231,7 +251,7 @@ int classInitializer(JavaClass* javaClass, Environment* environment){
 
 //--------------------------------------------------------------------------------------------------
 JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
-
+    
     JavaClass* javaClass = (JavaClass*) malloc(sizeof(JavaClass));
     ArqClass* arqClass = (ArqClass*) malloc(sizeof(ArqClass));
     int opResult; //!< Resultado das operacoes (checagem de erros)
@@ -254,7 +274,6 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     }
     javaClass->arqClass = arqClass;
     
-    
     //LINKING - VERIFYING - Verificamos a corretude do codigo da classe
     // Parte ja realizada na leitura do arquivo
     opResult = classVerifier(arqClass);
@@ -266,13 +285,15 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     //LINKING - PREPARING - Alocamos todos os espacos de memoria necessarios para a classe
     // Campos estaticos sao criados e inicializados com os valores default
     classPreparing(javaClass);
-
+    
     //INITIALIZATION - Executamos o o inicializador estatico <clinit>
-
+    
     //Adicionamos a classe carregada na area de metodos
     addJavaClassToMethodArea(javaClass, environment->methodArea);
-
+    
     classInitializer(javaClass, environment);
+    
+    //LECLASS_exibidor(javaClass->arqClass);
     
     //Retornamos a estrutura inicializada
     return javaClass;

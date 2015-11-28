@@ -110,43 +110,126 @@ method_info* getMethodInfoFromClass(JavaClass* javaClass,
 
 
 //--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado um ponteiro para uma estrutura method_info e o pool de constantes contendo as
+ * constantes relativas ao metodo, busca e retorna uma referencia para o atributo code, o qual 
+ * estara preenchido.
+ *
+ * \param method Referencia para o method_info contendo o codigo
+ * \param constant_pool Referencia para o pool de constantes da classe do metodo
+ * \return Referencia para uma estrutura CodeAttribute referente ao metodo buscado
+ */
+CodeAttribute* getCodeFromMethodInfo(method_info* method, cp_info* constant_pool){
+    
+    for (int i = 0; i< method->attributes_count; i++) {
+        //Obtemos o nome do atributo
+        char* attrName = getUTF8FromConstantPool(constant_pool,
+                                                 method->attributes[i]->attribute_name_index);
+        
+        //Se for o atributo code, criamos, preenchemos e retornamos uma estrutura CodeAttribute
+        if(strcmp(attrName, "Code")==0) return parseCode(method->attributes[i]->info);
+    }
+
+    return NULL;
+}
+
+
+//--------------------------------------------------------------------------------------------------
 CodeAttribute* getCodeAttributeFromMethod(JavaClass* javaClass,
                                               const char* methodName,
                                         const char* methodDescriptor){
     method_info* method = getMethodInfoFromClass(javaClass, methodName, methodDescriptor);
     
     
-    for (int i = 0; i< method->attributes_count; i++) {
-        //Obtemos o nome do atributo
-        char* attrName = getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
-                                                 method->attributes[i]->attribute_name_index);
-        
-        //Se for o atributo code, criamos, preenchemos e retornamos uma estrutura CodeAttribute
-        if(strcmp(attrName, "Code")==0) return parseCode(method->attributes[i]->info);
-    }
-    
-    return NULL;
+    return getCodeFromMethodInfo(method, javaClass->arqClass->constant_pool);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-u1 getByteCodeFromMethod(method_info* methodInfo, void* pc){
+u1 getByteCodeFromMethod(method_info* methodInfo, cp_info* constant_pool, int pc){
+    
+    CodeAttribute* code = getCodeFromMethodInfo(methodInfo, constant_pool);
+    
+    return code->code[pc];
 
     return 0;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void* getClassAttributeReference(const char* className, const char* attributeNamem,
-                                 Environment* environment){
+/*!
+ * Metodo que, dado um ponteiro para uma estrutura field_info e o pool de constantes contendo as
+ * constantes relativas ao campo, busca e retorna uma referencia para o atributo constant_value,
+ * o qual estara preenchido.
+ *
+ * \param field Referencia para o field_info contendo a referencia para constant_value
+ * \param cp Referencia para o pool de constantes da classe do campo
+ * \return Referencia para uma estrutura ConstantValueAttribute referente ao campo buscado
+ */
+ConstantValueAttribute* getConstantValueAtrributeFromField(field_info* field, cp_info* cp){
     
+    for (int j = 0; j < field->attributes_count; j++) {
+        
+        if (strcasecmp(getUTF8FromConstantPool(cp, field->attributes[j]->attribute_name_index), "ConstantValue")) {
+            ConstantValueAttribute* constantValue = parseConstantValue(field->attributes[j]->info);
+            return constantValue;
+        }
+    }
+
     return NULL;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void* getObjectAttributeReference(Object* object, const char* attributeName){
+void* getClassFinalStaticAttributeReference(JavaClass* javaClass, const char* attributeName){
+    
+    for (int i = 0; i< javaClass->arqClass->fields_count; i++) {
+        
+        field_info* field = &javaClass->arqClass->fields[i];
+        
+        if ( strcmp(getUTF8FromConstantPool(javaClass->arqClass->constant_pool, field->name_index), attributeName) == 0 &&
+            field->access_flags & ACC_FINAL &&
+            field->access_flags & ACC_STATIC ) {
+            
+            //Procuramos o atributo constant value
+            ConstantValueAttribute* contantValue =
+            getConstantValueAtrributeFromField(field, javaClass->arqClass->constant_pool);
+            
+            //Retornamos a referencia para o valor (sempre se encontra apos a tag, nao importa o tipo)
+            if (contantValue) return &javaClass->arqClass->constant_pool[contantValue->constantvalue_index].u.Float.bytes;
+        }
+    }
+    return NULL;
+}
 
+
+//--------------------------------------------------------------------------------------------------
+void* getClassAttributeReference(const char* className, const char* attributeName,
+                                 Environment* environment){
+    
+    JavaClass* class = getClass(className, environment);
+    
+    //TODO: Checar restricao de acesso ao atributo
+    
+    for (int i = 0 ; i < class->staticFields->fieldsCount; i++)
+        if (strcmp(attributeName, class->staticFields->fieldsTable[i].name) == 0)
+            return class->staticFields->fieldsTable[i].memoryAddress;
+    
+    //Verificamos se é final
+    return getClassFinalStaticAttributeReference(class, attributeName);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void* getObjectAttributeReference(Object* object, const char* attributeName){
+    
+    //TODO: Checar restricao de acesso ao atributo
+    
+    for (int i = 0; i < object->handler->fields->fieldsCount; i++) {
+        if (strcmp(attributeName, object->handler->fields->fieldsTable[i].name)==0) {
+            return object->handler->fields->fieldsTable[i].memoryAddress;
+        }
+    }
     return NULL;
 }
 
@@ -154,5 +237,15 @@ void* getObjectAttributeReference(Object* object, const char* attributeName){
 //--------------------------------------------------------------------------------------------------
 Object* newObjectFromClass(const char* className, Environment* environment ){
 
-    return NULL;
+    JavaClass* javaClass = getClass(className, environment);
+    
+    Object* object = (Object*) malloc(sizeof(Object));
+    object->handler = (Handler*) malloc(sizeof(Handler));
+    
+    object->handler->javaClass = javaClass;
+    
+    //Alocamos espaco na tabela de campos para o numero de campos
+    object->handler->fields = classInitializeFields(javaClass, 0x1111, ACC_STATIC);
+
+    return object;
 }

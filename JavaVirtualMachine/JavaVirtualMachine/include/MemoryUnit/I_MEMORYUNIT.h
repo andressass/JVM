@@ -123,8 +123,8 @@ EXT10 method_info* getMethodInfoFromClass(JavaClass* javaClass,
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que, dado um ponteiro para uma estrutura method_info, busca e retorna uma referencia para
- * o atributo code, o qual estara preenchido.
+ * Metodo que, dado um o nome e descritor de um metodo e a referencia para a sua classe, busca e 
+ * retorna uma referencia para o atributo code, o qual estara preenchido.
  *
  * \param javaClass Estrutura javaClass da classe que contem o metodo
  * \param methodName Nome do metodo a ser empilhado
@@ -142,10 +142,11 @@ EXT10 CodeAttribute* getCodeAttributeFromMethod(JavaClass* javaClass,
  * parametro.
  *
  * \param methodInfo Endereco da estrutura MethodInfo contendo o atributo CODE a ser utilizado
+ * \param constant_pool Referencia para o pool de constantes da classe do metodo
  * \param pc Endereco da intrucao (indice do byte no vetor de bytes PC)
  * \return Opcode que esta na posicao apontada por PC
  */
-EXT10 u1 getByteCodeFromMethod(method_info* methodInfo, void* pc);
+EXT10 u1 getByteCodeFromMethod(method_info* methodInfo, cp_info* constant_pool, int pc);
 
 
 //--------------------------------------------------------------------------------------------------

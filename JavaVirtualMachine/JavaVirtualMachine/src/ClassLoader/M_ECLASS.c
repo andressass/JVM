@@ -181,6 +181,32 @@ CodeAttribute* parseCode(u1* info){
     return code;
 }
 
+
+//--------------------------------------------------------------------------------------------------
+ConstantValueAttribute* parseConstantValue(u1* info){
+    
+    ConstantValueAttribute* constantValue =
+    (ConstantValueAttribute*) malloc(sizeof(ConstantValueAttribute));
+    
+    constantValue->constantvalue_index = info[0];
+    constantValue->constantvalue_index = constantValue->constantvalue_index << 8 | info[1];
+    
+    return constantValue;
+  
+}
+
+ExceptionAttribute* parseExceptionAttribute(u1* info){
+    ExceptionAttribute* exception = (ExceptionAttribute*)malloc(sizeof(ExceptionAttribute));
+    int index = 0;
+    
+    exception->number_of_exceptions = info[index++];
+    exception->number_of_exceptions = exception->number_of_exceptions << 8 | info[index++];
+   
+    exception->exception_index_table = (u2*) &info[index];
+    
+    return exception;
+}
+
 //--------------------------------------------------------------------------------------------------
 /*!
  * Metodo que que realiza a exibicao de um campo do pool de constantes
@@ -524,12 +550,15 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
     
     //Caso seja ConstantValue
     if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_ConstantValue)==0) {
-        u2 constantvalue_index = attribute->info[0];
-        constantvalue_index = constantvalue_index << 8 | attribute->info[1];
-        printf("\n\t\tCONSTANT_VALUE INDEX:\t\t %d ", constantvalue_index);
+        
+        ConstantValueAttribute* constantValue = parseConstantValue(attribute->info);
+        
+        printf("\n\t\tCONSTANT_VALUE INDEX:\t\t %d ", constantValue->constantvalue_index);
         printf("\n(((((((((((((((\n");
-        printFromPool(&cp[constantvalue_index-1], cp);
+        printFromPool(&cp[constantValue->constantvalue_index-1], cp);
         printf(")))))))))))))))\n");
+        
+        free(constantValue);
         
     }
     //Caso seja CODE
@@ -550,19 +579,19 @@ void exibeAtributo(attribute_info* attribute, cp_info* cp){
         
         printf("\n\t\tATTRIBUTES_COUNT:\t %d ", code->attributes_count);
         printCodeAttributes(code->attributes, code->attributes_count, cp);
+        
+        free(code);
     }
     //Caso seja Exception
     else if (wcscmp(getUnicodeFromConstantPool(cp, attribute->attribute_name_index), ATT_Exceptions)==0) {
         
-        int index = 0;
+        ExceptionAttribute* exception = parseExceptionAttribute(attribute->info);
         
-        u2 number_of_exceptions = attribute->info[index++];
-        number_of_exceptions = number_of_exceptions << 8 | attribute->info[index++];
-        printf("\n\t\tNUMBER_OF_EXECPTIONS:\t\t %d ", number_of_exceptions);
+        printf("\n\t\tNUMBER_OF_EXECPTIONS:\t\t %d ", exception->number_of_exceptions);
         
-        for (int i = 0; i < number_of_exceptions; i ++) {
+        for (int i = 0; i < exception->number_of_exceptions; i ++) {
             printf("\n%d. (\n", i);
-            printFromPool(&cp[attribute->info[index++]-1], cp);
+            printFromPool(&cp[exception->exception_index_table[i]-1], cp);
             printf(")\n");
         }
     }

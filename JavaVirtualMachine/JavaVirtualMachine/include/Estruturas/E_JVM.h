@@ -211,6 +211,31 @@ typedef struct CodeAttribute{
 
 
 //--------------------------------------------------------------------------------------------------
+//! Estrutura do Atributo Constant Value
+/*!
+ * Estrutura utilizada para a representacao de um atributo do tipo constant value
+ */
+typedef struct ConstantValueAttribute{
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 constantvalue_index;
+} ConstantValueAttribute;
+
+
+//--------------------------------------------------------------------------------------------------
+//! Estrutura do Atributo Exception
+/*!
+ * Estrutura utilizada para a representacao de um atributo do tipo exception
+ */
+typedef struct ExceptionAttribute{
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 number_of_exceptions;
+    u2* exception_index_table;
+} ExceptionAttribute;
+
+
+//--------------------------------------------------------------------------------------------------
 //! Estrutura de Campos e Metodos
 /*!
  * Estrutura utilizada para a representacao de um campo ou metodo.
@@ -270,12 +295,26 @@ typedef struct FieldsTable{
 
 
 //--------------------------------------------------------------------------------------------------
+//! Estrutura da FieldsTable
+/*!
+ *
+ */
+typedef struct Fields{
+    int fieldsCount; //!< Tamanho da tabela
+    FieldsTable* fieldsTable; //!< Ponteiro para a tabela
+} Fields;
+
+
+struct JavaClass;
+
+//--------------------------------------------------------------------------------------------------
 //! Estrutura da Handler
 /*!
- * 
+ *
  */
 typedef struct Handler{
-    FieldsTable *fieldsTable;
+    struct JavaClass *javaClass;
+    Fields* fields;
 } Handler;
 
 
@@ -308,8 +347,7 @@ typedef struct ObjectList{
 typedef struct JavaClass{
     ObjectList *objectList;
     ArqClass *arqClass;
-    FieldsTable *staticFieldsTable;
-    // Att0?
+    Fields* staticFields;
 }JavaClass;
 
 

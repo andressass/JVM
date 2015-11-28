@@ -102,13 +102,35 @@ EXT4 char * getUTF8FromConstantPool(cp_info* cp, u2 index);
 //--------------------------------------------------------------------------------------------------
 /*!
  * Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo code,
- * preenche e retorna uma estritura
+ * preenche e retorna uma estrutura
  * CodeAttribute.
  *
- * \param cp    ponteiro para o pool de constantes
- * \param tag   tag do NameAndType no pool de constantes.
+ * \param info Referencia para o atributo code
+ * \return Estrutura codeAttribute preenchida
  */
 EXT4 CodeAttribute* parseCode(u1* info);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo constant 
+ * value, preenche e retorna uma estrutura ConstantValueAtribute.
+ *
+ * \param info Referencia para o atributo constant value
+ * \return Estrutura ConstantValueAttribute preenchida
+ */
+EXT4 ConstantValueAttribute* parseConstantValue(u1* info);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo exception,
+ * preenche e retorna uma estrutura ExceptionAttribute.
+ *
+ * \param info Referencia para o atributo exception
+ * \return Estrutura ExceptionAttribute preenchida
+ */
+EXT4 ExceptionAttribute* parseException(u1* info);
 
 
 
