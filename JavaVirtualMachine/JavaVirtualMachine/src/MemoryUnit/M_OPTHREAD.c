@@ -66,7 +66,7 @@ void pushFrame(Environment* environment, const char* className, const char* meth
     newFrame->localVariablesVector = (u4*) malloc(methodCode->max_locals * sizeof(u4));
     
     //Alocamos a pilha de operandos
-    newFrame->opStk = (OperandStack*) malloc(methodCode->max_stack * sizeof(u4));
+    newFrame->opStk = (OperandStack*) malloc(methodCode->max_stack * sizeof(OperandStack));
     
 }
 
@@ -97,13 +97,40 @@ void popFrame(Thread* thread){
         
         //Liberamos o frame da memoria
         freeFrame(oldStackFrame->top);
-        free(oldStackFrame);
     }
 }
 
 
 //--------------------------------------------------------------------------------------------------
 Frame* getCurrentFrame(Thread* thread){
-    
     return thread->vmStack->top;
 }
+
+
+//--------------------------------------------------------------------------------------------------
+void pushInOperandStack(Thread* thread, u4 value){
+    Frame* currentFrame = getCurrentFrame(thread);
+    
+    //A o proximo elemento do "vetor" alocado da pilha, aponta para o elemento atual
+    currentFrame->opStk[1].nextStack = currentFrame->opStk;
+    //O elemento atual aponta para o proximo elemento
+    currentFrame->opStk = &currentFrame->opStk[1];
+    //Empilhamaos o valor no novo topo da pilha
+    currentFrame->opStk->top = value;
+}
+
+
+//--------------------------------------------------------------------------------------------------
+u4 popFromOperandStack(Thread* thread){
+    Frame* currentFrame = getCurrentFrame(thread);
+    
+    //Salvamos uma referencia do elemento a ser desempilhado
+    OperandStack* popped = currentFrame->opStk;
+    //Desempilhamos (como eh um vetor fixo de elementos, somente passamos a referencia para o
+    // proximo elemento)
+    currentFrame->opStk = currentFrame->opStk->nextStack;
+    
+    //Retornamos o valor do elemento desempilhado
+    return popped->top;
+}
+

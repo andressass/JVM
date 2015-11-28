@@ -151,8 +151,6 @@ u1 getByteCodeFromMethod(method_info* methodInfo, cp_info* constant_pool, int pc
     CodeAttribute* code = getCodeFromMethodInfo(methodInfo, constant_pool);
     
     return code->code[pc];
-
-    return 0;
 }
 
 
@@ -181,6 +179,15 @@ ConstantValueAttribute* getConstantValueAtrributeFromField(field_info* field, cp
 
 
 //--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, da uma referencia para uma estrtutura javaClass e um nome de um atributo, busca
+ * um atributo final na classe com este nome. Caso exista, retonamos uma referencia para o valor
+ * do atributo no pool de constantes. Caso nao exista, retorna nulo.
+ *
+ * \param javaClass Referencia para a Estrutura javaClass
+ * \param attributeName Nome do atributo a ser pesquisado
+ * \return Referencia para o valor do atributo final
+ */
 void* getClassFinalStaticAttributeReference(JavaClass* javaClass, const char* attributeName){
     
     for (int i = 0; i< javaClass->arqClass->fields_count; i++) {

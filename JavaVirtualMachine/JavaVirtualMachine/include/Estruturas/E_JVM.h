@@ -386,8 +386,8 @@ typedef struct Stack{
 }Stack;
 
 typedef struct OperandStack{
-    Stack *operandStack;
-    u4 *top;
+    struct OperandStack* nextStack;
+    u4 top;
 }OperandStack;
 
 

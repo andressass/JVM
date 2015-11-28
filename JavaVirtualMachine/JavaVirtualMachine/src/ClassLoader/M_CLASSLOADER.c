@@ -91,7 +91,7 @@ int classGetFieldDescriptorSize(char* descriptor){
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Método que aloca o espaco de memoria necessarios para um determinado campo baseado no descritor
+ * Metodo que aloca o espaco de memoria necessarios para um determinado campo baseado no descritor
  *
  * \param memoryAddress Referencia para o ponteiro de memoria a receber o endereco do espaco
  *        alocado
@@ -157,6 +157,9 @@ Fields* classInitializeFields(JavaClass* javaClass, u2 flagsAccept, u2 flagsRege
         if (javaClass->arqClass->fields[i].access_flags & flagsAccept &&
             !(javaClass->arqClass->fields[i].access_flags & flagsRegect)){
             
+            //Atualizamos a quantidade de fields
+            fields->fieldsCount++;
+            
             //Redimensionamos a tabela de atributos estaticos da classe
             fields->fieldsTable = (FieldsTable*) realloc(fields->fieldsTable, fields->fieldsCount * sizeof(FieldsTable));
             
@@ -181,6 +184,7 @@ Fields* classInitializeFields(JavaClass* javaClass, u2 flagsAccept, u2 flagsRege
     return fields;
 }
 
+
 //--------------------------------------------------------------------------------------------------
 /*!
  * Método que aloca todos os espaços de memoria necessarios para a classe e inicializa os campos
@@ -194,7 +198,6 @@ int classPreparing(JavaClass* javaClass){
     javaClass->staticFields = classInitializeFields(javaClass, ACC_STATIC, ACC_FINAL);
    
     return LinkageSuccess;
-    
 }
 
 
@@ -212,7 +215,8 @@ void classSuperClassChecker(ArqClass* arqClass, Environment* enviroment){
     char* superClassName = getClassNameFromConstantPool(arqClass->constant_pool, arqClass->super_class);
     JavaClass* superClass;
     //Verificamos se a superclasse ja fora carregada. Caso nao, carregamos recursivamente
-    if(findJavaClassOnMethodArea(superClassName, enviroment->methodArea) == NULL) superClass = loadCLass(superClassName, enviroment);
+    if(findJavaClassOnMethodArea(superClassName, enviroment->methodArea) == NULL)
+        superClass = loadCLass(superClassName, enviroment);
     
     if (superClass == NULL){
         //TODO: ERROR_REPORT();
