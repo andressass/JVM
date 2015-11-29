@@ -1,0 +1,212 @@
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c}{}\section{Referência do Arquivo src/\+Memory\+Unit/\+M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.c}
+\label{_m___o_p_t_h_r_e_a_d_8c}\index{src/\+Memory\+Unit/\+M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{src/\+Memory\+Unit/\+M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+
+
+Modulo de threads da J\+V\+M.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_m___o_p_t_h_r_e_a_d_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a4d903de48e4f4c1b9f03527fef83b90c}{O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{_m___o_p_t_h_r_e_a_d_8c_af6089452d2ad55a58ccf834d4b73e1af}{new\+Thread} ()
+\item 
+void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$Method\+Descriptor)
+\item 
+void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ac6d7106961bbc47fa0f024aae9ab12f2}{free\+Frame} (\hyperlink{struct_frame}{Frame} $\ast$frame)
+\item 
+void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ab4697379961f0fb312f3bb07ea1bdf74}{pop\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+\hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a1141dd641cd42d7e58b1e82941d5f46f}{get\+Current\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a9b96069e8c01ae07f6f134c387f367f0}{push\+In\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
+\item 
+\hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ae03176586e6491ce50aaac361a143937}{pop\+From\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo de threads da J\+V\+M. 
+
+Modulo responsavel por implementar os metodos relacionados as operacoes que involvam Threads 
+
+\subsection{Definições e macros}
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_a4d903de48e4f4c1b9f03527fef83b90c}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V@{O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V}}
+\index{O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V@{O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+V}\label{_m___o_p_t_h_r_e_a_d_8c_a4d903de48e4f4c1b9f03527fef83b90c}
+
+
+\subsection{Funções}
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_ac6d7106961bbc47fa0f024aae9ab12f2}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!free\+Frame@{free\+Frame}}
+\index{free\+Frame@{free\+Frame}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{free\+Frame(\+Frame $\ast$frame)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_ac6d7106961bbc47fa0f024aae9ab12f2}
+Metodo que libera recursivamente um frame da memoria
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \hyperlink{struct_frame}{Frame} a ser desalocado \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_a1141dd641cd42d7e58b1e82941d5f46f}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!get\+Current\+Frame@{get\+Current\+Frame}}
+\index{get\+Current\+Frame@{get\+Current\+Frame}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{get\+Current\+Frame(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frame}$\ast$ get\+Current\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_a1141dd641cd42d7e58b1e82941d5f46f}
+Metodo responsavel por retornar uma referencia para o frame que está no topo da pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} contendo a pilha J\+V\+M com os frames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco do frame que esta no topo da pilha 
+\end{DoxyReturn}
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_af6089452d2ad55a58ccf834d4b73e1af}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!new\+Thread@{new\+Thread}}
+\index{new\+Thread@{new\+Thread}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{new\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread}$\ast$ new\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_af6089452d2ad55a58ccf834d4b73e1af}
+Metodo responsavel por criar, inicializar e retornar uma uma referencia para uma estrutura \hyperlink{struct_thread}{Thread}
+
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_thread}{Thread} inicializada 
+\end{DoxyReturn}
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_ab4697379961f0fb312f3bb07ea1bdf74}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!pop\+Frame@{pop\+Frame}}
+\index{pop\+Frame@{pop\+Frame}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{pop\+Frame(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}void pop\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_ab4697379961f0fb312f3bb07ea1bdf74}
+Metodo responsavel por desempilhar o frame que está no topo da pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} contendo a pilha J\+V\+M a ser utilizada no desempilhamento do frame \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{_m___o_p_t_h_r_e_a_d_8c_ab4697379961f0fb312f3bb07ea1bdf74_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_ae03176586e6491ce50aaac361a143937}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!pop\+From\+Operand\+Stack@{pop\+From\+Operand\+Stack}}
+\index{pop\+From\+Operand\+Stack@{pop\+From\+Operand\+Stack}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{pop\+From\+Operand\+Stack(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u4} pop\+From\+Operand\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_ae03176586e6491ce50aaac361a143937}
+Metodo que desempilha e retorna um valor na pilha de operandos do frame atual da thread passada como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor que foi desempilhado 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{_m___o_p_t_h_r_e_a_d_8c_ae03176586e6491ce50aaac361a143937_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!push\+Frame@{push\+Frame}}
+\index{push\+Frame@{push\+Frame}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$\+Method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment, }
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6}
+Metodo responsavel por criar e inicializar um novo frame para um metodo e o empilhar na pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+{\em class\+Name} & Nome qualificado da classe que contem o metodo a ser empilhado \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_a9b96069e8c01ae07f6f134c387f367f0}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!push\+In\+Operand\+Stack@{push\+In\+Operand\+Stack}}
+\index{push\+In\+Operand\+Stack@{push\+In\+Operand\+Stack}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{push\+In\+Operand\+Stack(\+Thread $\ast$thread, u4 value)}]{\setlength{\rightskip}{0pt plus 5cm}void push\+In\+Operand\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread, }
+\item[{{\bf u4}}]{value}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_a9b96069e8c01ae07f6f134c387f367f0}
+Metodo que empilha um valor na pilha de operandos do frame atual da thread passada como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} que contem a pilha J\+V\+M com o frame atual \\
+\hline
+{\em value} & Valor a ser empilhado \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_m___o_p_t_h_r_e_a_d_8c_a9b96069e8c01ae07f6f134c387f367f0_cgraph}
+\end{center}
+\end{figure}
+
+

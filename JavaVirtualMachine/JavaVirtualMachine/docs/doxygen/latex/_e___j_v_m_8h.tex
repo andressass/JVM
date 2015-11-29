@@ -1,0 +1,716 @@
+\hypertarget{_e___j_v_m_8h}{}\section{Referência do Arquivo include/\+Estruturas/\+E\+\_\+\+J\+V\+M.h}
+\label{_e___j_v_m_8h}\index{include/\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h@{include/\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h}}
+
+
+Estruturas da J\+V\+M.  
+
+
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___j_v_m_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structconst_pool}{const\+Pool}
+\begin{DoxyCompactList}\small\item\em Estrutura do Pool de Constantes. \end{DoxyCompactList}\item 
+struct \hyperlink{structattribute}{attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura de Atributos. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_exception_table}{Exception\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura de uma tabela de excessoes. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_code_attribute}{Code\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo code. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_constant_value_attribute}{Constant\+Value\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Constant Value. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_exception_attribute}{Exception\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Exception. \end{DoxyCompactList}\item 
+struct \hyperlink{structfield_and_method}{field\+And\+Method}
+\begin{DoxyCompactList}\small\item\em Estrutura de Campos e Metodos. \end{DoxyCompactList}\item 
+struct \hyperlink{structarq_class}{arq\+Class}
+\begin{DoxyCompactList}\small\item\em um metodo. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fields_table}{Fields\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fields}{Fields}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_handler}{Handler}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_handler}{Handler}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_object}{Object}
+\begin{DoxyCompactList}\small\item\em Estrutura do \hyperlink{struct_object}{Object}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_object_list}{Object\+List}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_object_list}{Object\+List}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_java_class}{Java\+Class}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_java_class}{Java\+Class}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_class_table}{Class\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_class_table}{Class\+Table}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_method_area}{Method\+Area}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_method_area}{Method\+Area}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_stack}{Stack}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_stack}{Stack}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_operand_stack}{Operand\+Stack}
+\item 
+struct \hyperlink{struct_frame}{Frame}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_frame}{Frame}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_v_m_stack}{V\+M\+Stack}
+\item 
+struct \hyperlink{struct_thread}{Thread}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_environment}{Environment}
+\begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+V\+M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a21842132ee76c8a0d12ca8e62a361062}{Linkage\+Success}~0
+\begin{DoxyCompactList}\small\item\em Sucesso na operacao. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_adf8d1e9df57a99c0db1f29004a0aa4b1}{Linkage\+Error\+\_\+\+Class\+Format\+Error}~1
+\begin{DoxyCompactList}\small\item\em Arquivo corrompido. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a2c193d3567a29d04f3549afab80a390a}{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}~2
+\begin{DoxyCompactList}\small\item\em Arquivo possui versao nao suportada. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a84afc176e011aed99b5e4489dbc458a5}{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}~3
+\begin{DoxyCompactList}\small\item\em Classe seria a sua propria superclasse. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a7702c0fb4e152844097e16d7a7375462}{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}~4
+\begin{DoxyCompactList}\small\item\em Erro de abertura do arquivo. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_aff29f3ef74126089997a778bb0cc098f}{Initializer\+Success}~10
+\begin{DoxyCompactList}\small\item\em Sucesso na operacao. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_aae4024d9c0723e574019f7e255d15f07}{Initializer\+Error}~11
+\begin{DoxyCompactList}\small\item\em Sucesso na inicializacao da classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a78decb34a8bb27d808f38e1868067523}{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}~0
+\begin{DoxyCompactList}\small\item\em Versao minima compativel. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_abe281d98b3eeea824560a7ef86ad31d6}{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}~48
+\begin{DoxyCompactList}\small\item\em Versao maxima compativel. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a72b5b534aa409975da610a36f648fa0a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}~7
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a008d43478c2e2973e7413f5d1c48095d}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}~9
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a2a179cf178ea867c6ab1700508c269dd}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}~10
+\item 
+\#define \hyperlink{_e___j_v_m_8h_ac0e92044d246c6e4d691116f89a70ebb}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}~11
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a0a7acbe175de56072a2f0a1a051418e1}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}~8
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a856a6553a55d721970ca5450eb1ccd2c}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}~3
+\item 
+\#define \hyperlink{_e___j_v_m_8h_ab914627ce5b25c4acfc98f2eacb78473}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}~4
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a426ca017b895fc522671a561d460be7a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}~5
+\item 
+\#define \hyperlink{_e___j_v_m_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}~6
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a5b6ba749976ae61415983ca0b890c91a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}~12
+\item 
+\#define \hyperlink{_e___j_v_m_8h_afc46559a7d3f7baf519fc183c2fad2b4}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}~1
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a0fdbb084daf13068941396db9988bb8d}{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}~0x0001
+\begin{DoxyCompactList}\small\item\em Publica\+: pode ser acessada de fora do pacote. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_ab4a89247b3598c31a5999c76bf168a6a}{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}~0x0002
+\begin{DoxyCompactList}\small\item\em Privada\+: contexto restrito a definição da classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}~0x0004
+\begin{DoxyCompactList}\small\item\em Protegida\+: pode ser usada na classe e nas subclasses. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}~0x0008
+\begin{DoxyCompactList}\small\item\em Estatica\+: variavel de classe e nao de instancia. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_ad170615172fa272627b79f604e3471b9}{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}~0x0010
+\begin{DoxyCompactList}\small\item\em Final\+: não pode ter subclasses. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a64ab0ee48e02f736237394d4580bad5a}{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}~0x0020
+\begin{DoxyCompactList}\small\item\em invokespecial. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a6eb88a744819be2fd9b240ed56bbb421}{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}~0x0020
+\begin{DoxyCompactList}\small\item\em executado (\hyperlink{struct_thread}{Thread}). \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}~0x0040
+\begin{DoxyCompactList}\small\item\em Nao pode ser colocada em cache. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a79b164828e45ca7eb81b895b8ee4960e}{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}~0x0080
+\begin{DoxyCompactList}\small\item\em persistente. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a21cd44dc8506e7f393a8e90936a22613}{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}~0x0100
+\begin{DoxyCompactList}\small\item\em Implementado em linguagem nao Java (C, C++, Assembly). \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_aca0c3297ae6a71033cf324d99793189a}{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}~0x0200
+\begin{DoxyCompactList}\small\item\em Eh interface, nao uma classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a638658b616d4e7c16078f606224dc9ba}{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}~0x0400
+\begin{DoxyCompactList}\small\item\em Declarada abstrata\+: nao pode ser instanciada. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a896d91d006ed72a57d9ce427f7699555}{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}~0x0800
+\begin{DoxyCompactList}\small\item\em utiliza modo de ponto flutuante F\+P-\/strict (nao normalizado). \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}{A\+T\+T\+\_\+\+Code}~L\char`\"{}Code\char`\"{}
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a8f0a19953f3ccdd14497a060827d39e1}{A\+T\+T\+\_\+\+Constant\+Value}~L\char`\"{}Constant\+Value\char`\"{}
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a996f9f84aa48010d2d92c7f65e5375e7}{A\+T\+T\+\_\+\+Exceptions}~L\char`\"{}Exeptions\char`\"{}
+\item 
+\#define \hyperlink{_e___j_v_m_8h_a70f89fe4e0367e1d2fb93d0a275c449e}{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}~0x7f800000
+\begin{DoxyCompactList}\small\item\em Float infinito positivo. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a7280d0f656c133a8e672cd6651814820}{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}~0xff800000
+\begin{DoxyCompactList}\small\item\em Float infinito negativo. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a6a6ecc0fe8f7f8e3eb84b358c079121b}{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}~0x7f800001
+\begin{DoxyCompactList}\small\item\em Float valor minimo da primeira faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_af69cb76c45ad4d64c74642f68c72d9b5}{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}~0x7fffffff
+\begin{DoxyCompactList}\small\item\em Float valor maximo da primeira faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a82ddf66cfbc511ee205cc251911d814b}{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}~0xff800001
+\begin{DoxyCompactList}\small\item\em Float valor minimo da segunda faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a86f777d5c10e16be7fbcf8f7d86769b6}{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}~0xffffffff
+\begin{DoxyCompactList}\small\item\em Float valor maximo da segunda faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_ab5bc910e1a8dfa7e2bfc3685acbb655b}{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}~0x7ff0000000000000
+\begin{DoxyCompactList}\small\item\em Double infinito positivo. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a437b56271f6e80eb3f2beb8e442f8d12}{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}~0xfff0000000000000
+\begin{DoxyCompactList}\small\item\em Double infinito negativo. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_af20d602144fa8e75fbc475a9a3e84387}{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}~0x7ff0000000000001
+\begin{DoxyCompactList}\small\item\em Double valor minimo da primeira faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_aa7bf3d349f152b93b71fbfe317d64d6b}{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}~0x7fffffffffffffff
+\begin{DoxyCompactList}\small\item\em Double valor maximo da primeira faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a27e21f5880b4253eb503ebb93aeffe4a}{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}~0xfff0000000000001
+\begin{DoxyCompactList}\small\item\em Double valor minimo da segunda faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_a99ba49afff5f9b4d6bc7f7937495b586}{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}~0xffffffffffffffff
+\begin{DoxyCompactList}\small\item\em Double valor maximo da segunda faixa de Na\+N. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___j_v_m_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}~100
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1}
+\begin{DoxyCompactList}\small\item\em Representa 1 byte. \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2}
+\begin{DoxyCompactList}\small\item\em Representa 2 bytes. \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4}
+\begin{DoxyCompactList}\small\item\em Representa 4 bytes. \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado}
+\begin{DoxyCompactList}\small\item\em Representa o resultado de uma operacao. \end{DoxyCompactList}\item 
+typedef char \hyperlink{_e___j_v_m_8h_a9ffedfebd21a940154d9fb5f22968d68}{String}\mbox{[}\hyperlink{_e___j_v_m_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}\mbox{]}
+\item 
+typedef struct \hyperlink{structconst_pool}{const\+Pool} \hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura do Pool de Constantes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structattribute}{attribute} \hyperlink{_e___j_v_m_8h_a4c2796d61bb99bf730b1807fc838c847}{attribute\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura de Atributos. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_exception_table}{Exception\+Table} \hyperlink{_e___j_v_m_8h_aff0dd57a8aacb724c1e8a559745597c0}{Exception\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura de uma tabela de excessoes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_code_attribute}{Code\+Attribute} \hyperlink{_e___j_v_m_8h_a33a73fc4eb288c6fb10a53b37561e34d}{Code\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo code. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_constant_value_attribute}{Constant\+Value\+Attribute} \hyperlink{_e___j_v_m_8h_a3626457ac12ad1ac58b2299de62df56d}{Constant\+Value\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Constant Value. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_exception_attribute}{Exception\+Attribute} \hyperlink{_e___j_v_m_8h_aa3fbed739ae03cf5d42622cb6962528f}{Exception\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Exception. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{_e___j_v_m_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{field\+\_\+or\+\_\+method}
+\begin{DoxyCompactList}\small\item\em Estrutura de Campos e Metodos. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{_e___j_v_m_8h_a53c0da222997bf70321f1aebc84d8e02}{field\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura utilizada para a representacao de um campo. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info}
+\item 
+typedef struct \hyperlink{structarq_class}{arq\+Class} \hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class}
+\begin{DoxyCompactList}\small\item\em um metodo. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_fields_table}{Fields\+Table} \hyperlink{_e___j_v_m_8h_a1df551d6e4bc33a094aa8806bc409343}{Fields\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_fields}{Fields} \hyperlink{_e___j_v_m_8h_ab16816d1eca412d48c5e93b7e03a2bb5}{Fields}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_handler}{Handler} \hyperlink{_e___j_v_m_8h_af8f70b42a01b72ae3da31c35525f9565}{Handler}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_handler}{Handler}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_object}{Object} \hyperlink{_e___j_v_m_8h_a71c0c698be85fce6ae7d701b736c1a0a}{Object}
+\begin{DoxyCompactList}\small\item\em Estrutura do \hyperlink{struct_object}{Object}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_object_list}{Object\+List} \hyperlink{_e___j_v_m_8h_a51d7e9eb1bade5cd0dac13bb3e32a9e8}{Object\+List}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_object_list}{Object\+List}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_java_class}{Java\+Class} \hyperlink{_e___j_v_m_8h_ac17e902332f273fa155c5f3591e192b5}{Java\+Class}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_java_class}{Java\+Class}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_class_table}{Class\+Table} \hyperlink{_e___j_v_m_8h_a4e9ad1d439eef19128b86664460e0fa4}{Class\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_class_table}{Class\+Table}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_method_area}{Method\+Area} \hyperlink{_e___j_v_m_8h_a3ab276e3480da80a219853822e0828af}{Method\+Area}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_method_area}{Method\+Area}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_stack}{Stack} \hyperlink{_e___j_v_m_8h_acccdaeb94a63f3757825012007215c0d}{Stack}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_stack}{Stack}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_operand_stack}{Operand\+Stack} \hyperlink{_e___j_v_m_8h_a346a5006b3ffde66941ce40c277fbf86}{Operand\+Stack}
+\item 
+typedef struct \hyperlink{struct_frame}{Frame} \hyperlink{_e___j_v_m_8h_a8bed1e36372ccc1470e37e91647cce20}{Frame}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_frame}{Frame}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_v_m_stack}{V\+M\+Stack} \hyperlink{_e___j_v_m_8h_ae8c207048b4b683e0e66c25d01fa7d00}{V\+M\+Stack}
+\item 
+typedef struct \hyperlink{struct_thread}{Thread} \hyperlink{_e___j_v_m_8h_a4a082fe0af1bc973b7351f98727dc16e}{Thread}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_environment}{Environment} \hyperlink{_e___j_v_m_8h_a2939780e6e449ccdc63802638f1ec09c}{Environment}
+\begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+V\+M. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}{instruction}) (\hyperlink{struct_thread}{Thread} $\ast$)
+\begin{DoxyCompactList}\small\item\em Ponteiro para uma instrucao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estruturas da J\+V\+M. 
+
+Arquivo com a definicao das estruturas, tipos e constantes associadas ao sistema. 
+
+\subsection{Definições e macros}
+\hypertarget{_e___j_v_m_8h_a638658b616d4e7c16078f606224dc9ba}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}}
+\index{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T~0x0400}\label{_e___j_v_m_8h_a638658b616d4e7c16078f606224dc9ba}
+
+
+Declarada abstrata\+: nao pode ser instanciada. 
+
+\hypertarget{_e___j_v_m_8h_ad170615172fa272627b79f604e3471b9}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+F\+I\+N\+A\+L@{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}}
+\index{A\+C\+C\+\_\+\+F\+I\+N\+A\+L@{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+F\+I\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+F\+I\+N\+A\+L~0x0010}\label{_e___j_v_m_8h_ad170615172fa272627b79f604e3471b9}
+
+
+Final\+: não pode ter subclasses. 
+
+\hypertarget{_e___j_v_m_8h_aca0c3297ae6a71033cf324d99793189a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E@{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}}
+\index{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E@{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E~0x0200}\label{_e___j_v_m_8h_aca0c3297ae6a71033cf324d99793189a}
+
+
+Eh interface, nao uma classe. 
+
+\hypertarget{_e___j_v_m_8h_a21cd44dc8506e7f393a8e90936a22613}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E@{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}}
+\index{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E@{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+N\+A\+T\+I\+V\+E~0x0100}\label{_e___j_v_m_8h_a21cd44dc8506e7f393a8e90936a22613}
+
+
+Implementado em linguagem nao Java (C, C++, Assembly). 
+
+\hypertarget{_e___j_v_m_8h_ab4a89247b3598c31a5999c76bf168a6a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E@{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}}
+\index{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E@{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+T\+E~0x0002}\label{_e___j_v_m_8h_ab4a89247b3598c31a5999c76bf168a6a}
+
+
+Privada\+: contexto restrito a definição da classe. 
+
+\hypertarget{_e___j_v_m_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D@{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}}
+\index{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D@{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D~0x0004}\label{_e___j_v_m_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}
+
+
+Protegida\+: pode ser usada na classe e nas subclasses. 
+
+\hypertarget{_e___j_v_m_8h_a0fdbb084daf13068941396db9988bb8d}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C@{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}}
+\index{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C@{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+U\+B\+L\+I\+C~0x0001}\label{_e___j_v_m_8h_a0fdbb084daf13068941396db9988bb8d}
+
+
+Publica\+: pode ser acessada de fora do pacote. 
+
+\hypertarget{_e___j_v_m_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C@{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}}
+\index{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C@{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+T\+A\+T\+I\+C~0x0008}\label{_e___j_v_m_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}
+
+
+Estatica\+: variavel de classe e nao de instancia. 
+
+\hypertarget{_e___j_v_m_8h_a896d91d006ed72a57d9ce427f7699555}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T@{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}}
+\index{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T@{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+T\+R\+I\+C\+T~0x0800}\label{_e___j_v_m_8h_a896d91d006ed72a57d9ce427f7699555}
+
+
+utiliza modo de ponto flutuante F\+P-\/strict (nao normalizado). 
+
+\hypertarget{_e___j_v_m_8h_a64ab0ee48e02f736237394d4580bad5a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+S\+U\+P\+E\+R@{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}}
+\index{A\+C\+C\+\_\+\+S\+U\+P\+E\+R@{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+U\+P\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+U\+P\+E\+R~0x0020}\label{_e___j_v_m_8h_a64ab0ee48e02f736237394d4580bad5a}
+
+
+invokespecial. 
+
+Chama metodos de superclasse via a instrucao \hypertarget{_e___j_v_m_8h_a6eb88a744819be2fd9b240ed56bbb421}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D@{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}}
+\index{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D@{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D~0x0020}\label{_e___j_v_m_8h_a6eb88a744819be2fd9b240ed56bbb421}
+
+
+executado (\hyperlink{struct_thread}{Thread}). 
+
+Sincronizado\+: requer um monitor antes de ser \hypertarget{_e___j_v_m_8h_a79b164828e45ca7eb81b895b8ee4960e}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T@{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}}
+\index{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T@{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T~0x0080}\label{_e___j_v_m_8h_a79b164828e45ca7eb81b895b8ee4960e}
+
+
+persistente. 
+
+não pode ser lida ou gravada por um gerente de objetos \hypertarget{_e___j_v_m_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E@{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}}
+\index{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E@{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E~0x0040}\label{_e___j_v_m_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}
+
+
+Nao pode ser colocada em cache. 
+
+\hypertarget{_e___j_v_m_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+T\+T\+\_\+\+Code@{A\+T\+T\+\_\+\+Code}}
+\index{A\+T\+T\+\_\+\+Code@{A\+T\+T\+\_\+\+Code}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+T\+T\+\_\+\+Code}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Code~L\char`\"{}Code\char`\"{}}\label{_e___j_v_m_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}
+\hypertarget{_e___j_v_m_8h_a8f0a19953f3ccdd14497a060827d39e1}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+T\+T\+\_\+\+Constant\+Value@{A\+T\+T\+\_\+\+Constant\+Value}}
+\index{A\+T\+T\+\_\+\+Constant\+Value@{A\+T\+T\+\_\+\+Constant\+Value}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+T\+T\+\_\+\+Constant\+Value}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Constant\+Value~L\char`\"{}Constant\+Value\char`\"{}}\label{_e___j_v_m_8h_a8f0a19953f3ccdd14497a060827d39e1}
+\hypertarget{_e___j_v_m_8h_a996f9f84aa48010d2d92c7f65e5375e7}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!A\+T\+T\+\_\+\+Exceptions@{A\+T\+T\+\_\+\+Exceptions}}
+\index{A\+T\+T\+\_\+\+Exceptions@{A\+T\+T\+\_\+\+Exceptions}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{A\+T\+T\+\_\+\+Exceptions}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Exceptions~L\char`\"{}Exeptions\char`\"{}}\label{_e___j_v_m_8h_a996f9f84aa48010d2d92c7f65e5375e7}
+\hypertarget{_e___j_v_m_8h_a72b5b534aa409975da610a36f648fa0a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class~7}\label{_e___j_v_m_8h_a72b5b534aa409975da610a36f648fa0a}
+\hypertarget{_e___j_v_m_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double~6}\label{_e___j_v_m_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}
+\hypertarget{_e___j_v_m_8h_a008d43478c2e2973e7413f5d1c48095d}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref~9}\label{_e___j_v_m_8h_a008d43478c2e2973e7413f5d1c48095d}
+\hypertarget{_e___j_v_m_8h_ab914627ce5b25c4acfc98f2eacb78473}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float~4}\label{_e___j_v_m_8h_ab914627ce5b25c4acfc98f2eacb78473}
+\hypertarget{_e___j_v_m_8h_a856a6553a55d721970ca5450eb1ccd2c}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer~3}\label{_e___j_v_m_8h_a856a6553a55d721970ca5450eb1ccd2c}
+\hypertarget{_e___j_v_m_8h_ac0e92044d246c6e4d691116f89a70ebb}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref~11}\label{_e___j_v_m_8h_ac0e92044d246c6e4d691116f89a70ebb}
+\hypertarget{_e___j_v_m_8h_a426ca017b895fc522671a561d460be7a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long~5}\label{_e___j_v_m_8h_a426ca017b895fc522671a561d460be7a}
+\hypertarget{_e___j_v_m_8h_a2a179cf178ea867c6ab1700508c269dd}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref~10}\label{_e___j_v_m_8h_a2a179cf178ea867c6ab1700508c269dd}
+\hypertarget{_e___j_v_m_8h_a5b6ba749976ae61415983ca0b890c91a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type~12}\label{_e___j_v_m_8h_a5b6ba749976ae61415983ca0b890c91a}
+\hypertarget{_e___j_v_m_8h_a0a7acbe175de56072a2f0a1a051418e1}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String~8}\label{_e___j_v_m_8h_a0a7acbe175de56072a2f0a1a051418e1}
+\hypertarget{_e___j_v_m_8h_afc46559a7d3f7baf519fc183c2fad2b4}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8~1}\label{_e___j_v_m_8h_afc46559a7d3f7baf519fc183c2fad2b4}
+\hypertarget{_e___j_v_m_8h_aa7bf3d349f152b93b71fbfe317d64d6b}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1~0x7fffffffffffffff}\label{_e___j_v_m_8h_aa7bf3d349f152b93b71fbfe317d64d6b}
+
+
+Double valor maximo da primeira faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a99ba49afff5f9b4d6bc7f7937495b586}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2~0xffffffffffffffff}\label{_e___j_v_m_8h_a99ba49afff5f9b4d6bc7f7937495b586}
+
+
+Double valor maximo da segunda faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_af20d602144fa8e75fbc475a9a3e84387}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1~0x7ff0000000000001}\label{_e___j_v_m_8h_af20d602144fa8e75fbc475a9a3e84387}
+
+
+Double valor minimo da primeira faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a27e21f5880b4253eb503ebb93aeffe4a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2~0xfff0000000000001}\label{_e___j_v_m_8h_a27e21f5880b4253eb503ebb93aeffe4a}
+
+
+Double valor minimo da segunda faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a437b56271f6e80eb3f2beb8e442f8d12}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity~0xfff0000000000000}\label{_e___j_v_m_8h_a437b56271f6e80eb3f2beb8e442f8d12}
+
+
+Double infinito negativo. 
+
+\hypertarget{_e___j_v_m_8h_ab5bc910e1a8dfa7e2bfc3685acbb655b}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity~0x7ff0000000000000}\label{_e___j_v_m_8h_ab5bc910e1a8dfa7e2bfc3685acbb655b}
+
+
+Double infinito positivo. 
+
+\hypertarget{_e___j_v_m_8h_af69cb76c45ad4d64c74642f68c72d9b5}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1~0x7fffffff}\label{_e___j_v_m_8h_af69cb76c45ad4d64c74642f68c72d9b5}
+
+
+Float valor maximo da primeira faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a86f777d5c10e16be7fbcf8f7d86769b6}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2~0xffffffff}\label{_e___j_v_m_8h_a86f777d5c10e16be7fbcf8f7d86769b6}
+
+
+Float valor maximo da segunda faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a6a6ecc0fe8f7f8e3eb84b358c079121b}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1~0x7f800001}\label{_e___j_v_m_8h_a6a6ecc0fe8f7f8e3eb84b358c079121b}
+
+
+Float valor minimo da primeira faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a82ddf66cfbc511ee205cc251911d814b}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2~0xff800001}\label{_e___j_v_m_8h_a82ddf66cfbc511ee205cc251911d814b}
+
+
+Float valor minimo da segunda faixa de Na\+N. 
+
+\hypertarget{_e___j_v_m_8h_a7280d0f656c133a8e672cd6651814820}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}}
+\index{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity~0xff800000}\label{_e___j_v_m_8h_a7280d0f656c133a8e672cd6651814820}
+
+
+Float infinito negativo. 
+
+\hypertarget{_e___j_v_m_8h_a70f89fe4e0367e1d2fb93d0a275c449e}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}}
+\index{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity~0x7f800000}\label{_e___j_v_m_8h_a70f89fe4e0367e1d2fb93d0a275c449e}
+
+
+Float infinito positivo. 
+
+\hypertarget{_e___j_v_m_8h_aae4024d9c0723e574019f7e255d15f07}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Initializer\+Error@{Initializer\+Error}}
+\index{Initializer\+Error@{Initializer\+Error}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Initializer\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Initializer\+Error~11}\label{_e___j_v_m_8h_aae4024d9c0723e574019f7e255d15f07}
+
+
+Sucesso na inicializacao da classe. 
+
+\hypertarget{_e___j_v_m_8h_aff29f3ef74126089997a778bb0cc098f}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Initializer\+Success@{Initializer\+Success}}
+\index{Initializer\+Success@{Initializer\+Success}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Initializer\+Success}]{\setlength{\rightskip}{0pt plus 5cm}\#define Initializer\+Success~10}\label{_e___j_v_m_8h_aff29f3ef74126089997a778bb0cc098f}
+
+
+Sucesso na operacao. 
+
+\hypertarget{_e___j_v_m_8h_abe281d98b3eeea824560a7ef86ad31d6}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version~48}\label{_e___j_v_m_8h_abe281d98b3eeea824560a7ef86ad31d6}
+
+
+Versao maxima compativel. 
+
+\hypertarget{_e___j_v_m_8h_a78decb34a8bb27d808f38e1868067523}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version~0}\label{_e___j_v_m_8h_a78decb34a8bb27d808f38e1868067523}
+
+
+Versao minima compativel. 
+
+\hypertarget{_e___j_v_m_8h_a84afc176e011aed99b5e4489dbc458a5}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Linkage\+Error\+\_\+\+Class\+Circulatity\+Error@{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}}
+\index{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error@{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Class\+Circulatity\+Error~3}\label{_e___j_v_m_8h_a84afc176e011aed99b5e4489dbc458a5}
+
+
+Classe seria a sua propria superclasse. 
+
+\hypertarget{_e___j_v_m_8h_adf8d1e9df57a99c0db1f29004a0aa4b1}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Linkage\+Error\+\_\+\+Class\+Format\+Error@{Linkage\+Error\+\_\+\+Class\+Format\+Error}}
+\index{Linkage\+Error\+\_\+\+Class\+Format\+Error@{Linkage\+Error\+\_\+\+Class\+Format\+Error}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Linkage\+Error\+\_\+\+Class\+Format\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Class\+Format\+Error~1}\label{_e___j_v_m_8h_adf8d1e9df57a99c0db1f29004a0aa4b1}
+
+
+Arquivo corrompido. 
+
+\hypertarget{_e___j_v_m_8h_a7702c0fb4e152844097e16d7a7375462}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error@{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}}
+\index{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error@{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error~4}\label{_e___j_v_m_8h_a7702c0fb4e152844097e16d7a7375462}
+
+
+Erro de abertura do arquivo. 
+
+\hypertarget{_e___j_v_m_8h_a2c193d3567a29d04f3549afab80a390a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error@{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}}
+\index{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error@{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error~2}\label{_e___j_v_m_8h_a2c193d3567a29d04f3549afab80a390a}
+
+
+Arquivo possui versao nao suportada. 
+
+\hypertarget{_e___j_v_m_8h_a21842132ee76c8a0d12ca8e62a361062}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Linkage\+Success@{Linkage\+Success}}
+\index{Linkage\+Success@{Linkage\+Success}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Linkage\+Success}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Success~0}\label{_e___j_v_m_8h_a21842132ee76c8a0d12ca8e62a361062}
+
+
+Sucesso na operacao. 
+
+\hypertarget{_e___j_v_m_8h_ac829415013d8120cedee928452ae0f55}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H@{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H@{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H~100}\label{_e___j_v_m_8h_ac829415013d8120cedee928452ae0f55}
+
+
+\subsection{Definições dos tipos}
+\hypertarget{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Arq\+Class@{Arq\+Class}}
+\index{Arq\+Class@{Arq\+Class}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Arq\+Class}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf arq\+Class}  {\bf Arq\+Class}}\label{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}
+
+
+um metodo. 
+
+Estrutura de Arquivo .class
+
+Estrutura utilizada para a representacao de um arquivo \char`\"{}.\+class\char`\"{}. \hypertarget{_e___j_v_m_8h_a4c2796d61bb99bf730b1807fc838c847}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!attribute\+\_\+info@{attribute\+\_\+info}}
+\index{attribute\+\_\+info@{attribute\+\_\+info}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{attribute\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf attribute}  {\bf attribute\+\_\+info}}\label{_e___j_v_m_8h_a4c2796d61bb99bf730b1807fc838c847}
+
+
+Estrutura de Atributos. 
+
+Estrutura utilizada para a representacao de um atributo de um arquivo \char`\"{}.\+class\char`\"{}. \hypertarget{_e___j_v_m_8h_a4e9ad1d439eef19128b86664460e0fa4}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Class\+Table@{Class\+Table}}
+\index{Class\+Table@{Class\+Table}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Class\+Table}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Class\+Table} {\bf Class\+Table}}\label{_e___j_v_m_8h_a4e9ad1d439eef19128b86664460e0fa4}
+
+
+Estrutura da \hyperlink{struct_class_table}{Class\+Table}. 
+
+\hyperlink{struct_class_table}{Class\+Table} mesmo sem a criacao do \hyperlink{struct_java_class}{Java\+Class} \hypertarget{_e___j_v_m_8h_a33a73fc4eb288c6fb10a53b37561e34d}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Code\+Attribute@{Code\+Attribute}}
+\index{Code\+Attribute@{Code\+Attribute}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Code\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Code\+Attribute}  {\bf Code\+Attribute}}\label{_e___j_v_m_8h_a33a73fc4eb288c6fb10a53b37561e34d}
+
+
+Estrutura do Atributo code. 
+
+Estrutura utilizada para a representacao de um atributo do tipo code \hypertarget{_e___j_v_m_8h_a3626457ac12ad1ac58b2299de62df56d}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Constant\+Value\+Attribute@{Constant\+Value\+Attribute}}
+\index{Constant\+Value\+Attribute@{Constant\+Value\+Attribute}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Constant\+Value\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Constant\+Value\+Attribute}  {\bf Constant\+Value\+Attribute}}\label{_e___j_v_m_8h_a3626457ac12ad1ac58b2299de62df56d}
+
+
+Estrutura do Atributo Constant Value. 
+
+Estrutura utilizada para a representacao de um atributo do tipo constant value \hypertarget{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!cp\+\_\+info@{cp\+\_\+info}}
+\index{cp\+\_\+info@{cp\+\_\+info}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{cp\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf const\+Pool}  {\bf cp\+\_\+info}}\label{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}
+
+
+Estrutura do Pool de Constantes. 
+
+Estrutura utilizada para a representacao de um pool de constantes. \hypertarget{_e___j_v_m_8h_a2939780e6e449ccdc63802638f1ec09c}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Environment@{Environment}}
+\index{Environment@{Environment}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Environment}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Environment} {\bf Environment}}\label{_e___j_v_m_8h_a2939780e6e449ccdc63802638f1ec09c}
+
+
+Estrutura do ambiente de execucao da J\+V\+M. 
+
+Estrura que apresenta um ambiente de execucao, a qual contem uma thread e uma area de metodos \hypertarget{_e___j_v_m_8h_aa3fbed739ae03cf5d42622cb6962528f}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Exception\+Attribute@{Exception\+Attribute}}
+\index{Exception\+Attribute@{Exception\+Attribute}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Exception\+Attribute}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Exception\+Attribute}  {\bf Exception\+Attribute}}\label{_e___j_v_m_8h_aa3fbed739ae03cf5d42622cb6962528f}
+
+
+Estrutura do Atributo Exception. 
+
+Estrutura utilizada para a representacao de um atributo do tipo exception \hypertarget{_e___j_v_m_8h_aff0dd57a8aacb724c1e8a559745597c0}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Exception\+Table@{Exception\+Table}}
+\index{Exception\+Table@{Exception\+Table}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Exception\+Table}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Exception\+Table}	 {\bf Exception\+Table}}\label{_e___j_v_m_8h_aff0dd57a8aacb724c1e8a559745597c0}
+
+
+Estrutura de uma tabela de excessoes. 
+
+Estrutura utilizada para a representacao de uma tabela de excessoes de um atributo do tipo code \hypertarget{_e___j_v_m_8h_a53c0da222997bf70321f1aebc84d8e02}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!field\+\_\+info@{field\+\_\+info}}
+\index{field\+\_\+info@{field\+\_\+info}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{field\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method} {\bf field\+\_\+info}}\label{_e___j_v_m_8h_a53c0da222997bf70321f1aebc84d8e02}
+
+
+Estrutura utilizada para a representacao de um campo. 
+
+\hypertarget{_e___j_v_m_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!field\+\_\+or\+\_\+method@{field\+\_\+or\+\_\+method}}
+\index{field\+\_\+or\+\_\+method@{field\+\_\+or\+\_\+method}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{field\+\_\+or\+\_\+method}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method}  {\bf field\+\_\+or\+\_\+method}}\label{_e___j_v_m_8h_aea7ef0bb5a23a224f7241ece56f10ea7}
+
+
+Estrutura de Campos e Metodos. 
+
+Estrutura utilizada para a representacao de um campo ou metodo. \hypertarget{_e___j_v_m_8h_ab16816d1eca412d48c5e93b7e03a2bb5}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Fields@{Fields}}
+\index{Fields@{Fields}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Fields}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Fields}  {\bf Fields}}\label{_e___j_v_m_8h_ab16816d1eca412d48c5e93b7e03a2bb5}
+
+
+Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. 
+
+\hypertarget{_e___j_v_m_8h_a1df551d6e4bc33a094aa8806bc409343}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Fields\+Table@{Fields\+Table}}
+\index{Fields\+Table@{Fields\+Table}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Fields\+Table}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Fields\+Table}  {\bf Fields\+Table}}\label{_e___j_v_m_8h_a1df551d6e4bc33a094aa8806bc409343}
+
+
+Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. 
+
+\hypertarget{_e___j_v_m_8h_a8bed1e36372ccc1470e37e91647cce20}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Frame@{Frame}}
+\index{Frame@{Frame}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Frame}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Frame} {\bf Frame}}\label{_e___j_v_m_8h_a8bed1e36372ccc1470e37e91647cce20}
+
+
+Estrutura da \hyperlink{struct_frame}{Frame}. 
+
+Construcao da estrutura de \hyperlink{struct_frame}{Frame} \hypertarget{_e___j_v_m_8h_af8f70b42a01b72ae3da31c35525f9565}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Handler@{Handler}}
+\index{Handler@{Handler}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Handler}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Handler}  {\bf Handler}}\label{_e___j_v_m_8h_af8f70b42a01b72ae3da31c35525f9565}
+
+
+Estrutura da \hyperlink{struct_handler}{Handler}. 
+
+\hypertarget{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!instruction@{instruction}}
+\index{instruction@{instruction}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{instruction}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ instruction) ({\bf Thread} $\ast$)}\label{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}
+
+
+Ponteiro para uma instrucao. 
+
+Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia para a \hyperlink{struct_thread}{Thread} em operacao. \hypertarget{_e___j_v_m_8h_ac17e902332f273fa155c5f3591e192b5}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Java\+Class@{Java\+Class}}
+\index{Java\+Class@{Java\+Class}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Java\+Class}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Java\+Class} {\bf Java\+Class}}\label{_e___j_v_m_8h_ac17e902332f273fa155c5f3591e192b5}
+
+
+Estrutura da \hyperlink{struct_java_class}{Java\+Class}. 
+
+A Static\+Fields\+Table do \hyperlink{struct_java_class}{Java\+Class} foi generalizada como uma \hyperlink{struct_fields_table}{Fields\+Table} normal \hypertarget{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!method\+\_\+info@{method\+\_\+info}}
+\index{method\+\_\+info@{method\+\_\+info}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{method\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method} {\bf method\+\_\+info}}\label{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}
+Estrutura utilizada para a representacao de \hypertarget{_e___j_v_m_8h_a3ab276e3480da80a219853822e0828af}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Method\+Area@{Method\+Area}}
+\index{Method\+Area@{Method\+Area}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Method\+Area}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Method\+Area}  {\bf Method\+Area}}\label{_e___j_v_m_8h_a3ab276e3480da80a219853822e0828af}
+
+
+Estrutura da \hyperlink{struct_method_area}{Method\+Area}. 
+
+\hypertarget{_e___j_v_m_8h_a71c0c698be85fce6ae7d701b736c1a0a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Object@{Object}}
+\index{Object@{Object}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Object}  {\bf Object}}\label{_e___j_v_m_8h_a71c0c698be85fce6ae7d701b736c1a0a}
+
+
+Estrutura do \hyperlink{struct_object}{Object}. 
+
+\hypertarget{_e___j_v_m_8h_a51d7e9eb1bade5cd0dac13bb3e32a9e8}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Object\+List@{Object\+List}}
+\index{Object\+List@{Object\+List}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Object\+List}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Object\+List}  {\bf Object\+List}}\label{_e___j_v_m_8h_a51d7e9eb1bade5cd0dac13bb3e32a9e8}
+
+
+Estrutura da \hyperlink{struct_object_list}{Object\+List}. 
+
+\hypertarget{_e___j_v_m_8h_a346a5006b3ffde66941ce40c277fbf86}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Operand\+Stack@{Operand\+Stack}}
+\index{Operand\+Stack@{Operand\+Stack}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Operand\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Operand\+Stack} {\bf Operand\+Stack}}\label{_e___j_v_m_8h_a346a5006b3ffde66941ce40c277fbf86}
+\hypertarget{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!resultado@{resultado}}
+\index{resultado@{resultado}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{resultado}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf resultado}}\label{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}
+
+
+Representa o resultado de uma operacao. 
+
+\hypertarget{_e___j_v_m_8h_acccdaeb94a63f3757825012007215c0d}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Stack@{Stack}}
+\index{Stack@{Stack}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Stack} {\bf Stack}}\label{_e___j_v_m_8h_acccdaeb94a63f3757825012007215c0d}
+
+
+Estrutura da \hyperlink{struct_stack}{Stack}. 
+
+Abstracao da pilha para que ficasse mais simples a estrutura das outra Caso seja uma abstracao desnecessaria basta modificar as outras pilhas Criando os vetores com seus respectivos tipos \hypertarget{_e___j_v_m_8h_a9ffedfebd21a940154d9fb5f22968d68}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!String@{String}}
+\index{String@{String}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}typedef char String\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{_e___j_v_m_8h_a9ffedfebd21a940154d9fb5f22968d68}
+\hypertarget{_e___j_v_m_8h_a4a082fe0af1bc973b7351f98727dc16e}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Thread@{Thread}}
+\index{Thread@{Thread}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{Thread}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Thread} {\bf Thread}}\label{_e___j_v_m_8h_a4a082fe0af1bc973b7351f98727dc16e}
+
+
+Estrutura da \hyperlink{struct_thread}{Thread}. 
+
+Construcao da estrutura de \hyperlink{struct_thread}{Thread} \hypertarget{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!u1@{u1}}
+\index{u1@{u1}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{u1}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf u1}}\label{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}
+
+
+Representa 1 byte. 
+
+\hypertarget{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!u2@{u2}}
+\index{u2@{u2}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{u2}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf u2}}\label{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}
+
+
+Representa 2 bytes. 
+
+\hypertarget{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!u4@{u4}}
+\index{u4@{u4}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{u4}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf u4}}\label{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}
+
+
+Representa 4 bytes. 
+
+\hypertarget{_e___j_v_m_8h_ae8c207048b4b683e0e66c25d01fa7d00}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!V\+M\+Stack@{V\+M\+Stack}}
+\index{V\+M\+Stack@{V\+M\+Stack}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{V\+M\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf V\+M\+Stack} {\bf V\+M\+Stack}}\label{_e___j_v_m_8h_ae8c207048b4b683e0e66c25d01fa7d00}

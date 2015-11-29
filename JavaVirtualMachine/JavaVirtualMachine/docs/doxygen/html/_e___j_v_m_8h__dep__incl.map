@@ -1,0 +1,26 @@
+<map id="include/Estruturas/E_JVM.h" name="include/Estruturas/E_JVM.h">
+<area shape="rect" id="node2" href="$_i___c_l_a_s_s_l_o_a_d_e_r_8h.html" title="Interface do Carregador de Classes da JVM. " alt="" coords="644,179,790,217"/>
+<area shape="rect" id="node5" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="987,92,1129,131"/>
+<area shape="rect" id="node10" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="1270,265,1417,304"/>
+<area shape="rect" id="node12" href="$_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="1847,179,1975,217"/>
+<area shape="rect" id="node15" href="$_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="1656,179,1823,217"/>
+<area shape="rect" id="node17" href="$_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html" title="Interface de instrucoes de comparacao e desvio da JVM. " alt="" coords="1533,92,1703,131"/>
+<area shape="rect" id="node18" href="$_i___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de instrucoes de conversao de tipos da JVM. " alt="" coords="1726,92,1894,131"/>
+<area shape="rect" id="node19" href="$_i___i_n_s_t_g_e_n_e_r_i_c_8h.html" title="Interface de instrucoes genericas JVM. " alt="" coords="1918,92,2086,131"/>
+<area shape="rect" id="node20" href="$_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html" title="Interface de instrucoes logico aritimeticas da JVM. " alt="" coords="2110,92,2278,131"/>
+<area shape="rect" id="node21" href="$_i___i_n_s_t_m_e_m_o_r_y_8h.html" title="Interface de instrucoes de memoria da JVM. " alt="" coords="2302,92,2470,131"/>
+<area shape="rect" id="node22" href="$_i___i_n_s_t_r_e_t_u_r_n_8h.html" title="Interface de instrucoes de retorno da JVM. " alt="" coords="2494,92,2662,131"/>
+<area shape="rect" id="node23" href="$_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="1381,179,1548,217"/>
+<area shape="rect" id="node24" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="1167,179,1306,217"/>
+<area shape="rect" id="node3" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html" title="Modulo do Carregador de Classes da JVM. " alt="" coords="752,272,1001,297"/>
+<area shape="rect" id="node4" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="468,272,728,297"/>
+<area shape="rect" id="node6" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="814,179,956,217"/>
+<area shape="rect" id="node11" href="$_m_p___l_e_c_l_a_s_s_8c.html" title="Modulo de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="987,179,1129,217"/>
+<area shape="rect" id="node7" href="$_m___e_c_l_a_s_s_8c.html" title="Modulo Exibidor de arquivos &quot;.class&quot;. " alt="" coords="1441,272,1643,297"/>
+<area shape="rect" id="node8" href="$_m___l_c_l_a_s_s_8c.html" title="Modulo Leitor de arquivos &quot;.class&quot;. " alt="" coords="5,272,207,297"/>
+<area shape="rect" id="node9" href="$_m___o_p_c_l_a_s_s_8c.html" title="Modulo Operador de estruturas &quot;.class&quot;. " alt="" coords="230,272,443,297"/>
+<area shape="rect" id="node13" href="$_o_p_c_o_d_e_s_8c.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="2007,272,2192,297"/>
+<area shape="rect" id="node14" href="$_m___d_e_c_o_d_e_r_8c.html" title="src/ExecutionEngine\l/M_DECODER.c" alt="" coords="1840,265,1983,304"/>
+<area shape="rect" id="node16" href="$_m___i_n_t_e_r_p_r_e_t_e_r_8c.html" title="Modulo do Interpretador da JVM. " alt="" coords="1668,265,1816,304"/>
+<area shape="rect" id="node25" href="$_m___o_p_t_h_r_e_a_d_8c.html" title="Modulo de threads da JVM. " alt="" coords="1025,272,1246,297"/>
+</map>

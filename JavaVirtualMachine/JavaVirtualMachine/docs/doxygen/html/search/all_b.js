@@ -1,6 +1,26 @@
 var searchData=
 [
-  ['name_5fand_5ftype_5findex',['name_and_type_index',['../structconst_pool.html#a3dde2ae699efaa1736b684038ea4f3de',1,'constPool']]],
-  ['name_5findex',['name_index',['../structconst_pool.html#af3f5f8cd6fcae23720d11786466944e1',1,'constPool::name_index()'],['../structfield_and_method.html#ac636d7076db5a2ce9891613be8ad9b00',1,'fieldAndMethod::name_index()']]],
-  ['nameandtype',['NameAndType',['../structconst_pool.html#a727268ed0e1405a5eaab1aa5ad3cba74',1,'constPool']]]
+  ['m_5fbootloader_2ec',['M_BOOTLOADER.c',['../_m___b_o_o_t_l_o_a_d_e_r_8c.html',1,'']]],
+  ['m_5fclassloader_2ec',['M_CLASSLOADER.c',['../_m___c_l_a_s_s_l_o_a_d_e_r_8c.html',1,'']]],
+  ['m_5fclassloader_5fserv',['M_CLASSLOADER_SERV',['../_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a5bc92417e51fa7e7d6160821589b837b',1,'M_CLASSLOADER.c']]],
+  ['m_5fdecoder_2ec',['M_DECODER.c',['../_m___d_e_c_o_d_e_r_8c.html',1,'']]],
+  ['m_5feclass_2ec',['M_ECLASS.c',['../_m___e_c_l_a_s_s_8c.html',1,'']]],
+  ['m_5finterpreter_2ec',['M_INTERPRETER.c',['../_m___i_n_t_e_r_p_r_e_t_e_r_8c.html',1,'']]],
+  ['m_5flclass_2ec',['M_LCLASS.c',['../_m___l_c_l_a_s_s_8c.html',1,'']]],
+  ['m_5fopclass_2ec',['M_OPCLASS.c',['../_m___o_p_c_l_a_s_s_8c.html',1,'']]],
+  ['m_5fopmethodarea_2ec',['M_OPMETHODAREA.c',['../_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html',1,'']]],
+  ['m_5fopthread_2ec',['M_OPTHREAD.c',['../_m___o_p_t_h_r_e_a_d_8c.html',1,'']]],
+  ['magic',['magic',['../structarq_class.html#af2bde90f63d048e444c9437063394b4f',1,'arqClass']]],
+  ['main',['main',['../_m___b_o_o_t_l_o_a_d_e_r_8c.html#ac0f2228420376f4db7e1274f2b41667c',1,'M_BOOTLOADER.c']]],
+  ['major_5fversion',['major_version',['../structarq_class.html#a0aeda33023ba35d892279365630779d3',1,'arqClass']]],
+  ['max_5flocals',['max_locals',['../struct_code_attribute.html#a1407b9bddee5eca9e0b0b20fbf1a8f1f',1,'CodeAttribute']]],
+  ['max_5fstack',['max_stack',['../struct_code_attribute.html#a61e8f2685ef2bb170d72e402a0e72ca2',1,'CodeAttribute']]],
+  ['memoryaddress',['memoryAddress',['../struct_fields_table.html#a5c251342633df2e314a6b88c25f2a604',1,'FieldsTable']]],
+  ['method_5finfo',['method_info',['../struct_frame.html#a4dbf8107ea01f748582bb060aa299628',1,'Frame::method_info()'],['../_e___j_v_m_8h.html#a02c1a928a94e9fab2c72044003c7bce6',1,'method_info():&#160;E_JVM.h']]],
+  ['methodarea',['MethodArea',['../struct_method_area.html',1,'MethodArea'],['../struct_environment.html#a1c73c41c6c38e7e67ea22f6d59044852',1,'Environment::methodArea()'],['../_e___j_v_m_8h.html#a3ab276e3480da80a219853822e0828af',1,'MethodArea():&#160;E_JVM.h']]],
+  ['methodref',['Methodref',['../structconst_pool.html#aedc243e8e674b59f15d83255f4fff7f6',1,'constPool']]],
+  ['methods',['methods',['../structarq_class.html#a849a70430b6245a2cc8b43a2516c5f00',1,'arqClass']]],
+  ['methods_5fcount',['methods_count',['../structarq_class.html#a0cdd803ff7b2a6a229c048bb51f1febc',1,'arqClass']]],
+  ['minor_5fversion',['minor_version',['../structarq_class.html#a90b447e4eea035e1dd5fb45360a6a09f',1,'arqClass']]],
+  ['mp_5fleclass_2ec',['MP_LECLASS.c',['../_m_p___l_e_c_l_a_s_s_8c.html',1,'']]]
 ];

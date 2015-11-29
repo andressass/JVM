@@ -5,9 +5,499 @@
 Interface da Unidade de Memoria da J\+V\+M.  
 
 
+{\ttfamily \#include \char`\"{}../\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{_i___m_e_m_o_r_y_u_n_i_t_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_aab75258123f0973cefa41b0154c5d807}{new\+Thread} ()
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_method_area}{Method\+Area} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a2005a0f5f48b7bf3cdd454be1fdd7bfd}{new\+Method\+Area} ()
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a86f3a6212280b2d43d662ca5757ef714}{pop\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_ac449ecf025c06eb93d3fd8c5cb5cb592}{get\+Current\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_java_class}{Java\+Class} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a8f40f5977e66ba461bcea77cc2d46118}{find\+Java\+Class\+On\+Method\+Area} (const char $\ast$qualified\+Name, \hyperlink{struct_method_area}{Method\+Area} $\ast$method\+Area)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_java_class}{Java\+Class} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a308d9ae02865bfa9ed772933f257ec45}{get\+Class} (const char $\ast$qualified\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a33cf310a3ff9d41e4b8548c07bae3e49}{add\+Java\+Class\+To\+Method\+Area} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, \hyperlink{struct_method_area}{Method\+Area} $\ast$method\+Area)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a9ff99215a058b41859eeb447178e25b5}{get\+Method\+Info\+From\+Class} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_code_attribute}{Code\+Attribute} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a94f3d15af8411e3999181e5b14cc3064}{get\+Code\+Attribute\+From\+Method} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_aeaafe607caff7308a1107566306f01e9}{get\+Byte\+Code\+From\+Method} (\hyperlink{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$method\+Info, \hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool, int pc)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_adaeace8aa63bdedc7c65091a36855107}{get\+Class\+Attribute\+Reference} (const char $\ast$class\+Name, const char $\ast$attribute\+Namem, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a45907a652b5a7feb6d8763eab7fc6456}{get\+Object\+Attribute\+Reference} (\hyperlink{struct_object}{Object} $\ast$object, const char $\ast$attribute\+Name)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_object}{Object} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a1fc19115ce87779c2a341dd56b5a8db1}{new\+Object\+From\+Class} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a8b181262ccc3a1cabead6b1c89334210}{push\+In\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_ab99e0d31394f4494f264635c756a33d2}{pop\+From\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\end{DoxyCompactItemize}
 
 
 \subsection{Descrição Detalhada}
 Interface da Unidade de Memoria da J\+V\+M. 
 
 Interface responsavel por disponibilizar os servicos relacionados a unidade de memoria da J\+V\+M. 
+
+\subsection{Definições e macros}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!E\+X\+T10@{E\+X\+T10}}
+\index{E\+X\+T10@{E\+X\+T10}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{E\+X\+T10}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T10~extern}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}
+
+
+\subsection{Funções}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a33cf310a3ff9d41e4b8548c07bae3e49}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!add\+Java\+Class\+To\+Method\+Area@{add\+Java\+Class\+To\+Method\+Area}}
+\index{add\+Java\+Class\+To\+Method\+Area@{add\+Java\+Class\+To\+Method\+Area}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{add\+Java\+Class\+To\+Method\+Area(\+Java\+Class $\ast$java\+Class, Method\+Area $\ast$method\+Area)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void add\+Java\+Class\+To\+Method\+Area (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{{\bf Method\+Area} $\ast$}]{method\+Area}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a33cf310a3ff9d41e4b8548c07bae3e49}
+Metodo que recebe uma referencia para uma classe e a adiciona na area de metodos recebida como parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Estrutura a ser inserida na area de metodos \\
+\hline
+{\em method\+Area} & Area de metodos a receber a estrutura java\+Class \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a33cf310a3ff9d41e4b8548c07bae3e49_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a8f40f5977e66ba461bcea77cc2d46118}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!find\+Java\+Class\+On\+Method\+Area@{find\+Java\+Class\+On\+Method\+Area}}
+\index{find\+Java\+Class\+On\+Method\+Area@{find\+Java\+Class\+On\+Method\+Area}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{find\+Java\+Class\+On\+Method\+Area(const char $\ast$qualified\+Name, Method\+Area $\ast$method\+Area)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Java\+Class}$\ast$ find\+Java\+Class\+On\+Method\+Area (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name, }
+\item[{{\bf Method\+Area} $\ast$}]{method\+Area}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a8f40f5977e66ba461bcea77cc2d46118}
+Metodo que recebe o nome de uma classe como parametro e retorna uma referencia para esta estrutura na area de metodos. Caso a classe nao seja encontrada, retorna nulo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe a ser procurada \\
+\hline
+{\em method\+Area} & Area de metodos a ser utulizada na busca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco da estrutura \hyperlink{struct_java_class}{Java\+Class} (ou nulo se nao existe) 
+\end{DoxyReturn}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_aeaafe607caff7308a1107566306f01e9}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}}
+\index{get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Byte\+Code\+From\+Method(method\+\_\+info $\ast$method\+Info, cp\+\_\+info $\ast$constant\+\_\+pool, int pc)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf u1} get\+Byte\+Code\+From\+Method (
+\begin{DoxyParamCaption}
+\item[{{\bf method\+\_\+info} $\ast$}]{method\+Info, }
+\item[{{\bf cp\+\_\+info} $\ast$}]{constant\+\_\+pool, }
+\item[{int}]{pc}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_aeaafe607caff7308a1107566306f01e9}
+Metodo que retorna o byte do atributo C\+O\+D\+E apontado por P\+C da estrutura Method\+Info passada como parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em method\+Info} & Endereco da estrutura Method\+Info contendo o atributo C\+O\+D\+E a ser utilizado \\
+\hline
+{\em constant\+\_\+pool} & Referencia para o pool de constantes da classe do metodo \\
+\hline
+{\em pc} & Endereco da intrucao (indice do byte no vetor de bytes P\+C) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Opcode que esta na posicao apontada por P\+C 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_aeaafe607caff7308a1107566306f01e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a308d9ae02865bfa9ed772933f257ec45}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Class(const char $\ast$qualified\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Java\+Class}$\ast$ get\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a308d9ae02865bfa9ed772933f257ec45}
+Metodo que recebe o nome de uma classe como parametro e retorna uma referencia para esta estrutura. Caso esta estrutura nao esteja na area de metodos, ela eh carregada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe a ser procurada \\
+\hline
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco da estrutura \hyperlink{struct_java_class}{Java\+Class} (ou nulo se nao existe) 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a308d9ae02865bfa9ed772933f257ec45_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_adaeace8aa63bdedc7c65091a36855107}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Class\+Attribute\+Reference@{get\+Class\+Attribute\+Reference}}
+\index{get\+Class\+Attribute\+Reference@{get\+Class\+Attribute\+Reference}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Class\+Attribute\+Reference(const char $\ast$class\+Name, const char $\ast$attribute\+Namem, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void$\ast$ get\+Class\+Attribute\+Reference (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{attribute\+Namem, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_adaeace8aa63bdedc7c65091a36855107}
+Metodo que obtem o endereco de memoria do atributo de classe (static field) cujo nome eh passado por parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome qualificado da classe que possui o atributo \\
+\hline
+{\em attribute\+Name} & Nome do atributo de classe \\
+\hline
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco de memoria contendo o valor do atributo 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_adaeace8aa63bdedc7c65091a36855107_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a94f3d15af8411e3999181e5b14cc3064}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Code\+Attribute\+From\+Method@{get\+Code\+Attribute\+From\+Method}}
+\index{get\+Code\+Attribute\+From\+Method@{get\+Code\+Attribute\+From\+Method}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Code\+Attribute\+From\+Method(\+Java\+Class $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Code\+Attribute}$\ast$ get\+Code\+Attribute\+From\+Method (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a94f3d15af8411e3999181e5b14cc3064}
+Metodo que, dado um o nome e descritor de um metodo e a referencia para a sua classe, busca e retorna uma referencia para o atributo code, o qual estara preenchido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Estrutura java\+Class da classe que contem o metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_code_attribute}{Code\+Attribute} referente ao metodo buscado 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a94f3d15af8411e3999181e5b14cc3064_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_ac449ecf025c06eb93d3fd8c5cb5cb592}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Current\+Frame@{get\+Current\+Frame}}
+\index{get\+Current\+Frame@{get\+Current\+Frame}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Current\+Frame(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Frame}$\ast$ get\+Current\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_ac449ecf025c06eb93d3fd8c5cb5cb592}
+Metodo responsavel por retornar uma referencia para o frame que está no topo da pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} contendo a pilha J\+V\+M com os frames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco do frame que esta no topo da pilha 
+\end{DoxyReturn}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a9ff99215a058b41859eeb447178e25b5}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Method\+Info\+From\+Class@{get\+Method\+Info\+From\+Class}}
+\index{get\+Method\+Info\+From\+Class@{get\+Method\+Info\+From\+Class}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Method\+Info\+From\+Class(\+Java\+Class $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf method\+\_\+info}$\ast$ get\+Method\+Info\+From\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a9ff99215a058b41859eeb447178e25b5}
+Metodo que, dado um ponteiro para uma estrutura java\+Class, busca e retorna uma referencia para a estrutura method\+\_\+info referente ao metodo buscado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Estrutura java\+Class da classe que contem o metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura method\+\_\+info referente ao metodo buscado 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a9ff99215a058b41859eeb447178e25b5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a45907a652b5a7feb6d8763eab7fc6456}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Object\+Attribute\+Reference@{get\+Object\+Attribute\+Reference}}
+\index{get\+Object\+Attribute\+Reference@{get\+Object\+Attribute\+Reference}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{get\+Object\+Attribute\+Reference(\+Object $\ast$object, const char $\ast$attribute\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void$\ast$ get\+Object\+Attribute\+Reference (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{const char $\ast$}]{attribute\+Name}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a45907a652b5a7feb6d8763eab7fc6456}
+Metodo que obtem o endereco de memoria do atributo de objeto (instancia de classe) cujo nome eh passado por parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em object} & Endereco do objeto que contem o atributo \\
+\hline
+{\em attribute\+Name} & Nome do atributo do bjeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco contendo o valor do atributo 
+\end{DoxyReturn}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a2005a0f5f48b7bf3cdd454be1fdd7bfd}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!new\+Method\+Area@{new\+Method\+Area}}
+\index{new\+Method\+Area@{new\+Method\+Area}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{new\+Method\+Area()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Method\+Area}$\ast$ new\+Method\+Area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a2005a0f5f48b7bf3cdd454be1fdd7bfd}
+Metodo responsavel por criar, inicializar e retornar uma uma referencia para uma estrutura \hyperlink{struct_method_area}{Method\+Area}
+
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_method_area}{Method\+Area} inicializada 
+\end{DoxyReturn}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a1fc19115ce87779c2a341dd56b5a8db1}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!new\+Object\+From\+Class@{new\+Object\+From\+Class}}
+\index{new\+Object\+From\+Class@{new\+Object\+From\+Class}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{new\+Object\+From\+Class(const char $\ast$class\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Object}$\ast$ new\+Object\+From\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a1fc19115ce87779c2a341dd56b5a8db1}
+Método que cria e inicializa e retorna uma nova instancia da classe passada como parametro. A estrutura \hyperlink{struct_java_class}{Java\+Class} que define o objeto recebe um ponteiro para o mesmo na sua lista de objetos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome qualificado da classe que possui o atributo \\
+\hline
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco do objeto 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a1fc19115ce87779c2a341dd56b5a8db1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_aab75258123f0973cefa41b0154c5d807}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!new\+Thread@{new\+Thread}}
+\index{new\+Thread@{new\+Thread}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{new\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Thread}$\ast$ new\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_aab75258123f0973cefa41b0154c5d807}
+Metodo responsavel por criar, inicializar e retornar uma uma referencia para uma estrutura \hyperlink{struct_thread}{Thread}
+
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_thread}{Thread} inicializada 
+\end{DoxyReturn}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a86f3a6212280b2d43d662ca5757ef714}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!pop\+Frame@{pop\+Frame}}
+\index{pop\+Frame@{pop\+Frame}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{pop\+Frame(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void pop\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a86f3a6212280b2d43d662ca5757ef714}
+Metodo responsavel por desempilhar o frame que está no topo da pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} contendo a pilha J\+V\+M a ser utilizada no desempilhamento do frame \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a86f3a6212280b2d43d662ca5757ef714_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_ab99e0d31394f4494f264635c756a33d2}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!pop\+From\+Operand\+Stack@{pop\+From\+Operand\+Stack}}
+\index{pop\+From\+Operand\+Stack@{pop\+From\+Operand\+Stack}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{pop\+From\+Operand\+Stack(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf u4} pop\+From\+Operand\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_ab99e0d31394f4494f264635c756a33d2}
+Metodo que desempilha e retorna um valor na pilha de operandos do frame atual da thread passada como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor que foi desempilhado 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_ab99e0d31394f4494f264635c756a33d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!push\+Frame@{push\+Frame}}
+\index{push\+Frame@{push\+Frame}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void push\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment, }
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218}
+Metodo responsavel por criar e inicializar um novo frame para um metodo e o empilhar na pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+{\em class\+Name} & Nome qualificado da classe que contem o metodo a ser empilhado \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a8b181262ccc3a1cabead6b1c89334210}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!push\+In\+Operand\+Stack@{push\+In\+Operand\+Stack}}
+\index{push\+In\+Operand\+Stack@{push\+In\+Operand\+Stack}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{push\+In\+Operand\+Stack(\+Thread $\ast$thread, u4 value)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void push\+In\+Operand\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread, }
+\item[{{\bf u4}}]{value}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a8b181262ccc3a1cabead6b1c89334210}
+Metodo que empilha um valor na pilha de operandos do frame atual da thread passada como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} que contem a pilha J\+V\+M com o frame atual \\
+\hline
+{\em value} & Valor a ser empilhado \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a8b181262ccc3a1cabead6b1c89334210_cgraph}
+\end{center}
+\end{figure}
+
+

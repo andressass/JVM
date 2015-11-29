@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['lenght',['lenght',['../structconst_pool.html#addff2c24e88a3e8686a219fe6a9bbcd3',1,'constPool']]],
-  ['long',['Long',['../structconst_pool.html#a2ff4c34ed23a88cc0e355b0111ce8957',1,'constPool']]],
-  ['low_5fbytes',['low_bytes',['../structconst_pool.html#a55d572db573fd39218d7e3233a7590fa',1,'constPool']]]
+  ['info',['info',['../structattribute.html#ac749b125ccc9eda0cfe9deb4fe4aeda9',1,'attribute']]],
+  ['integer',['Integer',['../structconst_pool.html#ae32ce70f2995b3b811d6ae719d62c6ef',1,'constPool']]],
+  ['interfacemethodref',['InterfaceMethodref',['../structconst_pool.html#aba9741376f8030471992d6b68fb4142b',1,'constPool']]],
+  ['interfaces',['interfaces',['../structarq_class.html#ae20e5a978fd46334f0253968c13bf8ac',1,'arqClass']]],
+  ['interfaces_5fcount',['interfaces_count',['../structarq_class.html#a1e2038132261e59417016cd623005f56',1,'arqClass']]]
 ];

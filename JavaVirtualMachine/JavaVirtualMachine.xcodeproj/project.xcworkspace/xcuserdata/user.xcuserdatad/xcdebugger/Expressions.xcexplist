@@ -3,7 +3,57 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "classPreparing:M_CLASSLOADER.c">
+         contextName = "classInitializeFields:M_CLASSLOADER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "fields-&gt;fieldsTable[fields-&gt;fieldsCount]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "pushFrame:M_OPTHREAD.c">
+      </ContextState>
+      <ContextState
+         contextName = "getClass:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "main:M_BOOTLOADER.c">
+      </ContextState>
+      <ContextState
+         contextName = "classInitializer:M_CLASSLOADER.c">
+      </ContextState>
+      <ContextState
+         contextName = "getMethodInfoFromClass:M_OPMETHODAREA.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "javaClass-&gt;arqClass-&gt;methods[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "decode:M_DECODER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "getOpcodeName(bytecode)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "getCodeAttributeFromMethod:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "execute:M_INTERPRETER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "getOpcodeName(opcode)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "getByteCodeFromMethod:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "addJavaClassToMethodArea:M_OPMETHODAREA.c">
       </ContextState>
       <ContextState
          contextName = "getUTF8FromConstantPool:M_ECLASS.c">
@@ -14,7 +64,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "loadCLass:M_CLASSLOADER.c">
+         contextName = "classPreparing:M_CLASSLOADER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "javaClass-&gt;staticFields-&gt;fieldsTable[2]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

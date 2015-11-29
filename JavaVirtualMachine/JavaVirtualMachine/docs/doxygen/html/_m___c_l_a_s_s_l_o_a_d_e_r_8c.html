@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„MaquinaVirtualJava“: Referência do Arquivo src/ClassLoader/M_CLASSLOADER.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„MaquinaVirtualJava“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aa427983f6aa32812208aea9bbd13b7a.html">ClassLoader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo M_CLASSLOADER.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo do Carregador de Classes da JVM.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h_source.html">../../include/ClassLoader/I_CLASSLOADER.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___l_e_c_l_a_s_s_8h_source.html">../../include/ClassLoader/I_LECLASS.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___m_e_m_o_r_y_u_n_i_t_8h_source.html">../../include/MemoryUnit/I_MEMORYUNIT.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para M_CLASSLOADER.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c__incl.png" border="0" usemap="#src_2_class_loader_2_m___c_l_a_s_s_l_o_a_d_e_r_8c" alt=""/></div>
+<map name="src_2_class_loader_2_m___c_l_a_s_s_l_o_a_d_e_r_8c" id="src_2_class_loader_2_m___c_l_a_s_s_l_o_a_d_e_r_8c">
+<area shape="rect" id="node4" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html" title="Interface do Carregador de Classes da JVM. " alt="" coords="260,165,424,204"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="69,79,234,117"/>
+<area shape="rect" id="node9" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="448,165,610,204"/>
+<area shape="rect" id="node5" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="267,252,418,277"/>
+<area shape="rect" id="node8" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="73,172,185,197"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a5bc92417e51fa7e7d6160821589b837b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a5bc92417e51fa7e7d6160821589b837b">M_CLASSLOADER_SERV</a></td></tr>
+<tr class="separator:a5bc92417e51fa7e7d6160821589b837b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a1fbbe9c6a1bc42ea240b70f843713b86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a1fbbe9c6a1bc42ea240b70f843713b86">classVerifier</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *<a class="el" href="structarq_class.html">arqClass</a>)</td></tr>
+<tr class="separator:a1fbbe9c6a1bc42ea240b70f843713b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02df0931e81324fde210a906cf53ab5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a">classGetFieldDescriptorSize</a> (char *descriptor)</td></tr>
+<tr class="separator:a02df0931e81324fde210a906cf53ab5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8bd096a95b6238d4bf58b2e4186bb8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8">classInitializeField</a> (char *descriptor)</td></tr>
+<tr class="separator:a6d8bd096a95b6238d4bf58b2e4186bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4670681d0e206abf2f14f8bbff154146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fields.html">Fields</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a4670681d0e206abf2f14f8bbff154146">classInitializeFields</a> (<a class="el" href="struct_java_class.html">JavaClass</a> *javaClass, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> flagsAccept, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> flagsRegect)</td></tr>
+<tr class="separator:a4670681d0e206abf2f14f8bbff154146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3fbc96107e3861eb2479a7c4cca1cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a2e3fbc96107e3861eb2479a7c4cca1cd">classPreparing</a> (<a class="el" href="struct_java_class.html">JavaClass</a> *javaClass)</td></tr>
+<tr class="separator:a2e3fbc96107e3861eb2479a7c4cca1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ba1d40db00845909151457447b6c15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a79ba1d40db00845909151457447b6c15">classSuperClassChecker</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *<a class="el" href="structarq_class.html">arqClass</a>, <a class="el" href="struct_environment.html">Environment</a> *enviroment)</td></tr>
+<tr class="separator:a79ba1d40db00845909151457447b6c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6914bed1d4abbf1d30db1bab9ef0633"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#af6914bed1d4abbf1d30db1bab9ef0633">classInitializer</a> (<a class="el" href="struct_java_class.html">JavaClass</a> *javaClass, <a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:af6914bed1d4abbf1d30db1bab9ef0633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6c57aa492bd9a7e57694a9a98fcd0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_java_class.html">JavaClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a3d6c57aa492bd9a7e57694a9a98fcd0b">loadCLass</a> (const char *qualifiedName, <a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a3d6c57aa492bd9a7e57694a9a98fcd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo do Carregador de Classes da JVM. </p>
+<p>Modulo responsavel por implementar os servicos relacionados ao carregamento de classes da JVM. </p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="a5bc92417e51fa7e7d6160821589b837b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_CLASSLOADER_SERV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a02df0931e81324fde210a906cf53ab5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classGetFieldDescriptorSize </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>descriptor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método que retorna o numero de bytes ocupados pelo descritor de campo</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td>Referencia para descritor de campo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Numero de bytes ocupados pelo descritor </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d8bd096a95b6238d4bf58b2e4186bb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* classInitializeField </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>descriptor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que aloca o espaco de memoria necessarios para um determinado campo baseado no descritor</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td>Descritor do campo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referencia para o ponteiro de memoria a receber o endereco do espaco alocado </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a6d8bd096a95b6238d4bf58b2e4186bb8_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_a6d8bd096a95b6238d4bf58b2e4186bb8_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a6d8bd096a95b6238d4bf58b2e4186bb8_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a6d8bd096a95b6238d4bf58b2e4186bb8_cgraph">
+<area shape="rect" id="node2" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="182,5,371,31"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4670681d0e206abf2f14f8bbff154146"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fields.html">Fields</a>* classInitializeFields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_java_class.html">JavaClass</a> *&#160;</td>
+          <td class="paramname"><em>javaClass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramname"><em>flagsAccept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramname"><em>flagsRegect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método que aloca todos os espaços de memoria necessarios para os campos de uma classe ou objeto e inicializa os inicializa com os valores default.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">javaClass</td><td>Referencia para a estrutura de classe com os parametros </td></tr>
+    <tr><td class="paramname">flagsAccept</td><td>Flags para o tipos de campos aceitos (Ex.: STATIC, FINAL) </td></tr>
+    <tr><td class="paramname">flagsRegect</td><td>Flags para o tipos de campos rejeitados (Ex.: STATIC, FINAL) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Estrutura de campos preenchida </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a4670681d0e206abf2f14f8bbff154146_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_a4670681d0e206abf2f14f8bbff154146_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a4670681d0e206abf2f14f8bbff154146_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a4670681d0e206abf2f14f8bbff154146_cgraph">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="189,5,373,31"/>
+<area shape="rect" id="node4" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8" title="classInitializeField" alt="" coords="217,55,345,80"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="421,5,621,31"/>
+<area shape="rect" id="node5" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="427,55,616,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af6914bed1d4abbf1d30db1bab9ef0633"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classInitializer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_java_class.html">JavaClass</a> *&#160;</td>
+          <td class="paramname"><em>javaClass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método que executa o processo de inicializacao de uma classe ou interface.</p>
+<p>Passos:</p>
+<ol type="1">
+<li>Verifica e, se necessario, carrega recursivamente todas as suas superclasse ou interfaces</li>
+<li>Executa o inicializador de campos estáticos (exceto os final static, que são definidos em tempo de compilacao)</li>
+</ol>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">javaClass</td><td>Referencia para a estrutura de classe a ser inicializada </td></tr>
+    <tr><td class="paramname">environment</td><td>ambiente atual de execucao </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Estrutura <a class="el" href="structarq_class.html" title="um metodo. ">arqClass</a> preenchida com os dados da classe carregada </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_af6914bed1d4abbf1d30db1bab9ef0633_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_af6914bed1d4abbf1d30db1bab9ef0633_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_af6914bed1d4abbf1d30db1bab9ef0633_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_af6914bed1d4abbf1d30db1bab9ef0633_cgraph">
+<area shape="rect" id="node2" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a79ba1d40db00845909151457447b6c15" title="classSuperClassChecker" alt="" coords="295,190,465,215"/>
+<area shape="rect" id="node3" href="_i___l_e_c_l_a_s_s_8h.html#a17f9ea96ae7e5b0bb5b9b7c94b7fb772" title="getClassNameFromConstantPool" alt="" coords="1009,288,1229,314"/>
+<area shape="rect" id="node26" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a04a30701c27ff022038a133c41cd0218" title="pushFrame" alt="" coords="158,415,246,440"/>
+<area shape="rect" id="node6" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8f40f5977e66ba461bcea77cc2d46118" title="findJavaClassOnMethodArea" alt="" coords="513,188,708,214"/>
+<area shape="rect" id="node7" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a3d6c57aa492bd9a7e57694a9a98fcd0b" title="loadCLass" alt="" coords="569,139,653,164"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1277,340,1461,366"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1509,391,1709,416"/>
+<area shape="rect" id="node8" href="_i___l_e_c_l_a_s_s_8h.html#a64b647cee3a8c0aa7ffe8e4e13e7a5fa" title="LECLASS_leitor" alt="" coords="800,90,917,115"/>
+<area shape="rect" id="node18" href="_i___l_e_c_l_a_s_s_8h.html#ad0fbcbf764dc2559e0a05b722e2f6be6" title="LECLASS_exibeErroOperacao" alt="" coords="756,40,961,66"/>
+<area shape="rect" id="node19" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a1fbbe9c6a1bc42ea240b70f843713b86" title="classVerifier" alt="" coords="812,188,905,214"/>
+<area shape="rect" id="node20" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a2e3fbc96107e3861eb2479a7c4cca1cd" title="classPreparing" alt="" coords="804,139,913,164"/>
+<area shape="rect" id="node25" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a33cf310a3ff9d41e4b8548c07bae3e49" title="addJavaClassToMethodArea" alt="" coords="763,238,954,263"/>
+<area shape="rect" id="node9" href="_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1" title="obter_entrada" alt="" coords="1066,40,1171,66"/>
+<area shape="rect" id="node10" href="_m___l_c_l_a_s_s_8c.html#a64c7ac52ed49d80ece4f2dd7f5f91c88" title="arquivoParaArqClass" alt="" coords="1045,90,1192,115"/>
+<area shape="rect" id="node11" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="1757,39,1808,64"/>
+<area shape="rect" id="node13" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="1757,139,1808,164"/>
+<area shape="rect" id="node14" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="1569,39,1648,64"/>
+<area shape="rect" id="node16" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="1320,139,1417,164"/>
+<area shape="rect" id="node17" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="1570,88,1648,114"/>
+<area shape="rect" id="node12" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="1856,39,1907,64"/>
+<area shape="rect" id="node15" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="1757,88,1808,114"/>
+<area shape="rect" id="node21" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a4670681d0e206abf2f14f8bbff154146" title="classInitializeFields" alt="" coords="1051,239,1186,264"/>
+<area shape="rect" id="node22" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="1277,440,1461,466"/>
+<area shape="rect" id="node23" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8" title="classInitializeField" alt="" coords="1304,240,1433,266"/>
+<area shape="rect" id="node24" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="1514,240,1703,266"/>
+<area shape="rect" id="node27" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a308d9ae02865bfa9ed772933f257ec45" title="getClass" alt="" coords="343,390,417,415"/>
+<area shape="rect" id="node30" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a9ff99215a058b41859eeb447178e25b5" title="getMethodInfoFromClass" alt="" coords="294,440,465,466"/>
+<area shape="rect" id="node31" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a94f3d15af8411e3999181e5b14cc3064" title="getCodeAttributeFromMethod" alt="" coords="760,491,957,516"/>
+<area shape="rect" id="node28" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0588cafaa47270920828bd00e79e0e77" title="findJavaClassOnMethodArea" alt="" coords="513,390,708,415"/>
+<area shape="rect" id="node29" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0" title="loadCLass" alt="" coords="569,238,653,263"/>
+<area shape="rect" id="node32" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0fa838418579004472c52b8aa16ff9d7" title="getMethodInfoFromClass" alt="" coords="1033,491,1204,516"/>
+<area shape="rect" id="node33" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="1034,540,1203,566"/>
+<area shape="rect" id="node34" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="1325,540,1412,566"/>
+<area shape="rect" id="node35" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="1533,540,1685,566"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e3fbc96107e3861eb2479a7c4cca1cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classPreparing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_java_class.html">JavaClass</a> *&#160;</td>
+          <td class="paramname"><em>javaClass</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método que aloca todos os espaços de memoria necessarios para a classe e inicializa os campos estaticos com os valores default</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">javaClass</td><td>Referencia para a estrutura de classe a ser inicializada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Resultado de sucesso ou erros </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a2e3fbc96107e3861eb2479a7c4cca1cd_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_a2e3fbc96107e3861eb2479a7c4cca1cd_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a2e3fbc96107e3861eb2479a7c4cca1cd_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a2e3fbc96107e3861eb2479a7c4cca1cd_cgraph">
+<area shape="rect" id="node2" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a4670681d0e206abf2f14f8bbff154146" title="classInitializeFields" alt="" coords="163,31,298,56"/>
+<area shape="rect" id="node3" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="346,5,531,31"/>
+<area shape="rect" id="node5" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8" title="classInitializeField" alt="" coords="374,55,503,80"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="579,5,779,31"/>
+<area shape="rect" id="node6" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="584,55,773,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a79ba1d40db00845909151457447b6c15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void classSuperClassChecker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramname"><em>arqClass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>enviroment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que, dada uma estrutura de arquivo .class, verifica se todas as suas superclasses ou superinterfaces foram carregadas. Caso não, carrega as mesmas de forma recursiva.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structarq_class.html" title="um metodo. ">arqClass</a></td><td>Nome qualificado da classe ou interface a ser carregada </td></tr>
+    <tr><td class="paramname">environment</td><td>ambiente atual de execucao </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Estrutura <a class="el" href="structarq_class.html" title="um metodo. ">arqClass</a> preenchida com os dados da classe carregada </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a79ba1d40db00845909151457447b6c15_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_a79ba1d40db00845909151457447b6c15_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a79ba1d40db00845909151457447b6c15_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a79ba1d40db00845909151457447b6c15_cgraph">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html#a17f9ea96ae7e5b0bb5b9b7c94b7fb772" title="getClassNameFromConstantPool" alt="" coords="1470,207,1690,232"/>
+<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8f40f5977e66ba461bcea77cc2d46118" title="findJavaClassOnMethodArea" alt="" coords="224,433,418,459"/>
+<area shape="rect" id="node6" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a3d6c57aa492bd9a7e57694a9a98fcd0b" title="loadCLass" alt="" coords="279,384,363,409"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1738,180,1922,205"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1970,143,2170,168"/>
+<area shape="rect" id="node7" href="_i___l_e_c_l_a_s_s_8h.html#a64b647cee3a8c0aa7ffe8e4e13e7a5fa" title="LECLASS_leitor" alt="" coords="1261,472,1378,497"/>
+<area shape="rect" id="node17" href="_i___l_e_c_l_a_s_s_8h.html#ad0fbcbf764dc2559e0a05b722e2f6be6" title="LECLASS_exibeErroOperacao" alt="" coords="1217,548,1422,573"/>
+<area shape="rect" id="node18" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a1fbbe9c6a1bc42ea240b70f843713b86" title="classVerifier" alt="" coords="1273,359,1366,384"/>
+<area shape="rect" id="node19" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a2e3fbc96107e3861eb2479a7c4cca1cd" title="classPreparing" alt="" coords="1265,409,1374,435"/>
+<area shape="rect" id="node24" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a33cf310a3ff9d41e4b8548c07bae3e49" title="addJavaClassToMethodArea" alt="" coords="1224,308,1415,333"/>
+<area shape="rect" id="node25" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#af6914bed1d4abbf1d30db1bab9ef0633" title="classInitializer" alt="" coords="466,257,571,283"/>
+<area shape="rect" id="node8" href="_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1" title="obter_entrada" alt="" coords="1527,496,1632,521"/>
+<area shape="rect" id="node9" href="_m___l_c_l_a_s_s_8c.html#a64c7ac52ed49d80ece4f2dd7f5f91c88" title="arquivoParaArqClass" alt="" coords="1506,447,1653,472"/>
+<area shape="rect" id="node10" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="2218,397,2269,423"/>
+<area shape="rect" id="node12" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="2218,497,2269,523"/>
+<area shape="rect" id="node13" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="2030,397,2109,423"/>
+<area shape="rect" id="node15" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="1781,497,1878,523"/>
+<area shape="rect" id="node16" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="2031,447,2109,472"/>
+<area shape="rect" id="node11" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="2317,397,2368,423"/>
+<area shape="rect" id="node14" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="2218,447,2269,472"/>
+<area shape="rect" id="node20" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a4670681d0e206abf2f14f8bbff154146" title="classInitializeFields" alt="" coords="1512,276,1647,301"/>
+<area shape="rect" id="node21" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="1738,105,1922,131"/>
+<area shape="rect" id="node22" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8" title="classInitializeField" alt="" coords="1765,276,1894,301"/>
+<area shape="rect" id="node23" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="1976,276,2164,301"/>
+<area shape="rect" id="node26" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a04a30701c27ff022038a133c41cd0218" title="pushFrame" alt="" coords="619,156,707,181"/>
+<area shape="rect" id="node27" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a308d9ae02865bfa9ed772933f257ec45" title="getClass" alt="" coords="804,257,878,283"/>
+<area shape="rect" id="node30" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a9ff99215a058b41859eeb447178e25b5" title="getMethodInfoFromClass" alt="" coords="755,156,926,181"/>
+<area shape="rect" id="node31" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a94f3d15af8411e3999181e5b14cc3064" title="getCodeAttributeFromMethod" alt="" coords="1221,55,1418,80"/>
+<area shape="rect" id="node28" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0588cafaa47270920828bd00e79e0e77" title="findJavaClassOnMethodArea" alt="" coords="974,257,1169,283"/>
+<area shape="rect" id="node29" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0" title="loadCLass" alt="" coords="1030,409,1114,435"/>
+<area shape="rect" id="node32" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0fa838418579004472c52b8aa16ff9d7" title="getMethodInfoFromClass" alt="" coords="1494,55,1665,80"/>
+<area shape="rect" id="node33" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="1495,5,1664,31"/>
+<area shape="rect" id="node34" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="1786,5,1873,31"/>
+<area shape="rect" id="node35" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="1994,5,2146,31"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fbbe9c6a1bc42ea240b70f843713b86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classVerifier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramname"><em>arqClass</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método que executa o processo de verificacao da corretude do codigo e compatibilidade da classe</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structarq_class.html" title="um metodo. ">arqClass</a></td><td>Referencia para uma estrutura de arquvo .class </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Resultado de sucesso ou erros </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86_cgraph">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html#a17f9ea96ae7e5b0bb5b9b7c94b7fb772" title="getClassNameFromConstantPool" alt="" coords="147,5,366,31"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="414,5,599,31"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="647,5,847,31"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d6c57aa492bd9a7e57694a9a98fcd0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_java_class.html">JavaClass</a>* loadCLass </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>qualifiedName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que, dado um nome qualificado de classe, retorna uma estrutura <a class="el" href="struct_java_class.html" title="Estrutura da JavaClass. ">JavaClass</a> preenchida</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiedName</td><td>Nome qualificado da classe a ser carregada </td></tr>
+    <tr><td class="paramname">environment</td><td>Ambiente de execucao atual </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Estrutura <a class="el" href="structarq_class.html" title="um metodo. ">arqClass</a> preenchida com os dados da classe carregada </dd></dl>
+<p>&lt; Resultado das operacoes (checagem de erros)</p>
+<p>LOADING - Fazemos a leitura do arquivo .class </p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a3d6c57aa492bd9a7e57694a9a98fcd0b_cgraph.png" border="0" usemap="#_m___c_l_a_s_s_l_o_a_d_e_r_8c_a3d6c57aa492bd9a7e57694a9a98fcd0b_cgraph" alt=""/></div>
+<map name="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a3d6c57aa492bd9a7e57694a9a98fcd0b_cgraph" id="_m___c_l_a_s_s_l_o_a_d_e_r_8c_a3d6c57aa492bd9a7e57694a9a98fcd0b_cgraph">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html#a64b647cee3a8c0aa7ffe8e4e13e7a5fa" title="LECLASS_leitor" alt="" coords="1037,85,1155,111"/>
+<area shape="rect" id="node12" href="_i___l_e_c_l_a_s_s_8h.html#ad0fbcbf764dc2559e0a05b722e2f6be6" title="LECLASS_exibeErroOperacao" alt="" coords="994,155,1198,180"/>
+<area shape="rect" id="node13" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a1fbbe9c6a1bc42ea240b70f843713b86" title="classVerifier" alt="" coords="1049,483,1143,508"/>
+<area shape="rect" id="node17" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a2e3fbc96107e3861eb2479a7c4cca1cd" title="classPreparing" alt="" coords="1041,231,1151,256"/>
+<area shape="rect" id="node22" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a33cf310a3ff9d41e4b8548c07bae3e49" title="addJavaClassToMethodArea" alt="" coords="1000,381,1192,407"/>
+<area shape="rect" id="node23" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#af6914bed1d4abbf1d30db1bab9ef0633" title="classInitializer" alt="" coords="138,381,242,407"/>
+<area shape="rect" id="node3" href="_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1" title="obter_entrada" alt="" coords="1304,121,1408,147"/>
+<area shape="rect" id="node4" href="_m___l_c_l_a_s_s_8c.html#a64c7ac52ed49d80ece4f2dd7f5f91c88" title="arquivoParaArqClass" alt="" coords="1282,72,1430,97"/>
+<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="1994,121,2045,147"/>
+<area shape="rect" id="node7" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="1994,23,2045,48"/>
+<area shape="rect" id="node8" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="1807,121,1886,147"/>
+<area shape="rect" id="node10" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="1558,21,1655,47"/>
+<area shape="rect" id="node11" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="1808,72,1885,97"/>
+<area shape="rect" id="node6" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="2093,121,2144,147"/>
+<area shape="rect" id="node9" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="1994,72,2045,97"/>
+<area shape="rect" id="node14" href="_i___l_e_c_l_a_s_s_8h.html#a17f9ea96ae7e5b0bb5b9b7c94b7fb772" title="getClassNameFromConstantPool" alt="" coords="1246,432,1466,457"/>
+<area shape="rect" id="node15" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1514,432,1698,457"/>
+<area shape="rect" id="node16" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1746,431,1946,456"/>
+<area shape="rect" id="node18" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a4670681d0e206abf2f14f8bbff154146" title="classInitializeFields" alt="" coords="1288,231,1424,256"/>
+<area shape="rect" id="node19" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="1514,332,1698,357"/>
+<area shape="rect" id="node20" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8" title="classInitializeField" alt="" coords="1542,231,1671,256"/>
+<area shape="rect" id="node21" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="1752,231,1941,256"/>
+<area shape="rect" id="node24" href="_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a79ba1d40db00845909151457447b6c15" title="classSuperClassChecker" alt="" coords="290,584,460,609"/>
+<area shape="rect" id="node26" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a04a30701c27ff022038a133c41cd0218" title="pushFrame" alt="" coords="331,356,420,381"/>
+<area shape="rect" id="node25" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8f40f5977e66ba461bcea77cc2d46118" title="findJavaClassOnMethodArea" alt="" coords="508,584,703,609"/>
+<area shape="rect" id="node27" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a308d9ae02865bfa9ed772933f257ec45" title="getClass" alt="" coords="569,280,642,305"/>
+<area shape="rect" id="node30" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a9ff99215a058b41859eeb447178e25b5" title="getMethodInfoFromClass" alt="" coords="763,331,934,356"/>
+<area shape="rect" id="node31" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a94f3d15af8411e3999181e5b14cc3064" title="getCodeAttributeFromMethod" alt="" coords="997,332,1194,357"/>
+<area shape="rect" id="node28" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0588cafaa47270920828bd00e79e0e77" title="findJavaClassOnMethodArea" alt="" coords="751,280,946,305"/>
+<area shape="rect" id="node29" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0" title="loadCLass" alt="" coords="806,231,891,256"/>
+<area shape="rect" id="node32" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0fa838418579004472c52b8aa16ff9d7" title="getMethodInfoFromClass" alt="" coords="1271,332,1442,357"/>
+<area shape="rect" id="node33" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="1271,381,1441,407"/>
+<area shape="rect" id="node34" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="1563,381,1650,407"/>
+<area shape="rect" id="node35" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="1771,381,1922,407"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

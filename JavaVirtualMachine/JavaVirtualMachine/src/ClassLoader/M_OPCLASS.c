@@ -67,7 +67,7 @@ void freeCampMetd(u2 count, field_or_method* f_or_m){
     for (fi = f_or_m; fi < f_or_m + count; fi++) {
         
         //Liberamos cada atributo
-        for (int i = 0; i < fi->attributes_count; i++) freeAtributo(fi->attributes[i]);
+        for (int i = 0; i < fi->attributes_count; i++) freeAtributo(&fi->attributes[i]);
         
         //Liberamos o vetor de atributos
         free(fi->attributes);
@@ -93,7 +93,7 @@ void LECLASS_free(ArqClass* arq_class){
     freeCampMetd(arq_class->methods_count, arq_class->methods);
     
     //Liberamos os atributos
-    for (int i = 0; i < arq_class->attributes_count; i++) freeAtributo(arq_class->attributes[i]);
+    for (int i = 0; i < arq_class->attributes_count; i++) freeAtributo(&arq_class->attributes[i]);
     free(arq_class->attributes);
     
     //Liberamos a estrutura ArqClass

@@ -1,0 +1,11 @@
+<map id="Handler" name="Handler">
+<area shape="rect" id="node10" href="$struct_object.html" title="Estrutura do Object. " alt="" coords="62,452,122,477"/>
+<area shape="rect" id="node2" href="$struct_java_class.html" title="Estrutura da JavaClass. " alt="" coords="206,625,288,651"/>
+<area shape="rect" id="node3" href="$struct_fields.html" title="Estrutura da FieldsTable. " alt="" coords="216,279,273,304"/>
+<area shape="rect" id="node4" href="$struct_fields_table.html" title="Estrutura da FieldsTable. " alt="" coords="200,192,289,217"/>
+<area shape="rect" id="node5" href="$structfield_and_method.html" title="Estrutura de Campos e Metodos. " alt="" coords="234,92,348,117"/>
+<area shape="rect" id="node7" href="$structarq_class.html" title="um metodo. " alt="" coords="359,192,433,217"/>
+<area shape="rect" id="node6" href="$structattribute.html" title="Estrutura de Atributos. " alt="" coords="315,5,384,31"/>
+<area shape="rect" id="node8" href="$structconst_pool.html" title="Estrutura do Pool de Constantes. " alt="" coords="479,92,559,117"/>
+<area shape="rect" id="node9" href="$struct_object_list.html" title="Estrutura da ObjectList. " alt="" coords="5,539,86,564"/>
+</map>

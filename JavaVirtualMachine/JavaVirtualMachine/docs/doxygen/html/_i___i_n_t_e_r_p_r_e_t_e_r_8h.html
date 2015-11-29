@@ -84,6 +84,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
   <div class="headertitle">
 <div class="title">Referência do Arquivo I_INTERPRETER.h</div>  </div>
 </div><!--header-->
@@ -91,12 +94,101 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <p>Interface do Interpretador da JVM.  
 <a href="#details">Mais...</a></p>
-
+<div class="textblock"><code>#include &quot;<a class="el" href="_e___j_v_m_8h_source.html">../Estruturas/E_JVM.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para I_INTERPRETER.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_t_e_r_p_r_e_t_e_r_8h__incl.png" border="0" usemap="#include_2_execution_engine_2_i___i_n_t_e_r_p_r_e_t_e_r_8h" alt=""/></div>
+<map name="include_2_execution_engine_2_i___i_n_t_e_r_p_r_e_t_e_r_8h" id="include_2_execution_engine_2_i___i_n_t_e_r_p_r_e_t_e_r_8h">
+<area shape="rect" id="node2" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="14,92,165,117"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_t_e_r_p_r_e_t_e_r_8h__dep__incl.png" border="0" usemap="#include_2_execution_engine_2_i___i_n_t_e_r_p_r_e_t_e_r_8hdep" alt=""/></div>
+<map name="include_2_execution_engine_2_i___i_n_t_e_r_p_r_e_t_e_r_8hdep" id="include_2_execution_engine_2_i___i_n_t_e_r_p_r_e_t_e_r_8hdep">
+<area shape="rect" id="node2" href="_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="5,92,152,131"/>
+<area shape="rect" id="node3" href="_m___i_n_t_e_r_p_r_e_t_e_r_8c.html" title="Modulo do Interpretador da JVM. " alt="" coords="175,92,323,131"/>
+</map>
+</div>
+</div>
 <p><a href="_i___i_n_t_e_r_p_r_e_t_e_r_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a174426e2ca3ed737ab94d753f4e8b183"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#a174426e2ca3ed737ab94d753f4e8b183">EXT8</a>&#160;&#160;&#160;extern</td></tr>
+<tr class="separator:a174426e2ca3ed737ab94d753f4e8b183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:afc3cfeac05065c81421961da3a442c87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#a174426e2ca3ed737ab94d753f4e8b183">EXT8</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#afc3cfeac05065c81421961da3a442c87">execute</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:afc3cfeac05065c81421961da3a442c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Interface do Interpretador da JVM. </p>
 <p>Interface responsavel por disponibilizar os servicos relacionados ao interpretador da JVM. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="a174426e2ca3ed737ab94d753f4e8b183"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXT8&#160;&#160;&#160;extern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="afc3cfeac05065c81421961da3a442c87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#a174426e2ca3ed737ab94d753f4e8b183">EXT8</a> void execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo responsavel por executar um ambiente de execucao.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enviroment</td><td>Estrutura contendo a thread e a area de metodos a ser executada </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Obtem o opcode</p>
+<p>Decodifica o opcode</p>
+<p>Executa o a instrucao referente ao opcode </p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph.png" border="0" usemap="#_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph" alt=""/></div>
+<map name="_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph" id="_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="121,55,295,80"/>
+<area shape="rect" id="node8" href="_i___d_e_c_o_d_e_r_8h.html#a4e8de24d699f59f33b9ab369abd7d7b9" title="decode" alt="" coords="176,104,241,129"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="343,55,513,80"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="561,5,745,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="610,55,696,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="793,5,993,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="817,55,969,80"/>
+<area shape="rect" id="node9" href="_m___d_e_c_o_d_e_r_8c.html#ab46b5978371cf93b99f98a1e8c576c5b" title="iadd_GAMBIARRA" alt="" coords="361,104,495,129"/>
+<area shape="rect" id="node10" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="573,104,733,129"/>
+<area shape="rect" id="node12" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="580,153,726,179"/>
+<area shape="rect" id="node11" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="832,128,955,153"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

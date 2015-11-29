@@ -1,0 +1,8 @@
+<map id="include/MemoryUnit/I_MEMORYUNIT.h" name="include/MemoryUnit/I_MEMORYUNIT.h">
+<area shape="rect" id="node2" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html" title="Modulo do Carregador de Classes da JVM. " alt="" coords="5,99,254,124"/>
+<area shape="rect" id="node3" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="278,92,424,131"/>
+<area shape="rect" id="node4" href="$_m___d_e_c_o_d_e_r_8c.html" title="src/ExecutionEngine\l/M_DECODER.c" alt="" coords="449,92,592,131"/>
+<area shape="rect" id="node5" href="$_m___i_n_t_e_r_p_r_e_t_e_r_8c.html" title="Modulo do Interpretador da JVM. " alt="" coords="616,92,764,131"/>
+<area shape="rect" id="node6" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="787,99,1048,124"/>
+<area shape="rect" id="node7" href="$_m___o_p_t_h_r_e_a_d_8c.html" title="Modulo de threads da JVM. " alt="" coords="1072,99,1294,124"/>
+</map>

@@ -93,11 +93,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef I_CLASSLOADER_h</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define I_CLASSLOADER_h</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_CLASSLOADER_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef M_CLASSLOADER_SERV</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define EXT9</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a9d0defacfe8b88a2433bb394d558667e">   16</a></span>&#160;<span class="preprocessor">#define EXT9 extern</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../Estruturas/E_JVM.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span><a class="code" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a9d0defacfe8b88a2433bb394d558667e">EXT9</a> <a class="code" href="struct_java_class.html">JavaClass</a>* <a class="code" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0">loadCLass</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* qualifiedName, <a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span><a class="code" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a9d0defacfe8b88a2433bb394d558667e">EXT9</a> <a class="code" href="struct_fields.html">Fields</a>* <a class="code" href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#ada2335556e8bc48f0192d79a9d7f90e9">classInitializeFields</a>(<a class="code" href="struct_java_class.html">JavaClass</a>* javaClass, <a class="code" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> flagsAccept, <a class="code" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> flagsRegect);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_CLASSLOADER_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="_i___c_l_a_s_s_l_o_a_d_e_r_8h_html_ada2335556e8bc48f0192d79a9d7f90e9"><div class="ttname"><a href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#ada2335556e8bc48f0192d79a9d7f90e9">classInitializeFields</a></div><div class="ttdeci">EXT9 Fields * classInitializeFields(JavaClass *javaClass, u2 flagsAccept, u2 flagsRegect)</div><div class="ttdef"><b>Definition:</b> M_CLASSLOADER.c:138</div></div>
+<div class="ttc" id="struct_environment_html"><div class="ttname"><a href="struct_environment.html">Environment</a></div><div class="ttdoc">Estrutura do ambiente de execucao da JVM. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:429</div></div>
+<div class="ttc" id="_e___j_v_m_8h_html_a5f223212eef04d10a4550ded680cb1cf"><div class="ttname"><a href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a></div><div class="ttdeci">unsigned short u2</div><div class="ttdoc">Representa 2 bytes. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:111</div></div>
+<div class="ttc" id="struct_fields_html"><div class="ttname"><a href="struct_fields.html">Fields</a></div><div class="ttdoc">Estrutura da FieldsTable. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:302</div></div>
+<div class="ttc" id="struct_java_class_html"><div class="ttname"><a href="struct_java_class.html">JavaClass</a></div><div class="ttdoc">Estrutura da JavaClass. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:347</div></div>
+<div class="ttc" id="_i___c_l_a_s_s_l_o_a_d_e_r_8h_html_a9d0defacfe8b88a2433bb394d558667e"><div class="ttname"><a href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a9d0defacfe8b88a2433bb394d558667e">EXT9</a></div><div class="ttdeci">#define EXT9</div><div class="ttdef"><b>Definition:</b> I_CLASSLOADER.h:16</div></div>
+<div class="ttc" id="_i___c_l_a_s_s_l_o_a_d_e_r_8h_html_a616cd9598af9f9dab3a3d721e8fda4f0"><div class="ttname"><a href="_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0">loadCLass</a></div><div class="ttdeci">EXT9 JavaClass * loadCLass(const char *qualifiedName, Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_CLASSLOADER.c:257</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

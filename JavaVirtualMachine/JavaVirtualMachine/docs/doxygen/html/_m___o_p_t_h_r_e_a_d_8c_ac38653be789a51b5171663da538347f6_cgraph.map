@@ -1,0 +1,37 @@
+<map id="pushFrame" name="pushFrame">
+<area shape="rect" id="node2" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html#a308d9ae02865bfa9ed772933f257ec45" title="getClass" alt="" coords="142,100,215,125"/>
+<area shape="rect" id="node31" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html#a9ff99215a058b41859eeb447178e25b5" title="getMethodInfoFromClass" alt="" coords="890,151,1061,176"/>
+<area shape="rect" id="node32" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html#a94f3d15af8411e3999181e5b14cc3064" title="getCodeAttributeFromMethod" alt="" coords="877,63,1074,88"/>
+<area shape="rect" id="node3" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0588cafaa47270920828bd00e79e0e77" title="findJavaClassOnMethodArea" alt="" coords="263,100,458,125"/>
+<area shape="rect" id="node4" href="$_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0" title="loadCLass" alt="" coords="319,353,403,379"/>
+<area shape="rect" id="node5" href="$_i___l_e_c_l_a_s_s_8h.html#a64b647cee3a8c0aa7ffe8e4e13e7a5fa" title="LECLASS_leitor" alt="" coords="1165,303,1283,328"/>
+<area shape="rect" id="node15" href="$_i___l_e_c_l_a_s_s_8h.html#ad0fbcbf764dc2559e0a05b722e2f6be6" title="LECLASS_exibeErroOperacao" alt="" coords="1122,404,1326,429"/>
+<area shape="rect" id="node16" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a1fbbe9c6a1bc42ea240b70f843713b86" title="classVerifier" alt="" coords="1177,453,1270,479"/>
+<area shape="rect" id="node20" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a2e3fbc96107e3861eb2479a7c4cca1cd" title="classPreparing" alt="" coords="1169,208,1279,233"/>
+<area shape="rect" id="node25" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html#a33cf310a3ff9d41e4b8548c07bae3e49" title="addJavaClassToMethodArea" alt="" coords="1128,503,1320,528"/>
+<area shape="rect" id="node26" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#af6914bed1d4abbf1d30db1bab9ef0633" title="classInitializer" alt="" coords="506,353,610,379"/>
+<area shape="rect" id="node6" href="$_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1" title="obter_entrada" alt="" coords="1432,303,1536,328"/>
+<area shape="rect" id="node7" href="$_m___l_c_l_a_s_s_8c.html#a64c7ac52ed49d80ece4f2dd7f5f91c88" title="arquivoParaArqClass" alt="" coords="1410,480,1558,505"/>
+<area shape="rect" id="node8" href="$_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="2122,529,2173,555"/>
+<area shape="rect" id="node10" href="$_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="2122,431,2173,456"/>
+<area shape="rect" id="node11" href="$_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="1935,529,2014,555"/>
+<area shape="rect" id="node13" href="$_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="1686,429,1783,455"/>
+<area shape="rect" id="node14" href="$_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="1935,480,2013,505"/>
+<area shape="rect" id="node9" href="$_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="2221,529,2272,555"/>
+<area shape="rect" id="node12" href="$_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="2122,480,2173,505"/>
+<area shape="rect" id="node17" href="$_i___l_e_c_l_a_s_s_8h.html#a17f9ea96ae7e5b0bb5b9b7c94b7fb772" title="getClassNameFromConstantPool" alt="" coords="1374,431,1594,456"/>
+<area shape="rect" id="node18" href="$_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1642,304,1826,329"/>
+<area shape="rect" id="node19" href="$_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1874,159,2074,184"/>
+<area shape="rect" id="node21" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a4670681d0e206abf2f14f8bbff154146" title="classInitializeFields" alt="" coords="1416,208,1552,233"/>
+<area shape="rect" id="node22" href="$_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="1642,157,1826,183"/>
+<area shape="rect" id="node23" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a6d8bd096a95b6238d4bf58b2e4186bb8" title="classInitializeField" alt="" coords="1670,208,1799,233"/>
+<area shape="rect" id="node24" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a02df0931e81324fde210a906cf53ab5a" title="classGetFieldDescriptorSize" alt="" coords="1880,208,2069,233"/>
+<area shape="rect" id="node27" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a79ba1d40db00845909151457447b6c15" title="classSuperClassChecker" alt="" coords="658,328,829,353"/>
+<area shape="rect" id="node30" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html#a04a30701c27ff022038a133c41cd0218" title="pushFrame" alt="" coords="699,88,788,113"/>
+<area shape="rect" id="node28" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8f40f5977e66ba461bcea77cc2d46118" title="findJavaClassOnMethodArea" alt="" coords="878,303,1073,328"/>
+<area shape="rect" id="node29" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a3d6c57aa492bd9a7e57694a9a98fcd0b" title="loadCLass" alt="" coords="933,404,1017,429"/>
+<area shape="rect" id="node33" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a0fa838418579004472c52b8aa16ff9d7" title="getMethodInfoFromClass" alt="" coords="1398,107,1570,132"/>
+<area shape="rect" id="node34" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="1139,56,1309,81"/>
+<area shape="rect" id="node35" href="$_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="1441,5,1527,31"/>
+<area shape="rect" id="node36" href="$_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="1658,5,1810,31"/>
+</map>

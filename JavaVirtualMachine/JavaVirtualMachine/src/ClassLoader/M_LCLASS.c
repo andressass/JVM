@@ -99,20 +99,19 @@ cp_info* leCtePool(u2 constant_pool_count, FILE* arq){
 
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que le o um atributo de um arquivo ".class", retornando um ponteiro para uma
- * estrutura inicializada de atributo.
+ * Metodo que le o um atributo de um arquivo ".class" e preenche a estrutura attribute_info
+ * passada como parametro
  *
+ * \param atributo Atributo a ser preenchido
  * \param arq Arquivo a ser lido.
  */
-attribute_info* leAtributo(FILE* arq){
-    attribute_info* atributo = (attribute_info *) malloc(sizeof(attribute_info));
+void leAtributo(attribute_info* atributo, FILE* arq){
     
     atributo->attribute_name_index = u2Le(arq);
     atributo->attribute_length = u4Le(arq);
     atributo->info = (u1 *) malloc(atributo->attribute_length * sizeof(u1));
     for (int i = 0; i < atributo->attribute_length; i++) atributo->info[i] = u1Le(arq);
     
-    return atributo;
 }
 
 
@@ -136,8 +135,8 @@ field_or_method* leCampMetd(u2 count, FILE* arq){
         fi->attributes_count = u2Le(arq);
 
         //Lemos os atributos
-        fi->attributes = (attribute_info **) malloc(fi->attributes_count * sizeof(attribute_info*));
-        for (int i = 0; i < fi->attributes_count; i++) fi->attributes[i] = leAtributo(arq);
+        fi->attributes = (attribute_info *) malloc(fi->attributes_count * sizeof(attribute_info));
+        for (int i = 0; i < fi->attributes_count; i++) leAtributo(&fi->attributes[i], arq);
         
     }
     
@@ -185,9 +184,9 @@ resultado arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
     
     //Lemos os atributos
     arq_class->attributes_count = u2Le(arq);
-    arq_class->attributes = (attribute_info **)
-                            malloc(arq_class->attributes_count * sizeof(attribute_info*));
-    for (int i = 0; i < arq_class->attributes_count; i++) arq_class->attributes[i] = leAtributo(arq);
+    arq_class->attributes = (attribute_info *)
+                            malloc(arq_class->attributes_count * sizeof(attribute_info));
+    for (int i = 0; i < arq_class->attributes_count; i++) leAtributo(&arq_class->attributes[i], arq);
     
     return LinkageSuccess;
 }

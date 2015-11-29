@@ -5,9 +5,72 @@
 Interface do Interpretador da J\+V\+M.  
 
 
+{\ttfamily \#include \char`\"{}../\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{_i___i_n_t_e_r_p_r_e_t_e_r_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_i___i_n_t_e_r_p_r_e_t_e_r_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i___i_n_t_e_r_p_r_e_t_e_r_8h_a174426e2ca3ed737ab94d753f4e8b183}{E\+X\+T8}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_i___i_n_t_e_r_p_r_e_t_e_r_8h_a174426e2ca3ed737ab94d753f4e8b183}{E\+X\+T8} void \hyperlink{_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87}{execute} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
 
 
 \subsection{Descrição Detalhada}
 Interface do Interpretador da J\+V\+M. 
 
 Interface responsavel por disponibilizar os servicos relacionados ao interpretador da J\+V\+M. 
+
+\subsection{Definições e macros}
+\hypertarget{_i___i_n_t_e_r_p_r_e_t_e_r_8h_a174426e2ca3ed737ab94d753f4e8b183}{}\index{I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h@{I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h}!E\+X\+T8@{E\+X\+T8}}
+\index{E\+X\+T8@{E\+X\+T8}!I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h@{I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h}}
+\subsubsection[{E\+X\+T8}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T8~extern}\label{_i___i_n_t_e_r_p_r_e_t_e_r_8h_a174426e2ca3ed737ab94d753f4e8b183}
+
+
+\subsection{Funções}
+\hypertarget{_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87}{}\index{I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h@{I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h}!execute@{execute}}
+\index{execute@{execute}!I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h@{I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h}}
+\subsubsection[{execute(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T8} void execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87}
+Metodo responsavel por executar um ambiente de execucao.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em enviroment} & Estrutura contendo a thread e a area de metodos a ser executada \\
+\hline
+\end{DoxyParams}
+Obtem o opcode
+
+Decodifica o opcode
+
+Executa o a instrucao referente ao opcode 
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph}
+\end{center}
+\end{figure}
+
+

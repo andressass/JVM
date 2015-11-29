@@ -50,6 +50,7 @@
       customWorkingDirectory = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/JavaVirtualMachine/JavaVirtualMachine/docs"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      enableAddressSanitizer = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable

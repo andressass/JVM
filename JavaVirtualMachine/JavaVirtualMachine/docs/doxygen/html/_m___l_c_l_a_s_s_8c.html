@@ -95,14 +95,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <p>Modulo Leitor de arquivos ".class".  
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_i___l_e_c_l_a_s_s_8h_source.html">../../include/ClassLoader/I_LECLASS.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para M_LCLASS.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___l_c_l_a_s_s_8c__incl.png" border="0" usemap="#src_2_class_loader_2_m___l_c_l_a_s_s_8c" alt=""/></div>
 <map name="src_2_class_loader_2_m___l_c_l_a_s_s_8c" id="src_2_class_loader_2_m___l_c_l_a_s_s_8c">
-<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="100,79,264,117"/>
-<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="126,165,239,191"/>
-<area shape="rect" id="node6" href="_e___l_e_c_l_a_s_s_8h.html" title="Estruturas do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="90,239,274,264"/>
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="83,79,247,117"/>
+<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="109,165,221,191"/>
+<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="89,239,240,264"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -113,15 +114,15 @@ Definições e Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:a50c482c15a4017df4fd222c4b0a3dadb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb">leCtePool</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> constant_pool_count, FILE *arq)</td></tr>
+<tr class="memitem:a50c482c15a4017df4fd222c4b0a3dadb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb">leCtePool</a> (<a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> constant_pool_count, FILE *arq)</td></tr>
 <tr class="separator:a50c482c15a4017df4fd222c4b0a3dadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79ddcf9bd8c7747e8d415137eca98245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245">leAtributo</a> (FILE *arq)</td></tr>
-<tr class="separator:a79ddcf9bd8c7747e8d415137eca98245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab0c537035a6f26fb2d2f3e91732fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5">leCampMetd</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> count, FILE *arq)</td></tr>
+<tr class="memitem:a908fca2e3d95051f90bb9448f25be43b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b">leAtributo</a> (<a class="el" href="_e___j_v_m_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a> *atributo, FILE *arq)</td></tr>
+<tr class="separator:a908fca2e3d95051f90bb9448f25be43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab0c537035a6f26fb2d2f3e91732fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5">leCampMetd</a> (<a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> count, FILE *arq)</td></tr>
 <tr class="separator:a5ab0c537035a6f26fb2d2f3e91732fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c7ac52ed49d80ece4f2dd7f5f91c88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a64c7ac52ed49d80ece4f2dd7f5f91c88">arquivoParaArqClass</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class, FILE *arq)</td></tr>
+<tr class="memitem:a64c7ac52ed49d80ece4f2dd7f5f91c88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a64c7ac52ed49d80ece4f2dd7f5f91c88">arquivoParaArqClass</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class, FILE *arq)</td></tr>
 <tr class="separator:a64c7ac52ed49d80ece4f2dd7f5f91c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b32415d15c1e05f0d1eaba2f8b7c225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a1b32415d15c1e05f0d1eaba2f8b7c225">LECLASS_leitor</a> (<a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class, const char *arq)</td></tr>
+<tr class="memitem:a1b32415d15c1e05f0d1eaba2f8b7c225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___l_c_l_a_s_s_8c.html#a1b32415d15c1e05f0d1eaba2f8b7c225">LECLASS_leitor</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class, const char *arq)</td></tr>
 <tr class="separator:a1b32415d15c1e05f0d1eaba2f8b7c225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
@@ -146,9 +147,9 @@ Funções</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a> arquivoParaArqClass </td>
+          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a> arquivoParaArqClass </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
           <td class="paramname"><em>arq_class</em>, </td>
         </tr>
         <tr>
@@ -183,7 +184,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="473,120,524,146"/>
 <area shape="rect" id="node5" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="346,20,425,46"/>
 <area shape="rect" id="node7" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="201,120,298,146"/>
-<area shape="rect" id="node8" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245" title="leAtributo" alt="" coords="346,70,424,95"/>
+<area shape="rect" id="node8" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="346,70,424,95"/>
 <area shape="rect" id="node3" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="572,20,623,46"/>
 <area shape="rect" id="node6" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="473,70,524,95"/>
 </map>
@@ -192,22 +193,33 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 
 </div>
 </div>
-<a class="anchor" id="a79ddcf9bd8c7747e8d415137eca98245"></a>
+<a class="anchor" id="a908fca2e3d95051f90bb9448f25be43b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a>* leAtributo </td>
+          <td class="memname">void leAtributo </td>
           <td>(</td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>arq</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a> *&#160;</td>
+          <td class="paramname"><em>atributo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>arq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Metodo que le o um atributo de um arquivo ".class", retornando um ponteiro para uma estrutura inicializada de atributo.</p>
+<p>Metodo que le o um atributo de um arquivo ".class" e preenche a estrutura attribute_info passada como parametro</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
+    <tr><td class="paramname">atributo</td><td>Atributo a ser preenchido </td></tr>
     <tr><td class="paramname">arq</td><td>Arquivo a ser lido. </td></tr>
   </table>
   </dd>
@@ -216,8 +228,8 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
-<div class="center"><img src="_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph" alt=""/></div>
-<map name="_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph" id="_m___l_c_l_a_s_s_8c_a79ddcf9bd8c7747e8d415137eca98245_cgraph">
+<div class="center"><img src="_m___l_c_l_a_s_s_8c_a908fca2e3d95051f90bb9448f25be43b_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a908fca2e3d95051f90bb9448f25be43b_cgraph" alt=""/></div>
+<map name="_m___l_c_l_a_s_s_8c_a908fca2e3d95051f90bb9448f25be43b_cgraph" id="_m___l_c_l_a_s_s_8c_a908fca2e3d95051f90bb9448f25be43b_cgraph">
 <area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="131,5,182,31"/>
 <area shape="rect" id="node3" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="131,55,182,80"/>
 <area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="131,104,182,129"/>
@@ -233,9 +245,9 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a>* leCampMetd </td>
+          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#aea7ef0bb5a23a224f7241ece56f10ea7">field_or_method</a>* leCampMetd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
           <td class="paramname"><em>count</em>, </td>
         </tr>
         <tr>
@@ -266,7 +278,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="center"><img src="_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph.png" border="0" usemap="#_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph" alt=""/></div>
 <map name="_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph" id="_m___l_c_l_a_s_s_8c_a5ab0c537035a6f26fb2d2f3e91732fb5_cgraph">
 <area shape="rect" id="node2" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="276,5,327,31"/>
-<area shape="rect" id="node3" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245" title="leAtributo" alt="" coords="150,56,228,81"/>
+<area shape="rect" id="node3" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="150,56,228,81"/>
 <area shape="rect" id="node4" href="_i_p___l_e_c_l_a_s_s_8h.html#a35f40c339d5d328a776498dddde97abc" title="u4Le" alt="" coords="276,55,327,80"/>
 <area shape="rect" id="node6" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="276,104,327,129"/>
 <area shape="rect" id="node5" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="375,55,426,80"/>
@@ -281,9 +293,9 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a> LECLASS_leitor </td>
+          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a> LECLASS_leitor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
           <td class="paramname"><em>arq_class</em>, </td>
         </tr>
         <tr>
@@ -320,7 +332,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node6" href="_i_p___l_e_c_l_a_s_s_8h.html#a96774639729d84c50fcd1c9251096c22" title="u2Le" alt="" coords="638,120,689,146"/>
 <area shape="rect" id="node7" href="_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb" title="leCtePool" alt="" coords="511,20,590,46"/>
 <area shape="rect" id="node9" href="_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5" title="leCampMetd" alt="" coords="366,120,463,146"/>
-<area shape="rect" id="node10" href="_m___l_c_l_a_s_s_8c.html#a79ddcf9bd8c7747e8d415137eca98245" title="leAtributo" alt="" coords="512,70,590,95"/>
+<area shape="rect" id="node10" href="_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b" title="leAtributo" alt="" coords="512,70,590,95"/>
 <area shape="rect" id="node5" href="_m_p___l_e_c_l_a_s_s_8c.html#a56b3c0e3b98330d1b9c1ba5fdd70caff" title="u2Le" alt="" coords="737,20,788,46"/>
 <area shape="rect" id="node8" href="_i_p___l_e_c_l_a_s_s_8h.html#a0b696ac754cb3058e2b140d8c952f5d5" title="u1Le" alt="" coords="638,70,689,95"/>
 </map>
@@ -334,9 +346,9 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a>* leCtePool </td>
+          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a>* leCtePool </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___l_e_c_l_a_s_s_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
           <td class="paramname"><em>constant_pool_count</em>, </td>
         </tr>
         <tr>

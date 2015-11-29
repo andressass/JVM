@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['printbytecode',['printByteCode',['../_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3',1,'M_ECLASS.c']]],
-  ['printbytecodes',['printByteCodes',['../_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5',1,'M_ECLASS.c']]],
-  ['printcodeattributes',['printCodeAttributes',['../_m___e_c_l_a_s_s_8c.html#a1814dc11a9ec2e7ad63147943593eec6',1,'M_ECLASS.c']]],
-  ['printcodeexceptions',['printCodeExceptions',['../_m___e_c_l_a_s_s_8c.html#a46c4c9265c7779b9ce2cc18082d59fac',1,'M_ECLASS.c']]],
-  ['printfrompool',['printFromPool',['../_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76',1,'M_ECLASS.c']]],
-  ['printnameandtypeinfofromconstantpool',['printNameAndTypeInfoFromConstantPool',['../_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41',1,'M_ECLASS.c']]]
+  ['leatributo',['leAtributo',['../_m___l_c_l_a_s_s_8c.html#a908fca2e3d95051f90bb9448f25be43b',1,'M_LCLASS.c']]],
+  ['lecampmetd',['leCampMetd',['../_m___l_c_l_a_s_s_8c.html#a5ab0c537035a6f26fb2d2f3e91732fb5',1,'M_LCLASS.c']]],
+  ['leclass_5fexibeerrooperacao',['LECLASS_exibeErroOperacao',['../_i___l_e_c_l_a_s_s_8h.html#ad0fbcbf764dc2559e0a05b722e2f6be6',1,'LECLASS_exibeErroOperacao(resultado resultado, const char *fileName):&#160;M_ECLASS.c'],['../_m___e_c_l_a_s_s_8c.html#a5ec3318a40ba8a6b46b48d39545829f4',1,'LECLASS_exibeErroOperacao(resultado resultado, const char *fileName):&#160;M_ECLASS.c']]],
+  ['leclass_5fexibidor',['LECLASS_exibidor',['../_i___l_e_c_l_a_s_s_8h.html#a361e05b7a49b7ac69a465f4ee9a96e22',1,'LECLASS_exibidor(ArqClass *arq_class):&#160;M_ECLASS.c'],['../_m___e_c_l_a_s_s_8c.html#ad8f20307e97939faff0c1ac0fb4d1195',1,'LECLASS_exibidor(ArqClass *arq_class):&#160;M_ECLASS.c']]],
+  ['leclass_5ffree',['LECLASS_free',['../_i___l_e_c_l_a_s_s_8h.html#a70b83886ad59a9fccf0fc86292b736da',1,'LECLASS_free(ArqClass *arq_class):&#160;M_OPCLASS.c'],['../_m___o_p_c_l_a_s_s_8c.html#a9a9eeb4c3b6d71246f2adc5c907ec55e',1,'LECLASS_free(ArqClass *arq_class):&#160;M_OPCLASS.c']]],
+  ['leclass_5fleitor',['LECLASS_leitor',['../_i___l_e_c_l_a_s_s_8h.html#a64b647cee3a8c0aa7ffe8e4e13e7a5fa',1,'LECLASS_leitor(ArqClass *arq_class, const char *arquivo_entrada):&#160;M_LCLASS.c'],['../_m___l_c_l_a_s_s_8c.html#a1b32415d15c1e05f0d1eaba2f8b7c225',1,'LECLASS_leitor(ArqClass *arq_class, const char *arq):&#160;M_LCLASS.c']]],
+  ['lectepool',['leCtePool',['../_m___l_c_l_a_s_s_8c.html#a50c482c15a4017df4fd222c4b0a3dadb',1,'M_LCLASS.c']]],
+  ['loadclass',['loadCLass',['../_i___c_l_a_s_s_l_o_a_d_e_r_8h.html#a616cd9598af9f9dab3a3d721e8fda4f0',1,'loadCLass(const char *qualifiedName, Environment *environment):&#160;M_CLASSLOADER.c'],['../_m___c_l_a_s_s_l_o_a_d_e_r_8c.html#a3d6c57aa492bd9a7e57694a9a98fcd0b',1,'loadCLass(const char *qualifiedName, Environment *environment):&#160;M_CLASSLOADER.c']]]
 ];

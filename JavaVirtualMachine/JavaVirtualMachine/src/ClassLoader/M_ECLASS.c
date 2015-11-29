@@ -78,7 +78,7 @@ wchar_t * getUnicodeFromConstantPool(cp_info* cp, u2 index){
 char * getUTF8FromConstantPool(cp_info* cp, u2 index){
     
     wchar_t *unicode = getUnicodeFromConstantPool(cp, index);
-    char * result = (char*) malloc(wcslen(unicode) * sizeof(char));
+    char * result = (char*) malloc((wcslen(unicode)+1) * sizeof(char));
     
     wcstombs(result, unicode, wcslen(unicode)+1);
     
@@ -608,7 +608,7 @@ void exibeAtributos(ArqClass* arq_class){
     
     for (int i = 0; i < arq_class->attributes_count; i++) {
         printf("\n%d.{", i+1);
-        exibeAtributo(arq_class->attributes[i], arq_class->constant_pool);
+        exibeAtributo(&arq_class->attributes[i], arq_class->constant_pool);
         printf("\n}");
     }
     
@@ -648,7 +648,7 @@ void exibeCampMetd(field_or_method* fm, u2 count, cp_info* cp){
         printf("\n\tATTRIBUTES_COUNT:\t %d ", fm[i].attributes_count);
         for (int j= 0; j< fm[i].attributes_count; j++) {
             printf("\n\t%d.{", j+1);
-            exibeAtributo(fm[i].attributes[j], cp);
+            exibeAtributo(&fm[i].attributes[j], cp);
             printf("\n\t}");
         }
         

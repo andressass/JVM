@@ -1,0 +1,18 @@
+<map id="Environment" name="Environment">
+<area shape="rect" id="node2" href="$struct_thread.html" title="Estrutura da Thread. " alt="" coords="215,637,278,663"/>
+<area shape="rect" id="node3" href="$struct_v_m_stack.html" title="VMStack" alt="" coords="192,539,267,564"/>
+<area shape="rect" id="node4" href="$struct_frame.html" title="Estrutura da Frame. " alt="" coords="203,452,263,477"/>
+<area shape="rect" id="node5" href="$struct_operand_stack.html" title="OperandStack" alt="" coords="5,365,112,391"/>
+<area shape="rect" id="node6" href="$struct_java_class.html" title="Estrutura da JavaClass. " alt="" coords="412,365,495,391"/>
+<area shape="rect" id="node15" href="$struct_handler.html" title="Estrutura da Handler. " alt="" coords="509,452,577,477"/>
+<area shape="rect" id="node17" href="$struct_class_table.html" title="Estrutura da ClassTable. " alt="" coords="321,452,407,477"/>
+<area shape="rect" id="node7" href="$struct_fields.html" title="Estrutura da FieldsTable. " alt="" coords="429,279,486,304"/>
+<area shape="rect" id="node8" href="$struct_fields_table.html" title="Estrutura da FieldsTable. " alt="" coords="413,192,502,217"/>
+<area shape="rect" id="node9" href="$structfield_and_method.html" title="Estrutura de Campos e Metodos. " alt="" coords="423,92,537,117"/>
+<area shape="rect" id="node11" href="$structarq_class.html" title="um metodo. " alt="" coords="572,192,646,217"/>
+<area shape="rect" id="node10" href="$structattribute.html" title="Estrutura de Atributos. " alt="" coords="523,5,592,31"/>
+<area shape="rect" id="node12" href="$structconst_pool.html" title="Estrutura do Pool de Constantes. " alt="" coords="692,92,772,117"/>
+<area shape="rect" id="node13" href="$struct_object_list.html" title="Estrutura da ObjectList. " alt="" coords="461,637,542,663"/>
+<area shape="rect" id="node14" href="$struct_object.html" title="Estrutura do Object. " alt="" coords="501,539,561,564"/>
+<area shape="rect" id="node16" href="$struct_method_area.html" title="Estrutura da MethodArea. " alt="" coords="306,588,400,613"/>
+</map>

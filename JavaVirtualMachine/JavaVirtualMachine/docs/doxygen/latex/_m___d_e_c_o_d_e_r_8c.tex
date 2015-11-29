@@ -1,0 +1,84 @@
+\hypertarget{_m___d_e_c_o_d_e_r_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R.c}
+\label{_m___d_e_c_o_d_e_r_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+O\+P\+C\+O\+D\+E\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___d_e_c_o_d_e_r_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___d_e_c_o_d_e_r_8c_a24caf25c7e9c7e314cf44dd3d9bb6e1d}{D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b}{iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+\hyperlink{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}{instruction} \hyperlink{_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244}{decode} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} bytecode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_m___d_e_c_o_d_e_r_8c_a24caf25c7e9c7e314cf44dd3d9bb6e1d}{}\index{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}!D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V@{D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V}}
+\index{D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V@{D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V}!M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}}
+\subsubsection[{D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+E\+R\+V}\label{_m___d_e_c_o_d_e_r_8c_a24caf25c7e9c7e314cf44dd3d9bb6e1d}
+
+
+\subsection{Funções}
+\hypertarget{_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244}{}\index{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}!decode@{decode}}
+\index{decode@{decode}!M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}}
+\subsubsection[{decode(u1 bytecode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf instruction} decode (
+\begin{DoxyParamCaption}
+\item[{{\bf u1}}]{bytecode}
+\end{DoxyParamCaption}
+)}\label{_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244}
+Metodo responsavel por retornar um ponteiro para uma funcao que realiza as operacoes de um bytecode
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bytecode} & Bytecode a ser decodificado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a instrucao referente ao bytecode 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b}{}\index{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}!iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A@{iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A}}
+\index{iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A@{iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A}!M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c@{M\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+c}}
+\subsubsection[{iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A(\+Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}void iadd\+\_\+\+G\+A\+M\+B\+I\+A\+R\+R\+A (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b_cgraph}
+\end{center}
+\end{figure}
+
+

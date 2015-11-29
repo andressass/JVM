@@ -1,5 +1,8 @@
 <map id="include/ClassLoader/I_LECLASS.h" name="include/ClassLoader/I_LECLASS.h">
-<area shape="rect" id="node2" href="$_m___e_c_l_a_s_s_8c.html" title="Modulo Exibidor de arquivos &quot;.class&quot;. " alt="" coords="5,92,208,117"/>
-<area shape="rect" id="node3" href="$_m___l_c_l_a_s_s_8c.html" title="Modulo Leitor de arquivos &quot;.class&quot;. " alt="" coords="233,92,434,117"/>
-<area shape="rect" id="node4" href="$_m___o_p_c_l_a_s_s_8c.html" title="Modulo Operador de estruturas &quot;.class&quot;. " alt="" coords="457,92,671,117"/>
+<area shape="rect" id="node2" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html" title="Modulo do Carregador de Classes da JVM. " alt="" coords="5,99,254,124"/>
+<area shape="rect" id="node3" href="$_m___e_c_l_a_s_s_8c.html" title="Modulo Exibidor de arquivos &quot;.class&quot;. " alt="" coords="278,99,481,124"/>
+<area shape="rect" id="node4" href="$_m___l_c_l_a_s_s_8c.html" title="Modulo Leitor de arquivos &quot;.class&quot;. " alt="" coords="505,99,706,124"/>
+<area shape="rect" id="node5" href="$_m___o_p_c_l_a_s_s_8c.html" title="Modulo Operador de estruturas &quot;.class&quot;. " alt="" coords="730,99,943,124"/>
+<area shape="rect" id="node6" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="967,92,1114,131"/>
+<area shape="rect" id="node7" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="1138,99,1399,124"/>
 </map>

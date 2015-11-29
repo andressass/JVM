@@ -5,9 +5,113 @@
 Interface do Carregador de Classes da J\+V\+M.  
 
 
+{\ttfamily \#include \char`\"{}../\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{_i___c_l_a_s_s_l_o_a_d_e_r_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___c_l_a_s_s_l_o_a_d_e_r_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a9d0defacfe8b88a2433bb394d558667e}{E\+X\+T9}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a9d0defacfe8b88a2433bb394d558667e}{E\+X\+T9} \hyperlink{struct_java_class}{Java\+Class} $\ast$ \hyperlink{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a616cd9598af9f9dab3a3d721e8fda4f0}{load\+C\+Lass} (const char $\ast$qualified\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a9d0defacfe8b88a2433bb394d558667e}{E\+X\+T9} \hyperlink{struct_fields}{Fields} $\ast$ \hyperlink{_i___c_l_a_s_s_l_o_a_d_e_r_8h_ada2335556e8bc48f0192d79a9d7f90e9}{class\+Initialize\+Fields} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} flags\+Accept, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} flags\+Regect)
+\end{DoxyCompactItemize}
 
 
 \subsection{Descrição Detalhada}
 Interface do Carregador de Classes da J\+V\+M. 
 
 Interface responsavel por disponibilizar os servicos relacionados ao carregamento de classes da J\+V\+M. 
+
+\subsection{Definições e macros}
+\hypertarget{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a9d0defacfe8b88a2433bb394d558667e}{}\index{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h@{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h}!E\+X\+T9@{E\+X\+T9}}
+\index{E\+X\+T9@{E\+X\+T9}!I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h@{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h}}
+\subsubsection[{E\+X\+T9}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T9~extern}\label{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a9d0defacfe8b88a2433bb394d558667e}
+
+
+\subsection{Funções}
+\hypertarget{_i___c_l_a_s_s_l_o_a_d_e_r_8h_ada2335556e8bc48f0192d79a9d7f90e9}{}\index{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h@{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h}!class\+Initialize\+Fields@{class\+Initialize\+Fields}}
+\index{class\+Initialize\+Fields@{class\+Initialize\+Fields}!I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h@{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h}}
+\subsubsection[{class\+Initialize\+Fields(\+Java\+Class $\ast$java\+Class, u2 flags\+Accept, u2 flags\+Regect)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T9} {\bf Fields}$\ast$ class\+Initialize\+Fields (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{{\bf u2}}]{flags\+Accept, }
+\item[{{\bf u2}}]{flags\+Regect}
+\end{DoxyParamCaption}
+)}\label{_i___c_l_a_s_s_l_o_a_d_e_r_8h_ada2335556e8bc48f0192d79a9d7f90e9}
+Método que aloca todos os espaços de memoria necessarios para os campos de uma classe ou objeto e inicializa os inicializa com os valores default.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Referencia para a estrutura de classe com os parametros \\
+\hline
+{\em flags\+Accept} & Flags para o tipos de campos aceitos (Ex.\+: S\+T\+A\+T\+I\+C, F\+I\+N\+A\+L) \\
+\hline
+{\em flags\+Regect} & Flags para o tipos de campos rejeitados (Ex.\+: S\+T\+A\+T\+I\+C, F\+I\+N\+A\+L) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura de campos preenchida 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___c_l_a_s_s_l_o_a_d_e_r_8h_ada2335556e8bc48f0192d79a9d7f90e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a616cd9598af9f9dab3a3d721e8fda4f0}{}\index{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h@{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h}!load\+C\+Lass@{load\+C\+Lass}}
+\index{load\+C\+Lass@{load\+C\+Lass}!I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h@{I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h}}
+\subsubsection[{load\+C\+Lass(const char $\ast$qualified\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T9} {\bf Java\+Class}$\ast$ load\+C\+Lass (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a616cd9598af9f9dab3a3d721e8fda4f0}
+Metodo que, dado um nome qualificado de classe, retorna uma estrutura \hyperlink{struct_java_class}{Java\+Class} preenchida
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe a ser carregada \\
+\hline
+{\em environment} & Ambiente de execucao atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura \hyperlink{structarq_class}{arq\+Class} preenchida com os dados da classe carregada 
+\end{DoxyReturn}
+$<$ Resultado das operacoes (checagem de erros)
+
+L\+O\+A\+D\+I\+N\+G -\/ Fazemos a leitura do arquivo .class 
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___c_l_a_s_s_l_o_a_d_e_r_8h_a616cd9598af9f9dab3a3d721e8fda4f0_cgraph}
+\end{center}
+\end{figure}
+
+

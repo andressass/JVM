@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */; };
+		CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */; };
 		CE8EFA961C092E8600F1010B /* M_INTERPRETER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */; };
 		CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB3F21C08A019004DBA0C /* M_OPMETHODAREA.c */; };
 		CE9FB3F51C08BC61004DBA0C /* M_OPTHREAD.c in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB3F41C08BC61004DBA0C /* M_OPTHREAD.c */; };
@@ -31,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_DECODER.c; path = src/ExecutionEngine/M_DECODER.c; sourceTree = "<group>"; };
+		CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = OPCODES.c; path = src/Estruturas/OPCODES.c; sourceTree = "<group>"; };
 		CE33EE631BFCFB2400A4003B /* JavaVirtualMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JavaVirtualMachine; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INTERPRETER.c; path = src/ExecutionEngine/M_INTERPRETER.c; sourceTree = "<group>"; };
 		CE9FB3F21C08A019004DBA0C /* M_OPMETHODAREA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPMETHODAREA.c; path = src/MemoryUnit/M_OPMETHODAREA.c; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				CEAC722C1BFD6BD5006F4F9B /* M_BOOTLOADER.c */,
 				CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */,
+				CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */,
 			);
 			name = ExecutionEngine;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 		CEAC722B1BFD00E6006F4F9B /* Estruturas */ = {
 			isa = PBXGroup;
 			children = (
+				CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */,
 			);
 			name = Estruturas;
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 				CEAC722D1BFD6BD5006F4F9B /* M_BOOTLOADER.c in Sources */,
 				CEAC72201BFCFE68006F4F9B /* M_ECLASS.c in Sources */,
 				CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */,
+				CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */,
+				CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */,
 				CEEF15501C05C90F00A8D077 /* M_CLASSLOADER.c in Sources */,
 				CEAC72221BFCFE68006F4F9B /* M_LCLASS.c in Sources */,
 				CEAC72231BFCFE68006F4F9B /* M_OPCLASS.c in Sources */,

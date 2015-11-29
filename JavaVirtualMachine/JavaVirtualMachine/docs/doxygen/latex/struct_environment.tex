@@ -1,0 +1,54 @@
+\hypertarget{struct_environment}{}\section{Referência da Estrutura Environment}
+\label{struct_environment}\index{Environment@{Environment}}
+
+
+Estrutura do ambiente de execucao da J\+V\+M.  
+
+
+
+
+{\ttfamily \#include $<$E\+\_\+\+J\+V\+M.\+h$>$}
+
+
+
+Diagrama de colaboração para Environment\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_environment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Campos de Dados}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{struct_environment_a9521ae1091a45875768bdbbe0a339014}{thread}
+\begin{DoxyCompactList}\small\item\em Referencia para a thread em execucao. \end{DoxyCompactList}\item 
+\hyperlink{struct_method_area}{Method\+Area} $\ast$ \hyperlink{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}{method\+Area}
+\begin{DoxyCompactList}\small\item\em Referencia para a area de metodos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estrutura do ambiente de execucao da J\+V\+M. 
+
+Estrura que apresenta um ambiente de execucao, a qual contem uma thread e uma area de metodos 
+
+\subsection{Campos}
+\hypertarget{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}{}\index{Environment@{Environment}!method\+Area@{method\+Area}}
+\index{method\+Area@{method\+Area}!Environment@{Environment}}
+\subsubsection[{method\+Area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Method\+Area}$\ast$ Environment\+::method\+Area}\label{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}
+
+
+Referencia para a area de metodos. 
+
+\hypertarget{struct_environment_a9521ae1091a45875768bdbbe0a339014}{}\index{Environment@{Environment}!thread@{thread}}
+\index{thread@{thread}!Environment@{Environment}}
+\subsubsection[{thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread}$\ast$ Environment\+::thread}\label{struct_environment_a9521ae1091a45875768bdbbe0a339014}
+
+
+Referencia para a thread em execucao. 
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Estruturas/\hyperlink{_e___j_v_m_8h}{E\+\_\+\+J\+V\+M.\+h}\end{DoxyCompactItemize}

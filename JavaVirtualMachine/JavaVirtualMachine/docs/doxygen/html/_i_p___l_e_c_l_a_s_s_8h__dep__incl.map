@@ -1,7 +1,10 @@
 <map id="include/ClassLoader/IP_LECLASS.h" name="include/ClassLoader/IP_LECLASS.h">
-<area shape="rect" id="node2" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="262,92,405,131"/>
-<area shape="rect" id="node6" href="$_m_p___l_e_c_l_a_s_s_8c.html" title="Modulo de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="428,92,569,131"/>
-<area shape="rect" id="node3" href="$_m___e_c_l_a_s_s_8c.html" title="Modulo Exibidor de arquivos &quot;.class&quot;. " alt="" coords="5,179,208,204"/>
-<area shape="rect" id="node4" href="$_m___l_c_l_a_s_s_8c.html" title="Modulo Leitor de arquivos &quot;.class&quot;. " alt="" coords="233,179,434,204"/>
-<area shape="rect" id="node5" href="$_m___o_p_c_l_a_s_s_8c.html" title="Modulo Operador de estruturas &quot;.class&quot;. " alt="" coords="457,179,671,204"/>
+<area shape="rect" id="node2" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="649,92,791,131"/>
+<area shape="rect" id="node9" href="$_m_p___l_e_c_l_a_s_s_8c.html" title="Modulo de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="815,92,956,131"/>
+<area shape="rect" id="node3" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html" title="Modulo do Carregador de Classes da JVM. " alt="" coords="5,185,254,211"/>
+<area shape="rect" id="node4" href="$_m___e_c_l_a_s_s_8c.html" title="Modulo Exibidor de arquivos &quot;.class&quot;. " alt="" coords="278,185,481,211"/>
+<area shape="rect" id="node5" href="$_m___l_c_l_a_s_s_8c.html" title="Modulo Leitor de arquivos &quot;.class&quot;. " alt="" coords="505,185,706,211"/>
+<area shape="rect" id="node6" href="$_m___o_p_c_l_a_s_s_8c.html" title="Modulo Operador de estruturas &quot;.class&quot;. " alt="" coords="730,185,943,211"/>
+<area shape="rect" id="node7" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="967,179,1114,217"/>
+<area shape="rect" id="node8" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="1138,185,1399,211"/>
 </map>

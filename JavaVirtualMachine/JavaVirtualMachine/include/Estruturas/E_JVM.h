@@ -245,7 +245,7 @@ typedef struct fieldAndMethod{
     u2 name_index;
     u2 descriptor_index;
     u2 attributes_count;
-    attribute_info** attributes;
+    attribute_info* attributes;
     
 } field_or_method;
 typedef struct fieldAndMethod field_info; //!< Estrutura utilizada para a representacao de um campo.
@@ -275,7 +275,7 @@ typedef struct arqClass {
     u2                  methods_count;
     method_info*        methods;
     u2                  attributes_count;
-    attribute_info**    attributes;
+    attribute_info*     attributes;
     
     
 } ArqClass;

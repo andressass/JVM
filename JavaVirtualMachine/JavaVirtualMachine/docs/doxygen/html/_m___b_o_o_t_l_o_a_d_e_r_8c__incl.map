@@ -1,2 +1,7 @@
 <map id="src/ExecutionEngine/M_BOOTLOADER.c" name="src/ExecutionEngine/M_BOOTLOADER.c">
+<area shape="rect" id="node4" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="377,265,527,304"/>
+<area shape="rect" id="node5" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="312,179,474,217"/>
+<area shape="rect" id="node6" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="60,92,225,131"/>
+<area shape="rect" id="node8" href="$_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="362,92,552,131"/>
+<area shape="rect" id="node7" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="74,185,187,211"/>
 </map>

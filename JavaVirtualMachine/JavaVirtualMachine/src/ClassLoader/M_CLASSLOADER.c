@@ -93,14 +93,13 @@ int classGetFieldDescriptorSize(char* descriptor){
 /*!
  * Metodo que aloca o espaco de memoria necessarios para um determinado campo baseado no descritor
  *
- * \param memoryAddress Referencia para o ponteiro de memoria a receber o endereco do espaco
- *        alocado
  * \param descriptor Descritor do campo
+ * \return Referencia para o ponteiro de memoria a receber o endereco do espaco alocado
  */
-void classInitializeField(void* memoryAddress, char* descriptor){
+void* classInitializeField(char* descriptor){
     
     //Alocamos o espaco de memoria
-    memoryAddress = malloc(classGetFieldDescriptorSize(descriptor));
+    void* memoryAddress = (void*) malloc(classGetFieldDescriptorSize(descriptor)*sizeof(void));
     
     //Inicializamos o atributo com o valor default
     if (strcmp(descriptor, "B") == 0){
@@ -131,7 +130,7 @@ void classInitializeField(void* memoryAddress, char* descriptor){
         u1* b = memoryAddress;
         *b = 0;
     }
-    
+    return memoryAddress;
 }
 
 
@@ -157,28 +156,29 @@ Fields* classInitializeFields(JavaClass* javaClass, u2 flagsAccept, u2 flagsRege
         if (javaClass->arqClass->fields[i].access_flags & flagsAccept &&
             !(javaClass->arqClass->fields[i].access_flags & flagsRegect)){
             
-            //Atualizamos a quantidade de fields
-            fields->fieldsCount++;
-            
             //Redimensionamos a tabela de atributos estaticos da classe
-            fields->fieldsTable = (FieldsTable*) realloc(fields->fieldsTable, fields->fieldsCount * sizeof(FieldsTable));
+            fields->fieldsTable = (FieldsTable*) realloc(fields->fieldsTable, (fields->fieldsCount+1) * sizeof(FieldsTable));
             
             //Referencia para as informacoes do campo na estrutura de .class
             field_info* fieldInfo = &javaClass->arqClass->fields[i];
+            fields->fieldsTable[fields->fieldsCount].fieldInfo = fieldInfo;
+            
             
             //Passamos uma referencia para o nome
-            fields->fieldsTable[i].name =
+            fields->fieldsTable[fields->fieldsCount].name =
             getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
                                     fieldInfo->name_index);
             
             //Passamos uma referencia para o descritor do campo
-            fields->fieldsTable[i].descriptor =
+            fields->fieldsTable[fields->fieldsCount].descriptor =
             getUTF8FromConstantPool(javaClass->arqClass->constant_pool,
                                     fieldInfo->descriptor_index);
             
             //Alocamos o espaco de memoria para o campo
-            classInitializeField(fields->fieldsTable[i].memoryAddress,
-                                 fields->fieldsTable[i].descriptor);
+            fields->fieldsTable[fields->fieldsCount].memoryAddress = classInitializeField(fields->fieldsTable[fields->fieldsCount].descriptor);
+            
+            //Atualizamos a quantidade de fields
+            fields->fieldsCount++;
         }
     }
     return fields;
@@ -264,8 +264,8 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     char* classExtension = ".class";
     
     //Nome completo do arquivo
-    char* fileName = (char*)malloc((strlen(qualifiedName)+strlen(classExtension)) * sizeof(char));
-    strcat(fileName, qualifiedName);
+    char* fileName = (char*)malloc((strlen(qualifiedName)+strlen(classExtension)+1) * sizeof(char));
+    strcpy(fileName, qualifiedName);
     strcat(fileName, classExtension);
     
     //Lemos o arquivo .class

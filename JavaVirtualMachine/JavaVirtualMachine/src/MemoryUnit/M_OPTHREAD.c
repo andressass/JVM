@@ -1,4 +1,4 @@
-//#################################################################################################
+    //#################################################################################################
 /*! \file M_OPTHREAD.c
  *
  *  \brief Modulo de threads da JVM
@@ -22,9 +22,7 @@ Thread* newThread(){
 
     thread->PC = 0;
     
-    thread->vmStack = (VMStack*) malloc(sizeof(VMStack));
-    thread->vmStack->next = NULL;
-    thread->vmStack->top = NULL;
+    thread->vmStack = NULL;
     
     return thread;    
 }
@@ -63,11 +61,12 @@ void pushFrame(Environment* environment, const char* className, const char* meth
     //TODO: Lancamento de erro caso nao exista atributo code
     
     //Alocamos o array de variaveis locais
-    newFrame->localVariablesVector = (u4*) malloc(methodCode->max_locals * sizeof(u4));
+    newFrame->localVariablesVector = (u4*) calloc(methodCode->max_locals, sizeof(u4));
     
     //Alocamos a pilha de operandos
-    newFrame->opStk = (OperandStack*) malloc(methodCode->max_stack * sizeof(OperandStack));
+    newFrame->opStk = (OperandStack*) calloc(methodCode->max_stack+1, sizeof(OperandStack));
     
+    free(methodCode);
 }
 
 

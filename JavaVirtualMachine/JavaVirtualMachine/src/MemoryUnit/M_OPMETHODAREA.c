@@ -124,10 +124,13 @@ CodeAttribute* getCodeFromMethodInfo(method_info* method, cp_info* constant_pool
     for (int i = 0; i< method->attributes_count; i++) {
         //Obtemos o nome do atributo
         char* attrName = getUTF8FromConstantPool(constant_pool,
-                                                 method->attributes[i]->attribute_name_index);
+                                                 method->attributes[i].attribute_name_index);
         
         //Se for o atributo code, criamos, preenchemos e retornamos uma estrutura CodeAttribute
-        if(strcmp(attrName, "Code")==0) return parseCode(method->attributes[i]->info);
+        if(strcmp(attrName, "Code")==0) {
+            free(attrName);
+            return parseCode(method->attributes[i].info);
+        }
     }
 
     return NULL;
@@ -148,9 +151,15 @@ CodeAttribute* getCodeAttributeFromMethod(JavaClass* javaClass,
 //--------------------------------------------------------------------------------------------------
 u1 getByteCodeFromMethod(method_info* methodInfo, cp_info* constant_pool, int pc){
     
+    u1 result;
+    
     CodeAttribute* code = getCodeFromMethodInfo(methodInfo, constant_pool);
     
-    return code->code[pc];
+    result = code->code[pc];
+    
+    free(code);
+    
+    return result;
 }
 
 
@@ -168,8 +177,8 @@ ConstantValueAttribute* getConstantValueAtrributeFromField(field_info* field, cp
     
     for (int j = 0; j < field->attributes_count; j++) {
         
-        if (strcasecmp(getUTF8FromConstantPool(cp, field->attributes[j]->attribute_name_index), "ConstantValue")) {
-            ConstantValueAttribute* constantValue = parseConstantValue(field->attributes[j]->info);
+        if (strcasecmp(getUTF8FromConstantPool(cp, field->attributes[j].attribute_name_index), "ConstantValue")) {
+            ConstantValueAttribute* constantValue = parseConstantValue(field->attributes[j].info);
             return constantValue;
         }
     }

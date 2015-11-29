@@ -93,11 +93,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef I_INTERPRETER_h</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define I_INTERPRETER_h</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_INTERPRETER_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef INTERPRETER_SERV</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define EXT8</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#a174426e2ca3ed737ab94d753f4e8b183">   15</a></span>&#160;<span class="preprocessor">#define EXT8 extern</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../Estruturas/E_JVM.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#a174426e2ca3ed737ab94d753f4e8b183">EXT8</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#afc3cfeac05065c81421961da3a442c87">execute</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_INTERPRETER_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="struct_environment_html"><div class="ttname"><a href="struct_environment.html">Environment</a></div><div class="ttdoc">Estrutura do ambiente de execucao da JVM. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:429</div></div>
+<div class="ttc" id="_i___i_n_t_e_r_p_r_e_t_e_r_8h_html_a174426e2ca3ed737ab94d753f4e8b183"><div class="ttname"><a href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#a174426e2ca3ed737ab94d753f4e8b183">EXT8</a></div><div class="ttdeci">#define EXT8</div><div class="ttdef"><b>Definition:</b> I_INTERPRETER.h:15</div></div>
+<div class="ttc" id="_i___i_n_t_e_r_p_r_e_t_e_r_8h_html_afc3cfeac05065c81421961da3a442c87"><div class="ttname"><a href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html#afc3cfeac05065c81421961da3a442c87">execute</a></div><div class="ttdeci">EXT8 void execute(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INTERPRETER.c:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
