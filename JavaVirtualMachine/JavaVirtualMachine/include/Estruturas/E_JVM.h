@@ -334,7 +334,7 @@ typedef struct Object{
  * 
  */
 typedef struct ObjectList{
-    struct ObjectList *objectList;
+    struct ObjectList *next;
     Object *object;
 } ObjectList;
 

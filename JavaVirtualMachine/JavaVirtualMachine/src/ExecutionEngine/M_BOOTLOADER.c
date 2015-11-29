@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     environment->methodArea = newMethodArea();
     environment->thread = newThread();
     
-    //Mandamos o metodo main a ser inicializado
+    //Empilhamos o metodo main a ser inicializado
     pushFrame(environment, argv[1], "main", "([Ljava/lang/String;)V");
     
     //Passamos o ambiente de execucao para o interpretador

@@ -196,7 +196,7 @@ Fields* classInitializeFields(JavaClass* javaClass, u2 flagsAccept, u2 flagsRege
 int classPreparing(JavaClass* javaClass){
     
     javaClass->staticFields = classInitializeFields(javaClass, ACC_STATIC, ACC_FINAL);
-   
+    javaClass->objectList = NULL;
     return LinkageSuccess;
 }
 

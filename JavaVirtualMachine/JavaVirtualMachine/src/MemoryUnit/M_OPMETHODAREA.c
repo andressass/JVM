@@ -251,6 +251,32 @@ void* getObjectAttributeReference(Object* object, const char* attributeName){
 
 
 //--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que, da uma referencia para uma estrutura javaClass e uma referencia a um objeto, adiciona
+ * este objeto na lista de objetos da classe. A adicao acontece na forma de empilhamento.
+ *
+* \param object Referencia ao objeto adicionado
+ * \param javaClass Referencia para a Estrutura javaClass
+ */
+void addObjectReferenceToJavaClass(Object* object, JavaClass* javaClass){
+    
+    ObjectList* newObject = (ObjectList*)malloc(sizeof(ObjectList));
+    
+    newObject->object = object;
+
+    //Caso a lista esteja vazia, simplesmente adicionamos o objeto.
+    if (!javaClass->objectList) {
+        javaClass->objectList = newObject;
+        newObject->next = NULL;
+    }
+    //Caso nao, adicionamos o na lista (em forma de pilha)
+    else{
+        newObject->next = javaClass->objectList;
+        javaClass->objectList = newObject;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
 Object* newObjectFromClass(const char* className, Environment* environment ){
 
     JavaClass* javaClass = getClass(className, environment);
@@ -262,6 +288,9 @@ Object* newObjectFromClass(const char* className, Environment* environment ){
     
     //Alocamos espaco na tabela de campos para o numero de campos
     object->handler->fields = classInitializeFields(javaClass, 0x1111, ACC_STATIC);
+    
+    //Adicionamos uma referencia ao objeto na lista de objetos da classe
+    addObjectReferenceToJavaClass(object, javaClass);
 
     return object;
 }
