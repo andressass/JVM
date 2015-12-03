@@ -366,7 +366,7 @@ void exibeCtePool(ArqClass* arq_class){
          cp < arq_class->constant_pool + arq_class->constant_pool_count - 1;
          cp++)
     {
-        printf("%ld. ", (cp - arq_class->constant_pool +1));
+        printf("%d. ", (cp - arq_class->constant_pool +1));
         //Imprimimos o elemento
         printFromPool(cp, arq_class->constant_pool);
     }

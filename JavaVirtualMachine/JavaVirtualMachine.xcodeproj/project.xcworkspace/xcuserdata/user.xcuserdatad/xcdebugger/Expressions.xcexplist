@@ -32,14 +32,6 @@
       </ContextState>
       <ContextState
          contextName = "main:M_BOOTLOADER.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "argv+1">
-            </PersistentString>
-            <PersistentString
-               value = "newFrame-&gt;localVariablesVector[0]">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "classInitializer:M_CLASSLOADER.c">

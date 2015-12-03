@@ -1179,7 +1179,7 @@ short getOpcodeAttributesNumber(u1 opcode, u1* params, u1* codeBegin){
             npairs = npairs << 8 | *params++;
             npairs = npairs << 8 | *params++;
             
-            //Npairs de 32bits + outros argumentos
+            //Npairs de 32bits + argumentos fixos
             result = pad + 7 + (npairs)*4*2;
             break;
         case OP_lor:
@@ -1278,16 +1278,19 @@ short getOpcodeAttributesNumber(u1 opcode, u1* params, u1* codeBegin){
             //Campos de Default
             params += 4;
             
+            //Campo min
             int min = *params++;
             min = min << 8 | *params++;
             min = min << 8 | *params++;
             min = min << 8 | *params++;
             
+            //Campo max
             int max = *params++;
             max = max << 8 | *params++;
             max = max << 8 | *params++;
             max = max << 8 | *params++;
             
+            //bytes anteriores + (max-min+1) de 32bits
             result = pad + 11 + (max-min+1)*4;
             break; 
         case OP_wide:
