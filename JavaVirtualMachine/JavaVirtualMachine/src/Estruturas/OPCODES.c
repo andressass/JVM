@@ -640,8 +640,9 @@ char* getOpcodeName(u1 opcode){
 
 
 //--------------------------------------------------------------------------------------------------
-short getOpcodeAttributesNumber(u1 opcode){
+short getOpcodeAttributesNumber(u1 opcode, u1* params, u1* codeBegin){
     short result = -1;
+    short pad = 0;
     
     switch (opcode) {
             
@@ -1165,7 +1166,21 @@ short getOpcodeAttributesNumber(u1 opcode){
             result = 0;
             break;
         case OP_lookupswitch:
-            result = -1;
+            //Pad bytes
+            while ((params-codeBegin) % 4 != 0) {
+                params++;
+                pad++;
+            }
+            //Campos de Default
+            params += 4;
+            
+            int npairs = *params++;
+            npairs = npairs << 8 | *params++;
+            npairs = npairs << 8 | *params++;
+            npairs = npairs << 8 | *params++;
+            
+            //Npairs de 32bits + outros argumentos
+            result = pad + 7 + (npairs)*4*2;
             break;
         case OP_lor:
             result = 0;
@@ -1255,10 +1270,28 @@ short getOpcodeAttributesNumber(u1 opcode){
             result = 0;
             break;
         case OP_tableswitch:
-            result = -1;
+            //Pad bytes
+            while ((params-codeBegin) % 4 != 0) {
+                params++;
+                pad++;
+            }
+            //Campos de Default
+            params += 4;
+            
+            int min = *params++;
+            min = min << 8 | *params++;
+            min = min << 8 | *params++;
+            min = min << 8 | *params++;
+            
+            int max = *params++;
+            max = max << 8 | *params++;
+            max = max << 8 | *params++;
+            max = max << 8 | *params++;
+            
+            result = pad + 11 + (max-min+1)*4;
             break; 
         case OP_wide:
-            result = -1;
+            result = (*params == OP_iinc) ? 5 : 3;
             break;
         default:
             break;

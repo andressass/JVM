@@ -245,8 +245,10 @@ EXT20 char* getOpcodeName(u1 opcode);
  * Metodo que retorna um short com a quantidade de atributos (bytes adicionais) do opcode
  *
  * \param u1 opcode Codigo do opcode.
+ * \param arguments Referencia para os argumentos da instrucao.
+ * \param codeBegin Referencia o inicio do vetor de instrucoes.
  * \return Quantidade de bytes adicionais exigidos pelo opcode (-1 significa tamanho variavel).
  */
-EXT20 short getOpcodeAttributesNumber(u1 opcode);
+EXT20 short getOpcodeAttributesNumber(u1 opcode, u1* arguments, u1* codeBegin);
 
 #endif

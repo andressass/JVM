@@ -423,20 +423,25 @@ void exibeInterfaces(ArqClass* arq_class){
  * Metodo que que realiza a exibicao de um bytecode
  *
  * \param bytecode Bytecode a ser exibido.
+ * \param bytecodes Inicio do vetor de bytecodes.
  */
-void printByteCode(u1* bytecode){
+void printByteCode(u1* bytecode, u1* bytecodes){
     
     u1 mnemonic = bytecode[0];
     
     printf("\n\t\t\t%s", getOpcodeName(mnemonic));
     bytecode++;
     
-    //TODO opcode com numero de atributos variavel (-1)
-    for (int i = 0; i < getOpcodeAttributesNumber(mnemonic) ; i++) {
-        printf(" 0x%.2x", bytecode[i]);
-        bytecode++;
-    }
+    //Numero de atributos
+    int attrNumber = getOpcodeAttributesNumber(mnemonic, bytecode, bytecodes);
     
+    //TODO opcode com numero de atributos variavel (-1)
+    for (int i = 0; i < attrNumber ; i++) {
+        printf(" 0x%.2x", bytecode[0]);
+        //Para nao passarmos para o proximo bytecode no ultimo argumento
+        if(i != attrNumber-1)
+            bytecode++;
+    }
 }
 
 
@@ -452,8 +457,8 @@ void printByteCodes(u1* bytecodes, u4 code_length){
     u1* bc = bytecodes;
     printf("\n\t\t{ ");
 
-    for ( bc = bytecodes; bc < bytecodes + code_length; bc++) {
-        printByteCode(bc);
+    for ( bc = bytecodes; bc < bytecodes + code_length; bc+=getOpcodeAttributesNumber(*bc, bytecodes+1, bytecodes)+1) {
+        printByteCode(bc, bytecodes);
     }
     printf("\n\t\t}");
 }

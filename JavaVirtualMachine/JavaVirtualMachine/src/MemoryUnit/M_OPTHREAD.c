@@ -29,7 +29,7 @@ Thread* newThread(){
 
 
 //--------------------------------------------------------------------------------------------------
-void pushFrame(Environment* environment, const char* className, const char* methodName,
+Frame* pushFrame(Environment* environment, const char* className, const char* methodName,
                const char*  MethodDescriptor){
     
     Frame* newFrame = (Frame*) malloc(sizeof(Frame));
@@ -67,6 +67,8 @@ void pushFrame(Environment* environment, const char* className, const char* meth
     newFrame->opStk = (OperandStack*) calloc(methodCode->max_stack+1, sizeof(OperandStack));
     
     free(methodCode);
+    
+    return newFrame;
 }
 
 
@@ -109,6 +111,19 @@ Frame* getCurrentFrame(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void pushInOperandStack(Thread* thread, u4 value){
     Frame* currentFrame = getCurrentFrame(thread);
+    
+    //A o proximo elemento do "vetor" alocado da pilha, aponta para o elemento atual
+    currentFrame->opStk[1].nextStack = currentFrame->opStk;
+    //O elemento atual aponta para o proximo elemento
+    currentFrame->opStk = &currentFrame->opStk[1];
+    //Empilhamaos o valor no novo topo da pilha
+    currentFrame->opStk->top = value;
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void pushInOperandStackFromFrame(Frame* frame, u4 value){
+    Frame* currentFrame = frame;
     
     //A o proximo elemento do "vetor" alocado da pilha, aponta para o elemento atual
     currentFrame->opStk[1].nextStack = currentFrame->opStk;

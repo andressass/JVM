@@ -26,7 +26,8 @@ int main(int argc, const char * argv[]) {
     environment->thread = newThread();
     
     //Empilhamos o metodo main a ser inicializado
-    pushFrame(environment, argv[1], "main", "([Ljava/lang/String;)V");
+    Frame* newFrame = pushFrame(environment, argv[1], "main", "([Ljava/lang/String;)V");
+    newFrame->localVariablesVector[0] = (u4) argv+1;
     
     //Passamos o ambiente de execucao para o interpretador
     execute(environment);

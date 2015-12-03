@@ -68,6 +68,10 @@
             argument = "HelloWorld"
             isEnabled = "YES">
          </CommandLineArgument>
+         <CommandLineArgument
+            argument = "Teste t 1"
+            isEnabled = "YES">
+         </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>

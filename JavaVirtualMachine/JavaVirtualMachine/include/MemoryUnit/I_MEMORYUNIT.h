@@ -46,8 +46,9 @@ EXT10 MethodArea* newMethodArea();
  * \param className Nome qualificado da classe que contem o metodo a ser empilhado
  * \param methodName Nome do metodo a ser empilhado
  * \param methodDescriptor Descritor do metodo a ser executado (polimorfismo)
+ * \return referencia para o frame criado
  */
-EXT10 void pushFrame(Environment* environment, const char* className, const char* methodName,
+EXT10 Frame* pushFrame(Environment* environment, const char* className, const char* methodName,
                             const char*  methodDescriptor);
 
 
@@ -195,6 +196,16 @@ EXT10 Object* newObjectFromClass(const char* className, Environment* environment
  * \param value Valor a ser empilhado
  */
 EXT10 void pushInOperandStack(Thread* thread, u4 value);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que empilha um valor na pilha de operandos do frame passado como parametro
+ *
+ * \param frame Frame em cuja pilha de operandos o valor sera empilhado
+ * \param value Valor a ser empilhado
+ */
+EXT10 void pushInOperandStackFromFrame(Frame* frame, u4 value);
 
 
 //--------------------------------------------------------------------------------------------------

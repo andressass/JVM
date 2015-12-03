@@ -11,6 +11,20 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "printByteCode:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "bytecode[0]">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeName(mnemonic)">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeAttributesNumber(mnemonic)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "pushFrame:M_OPTHREAD.c">
       </ContextState>
       <ContextState
@@ -18,23 +32,31 @@
       </ContextState>
       <ContextState
          contextName = "main:M_BOOTLOADER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "argv+1">
+            </PersistentString>
+            <PersistentString
+               value = "newFrame-&gt;localVariablesVector[0]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "classInitializer:M_CLASSLOADER.c">
-      </ContextState>
-      <ContextState
-         contextName = "getMethodInfoFromClass:M_OPMETHODAREA.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "javaClass-&gt;arqClass-&gt;methods[i]">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "decode:M_DECODER.c">
          <PersistentStrings>
             <PersistentString
                value = "getOpcodeName(bytecode)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "getMethodInfoFromClass:M_OPMETHODAREA.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "javaClass-&gt;arqClass-&gt;methods[i]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -56,10 +78,50 @@
          contextName = "addJavaClassToMethodArea:M_OPMETHODAREA.c">
       </ContextState>
       <ContextState
+         contextName = "printByteCodes:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "getOpcodeName(05)">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeAttributesNumber(*bc)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "getUTF8FromConstantPool:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
                value = "cp[12]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "getOpcodeAttributesNumber:OPCODES.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "params[4]">
+            </PersistentString>
+            <PersistentString
+               value = "params[1]&#9;">
+            </PersistentString>
+            <PersistentString
+               value = "params[3]">
+            </PersistentString>
+            <PersistentString
+               value = "params-codeBegin">
+            </PersistentString>
+            <PersistentString
+               value = "params[0]">
+            </PersistentString>
+            <PersistentString
+               value = "params[5]">
+            </PersistentString>
+            <PersistentString
+               value = "params[2]">
+            </PersistentString>
+            <PersistentString
+               value = "&amp;params">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
