@@ -17,14 +17,6 @@
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ExecutionEngine/I_INSTLOGARITH.h"
 
-//Gambiarra de instrucao
-void iadd_GAMBIARRA(Thread* thread){
-    
-    int a = popFromOperandStack(thread);
-    int b = popFromOperandStack(thread);
-    
-    pushInOperandStack(thread, a+b);
-}
 
 //--------------------------------------------------------------------------------------------------
 instruction decode(u1 bytecode){
