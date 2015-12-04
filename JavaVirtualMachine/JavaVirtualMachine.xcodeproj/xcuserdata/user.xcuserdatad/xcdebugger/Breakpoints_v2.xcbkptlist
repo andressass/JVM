@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452215.001127"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "classInitializeField()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452327.885516"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236">
+            startingLineNumber = "231"
+            endingLineNumber = "231">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452327.885516"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209">
+            startingLineNumber = "210"
+            endingLineNumber = "210">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -54,11 +54,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470798633.086794"
+            timestampString = "470882796.948374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56">
+            startingLineNumber = "96"
+            endingLineNumber = "96">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
-            timestampString = "470363944.996414"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "newMethodArea()"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPTHREAD.c"
-            timestampString = "470450833.899455"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "pushFrame()"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452327.885516"
+            timestampString = "470867992.702771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "loadCLass()"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452327.885516"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "classInitializer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
-            timestampString = "470366704.394192"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "addJavaClassToMethodArea()"
             landmarkType = "7">
          </BreakpointContent>
@@ -148,11 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPTHREAD.c"
-            timestampString = "470450833.899455"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "pushFrame()"
             landmarkType = "7">
          </BreakpointContent>
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
-            timestampString = "470370212.389736"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116">
+            startingLineNumber = "119"
+            endingLineNumber = "119">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -178,11 +178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPTHREAD.c"
-            timestampString = "470798633.086794"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137">
+            startingLineNumber = "141"
+            endingLineNumber = "141">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -192,11 +192,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPTHREAD.c"
-            timestampString = "470450844.731423"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "pushFrame()"
             landmarkType = "7">
          </BreakpointContent>
@@ -208,11 +208,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452215.001127"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "classInitializeFields()"
             landmarkType = "7">
          </BreakpointContent>
@@ -224,11 +224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452215.001127"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "classInitializeFields()"
             landmarkType = "7">
          </BreakpointContent>
@@ -240,11 +240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452327.885516"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "classInitializeFields()"
             landmarkType = "7">
          </BreakpointContent>
@@ -256,11 +256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470452327.885516"
+            timestampString = "470865962.7777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "classInitializeFields()"
             landmarkType = "7">
          </BreakpointContent>
@@ -272,11 +272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPTHREAD.c"
-            timestampString = "470454338.524862"
+            timestampString = "470868962.6861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "pushFrame()"
             landmarkType = "7">
          </BreakpointContent>
@@ -336,11 +336,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470798633.086794"
+            timestampString = "470881209.933615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>
@@ -352,27 +352,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470798633.086794"
+            timestampString = "470881209.933615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "main()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470798629.692034"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>
@@ -460,7 +444,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
@@ -486,6 +470,38 @@
             startingLineNumber = "1169"
             endingLineNumber = "1169"
             landmarkName = "getOpcodeAttributesNumber()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
+            timestampString = "470867992.702771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "751"
+            endingLineNumber = "751"
+            landmarkName = "LECLASS_exibeErroOperacao()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
+            timestampString = "470867992.702771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "771"
+            endingLineNumber = "771"
+            landmarkName = "LECLASS_exibeErroOperacao()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

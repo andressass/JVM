@@ -152,7 +152,7 @@ field_or_method* leCampMetd(u2 count, FILE* arq){
  * \param arq       Arquivo ".class" a ser lido.
  * \return          Resultado da operacao
  */
-resultado arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
+OPresult arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
     
     //Lemos e verificamos o Magic e as versoes
     arq_class->magic = u4Le(arq);
@@ -193,7 +193,7 @@ resultado arquivoParaArqClass(ArqClass* arq_class, FILE* arq){
 
 
 //--------------------------------------------------------------------------------------------------
-resultado LECLASS_leitor(ArqClass* arq_class, const char* arq){
+OPresult LECLASS_leitor(ArqClass* arq_class, const char* arq){
 
     FILE *entrada;
 
@@ -204,7 +204,7 @@ resultado LECLASS_leitor(ArqClass* arq_class, const char* arq){
     if (!entrada) return LinkageError_NoClassDefFoundError;
 
     //Lemos os dados e salvamos na estrutura ArqClass
-    resultado result = arquivoParaArqClass(arq_class, entrada);
+    OPresult result = arquivoParaArqClass(arq_class, entrada);
     
     fclose(entrada);
     

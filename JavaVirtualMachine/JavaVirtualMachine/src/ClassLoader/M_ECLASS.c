@@ -366,7 +366,7 @@ void exibeCtePool(ArqClass* arq_class){
          cp < arq_class->constant_pool + arq_class->constant_pool_count - 1;
          cp++)
     {
-        printf("%ld. ", (cp - arq_class->constant_pool +1));
+        printf("%d. ", (cp - arq_class->constant_pool +1));
         //Imprimimos o elemento
         printFromPool(cp, arq_class->constant_pool);
     }
@@ -687,7 +687,7 @@ void exibeMetodos(ArqClass* arq_class){
 
 
 //--------------------------------------------------------------------------------------------------
-resultado LECLASS_exibidor(ArqClass* arq_class){
+OPresult LECLASS_exibidor(ArqClass* arq_class){
     
     printf("\n####################################################\n");
     printf("DETALHES DO ARQUIVO .CLASS");
@@ -746,7 +746,7 @@ resultado LECLASS_exibidor(ArqClass* arq_class){
 
 
 //--------------------------------------------------------------------------------------------------
-void LECLASS_exibeErroOperacao(resultado resultado, const char* fileName){
+void LECLASS_exibeErroOperacao(OPresult resultado, const char* fileName){
     
     switch (resultado) {
         case LinkageError_NoClassDefFoundError:
@@ -761,7 +761,12 @@ void LECLASS_exibeErroOperacao(resultado resultado, const char* fileName){
             printf("\nA versao do arquivo .class eh imcompativel. Arquivo: \"%s\".\n", fileName);
             break;
             
+        case LinkageError_ClassCirculatityError:
+            printf("\nDetectado erro de circularidade de classes. Arquivo: \"%s\".\n", fileName);
+            break;
+            
         default:
+            printf("\nErro de linkagem. Arquivo: \"%s\".\n", fileName);
             break;
     }
 

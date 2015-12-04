@@ -32,7 +32,7 @@ OUT_win = bin\jvm.exe
 DOXYGEN_CONFIG = docs/doxygen/doxygen_config
 
 all_unix:
-	$(CC) $(STD) $(HEADER) $(SOURCES)
+	$(CC) $(STD) $(HEADER) $(SOURCES) -m32
 	mv a.out $(OUT)
 	rm $(CLASS_LOADER_GCH)
 	rm $(ESTRUTURAS_GCH)
@@ -40,7 +40,7 @@ all_unix:
 	rm $(EXECUTION_ENGINE_GCH)
 
 all_win:
-	$(CC) $(STD) $(HEADER) $(SOURCES)
+	$(CC) $(STD) $(HEADER) $(SOURCES) -m32
 
 
 doxygen:

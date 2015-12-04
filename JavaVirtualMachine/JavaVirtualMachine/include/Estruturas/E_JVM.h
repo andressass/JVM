@@ -110,8 +110,10 @@
 typedef unsigned char u1; //!< Representa 1 byte
 typedef unsigned short u2; //!< Representa 2 bytes
 typedef unsigned int  u4; //!< Representa 4 bytes
-typedef unsigned short resultado; //!< Representa o resultado de uma operacao
+typedef unsigned short OPresult; //!< Representa o resultado de uma operacao
 typedef  char String[STRING_LENGTH];
+
+
 //--------------------------------------------------------------------------------------------------
 //! Estrutura do Pool de Constantes
 /*!
@@ -281,6 +283,8 @@ typedef struct arqClass {
 } ArqClass;
 
 
+
+
 //--------------------------------------------------------------------------------------------------
 //! Estrutura da FieldsTable
 /*!
@@ -440,4 +444,5 @@ typedef struct Environment{
  *
  */
 typedef void (*instruction)(Thread*);
+
 #endif

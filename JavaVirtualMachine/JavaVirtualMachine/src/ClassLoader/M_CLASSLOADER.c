@@ -13,6 +13,7 @@
 #include "../../include/ClassLoader/I_CLASSLOADER.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
 #define M_CLASSLOADER_SERV
 
@@ -217,12 +218,6 @@ void classSuperClassChecker(ArqClass* arqClass, Environment* enviroment){
     //Verificamos se a superclasse ja fora carregada. Caso nao, carregamos recursivamente
     if(findJavaClassOnMethodArea(superClassName, enviroment->methodArea) == NULL)
         superClass = loadCLass(superClassName, enviroment);
-    
-    if (superClass == NULL){
-        //TODO: ERROR_REPORT();
-        exit(-1);
-    }
-    
 }
 
 
@@ -273,7 +268,8 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     
     //Caso tenha ocorrido algum erro de leitura, apontamos
     if (opResult != LinkageSuccess) {
-        LECLASS_exibeErroOperacao(opResult, qualifiedName);
+        LECLASS_exibeErroOperacao(opResult, fileName);
+        JVMstopAbrupt(NULL);
         return NULL;
     }
     javaClass->arqClass = arqClass;
@@ -282,7 +278,8 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     // Parte ja realizada na leitura do arquivo
     opResult = classVerifier(arqClass);
     if (opResult != LinkageSuccess) {
-        LECLASS_exibeErroOperacao(opResult, qualifiedName);
+        LECLASS_exibeErroOperacao(opResult, fileName);
+        JVMstopAbrupt(NULL);
         return NULL;
     }
     

@@ -3,7 +3,7 @@
  *
  *  \brief Biblioteca de servicos de Opcodes
  *
- *  Bliblioteca responsavel por prover as definicoes e metodos relacionados aos opcodes de uma JVM
+ *  Biblioteca responsavel por prover as definicoes e metodos relacionados aos opcodes de uma JVM
  */
 //##################################################################################################
 

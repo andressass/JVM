@@ -144,7 +144,7 @@ char* getOpcodeName(u1 opcode){
             op_name = "dneg";
             break;
         case OP_drem:
-            op_name = "drem";
+            op_name = "Drem";
             break;
         case OP_dreturn:
             op_name = "dreturn";
@@ -513,7 +513,7 @@ char* getOpcodeName(u1 opcode){
             op_name = "ldc2_w";
             break;
         case OP_ldiv:
-            op_name = "ldiv";
+            op_name = "Ldiv";
             break;
         case OP_lload:
             op_name = "lload";
@@ -1289,7 +1289,7 @@ short getOpcodeAttributesNumber(u1 opcode, u1* params, u1* codeBegin){
             max = max << 8 | *params++;
             
             result = pad + 11 + (max-min+1)*4;
-            break; 
+            break;
         case OP_wide:
             result = (*params == OP_iinc) ? 5 : 3;
             break;

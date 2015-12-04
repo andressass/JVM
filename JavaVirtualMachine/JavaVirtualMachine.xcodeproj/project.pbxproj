@@ -10,6 +10,9 @@
 		448941021C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c in Sources */ = {isa = PBXBuildFile; fileRef = 448941011C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c */; };
 		CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */; };
 		CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */; };
+		CE618CDB1C10D1B400FDD92F /* M_EXCEPTION.c in Sources */ = {isa = PBXBuildFile; fileRef = CE618CDA1C10D1B400FDD92F /* M_EXCEPTION.c */; };
+		CE618CDF1C110DD200FDD92F /* JAVASTRING.c in Sources */ = {isa = PBXBuildFile; fileRef = CE618CDE1C110DD200FDD92F /* JAVASTRING.c */; };
+		CE618CE11C111AF300FDD92F /* M_INSTLOGARITH.c in Sources */ = {isa = PBXBuildFile; fileRef = CE618CE01C111AF300FDD92F /* M_INSTLOGARITH.c */; };
 		CE8EFA961C092E8600F1010B /* M_INTERPRETER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */; };
 		CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB3F21C08A019004DBA0C /* M_OPMETHODAREA.c */; };
 		CE9FB3F51C08BC61004DBA0C /* M_OPTHREAD.c in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB3F41C08BC61004DBA0C /* M_OPTHREAD.c */; };
@@ -38,6 +41,11 @@
 		CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_DECODER.c; path = src/ExecutionEngine/M_DECODER.c; sourceTree = "<group>"; };
 		CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = OPCODES.c; path = src/Estruturas/OPCODES.c; sourceTree = "<group>"; };
 		CE33EE631BFCFB2400A4003B /* JavaVirtualMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JavaVirtualMachine; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE618CD91C10D19100FDD92F /* I_EXCEPTION.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = I_EXCEPTION.h; path = include/ExecutionEngine/I_EXCEPTION.h; sourceTree = "<group>"; };
+		CE618CDA1C10D1B400FDD92F /* M_EXCEPTION.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_EXCEPTION.c; path = src/ExecutionEngine/M_EXCEPTION.c; sourceTree = "<group>"; };
+		CE618CDD1C110DBD00FDD92F /* JAVASTRING.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAVASTRING.h; path = include/Estruturas/JAVASTRING.h; sourceTree = "<group>"; };
+		CE618CDE1C110DD200FDD92F /* JAVASTRING.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = JAVASTRING.c; path = src/Estruturas/JAVASTRING.c; sourceTree = "<group>"; };
+		CE618CE01C111AF300FDD92F /* M_INSTLOGARITH.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INSTLOGARITH.c; path = src/ExecutionEngine/M_INSTLOGARITH.c; sourceTree = "<group>"; };
 		CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INTERPRETER.c; path = src/ExecutionEngine/M_INTERPRETER.c; sourceTree = "<group>"; };
 		CE9FB3F21C08A019004DBA0C /* M_OPMETHODAREA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPMETHODAREA.c; path = src/MemoryUnit/M_OPMETHODAREA.c; sourceTree = "<group>"; };
 		CE9FB3F41C08BC61004DBA0C /* M_OPTHREAD.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_OPTHREAD.c; path = src/MemoryUnit/M_OPTHREAD.c; sourceTree = "<group>"; };
@@ -147,8 +155,10 @@
 			children = (
 				448941011C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c */,
 				CEAC722C1BFD6BD5006F4F9B /* M_BOOTLOADER.c */,
+				CE618CE01C111AF300FDD92F /* M_INSTLOGARITH.c */,
 				CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */,
 				CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */,
+				CE618CDA1C10D1B400FDD92F /* M_EXCEPTION.c */,
 			);
 			name = ExecutionEngine;
 			sourceTree = "<group>";
@@ -182,6 +192,7 @@
 				CEA0E8BF1C0209E3008656B1 /* I_INSTLOADSTORAGE.h */,
 				CEA0E8C01C020A0F008656B1 /* I_INSTCOMPANDJMP.h */,
 				CEA0E8C11C020A28008656B1 /* I_INSTGENERIC.h */,
+				CE618CD91C10D19100FDD92F /* I_EXCEPTION.h */,
 			);
 			name = ExecutionEngine;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 			children = (
 				CEAC72261BFCFEE3006F4F9B /* E_JVM.h */,
 				CEAC72271BFCFEE3006F4F9B /* OPCODES.h */,
+				CE618CDD1C110DBD00FDD92F /* JAVASTRING.h */,
 			);
 			name = Estruturas;
 			sourceTree = "<group>";
@@ -199,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */,
+				CE618CDE1C110DD200FDD92F /* JAVASTRING.c */,
 			);
 			name = Estruturas;
 			sourceTree = "<group>";
@@ -260,13 +273,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8EFA961C092E8600F1010B /* M_INTERPRETER.c in Sources */,
+				CE618CDB1C10D1B400FDD92F /* M_EXCEPTION.c in Sources */,
 				CE9FB3F51C08BC61004DBA0C /* M_OPTHREAD.c in Sources */,
 				CEAC72241BFCFE68006F4F9B /* MP_LECLASS.c in Sources */,
 				CEAC722D1BFD6BD5006F4F9B /* M_BOOTLOADER.c in Sources */,
+				CE618CE11C111AF300FDD92F /* M_INSTLOGARITH.c in Sources */,
 				CEAC72201BFCFE68006F4F9B /* M_ECLASS.c in Sources */,
 				CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */,
 				448941021C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c in Sources */,
 				CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */,
+				CE618CDF1C110DD200FDD92F /* JAVASTRING.c in Sources */,
 				CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */,
 				CEEF15501C05C90F00A8D077 /* M_CLASSLOADER.c in Sources */,
 				CEAC72221BFCFE68006F4F9B /* M_LCLASS.c in Sources */,
