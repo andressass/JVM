@@ -3,7 +3,7 @@
  *
  *  \brief Modulo de excessoes da JVM.
  *
- *  Interface responsavel por implementar os servicos relacionados ao tratamento de excessoes
+ *  Modulo responsavel por implementar os servicos relacionados ao tratamento de excessoes
  *  lancadas pela JVM.
  */
 //##################################################################################################

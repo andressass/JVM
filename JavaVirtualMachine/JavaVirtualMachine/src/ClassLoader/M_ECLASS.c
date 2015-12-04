@@ -13,52 +13,9 @@
 
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/Estruturas/OPCODES.h"
+#include "../../include/Util/I_TYPECONVERSION.h"
 #include <string.h>
 #include <wchar.h>
-
-//--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que que realiza a conversao de um u4 (little-endian) para um double em big-endian order.
- *
- * \param high_bytes    Bytes de mais alta ordem.
- * \param low_bytes     Bytes de mais baixa ordem.
- */
-double u4ToDouble(u4 high_bytes, u4 low_bytes){
-    double resultado;
-    unsigned char b[8]; //vetor de 8 Bytes
-    
-    //Trocamos a ordem dos bytes salvando no vetor de bytes
-    for (int i = 0; i < 4; i++) b[i] = low_bytes >> i * 8;
-    for (int i = 4; i < 8; i++) b[i] = high_bytes >> i * 8;
-    
-    
-    //Copiamos os bytes do vetor de bytes para o float
-    memcpy(&resultado, &b, sizeof(resultado));
-    
-    return resultado;
-}
-
-
-//--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que que realiza a conversao de um u4 (little-endian) para um float em big-endian order.
- *
- * \param bytes    Bytes em u4.
- */
-float u4ToFLoat(u4 bytes){
-    
-    float resultado;
-    unsigned char b[4]; //vetor de 4 Bytes
-    
-    //Trocamos a ordem dos bytes salvando no vetor de bytes
-    for (int i = 0; i < 4; i++) b[i] = bytes >> i * 8;
-    
-    //Copiamos os bytes do vetor de bytes para o float
-    memcpy(&resultado, &b, sizeof(resultado));
-    
-    return resultado;
-}
-
 
 //--------------------------------------------------------------------------------------------------
 wchar_t * getUnicodeFromConstantPool(cp_info* cp, u2 index){

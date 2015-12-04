@@ -3,7 +3,7 @@
  *
  *  \brief Modulo do Decodificador da JVM.
  *
- *  Interface responsavel pela implementacao os servicos relacionados a decodificacao de bytecodes
+ *  Modulo responsavel pela implementacao os servicos relacionados a decodificacao de bytecodes
  *  em instrucoes.
  */
 //##################################################################################################

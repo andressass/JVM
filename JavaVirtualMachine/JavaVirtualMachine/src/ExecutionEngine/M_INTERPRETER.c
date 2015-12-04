@@ -3,7 +3,7 @@
  *
  *  \brief Modulo do Interpretador da JVM.
  *
- *  Interface responsavel por implentar os servicos relacionados ao interpretador da JVM.
+ *  Modulo responsavel por implentar os servicos relacionados ao interpretador da JVM.
  */
 //##################################################################################################
 

@@ -3,7 +3,7 @@
  *
  *  \brief Modulo das Instrucoes de carga e armazenamento da JVM.
  *
- *  Interface responsavel pela implementacao dos servicos relacionados a instrucoes que transferem 
+ *  Modulo responsavel pela implementacao dos servicos relacionados a instrucoes que transferem 
  *  valores entre o vetor de variaveis locais e a pilha de operandos de um frame de um metodo.
  */
 //##################################################################################################
@@ -15,6 +15,7 @@
 #include "../../include/ExecutionEngine/I_INSTLOADSTORAGE.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include "../../include/Util/I_TYPECONVERSION.h"
 
 
 
@@ -189,7 +190,7 @@ void ldc(Thread* thread){
     }
     else if (tag_valor_constant_pool == CONSTANT_Float){
         
-        float valor_numerico_f = (float)thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].u.Float.bytes;
+        float valor_numerico_f = u4ToFLoat(thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].u.Float.bytes);
         
         pushInOperandStack(thread, valor_numerico_f);
     }
@@ -270,9 +271,9 @@ void ldc2_w(Thread* thread){
     else if (tag_valor_constant_pool == CONSTANT_Double){
         
         //Estrutura Long e Double possuem o mesmo formato
-        float valor_numerico_high_f = (float)thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Double.high_bytes;
+        float valor_numerico_high_f = u4ToFLoat(thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Double.high_bytes);
         
-        float valor_numerico_low_f = (float)thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Double.low_bytes;
+        float valor_numerico_low_f = u4ToFLoat(thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Double.low_bytes);
         
         pushInOperandStack(thread, valor_numerico_low_f);
         pushInOperandStack(thread, valor_numerico_high_f);
@@ -322,7 +323,7 @@ void fload(Thread* thread){
                                               ,thread->PC);
     
     
-    float valor_numerico = (float)thread->vmStack->top->localVariablesVector[index_argument-1];
+    float valor_numerico = u4ToFLoat(thread->vmStack->top->localVariablesVector[index_argument-1]);
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -337,9 +338,9 @@ void dload(Thread* thread){
                                               ,thread->PC);
     
     
-    float valor_numerico_high = (float)thread->vmStack->top->localVariablesVector[index_argument-1];
+    float valor_numerico_high = u4ToFLoat(thread->vmStack->top->localVariablesVector[index_argument-1]);
     
-    float valor_numerico_low = (float)thread->vmStack->top->localVariablesVector[index_argument];
+    float valor_numerico_low = u4ToFLoat(thread->vmStack->top->localVariablesVector[index_argument]);
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -448,7 +449,7 @@ void lload_3(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void fload_0(Thread* thread){
     
-    float valor_numerico = (float)thread->vmStack->top->localVariablesVector[0];
+    float valor_numerico = u4ToFLoat(thread->vmStack->top->localVariablesVector[0]);
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -457,7 +458,7 @@ void fload_0(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void fload_1(Thread* thread){
     
-    float valor_numerico = (float)thread->vmStack->top->localVariablesVector[1];
+    float valor_numerico = u4ToFLoat(thread->vmStack->top->localVariablesVector[1]);
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -466,7 +467,7 @@ void fload_1(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void fload_2(Thread* thread){
     
-    float valor_numerico = (float)thread->vmStack->top->localVariablesVector[2];
+    float valor_numerico = u4ToFLoat(thread->vmStack->top->localVariablesVector[2]);
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -475,7 +476,7 @@ void fload_2(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void fload_3(Thread* thread){
     
-    float valor_numerico = (float)thread->vmStack->top->localVariablesVector[3];
+    float valor_numerico = u4ToFLoat(thread->vmStack->top->localVariablesVector[3]);
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -484,9 +485,9 @@ void fload_3(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void dload_0(Thread* thread){
     
-    float valor_numerico_high = (float)thread->vmStack->top->localVariablesVector[0];
+    float valor_numerico_high = u4ToFLoat(thread->vmStack->top->localVariablesVector[0]);
     
-    float valor_numerico_low = (float)thread->vmStack->top->localVariablesVector[1];
+    float valor_numerico_low = u4ToFLoat(thread->vmStack->top->localVariablesVector[1]);
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -496,9 +497,9 @@ void dload_0(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void dload_1(Thread* thread){
     
-    float valor_numerico_high = (float)thread->vmStack->top->localVariablesVector[1];
+    float valor_numerico_high = u4ToFLoat(thread->vmStack->top->localVariablesVector[1]);
     
-    float valor_numerico_low = (float)thread->vmStack->top->localVariablesVector[2];
+    float valor_numerico_low = u4ToFLoat(thread->vmStack->top->localVariablesVector[2]);
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -508,9 +509,9 @@ void dload_1(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void dload_2(Thread* thread){
     
-    float valor_numerico_high = (float)thread->vmStack->top->localVariablesVector[2];
+    float valor_numerico_high = u4ToFLoat(thread->vmStack->top->localVariablesVector[2]);
 
-    float valor_numerico_low = (float)thread->vmStack->top->localVariablesVector[3];
+    float valor_numerico_low = u4ToFLoat(thread->vmStack->top->localVariablesVector[3]);
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -520,9 +521,9 @@ void dload_2(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void dload_3(Thread* thread){
     
-    float valor_numerico_high = (float)thread->vmStack->top->localVariablesVector[3];
+    float valor_numerico_high = u4ToFLoat(thread->vmStack->top->localVariablesVector[3]);
     
-    float valor_numerico_low = (float)thread->vmStack->top->localVariablesVector[4];
+    float valor_numerico_low = u4ToFLoat(thread->vmStack->top->localVariablesVector[4]);
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -567,6 +568,88 @@ void aload_3(Thread* thread){
 
 //--------------------------------------------------------------------------------------------------
 void iaload(Thread* thread){
+    
+    u4 index = popFromOperandStack(thread);
+    
+    int* arrayref = (int*) popFromOperandStack(thread);
+    
+    if (arrayref == NULL) {
+        //TODO: throw NullPointerException;
+    }
+    
+    //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
+    
+    int valor_numerico = *(arrayref+index);
+    
+    pushInOperandStack(thread, valor_numerico);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void laload(Thread* thread){
+    
+    u4 index = popFromOperandStack(thread);
+    
+    int* arrayref = (int*) popFromOperandStack(thread);
+    
+    if (arrayref == NULL) {
+        //TODO: throw NullPointerException;
+    }
+    
+    //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
+    
+    int valor_numerico_high = *(arrayref+index);
+    
+    int valor_numerico_low = *(arrayref+index+1);
+    
+    pushInOperandStack(thread, valor_numerico_low);
+    pushInOperandStack(thread, valor_numerico_high);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void faload(Thread* thread){
+    
+    u4 index = popFromOperandStack(thread);
+    
+    int* arrayref = (int*) popFromOperandStack(thread);
+    
+    if (arrayref == NULL) {
+        //TODO: throw NullPointerException;
+    }
+    
+    //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
+    
+    float valor_numerico = *(arrayref+index);
+    
+    pushInOperandStack(thread, valor_numerico);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void daload(Thread* thread){
+    
+    u4 index = popFromOperandStack(thread);
+    
+    int* arrayref = (int*) popFromOperandStack(thread);
+    
+    if (arrayref == NULL) {
+        //TODO: throw NullPointerException;
+    }
+    
+    //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
+    
+    float valor_numerico_high = *(arrayref+index);
+    
+    float valor_numerico_low = *(arrayref+index+1);
+    
+    pushInOperandStack(thread, valor_numerico_low);
+    pushInOperandStack(thread, valor_numerico_high);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void aaload(Thread* thread){
     
     u4 index = popFromOperandStack(thread);
     

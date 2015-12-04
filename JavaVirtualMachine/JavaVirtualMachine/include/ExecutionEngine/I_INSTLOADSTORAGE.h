@@ -468,4 +468,48 @@ EXT14 void aload_3(Thread* thread);
  */
 EXT14 void iaload(Thread* thread);
 
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo long.
+ * O index tambem eh desempilhado e deve ser do tipo int. O valor long no componente do vetor eh
+ * recuperado no index e empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void laload(Thread* thread);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo float.
+ * O index tambem eh desempilhado e deve ser do tipo int. O valor float no componente do vetor eh
+ * recuperado no index e empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void faload(Thread* thread);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo double.
+ * O index tambem eh desempilhado e deve ser do tipo int. O valor double no componente do vetor eh
+ * recuperado no index e empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void daload(Thread* thread);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo reference.
+ * O index tambem eh desempilhado e deve ser do tipo int. O valor reference no componente do vetor eh
+ * recuperado no index e empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void aaload(Thread* thread);
+
 #endif /* I_INSTLOADSTORAGE_h */
