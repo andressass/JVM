@@ -53,7 +53,6 @@ EXT4 OPresult LECLASS_exibidor(ArqClass* arq_class);
 EXT4 void LECLASS_free(ArqClass* arq_class);
 
 
-
 //--------------------------------------------------------------------------------------------------
 /*!
  * Metodo responsavel por prover mensagens de resuldados de erro de operacoes do leitor ".class"
@@ -62,6 +61,7 @@ EXT4 void LECLASS_free(ArqClass* arq_class);
  * \param fileName         Nome do arquivo
  */
 EXT4 void LECLASS_exibeErroOperacao(OPresult resultado, const char* fileName);
+
 
 //--------------------------------------------------------------------------------------------------
 /*!

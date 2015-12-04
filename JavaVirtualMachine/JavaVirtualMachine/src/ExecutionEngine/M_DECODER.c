@@ -18,14 +18,6 @@
 #include "../../include/ExecutionEngine/I_INSTLOGARITH.h"
 #include "../../include/ExecutionEngine/I_INSTLOADSTORAGE.h"
 
-//Gambiarra de instrucao
-void iadd_GAMBIARRA(Thread* thread){
-    
-    int a = popFromOperandStack(thread);
-    int b = popFromOperandStack(thread);
-    
-    pushInOperandStack(thread, a+b);
-}
 
 //--------------------------------------------------------------------------------------------------
 instruction decode(u1 bytecode){
