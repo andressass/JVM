@@ -275,6 +275,27 @@ instruction decode(u1 bytecode){
         case OP_iaload:
             return iaload;
             break;
+        case OP_laload:
+            return laload;
+            break;
+        case OP_faload:
+            return faload;
+            break;
+        case OP_daload:
+            return daload;
+            break;
+        case OP_aaload:
+            return aaload;
+            break;
+        case OP_baload:
+            return baload;
+            break;
+        case OP_caload:
+            return caload;
+            break;
+        case OP_saload:
+            return saload;
+            break;
         default:
             break;
     }

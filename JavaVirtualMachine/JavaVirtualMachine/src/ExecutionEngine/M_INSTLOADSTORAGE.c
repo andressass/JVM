@@ -666,3 +666,46 @@ void aaload(Thread* thread){
     pushInOperandStack(thread, valor_numerico);
 }
 
+
+//--------------------------------------------------------------------------------------------------
+//TODO: descobrir como se sabe o tipo do array.
+void baload(Thread* thread){}
+
+
+//--------------------------------------------------------------------------------------------------
+void caload(Thread* thread){
+    
+    u4 index = popFromOperandStack(thread);
+    
+    int* arrayref = (int*) popFromOperandStack(thread);
+    
+    if (arrayref == NULL) {
+        //TODO: throw NullPointerException;
+    }
+    
+    //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
+    
+    int valor_numerico = (unsigned char)(*(arrayref+index));
+    
+    pushInOperandStack(thread, valor_numerico);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void saload(Thread* thread){
+    
+    u4 index = popFromOperandStack(thread);
+    
+    int* arrayref = (int*) popFromOperandStack(thread);
+    
+    if (arrayref == NULL) {
+        //TODO: throw NullPointerException;
+    }
+    
+    //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
+    
+    int valor_numerico = *(arrayref+index);
+    
+    pushInOperandStack(thread, valor_numerico);
+}
+

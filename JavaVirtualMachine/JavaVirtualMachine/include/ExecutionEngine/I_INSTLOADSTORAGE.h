@@ -512,4 +512,39 @@ EXT14 void daload(Thread* thread);
  */
 EXT14 void aaload(Thread* thread);
 
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo byte
+ * ou do tipo boolean. O index tambem eh desempilhado e deve ser do tipo int. O valor no componente 
+ * do vetor eh recuperado no index e, caso seja do tipo byte, ele eh estendido com sinal ou, caso o
+ * valor seja do tipo booleano, ele eh estendido sem sinal e empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void baload(Thread* thread);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo char e fazer referencia a um vetor cujo os componentes sao do tipo char.
+ * O index tambem eh desempilhado e deve ser do tipo int. O valor char no componente do vetor eh
+ * recuperado no index e estendido sem sinal. Ele eh empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void caload(Thread* thread);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref,
+ * que deve ser do tipo char e fazer referencia a um vetor cujo os componentes sao do tipo short.
+ * O index tambem eh desempilhado e deve ser do tipo int. O valor short no componente do vetor eh
+ * recuperado no index e estendido com sinal para um valor int. Ele eh empilhado na pilha de operandos.
+ *
+ * \param thread Thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void saload(Thread* thread);
+
+
 #endif /* I_INSTLOADSTORAGE_h */
