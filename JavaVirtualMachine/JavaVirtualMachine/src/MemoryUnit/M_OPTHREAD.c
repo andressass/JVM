@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -52,13 +53,16 @@ Frame* pushFrame(Environment* environment, const char* className, const char* me
     
     //Buscamos o endereco do metodo
     newFrame->method_info = getMethodInfoFromClass(newFrame->javaClass, methodName, MethodDescriptor);
+    
     //TODO: VERIFICAR RESTRICOES DE ACESSO DO METODO
     
     //Obtemos o atributo code do metodo
     CodeAttribute* methodCode = getCodeAttributeFromMethod(newFrame->javaClass, methodName,
                                                            MethodDescriptor);
     
-    //TODO: Lancamento de erro caso nao exista atributo code
+    //Lancamento de erro caso nao exista atributo code
+    if(methodCode == NULL)
+        JVMstopAbrupt("Metodo nao possui atributo CODE.");
     
     //Alocamos o array de variaveis locais
     newFrame->localVariablesVector = (u4*) calloc(methodCode->max_locals, sizeof(u4));

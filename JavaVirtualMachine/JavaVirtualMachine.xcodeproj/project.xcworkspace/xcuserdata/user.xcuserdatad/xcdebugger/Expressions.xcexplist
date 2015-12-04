@@ -25,6 +25,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "LECLASS_exibeErroOperacao:M_ECLASS.c">
+      </ContextState>
+      <ContextState
          contextName = "pushFrame:M_OPTHREAD.c">
       </ContextState>
       <ContextState
@@ -32,6 +35,11 @@
       </ContextState>
       <ContextState
          contextName = "main:M_BOOTLOADER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "argv[i]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "classInitializer:M_CLASSLOADER.c">

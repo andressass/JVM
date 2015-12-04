@@ -17,6 +17,7 @@
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ClassLoader/I_CLASSLOADER.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
 //--------------------------------------------------------------------------------------------------
 MethodArea* newMethodArea(){
@@ -69,7 +70,9 @@ void addJavaClassToMethodArea(JavaClass* javaClass, MethodArea* methodArea){
     methodArea->classCount ++;
     methodArea->classTable = realloc(methodArea->classTable,
                                                  methodArea->classCount *sizeof(ClassTable));
-    //TODO: Reportar erro de alocacao
+    //Reportar erro de alocacao
+    if(methodArea->classTable == NULL)
+        JVMstopAbrupt("Erro de alocacao de memoria na area de metodos.");
     
     //Adicionamos a referencia para a estrutura de classe
     methodArea->classTable[methodArea->classCount-1].javaClass = javaClass;
