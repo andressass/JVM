@@ -111,139 +111,139 @@ EXT11 void Ldiv(Thread*);
  *  \param Thread
  *  \return void
  */
-void fdiv(Thread*);
+EXT11 void fdiv(Thread*);
 /*!
  *  Instrucao para divisao de double de 64 bits
  *  \param Thread
  *  \return void
  */
-void ddiv(Thread*);
+EXT11 void ddiv(Thread*);
 /*!
  *  Instrucao para resto de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void irem(Thread*);
+EXT11 void irem(Thread*);
 /*!
  *  Instrucao para resto de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void lrem(Thread*);
+EXT11 void lrem(Thread*);
 /*!
  *  Instrucao para resto de float de 32 bits
  *  \param Thread
  *  \return void
  */
-void frem(Thread*);
+EXT11 void frem(Thread*);
 /*!
  *  Instrucao para resto de double de 64 bits
  *  \param Thread
  *  \return void
  */
-void Drem(Thread*);
+EXT11 void Drem(Thread*);
 /*!
  *  Instrucao para nega de inteiro de 32 bits
  *  \param Thread
  *  \return void
  */
-void ineg(Thread*);
+EXT11 void ineg(Thread*);
 /*!
  *  Instrucao para nega de inteiro de 64 bits
  *  \param Thread
  *  \return void
  */
-void lneg(Thread*);
+EXT11 void lneg(Thread*);
 /*!
  *  Instrucao para nega de float de 32 bits
  *  \param Thread
  *  \return void
  */
-void fneg(Thread*);
+EXT11 void fneg(Thread*);
 /*!
  *  Instrucao para nega de double de 64 bits
  *  \param Thread
  *  \return void
  */
-void dneg(Thread*);
+EXT11 void dneg(Thread*);
 /*!
  *  Instrucao para shift left de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void ishl(Thread*);
+EXT11 void ishl(Thread*);
 /*!
  *  Instrucao para shift left de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void lshl(Thread*);
+EXT11 void lshl(Thread*);
 /*!
  *  Instrucao para shift right de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void ishr(Thread*);
+EXT11 void ishr(Thread*);
 /*!
  *  Instrucao para shift right de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void lshr(Thread*);
+EXT11 void lshr(Thread*);
 /*!
  *  Instrucao para shift right sem sinal de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void iushr(Thread*);
+EXT11 void iushr(Thread*);
 /*!
  *  Instrucao para shift right sem sinal de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void lushr(Thread*);
+EXT11 void lushr(Thread*);
 /*!
  *  Instrucao para and de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void iand(Thread*);
+EXT11 void iand(Thread*);
 /*!
  *  Instrucao para and de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void land(Thread*);
+EXT11 void land(Thread*);
 /*!
  *  Instrucao para or de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void ior(Thread*);
+EXT11 void ior(Thread*);
 /*!
  *  Instrucao para or de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void lor(Thread*);
+EXT11 void lor(Thread*);
 /*!
  *  Instrucao para xor de inteiros de 32 bits
  *  \param Thread
  *  \return void
  */
-void ixor(Thread*);
+EXT11 void ixor(Thread*);
 /*!
  *  Instrucao para xor de inteiros de 64 bits
  *  \param Thread
  *  \return void
  */
-void lxor(Thread*);
+EXT11 void lxor(Thread*);
 /*!
  *  Instrucao para incremento de inteiros de 32 bits local
  *  \param Thread
  *  \return void
  */
-void iinc(Thread*);
+EXT11 void iinc(Thread*);
 
 
 
