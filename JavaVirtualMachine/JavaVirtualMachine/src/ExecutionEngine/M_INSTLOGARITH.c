@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file INST_LOG_ARIT.c
+/*! \file M_INSTLOGARITH.c
  *
  *  \brief Modulo que contem as instrucoes logicos aritmeticas.
  *
@@ -7,12 +7,14 @@
  */
 //##################################################################################################
 
+#define INSTLOGARITH_SERV
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-#include "../../include/Instrucoes/INST_LOG_ARIT.h"
+#include "../../include/ExecutionEngine/I_INSTLOGARITH.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 
 void iadd(Thread *thread){
