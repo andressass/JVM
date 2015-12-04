@@ -1,9 +1,27 @@
-//
-//  JAVAARRAY.c
-//  JavaVirtualMachine
-//
-//  Created by Andressa Sousa da Silveira on 04.12.15.
-//  Copyright © 2015 Rondinele Prado. All rights reserved.
-//
+//#################################################################################################
+/*! \file JAVAARRAY.c
+ *
+ *  \brief Biblioteca de arrays Java
+ *
+ *  Biblioteca responsavel por implementar os metodos relacionados aos arrays da JVM
+ */
+//##################################################################################################
 
-#include "JAVAARRAY.h"
+#define JAVAARRAY_SERV
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "../../include/Estruturas/JAVAARRAY.h"
+
+
+//--------------------------------------------------------------------------------------------------
+JavaArray* newJavaArray(u1 n_type, u2 n_length, u4* n_arrayAdress){
+    
+    JavaArray* array_info = (JavaArray*) malloc(sizeof(JavaArray));
+    array_info->type = n_type;
+    array_info->length = n_length;
+    array_info->arrayAddress = n_arrayAdress;
+    
+    return array_info;
+}
