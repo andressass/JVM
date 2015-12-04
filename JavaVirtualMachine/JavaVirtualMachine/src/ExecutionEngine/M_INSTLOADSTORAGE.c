@@ -25,7 +25,7 @@ void nop(Thread* thread){}
 //--------------------------------------------------------------------------------------------------
 void aconst_null(Thread* thread){
     
-    pushInOperandStack(thread, NULL);
+    pushInOperandStack(thread, (u4)NULL);
 }
 
 
@@ -81,8 +81,8 @@ void iconst_5(Thread* thread){
 //--------------------------------------------------------------------------------------------------
 void lconst_0(Thread* thread){
     
-    long long_const = 0;
-    
+//    long long_const = 0;
+//    
 //    u4 high_long = long_const>>32;
 //    u4 low_long = long_const&0x0000ffff;
     
