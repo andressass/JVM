@@ -371,6 +371,33 @@ instruction decode(u1 bytecode){
         case OP_astore_3:
             return astore_3;
             break;
+        case OP_iastore:
+            return iastore;
+            break;
+        case OP_lastore:
+            return lastore;
+            break;
+        case OP_fastore:
+            return fastore;
+            break;
+        case OP_dastore:
+            return dastore;
+            break;
+        case OP_aastore:
+            return aastore;
+            break;
+        case OP_bastore:
+            return bastore;
+            break;
+        case OP_castore:
+            return castore;
+            break;
+        case OP_sastore:
+            return sastore;
+            break;
+        case OP_wide:
+            return wide;
+            break;
         default:
             break;
     }
