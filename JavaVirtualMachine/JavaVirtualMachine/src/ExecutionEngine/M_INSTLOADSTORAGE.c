@@ -654,14 +654,14 @@ void baload(Thread* thread){
     }
     
     // Se o valor no componente do vetor for do tipo byte
-    if (array_info->type == CONSTANT_ARRAY_Byte) {
+    if (array_info->type == T_BYTE) {
         
         // O valor eh estendido com sinal
         valor_numerico = *((array_info->arrayAddress)+index-1);;
         
     }
     // Se o valor no componente do vetor for do tipo boolean
-    else if (array_info->type == CONSTANT_ARRAY_Boolean) {
+    else if (array_info->type == T_BOOLEAN) {
         
         // O valor eh estendido sem sinal
         valor_numerico = (u1)(*((array_info->arrayAddress)+index-1));
@@ -1107,14 +1107,14 @@ void bastore(Thread* thread){
     }
     
     // Se componentes do vetor forem do tipo byte
-    if (array_info->type == CONSTANT_ARRAY_Byte) {
+    if (array_info->type == T_BYTE) {
         
         // O int value eh truncado para byte
         valor_numerico = valor_numerico_int;
         
     }
     // Se componentes do vetor forem do tipo boolean
-    else if (array_info->type == CONSTANT_ARRAY_Boolean) {
+    else if (array_info->type == T_BOOLEAN) {
         
         // O int value eh truncado para o seu bit de ordem mais baixa e estendido sem sinal
         valor_numerico = (u1)(valor_numerico_int & 0x1);
@@ -1189,7 +1189,7 @@ void wide(Thread* thread){
     u2 index_result = (indexbyte1_argument << 8) | indexbyte2_argument;
     
     
-    // PRIMEIRA FORMA
+    // PRIMEIRO FORMATO
     if (opcode_argument == OP_iload || opcode_argument == OP_fload || opcode_argument == OP_aload) {
         
         u4 valor_numerico = thread->vmStack->top->localVariablesVector[index_result-1];
@@ -1222,7 +1222,7 @@ void wide(Thread* thread){
         //TODO:
     }
     
-    // SEGUNDA FORMA
+    // SEGUNDO FORMATO
     else if (opcode_argument == OP_iinc) {
         
         thread->PC++;

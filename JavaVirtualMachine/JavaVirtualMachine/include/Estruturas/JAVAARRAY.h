@@ -25,15 +25,14 @@
 //--------------------------------------------------------------------------------------------------
 //Tags do Pool de Constantes
 
-#define CONSTANT_ARRAY_Integer      1
-#define CONSTANT_ARRAY_Float        2
-#define CONSTANT_ARRAY_Long         3
-#define CONSTANT_ARRAY_Double       4
-#define CONSTANT_ARRAY_Reference    5
-#define CONSTANT_ARRAY_Byte         6
-#define CONSTANT_ARRAY_Boolean      7
-#define CONSTANT_ARRAY_Char         8
-#define CONSTANT_ARRAY_Short        9
+#define T_BOOLEAN   4
+#define T_CHAR      5
+#define T_FLOAT     6
+#define T_DOUBLE	7
+#define T_BYTE      8
+#define T_SHORT     9
+#define T_INT       10
+#define T_LONG      11
 
 
 
