@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../../include/ExecutionEngine/I_INSTLOADSTORAGE.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/Util/I_TYPECONVERSION.h"
 #include "../../include/Estruturas/JAVAARRAY.h"
@@ -632,7 +633,10 @@ void aaload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index-1));
+    //Verificacao de erro de acesso de indice
+    if (index >= array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
+    
+    u4 valor_numerico = *((u4*)(array_info->arrayAddress)+index);
     
     pushInOperandStack(environment->thread, valor_numerico);
 }

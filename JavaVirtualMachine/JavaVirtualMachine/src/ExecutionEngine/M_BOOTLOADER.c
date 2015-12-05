@@ -35,7 +35,8 @@ void configureClassMain(Environment* environment, int argc, const char* argv[]){
     
     //Criamos o conteudo do array e o JavaArray a receber o conteudo
     u4* stringArray = (u4*) malloc((argc-2)*sizeof(u4));
-    JavaArray* array = newJavaArray(T_INT, argc-2, stringArray);
+    JavaArray* array = newJavaArray(T_INT, argc-2);
+    array->arrayAddress = stringArray;
 
     //Preenchemos o array de strings com cada argumento
     for (int i = 2; i < argc; i++) {
