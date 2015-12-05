@@ -543,11 +543,11 @@ void iaload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((array_info->arrayAddress)+index-1);
+    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index-1));
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -563,12 +563,12 @@ void laload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico_high = *((array_info->arrayAddress)+index-1);
-    u4 valor_numerico_low = *((array_info->arrayAddress)+index);
+    u4 valor_numerico_high = *((u4*)((array_info->arrayAddress)+index-1));
+    u4 valor_numerico_low = *((u4*)((array_info->arrayAddress)+index));
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -585,11 +585,11 @@ void faload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((array_info->arrayAddress)+index-1);
+    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index-1));
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -605,12 +605,12 @@ void daload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico_high = *((array_info->arrayAddress)+index-1);
-    u4 valor_numerico_low = *((array_info->arrayAddress)+index);
+    u4 valor_numerico_high = *((u4*)((array_info->arrayAddress)+index-1));
+    u4 valor_numerico_low = *((u4*)((array_info->arrayAddress)+index));
     
     pushInOperandStack(thread, valor_numerico_low);
     pushInOperandStack(thread, valor_numerico_high);
@@ -627,11 +627,11 @@ void aaload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((array_info->arrayAddress)+index-1);
+    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index-1));
     
     pushInOperandStack(thread, valor_numerico);
 }
@@ -649,22 +649,22 @@ void baload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
     // Se o valor no componente do vetor for do tipo byte
-    if (array_info->type == T_BYTE) {
+    if (array_info->atype == T_BYTE) {
         
         // O valor eh estendido com sinal
-        valor_numerico = *((array_info->arrayAddress)+index-1);;
+        valor_numerico = *((char*)((array_info->arrayAddress)+index-1));
         
     }
     // Se o valor no componente do vetor for do tipo boolean
-    else if (array_info->type == T_BOOLEAN) {
+    else if (array_info->atype == T_BOOLEAN) {
         
         // O valor eh estendido sem sinal
-        valor_numerico = (u1)(*((array_info->arrayAddress)+index-1));
+        valor_numerico = *((u1*)((array_info->arrayAddress)+index-1));
         
     }
     
@@ -682,11 +682,11 @@ void caload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    int valor_numerico_zero_extend = (u1)(*((array_info->arrayAddress)+index-1));
+    u4 valor_numerico_zero_extend = *((u1*)((array_info->arrayAddress)+index-1));
     
     pushInOperandStack(thread, valor_numerico_zero_extend);
 }
@@ -702,11 +702,11 @@ void saload(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    int valor_numerico_signal_extend = *((array_info->arrayAddress)+index-1);
+    int valor_numerico_signal_extend = *((short*)((array_info->arrayAddress)+index-1));
     
     pushInOperandStack(thread, valor_numerico_signal_extend);
 }
@@ -994,11 +994,11 @@ void iastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico;
 }
 
 
@@ -1015,12 +1015,12 @@ void lastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico_high;
-    *((array_info->arrayAddress)+index-1) = valor_numerico_low;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico_high;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico_low;
 }
 
 
@@ -1036,11 +1036,11 @@ void fastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico;
 }
 
 
@@ -1057,12 +1057,12 @@ void dastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico_high;
-    *((array_info->arrayAddress)+index-1) = valor_numerico_low;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico_high;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico_low;
 }
 
 
@@ -1078,13 +1078,13 @@ void aastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
     //TODO: Otherwise, if arrayref is not null and the actual type of value is not assignment compatible (§2.6.7) with the actual type of the components of the array, aastore throws an ArrayStoreException.
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico;
+    *((u4*)((array_info->arrayAddress)+index-1)) = valor_numerico;
 }
 
 
@@ -1102,26 +1102,26 @@ void bastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
     // Se componentes do vetor forem do tipo byte
-    if (array_info->type == T_BYTE) {
+    if (array_info->atype == T_BYTE) {
         
         // O int value eh truncado para byte
         valor_numerico = valor_numerico_int;
         
     }
     // Se componentes do vetor forem do tipo boolean
-    else if (array_info->type == T_BOOLEAN) {
+    else if (array_info->atype == T_BOOLEAN) {
         
         // O int value eh truncado para o seu bit de ordem mais baixa e estendido sem sinal
         valor_numerico = (u1)(valor_numerico_int & 0x1);
         
     }
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico;
+    *((u1*)((array_info->arrayAddress)+index-1)) = valor_numerico;
 }
 
 
@@ -1137,13 +1137,13 @@ void castore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
     u1 valor_numerico_char = valor_numerico_int;
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico_char;
+    *((u1*)((array_info->arrayAddress)+index-1)) = valor_numerico_char;
 }
 
 
@@ -1159,13 +1159,13 @@ void sastore(Thread* thread){
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
     }
-    if (index > array_info->length) {
+    if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
     u2 valor_numerico_short = valor_numerico_int;
     
-    *((array_info->arrayAddress)+index-1) = valor_numerico_short;
+    *((u2*)((array_info->arrayAddress)+index-1)) = valor_numerico_short;
 }
 
 

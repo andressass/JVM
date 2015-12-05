@@ -58,7 +58,7 @@ void configureClassMain(Environment* environment, int argc, const char* argv[]){
  *
  */
 int main(int argc, const char * argv[]) {
-
+    
     //Alocamos espaco para o ambiente de execucao
     Environment* environment = (Environment*) malloc(sizeof(Environment));
     

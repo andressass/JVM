@@ -239,4 +239,71 @@ EXT16 void invokeinterface(Environment* environment);
 EXT16 void New(Environment* environment);
 
 
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que cria um novo array. Ele recebe como parametro o tipo do array a ser criado atype e
+ * desempilha o numero de elementos no array a ser criado count. O novo array, cujos componentes sao 
+ * do tipo atype e de tamanho count, eh alocado e uma reference arrayref a ele eh empilhada na pilha 
+ * de operandos. Cada um dos elementos do novo array sao inicializados para o valor inicial padrao 
+ * para o tipo do array.
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+EXT16 void newarray(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que cria um novo array de reference. O numero de componentes do array a ser criado count 
+ * deve ser do tipo int e eh desempilhado da pilha de operandos. O metodo recebe como parametro os 
+ * unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a constante pool de 
+ * tempo de execucao da classe corrente, onde o valor do indice eh (indexbyte1 << 8) | indexbyte2. O 
+ * item da constante pool de tempo de execucao no indice deve ser uma referencia simbolica para um 
+ * tipo class, array ou interface. O tipo nomeado da classe, array ou interface esta resolvido. 
+ * Um novo array com componentes daquele tipo, de tamanho count, eh alocado e uma reference arrayref 
+ * a ele eh empilhada na pilha de operandos. Cada um dos elementos do novo array sao inicializados 
+ * para null, o valor padrao para tipos reference.
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+EXT16 void anewarray(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que obtem o tamanho do array. O arrayref deve ser do tipo reference e deve se referir a um
+ * array. Ele eh desempilhado da pilha de operandos. O tamanho do array que ele referencia eh 
+ * determinado e eh empilhado na pilha de operandos como um int.
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+EXT16 void arraylength(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que cria um novo array multidimensional. O metodo recebe como argumento um numero de 
+ * dimensoes do array a ser criado dimensions. A pilha de operandos deve conter os valores das 
+ * dimensoes count1, count2... Cada valor representa o numero de componentes em uma dimensao do 
+ * array a ser criado e deve ser do tipo int e nao negativo.
+ *
+ * Todos os valores count sao desempilhados da pilha de operandos. O metodo tambem recebe como 
+ * parametro os unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a 
+ * constante pool de tempo de execucao da classe corrente, onde o valor do indice eh 
+ * (indexbyte1 << 8) | indexbyte2. O item da constante pool de tempo de execucao no indice deve ser 
+ * uma referencia simbolica para um tipo class, array ou interface. O tipo nomeado da classe, array 
+ * ou interface esta resolvido. A entrada resultante deve ser um array de tipo class de 
+ * dimensionalidade maior ou igual a dimensions.
+ *
+ * Um novo array multidimensional de tipo do array eh alocado. Se qualquer valor count for zero,
+ * nenhuma dimensao subsequente eh alocada. Os componentes do array na primeira dimensao sao 
+ * inicializados para os subarrays do tipo da segunda dimensao, e assim por diante. Os componentes 
+ * da ultima dimensao alocada do array sao inicializados para o valor inicial padrao pelo tipo dos 
+ * componentes. Uma reference arrayref para o novo array eh empilhada na pilha de operandos.
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+EXT16 void multianewarray(Environment* environment);
+
+
 #endif /* I_INSTOBJANDINVOKE_h */
