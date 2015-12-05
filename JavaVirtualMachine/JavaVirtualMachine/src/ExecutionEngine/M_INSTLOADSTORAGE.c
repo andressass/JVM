@@ -1239,6 +1239,8 @@ void wide(Thread* thread){
         
         u4 index_forma2 = (u4)(index_result + constbyte_result);
         
+        index_forma2 = index_forma2;
+        
         //TODO:
     }
 }
