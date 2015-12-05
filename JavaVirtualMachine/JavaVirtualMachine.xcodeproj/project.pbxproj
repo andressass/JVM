@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B16A6B1C121E6500DAE059 /* M_INSTCOMPANDJMP.c in Sources */ = {isa = PBXBuildFile; fileRef = 14B16A691C121E6500DAE059 /* M_INSTCOMPANDJMP.c */; };
 		448941021C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c in Sources */ = {isa = PBXBuildFile; fileRef = 448941011C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c */; };
 		448941091C11492C004ABAE0 /* M_TYPECONVERSION.c in Sources */ = {isa = PBXBuildFile; fileRef = 448941061C114927004ABAE0 /* M_TYPECONVERSION.c */; };
 		CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14B16A691C121E6500DAE059 /* M_INSTCOMPANDJMP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INSTCOMPANDJMP.c; path = src/ExecutionEngine/M_INSTCOMPANDJMP.c; sourceTree = "<group>"; };
 		448941011C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INSTLOADSTORAGE.c; path = src/ExecutionEngine/M_INSTLOADSTORAGE.c; sourceTree = "<group>"; };
 		448941041C1146BB004ABAE0 /* I_TYPECONVERSION.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = I_TYPECONVERSION.h; path = include/Util/I_TYPECONVERSION.h; sourceTree = "<group>"; };
 		448941061C114927004ABAE0 /* M_TYPECONVERSION.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_TYPECONVERSION.c; path = src/Util/M_TYPECONVERSION.c; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				CE8EFA951C092E8600F1010B /* M_INTERPRETER.c */,
 				CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */,
 				CE618CDA1C10D1B400FDD92F /* M_EXCEPTION.c */,
+				14B16A691C121E6500DAE059 /* M_INSTCOMPANDJMP.c */,
 			);
 			name = ExecutionEngine;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				448941091C11492C004ABAE0 /* M_TYPECONVERSION.c in Sources */,
 				CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */,
 				448941021C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c in Sources */,
+				14B16A6B1C121E6500DAE059 /* M_INSTCOMPANDJMP.c in Sources */,
 				CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */,
 				CE618CDF1C110DD200FDD92F /* JAVASTRING.c in Sources */,
 				CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */,
