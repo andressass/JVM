@@ -23,6 +23,7 @@
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/Estruturas/JAVASTRING.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include "../../include/Util/I_TYPECONVERSION.h"
 
 
 
@@ -81,10 +82,93 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         //Empilhamos o string buffer
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
-    //Se nao implementa metodo descritor
-    else
-        popFromOperandStack(environment->thread);
+    
+    //Para cada tipo numerico, bool ou char
+    else if(strncmp(descriptorName, "(I)Ljava/lang/StringBuffer;", 44)==0 ||
+            strncmp(descriptorName, "(S)Ljava/lang/StringBuffer;", 44)==0 ||
+            strncmp(descriptorName, "(B)Ljava/lang/StringBuffer;", 44)==0){
+        int valor = (int) popFromOperandStack(environment->thread);
+        wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
+        
+        int stringBufferLen = wcslen(stringBuffer);
+        
+        stringBuffer = (wchar_t*) realloc(stringBuffer,
+                                          (wcslen(stringBuffer)+15)*sizeof(wchar_t));
+        
+        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%d", valor);
+        pushInOperandStack(environment->thread, (u4) stringBuffer);
+    }
+    
+    else if(strncmp(descriptorName, "(C)Ljava/lang/StringBuffer;", 44)==0){
+        char valor = (char) popFromOperandStack(environment->thread);
+        wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
+        
+        int stringBufferLen = wcslen(stringBuffer);
+        
+        stringBuffer = (wchar_t*) realloc(stringBuffer,
+                                          (wcslen(stringBuffer)+2)*sizeof(wchar_t));
+        
+        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%c", valor);
+        pushInOperandStack(environment->thread, (u4) stringBuffer);
+    }
+    
+    else if(strncmp(descriptorName, "(Z)Ljava/lang/StringBuffer;", 44)==0){
+        int valor = (char) popFromOperandStack(environment->thread);
+        wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
+        
+        int stringBufferLen = wcslen(stringBuffer);
+        
+        stringBuffer = (wchar_t*) realloc(stringBuffer,
+                                          (wcslen(stringBuffer)+6)*sizeof(wchar_t));
+        
+        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer),
+                 L"%ls", valor == 0 ? L"false" : L"true");
+        pushInOperandStack(environment->thread, (u4) stringBuffer);
+    }
 
+    else if(strncmp(descriptorName, "(F)Ljava/lang/StringBuffer;", 44)==0){
+        float valor = u4ToFLoat(popFromOperandStack(environment->thread));
+        wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
+        
+        int stringBufferLen = wcslen(stringBuffer);
+        
+        stringBuffer = (wchar_t*) realloc(stringBuffer,
+                                          (wcslen(stringBuffer)+20)*sizeof(wchar_t));
+        
+        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%.2f", valor);
+        pushInOperandStack(environment->thread, (u4) stringBuffer);
+    }
+    
+    else if(strncmp(descriptorName, "(J)Ljava/lang/StringBuffer;", 44)==0){
+        u8 valor = popFromOperandStack(environment->thread);
+        u8 low_Bytes = popFromOperandStack(environment->thread);
+        valor = valor << 32 | low_Bytes;
+        wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
+        
+        int stringBufferLen = wcslen(stringBuffer);
+        
+        stringBuffer = (wchar_t*) realloc(stringBuffer,
+                                          (wcslen(stringBuffer)+30)*sizeof(wchar_t));
+        
+        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%lld", valor);
+        pushInOperandStack(environment->thread, (u4) stringBuffer);
+    }
+    
+    else if(strncmp(descriptorName, "(D)Ljava/lang/StringBuffer;", 44)==0){
+        u4 high = popFromOperandStack(environment->thread);
+        u4 low = popFromOperandStack(environment->thread);
+        double valor = u4ToDouble(high, low);
+        
+        wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
+        
+        int stringBufferLen = wcslen(stringBuffer);
+        
+        stringBuffer = (wchar_t*) realloc(stringBuffer,
+                                          (wcslen(stringBuffer)+15)*sizeof(wchar_t));
+        
+        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%.2lf", valor);
+        pushInOperandStack(environment->thread, (u4) stringBuffer);
+    }
 }
 
 //--------------------------------------------------------------------------------------------------

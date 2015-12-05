@@ -52,11 +52,11 @@ void printStreamPrintln(const char* descriptorName, Environment* environment){
             printf("\n%ls", unicodeString);
         }
     }
-    else if (strncmp(descriptorName, "(I)V", 4)==0)
+    //Decodificamos pelos tipos numericos, char e bool
+    else if (strncmp(descriptorName, "(I)V", 4)==0 ||
+             strncmp(descriptorName, "(S)V", 4)==0 ||
+             strncmp(descriptorName, "(B)V", 4)==0)
         printf("\n %d", (int) popFromOperandStack(environment->thread));
-    
-    else if (strncmp(descriptorName, "(S)V", 4)==0)
-        printf("\n %d", (short) popFromOperandStack(environment->thread));
     
     else if (strncmp(descriptorName, "(C)V", 4)==0)
         printf("\n %c", (char) popFromOperandStack(environment->thread));

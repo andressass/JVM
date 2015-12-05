@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/Util/M_JAVALANG.c"
-            timestampString = "471021565.363283"
+            timestampString = "471034332.295701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "stringBufferAppend()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/Util/M_JAVAIO.c"
-            timestampString = "471026589.640923"
+            timestampString = "471034332.295701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -144,6 +144,22 @@
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "getstatic()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/Util/M_JAVALANG.c"
+            timestampString = "471034621.25781"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "stringBufferAppend()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
