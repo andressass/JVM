@@ -3,35 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "classInitializeFields:M_CLASSLOADER.c">
+         contextName = "Dup:M_INSTLOADSTORAGE.c">
+      </ContextState>
+      <ContextState
+         contextName = "exibeCtePool:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "fields-&gt;fieldsTable[fields-&gt;fieldsCount]">
+               value = "*(u4 *)0x25032c4">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "printByteCode:M_ECLASS.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "bytecode[0]">
-            </PersistentString>
-            <PersistentString
-               value = "getOpcodeName(mnemonic)">
-            </PersistentString>
-            <PersistentString
-               value = "getOpcodeAttributesNumber(mnemonic)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "LECLASS_exibeErroOperacao:M_ECLASS.c">
-      </ContextState>
-      <ContextState
-         contextName = "pushFrame:M_OPTHREAD.c">
+         contextName = "classInitializer:M_CLASSLOADER.c">
       </ContextState>
       <ContextState
          contextName = "getClass:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "freeFrame:M_OPTHREAD.c">
+      </ContextState>
+      <ContextState
+         contextName = "putstatic:M_INSTOBJANDINVOKE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
+            <PersistentString
+               value = "(u4*) getClassAttributeReference(&quot;HelloWorld&quot;, &quot;float1&quot;, environment)">
+            </PersistentString>
+            <PersistentString
+               value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;staticFields-&gt;fieldsTable[1];">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "main:M_BOOTLOADER.c">
@@ -42,13 +45,52 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "classInitializer:M_CLASSLOADER.c">
+         contextName = "execute:M_INTERPRETER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(cp_info*)environment-&gt;thread-&gt;vmStack-&gt;top-&gt;opStk-&gt;top">
+            </PersistentString>
+            <PersistentString
+               value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;opStk">
+            </PersistentString>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeName(opcode)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "decode:M_DECODER.c">
          <PersistentStrings>
             <PersistentString
                value = "getOpcodeName(bytecode)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "getByteCodeFromMethod:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "getUTF8FromConstantPool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cp[12]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "printStreamPrintln:M_JAVAIO.c">
+      </ContextState>
+      <ContextState
+         contextName = "ldc:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "u4ToFLoat(valor_numerico);">
+            </PersistentString>
+            <PersistentString
+               value = "thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;arqClass-&gt;constant_pool[17-1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -61,21 +103,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "getCodeAttributeFromMethod:M_OPMETHODAREA.c">
-      </ContextState>
-      <ContextState
-         contextName = "execute:M_INTERPRETER.c">
+         contextName = "printByteCode:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "getOpcodeName(opcode)">
+               value = "getOpcodeAttributesNumber(mnemonic)">
+            </PersistentString>
+            <PersistentString
+               value = "getOpcodeName(mnemonic)">
+            </PersistentString>
+            <PersistentString
+               value = "bytecode[0]">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "getByteCodeFromMethod:M_OPMETHODAREA.c">
-      </ContextState>
-      <ContextState
-         contextName = "addJavaClassToMethodArea:M_OPMETHODAREA.c">
       </ContextState>
       <ContextState
          contextName = "printByteCodes:M_ECLASS.c">
@@ -89,12 +128,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "getUTF8FromConstantPool:M_ECLASS.c">
+         contextName = "pushFrame:M_OPTHREAD.c">
+      </ContextState>
+      <ContextState
+         contextName = "iconst_1:M_INSTLOADSTORAGE.c">
+      </ContextState>
+      <ContextState
+         contextName = "addJavaClassToMethodArea:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "classInitializeFields:M_CLASSLOADER.c">
          <PersistentStrings>
             <PersistentString
-               value = "cp[12]">
+               value = "fields-&gt;fieldsTable[fields-&gt;fieldsCount]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "popFrame:M_OPTHREAD.c">
       </ContextState>
       <ContextState
          contextName = "getOpcodeAttributesNumber:OPCODES.c">
@@ -126,10 +177,49 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "getCodeAttributeFromMethod:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
+         contextName = "stringBufferAppend:M_JAVALANG.c">
+      </ContextState>
+      <ContextState
+         contextName = "LECLASS_exibeErroOperacao:M_ECLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "printFromPool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;cp-&gt;u.Long.low_bytes">
+            </PersistentString>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "classPreparing:M_CLASSLOADER.c">
          <PersistentStrings>
             <PersistentString
                value = "javaClass-&gt;staticFields-&gt;fieldsTable[2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ldc2_w:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "u4ToDouble(valor_numerico_high, valor_numerico_low)">
+            </PersistentString>
+            <PersistentString
+               value = "(cp_info)environment-&gt;thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;arqClass-&gt;constant_pool[index_result-1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "configureClassMain:M_BOOTLOADER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

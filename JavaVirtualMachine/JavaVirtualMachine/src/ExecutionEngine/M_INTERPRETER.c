@@ -24,13 +24,13 @@ void execute(Environment* environment){
         //! Obtem o opcode
         u1 opcode = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
                                           environment->thread->vmStack->top->javaClass->arqClass->constant_pool
-                                          , environment->thread->PC);
+                                          ,environment->thread->PC);
         
         //! Decodifica o opcode
         instruction nextInstruction = decode(opcode);
         
         //! Executa o a instrucao referente ao opcode
-        if(nextInstruction) nextInstruction(environment->thread);
+        if(nextInstruction) nextInstruction(environment);
         else break; //REMOVER
         
         //Atualizamos o valor de PC

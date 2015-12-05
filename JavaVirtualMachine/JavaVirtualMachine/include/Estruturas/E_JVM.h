@@ -11,6 +11,7 @@
 #ifndef E_LECLASS_H
 #define E_LECLASS_H
 
+#include <stdint.h>
 
 //--------------------------------------------------------------------------------------------------
 // Definicoes de sucesso e erro de operacoes
@@ -110,6 +111,7 @@
 typedef unsigned char u1; //!< Representa 1 byte
 typedef unsigned short u2; //!< Representa 2 bytes
 typedef unsigned int  u4; //!< Representa 4 bytes
+typedef int64_t u8; //!< Representa 4 bytes
 typedef unsigned short OPresult; //!< Representa o resultado de uma operacao
 typedef  char String[STRING_LENGTH];
 
@@ -440,9 +442,8 @@ typedef struct Environment{
 //! Ponteiro para uma instrucao
 /*!
  * Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia
- * para a Thread em operacao.
- *
+ * para a o ambiente de execucao.
  */
-typedef void (*instruction)(Thread*);
+typedef void (*instruction)(Environment*);
 
 #endif

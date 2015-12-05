@@ -124,12 +124,16 @@ void* classInitializeField(char* descriptor){
         *i = 0;
     }
     else if (strcmp(descriptor, "J")== 0){
-        long long* l = memoryAddress;
+        u8* l = memoryAddress;
         *l = 0;
     }
     else if (strcmp(descriptor, "Z")== 0){
         u1* b = memoryAddress;
         *b = 0;
+    }
+    else if (strcmp(descriptor, "S")== 0){
+        u2* s = memoryAddress;
+        *s = 0;
     }
     return memoryAddress;
 }
@@ -241,6 +245,7 @@ int classInitializer(JavaClass* javaClass, Environment* environment){
     classSuperClassChecker(javaClass->arqClass, environment);
     
     //Empilhamos o metodo <clinit> da classe
+    environment->thread->PC--; //Metodo eh invocado sem ser chamado, precisa decrementar PC
     pushFrame(environment, getClassNameFromConstantPool(javaClass->arqClass->constant_pool, javaClass->arqClass->this_class), "<clinit>", "()V");
     
     return InitializerSuccess;

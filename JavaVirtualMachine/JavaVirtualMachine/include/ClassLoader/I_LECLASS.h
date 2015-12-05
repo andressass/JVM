@@ -89,9 +89,9 @@ EXT4 char* getClassNameFromConstantPool(cp_info* cp, u2 index);
  */
 EXT4 void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
                                                  cp_info* constant_pool,
-                                                 char* class_name,
-                                                 char* name,
-                                                 char* descriptor);
+                                                 char** class_name,
+                                                 char** name,
+                                                 char** descriptor);
 
 
 //--------------------------------------------------------------------------------------------------
