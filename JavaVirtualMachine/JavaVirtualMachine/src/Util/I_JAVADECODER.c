@@ -17,9 +17,12 @@
 #include "../../include/Util/I_JAVADECODER.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 
+#include "../../include/Util/I_JAVALANG.h"
+#include "../../include/Util/I_JAVAIO.h"
+
 
 //--------------------------------------------------------------------------------------------------
-int isFromJavaLib(const char* name){
+int javaLibIsFrom(const char* name){
     if (strncmp(name, "java/", 5) == 0) return 1;
     if (strncmp(name, "Ljava/", 6) == 0) return 1;
     
@@ -27,18 +30,18 @@ int isFromJavaLib(const char* name){
 }
 
 //--------------------------------------------------------------------------------------------------
-void executeJavaLibMethod(const char* className, const char* methodName, const char* descriptorName,
+void javaLibExecuteMethod(const char* className, const char* methodName, const char* descriptorName,
                           Environment* environment){
 
     //Metodos de java/lang
     if (strncmp(className, "java/lang/", 10)==0) {
         //TODO: DECODE JAVA:LANG
-        popFromOperandStack(environment->thread);
+        javaLangExecuteMethod(&className[10], methodName, descriptorName, environment);
     }
     //Metodos de java/io
     else if (strncmp(className, "java/io/", 8)==0) {
         //TODO: DECODE JAVA:IO
-        popFromOperandStack(environment->thread);
+        javaIOExecuteMethod(&className[8], methodName, descriptorName, environment);
     }
     else
         popFromOperandStack(environment->thread);
@@ -46,18 +49,18 @@ void executeJavaLibMethod(const char* className, const char* methodName, const c
 
 
 //--------------------------------------------------------------------------------------------------
-void getStaticFromJavaLib(const char* className, const char* fieldName,
+void javaLibGetStatic(const char* className, const char* fieldName,
                           const char* fieldDescriptor, Environment* environment){
     
     //Campos de java/lang
     if (strncmp(className, "java/lang/", 10)==0) {
         //TODO: CAMPOS JAVA:LANG
-        pushInOperandStack(environment->thread, 0);
+        javaLangGetStatic(&className[10], fieldName, fieldDescriptor, environment);
     }
     //Campos de java/io
     else if (strncmp(className, "java/io/", 8)==0) {
         //TODO: CAMPOS JAVA:IO
-        pushInOperandStack(environment->thread, 0);
+        javaIOGetStatic(&className[8], fieldName, fieldDescriptor, environment);
     }
     else
     pushInOperandStack(environment->thread, 0);
@@ -66,16 +69,16 @@ void getStaticFromJavaLib(const char* className, const char* fieldName,
 
 
 //--------------------------------------------------------------------------------------------------
-void newObjectFromJavaLib(const char* className, Environment* environment){
+void javaLibNewObject(const char* className, Environment* environment){
     //Campos de java/lang
     if (strncmp(className, "java/lang/", 10)==0) {
         //TODO: OBJETO JAVA:LANG
-        pushInOperandStack(environment->thread, 0);
+        javaLangNewObject(&className[10], environment);
     }
     //Campos de java/io
     else if (strncmp(className, "java/io/", 8)==0) {
         //TODO: OBJETO JAVA:IO
-        pushInOperandStack(environment->thread, 0);
+        javaIONewObject(&className[8], environment);
     }
     else
         pushInOperandStack(environment->thread, 0);

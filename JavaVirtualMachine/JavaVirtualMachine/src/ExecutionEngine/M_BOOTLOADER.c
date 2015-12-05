@@ -45,8 +45,12 @@ void configureClassMain(Environment* environment, int argc, const char* argv[]){
         strcat(argv_parsed, argv[i]);
     }
     
+    wchar_t* string = (wchar_t*)malloc((strlen(argv_parsed)+1)*sizeof(wchar_t));
+    
+    mbstowcs(string, argv_parsed, (strlen(argv_parsed))+1);
+    
     //Criamos uma estrutura de String Java para receber o argv_parsed
-    JavaString* string_info = newJavaString(argv_parsed);
+    JavaString* string_info = newJavaString(string);
     
     newFrame->localVariablesVector[0] = (u4) string_info; //Passamos o argumento argv
 }

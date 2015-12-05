@@ -16,12 +16,12 @@
 
 
 //--------------------------------------------------------------------------------------------------
-JavaString* newJavaString(const char* string){
+JavaString* newJavaString(const wchar_t* string){
 
     JavaString* string_info = (JavaString*) malloc(sizeof(JavaString));
-    string_info->tag = CONSTANT_StringRef;
-    string_info->size = strlen(string);
-    string_info->stringAddress = (void*) string;
+    string_info->tag = CONSTANT_StringJava;
+    string_info->size =  wcslen(string);
+    string_info->stringAddress = (wchar_t*) string;
     
     return string_info;
 }

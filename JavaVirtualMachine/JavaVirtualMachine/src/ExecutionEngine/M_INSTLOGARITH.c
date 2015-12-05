@@ -36,9 +36,9 @@ void iadd(Environment* environment){
 
 void ladd(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long soma64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 soma64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -46,14 +46,14 @@ void ladd(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     soma64 = operando1_64 + operando2_64;
     
@@ -98,29 +98,29 @@ void dadd(Environment* environment){
     u4 operandoPilha1;
     u4 operandoPilha2;
     
-    long long operandoSoma1;
-    long long operandoSoma2;
-    long long somaLong;
+    u8 operandoSoma1;
+    u8 operandoSoma2;
+    u8 somaLong;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoSoma1 = (long long) operandoPilha2;
-    operandoSoma1 = (long long) operandoPilha1 << 32;
+    operandoSoma1 = (u8) operandoPilha2;
+    operandoSoma1 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando1, &operandoSoma1, sizeof(double));
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoSoma2 = (long long) operandoPilha2;
-    operandoSoma2 = (long long) operandoPilha1 << 32;
+    operandoSoma2 = (u8) operandoPilha2;
+    operandoSoma2 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando2, &operandoSoma2, sizeof(double));
     
     soma = operando1 + operando2;
     
-    memcpy(&somaLong, &soma, sizeof(long long));
+    memcpy(&somaLong, &soma, sizeof(u8));
     
     operandoPilha1 = (u4) ((somaLong & 0xFFFFFFFF00000000) >> 32);
     operandoPilha2 = (u4) somaLong & 0x00000000FFFFFFFF;
@@ -147,9 +147,9 @@ void isub(Environment* environment){
 
 void lsub(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long sub64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 sub64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -157,14 +157,14 @@ void lsub(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     sub64 = operando2_64 - operando1_64;
     
@@ -209,29 +209,29 @@ void dsub(Environment* environment){
     u4 operandoPilha1;
     u4 operandoPilha2;
     
-    long long operandoSub1;
-    long long operandoSub2;
-    long long subLong;
+    u8 operandoSub1;
+    u8 operandoSub2;
+    u8 subLong;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoSub1 = (long long) operandoPilha2;
-    operandoSub1 = (long long) operandoPilha1 << 32;
+    operandoSub1 = (u8) operandoPilha2;
+    operandoSub1 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando1, &operandoSub1, sizeof(double));
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoSub2 = (long long) operandoPilha2;
-    operandoSub2 = (long long) operandoPilha1 << 32;
+    operandoSub2 = (u8) operandoPilha2;
+    operandoSub2 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando2, &operandoSub2, sizeof(double));
     
     sub = operando2 - operando1;
     
-    memcpy(&subLong, &sub, sizeof(long long));
+    memcpy(&subLong, &sub, sizeof(u8));
     
     operandoPilha1 = (u4) ((subLong & 0xFFFFFFFF00000000) >> 32);
     operandoPilha2 = (u4) subLong & 0x00000000FFFFFFFF;
@@ -258,9 +258,9 @@ void imul(Environment* environment){
 
 void lmul(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long mul64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 mul64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -268,14 +268,14 @@ void lmul(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     mul64 = operando2_64 * operando1_64;
     
@@ -320,29 +320,29 @@ void dmul(Environment* environment){
     u4 operandoPilha1;
     u4 operandoPilha2;
     
-    long long operandoMul1;
-    long long operandoMul2;
-    long long mulLong;
+    u8 operandoMul1;
+    u8 operandoMul2;
+    u8 mulLong;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoMul1 = (long long) operandoPilha2;
-    operandoMul1 = (long long) operandoPilha1 << 32;
+    operandoMul1 = (u8) operandoPilha2;
+    operandoMul1 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando1, &operandoMul1, sizeof(double));
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoMul2 = (long long) operandoPilha2;
-    operandoMul2 = (long long) operandoPilha1 << 32;
+    operandoMul2 = (u8) operandoPilha2;
+    operandoMul2 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando2, &operandoMul2, sizeof(double));
     
     mul = operando2 * operando1;
     
-    memcpy(&mulLong, &mul, sizeof(long long));
+    memcpy(&mulLong, &mul, sizeof(u8));
     
     operandoPilha1 = (u4) ((mulLong & 0xFFFFFFFF00000000) >> 32);
     operandoPilha2 = (u4) mulLong & 0x00000000FFFFFFFF;
@@ -373,9 +373,9 @@ void idiv(Environment* environment){
 
 void Ldiv(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long div64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 div64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -383,14 +383,14 @@ void Ldiv(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     if (operando1_64 == 0) {
         printf("ERRO nao pode ser feita divisao por zero/n");
@@ -441,23 +441,23 @@ void ddiv(Environment* environment){
     u4 operandoPilha1;
     u4 operandoPilha2;
     
-    long long operandoDiv1;
-    long long operandoDiv2;
-    long long divLong;
+    u8 operandoDiv1;
+    u8 operandoDiv2;
+    u8 divLong;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoDiv1 = (long long) operandoPilha2;
-    operandoDiv1 = (long long) operandoPilha1 << 32;
+    operandoDiv1 = (u8) operandoPilha2;
+    operandoDiv1 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando1, &operandoDiv1, sizeof(double));
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoDiv2 = (long long) operandoPilha2;
-    operandoDiv2 = (long long) operandoPilha1 << 32;
+    operandoDiv2 = (u8) operandoPilha2;
+    operandoDiv2 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando2, &operandoDiv2, sizeof(double));
     
@@ -466,7 +466,7 @@ void ddiv(Environment* environment){
     }else{
         div = operando2 / operando1;
     }
-    memcpy(&divLong, &div, sizeof(long long));
+    memcpy(&divLong, &div, sizeof(u8));
     
     operandoPilha1 = (u4) ((divLong & 0xFFFFFFFF00000000) >> 32);
     operandoPilha2 = (u4) divLong & 0x00000000FFFFFFFF;
@@ -493,9 +493,9 @@ void irem(Environment* environment){
 
 void lrem(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long rem64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 rem64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -503,14 +503,14 @@ void lrem(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     rem64 = operando2_64 % operando1_64;
     
@@ -555,29 +555,29 @@ void Drem(Environment* environment){
     u4 operandoPilha1;
     u4 operandoPilha2;
     
-    long long operandoRem1;
-    long long operandoRem2;
-    long long remLong;
+    u8 operandoRem1;
+    u8 operandoRem2;
+    u8 remLong;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoRem1 = (long long) operandoPilha2;
-    operandoRem1 = (long long) operandoPilha1 << 32;
+    operandoRem1 = (u8) operandoPilha2;
+    operandoRem1 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando1, &operandoRem1, sizeof(double));
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoRem2 = (long long) operandoPilha2;
-    operandoRem2 = (long long) operandoPilha1 << 32;
+    operandoRem2 = (u8) operandoPilha2;
+    operandoRem2 = (u8) operandoPilha1 << 32;
     
     memcpy(&operando2, &operandoRem2, sizeof(double));
     
     rem = fmod(operando2, operando1);
     
-    memcpy(&remLong, &rem, sizeof(long long));
+    memcpy(&remLong, &rem, sizeof(u8));
     
     operandoPilha1 = (u4) ((remLong & 0xFFFFFFFF00000000) >> 32);
     operandoPilha2 = (u4) remLong & 0x00000000FFFFFFFF;
@@ -601,8 +601,8 @@ void ineg(Environment* environment){
 
 void lneg(Environment* environment){
     
-    long long operando_64 = 0;
-    long long neg64 = 0;
+    u8 operando_64 = 0;
+    u8 neg64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -610,8 +610,8 @@ void lneg(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando_64 = (long long) operandoPilha2;
-    operando_64 = (long long) operandoPilha1 << 32;
+    operando_64 = (u8) operandoPilha2;
+    operando_64 = (u8) operandoPilha1 << 32;
     
     neg64 = ~operando_64 + 1;
     
@@ -651,20 +651,20 @@ void dneg(Environment* environment){
     u4 operandoPilha1;
     u4 operandoPilha2;
     
-    long long operandoNeg;
-    long long negLong;
+    u8 operandoNeg;
+    u8 negLong;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operandoNeg = (long long) operandoPilha2;
-    operandoNeg = (long long) operandoPilha1 << 32;
+    operandoNeg = (u8) operandoPilha2;
+    operandoNeg = (u8) operandoPilha1 << 32;
     
     memcpy(&operando, &operandoNeg, sizeof(double));
     
     neg = -(operando);
     
-    memcpy(&negLong, &neg, sizeof(long long));
+    memcpy(&negLong, &neg, sizeof(u8));
     
     operandoPilha1 = (u4) ((negLong & 0xFFFFFFFF00000000) >> 32);
     operandoPilha2 = (u4) negLong & 0x00000000FFFFFFFF;
@@ -692,9 +692,9 @@ void ishl(Environment* environment){
 
 void lshl(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long shl64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 shl64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -702,14 +702,14 @@ void lshl(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     operando1_64 = operando1_64 & SHIFT_MASK_32;
     shl64 = operando2_64 << operando1_64;
@@ -741,9 +741,9 @@ void ishr(Environment* environment){
 
 void lshr(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long shr64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 shr64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -751,14 +751,14 @@ void lshr(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     operando1_64 = operando1_64 & SHIFT_MASK_32;
     shr64 = operando2_64 >> operando1_64;
@@ -796,9 +796,9 @@ void iushr(Environment* environment){
 
 void lushr(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long shr64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 shr64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -806,14 +806,14 @@ void lushr(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     operando1_64 = operando1_64 & SHIFT_MASK_32;
     
@@ -848,9 +848,9 @@ void iand(Environment* environment){
 
 void land(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long and64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 and64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -858,14 +858,14 @@ void land(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     and64 = operando2_64 & operando1_64;
     
@@ -895,9 +895,9 @@ void ior(Environment* environment){
 
 void lor(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long or64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 or64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -905,14 +905,14 @@ void lor(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     or64 = operando2_64 | operando1_64;
     
@@ -942,9 +942,9 @@ void ixor(Environment* environment){
 
 void lxor(Environment* environment){
     
-    long long operando1_64 = 0;
-    long long operando2_64 = 0;
-    long long xor64 = 0;
+    u8 operando1_64 = 0;
+    u8 operando2_64 = 0;
+    u8 xor64 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -952,14 +952,14 @@ void lxor(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (long long) operandoPilha2;
-    operando1_64 = (long long) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha2;
+    operando1_64 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (long long) operandoPilha2;
-    operando2_64 = (long long) operandoPilha1 << 32;
+    operando2_64 = (u8) operandoPilha2;
+    operando2_64 = (u8) operandoPilha1 << 32;
     
     xor64 = operando2_64 ^ operando1_64;
     

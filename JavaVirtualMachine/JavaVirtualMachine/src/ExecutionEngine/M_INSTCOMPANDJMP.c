@@ -14,8 +14,8 @@
 
 void lcmp(Environment *environment){
     
-    long long operando1 = 0;
-    long long operando2 = 0;
+    u8 operando1 = 0;
+    u8 operando2 = 0;
     
     u4 operandoPilha1 = 0;
     u4 operandoPilha2 = 0;
@@ -25,14 +25,14 @@ void lcmp(Environment *environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1 = (long long) operandoPilha2;
-    operando1 = (long long) operandoPilha1 << 32;
+    operando1 = (u8) operandoPilha2;
+    operando1 = (u8) operandoPilha1 << 32;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2 = (long long) operandoPilha2;
-    operando2 = (long long) operando1 << 32;
+    operando2 = (u8) operandoPilha2;
+    operando2 = (u8) operando1 << 32;
     
     if (operando2 > operando1) {
         resultado = 1;

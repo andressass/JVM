@@ -83,6 +83,9 @@ Frame* pushFrame(Environment* environment, const char* className, const char* me
  * \param frame Frame a ser desalocado
  */
 void freeFrame(Frame* frame){
+    
+    while (frame->opStk->nextStack != NULL) frame->opStk = frame->opStk->nextStack;
+    
     free(frame->opStk);
     free(frame->localVariablesVector);
     free(frame);

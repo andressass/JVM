@@ -124,12 +124,16 @@ void* classInitializeField(char* descriptor){
         *i = 0;
     }
     else if (strcmp(descriptor, "J")== 0){
-        long long* l = memoryAddress;
+        u8* l = memoryAddress;
         *l = 0;
     }
     else if (strcmp(descriptor, "Z")== 0){
         u1* b = memoryAddress;
         *b = 0;
+    }
+    else if (strcmp(descriptor, "S")== 0){
+        u2* s = memoryAddress;
+        *s = 0;
     }
     return memoryAddress;
 }

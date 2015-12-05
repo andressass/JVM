@@ -3,14 +3,31 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Dup:M_INSTLOADSTORAGE.c">
+      </ContextState>
+      <ContextState
+         contextName = "exibeCtePool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "classInitializer:M_CLASSLOADER.c">
       </ContextState>
       <ContextState
          contextName = "getClass:M_OPMETHODAREA.c">
       </ContextState>
       <ContextState
+         contextName = "freeFrame:M_OPTHREAD.c">
+      </ContextState>
+      <ContextState
          contextName = "putstatic:M_INSTOBJANDINVOKE.c">
          <PersistentStrings>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
             <PersistentString
                value = "(u4*) getClassAttributeReference(&quot;HelloWorld&quot;, &quot;float1&quot;, environment)">
             </PersistentString>
@@ -30,6 +47,15 @@
       <ContextState
          contextName = "execute:M_INTERPRETER.c">
          <PersistentStrings>
+            <PersistentString
+               value = "(cp_info*)environment-&gt;thread-&gt;vmStack-&gt;top-&gt;opStk-&gt;top">
+            </PersistentString>
+            <PersistentString
+               value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;opStk">
+            </PersistentString>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
             <PersistentString
                value = "getOpcodeName(opcode)">
             </PersistentString>
@@ -53,6 +79,9 @@
                value = "cp[12]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "printStreamPrintln:M_JAVAIO.c">
       </ContextState>
       <ContextState
          contextName = "ldc:M_INSTLOADSTORAGE.c">
@@ -102,6 +131,9 @@
          contextName = "pushFrame:M_OPTHREAD.c">
       </ContextState>
       <ContextState
+         contextName = "iconst_1:M_INSTLOADSTORAGE.c">
+      </ContextState>
+      <ContextState
          contextName = "addJavaClassToMethodArea:M_OPMETHODAREA.c">
       </ContextState>
       <ContextState
@@ -111,6 +143,9 @@
                value = "fields-&gt;fieldsTable[fields-&gt;fieldsCount]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "popFrame:M_OPTHREAD.c">
       </ContextState>
       <ContextState
          contextName = "getOpcodeAttributesNumber:OPCODES.c">
@@ -145,7 +180,21 @@
          contextName = "getCodeAttributeFromMethod:M_OPMETHODAREA.c">
       </ContextState>
       <ContextState
+         contextName = "stringBufferAppend:M_JAVALANG.c">
+      </ContextState>
+      <ContextState
          contextName = "LECLASS_exibeErroOperacao:M_ECLASS.c">
+      </ContextState>
+      <ContextState
+         contextName = "printFromPool:M_ECLASS.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;cp-&gt;u.Long.low_bytes">
+            </PersistentString>
+            <PersistentString
+               value = "*(u4 *)0x25032c4">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "classPreparing:M_CLASSLOADER.c">
@@ -160,6 +209,17 @@
          <PersistentStrings>
             <PersistentString
                value = "u4ToDouble(valor_numerico_high, valor_numerico_low)">
+            </PersistentString>
+            <PersistentString
+               value = "(cp_info)environment-&gt;thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;arqClass-&gt;constant_pool[index_result-1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "configureClassMain:M_BOOTLOADER.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

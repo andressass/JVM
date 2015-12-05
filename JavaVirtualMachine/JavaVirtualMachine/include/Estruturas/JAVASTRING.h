@@ -19,12 +19,13 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include <wchar.h>
 #include "../../include/Estruturas/E_JVM.h"
 
 
 //--------------------------------------------------------------------------------------------------
 //Para referencia de string
-#define CONSTANT_StringRef          20
+#define CONSTANT_StringJava          20
 
 
 //--------------------------------------------------------------------------------------------------
@@ -35,11 +36,11 @@
 typedef struct StringRef{
     u1 tag;
     u2 size;
-    void* stringAddress;
+    wchar_t* stringAddress;
     
 } JavaString;
 
-
+    
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -49,7 +50,7 @@ typedef struct StringRef{
  * \param string String c a ser carregada na estrutura java string
  * \return estrutura JavaString preenchida
  */
-EXT22 JavaString* newJavaString(const char* string);
+EXT22 JavaString* newJavaString(const wchar_t* string);
 
 
 #endif /* JAVASTRING_h */

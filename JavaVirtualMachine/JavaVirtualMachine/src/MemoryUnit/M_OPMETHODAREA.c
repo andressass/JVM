@@ -36,7 +36,7 @@ MethodArea* newMethodArea(){
 JavaClass* findJavaClassOnMethodArea(const char* qualifiedName, MethodArea* methodArea){
 
     //Se for uma classe de bibliotecas java
-    if (isFromJavaLib(qualifiedName)) return (JavaClass*) 1;
+    if (javaLibIsFrom(qualifiedName)) return (JavaClass*) 1;
     
     //Pesquisamos a classe
     for (int i = 0; i < methodArea->classCount; i++)

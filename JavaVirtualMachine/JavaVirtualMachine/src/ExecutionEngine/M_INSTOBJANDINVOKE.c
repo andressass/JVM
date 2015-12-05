@@ -65,8 +65,8 @@ void getstatic(Environment* environment){
                                            &class_name, &attribute_name, &attribute_descriptor);
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)) {
-        getStaticFromJavaLib(class_name, attribute_name, attribute_descriptor, environment);
+    if (javaLibIsFrom(class_name)) {
+        javaLibGetStatic(class_name, attribute_name, attribute_descriptor, environment);
         return;
     }
     
@@ -74,18 +74,36 @@ void getstatic(Environment* environment){
     
     //Verificamos se eh de 32 ou 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
-        unsigned long long* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
-        unsigned long long value = *value_reference;
+        u8* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+        u8 value = *value_reference;
         
         u4 high_bytes = value >> 32;
-        u4 low_bytes = value & 0xFFFF;
+        u8 low_bytes = value & 0xFFFFFFFF;
         pushInOperandStack(environment->thread, low_bytes);
         pushInOperandStack(environment->thread, high_bytes);
     }
     else{
-        u4* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
-        u4 value = *value_reference;
-        pushInOperandStack(environment->thread, value);
+        //Se eh de 8bits
+        if (strcmp(attribute_descriptor, "B") == 0 || strcmp(attribute_descriptor, "C") == 0 ||
+            strcmp(attribute_descriptor, "Z") == 0){
+            
+            u1* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            u1 value = *value_reference;
+            pushInOperandStack(environment->thread, (u4) value);
+        }
+        
+        //Se eh de 16bits
+        else if (strcmp(attribute_descriptor, "S") == 0){
+            u2* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            u2 value = *value_reference;
+            pushInOperandStack(environment->thread, (u4) value);
+        }
+        //Se eh de 32bits
+        else {
+            u4* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            u4 value = *value_reference;
+            pushInOperandStack(environment->thread, value);
+        }
     }
 }
 
@@ -112,30 +130,50 @@ void putstatic(Environment* environment){
     
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)) return;
+    if (javaLibIsFrom(class_name)) return;
     
     //TODO: Verifica se campo eh estatico
     
-    //Verificamos se eh de 32 ou 64 bits
+    //Verificamos se eh de 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
-        unsigned long long* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
-        unsigned long long value;
+        u8* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+        u8 value;
         
         //Obtemos e concatenamos os bytes
         value = popFromOperandStack(environment->thread);
-        value = value << 32 | popFromOperandStack(environment->thread);
+        u8 lowBytes = popFromOperandStack(environment->thread);
+        value = value << 32 | lowBytes;
         
         //Atualizamos o campo
         *value_reference = value;
     }
+
     else{
-        u4* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
         
         //Obtemos o valor
         u4 value = popFromOperandStack(environment->thread);
-        //Salvamos no valor do campo
-        *value_reference = value;
+        
+        
+        //Se eh de 8bits
+        if (strcmp(attribute_descriptor, "B") == 0 || strcmp(attribute_descriptor, "C") == 0 ||
+                 strcmp(attribute_descriptor, "Z") == 0){
+            
+            u1* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            *value_reference = (u1) value;
+        }
+
+        //Se eh de 16bits
+        else if (strcmp(attribute_descriptor, "S") == 0){
+            u2* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            *value_reference = (u2) value;
+        }
+        //Se eh de 32bits
+        else {
+         u4* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            *value_reference = value;
+        }
     }
+
 }
 
 
@@ -164,7 +202,7 @@ void getfield(Environment* environment){
                                            &class_name, &attribute_name, &attribute_descriptor);
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)) return;
+    if (javaLibIsFrom(class_name)) return;
     
     //Verificamos se eh de 32 ou 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
@@ -172,14 +210,32 @@ void getfield(Environment* environment){
         unsigned long long value = *value_reference;
         
         u4 high_bytes = value >> 32;
-        u4 low_bytes = value & 0xFFFF;
+        u4 low_bytes = value & 0xFFFFFFFF;
         pushInOperandStack(environment->thread, low_bytes);
         pushInOperandStack(environment->thread, high_bytes);
     }
     else{
-        u4* value_reference = getObjectAttributeReference(objectRef, attribute_name);
-        u4 value = *value_reference;
-        pushInOperandStack(environment->thread, value);
+        //Se eh de 8bits
+        if (strcmp(attribute_descriptor, "B") == 0 || strcmp(attribute_descriptor, "C") == 0 ||
+            strcmp(attribute_descriptor, "Z") == 0){
+            
+            u1* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            u1 value = *value_reference;
+            pushInOperandStack(environment->thread, (u4) value);
+        }
+        
+        //Se eh de 16bits
+        else if (strcmp(attribute_descriptor, "S") == 0){
+            u2* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            u2 value = *value_reference;
+            pushInOperandStack(environment->thread, (u4) value);
+        }
+        //Se eh de 32bits
+        else {
+            u4* value_reference = getObjectAttributeReference(objectRef, attribute_name);   
+            u4 value = *value_reference;
+            pushInOperandStack(environment->thread, value);
+        }
     }
 }
 
@@ -209,7 +265,7 @@ void putfield(Environment* environment){
     
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)) return;
+    if (javaLibIsFrom(class_name)) return;
     
     //TODO: Verifica se campo eh estatico
     
@@ -226,12 +282,28 @@ void putfield(Environment* environment){
         *value_reference = value;
     }
     else{
-        u4* value_reference = getObjectAttributeReference(objectRef, attribute_name);
-        
         //Obtemos o valor
         u4 value = popFromOperandStack(environment->thread);
-        //Salvamos no valor do campo
-        *value_reference = value;
+        
+        
+        //Se eh de 8bits
+        if (strcmp(attribute_descriptor, "B") == 0 || strcmp(attribute_descriptor, "C") == 0 ||
+            strcmp(attribute_descriptor, "Z") == 0){
+            
+            u1* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            *value_reference = (u1) value;
+        }
+        
+        //Se eh de 16bits
+        else if (strcmp(attribute_descriptor, "S") == 0){
+            u2* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            *value_reference = (u2) value;
+        }
+        //Se eh de 32bits
+        else {
+            u4* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            *value_reference = value;
+        }
     }
 }
 
@@ -286,7 +358,7 @@ int isClassSubClassFromClass(char* className, char* supClassName, Environment* e
     JavaClass* class = getClass(className, environment);
     char* superName = getClassNameFromConstantPool(class->arqClass->constant_pool, class->arqClass->super_class);
     
-    if (strcmp(superName, "java/lang/Object") == 0) return 0;
+    if (javaLibIsFrom(superName)) return 0;
     else isClassSubClassFromClass(superName, supClassName, environment);
     
     return 0;
@@ -346,8 +418,8 @@ void invokevirtual(Environment* environment){
                                                    &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)){
-        executeJavaLibMethod(class_name, method_name, method_descriptor, environment);
+    if (javaLibIsFrom(class_name)){
+        javaLibExecuteMethod(class_name, method_name, method_descriptor, environment);
         return;
     }
     
@@ -398,7 +470,7 @@ int isMethodInClassOrSuperClass(JavaClass* objectClass, char* method_name, char*
     char* superClassName = getClassNameFromConstantPool(objectClass->arqClass->constant_pool,
                                                         objectClass->arqClass->super_class);
     
-    if (strcmp(superClassName, "java/lang/Object") == 0) return 0;
+    if (javaLibIsFrom(superClassName)) return 0;
     //Verificamos recursivamente
     else isMethodInClassOrSuperClass(getClass(superClassName, environment), method_name, method_descriptor, environment);
     
@@ -476,8 +548,8 @@ void invokespecial(Environment* environment){
                                                    &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)){
-        executeJavaLibMethod(class_name, method_name, method_descriptor, environment);
+    if (javaLibIsFrom(class_name)){
+        javaLibExecuteMethod(class_name, method_name, method_descriptor, environment);
         return;
     }
     
@@ -563,8 +635,8 @@ void invokestatic(Environment* environment){
                                                    &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)){
-        executeJavaLibMethod(class_name, method_name, method_descriptor, environment);
+    if (javaLibIsFrom(class_name)){
+        javaLibExecuteMethod(class_name, method_name, method_descriptor, environment);
         return;
     }
     
@@ -616,8 +688,8 @@ void invokeinterface(Environment* environment){
                                                    &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(class_name)){
-        executeJavaLibMethod(class_name, method_name, method_descriptor, environment);
+    if (javaLibIsFrom(class_name)){
+        javaLibExecuteMethod(class_name, method_name, method_descriptor, environment);
         return;
     }
     
@@ -675,8 +747,8 @@ void New(Environment* environment){
     char* className = getClassNameFromConstantPool(actual_class->arqClass->constant_pool, index);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
-    if (isFromJavaLib(className)){
-        newObjectFromJavaLib(className, environment);
+    if (javaLibIsFrom(className)){
+        javaLibNewObject(className, environment);
         return;
     }
     

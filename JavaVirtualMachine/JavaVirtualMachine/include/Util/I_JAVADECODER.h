@@ -26,7 +26,7 @@
  * \param name Nome a ser verificado.
  * \return 1 caso sim, 0 caso nao.
  */
-EXT23 int isFromJavaLib(const char* name);
+EXT23 int javaLibIsFrom(const char* name);
 
 
 //--------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ EXT23 int isFromJavaLib(const char* name);
  * \param descriptor Descritor do metodo a ser executado.
  * \param environment Ambiente de execucao atual.
  */
-EXT23 void executeJavaLibMethod(const char* className, const char* methodName,
+EXT23 void javaLibExecuteMethod(const char* className, const char* methodName,
                                 const char* descriptorName, Environment* environment);
 
 
@@ -52,7 +52,7 @@ EXT23 void executeJavaLibMethod(const char* className, const char* methodName,
  * \param fieldDescriptor Descritor do campo a ser obtido.
  * \param environment Ambiente de execucao atual.
  */
-EXT23 void getStaticFromJavaLib(const char* className, const char* fieldName,
+EXT23 void javaLibGetStatic(const char* className, const char* fieldName,
                                 const char* fieldDescriptor, Environment* environment);
 
 
@@ -63,6 +63,6 @@ EXT23 void getStaticFromJavaLib(const char* className, const char* fieldName,
  * \param className Nome da classe do objeto a ser criado.
  * \param environment Ambiente de execucao atual.
  */
-EXT23 void newObjectFromJavaLib(const char* className, Environment* environment);
+EXT23 void javaLibNewObject(const char* className, Environment* environment);
 
 #endif /* I_JAVADECODER_h */

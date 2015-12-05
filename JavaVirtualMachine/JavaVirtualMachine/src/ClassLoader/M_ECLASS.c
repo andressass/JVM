@@ -306,8 +306,8 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("CONSTANT_Long_info {");
             printf("\n\tu1 tag: %d", cp->tag);
             
-            //Unimos os dois u4 em um long long (u8)
-            long long bytesl = cp->u.Long.high_bytes;
+            //Unimos os dois u4 em um u8 (u8)
+            u8 bytesl = cp->u.Long.high_bytes;
             bytesl = bytesl << 32 | cp->u.Long.low_bytes;
             
             printf("\n\tu4 high_bytes: 0x%x", cp->u.Long.high_bytes);
