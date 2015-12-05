@@ -24,8 +24,9 @@
 
 #define NullPointerException            40 //!< Erro de referencia nula
 #define AbstractMethodError             41 //!< Erro de chamada de metodo abstrato
-#define IncompatibleClassChangeError    42 //!< Erro de chamada de metodo abstrato
-#define IllegalAccessError              43 //!< Erro de chamada de metodo abstrato
+#define IncompatibleClassChangeError    42 //!< Erro de chamada de metodo incompativel
+#define IllegalAccessError              43 //!< Erro de acesso
+#define ArrayIndexOutOfBoundsException  44 //!< Erro acesso index array
 
 
 //--------------------------------------------------------------------------------------------------

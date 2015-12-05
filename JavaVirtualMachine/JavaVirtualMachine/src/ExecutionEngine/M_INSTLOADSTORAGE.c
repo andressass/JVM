@@ -18,6 +18,7 @@
 #include "../../include/Util/I_TYPECONVERSION.h"
 #include "../../include/Estruturas/JAVAARRAY.h"
 #include "../../include/Estruturas/OPCODES.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
 
 
@@ -632,7 +633,9 @@ void aaload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((array_info->arrayAddress)+index-1);
+    if (index <= array_info->length) JVMThrow(ArrayIndexOutOfBoundsException, environment);
+    
+    u4 valor_numerico = *((array_info->arrayAddress)+index);
     
     pushInOperandStack(environment->thread, valor_numerico);
 }

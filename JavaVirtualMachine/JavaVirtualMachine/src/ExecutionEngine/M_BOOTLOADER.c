@@ -3,7 +3,7 @@
  *
  *  \brief Modulo de Inicializacao da JVM.
  *
- *  Modulo responsavel por implementar os metodos relacionados a inicializacao de estruturas e 
+ *  Modulo responsavel por implementar os metodos relacionados a inicializacao de estruturas e
  * da execucao do sistema.
  */
 //##################################################################################################
@@ -29,30 +29,23 @@
  * \param argv Vetor de vetores de char passados pelo usuario
  */
 void configureClassMain(Environment* environment, int argc, const char* argv[]){
-
+    
     //Empilhamos o metodo main a ser inicializado
     Frame* newFrame = pushFrame(environment, argv[1], "main", "([Ljava/lang/String;)V");
     
-    //Obtemos a quantidade de caracteres a partir de argv[1]
-    int argv_size = argc;
-    for(int i = 1; i < argc; i++) argv_size += strlen(argv[i]);
-    
-    //Concatenamos argv em uma unica string
-    char* argv_parsed = (char*)malloc(argv_size*sizeof(char));
-    strcpy(argv_parsed, argv[1]);
+    //Criamos o conteudo do array e o JavaArray a receber o conteudo
+    u4* stringArray = (u4*) malloc((argc-2)*sizeof(u4));
+    JavaArray* array = newJavaArray(T_INT, argc-2, stringArray);
+
+    //Preenchemos o array de strings com cada argumento
     for (int i = 2; i < argc; i++) {
-        strcat(argv_parsed, " ");
-        strcat(argv_parsed, argv[i]);
+        wchar_t* string = (wchar_t*)malloc((strlen(argv[i])+1)*sizeof(wchar_t));
+        mbstowcs(string, argv[i], (strlen(argv[i]))+1);
+        JavaString* string_info = newJavaString(string);
+        stringArray[i-2] = (u4) string_info;
     }
-    
-    wchar_t* string = (wchar_t*)malloc((strlen(argv_parsed)+1)*sizeof(wchar_t));
-    
-    mbstowcs(string, argv_parsed, (strlen(argv_parsed))+1);
-    
-    //Criamos uma estrutura de String Java para receber o argv_parsed
-    JavaString* string_info = newJavaString(string);
-    
-    newFrame->localVariablesVector[0] = (u4) string_info; //Passamos o argumento argv
+    //Passamos o argumento argv da main java
+    newFrame->localVariablesVector[0] = (u4) array;
 }
 
 
@@ -62,7 +55,7 @@ void configureClassMain(Environment* environment, int argc, const char* argv[]){
  *
  */
 int main(int argc, const char * argv[]) {
-
+    
     //Alocamos espaco para o ambiente de execucao
     Environment* environment = (Environment*) malloc(sizeof(Environment));
     
@@ -91,6 +84,6 @@ int main(int argc, const char * argv[]) {
     printf("\n     |___|  |_|_|   ❆");
     printf("\n_____________________");
     printf("\nFeliz Natal, Ladeira!\n\n");
-
+    
     return 0;
 }

@@ -69,8 +69,8 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Teste t 1"
-            isEnabled = "YES">
+            argument = "String de entrada de numero 1"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

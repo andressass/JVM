@@ -79,8 +79,8 @@ void getstatic(Environment* environment){
         
         u4 high_bytes = value >> 32;
         u8 low_bytes = value & 0xFFFFFFFF;
-        pushInOperandStack(environment->thread, low_bytes);
-        pushInOperandStack(environment->thread, high_bytes);
+        pushInOperandStack(environment->thread, (u4) low_bytes);
+        pushInOperandStack(environment->thread, (u4) high_bytes);
     }
     else{
         //Se eh de 8bits
@@ -211,8 +211,8 @@ void getfield(Environment* environment){
         
         u4 high_bytes = value >> 32;
         u4 low_bytes = value & 0xFFFFFFFF;
-        pushInOperandStack(environment->thread, low_bytes);
-        pushInOperandStack(environment->thread, high_bytes);
+        pushInOperandStack(environment->thread, (u4)low_bytes);
+        pushInOperandStack(environment->thread, (u4)high_bytes);
     }
     else{
         //Se eh de 8bits

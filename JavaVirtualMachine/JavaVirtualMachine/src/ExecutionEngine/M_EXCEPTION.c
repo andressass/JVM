@@ -52,6 +52,9 @@ void JVMThrow(int exception, Environment* environment){
         case IllegalAccessError:
             strcat(mensagem, "IllegalAccessError");
             break;
+        case ArrayIndexOutOfBoundsException:
+            strcat(mensagem, "ArrayIndexOutOfBoundsException");
+            break;
         default:
             break;
     }
