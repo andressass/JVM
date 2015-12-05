@@ -676,7 +676,7 @@ void New(Environment* environment){
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
     if (isFromJavaLib(className)){
-        newObjectFromClass(className, environment);
+        newObjectFromJavaLib(className, environment);
         return;
     }
     

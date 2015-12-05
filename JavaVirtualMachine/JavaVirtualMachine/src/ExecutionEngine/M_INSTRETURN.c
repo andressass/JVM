@@ -19,7 +19,7 @@ void ireturn(Environment* environment){
 	u4 conteudo;
 	Frame *tmp;
 
-	tmp = getCurrentFrame(environment->environment->thread);
+	tmp = getCurrentFrame(environment->thread);
 	conteudo = popFromOperandStack(environment->thread);
 	popFrame(environment->thread);
 

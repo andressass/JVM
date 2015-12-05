@@ -18,6 +18,8 @@
 #include "../../include/ExecutionEngine/I_INSTLOGARITH.h"
 #include "../../include/ExecutionEngine/I_INSTLOADSTORAGE.h"
 #include "../../include/ExecutionEngine/I_INSTOBJANDINVOKE.h"
+#include "../../include/ExecutionEngine/I_INSTCONVERSION.h"
+#include "../../include/ExecutionEngine/I_INSTRETURN.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -425,6 +427,69 @@ instruction decode(u1 bytecode){
             break;
         case OP_new:
             return New;
+            break;
+        case OP_ireturn:
+            return ireturn;
+            break;
+        case OP_lreturn:
+            return lreturn;
+            break;
+        case OP_freturn:
+            return freturn;
+            break;
+        case OP_dreturn:
+            return dreturn;
+            break;
+        case OP_areturn:
+            return areturn;
+            break;
+        case OP_return:
+            return return_;
+            break;
+        case OP_i2l:
+            return i2l;
+            break;
+        case OP_i2f:
+            return i2f;
+            break;
+        case OP_i2d:
+            return i2d;
+            break;
+        case OP_l2i:
+            return l2i;
+            break;
+        case OP_l2f:
+            return l2f;
+            break;
+        case OP_l2d:
+            return l2d;
+            break;
+        case OP_f2i:
+            return f2i;
+            break;
+        case OP_f2l:
+            return f2l;
+            break;
+        case OP_f2d:
+            return f2d;
+            break;
+        case OP_d2i:
+            return d2i;
+            break;
+        case OP_d2l:
+            return d2l;
+            break;
+        case OP_d2f:
+            return d2f;
+            break;
+        case OP_i2b:
+            return i2b;
+            break;
+        case OP_i2c:
+            return i2c;
+            break;
+        case OP_i2s:
+            return i2s;
             break;
         default:
             break;

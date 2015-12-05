@@ -241,6 +241,7 @@ int classInitializer(JavaClass* javaClass, Environment* environment){
     classSuperClassChecker(javaClass->arqClass, environment);
     
     //Empilhamos o metodo <clinit> da classe
+    environment->thread->PC--; //Metodo eh invocado sem ser chamado, precisa decrementar PC
     pushFrame(environment, getClassNameFromConstantPool(javaClass->arqClass->constant_pool, javaClass->arqClass->this_class), "<clinit>", "()V");
     
     return InitializerSuccess;

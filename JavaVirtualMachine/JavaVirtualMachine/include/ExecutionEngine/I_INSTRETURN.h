@@ -25,42 +25,42 @@
  *  \param Environment
  *  \return void
  */
-EXT11 void ireturn(Environment* environment);
+EXT13 void ireturn(Environment* environment);
 
 /*!
  *  Instrucao para tratar retorno de um long
  *  \param Environment
  *  \return void
  */
-EXT11 void lreturn(Environment* environment);
+EXT13 void lreturn(Environment* environment);
 
 /*!
  *  Instrucao para tratar retorno de um float
  *  \param Environment
  *  \return void
  */
-EXT11 void freturn(Environment* environment);
+EXT13 void freturn(Environment* environment);
 
 /*!
  *  Instrucao para tratar retorno de um double
  *  \param Environment
  *  \return void
  */
-EXT11 void dreturn(Environment* environment);
+EXT13 void dreturn(Environment* environment);
 
 /*!
  *  Instrucao para tratar retorno de um caracter
  *  \param Environment
  *  \return void
  */
-EXT11 void areturn(Environment* environment);
+EXT13 void areturn(Environment* environment);
 
 /*!
  *  Instrucao para tratar retorno em geral
  *  \param Environment
  *  \return void
  */
-EXT11 void return_(Environment* environment);
+EXT13 void return_(Environment* environment);
 
 
 #endif /* I_INSTRETURN_h */
