@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file M_DECODER.h
+/*! \file M_DECODER.c
  *
  *  \brief Modulo do Decodificador da JVM.
  *

@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file M_INSTMEMORY.h
+/*! \file M_INSTMEMORY.c
  *
  *  \brief Modulo das Instrucoes de carga e armazenamento da JVM.
  *

@@ -45,3 +45,13 @@ float u4ToFLoat(u4 bytes){
     return resultado;
 }
 
+
+//--------------------------------------------------------------------------------------------------
+u2 concat2Bytes(u1 high_bytes, u1 low_bytes){
+
+    u2 result = high_bytes;
+    
+    return (result << 8) | low_bytes;
+
+}
+
