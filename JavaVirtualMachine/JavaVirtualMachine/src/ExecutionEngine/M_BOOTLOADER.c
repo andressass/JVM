@@ -14,6 +14,7 @@
 #include <string.h>
 #include "../../include/Estruturas/E_JVM.h"
 #include "../../include/Estruturas/JAVASTRING.h"
+#include "../../include/Estruturas/JAVAARRAY.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/ExecutionEngine/I_INTERPRETER.h"

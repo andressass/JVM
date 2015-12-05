@@ -12,9 +12,9 @@
 #define JAVASTRING_h
 
 #ifdef JAVASTRING_SERV
-#define EXT21
+#define EXT22
 #else
-#define EXT21 extern
+#define EXT22 extern
 #endif
 
 #include<stdio.h>
@@ -49,7 +49,7 @@ typedef struct StringRef{
  * \param string String c a ser carregada na estrutura java string
  * \return estrutura JavaString preenchida
  */
-EXT21 JavaString* newJavaString(const char* string);
+EXT22 JavaString* newJavaString(const char* string);
 
 
 #endif /* JAVASTRING_h */

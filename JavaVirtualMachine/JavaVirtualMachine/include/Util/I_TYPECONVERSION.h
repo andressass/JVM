@@ -10,9 +10,9 @@
 #ifndef I_TYPECONVERSION_h
 #define I_TYPECONVERSION_h
 #ifdef TYPECONVERSION
-#define EXT21
+#define EXT22
 #else
-#define EXT21 extern
+#define EXT22 extern
 #endif
 
 
@@ -23,7 +23,8 @@
  * \param high_bytes    Bytes de mais alta ordem.
  * \param low_bytes     Bytes de mais baixa ordem.
  */
-double u4ToDouble(u4 high_bytes, u4 low_bytes);
+EXT22 double u4ToDouble(u4 high_bytes, u4 low_bytes);
+
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -31,6 +32,20 @@ double u4ToDouble(u4 high_bytes, u4 low_bytes);
  *
  * \param bytes    Bytes em u4.
  */
-float u4ToFLoat(u4 bytes);
+EXT22 float u4ToFLoat(u4 bytes);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que concatena 2bytes em um u2
+ *
+ * \param high_bytes    Bytes mais siginificativos.
+ * \param low_bytes    Bytes menos siginificativos.
+ * \return high_bytes << 8 | low_bytes
+ */
+EXT22 u2 concat2Bytes(u1 high_bytes, u1 low_bytes);
+
+
+
 
 #endif /* I_TYPECONVERSION */

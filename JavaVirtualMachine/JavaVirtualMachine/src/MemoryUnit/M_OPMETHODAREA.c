@@ -18,6 +18,7 @@
 #include "../../include/ClassLoader/I_CLASSLOADER.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
+#include "../../include/Util/I_JAVADECODER.h"
 
 //--------------------------------------------------------------------------------------------------
 MethodArea* newMethodArea(){
@@ -33,13 +34,9 @@ MethodArea* newMethodArea(){
 
 //--------------------------------------------------------------------------------------------------
 JavaClass* findJavaClassOnMethodArea(const char* qualifiedName, MethodArea* methodArea){
-    //TODO: Implementar caso as classe sejam java.<...>
-    
-    //REMOVER________________________________________________
-    if (strcmp(qualifiedName,"java/lang/Object") == 0) {
-        return (JavaClass*) 1;
-    }
-    //REMOVER________________________________________________
+
+    //Se for uma classe de bibliotecas java
+    if (isFromJavaLib(qualifiedName)) return (JavaClass*) 1;
     
     //Pesquisamos a classe
     for (int i = 0; i < methodArea->classCount; i++)

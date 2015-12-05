@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file M_DECODER.h
+/*! \file M_DECODER.c
  *
  *  \brief Modulo do Decodificador da JVM.
  *
@@ -17,6 +17,7 @@
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ExecutionEngine/I_INSTLOGARITH.h"
 #include "../../include/ExecutionEngine/I_INSTLOADSTORAGE.h"
+#include "../../include/ExecutionEngine/I_INSTOBJANDINVOKE.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -295,6 +296,135 @@ instruction decode(u1 bytecode){
             break;
         case OP_saload:
             return saload;
+            break;
+        case OP_istore:
+            return istore;
+            break;
+        case OP_lstore:
+            return lstore;
+            break;
+        case OP_fstore:
+            return fstore;
+            break;
+        case OP_dstore:
+            return dstore;
+            break;
+        case OP_astore:
+            return astore;
+            break;
+        case OP_istore_0:
+            return istore_0;
+            break;
+        case OP_istore_1:
+            return istore_1;
+            break;
+        case OP_istore_2:
+            return istore_2;
+            break;
+        case OP_istore_3:
+            return istore_3;
+            break;
+        case OP_lstore_0:
+            return lstore_0;
+            break;
+        case OP_lstore_1:
+            return lstore_1;
+            break;
+        case OP_lstore_2:
+            return lstore_2;
+            break;
+        case OP_lstore_3:
+            return lstore_3;
+            break;
+        case OP_fstore_0:
+            return fstore_0;
+            break;
+        case OP_fstore_1:
+            return fstore_1;
+            break;
+        case OP_fstore_2:
+            return fstore_2;
+            break;
+        case OP_fstore_3:
+            return fstore_3;
+            break;
+        case OP_dstore_0:
+            return dstore_0;
+            break;
+        case OP_dstore_1:
+            return dstore_1;
+            break;
+        case OP_dstore_2:
+            return dstore_2;
+            break;
+        case OP_dstore_3:
+            return dstore_3;
+            break;
+        case OP_astore_0:
+            return astore_0;
+            break;
+        case OP_astore_1:
+            return astore_1;
+            break;
+        case OP_astore_2:
+            return astore_2;
+            break;
+        case OP_astore_3:
+            return astore_3;
+            break;
+        case OP_iastore:
+            return iastore;
+            break;
+        case OP_lastore:
+            return lastore;
+            break;
+        case OP_fastore:
+            return fastore;
+            break;
+        case OP_dastore:
+            return dastore;
+            break;
+        case OP_aastore:
+            return aastore;
+            break;
+        case OP_bastore:
+            return bastore;
+            break;
+        case OP_castore:
+            return castore;
+            break;
+        case OP_sastore:
+            return sastore;
+            break;
+        case OP_wide:
+            return wide;
+            break;
+        case OP_getstatic:
+            return getstatic;
+            break;
+        case OP_putstatic:
+            return putstatic;
+            break;
+        case OP_getfield:
+            return getfield;
+            break;
+        case OP_putfield:
+            return putfield;
+            break;
+        case OP_invokevirtual:
+            return invokevirtual;
+            break;
+        case OP_invokespecial:
+            return invokespecial;
+            break;
+        case OP_invokestatic:
+            return invokestatic;
+            break;
+        case OP_invokeinterface:
+            return invokeinterface;
+            break;
+        case OP_new:
+            return New;
             break;
         default:
             break;

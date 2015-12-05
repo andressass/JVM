@@ -18,6 +18,19 @@
 
 #include "../Estruturas/E_JVM.h"
 
+//--------------------------------------------------------------------------------------------------
+// Definicao de Excessoes
+//--------------------------------------------------------------------------------------------------
+
+#define NullPointerException            40 //!< Erro de referencia nula
+#define AbstractMethodError             41 //!< Erro de chamada de metodo abstrato
+#define IncompatibleClassChangeError    42 //!< Erro de chamada de metodo abstrato
+#define IllegalAccessError              43 //!< Erro de chamada de metodo abstrato
+
+
+//--------------------------------------------------------------------------------------------------
+//Metodos
+//--------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -27,6 +40,14 @@
  */
 EXT17 void JVMstopAbrupt(const char* msg);
 
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Pelo lancamento e tratamento de excessoes
+ *
+ * \param exception codigo da excessao
+ */
+EXT17 void JVMThrow(int exception, Environment* environment);
 
 
 #endif /* I_EXCEPTION_h */

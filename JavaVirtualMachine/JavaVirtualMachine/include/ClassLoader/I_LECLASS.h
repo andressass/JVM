@@ -77,6 +77,25 @@ EXT4 char* getClassNameFromConstantPool(cp_info* cp, u2 index);
 
 //--------------------------------------------------------------------------------------------------
 /*!
+ * Metodo que, dado um indice valido de field_info ou methdo_info para um pool de constantes, 
+ * procura e retorna por referencia o nome da classe do field/metd, o nome do field/metd, e o 
+ * descritor do field/metd.
+ *
+ * \param index Indice valido para o fieldInfo.
+ * \param constant_pool Referencia para o pool de constantes a ser utilizado.
+ * \param class_name Referencia para um vetor de char a receber o nome da classe do field/metd
+ * \param name Referencia para um vetor de char a receber o nome do field/metd
+ * \param descriptor Referencia para um vetor de char a receber o descritor do field/metd
+ */
+EXT4 void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
+                                                 cp_info* constant_pool,
+                                                 char** class_name,
+                                                 char** name,
+                                                 char** descriptor);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
  * Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura
  * CONST_UTF8 apontada pelo indice passado
  *
