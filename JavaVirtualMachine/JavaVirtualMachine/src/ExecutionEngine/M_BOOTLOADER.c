@@ -69,7 +69,7 @@ int main(int argc, const char * argv[]) {
     
     //Passamos o ambiente de execucao para o interpretador
     execute(environment);
-    
+
     printf("\n_____________________");
     printf("\n❆   ❆         ❆    ❆ ");
     printf("\n  ❆   /\\ ❆     ❆  ");

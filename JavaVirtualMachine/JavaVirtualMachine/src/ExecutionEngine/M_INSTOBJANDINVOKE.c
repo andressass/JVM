@@ -447,6 +447,7 @@ void invokevirtual(Environment* environment){
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     newFrame->localVariablesVector[0] = (u4) objectRef;
@@ -585,7 +586,7 @@ void invokespecial(Environment* environment){
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
-    
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     newFrame->localVariablesVector[0] = (u4) objectRef;
@@ -662,7 +663,7 @@ void invokestatic(Environment* environment){
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
-    
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     for (int i = 0; i < nParams; i++) newFrame->localVariablesVector[i] = params[i];
@@ -726,7 +727,7 @@ void invokeinterface(Environment* environment){
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
-    
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     newFrame->localVariablesVector[0] = (u4) objectRef;
