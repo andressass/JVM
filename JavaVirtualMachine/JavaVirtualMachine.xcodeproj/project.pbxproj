@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		448941021C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c in Sources */ = {isa = PBXBuildFile; fileRef = 448941011C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c */; };
 		448941091C11492C004ABAE0 /* M_TYPECONVERSION.c in Sources */ = {isa = PBXBuildFile; fileRef = 448941061C114927004ABAE0 /* M_TYPECONVERSION.c */; };
+		4489410C1C121DE1004ABAE0 /* JAVAARRAY.c in Sources */ = {isa = PBXBuildFile; fileRef = 4489410A1C121DE1004ABAE0 /* JAVAARRAY.c */; };
 		CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */; };
 		CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */; };
 		CE618CDB1C10D1B400FDD92F /* M_EXCEPTION.c in Sources */ = {isa = PBXBuildFile; fileRef = CE618CDA1C10D1B400FDD92F /* M_EXCEPTION.c */; };
@@ -43,6 +44,8 @@
 		448941011C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_INSTLOADSTORAGE.c; path = src/ExecutionEngine/M_INSTLOADSTORAGE.c; sourceTree = "<group>"; };
 		448941041C1146BB004ABAE0 /* I_TYPECONVERSION.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = I_TYPECONVERSION.h; path = include/Util/I_TYPECONVERSION.h; sourceTree = "<group>"; };
 		448941061C114927004ABAE0 /* M_TYPECONVERSION.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_TYPECONVERSION.c; path = src/Util/M_TYPECONVERSION.c; sourceTree = "<group>"; };
+		4489410A1C121DE1004ABAE0 /* JAVAARRAY.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = JAVAARRAY.c; path = src/Estruturas/JAVAARRAY.c; sourceTree = "<group>"; };
+		4489410D1C1223B6004ABAE0 /* JAVAARRAY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JAVAARRAY.h; path = include/Estruturas/JAVAARRAY.h; sourceTree = "<group>"; };
 		CE1FB7E51C0A617B0045AFB8 /* M_DECODER.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = M_DECODER.c; path = src/ExecutionEngine/M_DECODER.c; sourceTree = "<group>"; };
 		CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = OPCODES.c; path = src/Estruturas/OPCODES.c; sourceTree = "<group>"; };
 		CE33EE631BFCFB2400A4003B /* JavaVirtualMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JavaVirtualMachine; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +235,7 @@
 				CEAC72261BFCFEE3006F4F9B /* E_JVM.h */,
 				CEAC72271BFCFEE3006F4F9B /* OPCODES.h */,
 				CE618CDD1C110DBD00FDD92F /* JAVASTRING.h */,
+				4489410D1C1223B6004ABAE0 /* JAVAARRAY.h */,
 			);
 			name = Estruturas;
 			sourceTree = "<group>";
@@ -241,6 +245,7 @@
 			children = (
 				CE1FB7E71C0A6D220045AFB8 /* OPCODES.c */,
 				CE618CDE1C110DD200FDD92F /* JAVASTRING.c */,
+				4489410A1C121DE1004ABAE0 /* JAVAARRAY.c */,
 			);
 			name = Estruturas;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				448941091C11492C004ABAE0 /* M_TYPECONVERSION.c in Sources */,
 				CE9FB3F31C08A019004DBA0C /* M_OPMETHODAREA.c in Sources */,
 				448941021C1096E6004ABAE0 /* M_INSTLOADSTORAGE.c in Sources */,
+				4489410C1C121DE1004ABAE0 /* JAVAARRAY.c in Sources */,
 				CE1FB7E61C0A617B0045AFB8 /* M_DECODER.c in Sources */,
 				CE618CDF1C110DD200FDD92F /* JAVASTRING.c in Sources */,
 				CE1FB7E81C0A6D220045AFB8 /* OPCODES.c in Sources */,
