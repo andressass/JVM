@@ -30,7 +30,7 @@ void execute(Environment* environment){
         instruction nextInstruction = decode(opcode);
         
         //! Executa o a instrucao referente ao opcode
-        if(nextInstruction) nextInstruction(environment->thread);
+        if(nextInstruction) nextInstruction(environment);
         else break; //REMOVER
         
         //Atualizamos o valor de PC

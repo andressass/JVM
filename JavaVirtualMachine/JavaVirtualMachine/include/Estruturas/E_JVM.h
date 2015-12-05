@@ -440,9 +440,8 @@ typedef struct Environment{
 //! Ponteiro para uma instrucao
 /*!
  * Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia
- * para a Thread em operacao.
- *
+ * para a o ambiente de execucao.
  */
-typedef void (*instruction)(Thread*);
+typedef void (*instruction)(Environment*);
 
 #endif

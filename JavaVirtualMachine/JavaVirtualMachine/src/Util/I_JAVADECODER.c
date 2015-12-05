@@ -19,7 +19,6 @@
 
 //--------------------------------------------------------------------------------------------------
 int isFromJavaLib(const char* name){
-
     if (strncmp(name, "java/", 5) == 0) return 1;
     if (strncmp(name, "Ljava/", 6) == 0) return 1;
     

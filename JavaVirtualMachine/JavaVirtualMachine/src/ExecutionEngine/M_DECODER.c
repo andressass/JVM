@@ -17,6 +17,7 @@
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ExecutionEngine/I_INSTLOGARITH.h"
 #include "../../include/ExecutionEngine/I_INSTLOADSTORAGE.h"
+#include "../../include/ExecutionEngine/I_INSTOBJANDINVOKE.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -397,6 +398,33 @@ instruction decode(u1 bytecode){
             break;
         case OP_wide:
             return wide;
+            break;
+        case OP_getstatic:
+            return getstatic;
+            break;
+        case OP_putstatic:
+            return putstatic;
+            break;
+        case OP_getfield:
+            return getfield;
+            break;
+        case OP_putfield:
+            return putfield;
+            break;
+        case OP_invokevirtual:
+            return invokevirtual;
+            break;
+        case OP_invokespecial:
+            return invokespecial;
+            break;
+        case OP_invokestatic:
+            return invokestatic;
+            break;
+        case OP_invokeinterface:
+            return invokeinterface;
+            break;
+        case OP_new:
+            return New;
             break;
         default:
             break;

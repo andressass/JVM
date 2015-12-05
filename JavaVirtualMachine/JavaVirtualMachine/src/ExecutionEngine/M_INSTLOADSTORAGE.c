@@ -22,523 +22,523 @@
 
 
 //--------------------------------------------------------------------------------------------------
-void nop(Thread* thread){}
+void nop(Environment* environment){}
 
 
 //--------------------------------------------------------------------------------------------------
-void aconst_null(Thread* thread){
+void aconst_null(Environment* environment){
     
-    pushInOperandStack(thread, (u4)NULL);
+    pushInOperandStack(environment->thread, (u4)NULL);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_m1(Thread* thread){
+void iconst_m1(Environment* environment){
     
-    pushInOperandStack(thread, -1);
+    pushInOperandStack(environment->thread, -1);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_0(Thread* thread){
+void iconst_0(Environment* environment){
     
-    pushInOperandStack(thread, 0);
+    pushInOperandStack(environment->thread, 0);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_1(Thread* thread){
+void iconst_1(Environment* environment){
     
-    pushInOperandStack(thread, 1);
+    pushInOperandStack(environment->thread, 1);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_2(Thread* thread){
+void iconst_2(Environment* environment){
     
-    pushInOperandStack(thread, 2);
+    pushInOperandStack(environment->thread, 2);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_3(Thread* thread){
+void iconst_3(Environment* environment){
     
-    pushInOperandStack(thread, 3);
+    pushInOperandStack(environment->thread, 3);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_4(Thread* thread){
+void iconst_4(Environment* environment){
     
-    pushInOperandStack(thread, 4);
+    pushInOperandStack(environment->thread, 4);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iconst_5(Thread* thread){
+void iconst_5(Environment* environment){
     
-    pushInOperandStack(thread, 5);
+    pushInOperandStack(environment->thread, 5);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lconst_0(Thread* thread){
+void lconst_0(Environment* environment){
     
-    pushInOperandStack(thread, 0); //parte baixa
-    pushInOperandStack(thread, 0); //parte alta
+    pushInOperandStack(environment->thread, 0); //parte baixa
+    pushInOperandStack(environment->thread, 0); //parte alta
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lconst_1(Thread* thread){
+void lconst_1(Environment* environment){
     
-    pushInOperandStack(thread, 1);
-    pushInOperandStack(thread, 0);
+    pushInOperandStack(environment->thread, 1);
+    pushInOperandStack(environment->thread, 0);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fconst_0(Thread* thread){
+void fconst_0(Environment* environment){
     
-    pushInOperandStack(thread, 0.0f);
+    pushInOperandStack(environment->thread, 0.0f);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fconst_1(Thread* thread){
+void fconst_1(Environment* environment){
     
-    pushInOperandStack(thread, 1.0f);
+    pushInOperandStack(environment->thread, 1.0f);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fconst_2(Thread* thread){
+void fconst_2(Environment* environment){
     
-    pushInOperandStack(thread, 2.0f);
+    pushInOperandStack(environment->thread, 2.0f);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dconst_0(Thread* thread){
+void dconst_0(Environment* environment){
     
-    pushInOperandStack(thread, 0.0f);
-    pushInOperandStack(thread, 0.0f);
+    pushInOperandStack(environment->thread, 0.0f);
+    pushInOperandStack(environment->thread, 0.0f);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dconst_1(Thread* thread){
+void dconst_1(Environment* environment){
     
-    pushInOperandStack(thread, 1.0f); //parte baixa
-    pushInOperandStack(thread, 0.0f); //parte alta
+    pushInOperandStack(environment->thread, 1.0f); //parte baixa
+    pushInOperandStack(environment->thread, 0.0f); //parte alta
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void bipush(Thread* thread){
+void bipush(Environment* environment){
     
-    thread->PC++;
-    u1 byte_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                          thread->vmStack->top->javaClass->arqClass->constant_pool
-                          ,thread->PC);
+    environment->thread->PC++;
+    u1 byte_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                          environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                          ,environment->thread->PC);
     
     int byte_signal_extend = byte_argument;
     
-    pushInOperandStack(thread, byte_signal_extend);
+    pushInOperandStack(environment->thread, byte_signal_extend);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void sipush(Thread* thread){
+void sipush(Environment* environment){
     
-    thread->PC++;
-    u1 byte1_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                             thread->vmStack->top->javaClass->arqClass->constant_pool
-                                             ,thread->PC);
+    environment->thread->PC++;
+    u1 byte1_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                             environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                             ,environment->thread->PC);
     
-    thread->PC++;
-    u1 byte2_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 byte2_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
     short short_result = (byte1_argument << 8) | byte2_argument;
     
     int short_signal_extend = short_result;
     
-    pushInOperandStack(thread, short_signal_extend);
+    pushInOperandStack(environment->thread, short_signal_extend);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void ldc(Thread* thread){
+void ldc(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    u1 tag_valor_constant_pool = thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].tag;
+    u1 tag_valor_constant_pool = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].tag;
     
     if (tag_valor_constant_pool == CONSTANT_Integer || tag_valor_constant_pool == CONSTANT_Float){
         
         // Estrutra Integer e Float possuem o mesmo formato
-        u4 valor_numerico = thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].u.Integer.bytes;
+        u4 valor_numerico = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].u.Integer.bytes;
         
-        pushInOperandStack(thread, valor_numerico);
+        pushInOperandStack(environment->thread, valor_numerico);
     }
     else if (tag_valor_constant_pool == CONSTANT_String){
         
-        u2 referencia = thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].u.String.string_index;
+        u2 referencia = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_argument-1].u.String.string_index;
         
-        pushInOperandStack(thread, referencia);
+        pushInOperandStack(environment->thread, referencia);
     }
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void ldc_w(Thread* thread){
+void ldc_w(Environment* environment){
     
-    thread->PC++;
-    u1 index1byte_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index1byte_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    thread->PC++;
-    u1 index2byte_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                                   thread->vmStack->top->javaClass->arqClass->constant_pool
-                                                   ,thread->PC);
+    environment->thread->PC++;
+    u1 index2byte_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
     
     u2 index_result = (index1byte_argument << 8) | index2byte_argument;
     
-    u1 tag_valor_constant_pool = thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].tag;
+    u1 tag_valor_constant_pool = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].tag;
     
     if (tag_valor_constant_pool == CONSTANT_Integer || tag_valor_constant_pool == CONSTANT_Float){
         
         // Estrutra Integer e Float possuem o mesmo formato
-        u4 valor_numerico = thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Integer.bytes;
+        u4 valor_numerico = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Integer.bytes;
         
-        pushInOperandStack(thread, valor_numerico);
+        pushInOperandStack(environment->thread, valor_numerico);
     }
     else if (tag_valor_constant_pool == CONSTANT_String){
         
-        u2 referencia = thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.String.string_index;
+        u2 referencia = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.String.string_index;
         
-        pushInOperandStack(thread, referencia);
+        pushInOperandStack(environment->thread, referencia);
     }
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void ldc2_w(Thread* thread){
+void ldc2_w(Environment* environment){
     
-    thread->PC++;
-    u1 index1byte_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                                   thread->vmStack->top->javaClass->arqClass->constant_pool
-                                                   ,thread->PC);
+    environment->thread->PC++;
+    u1 index1byte_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
     
-    thread->PC++;
-    u1 index2byte_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                                   thread->vmStack->top->javaClass->arqClass->constant_pool
-                                                   ,thread->PC);
+    environment->thread->PC++;
+    u1 index2byte_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
     
     u2 index_result = (index1byte_argument << 8) | index2byte_argument;
     
-    u1 tag_valor_constant_pool = thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].tag;
+    u1 tag_valor_constant_pool = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].tag;
     
     if (tag_valor_constant_pool == CONSTANT_Long || tag_valor_constant_pool == CONSTANT_Double){
         
         //Estrutura Long e Double possuem o mesmo formato
-        u4 valor_numerico_high = thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Long.high_bytes;
+        u4 valor_numerico_high = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Long.high_bytes;
         
-        u4 valor_numerico_low = thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Long.low_bytes;
+        u4 valor_numerico_low = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Long.low_bytes;
         
-        pushInOperandStack(thread, valor_numerico_low);
-        pushInOperandStack(thread, valor_numerico_high);
+        pushInOperandStack(environment->thread, valor_numerico_low);
+        pushInOperandStack(environment->thread, valor_numerico_high);
     }
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iload(Thread* thread){
+void iload(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lload(Thread* thread){
+void lload(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[index_argument-1];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[index_argument];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_argument];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fload(Thread* thread){
+void fload(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dload(Thread* thread){
+void dload(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[index_argument-1];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[index_argument];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_argument];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void aload(Thread* thread){
+void aload(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iload_0(Thread* thread){
+void iload_0(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[0];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[0];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iload_1(Thread* thread){
+void iload_1(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[1];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iload_2(Thread* thread){
+void iload_2(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[2];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iload_3(Thread* thread){
+void iload_3(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[3];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lload_0(Thread* thread){
+void lload_0(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[0];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[0];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[1];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lload_1(Thread* thread){
+void lload_1(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[1];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[2];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lload_2(Thread* thread){
+void lload_2(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[2];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[3];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lload_3(Thread* thread){
+void lload_3(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[3];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[4];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[4];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fload_0(Thread* thread){
+void fload_0(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[0];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[0];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fload_1(Thread* thread){
+void fload_1(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[1];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fload_2(Thread* thread){
+void fload_2(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[2];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fload_3(Thread* thread){
+void fload_3(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[3];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dload_0(Thread* thread){
+void dload_0(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[0];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[0];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[1];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dload_1(Thread* thread){
+void dload_1(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[1];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[2];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dload_2(Thread* thread){
+void dload_2(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[2];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[3];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dload_3(Thread* thread){
+void dload_3(Environment* environment){
     
-    u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[3];
-    u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[4];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[4];
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void aload_0(Thread* thread){
+void aload_0(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[0];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[0];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void aload_1(Thread* thread){
+void aload_1(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[1];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void aload_2(Thread* thread){
+void aload_2(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[2];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[2];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void aload_3(Thread* thread){
+void aload_3(Environment* environment){
     
-    u4 valor_numerico = thread->vmStack->top->localVariablesVector[3];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[3];
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iaload(Thread* thread){
+void iaload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -549,16 +549,16 @@ void iaload(Thread* thread){
     
     u4 valor_numerico = *((array_info->arrayAddress)+index-1);
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void laload(Thread* thread){
+void laload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -570,17 +570,17 @@ void laload(Thread* thread){
     u4 valor_numerico_high = *((array_info->arrayAddress)+index-1);
     u4 valor_numerico_low = *((array_info->arrayAddress)+index);
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void faload(Thread* thread){
+void faload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -591,16 +591,16 @@ void faload(Thread* thread){
     
     u4 valor_numerico = *((array_info->arrayAddress)+index-1);
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void daload(Thread* thread){
+void daload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -612,17 +612,17 @@ void daload(Thread* thread){
     u4 valor_numerico_high = *((array_info->arrayAddress)+index-1);
     u4 valor_numerico_low = *((array_info->arrayAddress)+index);
     
-    pushInOperandStack(thread, valor_numerico_low);
-    pushInOperandStack(thread, valor_numerico_high);
+    pushInOperandStack(environment->thread, valor_numerico_low);
+    pushInOperandStack(environment->thread, valor_numerico_high);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void aaload(Thread* thread){
+void aaload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -633,18 +633,18 @@ void aaload(Thread* thread){
     
     u4 valor_numerico = *((array_info->arrayAddress)+index-1);
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void baload(Thread* thread){
+void baload(Environment* environment){
     
     int valor_numerico;
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -668,16 +668,16 @@ void baload(Thread* thread){
         
     }
     
-    pushInOperandStack(thread, valor_numerico);
+    pushInOperandStack(environment->thread, valor_numerico);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void caload(Thread* thread){
+void caload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -688,16 +688,16 @@ void caload(Thread* thread){
     
     int valor_numerico_zero_extend = (u1)(*((array_info->arrayAddress)+index-1));
     
-    pushInOperandStack(thread, valor_numerico_zero_extend);
+    pushInOperandStack(environment->thread, valor_numerico_zero_extend);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void saload(Thread* thread){
+void saload(Environment* environment){
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -708,288 +708,288 @@ void saload(Thread* thread){
     
     int valor_numerico_signal_extend = *((array_info->arrayAddress)+index-1);
     
-    pushInOperandStack(thread, valor_numerico_signal_extend);
+    pushInOperandStack(environment->thread, valor_numerico_signal_extend);
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void istore(Thread* thread){
+void istore(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lstore(Thread* thread){
+void lstore(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fstore(Thread* thread){
+void fstore(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dstore(Thread* thread){
+void dstore(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void astore(Thread* thread){
+void astore(Environment* environment){
     
-    thread->PC++;
-    u1 index_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void istore_0(Thread* thread){
+void istore_0(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[0] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[0] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void istore_1(Thread* thread){
+void istore_1(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void istore_2(Thread* thread){
+void istore_2(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void istore_3(Thread* thread){
+void istore_3(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lstore_0(Thread* thread){
+void lstore_0(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[0] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[0] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lstore_1(Thread* thread){
+void lstore_1(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lstore_2(Thread* thread){
+void lstore_2(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void lstore_3(Thread* thread){
+void lstore_3(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[4] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[4] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fstore_0(Thread* thread){
+void fstore_0(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[0] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[0] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fstore_1(Thread* thread){
+void fstore_1(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fstore_2(Thread* thread){
+void fstore_2(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void fstore_3(Thread* thread){
+void fstore_3(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dstore_0(Thread* thread){
+void dstore_0(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[0] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[0] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dstore_1(Thread* thread){
+void dstore_1(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dstore_2(Thread* thread){
+void dstore_2(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void dstore_3(Thread* thread){
+void dstore_3(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico_high;
-    thread->vmStack->top->localVariablesVector[4] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[4] = valor_numerico_low;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void astore_0(Thread* thread){
+void astore_0(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[0] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[0] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void astore_1(Thread* thread){
+void astore_1(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[1] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void astore_2(Thread* thread){
+void astore_2(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[2] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[2] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void astore_3(Thread* thread){
+void astore_3(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    thread->vmStack->top->localVariablesVector[3] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[3] = valor_numerico;
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void iastore(Thread* thread){
+void iastore(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1003,14 +1003,14 @@ void iastore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void lastore(Thread* thread){
+void lastore(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1025,13 +1025,13 @@ void lastore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void fastore(Thread* thread){
+void fastore(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1045,14 +1045,14 @@ void fastore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void dastore(Thread* thread){
+void dastore(Environment* environment){
     
-    u4 valor_numerico_high = popFromOperandStack(thread);
-    u4 valor_numerico_low = popFromOperandStack(thread);
+    u4 valor_numerico_high = popFromOperandStack(environment->thread);
+    u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1067,13 +1067,13 @@ void dastore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void aastore(Thread* thread){
+void aastore(Environment* environment){
     
-    u4 valor_numerico = popFromOperandStack(thread);
+    u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1089,15 +1089,15 @@ void aastore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void bastore(Thread* thread){
+void bastore(Environment* environment){
     
     u1 valor_numerico;
     
-    u4 valor_numerico_int = popFromOperandStack(thread);
+    u4 valor_numerico_int = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1126,13 +1126,13 @@ void bastore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void castore(Thread* thread){
+void castore(Environment* environment){
     
-    u4 valor_numerico_int = popFromOperandStack(thread);
+    u4 valor_numerico_int = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1148,13 +1148,13 @@ void castore(Thread* thread){
 
 
 //--------------------------------------------------------------------------------------------------
-void sastore(Thread* thread){
+void sastore(Environment* environment){
     
-    u4 valor_numerico_int = popFromOperandStack(thread);
+    u4 valor_numerico_int = popFromOperandStack(environment->thread);
     
-    u4 index = popFromOperandStack(thread);
+    u4 index = popFromOperandStack(environment->thread);
     
-    JavaArray* array_info = (JavaArray*) popFromOperandStack(thread);
+    JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
     if (array_info->arrayAddress == NULL) {
         //TODO: throw NullPointerException;
@@ -1169,22 +1169,22 @@ void sastore(Thread* thread){
 }
 
 
-void wide(Thread* thread){
+void wide(Environment* environment){
     
-    thread->PC++;
-    u1 opcode_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                              thread->vmStack->top->javaClass->arqClass->constant_pool
-                                              ,thread->PC);
+    environment->thread->PC++;
+    u1 opcode_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                              environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                              ,environment->thread->PC);
     
-    thread->PC++;
-    u1 indexbyte1_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                               thread->vmStack->top->javaClass->arqClass->constant_pool
-                                               ,thread->PC);
+    environment->thread->PC++;
+    u1 indexbyte1_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                               environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                               ,environment->thread->PC);
     
-    thread->PC++;
-    u1 indexbyte2_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                               thread->vmStack->top->javaClass->arqClass->constant_pool
-                                               ,thread->PC);
+    environment->thread->PC++;
+    u1 indexbyte2_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                               environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                               ,environment->thread->PC);
     
     u2 index_result = (indexbyte1_argument << 8) | indexbyte2_argument;
     
@@ -1192,31 +1192,31 @@ void wide(Thread* thread){
     // PRIMEIRO FORMATO
     if (opcode_argument == OP_iload || opcode_argument == OP_fload || opcode_argument == OP_aload) {
         
-        u4 valor_numerico = thread->vmStack->top->localVariablesVector[index_result-1];
+        u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_result-1];
         
-        pushInOperandStack(thread, valor_numerico);
+        pushInOperandStack(environment->thread, valor_numerico);
     }
     else if (opcode_argument == OP_istore || opcode_argument == OP_fstore || opcode_argument == OP_astore){
         
-        u4 valor_numerico = popFromOperandStack(thread);
+        u4 valor_numerico = popFromOperandStack(environment->thread);
         
-        thread->vmStack->top->localVariablesVector[index_result-1] = valor_numerico;
+        environment->thread->vmStack->top->localVariablesVector[index_result-1] = valor_numerico;
     }
     else if (opcode_argument == OP_lload || opcode_argument == OP_dload) {
         
-        u4 valor_numerico_high = thread->vmStack->top->localVariablesVector[index_result-1];
-        u4 valor_numerico_low = thread->vmStack->top->localVariablesVector[index_result];
+        u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_result-1];
+        u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_result];
         
-        pushInOperandStack(thread, valor_numerico_low);
-        pushInOperandStack(thread, valor_numerico_high);
+        pushInOperandStack(environment->thread, valor_numerico_low);
+        pushInOperandStack(environment->thread, valor_numerico_high);
     }
     else if (opcode_argument == OP_lstore || opcode_argument == OP_dstore) {
         
-        u4 valor_numerico_high = popFromOperandStack(thread);
-        u4 valor_numerico_low = popFromOperandStack(thread);
+        u4 valor_numerico_high = popFromOperandStack(environment->thread);
+        u4 valor_numerico_low = popFromOperandStack(environment->thread);
         
-        thread->vmStack->top->localVariablesVector[index_result-1] = valor_numerico_high;
-        thread->vmStack->top->localVariablesVector[index_result] = valor_numerico_low;
+        environment->thread->vmStack->top->localVariablesVector[index_result-1] = valor_numerico_high;
+        environment->thread->vmStack->top->localVariablesVector[index_result] = valor_numerico_low;
     }
     else if (opcode_argument == OP_ret) {
         //TODO:
@@ -1225,15 +1225,15 @@ void wide(Thread* thread){
     // SEGUNDO FORMATO
     else if (opcode_argument == OP_iinc) {
         
-        thread->PC++;
-        u1 constbyte1_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                                       thread->vmStack->top->javaClass->arqClass->constant_pool
-                                                       ,thread->PC);
+        environment->thread->PC++;
+        u1 constbyte1_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                       environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                       ,environment->thread->PC);
         
-        thread->PC++;
-        u1 constbyte2_argument = getByteCodeFromMethod(thread->vmStack->top->method_info,
-                                                       thread->vmStack->top->javaClass->arqClass->constant_pool
-                                                       ,thread->PC);
+        environment->thread->PC++;
+        u1 constbyte2_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                       environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                       ,environment->thread->PC);
         
         int constbyte_result = (int)((constbyte1_argument << 8) | constbyte2_argument);
         

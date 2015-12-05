@@ -31,13 +31,15 @@
  * \param method Referencia para o PC da thread atual
  * \return Indice calculado como byte1 << 8 | byte2
  */
-u2 calculatePoolIndexFromCode(method_info* method, cp_info* constant_pool, int* PC){
+u2 calculatePoolIndexFromCode(method_info* method, cp_info* constant_pool, Thread* thread){
     // Obtemos o primeiro byte argumento para o indice no pool de cte
-    u2 index = getByteCodeFromMethod(method, constant_pool, *++PC);
+    thread->PC++;
+    u2 index = getByteCodeFromMethod(method, constant_pool, thread->PC);
     // Obtemos o segundo byte argumento
+    thread->PC++;
     index = index << 8 | getByteCodeFromMethod(method,
                                               constant_pool,
-                                               *++PC);
+                                               thread->PC);
     return index;
 }
 
@@ -55,12 +57,12 @@ void getstatic(Environment* environment){
     //Calculamos o indice do fieldRef no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //Obtemos os nomes da classe, o nome e descritor do field
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                            actual_class->arqClass->constant_pool,
-                                           class_name, attribute_name, attribute_descriptor);
+                                           &class_name, &attribute_name, &attribute_descriptor);
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
     if (isFromJavaLib(class_name)) {
@@ -101,12 +103,12 @@ void putstatic(Environment* environment){
     //Calculamos o indice do fieldRef no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //Obtemos os nomes da classe, o nome e descritor do field
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                            actual_class->arqClass->constant_pool,
-                                           class_name, attribute_name, attribute_descriptor);
+                                           &class_name, &attribute_name, &attribute_descriptor);
     
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
@@ -154,12 +156,12 @@ void getfield(Environment* environment){
     //Calculamos o indice do fieldRef no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //Obtemos os nomes da classe, o nome e descritor do field
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                            actual_class->arqClass->constant_pool,
-                                           class_name, attribute_name, attribute_descriptor);
+                                           &class_name, &attribute_name, &attribute_descriptor);
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
     if (isFromJavaLib(class_name)) return;
@@ -198,12 +200,12 @@ void putfield(Environment* environment){
     //Calculamos o indice do fieldRef no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //Obtemos os nomes da classe, o nome e descritor do field
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                            actual_class->arqClass->constant_pool,
-                                           class_name, attribute_name, attribute_descriptor);
+                                           &class_name, &attribute_name, &attribute_descriptor);
     
     
     //VERIFICACAO DE CAMPO DE BIBLIOTECA JAVA
@@ -336,12 +338,12 @@ void invokevirtual(Environment* environment){
     //Calculamos o indice do method_info no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //2. Resolvemos o nome do metodo, obtendo a referencia do method_info
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                                    actual_class->arqClass->constant_pool,
-                                                   class_name, method_name, method_descriptor);
+                                                   &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
     if (isFromJavaLib(class_name)){
@@ -466,12 +468,12 @@ void invokespecial(Environment* environment){
     //Calculamos o indice do method_info no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //2. Resolvemos o nome do metodo, obtendo a referencia do method_info
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                                    actual_class->arqClass->constant_pool,
-                                                   class_name, method_name, method_descriptor);
+                                                   &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
     if (isFromJavaLib(class_name)){
@@ -553,12 +555,12 @@ void invokestatic(Environment* environment){
     //Calculamos o indice do method_info no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //2. Resolvemos o nome do metodo, obtendo a referencia do method_info
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                                    actual_class->arqClass->constant_pool,
-                                                   class_name, method_name, method_descriptor);
+                                                   &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
     if (isFromJavaLib(class_name)){
@@ -606,12 +608,12 @@ void invokeinterface(Environment* environment){
     //Calculamos o indice do method_info no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //2. Resolvemos o nome do metodo, obtendo a referencia do method_info
     getFieldOrMethodInfoAttributesFromConstantPool(index,
                                                    actual_class->arqClass->constant_pool,
-                                                   class_name, method_name, method_descriptor);
+                                                   &class_name, &method_name, &method_descriptor);
     
     //VERIFICACAO DE METODO DE BIBLIOTECA JAVA
     if (isFromJavaLib(class_name)){
@@ -667,7 +669,7 @@ void New(Environment* environment){
     //Calculamos o indice para a classe no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
-                                          &environment->thread->PC);
+                                          environment->thread);
     
     //Obtemos o nome da classe
     char* className = getClassNameFromConstantPool(actual_class->arqClass->constant_pool, index);

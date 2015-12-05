@@ -23,227 +23,227 @@
 
 /*!
  *  Instrucao para soma de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void iadd(Thread*);
+EXT11 void iadd(Environment*);
 
 /*!
  *  Instrucao para soma de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ladd(Thread*);
+EXT11 void ladd(Environment*);
 /*!
  *  Instrucao para soma de float de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void fadd(Thread*);
+EXT11 void fadd(Environment*);
 /*!
  *  Instrucao para soma de double de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void dadd(Thread*);
+EXT11 void dadd(Environment*);
 /*!
  *  Instrucao para subtracao de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void isub(Thread*);
+EXT11 void isub(Environment*);
 /*!
  *  Instrucao para subtracao de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lsub(Thread*);
+EXT11 void lsub(Environment*);
 /*!
  *  Instrucao para subtracao de float de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void fsub(Thread*);
+EXT11 void fsub(Environment*);
 /*!
  *  Instrucao para subtracao de double de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void dsub(Thread*);
+EXT11 void dsub(Environment*);
 /*!
  *  Instrucao para multiplicacao de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void imul(Thread*);
+EXT11 void imul(Environment*);
 /*!
  *  Instrucao para multiplicacao de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lmul(Thread*);
+EXT11 void lmul(Environment*);
 /*!
  *  Instrucao para multiplicacao de float de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void fmul(Thread*);
+EXT11 void fmul(Environment*);
 /*!
  *  Instrucao para multiplicacao de double de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void dmul(Thread*);
+EXT11 void dmul(Environment*);
 /*!
  *  Instrucao para divisao de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void idiv(Thread*);
+EXT11 void idiv(Environment*);
 /*!
  *  Instrucao para divisao de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void Ldiv(Thread*);
+EXT11 void Ldiv(Environment*);
 /*!
  *  Instrucao para divisao de float de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void fdiv(Thread*);
+EXT11 void fdiv(Environment*);
 /*!
  *  Instrucao para divisao de double de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ddiv(Thread*);
+EXT11 void ddiv(Environment*);
 /*!
  *  Instrucao para resto de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void irem(Thread*);
+EXT11 void irem(Environment*);
 /*!
  *  Instrucao para resto de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lrem(Thread*);
+EXT11 void lrem(Environment*);
 /*!
  *  Instrucao para resto de float de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void frem(Thread*);
+EXT11 void frem(Environment*);
 /*!
  *  Instrucao para resto de double de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void Drem(Thread*);
+EXT11 void Drem(Environment*);
 /*!
  *  Instrucao para nega de inteiro de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ineg(Thread*);
+EXT11 void ineg(Environment*);
 /*!
  *  Instrucao para nega de inteiro de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lneg(Thread*);
+EXT11 void lneg(Environment*);
 /*!
  *  Instrucao para nega de float de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void fneg(Thread*);
+EXT11 void fneg(Environment*);
 /*!
  *  Instrucao para nega de double de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void dneg(Thread*);
+EXT11 void dneg(Environment*);
 /*!
  *  Instrucao para shift left de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ishl(Thread*);
+EXT11 void ishl(Environment*);
 /*!
  *  Instrucao para shift left de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lshl(Thread*);
+EXT11 void lshl(Environment*);
 /*!
  *  Instrucao para shift right de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ishr(Thread*);
+EXT11 void ishr(Environment*);
 /*!
  *  Instrucao para shift right de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lshr(Thread*);
+EXT11 void lshr(Environment*);
 /*!
  *  Instrucao para shift right sem sinal de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void iushr(Thread*);
+EXT11 void iushr(Environment*);
 /*!
  *  Instrucao para shift right sem sinal de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lushr(Thread*);
+EXT11 void lushr(Environment*);
 /*!
  *  Instrucao para and de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void iand(Thread*);
+EXT11 void iand(Environment*);
 /*!
  *  Instrucao para and de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void land(Thread*);
+EXT11 void land(Environment*);
 /*!
  *  Instrucao para or de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ior(Thread*);
+EXT11 void ior(Environment*);
 /*!
  *  Instrucao para or de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lor(Thread*);
+EXT11 void lor(Environment*);
 /*!
  *  Instrucao para xor de inteiros de 32 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void ixor(Thread*);
+EXT11 void ixor(Environment*);
 /*!
  *  Instrucao para xor de inteiros de 64 bits
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void lxor(Thread*);
+EXT11 void lxor(Environment*);
 /*!
  *  Instrucao para incremento de inteiros de 32 bits local
- *  \param Thread
+ *  \param Environment
  *  \return void
  */
-EXT11 void iinc(Thread*);
+EXT11 void iinc(Environment*);
 
 
 

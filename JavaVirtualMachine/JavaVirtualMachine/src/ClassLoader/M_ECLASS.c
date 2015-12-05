@@ -69,9 +69,9 @@ char* getClassNameFromConstantPool(cp_info* cp, u2 index){
 //--------------------------------------------------------------------------------------------------
 void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
                                             cp_info* constant_pool,
-                                            char* class_name,
-                                            char* name,
-                                            char* descriptor)
+                                            char** class_name,
+                                            char** name,
+                                            char** descriptor)
 {
     
     //Obtemos a referencia para o field_info ou method_info no pool de constantes
@@ -81,11 +81,11 @@ void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
     cp_info* nameAndType_info = &constant_pool[field_or_method_info->u.Fieldref.name_and_type_index-1];
     
     //Obtemos os nomes e descritor
-    class_name = getClassNameFromConstantPool(constant_pool,
+    *class_name = getClassNameFromConstantPool(constant_pool,
                                               field_or_method_info->u.Fieldref.class_index);
-    name = getUTF8FromConstantPool(constant_pool,
+    *name = getUTF8FromConstantPool(constant_pool,
                                          nameAndType_info->u.NameAndType.name_index);
-    descriptor = getUTF8FromConstantPool(constant_pool,
+    *descriptor = getUTF8FromConstantPool(constant_pool,
                                                nameAndType_info->u.NameAndType.descriptor_index);
 }
 
