@@ -24,7 +24,7 @@ void execute(Environment* environment){
         //! Obtem o opcode
         u1 opcode = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
                                           environment->thread->vmStack->top->javaClass->arqClass->constant_pool
-                                          , environment->thread->PC);
+                                          ,environment->thread->PC);
         
         //! Decodifica o opcode
         instruction nextInstruction = decode(opcode);

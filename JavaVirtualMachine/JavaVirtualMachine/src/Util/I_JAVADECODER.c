@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../../include/Util/I_JAVADECODER.h"
+#include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -32,11 +33,15 @@ void executeJavaLibMethod(const char* className, const char* methodName, const c
     //Metodos de java/lang
     if (strncmp(className, "java/lang/", 10)==0) {
         //TODO: DECODE JAVA:LANG
+        popFromOperandStack(environment->thread);
     }
     //Metodos de java/io
     else if (strncmp(className, "java/io/", 8)==0) {
         //TODO: DECODE JAVA:IO
+        popFromOperandStack(environment->thread);
     }
+    else
+        popFromOperandStack(environment->thread);
 }
 
 
@@ -47,11 +52,15 @@ void getStaticFromJavaLib(const char* className, const char* fieldName,
     //Campos de java/lang
     if (strncmp(className, "java/lang/", 10)==0) {
         //TODO: CAMPOS JAVA:LANG
+        pushInOperandStack(environment->thread, 0);
     }
     //Campos de java/io
     else if (strncmp(className, "java/io/", 8)==0) {
         //TODO: CAMPOS JAVA:IO
+        pushInOperandStack(environment->thread, 0);
     }
+    else
+    pushInOperandStack(environment->thread, 0);
 }
 
 
@@ -61,9 +70,13 @@ void newObjectFromJavaLib(const char* className, Environment* environment){
     //Campos de java/lang
     if (strncmp(className, "java/lang/", 10)==0) {
         //TODO: OBJETO JAVA:LANG
+        pushInOperandStack(environment->thread, 0);
     }
     //Campos de java/io
     else if (strncmp(className, "java/io/", 8)==0) {
         //TODO: OBJETO JAVA:IO
+        pushInOperandStack(environment->thread, 0);
     }
+    else
+        pushInOperandStack(environment->thread, 0);
 }

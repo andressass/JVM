@@ -401,6 +401,9 @@ instruction decode(u1 bytecode){
         case OP_wide:
             return wide;
             break;
+        case OP_dup:
+            return Dup;
+            break;
         case OP_getstatic:
             return getstatic;
             break;

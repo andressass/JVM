@@ -932,4 +932,12 @@ EXT14 void sastore(Environment* environment);
  */
 EXT14 void wide(Environment* environment);
 
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que duplica o topo da pilha
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void Dup(Environment* environment);
+
 #endif /* I_INSTLOADSTORAGE_h */

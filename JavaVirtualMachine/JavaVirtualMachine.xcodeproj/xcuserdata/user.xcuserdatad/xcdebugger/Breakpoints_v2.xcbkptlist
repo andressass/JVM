@@ -54,7 +54,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470882796.948374"
+            timestampString = "470931230.530747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
-            timestampString = "470868962.6861"
+            timestampString = "470966759.563863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "newMethodArea()"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470867992.702771"
+            timestampString = "470981792.908254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "loadCLass()"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_CLASSLOADER.c"
-            timestampString = "470865962.7777"
+            timestampString = "470981792.908254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "classInitializer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
-            timestampString = "470868962.6861"
+            timestampString = "470966759.563863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "addJavaClassToMethodArea()"
             landmarkType = "7">
          </BreakpointContent>
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
-            timestampString = "470868962.6861"
+            timestampString = "470966759.563863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119">
+            startingLineNumber = "116"
+            endingLineNumber = "116">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -336,7 +336,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470881209.933615"
+            timestampString = "470931230.530747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -352,7 +352,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
-            timestampString = "470881209.933615"
+            timestampString = "470931230.530747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -368,13 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
-            timestampString = "470810439.370944"
+            timestampString = "470949026.826442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "439"
-            endingLineNumber = "439"
-            landmarkName = "printByteCode()"
-            landmarkType = "7">
+            startingLineNumber = "463"
+            endingLineNumber = "463">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -384,12 +382,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
-            timestampString = "470810439.370944"
+            timestampString = "470949026.826442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
-            landmarkName = "printByteCodes()"
+            startingLineNumber = "485"
+            endingLineNumber = "485"
+            landmarkName = "printCodeAttributes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -432,12 +430,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
-            timestampString = "470810494.450874"
+            timestampString = "470949026.826442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "459"
-            endingLineNumber = "459"
-            landmarkName = "printByteCodes()"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
+            landmarkName = "printCodeAttributes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -448,12 +446,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
-            timestampString = "470810496.028368"
+            timestampString = "470949026.826442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "460"
-            endingLineNumber = "460"
-            landmarkName = "printByteCodes()"
+            startingLineNumber = "484"
+            endingLineNumber = "484"
+            landmarkName = "printCodeAttributes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -480,13 +478,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
-            timestampString = "470867992.702771"
+            timestampString = "470949026.826442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "751"
-            endingLineNumber = "751"
-            landmarkName = "LECLASS_exibeErroOperacao()"
-            landmarkType = "7">
+            startingLineNumber = "775"
+            endingLineNumber = "775">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -496,12 +492,258 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JavaVirtualMachine/src/ClassLoader/M_ECLASS.c"
-            timestampString = "470867992.702771"
+            timestampString = "470949026.826442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "771"
-            endingLineNumber = "771"
-            landmarkName = "LECLASS_exibeErroOperacao()"
+            startingLineNumber = "795"
+            endingLineNumber = "795">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INSTLOADSTORAGE.c"
+            timestampString = "470888441.114761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INTERPRETER.c"
+            timestampString = "470893415.319017"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "execute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
+            timestampString = "470931230.530747"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/include/ExecutionEngine/I_INSTLOADSTORAGE.h"
+            timestampString = "470925008.85419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
+            timestampString = "470966759.563863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "findJavaClassOnMethodArea()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPMETHODAREA.c"
+            timestampString = "470966805.030333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "findJavaClassOnMethodArea()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_DECODER.c"
+            timestampString = "470982838.867025"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "408"
+            endingLineNumber = "408"
+            landmarkName = "decode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INSTOBJANDINVOKE.c"
+            timestampString = "470969030.242814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "calculatePoolIndexFromCode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_BOOTLOADER.c"
+            timestampString = "470969476.754453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "main()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INTERPRETER.c"
+            timestampString = "470969535.754394"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "execute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INTERPRETER.c"
+            timestampString = "470971016.706445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "execute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INTERPRETER.c"
+            timestampString = "470971020.928411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "execute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INTERPRETER.c"
+            timestampString = "470971023.178394"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "execute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/include/ExecutionEngine/I_INSTLOADSTORAGE.h"
+            timestampString = "470982638.208761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "941"
+            endingLineNumber = "941">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/ExecutionEngine/M_INSTLOADSTORAGE.c"
+            timestampString = "470983280.555625"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1253"
+            endingLineNumber = "1253"
+            landmarkName = "Dup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JavaVirtualMachine/src/MemoryUnit/M_OPTHREAD.c"
+            timestampString = "470983409.123138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "pushInOperandStackFromFrame()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

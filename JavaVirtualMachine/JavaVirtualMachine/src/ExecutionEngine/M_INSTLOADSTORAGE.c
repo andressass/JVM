@@ -1169,6 +1169,7 @@ void sastore(Environment* environment){
 }
 
 
+//--------------------------------------------------------------------------------------------------
 void wide(Environment* environment){
     
     environment->thread->PC++;
@@ -1245,6 +1246,15 @@ void wide(Environment* environment){
     }
 }
 
+
+//--------------------------------------------------------------------------------------------------
+EXT14 void Dup(Environment* environment){
+
+    u4 value = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value);
+    pushInOperandStack(environment->thread, value);
+}
 
 
 
