@@ -19,6 +19,8 @@
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
 #include "../../include/Util/I_JAVADECODER.h"
+#include "../../include/Estruturas/JAVAARRAY.h"
+#include "../../include/Estruturas/E_JVM.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -758,3 +760,115 @@ void New(Environment* environment){
     //Empilhamos na pilha de operandos
     pushInOperandStack(environment->thread, (u4) instance);
 }
+
+
+//--------------------------------------------------------------------------------------------------
+void newarray(Environment* environment){
+    
+    environment->thread->PC++;
+    u1 atype_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
+    
+    u4 count = popFromOperandStack(environment->thread);
+    
+//    if (count < 0) {
+//        
+//        //TODO:  throws a NegativeArraySizeException.
+//    }
+    
+    JavaArray* arrayref = newJavaArray(atype_argument, count);
+    
+    pushInOperandStack(environment->thread, (u4) arrayref);
+
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void anewarray(Environment* environment){
+    
+    environment->thread->PC++;
+    u1 indexbyte1_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
+    
+    environment->thread->PC++;
+    u1 indexbyte2_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
+    
+    u2 index_result = (indexbyte1_argument << 8) | indexbyte2_argument;
+    
+    u2 atype = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Class.name_index;
+    
+    //TODO: RESOLVER A REFERENCIA SIMBOLICA DOS TIPO CLASS, ARRAY E INTERFACE
+    
+    u4 count = popFromOperandStack(environment->thread);
+    
+    //    if (count < 0) {
+    //
+    //        //TODO:  throws a NegativeArraySizeException.
+    //    }
+    
+    JavaArray* arrayref = newJavaArray(atype, count);
+    
+    pushInOperandStack(environment->thread, (u4) arrayref);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void arraylength(Environment* environment){
+    
+    JavaArray* arrayref = (JavaArray*)popFromOperandStack(environment->thread);
+    
+        if (arrayref->arrayAddress == NULL) {
+    
+            //TODO:  throws a NullPointerException.
+        }
+    
+    pushInOperandStack(environment->thread, arrayref->count);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void multianewarray(Environment* environment){
+    
+    int i;
+
+    environment->thread->PC++;
+    u1 indexbyte1_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
+    
+    environment->thread->PC++;
+    u1 indexbyte2_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
+    
+    u2 index_result = (indexbyte1_argument << 8) | indexbyte2_argument;
+    
+    u2 atype = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Class.name_index;
+    
+    //TODO: RESOLVER A REFERENCIA SIMBOLICA DOS TIPO CLASS, ARRAY E INTERFACE
+    
+    //TODO: During resolution of the symbolic reference to the class, array, or interface type, any of the exceptions documented in Section 5.4.3.1 can be thrown.
+    
+    //TODO: Otherwise, if the current class does not have permission to access the element type of the resolved array class, multianewarray throws an IllegalAccessError.
+    
+    //TODO: Otherwise, if any of the dimensions values on the operand stack are less than zero, the multianewarray instruction throws a NegativeArraySizeException.
+    
+    environment->thread->PC++;
+    u1 dimensions_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                                   environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                                   ,environment->thread->PC);
+    
+    
+    for (i = ((u1)dimensions_argument)-1; i >= 0; i++) {
+        
+        int *count = (int*) malloc(sizeof(int) * dimensions_argument);
+        
+        count[i] = popFromOperandStack(environment->thread);
+    }
+}
+
+

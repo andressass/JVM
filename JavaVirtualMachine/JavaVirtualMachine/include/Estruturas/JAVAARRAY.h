@@ -42,9 +42,9 @@
  * Estrutura utilizada para a representacao de um Array Java
  */
 typedef struct ArrayRef{
-    u1 type;
-    u2 length;
-    u4* arrayAddress;
+    u1 atype;
+    u2 count;
+    void* arrayAddress;
 } JavaArray;
 
 
@@ -58,7 +58,7 @@ typedef struct ArrayRef{
  * ser carregado na estrutura java array
  * \return estrutura JavaArray preenchida
  */
-EXT23 JavaArray* newJavaArray(u1 n_type, u2 n_length, u4* n_arrayAddress);
+EXT23 JavaArray* newJavaArray(u1 n_type, u2 n_length);
 
 
 #endif /* JAVAARRAY_h */
