@@ -971,15 +971,6 @@ void lxor(Environment* environment){
     
 }
 
-void iinc(Environment* environment){
-    
-    u4 operando1 = 0;
-    u4 inc = 0;
-    
-    operando1 = popFromOperandStack(environment->thread);
-    
-    inc = operando1++;
-    
-    pushInOperandStack(environment->thread, inc);
-    
+void iinc(Environment* environment, int Const, u4 index){
+    environment->thread->vmStack->top->localVariablesVector[index] += Const;
 }

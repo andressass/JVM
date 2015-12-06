@@ -241,9 +241,11 @@ EXT11 void lxor(Environment*);
 /*!
  *  Instrucao para incremento de inteiros de 32 bits local
  *  \param Environment
+ *  \param int será a constante que será somada
+ *  \param u4 será o indice que será modificado
  *  \return void
  */
-EXT11 void iinc(Environment*);
+EXT11 void iinc(Environment*, int, u4);
 
 
 
