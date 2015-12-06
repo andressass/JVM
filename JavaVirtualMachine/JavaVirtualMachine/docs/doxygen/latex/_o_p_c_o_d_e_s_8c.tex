@@ -25,7 +25,7 @@ Gráfico de dependência de inclusões para O\+P\+C\+O\+D\+E\+S.\+c\+:
 \item 
 char $\ast$ \hyperlink{_o_p_c_o_d_e_s_8c_abcf374b2572c3c1026501d86abc67200}{get\+Opcode\+Name} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode)
 \item 
-short \hyperlink{_o_p_c_o_d_e_s_8c_aa44504f098d51b940c56db96c115ee0c}{get\+Opcode\+Attributes\+Number} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode)
+short \hyperlink{_o_p_c_o_d_e_s_8c_a3e4059e722135e1055077b4707eb39b2}{get\+Opcode\+Attributes\+Number} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode, \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$params, \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$code\+Begin)
 \end{DoxyCompactItemize}
 
 
@@ -41,18 +41,24 @@ Bliblioteca responsavel pela implementacoa dos metodos relacionados aos opcodes 
 
 
 \subsection{Funções}
-\hypertarget{_o_p_c_o_d_e_s_8c_aa44504f098d51b940c56db96c115ee0c}{}\index{O\+P\+C\+O\+D\+E\+S.\+c@{O\+P\+C\+O\+D\+E\+S.\+c}!get\+Opcode\+Attributes\+Number@{get\+Opcode\+Attributes\+Number}}
+\hypertarget{_o_p_c_o_d_e_s_8c_a3e4059e722135e1055077b4707eb39b2}{}\index{O\+P\+C\+O\+D\+E\+S.\+c@{O\+P\+C\+O\+D\+E\+S.\+c}!get\+Opcode\+Attributes\+Number@{get\+Opcode\+Attributes\+Number}}
 \index{get\+Opcode\+Attributes\+Number@{get\+Opcode\+Attributes\+Number}!O\+P\+C\+O\+D\+E\+S.\+c@{O\+P\+C\+O\+D\+E\+S.\+c}}
-\subsubsection[{get\+Opcode\+Attributes\+Number(u1 opcode)}]{\setlength{\rightskip}{0pt plus 5cm}short get\+Opcode\+Attributes\+Number (
+\subsubsection[{get\+Opcode\+Attributes\+Number(u1 opcode, u1 $\ast$params, u1 $\ast$code\+Begin)}]{\setlength{\rightskip}{0pt plus 5cm}short get\+Opcode\+Attributes\+Number (
 \begin{DoxyParamCaption}
-\item[{{\bf u1}}]{opcode}
+\item[{{\bf u1}}]{opcode, }
+\item[{{\bf u1} $\ast$}]{arguments, }
+\item[{{\bf u1} $\ast$}]{code\+Begin}
 \end{DoxyParamCaption}
-)}\label{_o_p_c_o_d_e_s_8c_aa44504f098d51b940c56db96c115ee0c}
+)}\label{_o_p_c_o_d_e_s_8c_a3e4059e722135e1055077b4707eb39b2}
 Metodo que retorna um short com a quantidade de atributos (bytes adicionais) do opcode
 
 
 \begin{DoxyParams}{Parâmetros}
 {\em u1} & opcode Codigo do opcode. \\
+\hline
+{\em arguments} & Referencia para os argumentos da instrucao. \\
+\hline
+{\em code\+Begin} & Referencia o inicio do vetor de instrucoes. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}

@@ -115,8 +115,8 @@ Definições e Macros</h2></td></tr>
 Funções</h2></td></tr>
 <tr class="memitem:abcf374b2572c3c1026501d86abc67200"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_p_c_o_d_e_s_8c.html#abcf374b2572c3c1026501d86abc67200">getOpcodeName</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode)</td></tr>
 <tr class="separator:abcf374b2572c3c1026501d86abc67200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa44504f098d51b940c56db96c115ee0c"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_p_c_o_d_e_s_8c.html#aa44504f098d51b940c56db96c115ee0c">getOpcodeAttributesNumber</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode)</td></tr>
-<tr class="separator:aa44504f098d51b940c56db96c115ee0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4059e722135e1055077b4707eb39b2"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_p_c_o_d_e_s_8c.html#a3e4059e722135e1055077b4707eb39b2">getOpcodeAttributesNumber</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode, <a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *params, <a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *codeBegin)</td></tr>
+<tr class="separator:a3e4059e722135e1055077b4707eb39b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Biblioteca de servicos de Opcodes. </p>
@@ -135,7 +135,7 @@ Funções</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Funções</h2>
-<a class="anchor" id="aa44504f098d51b940c56db96c115ee0c"></a>
+<a class="anchor" id="a3e4059e722135e1055077b4707eb39b2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -143,8 +143,24 @@ Funções</h2></td></tr>
           <td class="memname">short getOpcodeAttributesNumber </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>&#160;</td>
-          <td class="paramname"><em>opcode</em></td><td>)</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *&#160;</td>
+          <td class="paramname"><em>codeBegin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -152,6 +168,8 @@ Funções</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">u1</td><td>opcode Codigo do opcode. </td></tr>
+    <tr><td class="paramname">arguments</td><td>Referencia para os argumentos da instrucao. </td></tr>
+    <tr><td class="paramname">codeBegin</td><td>Referencia o inicio do vetor de instrucoes. </td></tr>
   </table>
   </dd>
 </dl>

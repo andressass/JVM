@@ -10,5 +10,6 @@ var searchData=
   ['constant_5fmethodref',['CONSTANT_Methodref',['../_e___j_v_m_8h.html#a2a179cf178ea867c6ab1700508c269dd',1,'E_JVM.h']]],
   ['constant_5fnameandtype',['CONSTANT_NameAndType',['../_e___j_v_m_8h.html#a5b6ba749976ae61415983ca0b890c91a',1,'E_JVM.h']]],
   ['constant_5fstring',['CONSTANT_String',['../_e___j_v_m_8h.html#a0a7acbe175de56072a2f0a1a051418e1',1,'E_JVM.h']]],
+  ['constant_5fstringjava',['CONSTANT_StringJava',['../_j_a_v_a_s_t_r_i_n_g_8h.html#a719c5304af17276c9da3fbb5d5d03bb9',1,'JAVASTRING.h']]],
   ['constant_5futf8',['CONSTANT_Utf8',['../_e___j_v_m_8h.html#afc46559a7d3f7baf519fc183c2fad2b4',1,'E_JVM.h']]]
 ];

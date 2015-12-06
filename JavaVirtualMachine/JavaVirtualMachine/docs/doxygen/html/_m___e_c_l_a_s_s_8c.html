@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_i___l_e_c_l_a_s_s_8h_source.html">../../include/ClassLoader/I_LECLASS.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_o_p_c_o_d_e_s_8h_source.html">../../include/Estruturas/OPCODES.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h_source.html">../../include/Util/I_TYPECONVERSION.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;wchar.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -103,10 +104,11 @@ Gráfico de dependência de inclusões para M_ECLASS.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___e_c_l_a_s_s_8c__incl.png" border="0" usemap="#src_2_class_loader_2_m___e_c_l_a_s_s_8c" alt=""/></div>
 <map name="src_2_class_loader_2_m___e_c_l_a_s_s_8c" id="src_2_class_loader_2_m___e_c_l_a_s_s_8c">
-<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="11,79,175,117"/>
-<area shape="rect" id="node7" href="_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="165,165,315,204"/>
-<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="28,172,140,197"/>
-<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="92,252,243,277"/>
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="5,79,170,117"/>
+<area shape="rect" id="node8" href="_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="215,165,365,204"/>
+<area shape="rect" id="node9" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de conversoes de tipos. " alt="" coords="390,165,561,204"/>
+<area shape="rect" id="node5" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="78,172,190,197"/>
+<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="215,252,366,277"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -117,10 +119,6 @@ Definições e Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:a1635f324e84de6fd96505e01968b7333"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333">u4ToDouble</a> (<a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> high_bytes, <a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> low_bytes)</td></tr>
-<tr class="separator:a1635f324e84de6fd96505e01968b7333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1709d62d399fb8ed1300e6b237d4fcc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc">u4ToFLoat</a> (<a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> bytes)</td></tr>
-<tr class="separator:ac1709d62d399fb8ed1300e6b237d4fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a473033cabebd84af84798d9f73cd0e3e"><td class="memItemLeft" align="right" valign="top">wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e">getUnicodeFromConstantPool</a> (<a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *cp, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> index)</td></tr>
 <tr class="separator:a473033cabebd84af84798d9f73cd0e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ff5b3edf6b2a9a643efc1c8627d1d29"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29">getUTF8FromConstantPool</a> (<a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *cp, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> index)</td></tr>
@@ -129,6 +127,8 @@ Funções</h2></td></tr>
 <tr class="separator:aaa897dfb9d5e0deeea00dc18db34cf41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29b169a5ddc3af0fcc2b06ad09cbea65"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65">getClassNameFromConstantPool</a> (<a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *cp, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> index)</td></tr>
 <tr class="separator:a29b169a5ddc3af0fcc2b06ad09cbea65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db5115362d5b6bfb95134ea861a4496"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a7db5115362d5b6bfb95134ea861a4496">getFieldOrMethodInfoAttributesFromConstantPool</a> (<a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> index, <a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *constant_pool, char **class_name, char **name, char **descriptor)</td></tr>
+<tr class="separator:a7db5115362d5b6bfb95134ea861a4496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1e1e0de6f07a194faf650b3199f6f3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_exception_table.html">ExceptionTable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d">parseExceptionTables</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *exceptionTableList, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> exception_table_length)</td></tr>
 <tr class="separator:ad1e1e0de6f07a194faf650b3199f6f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056acd899b32895fb68301a08f5fe9b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_code_attribute.html">CodeAttribute</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1">parseCode</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *info)</td></tr>
@@ -145,8 +145,8 @@ Funções</h2></td></tr>
 <tr class="separator:af83f52bf13173cfa11472ac09452a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225defb36bf20fecbf3fe701ca78f1a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a225defb36bf20fecbf3fe701ca78f1a9">exibeInterfaces</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class)</td></tr>
 <tr class="separator:a225defb36bf20fecbf3fe701ca78f1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4b4434e6a302fb668d481c1b91c90e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3">printByteCode</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *bytecode)</td></tr>
-<tr class="separator:ae4b4434e6a302fb668d481c1b91c90e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33756dcf2e8eccaf23570a5ee891cc8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c">printByteCode</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *bytecode, <a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *bytecodes)</td></tr>
+<tr class="separator:a33756dcf2e8eccaf23570a5ee891cc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63f3dcf8714a53825593901037416ee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5">printByteCodes</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *bytecodes, <a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> code_length)</td></tr>
 <tr class="separator:a63f3dcf8714a53825593901037416ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40695c48f6ea7aeee3a83ca1c7af20f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#ae40695c48f6ea7aeee3a83ca1c7af20f">exibeAtributo</a> (<a class="el" href="_e___j_v_m_8h.html#a4c2796d61bb99bf730b1807fc838c847">attribute_info</a> *<a class="el" href="structattribute.html">attribute</a>, <a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *cp)</td></tr>
@@ -163,10 +163,10 @@ Funções</h2></td></tr>
 <tr class="separator:a473b09220e36cdb3909ec266a9e663ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45f75a1d6b171e2ba0dfa4be93bc5eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a45f75a1d6b171e2ba0dfa4be93bc5eff">exibeMetodos</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class)</td></tr>
 <tr class="separator:a45f75a1d6b171e2ba0dfa4be93bc5eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8f20307e97939faff0c1ac0fb4d1195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#ad8f20307e97939faff0c1ac0fb4d1195">LECLASS_exibidor</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class)</td></tr>
-<tr class="separator:ad8f20307e97939faff0c1ac0fb4d1195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec3318a40ba8a6b46b48d39545829f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a5ec3318a40ba8a6b46b48d39545829f4">LECLASS_exibeErroOperacao</a> (<a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a> <a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>, const char *fileName)</td></tr>
-<tr class="separator:a5ec3318a40ba8a6b46b48d39545829f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7d50b6cf53c6ad15a48844fde23db7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#aa7ceae3fd72b26a559a601910a17e2c3">OPresult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a1a7d50b6cf53c6ad15a48844fde23db7">LECLASS_exibidor</a> (<a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *arq_class)</td></tr>
+<tr class="separator:a1a7d50b6cf53c6ad15a48844fde23db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a35d7b72c380539f8cf0b57ba384ec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_c_l_a_s_s_8c.html#a2a35d7b72c380539f8cf0b57ba384ec3">LECLASS_exibeErroOperacao</a> (<a class="el" href="_e___j_v_m_8h.html#aa7ceae3fd72b26a559a601910a17e2c3">OPresult</a> resultado, const char *fileName)</td></tr>
+<tr class="separator:a2a35d7b72c380539f8cf0b57ba384ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Modulo Exibidor de arquivos ".class". </p>
@@ -256,23 +256,23 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___e_c_l_a_s_s_8c_ae40695c48f6ea7aeee3a83ca1c7af20f_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_ae40695c48f6ea7aeee3a83ca1c7af20f_cgraph" alt=""/></div>
 <map name="_m___e_c_l_a_s_s_8c_ae40695c48f6ea7aeee3a83ca1c7af20f_cgraph" id="_m___e_c_l_a_s_s_8c_ae40695c48f6ea7aeee3a83ca1c7af20f_cgraph">
-<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1068,73,1268,98"/>
-<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="163,73,305,98"/>
-<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="387,149,492,174"/>
-<area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1" title="parseCode" alt="" coords="191,224,277,249"/>
-<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5" title="printByteCodes" alt="" coords="178,273,290,298"/>
-<area shape="rect" id="node16" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="162,174,306,200"/>
-<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#a1814dc11a9ec2e7ad63147943593eec6" title="printCodeAttributes" alt="" coords="166,322,302,348"/>
-<area shape="rect" id="node18" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="152,372,315,397"/>
-<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="563,98,783,124"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="831,148,1020,186"/>
-<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="631,200,715,225"/>
-<area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="627,249,719,274"/>
-<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="833,98,1018,124"/>
-<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="363,224,515,249"/>
-<area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="386,298,492,324"/>
-<area shape="rect" id="node14" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="612,298,734,324"/>
-<area shape="rect" id="node15" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="578,348,768,373"/>
+<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1068,83,1268,108"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="163,57,305,83"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="387,159,492,184"/>
+<area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1" title="parseCode" alt="" coords="191,208,277,233"/>
+<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5" title="printByteCodes" alt="" coords="178,257,290,283"/>
+<area shape="rect" id="node16" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="162,159,306,184"/>
+<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#a1814dc11a9ec2e7ad63147943593eec6" title="printCodeAttributes" alt="" coords="166,307,302,332"/>
+<area shape="rect" id="node18" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="152,356,315,381"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="563,108,783,133"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="831,157,1020,196"/>
+<area shape="rect" id="node8" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="631,209,715,235"/>
+<area shape="rect" id="node9" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="627,259,719,284"/>
+<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="833,108,1018,133"/>
+<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="363,208,515,233"/>
+<area shape="rect" id="node13" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="578,308,768,333"/>
+<area shape="rect" id="node14" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="386,309,492,335"/>
+<area shape="rect" id="node15" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="612,357,734,383"/>
 </map>
 </div>
 </p>
@@ -305,24 +305,24 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___e_c_l_a_s_s_8c_abbb60b740416109c7ec43f392fc8c560_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_abbb60b740416109c7ec43f392fc8c560_cgraph" alt=""/></div>
 <map name="_m___e_c_l_a_s_s_8c_abbb60b740416109c7ec43f392fc8c560_cgraph" id="_m___e_c_l_a_s_s_8c_abbb60b740416109c7ec43f392fc8c560_cgraph">
-<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#ae40695c48f6ea7aeee3a83ca1c7af20f" title="exibeAtributo" alt="" coords="159,224,258,249"/>
-<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1222,73,1422,98"/>
-<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="317,73,458,98"/>
-<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="541,149,646,174"/>
-<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1" title="parseCode" alt="" coords="344,224,431,249"/>
-<area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5" title="printByteCodes" alt="" coords="332,273,444,298"/>
-<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="316,174,460,200"/>
-<area shape="rect" id="node18" href="_m___e_c_l_a_s_s_8c.html#a1814dc11a9ec2e7ad63147943593eec6" title="printCodeAttributes" alt="" coords="320,322,455,348"/>
-<area shape="rect" id="node19" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="306,372,469,397"/>
-<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="717,98,937,124"/>
-<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="985,148,1174,186"/>
-<area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="785,200,869,225"/>
-<area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="781,249,873,274"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="987,98,1172,124"/>
-<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="517,224,669,249"/>
-<area shape="rect" id="node14" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="540,298,646,324"/>
-<area shape="rect" id="node15" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="766,298,888,324"/>
-<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="732,348,922,373"/>
+<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#ae40695c48f6ea7aeee3a83ca1c7af20f" title="exibeAtributo" alt="" coords="159,208,258,233"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1222,83,1422,108"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="317,57,458,83"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="541,159,646,184"/>
+<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1" title="parseCode" alt="" coords="344,208,431,233"/>
+<area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5" title="printByteCodes" alt="" coords="332,257,444,283"/>
+<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="316,159,460,184"/>
+<area shape="rect" id="node18" href="_m___e_c_l_a_s_s_8c.html#a1814dc11a9ec2e7ad63147943593eec6" title="printCodeAttributes" alt="" coords="320,307,455,332"/>
+<area shape="rect" id="node19" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="306,356,469,381"/>
+<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="717,108,937,133"/>
+<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="985,157,1174,196"/>
+<area shape="rect" id="node9" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="785,209,869,235"/>
+<area shape="rect" id="node10" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="781,259,873,284"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="987,108,1172,133"/>
+<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="517,208,669,233"/>
+<area shape="rect" id="node14" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="732,308,922,333"/>
+<area shape="rect" id="node15" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="540,309,646,335"/>
+<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="766,357,888,383"/>
 </map>
 </div>
 </p>
@@ -385,13 +385,13 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node20" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="349,456,511,481"/>
 <area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="759,208,979,233"/>
 <area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1027,257,1216,296"/>
-<area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="827,309,911,335"/>
-<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="823,359,915,384"/>
+<area shape="rect" id="node10" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="827,309,911,335"/>
+<area shape="rect" id="node11" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="823,359,915,384"/>
 <area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1029,208,1214,233"/>
 <area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="559,308,711,333"/>
-<area shape="rect" id="node15" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="582,408,688,433"/>
-<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="808,408,930,433"/>
-<area shape="rect" id="node17" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="774,457,964,483"/>
+<area shape="rect" id="node15" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="774,408,964,433"/>
+<area shape="rect" id="node16" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="582,409,688,435"/>
+<area shape="rect" id="node17" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="808,457,930,483"/>
 </map>
 </div>
 </p>
@@ -437,13 +437,13 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node21" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="499,456,662,481"/>
 <area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="910,208,1130,233"/>
 <area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1178,257,1367,296"/>
-<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="978,309,1062,335"/>
-<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="974,359,1066,384"/>
+<area shape="rect" id="node11" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="978,309,1062,335"/>
+<area shape="rect" id="node12" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="974,359,1066,384"/>
 <area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1180,208,1365,233"/>
 <area shape="rect" id="node14" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="710,308,862,333"/>
-<area shape="rect" id="node16" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="733,408,839,433"/>
-<area shape="rect" id="node17" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="959,408,1081,433"/>
-<area shape="rect" id="node18" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="925,457,1115,483"/>
+<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="925,408,1115,433"/>
+<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="733,409,839,435"/>
+<area shape="rect" id="node18" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="959,457,1081,483"/>
 </map>
 </div>
 </p>
@@ -480,8 +480,8 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="812,51,1012,76"/>
 <area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="307,51,527,76"/>
 <area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="575,100,764,139"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="375,152,459,177"/>
-<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="371,201,463,227"/>
+<area shape="rect" id="node7" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="375,152,459,177"/>
+<area shape="rect" id="node8" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="371,201,463,227"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="577,51,762,76"/>
 </map>
 </div>
@@ -561,13 +561,13 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node21" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="501,456,664,481"/>
 <area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="912,208,1131,233"/>
 <area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1179,257,1368,296"/>
-<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="979,309,1064,335"/>
-<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="975,359,1068,384"/>
+<area shape="rect" id="node11" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="979,309,1064,335"/>
+<area shape="rect" id="node12" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="975,359,1068,384"/>
 <area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1182,208,1366,233"/>
 <area shape="rect" id="node14" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="712,308,864,333"/>
-<area shape="rect" id="node16" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="735,408,841,433"/>
-<area shape="rect" id="node17" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="960,408,1083,433"/>
-<area shape="rect" id="node18" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="926,457,1117,483"/>
+<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="926,408,1117,433"/>
+<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="735,409,841,435"/>
+<area shape="rect" id="node18" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="960,457,1083,483"/>
 </map>
 </div>
 </p>
@@ -614,6 +614,73 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <map name="_m___e_c_l_a_s_s_8c_a29b169a5ddc3af0fcc2b06ad09cbea65_cgraph" id="_m___e_c_l_a_s_s_8c_a29b169a5ddc3af0fcc2b06ad09cbea65_cgraph">
 <area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="273,5,458,31"/>
 <area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="506,5,706,31"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7db5115362d5b6bfb95134ea861a4496"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getFieldOrMethodInfoAttributesFromConstantPool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#aafdf80b0992e652420382fcf19b9d074">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>constant_pool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>class_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>descriptor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que, dado um indice valido de field_info ou methdo_info para um pool de constantes, procura e retorna por referencia o nome da classe do field/metd, o nome do field/metd, e o descritor do field/metd.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Indice valido para o fieldInfo. </td></tr>
+    <tr><td class="paramname">constant_pool</td><td>Referencia para o pool de constantes a ser utilizado. </td></tr>
+    <tr><td class="paramname">class_name</td><td>Referencia para um vetor de char a receber o nome da classe do field/metd </td></tr>
+    <tr><td class="paramname">name</td><td>Referencia para um vetor de char a receber o nome do field/metd </td></tr>
+    <tr><td class="paramname">descriptor</td><td>Referencia para um vetor de char a receber o descritor do field/metd </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496_cgraph" alt=""/></div>
+<map name="_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496_cgraph" id="_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496_cgraph">
+<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="260,5,480,31"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="528,31,712,56"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="760,31,960,56"/>
 </map>
 </div>
 </p>
@@ -700,14 +767,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 
 </div>
 </div>
-<a class="anchor" id="a5ec3318a40ba8a6b46b48d39545829f4"></a>
+<a class="anchor" id="a2a35d7b72c380539f8cf0b57ba384ec3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void LECLASS_exibeErroOperacao </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#aa7ceae3fd72b26a559a601910a17e2c3">OPresult</a>&#160;</td>
           <td class="paramname"><em>resultado</em>, </td>
         </tr>
         <tr>
@@ -723,23 +790,23 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Metodo responsavel por prover o servico de exibicao de resuldados de erro de operacoes</p>
+<p>Metodo responsavel por prover mensagens de resuldados de erro de operacoes do leitor ".class"</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">resultado</td><td>Tipo resultado a ser decodificado e exibido </td></tr>
-    <tr><td class="paramname">resultado</td><td>Nome do arquivo </td></tr>
+    <tr><td class="paramname">resultado</td><td>Tipo resultado a ser decodificado </td></tr>
+    <tr><td class="paramname">fileName</td><td>Nome do arquivo </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ad8f20307e97939faff0c1ac0fb4d1195"></a>
+<a class="anchor" id="a1a7d50b6cf53c6ad15a48844fde23db7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#a053af61eb2c10b24ccb2db86bcba4b5f">resultado</a> LECLASS_exibidor </td>
+          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#aa7ceae3fd72b26a559a601910a17e2c3">OPresult</a> LECLASS_exibidor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a58bbd58859ab48cb1bd6c2ffb5874839">ArqClass</a> *&#160;</td>
           <td class="paramname"><em>arq_class</em></td><td>)</td>
@@ -759,8 +826,8 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
-<div class="center"><img src="_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195_cgraph" alt=""/></div>
-<map name="_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195_cgraph" id="_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195_cgraph">
+<div class="center"><img src="_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7_cgraph" alt=""/></div>
+<map name="_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7_cgraph" id="_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7_cgraph">
 <area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#aca36942ccf6d00fdf3463c5e2f4e0d68" title="exibeCtePool" alt="" coords="352,432,452,457"/>
 <area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1601,196,1801,221"/>
 <area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#af83f52bf13173cfa11472ac09452a89e" title="exibeAccessFlags" alt="" coords="509,94,638,120"/>
@@ -768,12 +835,12 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#a473b09220e36cdb3909ec266a9e663ed" title="exibeCampos" alt="" coords="190,145,293,170"/>
 <area shape="rect" id="node25" href="_m___e_c_l_a_s_s_8c.html#a45f75a1d6b171e2ba0dfa4be93bc5eff" title="exibeMetodos" alt="" coords="190,194,294,220"/>
 <area shape="rect" id="node26" href="_m___e_c_l_a_s_s_8c.html#abbb60b740416109c7ec43f392fc8c560" title="exibeAtributos" alt="" coords="189,269,295,294"/>
-<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="920,477,1025,502"/>
-<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="1097,458,1316,484"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1364,508,1553,546"/>
-<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="1164,560,1249,585"/>
-<area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="1160,357,1253,382"/>
-<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1367,458,1551,484"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="920,470,1025,496"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="1097,446,1316,472"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1364,496,1553,534"/>
+<area shape="rect" id="node8" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="1164,548,1249,573"/>
+<area shape="rect" id="node9" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="1160,345,1253,370"/>
+<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1367,446,1551,472"/>
 <area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#a7939f0d415c61ee15d0b68b6a2a9523d" title="exibeCampMetd" alt="" coords="343,145,461,170"/>
 <area shape="rect" id="node14" href="_m___e_c_l_a_s_s_8c.html#ae40695c48f6ea7aeee3a83ca1c7af20f" title="exibeAtributo" alt="" coords="524,296,623,321"/>
 <area shape="rect" id="node15" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="697,246,838,272"/>
@@ -782,10 +849,10 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node22" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="695,394,839,420"/>
 <area shape="rect" id="node23" href="_m___e_c_l_a_s_s_8c.html#a1814dc11a9ec2e7ad63147943593eec6" title="printCodeAttributes" alt="" coords="700,444,835,469"/>
 <area shape="rect" id="node24" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="686,145,849,170"/>
-<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="897,272,1049,297"/>
-<area shape="rect" id="node19" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="920,321,1026,346"/>
-<area shape="rect" id="node20" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="1145,308,1268,333"/>
-<area shape="rect" id="node21" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="1111,258,1302,284"/>
+<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="897,246,1049,272"/>
+<area shape="rect" id="node19" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="1111,296,1302,321"/>
+<area shape="rect" id="node20" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="920,296,1026,321"/>
+<area shape="rect" id="node21" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="1145,246,1268,272"/>
 </map>
 </div>
 </p>
@@ -902,7 +969,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 
 </div>
 </div>
-<a class="anchor" id="ae4b4434e6a302fb668d481c1b91c90e3"></a>
+<a class="anchor" id="a33756dcf2e8eccaf23570a5ee891cc8c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -910,8 +977,18 @@ Este é o diagrama das funções utilizadas por esta função:</div>
           <td class="memname">void printByteCode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *&#160;</td>
-          <td class="paramname"><em>bytecode</em></td><td>)</td>
+          <td class="paramname"><em>bytecode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *&#160;</td>
+          <td class="paramname"><em>bytecodes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -919,6 +996,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytecode</td><td>Bytecode a ser exibido. </td></tr>
+    <tr><td class="paramname">bytecodes</td><td>Inicio do vetor de bytecodes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -926,10 +1004,10 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
-<div class="center"><img src="_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3_cgraph" alt=""/></div>
-<map name="_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3_cgraph" id="_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3_cgraph">
+<div class="center"><img src="_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c_cgraph" alt=""/></div>
+<map name="_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c_cgraph" id="_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c_cgraph">
 <area shape="rect" id="node2" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="193,5,315,31"/>
-<area shape="rect" id="node3" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="159,55,349,80"/>
+<area shape="rect" id="node3" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="159,55,349,80"/>
 </map>
 </div>
 </p>
@@ -973,9 +1051,9 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___e_c_l_a_s_s_8c_a63f3dcf8714a53825593901037416ee5_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_a63f3dcf8714a53825593901037416ee5_cgraph" alt=""/></div>
 <map name="_m___e_c_l_a_s_s_8c_a63f3dcf8714a53825593901037416ee5_cgraph" id="_m___e_c_l_a_s_s_8c_a63f3dcf8714a53825593901037416ee5_cgraph">
-<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="166,31,272,56"/>
-<area shape="rect" id="node3" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="354,5,476,31"/>
-<area shape="rect" id="node4" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="320,55,510,80"/>
+<area shape="rect" id="node2" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="320,5,510,31"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="166,55,272,80"/>
+<area shape="rect" id="node4" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="354,55,476,80"/>
 </map>
 </div>
 </p>
@@ -1026,23 +1104,23 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___e_c_l_a_s_s_8c_a1814dc11a9ec2e7ad63147943593eec6_cgraph.png" border="0" usemap="#_m___e_c_l_a_s_s_8c_a1814dc11a9ec2e7ad63147943593eec6_cgraph" alt=""/></div>
 <map name="_m___e_c_l_a_s_s_8c_a1814dc11a9ec2e7ad63147943593eec6_cgraph" id="_m___e_c_l_a_s_s_8c_a1814dc11a9ec2e7ad63147943593eec6_cgraph">
-<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#ae40695c48f6ea7aeee3a83ca1c7af20f" title="exibeAtributo" alt="" coords="189,172,288,197"/>
-<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1251,70,1451,96"/>
-<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="347,70,488,96"/>
-<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="570,146,675,172"/>
-<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1" title="parseCode" alt="" coords="374,221,461,246"/>
-<area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5" title="printByteCodes" alt="" coords="361,270,474,296"/>
-<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="345,172,490,197"/>
-<area shape="rect" id="node18" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="336,320,499,345"/>
-<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="747,96,967,121"/>
-<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1015,145,1203,184"/>
-<area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="814,197,899,222"/>
-<area shape="rect" id="node10" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="810,246,903,272"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1017,96,1201,121"/>
-<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="547,221,699,246"/>
-<area shape="rect" id="node14" href="_m___e_c_l_a_s_s_8c.html#ae4b4434e6a302fb668d481c1b91c90e3" title="printByteCode" alt="" coords="570,296,676,321"/>
-<area shape="rect" id="node15" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="796,296,918,321"/>
-<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10" title="getOpcodeAttributesNumber" alt="" coords="761,345,952,370"/>
+<area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#ae40695c48f6ea7aeee3a83ca1c7af20f" title="exibeAtributo" alt="" coords="189,155,288,181"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="1251,79,1451,105"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a1e8cb35a052b381b7ed5be3bd9f53c6a" title="parseConstantValue" alt="" coords="347,54,488,79"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a652e8d8fb785f163a7a3f1ea66c42b76" title="printFromPool" alt="" coords="570,155,675,181"/>
+<area shape="rect" id="node11" href="_m___e_c_l_a_s_s_8c.html#a056acd899b32895fb68301a08f5fe9b1" title="parseCode" alt="" coords="374,205,461,230"/>
+<area shape="rect" id="node13" href="_m___e_c_l_a_s_s_8c.html#a63f3dcf8714a53825593901037416ee5" title="printByteCodes" alt="" coords="361,254,474,279"/>
+<area shape="rect" id="node17" href="_m___e_c_l_a_s_s_8c.html#ac2c6645067df37835425eae90bd6e97f" title="printCodeExceptions" alt="" coords="345,155,490,181"/>
+<area shape="rect" id="node18" href="_m___e_c_l_a_s_s_8c.html#abb6288b56fc7622b89924f453a02f279" title="parseExceptionAttribute" alt="" coords="336,303,499,329"/>
+<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="747,105,967,130"/>
+<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="1015,154,1203,193"/>
+<area shape="rect" id="node9" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="814,206,899,231"/>
+<area shape="rect" id="node10" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="810,255,903,281"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="1017,105,1201,130"/>
+<area shape="rect" id="node12" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="547,205,699,230"/>
+<area shape="rect" id="node14" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d" title="getOpcodeAttributesNumber" alt="" coords="761,305,952,330"/>
+<area shape="rect" id="node15" href="_m___e_c_l_a_s_s_8c.html#a33756dcf2e8eccaf23570a5ee891cc8c" title="printByteCode" alt="" coords="570,306,676,331"/>
+<area shape="rect" id="node16" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="796,354,918,379"/>
 </map>
 </div>
 </p>
@@ -1097,8 +1175,8 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="856,51,1055,76"/>
 <area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="351,51,571,76"/>
 <area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="619,100,808,139"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="419,152,503,177"/>
-<area shape="rect" id="node8" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="414,201,507,227"/>
+<area shape="rect" id="node7" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="419,152,503,177"/>
+<area shape="rect" id="node8" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="414,201,507,227"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="621,51,805,76"/>
 </map>
 </div>
@@ -1146,8 +1224,8 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="663,51,863,76"/>
 <area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a29b169a5ddc3af0fcc2b06ad09cbea65" title="getClassNameFromConstantPool" alt="" coords="158,51,378,76"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#aaa897dfb9d5e0deeea00dc18db34cf41" title="printNameAndTypeInfoFrom\lConstantPool" alt="" coords="426,100,615,139"/>
-<area shape="rect" id="node6" href="_m___e_c_l_a_s_s_8c.html#ac1709d62d399fb8ed1300e6b237d4fcc" title="u4ToFLoat" alt="" coords="226,152,311,177"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#a1635f324e84de6fd96505e01968b7333" title="u4ToDouble" alt="" coords="222,201,315,227"/>
+<area shape="rect" id="node6" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="226,152,311,177"/>
+<area shape="rect" id="node7" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="222,201,315,227"/>
 <area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="429,51,613,76"/>
 </map>
 </div>
@@ -1196,63 +1274,6 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a1635f324e84de6fd96505e01968b7333"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double u4ToDouble </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
-          <td class="paramname"><em>high_bytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
-          <td class="paramname"><em>low_bytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Metodo que que realiza a conversao de um u4 (little-endian) para um double em big-endian order.</p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">high_bytes</td><td>Bytes de mais alta ordem. </td></tr>
-    <tr><td class="paramname">low_bytes</td><td>Bytes de mais baixa ordem. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ac1709d62d399fb8ed1300e6b237d4fcc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float u4ToFLoat </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
-          <td class="paramname"><em>bytes</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Metodo que que realiza a conversao de um u4 (little-endian) para um float em big-endian order.</p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bytes</td><td>Bytes em u4. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

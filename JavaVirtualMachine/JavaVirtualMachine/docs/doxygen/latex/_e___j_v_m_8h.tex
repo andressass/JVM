@@ -5,6 +5,15 @@
 Estruturas da J\+V\+M.  
 
 
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Gráfico de dependência de inclusões para E\+\_\+\+J\+V\+M.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{_e___j_v_m_8h__incl}
+\end{center}
+\end{figure}
 Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
 \nopagebreak
 \begin{figure}[H]
@@ -170,7 +179,9 @@ typedef unsigned short \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1c
 \begin{DoxyCompactList}\small\item\em Representa 2 bytes. \end{DoxyCompactList}\item 
 typedef unsigned int \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4}
 \begin{DoxyCompactList}\small\item\em Representa 4 bytes. \end{DoxyCompactList}\item 
-typedef unsigned short \hyperlink{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado}
+typedef uint64\+\_\+t \hyperlink{_e___j_v_m_8h_ae4d1c3d548028e31400378ec81026110}{u8}
+\begin{DoxyCompactList}\small\item\em Representa 4 bytes. \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{_e___j_v_m_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult}
 \begin{DoxyCompactList}\small\item\em Representa o resultado de uma operacao. \end{DoxyCompactList}\item 
 typedef char \hyperlink{_e___j_v_m_8h_a9ffedfebd21a940154d9fb5f22968d68}{String}\mbox{[}\hyperlink{_e___j_v_m_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H}\mbox{]}
 \item 
@@ -222,7 +233,7 @@ typedef struct \hyperlink{struct_thread}{Thread} \hyperlink{_e___j_v_m_8h_a4a082
 \begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
 typedef struct \hyperlink{struct_environment}{Environment} \hyperlink{_e___j_v_m_8h_a2939780e6e449ccdc63802638f1ec09c}{Environment}
 \begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+V\+M. \end{DoxyCompactList}\item 
-typedef void($\ast$ \hyperlink{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}{instruction}) (\hyperlink{struct_thread}{Thread} $\ast$)
+typedef void($\ast$ \hyperlink{_e___j_v_m_8h_a0000d84fd9007ff8ecae19f59d835517}{instruction}) (\hyperlink{struct_environment}{Environment} $\ast$)
 \begin{DoxyCompactList}\small\item\em Ponteiro para uma instrucao. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -625,14 +636,14 @@ Construcao da estrutura de \hyperlink{struct_frame}{Frame} \hypertarget{_e___j_v
 
 Estrutura da \hyperlink{struct_handler}{Handler}. 
 
-\hypertarget{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!instruction@{instruction}}
+\hypertarget{_e___j_v_m_8h_a0000d84fd9007ff8ecae19f59d835517}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!instruction@{instruction}}
 \index{instruction@{instruction}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
-\subsubsection[{instruction}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ instruction) ({\bf Thread} $\ast$)}\label{_e___j_v_m_8h_a115594396e61533b63040ef3074bd622}
+\subsubsection[{instruction}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ instruction) ({\bf Environment} $\ast$)}\label{_e___j_v_m_8h_a0000d84fd9007ff8ecae19f59d835517}
 
 
 Ponteiro para uma instrucao. 
 
-Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia para a \hyperlink{struct_thread}{Thread} em operacao. \hypertarget{_e___j_v_m_8h_ac17e902332f273fa155c5f3591e192b5}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Java\+Class@{Java\+Class}}
+Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia para a o ambiente de execucao. \hypertarget{_e___j_v_m_8h_ac17e902332f273fa155c5f3591e192b5}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Java\+Class@{Java\+Class}}
 \index{Java\+Class@{Java\+Class}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
 \subsubsection[{Java\+Class}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Java\+Class} {\bf Java\+Class}}\label{_e___j_v_m_8h_ac17e902332f273fa155c5f3591e192b5}
 
@@ -666,9 +677,9 @@ Estrutura da \hyperlink{struct_object_list}{Object\+List}.
 \hypertarget{_e___j_v_m_8h_a346a5006b3ffde66941ce40c277fbf86}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Operand\+Stack@{Operand\+Stack}}
 \index{Operand\+Stack@{Operand\+Stack}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
 \subsubsection[{Operand\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Operand\+Stack} {\bf Operand\+Stack}}\label{_e___j_v_m_8h_a346a5006b3ffde66941ce40c277fbf86}
-\hypertarget{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!resultado@{resultado}}
-\index{resultado@{resultado}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
-\subsubsection[{resultado}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf resultado}}\label{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}
+\hypertarget{_e___j_v_m_8h_aa7ceae3fd72b26a559a601910a17e2c3}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!O\+Presult@{O\+Presult}}
+\index{O\+Presult@{O\+Presult}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{O\+Presult}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf O\+Presult}}\label{_e___j_v_m_8h_aa7ceae3fd72b26a559a601910a17e2c3}
 
 
 Representa o resultado de uma operacao. 
@@ -707,6 +718,13 @@ Representa 2 bytes.
 \hypertarget{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!u4@{u4}}
 \index{u4@{u4}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
 \subsubsection[{u4}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf u4}}\label{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}
+
+
+Representa 4 bytes. 
+
+\hypertarget{_e___j_v_m_8h_ae4d1c3d548028e31400378ec81026110}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!u8@{u8}}
+\index{u8@{u8}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{u8}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\+\_\+t {\bf u8}}\label{_e___j_v_m_8h_ae4d1c3d548028e31400378ec81026110}
 
 
 Representa 4 bytes. 

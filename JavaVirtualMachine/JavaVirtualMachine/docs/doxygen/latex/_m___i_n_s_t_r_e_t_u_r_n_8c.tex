@@ -1,0 +1,205 @@
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.c}
+\label{_m___i_n_s_t_r_e_t_u_r_n_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_a4d765a9e399fb90cc4d6873a22ac54cd}{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_a6dbc76b2ac2b8bd42ff1c23988221db3}{ireturn} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_a980e226beee2d40986617e382a3fd143}{lreturn} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_a28278501b142b4b987f9d9445a325a6d}{freturn} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_a524ae1650fdcceb8296462584fabdc89}{dreturn} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_a8b875b7920945daa963102455070e130}{areturn} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_r_e_t_u_r_n_8c_ac2e7bbbacfae427495520adbddadb7e2}{return\+\_\+} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_a4d765a9e399fb90cc4d6873a22ac54cd}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V}}
+\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N\+\_\+\+S\+E\+R\+V}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_a4d765a9e399fb90cc4d6873a22ac54cd}
+
+
+\subsection{Funções}
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_a8b875b7920945daa963102455070e130}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!areturn@{areturn}}
+\index{areturn@{areturn}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{areturn(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void areturn (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_a8b875b7920945daa963102455070e130}
+Instrucao para tratar retorno de um caracter 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c_a8b875b7920945daa963102455070e130_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_a524ae1650fdcceb8296462584fabdc89}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!dreturn@{dreturn}}
+\index{dreturn@{dreturn}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{dreturn(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dreturn (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_a524ae1650fdcceb8296462584fabdc89}
+Instrucao para tratar retorno de um double 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c_a524ae1650fdcceb8296462584fabdc89_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_a28278501b142b4b987f9d9445a325a6d}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!freturn@{freturn}}
+\index{freturn@{freturn}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{freturn(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void freturn (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_a28278501b142b4b987f9d9445a325a6d}
+Instrucao para tratar retorno de um float 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c_a28278501b142b4b987f9d9445a325a6d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_a6dbc76b2ac2b8bd42ff1c23988221db3}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!ireturn@{ireturn}}
+\index{ireturn@{ireturn}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{ireturn(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ireturn (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_a6dbc76b2ac2b8bd42ff1c23988221db3}
+Instrucao para tratar retorno de um int 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c_a6dbc76b2ac2b8bd42ff1c23988221db3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_a980e226beee2d40986617e382a3fd143}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!lreturn@{lreturn}}
+\index{lreturn@{lreturn}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{lreturn(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lreturn (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_a980e226beee2d40986617e382a3fd143}
+Instrucao para tratar retorno de um long 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c_a980e226beee2d40986617e382a3fd143_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_r_e_t_u_r_n_8c_ac2e7bbbacfae427495520adbddadb7e2}{}\index{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}!return\+\_\+@{return\+\_\+}}
+\index{return\+\_\+@{return\+\_\+}!M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+R\+E\+T\+U\+R\+N.\+c}}
+\subsubsection[{return\+\_\+(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void return\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_r_e_t_u_r_n_8c_ac2e7bbbacfae427495520adbddadb7e2}
+Instrucao para tratar retorno em geral 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_r_e_t_u_r_n_8c_ac2e7bbbacfae427495520adbddadb7e2_cgraph}
+\end{center}
+\end{figure}
+
+

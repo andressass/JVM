@@ -1,0 +1,678 @@
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.c}
+\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+J\+A\+V\+A\+D\+E\+C\+O\+D\+E\+R.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+A\+R\+R\+A\+Y.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa29fb9a742e3f346ca0f5ff35e259fd2}{I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_accb897a7fa952d484ea2be4f668cbde7}{calculate\+Pool\+Index\+From\+Code} (\hyperlink{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$method, \hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool, \hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6055c29f49bcb240fba6cb002e284ad2}{getstatic} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_af638211dbab588e3a9f52f277e188d09}{putstatic} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aab8668e8a38d8cff1fbcab4493cba0ff}{getfield} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_afc96cb24044dcf314d88eb8e28078e8d}{putfield} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+int \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a553461fd1afbc6e33983f1df6bfdc4ad}{get\+Parameter\+Number\+From\+Method\+Descriptor} (char $\ast$descriptor)
+\item 
+int \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a2965cade5673a32c95ac9d3e1f6d8ba5}{is\+Class\+Sub\+Class\+From\+Class} (char $\ast$class\+Name, char $\ast$sup\+Class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{_e___j_v_m_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$ \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a5d8b4918c257b157183355643ae13813}{is\+Method\+In\+Class\+Or\+Super\+Class} (\hyperlink{struct_java_class}{Java\+Class} $\ast$object\+Class, char $\ast$method\+\_\+name, char $\ast$method\+\_\+descriptor, \hyperlink{struct_environment}{Environment} $\ast$environment, char $\ast$$\ast$method\+\_\+class\+\_\+name)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_adfe4e010ec7f792bece88156a8e31590}{invokevirtual} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa66c2de6acafae4bc5dbbf717f95f9a5}{verify\+Invoke\+Special} (\hyperlink{struct_object}{Object} $\ast$object\+Ref, \hyperlink{struct_java_class}{Java\+Class} $\ast$method\+\_\+class, char $\ast$method\+\_\+name, char $\ast$method\+\_\+descriptor, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a16263dc4f92f1f4a635ffdabae2dd36c}{invokespecial} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a70a24c8bdc12865d3ffab987845fd601}{invokestatic} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_ab86956fa68a9150e4a8d5d47310961ba}{invokeinterface} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a949b10b4378c135e0dc21ea174518c7a}{New} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a82485bf3564751a58743babf35a236db}{newarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1dd8a89922}{anewarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a276c211291ee61d49360e444fe0c4a49}{arraylength} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617cb844d385}{multianewarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa29fb9a742e3f346ca0f5ff35e259fd2}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V}}
+\index{I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa29fb9a742e3f346ca0f5ff35e259fd2}
+
+
+\subsection{Funções}
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1dd8a89922}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!anewarray@{anewarray}}
+\index{anewarray@{anewarray}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{anewarray(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void anewarray (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1dd8a89922}
+Metodo que cria um novo array de reference. O numero de componentes do array a ser criado count deve ser do tipo int e eh desempilhado da pilha de operandos. O metodo recebe como parametro os unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a constante pool de tempo de execucao da classe corrente, onde o valor do indice eh (indexbyte1 $<$$<$ 8) $\vert$ indexbyte2. O item da constante pool de tempo de execucao no indice deve ser uma referencia simbolica para um tipo class, array ou interface. O tipo nomeado da classe, array ou interface esta resolvido. Um novo array com componentes daquele tipo, de tamanho count, eh alocado e uma reference arrayref a ele eh empilhada na pilha de operandos. Cada um dos elementos do novo array sao inicializados para null, o valor padrao para tipos reference.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1dd8a89922_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a276c211291ee61d49360e444fe0c4a49}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!arraylength@{arraylength}}
+\index{arraylength@{arraylength}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{arraylength(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void arraylength (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a276c211291ee61d49360e444fe0c4a49}
+Metodo que obtem o tamanho do array. O arrayref deve ser do tipo reference e deve se referir a um array. Ele eh desempilhado da pilha de operandos. O tamanho do array que ele referencia eh determinado e eh empilhado na pilha de operandos como um int.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a276c211291ee61d49360e444fe0c4a49_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_accb897a7fa952d484ea2be4f668cbde7}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!calculate\+Pool\+Index\+From\+Code@{calculate\+Pool\+Index\+From\+Code}}
+\index{calculate\+Pool\+Index\+From\+Code@{calculate\+Pool\+Index\+From\+Code}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{calculate\+Pool\+Index\+From\+Code(method\+\_\+info $\ast$method, cp\+\_\+info $\ast$constant\+\_\+pool, Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} calculate\+Pool\+Index\+From\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf method\+\_\+info} $\ast$}]{method, }
+\item[{{\bf cp\+\_\+info} $\ast$}]{constant\+\_\+pool, }
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_accb897a7fa952d484ea2be4f668cbde7}
+Metodo que calcula un indice para o pool de constantes baseado em dois bytes obtidos do codigo, atualizando o valor de P\+C.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em method} & Referencia para o metodo contendo o codigo \\
+\hline
+{\em method} & Referencia para o pool de constantes do metodo \\
+\hline
+{\em method} & Referencia para o P\+C da thread atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Indice calculado como byte1 $<$$<$ 8 $\vert$ byte2 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_accb897a7fa952d484ea2be4f668cbde7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aab8668e8a38d8cff1fbcab4493cba0ff}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!getfield@{getfield}}
+\index{getfield@{getfield}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{getfield(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void getfield (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aab8668e8a38d8cff1fbcab4493cba0ff}
+Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de constantes, desempilha uma referencia para um objeto e empilha o valor do atributo deste objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aab8668e8a38d8cff1fbcab4493cba0ff_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a553461fd1afbc6e33983f1df6bfdc4ad}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!get\+Parameter\+Number\+From\+Method\+Descriptor@{get\+Parameter\+Number\+From\+Method\+Descriptor}}
+\index{get\+Parameter\+Number\+From\+Method\+Descriptor@{get\+Parameter\+Number\+From\+Method\+Descriptor}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{get\+Parameter\+Number\+From\+Method\+Descriptor(char $\ast$descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Number\+From\+Method\+Descriptor (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{descriptor}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a553461fd1afbc6e33983f1df6bfdc4ad}
+Metodo que retorna a quanitdade de parametros (de U4s) sao passados como parametro de um desctritor de metodo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em descriptor} & Descritor do metodo \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6055c29f49bcb240fba6cb002e284ad2}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!getstatic@{getstatic}}
+\index{getstatic@{getstatic}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{getstatic(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void getstatic (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6055c29f49bcb240fba6cb002e284ad2}
+Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de constantes, empilha o valor deste na pilha de operandos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6055c29f49bcb240fba6cb002e284ad2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_ab86956fa68a9150e4a8d5d47310961ba}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!invokeinterface@{invokeinterface}}
+\index{invokeinterface@{invokeinterface}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{invokeinterface(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void invokeinterface (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_ab86956fa68a9150e4a8d5d47310961ba}
+Metodo que invoca um metodo de interface. Recebe 2bytes para montagem de referencia para um metodo no pool de constantes. Recebe um unsigned byte count != 0. Recebe um unsigned byte 0.
+
+
+\begin{DoxyEnumerate}
+\item Resolvemos o a interface do metodo, obtendo uma referencia para java\+Class
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
+\item Baseado no descritor do metodo, desempilhamos os parametros
+\item Desempilhamos uma referencia para o objeto (Objectref)
+\item Se C eh a classe de Objectref, selecionamos o metodo com o seguinte procedimento\+:
+
+6.\+1. Se C contem um metodo de instancia com o mesmo nome e descritor, invocamos e terminamos. 6.\+2. Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva. 6.\+3. Se nao, Abstract\+Method\+Error.
+\begin{DoxyEnumerate}
+\item Criamos um novo frame e empilhamos
+
+7.\+1. Passamos os argumentos para o vetor de variaveis locais 7.\+1.\+1 var\+\_\+local\+\_\+0 \+:= Objectref 7.\+1.\+2 var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1 7.\+1.. var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N
+\end{DoxyEnumerate}
+
+Excessoes\+:
+\begin{DoxyEnumerate}
+\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception
+\item Se a classe de Objectref nao implementa a interface, Incompatible\+Class\+Change\+Error
+\item Se nao encontrarmos o metodo, lacamos Abstract\+Method\+Error
+\item Se o metodo nao for publico, Illegal\+Access\+Error
+\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_ab86956fa68a9150e4a8d5d47310961ba_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a16263dc4f92f1f4a635ffdabae2dd36c}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!invokespecial@{invokespecial}}
+\index{invokespecial@{invokespecial}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{invokespecial(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void invokespecial (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a16263dc4f92f1f4a635ffdabae2dd36c}
+Metodo que invoca um metodo de instancia. Tratamento especial para superclasse, private e invocacao de metodos de inicializacao de instancia. Recebe 2bytes para montagem de referencia para um metodo no pool de constantes.
+
+
+\begin{DoxyEnumerate}
+\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
+\item Baseado no descritor do metodo, desempilhamos os parametros
+\item Desempilhamos uma referencia para o objeto (Objectref)
+\item Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref eh a propria classe ou subclasse do metodo
+\item O metodo eh selecionado para invocacao a nao ser que todas as seguintes condicoes sejam verdadeiras\+:
+
+7.\+1. A flag A\+C\+C\+\_\+\+S\+U\+P\+E\+R esta setada para a classe atual 7.\+2. A classe do metodo eh superclasse da classe atual 7.\+3. O metodo nao eh um metodo $<$init$>$ 7.\+4. A classe do metodo eh superclasse da classe atual
+\begin{DoxyEnumerate}
+\item Se as condicoes acima forem verdadeiras, o metodo a ser invocado eh selecionado pelo seguinte procedimento de busca. Consideramos C uma superclasse direta da classe atual\+:
+
+8.\+1. Se C contiver um metodo de instancia com o mesmo nome e descritor do metodo a ser invocado. Invocamos o metodo e terminamos. 8.\+2. Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva. 8.\+3. Se nao, Abstract\+Method\+Error.
+\item Criamos um novo frame e empilhamos
+
+9.\+1. Passamos os argumentos para o vetor de variaveis locais 9.\+1.\+1 var\+\_\+local\+\_\+0 \+:= Objectref 9.\+1.\+2 var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1 9.\+1.. var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N
+\end{DoxyEnumerate}
+
+Excessoes\+:
+\begin{DoxyEnumerate}
+\item Se o metodo eh $<$init$>$ e a classe na qual ele eh declarado nao eh a classe referida pela instrucao, lancamos No\+Such\+Method\+Error.
+\item Se o metodo for estatico, lancamos Incompatible\+Class\+Change\+Error
+\item Se nao encontrarmos o metodo, lacamos Abstract\+Method\+Error
+\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error
+\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a16263dc4f92f1f4a635ffdabae2dd36c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a70a24c8bdc12865d3ffab987845fd601}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!invokestatic@{invokestatic}}
+\index{invokestatic@{invokestatic}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{invokestatic(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void invokestatic (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a70a24c8bdc12865d3ffab987845fd601}
+Metodo que invoca um metodo de classe. Recebe 2bytes para montagem de referencia para um metodo no pool de constantes.
+
+
+\begin{DoxyEnumerate}
+\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
+\item Baseado no descritor do metodo, desempilhamos os parametros
+\begin{DoxyEnumerate}
+\item Criamos um novo frame e empilhamos
+
+7.\+1. Passamos os argumentos para o vetor de variaveis locais 7.\+7.\+1 var\+\_\+local\+\_\+0 \+:= argumento\+\_\+1 7.\+7.\+K var\+\_\+local\+\_\+\mbox{[}N-\/1\mbox{]} \+:= argumento\+\_\+\+N
+\end{DoxyEnumerate}
+
+Excessoes\+:
+\begin{DoxyEnumerate}
+\item Se o metodo nao for estatico, lancamos Incompatible\+Class\+Change\+Error
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a70a24c8bdc12865d3ffab987845fd601_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_adfe4e010ec7f792bece88156a8e31590}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!invokevirtual@{invokevirtual}}
+\index{invokevirtual@{invokevirtual}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{invokevirtual(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void invokevirtual (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_adfe4e010ec7f792bece88156a8e31590}
+Metodo que invoca um metodo de instancia. Executa baseado na classe. Recebe 2bytes para montagem de referencia para um metodo no pool de constantes.
+
+
+\begin{DoxyEnumerate}
+\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
+\item Baseado no descritor do metodo, desempilhamos os parametros
+\item Desempilhamos uma referencia para o objeto (Objectref)
+\item Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref eh a propria classe ou subclasse do metodo
+
+6.\+1. Se a classe C do objeto for a classe do metodo, buscamos o metodo em C e invocamos
+
+6.\+2. Se a C tiver uma superclasse, procuramos recursivamente e invocamos
+
+6.\+3. Se nao, lancamos a excessao Abstract\+Method\+Error
+\begin{DoxyEnumerate}
+\item Criamos um novo frame e empilhamos
+
+7.\+1. Passamos os argumentos para o vetor de variaveis locais 7.\+1.\+1 var\+\_\+local\+\_\+0 \+:= Objectref 7.\+1.\+2 var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1 7.\+1.\+K var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N
+\end{DoxyEnumerate}
+
+Excessoes\+:
+\begin{DoxyEnumerate}
+\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception
+\item Se o metodo nao for encontrado, lancamos Abstract\+Method\+Error
+\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_adfe4e010ec7f792bece88156a8e31590_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a2965cade5673a32c95ac9d3e1f6d8ba5}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!is\+Class\+Sub\+Class\+From\+Class@{is\+Class\+Sub\+Class\+From\+Class}}
+\index{is\+Class\+Sub\+Class\+From\+Class@{is\+Class\+Sub\+Class\+From\+Class}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{is\+Class\+Sub\+Class\+From\+Class(char $\ast$class\+Name, char $\ast$sup\+Class\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Class\+Sub\+Class\+From\+Class (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{class\+Name, }
+\item[{char $\ast$}]{sup\+Class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a2965cade5673a32c95ac9d3e1f6d8ba5}
+Metodo que verifica se uma classe eh subclasse de outra
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe a ser verificada \\
+\hline
+{\em sup\+Class\+Name} & Nome da possivel superclasse \\
+\hline
+{\em environment} & Ambiente de execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 se sim, 0 se nao 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a2965cade5673a32c95ac9d3e1f6d8ba5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a5d8b4918c257b157183355643ae13813}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!is\+Method\+In\+Class\+Or\+Super\+Class@{is\+Method\+In\+Class\+Or\+Super\+Class}}
+\index{is\+Method\+In\+Class\+Or\+Super\+Class@{is\+Method\+In\+Class\+Or\+Super\+Class}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{is\+Method\+In\+Class\+Or\+Super\+Class(\+Java\+Class $\ast$object\+Class, char $\ast$method\+\_\+name, char $\ast$method\+\_\+descriptor, Environment $\ast$environment, char $\ast$$\ast$method\+\_\+class\+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf method\+\_\+info}$\ast$ is\+Method\+In\+Class\+Or\+Super\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{object\+Class, }
+\item[{char $\ast$}]{method\+\_\+name, }
+\item[{char $\ast$}]{method\+\_\+descriptor, }
+\item[{{\bf Environment} $\ast$}]{environment, }
+\item[{char $\ast$$\ast$}]{method\+\_\+class\+\_\+name}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a5d8b4918c257b157183355643ae13813}
+Metodo que verifica se existe o metodo existe na classe ou superclasse de uma classe passada e retorna uma referencia para o method\+\_\+info e o nome da classe do metodo eh copiada para o parametro method\+\_\+class\+\_\+name
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em object\+Class} & Referencia para a classe do objeto \\
+\hline
+{\em method\+\_\+name} & nome do metodo atual \\
+\hline
+{\em method\+\_\+descriptor} & descritor do metodo atual \\
+\hline
+{\em environment} & Ambiente de execucao \\
+\hline
+{\em method\+\_\+class\+\_\+name} & Nome da classe do metodo encontrado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+method\+\_\+info do metodo, se nao lanca excessao 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a5d8b4918c257b157183355643ae13813_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617cb844d385}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!multianewarray@{multianewarray}}
+\index{multianewarray@{multianewarray}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{multianewarray(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void multianewarray (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617cb844d385}
+Metodo que cria um novo array multidimensional. O metodo recebe como argumento um numero de dimensoes do array a ser criado dimensions. A pilha de operandos deve conter os valores das dimensoes count1, count2... Cada valor representa o numero de componentes em uma dimensao do array a ser criado e deve ser do tipo int e nao negativo.
+
+Todos os valores count sao desempilhados da pilha de operandos. O metodo tambem recebe como parametro os unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a constante pool de tempo de execucao da classe corrente, onde o valor do indice eh (indexbyte1 $<$$<$ 8) $\vert$ indexbyte2. O item da constante pool de tempo de execucao no indice deve ser uma referencia simbolica para um tipo class, array ou interface. O tipo nomeado da classe, array ou interface esta resolvido. A entrada resultante deve ser um array de tipo class de dimensionalidade maior ou igual a dimensions.
+
+Um novo array multidimensional de tipo do array eh alocado. Se qualquer valor count for zero, nenhuma dimensao subsequente eh alocada. Os componentes do array na primeira dimensao sao inicializados para os subarrays do tipo da segunda dimensao, e assim por diante. Os componentes da ultima dimensao alocada do array sao inicializados para o valor inicial padrao pelo tipo dos componentes. Uma reference arrayref para o novo array eh empilhada na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617cb844d385_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a949b10b4378c135e0dc21ea174518c7a}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!New@{New}}
+\index{New@{New}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{New(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void New (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a949b10b4378c135e0dc21ea174518c7a}
+Metodo que cria uma nova instancia de classe e empilha a referencia na pilha de operandos. Recebe 2bytes para montagem de referencia para uma classe no pool de constantes.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a949b10b4378c135e0dc21ea174518c7a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a82485bf3564751a58743babf35a236db}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!newarray@{newarray}}
+\index{newarray@{newarray}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{newarray(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void newarray (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a82485bf3564751a58743babf35a236db}
+Metodo que cria um novo array. Ele recebe como parametro o tipo do array a ser criado atype e desempilha o numero de elementos no array a ser criado count. O novo array, cujos componentes sao do tipo atype e de tamanho count, eh alocado e uma reference arrayref a ele eh empilhada na pilha de operandos. Cada um dos elementos do novo array sao inicializados para o valor inicial padrao para o tipo do array.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a82485bf3564751a58743babf35a236db_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_afc96cb24044dcf314d88eb8e28078e8d}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!putfield@{putfield}}
+\index{putfield@{putfield}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{putfield(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void putfield (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_afc96cb24044dcf314d88eb8e28078e8d}
+Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de constantes, desempilha um valor e uma referencia para um objeto, setando o atributo do objeto para o valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_afc96cb24044dcf314d88eb8e28078e8d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_af638211dbab588e3a9f52f277e188d09}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!putstatic@{putstatic}}
+\index{putstatic@{putstatic}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{putstatic(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void putstatic (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_af638211dbab588e3a9f52f277e188d09}
+Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de constantes, desempilha um valor e seta o atributo da classe para o valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_af638211dbab588e3a9f52f277e188d09_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa66c2de6acafae4bc5dbbf717f95f9a5}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!verify\+Invoke\+Special@{verify\+Invoke\+Special}}
+\index{verify\+Invoke\+Special@{verify\+Invoke\+Special}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{verify\+Invoke\+Special(\+Object $\ast$object\+Ref, Java\+Class $\ast$method\+\_\+class, char $\ast$method\+\_\+name, char $\ast$method\+\_\+descriptor, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void verify\+Invoke\+Special (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object\+Ref, }
+\item[{{\bf Java\+Class} $\ast$}]{method\+\_\+class, }
+\item[{char $\ast$}]{method\+\_\+name, }
+\item[{char $\ast$}]{method\+\_\+descriptor, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa66c2de6acafae4bc5dbbf717f95f9a5}
+O metodo eh selecionado para invocacao a nao ser que todas as seguintes condicoes sejam verdadeiras\+:
+
+7.\+1. A flag A\+C\+C\+\_\+\+S\+U\+P\+E\+R esta setada para a classe atual 7.\+2. A classe do metodo eh superclasse da classe atual 7.\+3. O metodo nao eh um metodo $<$init$>$
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em object} & Referencia para o objeto \\
+\hline
+{\em method\+\_\+class} & Referencia para a classe do metodo invocado \\
+\hline
+{\em method\+\_\+name} & nome do metodo atual \\
+\hline
+{\em method\+\_\+descriptor} & descritor do metodo atual \\
+\hline
+{\em environment} & Ambiente de execucao \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa66c2de6acafae4bc5dbbf717f95f9a5_cgraph}
+\end{center}
+\end{figure}
+
+

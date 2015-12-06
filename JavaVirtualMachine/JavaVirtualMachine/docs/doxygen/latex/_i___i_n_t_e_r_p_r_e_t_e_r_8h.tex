@@ -6,7 +6,8 @@ Interface do Interpretador da J\+V\+M.
 
 
 {\ttfamily \#include \char`\"{}../\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\+:\nopagebreak
+Gráfico de dependência de inclusões para I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -58,18 +59,22 @@ Metodo responsavel por executar um ambiente de execucao.
 {\em enviroment} & Estrutura contendo a thread e a area de metodos a ser executada \\
 \hline
 \end{DoxyParams}
-Obtem o opcode
+Enquanto a pilha de frames nao estiver vazia\+:
 
-Decodifica o opcode
+1.\+Obtem o opcode.
 
-Executa o a instrucao referente ao opcode 
+2.\+Decodifica o opcode
+
+3.\+Executa o a instrucao referente ao opcode
+
+4.\+Atualizamos o valor de P\+C 
 
 Este é o diagrama das funções utilizadas por esta função\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph}
+\includegraphics[height=550pt]{_i___i_n_t_e_r_p_r_e_t_e_r_8h_afc3cfeac05065c81421961da3a442c87_cgraph}
 \end{center}
 \end{figure}
 

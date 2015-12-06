@@ -6,7 +6,8 @@ Interface da Unidade de Memoria da J\+V\+M.
 
 
 {\ttfamily \#include \char`\"{}../\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\+:\nopagebreak
+Gráfico de dependência de inclusões para I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,7 +34,7 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 \item 
 \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_method_area}{Method\+Area} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a2005a0f5f48b7bf3cdd454be1fdd7bfd}{new\+Method\+Area} ()
 \item 
-\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_aec38a8851b23bf5cfb79b907eb0367f9}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
 \item 
 \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a86f3a6212280b2d43d662ca5757ef714}{pop\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
 \item 
@@ -58,6 +59,8 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{struct_object}{Object} $\ast$ \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a1fc19115ce87779c2a341dd56b5a8db1}{new\+Object\+From\+Class} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
 \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a8b181262ccc3a1cabead6b1c89334210}{push\+In\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
+\item 
+\hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} void \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a64efec31827823ce0869d3ac3e15a035}{push\+In\+Operand\+Stack\+From\+Frame} (\hyperlink{struct_frame}{Frame} $\ast$frame, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
 \item 
 \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_a4668a9bbf4dac6cc02cae06d6f5fd991}{E\+X\+T10} \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{_i___m_e_m_o_r_y_u_n_i_t_8h_ab99e0d31394f4494f264635c756a33d2}{pop\+From\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread)
 \end{DoxyCompactItemize}
@@ -94,7 +97,8 @@ Metodo que recebe uma referencia para uma classe e a adiciona na area de metodos
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -123,6 +127,18 @@ Metodo que recebe o nome de uma classe como parametro e retorna uma referencia p
 \begin{DoxyReturn}{Retorna}
 Endereco da estrutura \hyperlink{struct_java_class}{Java\+Class} (ou nulo se nao existe) 
 \end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a8f40f5977e66ba461bcea77cc2d46118_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_aeaafe607caff7308a1107566306f01e9}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}}
 \index{get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
 \subsubsection[{get\+Byte\+Code\+From\+Method(method\+\_\+info $\ast$method\+Info, cp\+\_\+info $\ast$constant\+\_\+pool, int pc)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf u1} get\+Byte\+Code\+From\+Method (
@@ -438,16 +454,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!push\+Frame@{push\+Frame}}
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_aec38a8851b23bf5cfb79b907eb0367f9}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!push\+Frame@{push\+Frame}}
 \index{push\+Frame@{push\+Frame}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
-\subsubsection[{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void push\+Frame (
+\subsubsection[{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} {\bf Frame}$\ast$ push\+Frame (
 \begin{DoxyParamCaption}
 \item[{{\bf Environment} $\ast$}]{environment, }
 \item[{const char $\ast$}]{class\+Name, }
 \item[{const char $\ast$}]{method\+Name, }
 \item[{const char $\ast$}]{method\+Descriptor}
 \end{DoxyParamCaption}
-)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_aec38a8851b23bf5cfb79b907eb0367f9}
 Metodo responsavel por criar e inicializar um novo frame para um metodo e o empilhar na pilha da thread.
 
 
@@ -461,6 +477,9 @@ Metodo responsavel por criar e inicializar um novo frame para um metodo e o empi
 {\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+referencia para o frame criado 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:
@@ -468,7 +487,7 @@ Este é o diagrama das funções utilizadas por esta função\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_a04a30701c27ff022038a133c41cd0218_cgraph}
+\includegraphics[width=350pt]{_i___m_e_m_o_r_y_u_n_i_t_8h_aec38a8851b23bf5cfb79b907eb0367f9_cgraph}
 \end{center}
 \end{figure}
 
@@ -501,3 +520,20 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{_i___m_e_m_o_r_y_u_n_i_t_8h_a64efec31827823ce0869d3ac3e15a035}{}\index{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}!push\+In\+Operand\+Stack\+From\+Frame@{push\+In\+Operand\+Stack\+From\+Frame}}
+\index{push\+In\+Operand\+Stack\+From\+Frame@{push\+In\+Operand\+Stack\+From\+Frame}!I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h@{I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h}}
+\subsubsection[{push\+In\+Operand\+Stack\+From\+Frame(\+Frame $\ast$frame, u4 value)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T10} void push\+In\+Operand\+Stack\+From\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame, }
+\item[{{\bf u4}}]{value}
+\end{DoxyParamCaption}
+)}\label{_i___m_e_m_o_r_y_u_n_i_t_8h_a64efec31827823ce0869d3ac3e15a035}
+Metodo que empilha um valor na pilha de operandos do frame passado como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \hyperlink{struct_frame}{Frame} em cuja pilha de operandos o valor sera empilhado \\
+\hline
+{\em value} & Valor a ser empilhado \\
+\hline
+\end{DoxyParams}

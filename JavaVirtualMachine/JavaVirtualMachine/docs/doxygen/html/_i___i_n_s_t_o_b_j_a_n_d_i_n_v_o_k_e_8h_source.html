@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„MaquinaVirtualJava“: Código-Fonte de include/ExecutionEngine/I_INSTOBJANDINVOKE.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„MaquinaVirtualJava“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_49c9c202e34284cdd8c3714f6a5a5e38.html">ExecutionEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">I_INSTOBJANDINVOKE.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef I_INSTOBJANDINVOKE_h</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define I_INSTOBJANDINVOKE_h</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef INSTOBJANDINVOKE_SERV</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define EXT16</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">   16</a></span>&#160;<span class="preprocessor">#define EXT16 extern</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../Estruturas/E_JVM.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ab1b2f6ef4a099bbee739750f3e27f911">getstatic</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a1d06fcc50e084948fbe178b284ee0a18">putstatic</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ad25d9177787b1d55a3831be8a3bc8508">getfield</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ac6c411f0965fc5d5ca3c51ffc17921ec">putfield</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a7f1938655d5ade967b7ebe45816f5a68">invokevirtual</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a7d0ebf5bb4367a4257b137a7931a9f86">invokespecial</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a56151082e95e34e039483a58f8c1ffc7">invokestatic</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#aa126625785d796731926d37deaefca2c">invokeinterface</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a89eca58b188200501fc3af2d17b295fc">New</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a1fb051fae254af45bc1a1113456f96c2">newarray</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a27b4506f134d5afa1d8f915bee9eb6c7">anewarray</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a74749a6707245dc8413204540d73dfaa">arraylength</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"></span><a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a> <span class="keywordtype">void</span> <a class="code" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ad09cdcf70891516871f638357e1fb0f3">multianewarray</a>(<a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_INSTOBJANDINVOKE_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_ae0929388114a01a98077f45b6d52c92c"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ae0929388114a01a98077f45b6d52c92c">EXT16</a></div><div class="ttdeci">#define EXT16</div><div class="ttdef"><b>Definition:</b> I_INSTOBJANDINVOKE.h:16</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a56151082e95e34e039483a58f8c1ffc7"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a56151082e95e34e039483a58f8c1ffc7">invokestatic</a></div><div class="ttdeci">EXT16 void invokestatic(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:560</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a1d06fcc50e084948fbe178b284ee0a18"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a1d06fcc50e084948fbe178b284ee0a18">putstatic</a></div><div class="ttdeci">EXT16 void putstatic(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:114</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a1fb051fae254af45bc1a1113456f96c2"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a1fb051fae254af45bc1a1113456f96c2">newarray</a></div><div class="ttdeci">EXT16 void newarray(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:710</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a89eca58b188200501fc3af2d17b295fc"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a89eca58b188200501fc3af2d17b295fc">New</a></div><div class="ttdeci">EXT16 void New(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:682</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_ad25d9177787b1d55a3831be8a3bc8508"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ad25d9177787b1d55a3831be8a3bc8508">getfield</a></div><div class="ttdeci">EXT16 void getfield(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:184</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_aa126625785d796731926d37deaefca2c"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#aa126625785d796731926d37deaefca2c">invokeinterface</a></div><div class="ttdeci">EXT16 void invokeinterface(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:613</div></div>
+<div class="ttc" id="struct_environment_html"><div class="ttname"><a href="struct_environment.html">Environment</a></div><div class="ttdoc">Estrutura do ambiente de execucao da JVM. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:435</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_ac6c411f0965fc5d5ca3c51ffc17921ec"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ac6c411f0965fc5d5ca3c51ffc17921ec">putfield</a></div><div class="ttdeci">EXT16 void putfield(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:246</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a7f1938655d5ade967b7ebe45816f5a68"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a7f1938655d5ade967b7ebe45816f5a68">invokevirtual</a></div><div class="ttdeci">EXT16 void invokevirtual(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:403</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_ab1b2f6ef4a099bbee739750f3e27f911"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ab1b2f6ef4a099bbee739750f3e27f911">getstatic</a></div><div class="ttdeci">EXT16 void getstatic(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:50</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a74749a6707245dc8413204540d73dfaa"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a74749a6707245dc8413204540d73dfaa">arraylength</a></div><div class="ttdeci">EXT16 void arraylength(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:764</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a27b4506f134d5afa1d8f915bee9eb6c7"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a27b4506f134d5afa1d8f915bee9eb6c7">anewarray</a></div><div class="ttdeci">EXT16 void anewarray(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:732</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_a7d0ebf5bb4367a4257b137a7931a9f86"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#a7d0ebf5bb4367a4257b137a7931a9f86">invokespecial</a></div><div class="ttdeci">EXT16 void invokespecial(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:491</div></div>
+<div class="ttc" id="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_html_ad09cdcf70891516871f638357e1fb0f3"><div class="ttname"><a href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html#ad09cdcf70891516871f638357e1fb0f3">multianewarray</a></div><div class="ttdeci">EXT16 void multianewarray(Environment *environment)</div><div class="ttdef"><b>Definition:</b> M_INSTOBJANDINVOKE.c:778</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

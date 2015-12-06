@@ -8,7 +8,8 @@ Biblioteca de servicos de Opcodes.
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para O\+P\+C\+O\+D\+E\+S.\+h\+:\nopagebreak
+Gráfico de dependência de inclusões para O\+P\+C\+O\+D\+E\+S.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -443,14 +444,14 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 \item 
 \hyperlink{_o_p_c_o_d_e_s_8h_a0aaaf2c37d182ce1836a1b8ff6099ed9}{E\+X\+T20} char $\ast$ \hyperlink{_o_p_c_o_d_e_s_8h_a7032610407e47a7ec45a93ef7949e8c9}{get\+Opcode\+Name} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode)
 \item 
-\hyperlink{_o_p_c_o_d_e_s_8h_a0aaaf2c37d182ce1836a1b8ff6099ed9}{E\+X\+T20} short \hyperlink{_o_p_c_o_d_e_s_8h_a6f96884d8c7b2dd66aff9b7297ee0a10}{get\+Opcode\+Attributes\+Number} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode)
+\hyperlink{_o_p_c_o_d_e_s_8h_a0aaaf2c37d182ce1836a1b8ff6099ed9}{E\+X\+T20} short \hyperlink{_o_p_c_o_d_e_s_8h_a0578ded3254be37b41b92ebbe4973a8d}{get\+Opcode\+Attributes\+Number} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode, \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$arguments, \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$code\+Begin)
 \end{DoxyCompactItemize}
 
 
 \subsection{Descrição Detalhada}
 Biblioteca de servicos de Opcodes. 
 
-Bliblioteca responsavel por prover as definicoes e metodos relacionados aos opcodes de uma J\+V\+M 
+Biblioteca responsavel por prover as definicoes e metodos relacionados aos opcodes de uma J\+V\+M 
 
 \subsection{Definições e macros}
 \hypertarget{_o_p_c_o_d_e_s_8h_a0aaaf2c37d182ce1836a1b8ff6099ed9}{}\index{O\+P\+C\+O\+D\+E\+S.\+h@{O\+P\+C\+O\+D\+E\+S.\+h}!E\+X\+T20@{E\+X\+T20}}
@@ -1074,18 +1075,24 @@ Bliblioteca responsavel por prover as definicoes e metodos relacionados aos opco
 
 
 \subsection{Funções}
-\hypertarget{_o_p_c_o_d_e_s_8h_a6f96884d8c7b2dd66aff9b7297ee0a10}{}\index{O\+P\+C\+O\+D\+E\+S.\+h@{O\+P\+C\+O\+D\+E\+S.\+h}!get\+Opcode\+Attributes\+Number@{get\+Opcode\+Attributes\+Number}}
+\hypertarget{_o_p_c_o_d_e_s_8h_a0578ded3254be37b41b92ebbe4973a8d}{}\index{O\+P\+C\+O\+D\+E\+S.\+h@{O\+P\+C\+O\+D\+E\+S.\+h}!get\+Opcode\+Attributes\+Number@{get\+Opcode\+Attributes\+Number}}
 \index{get\+Opcode\+Attributes\+Number@{get\+Opcode\+Attributes\+Number}!O\+P\+C\+O\+D\+E\+S.\+h@{O\+P\+C\+O\+D\+E\+S.\+h}}
-\subsubsection[{get\+Opcode\+Attributes\+Number(u1 opcode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T20} short get\+Opcode\+Attributes\+Number (
+\subsubsection[{get\+Opcode\+Attributes\+Number(u1 opcode, u1 $\ast$arguments, u1 $\ast$code\+Begin)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T20} short get\+Opcode\+Attributes\+Number (
 \begin{DoxyParamCaption}
-\item[{{\bf u1}}]{opcode}
+\item[{{\bf u1}}]{opcode, }
+\item[{{\bf u1} $\ast$}]{arguments, }
+\item[{{\bf u1} $\ast$}]{code\+Begin}
 \end{DoxyParamCaption}
-)}\label{_o_p_c_o_d_e_s_8h_a6f96884d8c7b2dd66aff9b7297ee0a10}
+)}\label{_o_p_c_o_d_e_s_8h_a0578ded3254be37b41b92ebbe4973a8d}
 Metodo que retorna um short com a quantidade de atributos (bytes adicionais) do opcode
 
 
 \begin{DoxyParams}{Parâmetros}
 {\em u1} & opcode Codigo do opcode. \\
+\hline
+{\em arguments} & Referencia para os argumentos da instrucao. \\
+\hline
+{\em code\+Begin} & Referencia o inicio do vetor de instrucoes. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}

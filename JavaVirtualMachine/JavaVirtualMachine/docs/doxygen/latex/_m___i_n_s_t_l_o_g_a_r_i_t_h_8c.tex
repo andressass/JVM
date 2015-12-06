@@ -1,0 +1,1120 @@
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.c}
+\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+
+
+Modulo que contem as instrucoes logicos aritmeticas.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a51bbb234371728c4e544afb24a8ebecb}{I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_afc141e7749b22ee196bfcec1857969c6}{iadd} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab87100798199a73b0bf04ff9389a10c3}{ladd} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a831e2044dfdab4f6b900751d610d4450}{fadd} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a318285cd5ead9bfaac4658e3ecd9afc5}{dadd} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a3b343dd7b810d49af2215da3046848ad}{isub} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4acd25be87fd9f433def7e33e5402b0a}{lsub} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8f808c464d1ba941e10d8ff9a603a534}{fsub} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_af6ea57a02af464aee78151829d6c4e36}{dsub} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a1e69c9aea5b92d460f6f23a0b3584140}{imul} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6fa012a67063d27b983fffb7b50284e3}{lmul} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aea4bf9fda9fbffb51d7fb08c96ab7fae}{fmul} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab88b470a3e1c96cb95f3703eb1f7a494}{dmul} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a00eafdd34d60bb0df2ceafc750722cf6}{idiv} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a60781636f9297b4076bb442075e13227}{Ldiv} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7d0ac7ef101c82a177e546ce4bc5ad15}{fdiv} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad4ea2f7e77f6ce40da2381e1bb0878ae}{ddiv} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4e1ed81aee90790ce4e3ef281476a7b2}{irem} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a72d46924aa7555970431257c21e7f91e}{lrem} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a18a97d7add2fba3ef463c5cb0bc137b3}{frem} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4587a30dc56615081af96038721139bd}{Drem} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7941453cece92cd42610eeace58f922e}{ineg} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_abcff24753716c066606986a3ad51cee0}{lneg} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_adaed90539b4d7fd1bb19ec60359302b1}{fneg} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aa06570f2ab1d9769373a6515ca43b899}{dneg} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a398917cf7eba6508735a6ac57b5393b0}{ishl} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad9e6f253f5020211db7095a743faa37b}{lshl} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ac14c9a39dd51915409691587c616b325}{ishr} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7fa66bfc904a563a9254c710023baa23}{lshr} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_add4163497580c8704f7528649bafd000}{iushr} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a28afcf07395c9a247cb43377e955278e}{lushr} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a0811c7462fd62b82c00011cda12185b1}{iand} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7f954198e716d0e18ff0bbaf58267221}{land} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab8b8c8e0a300ecf45d9f30800b67a921}{ior} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4a5b49489eb478198d6a4ebdb76d34f7}{lor} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ae237e2ddf410218a5c49974482acf621}{ixor} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8bb2908ccac8827e414f854cc43ec660}{lxor} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba}{iinc} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo que contem as instrucoes logicos aritmeticas. 
+
+Modulo que contem as instrucoes de retorno.
+
+Modulo responsavel por implementar as instrucoes de cunho logico e aritmetico
+
+Modulo responsavel por implementar as instrucoes que lidam com retorno de valores 
+
+\subsection{Definições e macros}
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a51bbb234371728c4e544afb24a8ebecb}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V}}
+\index{I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H\+\_\+\+S\+E\+R\+V}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a51bbb234371728c4e544afb24a8ebecb}
+
+
+\subsection{Funções}
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a318285cd5ead9bfaac4658e3ecd9afc5}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!dadd@{dadd}}
+\index{dadd@{dadd}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{dadd(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dadd (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a318285cd5ead9bfaac4658e3ecd9afc5}
+Instrucao para soma de double de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a318285cd5ead9bfaac4658e3ecd9afc5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad4ea2f7e77f6ce40da2381e1bb0878ae}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ddiv@{ddiv}}
+\index{ddiv@{ddiv}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ddiv(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ddiv (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad4ea2f7e77f6ce40da2381e1bb0878ae}
+Instrucao para divisao de double de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad4ea2f7e77f6ce40da2381e1bb0878ae_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab88b470a3e1c96cb95f3703eb1f7a494}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!dmul@{dmul}}
+\index{dmul@{dmul}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{dmul(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dmul (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab88b470a3e1c96cb95f3703eb1f7a494}
+Instrucao para multiplicacao de double de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab88b470a3e1c96cb95f3703eb1f7a494_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aa06570f2ab1d9769373a6515ca43b899}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!dneg@{dneg}}
+\index{dneg@{dneg}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{dneg(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dneg (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aa06570f2ab1d9769373a6515ca43b899}
+Instrucao para nega de double de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aa06570f2ab1d9769373a6515ca43b899_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4587a30dc56615081af96038721139bd}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!Drem@{Drem}}
+\index{Drem@{Drem}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{Drem(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void Drem (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4587a30dc56615081af96038721139bd}
+Instrucao para resto de double de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4587a30dc56615081af96038721139bd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_af6ea57a02af464aee78151829d6c4e36}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!dsub@{dsub}}
+\index{dsub@{dsub}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{dsub(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dsub (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_af6ea57a02af464aee78151829d6c4e36}
+Instrucao para subtracao de double de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_af6ea57a02af464aee78151829d6c4e36_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a831e2044dfdab4f6b900751d610d4450}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!fadd@{fadd}}
+\index{fadd@{fadd}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{fadd(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fadd (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a831e2044dfdab4f6b900751d610d4450}
+Instrucao para soma de float de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a831e2044dfdab4f6b900751d610d4450_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7d0ac7ef101c82a177e546ce4bc5ad15}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!fdiv@{fdiv}}
+\index{fdiv@{fdiv}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{fdiv(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fdiv (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7d0ac7ef101c82a177e546ce4bc5ad15}
+Instrucao para divisao de float de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7d0ac7ef101c82a177e546ce4bc5ad15_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aea4bf9fda9fbffb51d7fb08c96ab7fae}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!fmul@{fmul}}
+\index{fmul@{fmul}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{fmul(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fmul (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aea4bf9fda9fbffb51d7fb08c96ab7fae}
+Instrucao para multiplicacao de float de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_aea4bf9fda9fbffb51d7fb08c96ab7fae_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_adaed90539b4d7fd1bb19ec60359302b1}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!fneg@{fneg}}
+\index{fneg@{fneg}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{fneg(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fneg (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_adaed90539b4d7fd1bb19ec60359302b1}
+Instrucao para nega de float de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_adaed90539b4d7fd1bb19ec60359302b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a18a97d7add2fba3ef463c5cb0bc137b3}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!frem@{frem}}
+\index{frem@{frem}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{frem(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void frem (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a18a97d7add2fba3ef463c5cb0bc137b3}
+Instrucao para resto de float de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a18a97d7add2fba3ef463c5cb0bc137b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8f808c464d1ba941e10d8ff9a603a534}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!fsub@{fsub}}
+\index{fsub@{fsub}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{fsub(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fsub (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8f808c464d1ba941e10d8ff9a603a534}
+Instrucao para subtracao de float de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8f808c464d1ba941e10d8ff9a603a534_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_afc141e7749b22ee196bfcec1857969c6}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!iadd@{iadd}}
+\index{iadd@{iadd}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{iadd(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iadd (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_afc141e7749b22ee196bfcec1857969c6}
+Instrucao para soma de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_afc141e7749b22ee196bfcec1857969c6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a0811c7462fd62b82c00011cda12185b1}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!iand@{iand}}
+\index{iand@{iand}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{iand(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iand (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a0811c7462fd62b82c00011cda12185b1}
+Instrucao para and de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a0811c7462fd62b82c00011cda12185b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a00eafdd34d60bb0df2ceafc750722cf6}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!idiv@{idiv}}
+\index{idiv@{idiv}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{idiv(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void idiv (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a00eafdd34d60bb0df2ceafc750722cf6}
+Instrucao para divisao de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a00eafdd34d60bb0df2ceafc750722cf6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!iinc@{iinc}}
+\index{iinc@{iinc}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{iinc(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iinc (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba}
+Instrucao para incremento de inteiros de 32 bits local 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a1e69c9aea5b92d460f6f23a0b3584140}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!imul@{imul}}
+\index{imul@{imul}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{imul(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void imul (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a1e69c9aea5b92d460f6f23a0b3584140}
+Instrucao para multiplicacao de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a1e69c9aea5b92d460f6f23a0b3584140_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7941453cece92cd42610eeace58f922e}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ineg@{ineg}}
+\index{ineg@{ineg}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ineg(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ineg (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7941453cece92cd42610eeace58f922e}
+Instrucao para nega de inteiro de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7941453cece92cd42610eeace58f922e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab8b8c8e0a300ecf45d9f30800b67a921}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ior@{ior}}
+\index{ior@{ior}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ior(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ior (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab8b8c8e0a300ecf45d9f30800b67a921}
+Instrucao para or de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab8b8c8e0a300ecf45d9f30800b67a921_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4e1ed81aee90790ce4e3ef281476a7b2}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!irem@{irem}}
+\index{irem@{irem}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{irem(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void irem (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4e1ed81aee90790ce4e3ef281476a7b2}
+Instrucao para resto de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4e1ed81aee90790ce4e3ef281476a7b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a398917cf7eba6508735a6ac57b5393b0}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ishl@{ishl}}
+\index{ishl@{ishl}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ishl(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ishl (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a398917cf7eba6508735a6ac57b5393b0}
+Instrucao para shift left de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a398917cf7eba6508735a6ac57b5393b0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ac14c9a39dd51915409691587c616b325}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ishr@{ishr}}
+\index{ishr@{ishr}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ishr(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ishr (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ac14c9a39dd51915409691587c616b325}
+Instrucao para shift right de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ac14c9a39dd51915409691587c616b325_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a3b343dd7b810d49af2215da3046848ad}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!isub@{isub}}
+\index{isub@{isub}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{isub(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void isub (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a3b343dd7b810d49af2215da3046848ad}
+Instrucao para subtracao de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a3b343dd7b810d49af2215da3046848ad_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_add4163497580c8704f7528649bafd000}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!iushr@{iushr}}
+\index{iushr@{iushr}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{iushr(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iushr (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_add4163497580c8704f7528649bafd000}
+Instrucao para shift right sem sinal de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_add4163497580c8704f7528649bafd000_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ae237e2ddf410218a5c49974482acf621}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ixor@{ixor}}
+\index{ixor@{ixor}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ixor(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ixor (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ae237e2ddf410218a5c49974482acf621}
+Instrucao para xor de inteiros de 32 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ae237e2ddf410218a5c49974482acf621_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab87100798199a73b0bf04ff9389a10c3}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!ladd@{ladd}}
+\index{ladd@{ladd}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{ladd(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ladd (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab87100798199a73b0bf04ff9389a10c3}
+Instrucao para soma de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ab87100798199a73b0bf04ff9389a10c3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7f954198e716d0e18ff0bbaf58267221}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!land@{land}}
+\index{land@{land}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{land(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void land (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7f954198e716d0e18ff0bbaf58267221}
+Instrucao para and de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7f954198e716d0e18ff0bbaf58267221_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a60781636f9297b4076bb442075e13227}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!Ldiv@{Ldiv}}
+\index{Ldiv@{Ldiv}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{Ldiv(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void Ldiv (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a60781636f9297b4076bb442075e13227}
+Instrucao para divisao de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a60781636f9297b4076bb442075e13227_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6fa012a67063d27b983fffb7b50284e3}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lmul@{lmul}}
+\index{lmul@{lmul}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lmul(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lmul (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6fa012a67063d27b983fffb7b50284e3}
+Instrucao para multiplicacao de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6fa012a67063d27b983fffb7b50284e3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_abcff24753716c066606986a3ad51cee0}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lneg@{lneg}}
+\index{lneg@{lneg}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lneg(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lneg (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_abcff24753716c066606986a3ad51cee0}
+Instrucao para nega de inteiro de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_abcff24753716c066606986a3ad51cee0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4a5b49489eb478198d6a4ebdb76d34f7}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lor@{lor}}
+\index{lor@{lor}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lor(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lor (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4a5b49489eb478198d6a4ebdb76d34f7}
+Instrucao para or de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4a5b49489eb478198d6a4ebdb76d34f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a72d46924aa7555970431257c21e7f91e}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lrem@{lrem}}
+\index{lrem@{lrem}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lrem(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lrem (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a72d46924aa7555970431257c21e7f91e}
+Instrucao para resto de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a72d46924aa7555970431257c21e7f91e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad9e6f253f5020211db7095a743faa37b}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lshl@{lshl}}
+\index{lshl@{lshl}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lshl(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lshl (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad9e6f253f5020211db7095a743faa37b}
+Instrucao para shift left de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_ad9e6f253f5020211db7095a743faa37b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7fa66bfc904a563a9254c710023baa23}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lshr@{lshr}}
+\index{lshr@{lshr}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lshr(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lshr (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7fa66bfc904a563a9254c710023baa23}
+Instrucao para shift right de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a7fa66bfc904a563a9254c710023baa23_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4acd25be87fd9f433def7e33e5402b0a}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lsub@{lsub}}
+\index{lsub@{lsub}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lsub(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lsub (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4acd25be87fd9f433def7e33e5402b0a}
+Instrucao para subtracao de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a4acd25be87fd9f433def7e33e5402b0a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a28afcf07395c9a247cb43377e955278e}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lushr@{lushr}}
+\index{lushr@{lushr}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lushr(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lushr (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a28afcf07395c9a247cb43377e955278e}
+Instrucao para shift right sem sinal de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a28afcf07395c9a247cb43377e955278e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8bb2908ccac8827e414f854cc43ec660}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}!lxor@{lxor}}
+\index{lxor@{lxor}!M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+G\+A\+R\+I\+T\+H.\+c}}
+\subsubsection[{lxor(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lxor (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8bb2908ccac8827e414f854cc43ec660}
+Instrucao para xor de inteiros de 64 bits 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a8bb2908ccac8827e414f854cc43ec660_cgraph}
+\end{center}
+\end{figure}
+
+

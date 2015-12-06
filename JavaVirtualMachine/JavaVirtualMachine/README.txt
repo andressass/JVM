@@ -8,6 +8,16 @@
 #############################################################################
 
 #----------------------------------------------------------------------------
+# Suporte
+#----------------------------------------------------------------------------
+
+Suporte somente aos seguintes métodos de bibliotecas java:
+
+	java/io/PrintStream.println
+	java/lang/StringBuffer.toString
+	java/lang/StringBuffer.append
+
+#----------------------------------------------------------------------------
 # Compilação e execucao
 #----------------------------------------------------------------------------
 
@@ -77,4 +87,6 @@ docs/		- diretorio contendo a documentacao referente ao projeto
 include/	- diretorio contendo arquivos de interface
 
 src/		- diretorio contendo os arquivos .c
+
+lib/		- classes exemplo
 

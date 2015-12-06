@@ -54,7 +54,15 @@ Frame* pushFrame(Environment* environment, const char* className, const char* me
     //Buscamos o endereco do metodo
     newFrame->method_info = getMethodInfoFromClass(newFrame->javaClass, methodName, MethodDescriptor);
     
+    
     //TODO: VERIFICAR RESTRICOES DE ACESSO DO METODO
+    //Metodo nao encontrado
+    if (!newFrame->method_info){
+    char buffer[200];
+    sprintf(buffer, "Metodo: \"%s:%s\"\n Da classe: \"%s\"\n Nao foi encontrado.",
+            methodName, MethodDescriptor, className);
+    JVMstopAbrupt(buffer);
+    }
     
     //Obtemos o atributo code do metodo
     CodeAttribute* methodCode = getCodeAttributeFromMethod(newFrame->javaClass, methodName,

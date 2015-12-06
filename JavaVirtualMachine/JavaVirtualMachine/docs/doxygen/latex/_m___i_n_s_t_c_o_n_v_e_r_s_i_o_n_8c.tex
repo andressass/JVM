@@ -1,0 +1,477 @@
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.c}
+\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+
+
+Modulo que contem as instrucoes de conversao.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad45e4237a00e62b0474747a3f52f7e6f}{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7}{i2l} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749}{i2f} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4}{i2d} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4}{l2i} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b}{l2f} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929}{l2d} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32}{f2i} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b}{f2l} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078}{f2d} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4}{d2i} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65}{d2l} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53}{d2f} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e}{i2b} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e}{i2c} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81}{i2s} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo que contem as instrucoes de conversao. 
+
+Modulo responsavel por implementar as instrucoes de conversao entre tipos na J\+V\+M 
+
+\subsection{Definições e macros}
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad45e4237a00e62b0474747a3f52f7e6f}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V}}
+\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+E\+R\+V}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad45e4237a00e62b0474747a3f52f7e6f}
+
+
+\subsection{Funções}
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!d2f@{d2f}}
+\index{d2f@{d2f}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{d2f(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void d2f (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53}
+Instrucao para conversao de um double em um float 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!d2i@{d2i}}
+\index{d2i@{d2i}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{d2i(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void d2i (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4}
+Instrucao para conversao de um double em um int 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!d2l@{d2l}}
+\index{d2l@{d2l}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{d2l(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void d2l (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65}
+Instrucao para conversao de um double em um long 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!f2d@{f2d}}
+\index{f2d@{f2d}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{f2d(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void f2d (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078}
+Instrucao para conversao de um float em um double 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!f2i@{f2i}}
+\index{f2i@{f2i}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{f2i(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void f2i (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32}
+Instrucao para conversao de um float em um int 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!f2l@{f2l}}
+\index{f2l@{f2l}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{f2l(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void f2l (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b}
+Instrucao para conversao de um float em um long 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!i2b@{i2b}}
+\index{i2b@{i2b}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{i2b(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void i2b (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e}
+Instrucao para conversao de um int em um byte 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!i2c@{i2c}}
+\index{i2c@{i2c}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{i2c(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e}
+Instrucao para conversao de um int em um char 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!i2d@{i2d}}
+\index{i2d@{i2d}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{i2d(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void i2d (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4}
+Instrucao para conversao de um int em um double 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!i2f@{i2f}}
+\index{i2f@{i2f}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{i2f(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void i2f (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749}
+Instrucao para conversao de um int em um float 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!i2l@{i2l}}
+\index{i2l@{i2l}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{i2l(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void i2l (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7}
+Instrucao para conversao de um int em um long 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!i2s@{i2s}}
+\index{i2s@{i2s}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{i2s(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void i2s (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81}
+Instrucao para conversao de um int em um short 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!l2d@{l2d}}
+\index{l2d@{l2d}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{l2d(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void l2d (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929}
+Instrucao para conversao de um long em um double 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!l2f@{l2f}}
+\index{l2f@{l2f}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{l2f(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void l2f (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b}
+Instrucao para conversao de um long em um float 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}!l2i@{l2i}}
+\index{l2i@{l2i}!M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+c}}
+\subsubsection[{l2i(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void l2i (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4}
+Instrucao para conversao de um long em um int 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "../../include/ExecutionEngine/I_DECODER.h"
 #include "../../include/Estruturas/OPCODES.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
@@ -20,6 +21,7 @@
 #include "../../include/ExecutionEngine/I_INSTOBJANDINVOKE.h"
 #include "../../include/ExecutionEngine/I_INSTCONVERSION.h"
 #include "../../include/ExecutionEngine/I_INSTRETURN.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -403,6 +405,8 @@ instruction decode(u1 bytecode){
             break;
         case OP_dup:
             return Dup;
+        case OP_pop:
+            return pop;
             break;
         case OP_getstatic:
             return getstatic;
@@ -497,7 +501,9 @@ instruction decode(u1 bytecode){
         default:
             break;
     }
-    
+    char buffer[100];
+    sprintf(buffer, "Instrucao \"%s\" nao encontrada.", getOpcodeName(bytecode));
+    JVMstopAbrupt(buffer);
     return NULL;
 
 }
