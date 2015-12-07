@@ -13,7 +13,7 @@
 
 
 //--------------------------------------------------------------------------------------------------
-JavaArray* newJavaArray(u1 n_atype, u2 n_count, void* n_arrayAddress){
+JavaArray* newJavaArray(u4 n_atype, u2 n_count, void* n_arrayAddress){
     
     JavaArray* array_info = (JavaArray*) malloc(sizeof(JavaArray));
     array_info->atype = n_atype;

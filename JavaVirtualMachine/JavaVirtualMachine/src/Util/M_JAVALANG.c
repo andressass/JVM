@@ -17,14 +17,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <string.h>
 #include <wchar.h>
 #include "../../include/Util/I_JAVALANG.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/Estruturas/JAVASTRING.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/Util/I_TYPECONVERSION.h"
-
 
 
 //--------------------------------------------------------------------------------------------------
@@ -90,12 +88,17 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         int valor = (int) popFromOperandStack(environment->thread);
         wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
         
-        int stringBufferLen = wcslen(stringBuffer);
+//        int stringBufferLen = wcslen(stringBuffer);
         
         stringBuffer = (wchar_t*) realloc(stringBuffer,
                                           (wcslen(stringBuffer)+15)*sizeof(wchar_t));
         
-        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%d", valor);
+        //Procedimento para substiuicao de swprintf
+        char buffer[15] = "";
+        sprintf(buffer, "%d", valor);
+        wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
+        mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
+        wcscat(stringBuffer, wbuffer);
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
     
@@ -103,12 +106,15 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         char valor = (char) popFromOperandStack(environment->thread);
         wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
         
-        int stringBufferLen = wcslen(stringBuffer);
-        
         stringBuffer = (wchar_t*) realloc(stringBuffer,
                                           (wcslen(stringBuffer)+2)*sizeof(wchar_t));
         
-        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%c", valor);
+        //Procedimento para substiuicao de swprintf
+        char buffer[3] = "";
+        sprintf(buffer, "%c", valor);
+        wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
+        mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
+        wcscat(stringBuffer, wbuffer);
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
     
@@ -116,13 +122,15 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         int valor = (char) popFromOperandStack(environment->thread);
         wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
         
-        int stringBufferLen = wcslen(stringBuffer);
-        
         stringBuffer = (wchar_t*) realloc(stringBuffer,
                                           (wcslen(stringBuffer)+6)*sizeof(wchar_t));
         
-        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer),
-                 L"%ls", valor == 0 ? L"false" : L"true");
+        //Procedimento para substiuicao de swprintf
+        char buffer[6] = "";
+        sprintf(buffer, "%s", valor == 0 ? "false" : "true");
+        wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
+        mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
+        wcscat(stringBuffer, wbuffer);
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
 
@@ -130,12 +138,15 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         float valor = u4ToFLoat(popFromOperandStack(environment->thread));
         wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
         
-        int stringBufferLen = wcslen(stringBuffer);
-        
         stringBuffer = (wchar_t*) realloc(stringBuffer,
                                           (wcslen(stringBuffer)+20)*sizeof(wchar_t));
         
-        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%.2f", valor);
+        //Procedimento para substiuicao de swprintf
+        char buffer[30] = "";
+        sprintf(buffer, "%.2f", valor);
+        wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
+        mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
+        wcscat(stringBuffer, wbuffer);
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
     
@@ -145,12 +156,15 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         valor = valor << 32 | low_Bytes;
         wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
         
-        int stringBufferLen = wcslen(stringBuffer);
-        
         stringBuffer = (wchar_t*) realloc(stringBuffer,
                                           (wcslen(stringBuffer)+30)*sizeof(wchar_t));
         
-        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%lld", valor);
+        //Procedimento para substiuicao de swprintf
+        char buffer[30] = "";
+        sprintf(buffer, "%lld", valor);
+        wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
+        mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
+        wcscat(stringBuffer, wbuffer);
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
     
@@ -161,12 +175,16 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         
         wchar_t* stringBuffer = (wchar_t*) popFromOperandStack(environment->thread);
         
-        int stringBufferLen = wcslen(stringBuffer);
         
         stringBuffer = (wchar_t*) realloc(stringBuffer,
                                           (wcslen(stringBuffer)+15)*sizeof(wchar_t));
         
-        swprintf(stringBuffer+stringBufferLen, wcslen(stringBuffer), L"%.2lf", valor);
+        //Procedimento para substiuicao de swprintf
+        char buffer[30] = "";
+        sprintf(buffer, "%.2lf", valor);
+        wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
+        mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
+        wcscat(stringBuffer, wbuffer);
         pushInOperandStack(environment->thread, (u4) stringBuffer);
     }
 }

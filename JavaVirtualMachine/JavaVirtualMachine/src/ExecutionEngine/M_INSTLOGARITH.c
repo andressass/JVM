@@ -46,14 +46,14 @@ void ladd(Environment* environment){
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando1_64 = (u8) operandoPilha2;
-    operando1_64 = (u8) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha1;
+    operando1_64 = operando1_64 << 32 | operandoPilha2;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
     
-    operando2_64 = (u8) operandoPilha2;
-    operando2_64 = (u8) operandoPilha1 << 32;
+    operando1_64 = (u8) operandoPilha1;
+    operando1_64 = operando1_64 << 32 | operandoPilha2;
     
     soma64 = operando1_64 + operando2_64;
     

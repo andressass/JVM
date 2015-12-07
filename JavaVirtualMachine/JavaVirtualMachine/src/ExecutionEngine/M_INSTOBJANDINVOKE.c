@@ -775,10 +775,10 @@ void anewarray(Environment* environment){
                                                    environment->thread->vmStack->top->javaClass->arqClass->constant_pool
                                                    ,environment->thread->PC);
     
-    u2 index_result = (indexbyte1_argument << 8) | indexbyte2_argument;
+    //u2 index_result = (indexbyte1_argument << 8) | indexbyte2_argument;
     
-    u2 atype = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Class.name_index;
-    
+//    u2 atype = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.Class.name_index;
+      u4 atype = 0;
     //TODO: RESOLVER A REFERENCIA SIMBOLICA DOS TIPO CLASS, ARRAY E INTERFACE
     
     int count = (u4)popFromOperandStack(environment->thread);

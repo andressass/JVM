@@ -556,6 +556,9 @@ instruction decode(u1 bytecode){
         case OP_if_acmpne:
             return if_acmpne;
             break;
+        case OP_anewarray:
+            return anewarray;
+            break;
         default:
             break;
     }

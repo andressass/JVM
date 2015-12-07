@@ -177,7 +177,7 @@ ConstantValueAttribute* getConstantValueAtrributeFromField(field_info* field, cp
     
     for (int j = 0; j < field->attributes_count; j++) {
         
-        if (strcasecmp(getUTF8FromConstantPool(cp, field->attributes[j].attribute_name_index), "ConstantValue")) {
+        if (strcmp(getUTF8FromConstantPool(cp, field->attributes[j].attribute_name_index), "ConstantValue")==0) {
             ConstantValueAttribute* constantValue = parseConstantValue(field->attributes[j].info);
             return constantValue;
         }
