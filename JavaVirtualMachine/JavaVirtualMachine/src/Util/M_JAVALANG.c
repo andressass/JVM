@@ -181,7 +181,7 @@ void stringBufferAppend(const char* descriptorName, Environment* environment){
         
         //Procedimento para substiuicao de swprintf
         char buffer[30] = "";
-        sprintf(buffer, "%.2lf", valor);
+        sprintf(buffer, "%.2f", valor);
         wchar_t* wbuffer = (wchar_t*) malloc((sizeof(buffer)+1)*sizeof(wchar_t));
         mbstowcs(wbuffer, buffer, (strlen(buffer))+1);
         wcscat(stringBuffer, wbuffer);

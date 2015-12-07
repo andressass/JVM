@@ -1,3 +1,7 @@
+import entidades.Aluno;
+import entidades.Matematica;
+import entidades.Calc;
+
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -7,20 +11,24 @@ public class HelloWorld {
 //
 //        System.out.println("Nome do aluno  : " + string[0]);
         
-        int a = 10;
-        int b = 5;
-        long aa = 10;
-        long bb = 5;
-        float aaa = 10;
-        float bbb = 5;
-        double aaaa = 10;
-        double bbbb = 5;
-
-        System.out.println("int soma : " + (a+b));
-        System.out.println("long soma : " + (aa+bb));
-        System.out.println("float soma : " + (aaa + bbb));
-        System.out.println("double soma : " + (aaaa + bbbb));
+        Aluno aluno = new Aluno(8);
+//        
+        aluno.setIdade(53.32);
+//        aluno.setNome("Rondinele");
+//        
+//        System.out.println("Nome do aluno  : " + aluno.getNome());
+        System.out.println("Idade do aluno : " + aluno.getIdade());
+//        System.out.println("Idade verdadeira do aluno : " + aluno.getIdadeVerdadeira());
+//        System.out.println("Matricula : " + aluno.getMatricula());
+        System.out.println("Serie : " + aluno.serie);
         
+
+//        Matematica m;
+//        
+//        m= new Calc();
+//        
+//        System.out.println("Soma : " + m.soma(2,3));
+//        System.out.println("PI : " + m.pi);
         
         
     }

@@ -23,12 +23,12 @@ void i2l(Environment* environment) {
 
 	aux3 = (signed) popFromOperandStack(environment->thread);
 	aux1 = aux3;
-	aux2 = aux1 >> 32;
-
+	//CORRECAO: PRIMERIO O LOW
+    aux2 = aux1 & SHIFT_MASK_UNSI;
 	pushInOperandStack(environment->thread,aux2);
 
-	aux2 = aux1 & SHIFT_MASK_UNSI;
-
+	//CORRECAO: DEPOIS O HIGH
+    aux2 = aux1 >> 32;
 	pushInOperandStack(environment->thread, aux2);
 }
 
