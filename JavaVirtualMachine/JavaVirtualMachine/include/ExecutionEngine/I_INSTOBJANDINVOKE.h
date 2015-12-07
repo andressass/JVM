@@ -259,7 +259,7 @@ EXT16 void newarray(Environment* environment);
  * unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a constante pool de 
  * tempo de execucao da classe corrente, onde o valor do indice eh (indexbyte1 << 8) | indexbyte2. O 
  * item da constante pool de tempo de execucao no indice deve ser uma referencia simbolica para um 
- * tipo class, array ou interface. O tipo nomeado da classe, array ou interface esta resolvido. 
+ * tipo class, array ou interface. O tipo nomeado da classe, array ou interface eh resolvido.
  * Um novo array com componentes daquele tipo, de tamanho count, eh alocado e uma reference arrayref 
  * a ele eh empilhada na pilha de operandos. Cada um dos elementos do novo array sao inicializados 
  * para null, o valor padrao para tipos reference.

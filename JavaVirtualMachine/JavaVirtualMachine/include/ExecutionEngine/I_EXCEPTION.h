@@ -27,6 +27,7 @@
 #define IncompatibleClassChangeError    42 //!< Erro de chamada de metodo incompativel
 #define IllegalAccessError              43 //!< Erro de acesso
 #define ArrayIndexOutOfBoundsException  44 //!< Erro acesso index array
+#define NegativeArraySizeException      45 //!< Erro de tamanho de array negativo
 
 
 //--------------------------------------------------------------------------------------------------

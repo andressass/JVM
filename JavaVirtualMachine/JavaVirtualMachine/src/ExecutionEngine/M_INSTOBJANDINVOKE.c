@@ -765,6 +765,9 @@ void New(Environment* environment){
 //--------------------------------------------------------------------------------------------------
 void newarray(Environment* environment){
     
+    void* array;
+    int i;
+    
     environment->thread->PC++;
     u1 atype_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
                                                    environment->thread->vmStack->top->javaClass->arqClass->constant_pool
@@ -777,7 +780,36 @@ void newarray(Environment* environment){
 //        //TODO:  throws a NegativeArraySizeException.
 //    }
     
-    JavaArray* arrayref = newJavaArray(atype_argument, count);
+    if (atype_argument == T_BYTE || atype_argument == T_BOOLEAN || atype_argument == T_CHAR) {
+        array = (u1*) malloc(sizeof(u1) * count);
+        for(i = 0; i < count; i++){
+            u1* b = &array[i];
+            *b = 0;
+        }
+    }
+    else if (atype_argument == T_SHORT) {
+        array = (u2*) malloc(sizeof(u2) * count);
+        for(i = 0; i < count; i++){
+            u2* s = &array[i];
+            *s = 0;
+        }
+    }
+    else if (atype_argument == T_INT || atype_argument == T_FLOAT) {
+        array = (u4*) malloc(sizeof(u4) * count);
+        for(i = 0; i < count; i++){
+            u4* i_f = &array[i];
+            *i_f = 0;
+        }
+    }
+    else if (atype_argument == T_LONG || atype_argument == T_DOUBLE) {
+        array = (u4*) malloc(sizeof(u4) * count * 2);
+        for(i = 0; i < 2*count; i++){
+            u4* l_d  = &array[i];
+            *l_d = 0;
+        }
+    }
+    
+    JavaArray* arrayref = newJavaArray(atype_argument, count, array);
     
     pushInOperandStack(environment->thread, (u4) arrayref);
 
@@ -786,6 +818,8 @@ void newarray(Environment* environment){
 
 //--------------------------------------------------------------------------------------------------
 void anewarray(Environment* environment){
+    
+    int i;
     
     environment->thread->PC++;
     u1 indexbyte1_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
@@ -803,14 +837,18 @@ void anewarray(Environment* environment){
     
     //TODO: RESOLVER A REFERENCIA SIMBOLICA DOS TIPO CLASS, ARRAY E INTERFACE
     
-    u4 count = popFromOperandStack(environment->thread);
+    int count = (u4)popFromOperandStack(environment->thread);
     
-    //    if (count < 0) {
-    //
-    //        //TODO:  throws a NegativeArraySizeException.
-    //    }
+    if (count < 0) JVMThrow(NegativeArraySizeException, environment);
     
-    JavaArray* arrayref = newJavaArray(atype, count);
+    void* array = (u4*) malloc(sizeof(u4) * count);
+    
+    for(i = 0; i < count; i++){
+        u4* r = &array[i];
+        *r = (u4)NULL;
+    }
+    
+    JavaArray* arrayref = newJavaArray(atype, count, array);
     
     pushInOperandStack(environment->thread, (u4) arrayref);
 }
@@ -821,10 +859,7 @@ void arraylength(Environment* environment){
     
     JavaArray* arrayref = (JavaArray*)popFromOperandStack(environment->thread);
     
-        if (arrayref->arrayAddress == NULL) {
-    
-            //TODO:  throws a NullPointerException.
-        }
+    if (arrayref->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
     
     pushInOperandStack(environment->thread, arrayref->count);
 }

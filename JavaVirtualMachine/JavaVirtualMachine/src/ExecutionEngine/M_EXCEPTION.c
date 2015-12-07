@@ -55,6 +55,9 @@ void JVMThrow(int exception, Environment* environment){
         case ArrayIndexOutOfBoundsException:
             strcat(mensagem, "ArrayIndexOutOfBoundsException");
             break;
+        case NegativeArraySizeException:
+            strcat(mensagem, "NegativeArraySizeException");
+            break;
         default:
             break;
     }

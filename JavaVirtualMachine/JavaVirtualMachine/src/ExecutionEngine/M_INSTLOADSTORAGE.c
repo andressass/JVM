@@ -223,7 +223,8 @@ void ldc_w(Environment* environment){
     }
     else if (tag_valor_constant_pool == CONSTANT_String){
         
-        u2 referencia = environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1].u.String.string_index;
+        u4 referencia = (u4) &environment->thread->vmStack->top->javaClass->arqClass->constant_pool[index_result-1];
+
         
         pushInOperandStack(environment->thread, referencia);
     }
