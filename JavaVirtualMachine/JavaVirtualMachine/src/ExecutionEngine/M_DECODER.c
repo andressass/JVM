@@ -22,6 +22,7 @@
 #include "../../include/ExecutionEngine/I_INSTCONVERSION.h"
 #include "../../include/ExecutionEngine/I_INSTRETURN.h"
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
+#include "../../include/ExecutionEngine/I_INSTCOMPANDJMP.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -497,6 +498,63 @@ instruction decode(u1 bytecode){
             break;
         case OP_i2s:
             return i2s;
+            break;
+        case OP_lcmp:
+            return lcmp;
+            break;
+        case OP_fcmpl:
+            return fcmpl;
+            break;
+        case OP_fcmpg:
+            return fcmpg;
+            break;
+        case OP_dcmpl:
+            return dcmpl;
+            break;
+        case OP_dcmpg:
+            return dcmpg;
+            break;
+        case OP_ifeq:
+            return ifeq;
+            break;
+        case OP_ifne:
+            return ifne;
+            break;
+        case OP_iflt:
+            return iflt;
+            break;
+        case OP_ifge:
+            return ifge;
+            break;
+        case OP_ifgt:
+            return ifgt;
+            break;
+        case OP_ifle:
+            return ifle;
+            break;
+        case OP_if_icmpeq:
+            return if_icmpeq;
+            break;
+        case OP_if_icmpne:
+            return if_icmpne;
+            break;
+        case OP_if_icmplt:
+            return if_icmplt;
+            break;
+        case OP_if_icmpge:
+            return if_icmpge;
+            break;
+        case OP_if_icmpgt:
+            return if_icmpgt;
+            break;
+        case OP_if_icmple:
+            return if_icmple;
+            break;
+        case OP_if_acmpeq:
+            return if_acmpeq;
+            break;
+        case OP_if_acmpne:
+            return if_acmpne;
             break;
         default:
             break;

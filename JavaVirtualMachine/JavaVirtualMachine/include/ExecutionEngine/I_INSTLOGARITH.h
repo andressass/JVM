@@ -245,7 +245,7 @@ EXT11 void lxor(Environment*);
  *  \param u4 será o indice que será modificado
  *  \return void
  */
-EXT11 void iinc(Environment*, int, u4);
+EXT11 void iinc(Environment*);
 
 
 

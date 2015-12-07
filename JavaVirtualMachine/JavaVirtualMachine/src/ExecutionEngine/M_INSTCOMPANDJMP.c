@@ -1,16 +1,17 @@
-//
-//  M_INSTCOMPANDJMP.c
-//  JavaVirtualMachine
-//
-//  Created by Gabriel Araujo Dantas on 04/12/15.
-//  Copyright © 2015 Rondinele Prado. All rights reserved.
-//
+//#################################################################################################
+/*! \file M_INSTCOMPANDJMP.c
+ *
+ *  \brief Modulo que contem as instrucoes de comparacao e salto incondicional.
+ *
+ *  Modulo responsavel por implementar as instrucoes de comparacao e salto incondicional
+ */
+//##################################################################################################
+#define M_INSTCOMPANDJMP_SERV
 
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "../../include/ExecutionEngine/I_INSTCOMPANDJMP.h"
-#include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 
 void lcmp(Environment *environment){
     
@@ -163,22 +164,13 @@ void dcmpg(Environment *environment){
 void ifeq(Environment *environment){
     u2 offset;
     u4 operando = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-    
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -188,29 +180,20 @@ void ifeq(Environment *environment){
     operando = popFromOperandStack(environment->thread);
     
     if(operando == 0){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
 void ifne(Environment *environment){
     u2 offset;
     u4 operando = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -220,29 +203,20 @@ void ifne(Environment *environment){
     operando = popFromOperandStack(environment->thread);
     
     if(operando != 0){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
 void iflt(Environment *environment){
     u2 offset;
     u4 operando = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -255,29 +229,20 @@ void iflt(Environment *environment){
     int operandoSemUnsigned = (int) operando;
     
     if(operandoSemUnsigned < 0){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
 void ifge(Environment *environment){
     u2 offset;
     u4 operando = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -290,29 +255,20 @@ void ifge(Environment *environment){
     int operandoSemUnsigned = (int) operando;
     
     if(operandoSemUnsigned >= 0){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
 void ifgt(Environment *environment){
     u2 offset;
     u4 operando = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -325,29 +281,20 @@ void ifgt(Environment *environment){
     int operandoSemUnsigned = (int) operando;
     
     if(operandoSemUnsigned > 0){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
 void ifle(Environment *environment){
     u2 offset;
     u4 operando = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -360,7 +307,7 @@ void ifle(Environment *environment){
     int operandoSemUnsigned = (int) operando;
     
     if(operandoSemUnsigned <= 0){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
@@ -368,22 +315,13 @@ void if_icmpeq(Environment *environment){
     u2 offset;
     u4 operando1 = 0;
     u4 operando2 = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -394,7 +332,7 @@ void if_icmpeq(Environment *environment){
     operando2 = popFromOperandStack(environment->thread);
     
     if(operando2 == operando1){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
@@ -403,22 +341,13 @@ void if_icmpne(Environment *environment){
     u2 offset;
     u4 operando1 = 0;
     u4 operando2 = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-    
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -429,7 +358,7 @@ void if_icmpne(Environment *environment){
     operando2 = popFromOperandStack(environment->thread);
     
     if(operando2 != operando1){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
@@ -437,22 +366,13 @@ void if_icmplt(Environment *environment){
     u2 offset;
     u4 operando1 = 0;
     u4 operando2 = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-    
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -463,7 +383,7 @@ void if_icmplt(Environment *environment){
     operando2 = popFromOperandStack(environment->thread);
     
     if(operando2 < operando1){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
@@ -471,22 +391,13 @@ void if_icmpge(Environment *environment){
     u2 offset;
     u4 operando1 = 0;
     u4 operando2 = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-    
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -497,7 +408,7 @@ void if_icmpge(Environment *environment){
     operando2 = popFromOperandStack(environment->thread);
     
     if(operando2 >= operando1){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
@@ -505,22 +416,13 @@ void if_icmpgt(Environment *environment){
     u2 offset;
     u4 operando1 = 0;
     u4 operando2 = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-    
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -531,7 +433,7 @@ void if_icmpgt(Environment *environment){
     operando2 = popFromOperandStack(environment->thread);
     
     if(operando2 > operando1){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
     }
 }
 
@@ -539,22 +441,13 @@ void if_icmple(Environment *environment){
     u2 offset;
     u4 operando1 = 0;
     u4 operando2 = 0;
-    u4 pc = 0;
     u1 byte1, byte2;
-    u1 *code;
-    CodeAttribute *codeAttribute;
     
-    codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
-    pc = environment->thread->vmStack->top->returnPC;
-    //perguntar como que chego no code com as estruturas criadas
-    code = codeAttribute->code;
-    
-    byte1 = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
-    
-    byte2 = *(code + (pc + 1));
-    environment->thread->vmStack->top->returnPC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
     
     offset = (u2)byte1;
     offset = offset << 8;
@@ -565,6 +458,56 @@ void if_icmple(Environment *environment){
     operando2 = popFromOperandStack(environment->thread);
     
     if(operando2 <= operando1){
-        environment->thread->vmStack->top->returnPC += offset;
+        environment->thread->PC += offset;
+    }
+}
+
+void if_acmpeq(Environment *environment){
+    u2 offset;
+    u4 operando1 = 0;
+    u4 operando2 = 0;
+    u1 byte1, byte2;
+    
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
+    
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
+    
+    offset = (u2)byte1;
+    offset = offset << 8;
+    offset |= byte2;
+    offset -= 3;
+    
+    operando1 = popFromOperandStack(environment->thread);
+    operando2 = popFromOperandStack(environment->thread);
+    
+    if(operando2 == operando1){
+        environment->thread->PC += offset;
+    }
+}
+
+void if_acmpne(Environment *environment){
+    u2 offset;
+    u4 operando1 = 0;
+    u4 operando2 = 0;
+    u1 byte1, byte2;
+    
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
+    
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
+    
+    offset = (u2)byte1;
+    offset = offset << 8;
+    offset |= byte2;
+    offset -= 3;
+    
+    operando1 = popFromOperandStack(environment->thread);
+    operando2 = popFromOperandStack(environment->thread);
+    
+    if(operando2 != operando1){
+        environment->thread->PC += offset;
     }
 }
