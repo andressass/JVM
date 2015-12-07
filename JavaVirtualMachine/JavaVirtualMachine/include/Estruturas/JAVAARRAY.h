@@ -58,7 +58,7 @@ typedef struct ArrayRef{
  * ser carregado na estrutura java array
  * \return estrutura JavaArray preenchida
  */
-EXT23 JavaArray* newJavaArray(u1 n_type, u2 n_length);
+EXT23 JavaArray* newJavaArray(u1 n_type, u2 n_length, void* n_arrayAddress);
 
 
 #endif /* JAVAARRAY_h */
