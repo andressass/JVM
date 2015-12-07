@@ -569,7 +569,7 @@ void if_icmple(Environment *environment){
     }
 }
 
-void goto(Environment *environment) {
+void goto_(Environment *environment) {
     u2 index;
     u4 pc = 0;
     u1 byte;
@@ -577,17 +577,16 @@ void goto(Environment *environment) {
     CodeAttribute *codeAttribute;
 
     codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
-    
-    pc = environment->thread->vmStack->top->returnPC;
     code = codeAttribute->code;
-
-    byte = *(code + pc);
 
     environment->thread->vmStack->top->returnPC++;
     pc = environment->thread->vmStack->top->returnPC;
+    byte = *(code + pc);
     index = (u2)byte;
-
     index = index << 8;
+
+    environment->thread->vmStack->top->returnPC++;
+    pc = environment->thread->vmStack->top->returnPC;
     byte = *(code + pc);
     index |= (u2)byte;
 
@@ -602,19 +601,17 @@ void jsr(Environment *environment) {
     CodeAttribute *codeAttribute;
 
     codeAttribute = getCodeFromMethodInfo(environment->methodArea->classTable->javaClass->arqClass->methods, environment->methodArea->classTable->javaClass->arqClass->constant_pool);
-    
-    pc = environment->thread->vmStack->top->returnPC;
     code = codeAttribute->code;
 
+    environment->thread->vmStack->top->returnPC++;
+    pc = environment->thread->vmStack->top->returnPC;
     byte = *(code + pc);
+    index = (u2)byte;
+    index = index << 8;
 
     environment->thread->vmStack->top->returnPC++;
     pc = environment->thread->vmStack->top->returnPC;
-    index = (u2)byte;
-
-    index = index << 8;
     byte = *(code + pc);
-    environment->thread->vmStack->top->returnPC++;
     index |= (u2)byte;
 
     pushOperandStack(environment->thread,environment->thread->vmStack->top->returnPC);
@@ -623,7 +620,7 @@ void jsr(Environment *environment) {
 }
 
 void ret() {
-   //
+   // Pega indice da var local que vai ter um end
 }
 
 void tableswitch(Environment *environment) {
