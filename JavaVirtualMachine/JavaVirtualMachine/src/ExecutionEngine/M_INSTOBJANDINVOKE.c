@@ -667,7 +667,7 @@ void invokeinterface(Environment* environment){
     
     
     //7. Criamos um novo frame e empilhamos
-    //TODO: VERIFICAR METODO EM SUPERCLASSES DE FORMA RECURSIVA
+    //VERIFICAR METODO EM SUPERCLASSES DE FORMA RECURSIVA
     class_name = getClassNameFromConstantPool(objectRef->handler->javaClass->arqClass->constant_pool, objectRef->handler->javaClass->arqClass->this_class);
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
     environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
