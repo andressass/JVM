@@ -1,7 +1,7 @@
 var searchData=
 [
   ['object',['Object',['../struct_object.html',1,'Object'],['../struct_object_list.html#aae49442726f57917e2d6611c62f1e071',1,'ObjectList::object()'],['../_e___j_v_m_8h.html#a71c0c698be85fce6ae7d701b736c1a0a',1,'Object():&#160;E_JVM.h']]],
-  ['objectlist',['ObjectList',['../struct_object_list.html',1,'ObjectList'],['../struct_object_list.html#a7d359d3713e54aec6a628a23ce886aec',1,'ObjectList::objectList()'],['../struct_java_class.html#af33546b53017ca696367a08e9e30b115',1,'JavaClass::objectList()'],['../_e___j_v_m_8h.html#a51d7e9eb1bade5cd0dac13bb3e32a9e8',1,'ObjectList():&#160;E_JVM.h']]],
+  ['objectlist',['ObjectList',['../struct_object_list.html',1,'ObjectList'],['../struct_java_class.html#af33546b53017ca696367a08e9e30b115',1,'JavaClass::objectList()'],['../_e___j_v_m_8h.html#a51d7e9eb1bade5cd0dac13bb3e32a9e8',1,'ObjectList():&#160;E_JVM.h']]],
   ['obter_5fentrada',['obter_entrada',['../_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1',1,'obter_entrada(const char *nome_arquivo):&#160;MP_LECLASS.c'],['../_m_p___l_e_c_l_a_s_s_8c.html#a925c22cc6ed034861fdb76cc5c19a049',1,'obter_entrada(const char *arq):&#160;MP_LECLASS.c']]],
   ['op_5faaload',['OP_aaload',['../_o_p_c_o_d_e_s_8h.html#a0c31dde1f3491b973398da46a78a4368',1,'OPCODES.h']]],
   ['op_5faastore',['OP_aastore',['../_o_p_c_o_d_e_s_8h.html#ac8147159a195e7b3bd106c4f5e22e9b4',1,'OPCODES.h']]],
@@ -214,6 +214,7 @@ var searchData=
   ['opcodes_5fserv',['OPCODES_SERV',['../_o_p_c_o_d_e_s_8c.html#a5c73b8db667ebfeaace9b75855703f8d',1,'OPCODES.c']]],
   ['operandstack',['OperandStack',['../struct_operand_stack.html',1,'OperandStack'],['../_e___j_v_m_8h.html#a346a5006b3ffde66941ce40c277fbf86',1,'OperandStack():&#160;E_JVM.h']]],
   ['opmethodarea_5fserv',['OPMETHODAREA_SERV',['../_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#ad3f27bd6407592bd819178a3fb99b66a',1,'M_OPMETHODAREA.c']]],
+  ['opresult',['OPresult',['../_e___j_v_m_8h.html#aa7ceae3fd72b26a559a601910a17e2c3',1,'E_JVM.h']]],
   ['opstk',['opStk',['../struct_frame.html#a0cd2446df36707c236ffaf43844d387a',1,'Frame']]],
   ['opthread_5fserv',['OPTHREAD_SERV',['../_m___o_p_t_h_r_e_a_d_8c.html#a4d903de48e4f4c1b9f03527fef83b90c',1,'M_OPTHREAD.c']]]
 ];

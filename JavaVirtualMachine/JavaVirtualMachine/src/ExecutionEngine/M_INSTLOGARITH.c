@@ -972,14 +972,20 @@ void lxor(Environment* environment){
 }
 
 void iinc(Environment* environment){
+    u1 index;
+    u1 Const;
     
-    u4 operando1 = 0;
-    u4 inc = 0;
+    environment->thread->PC++;
     
-    operando1 = popFromOperandStack(environment->thread);
+    index = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
-    inc = operando1++;
+    environment->thread->PC++;
     
-    pushInOperandStack(environment->thread, inc);
+    Const = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
+    //environment->thread->PC++;
+    
+    char constSemSinal = (char) Const;
+    
+    environment->thread->vmStack->top->localVariablesVector[index] += constSemSinal;
 }

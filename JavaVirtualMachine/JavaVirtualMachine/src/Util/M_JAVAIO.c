@@ -33,8 +33,7 @@
  * \param environment Ambiente de execucao atual.
  */
 void printStreamPrintln(const char* descriptorName, Environment* environment){
-    
-    //Metodos de java.io.PrintStream
+    //Strings
     if (strncmp(descriptorName, "(Ljava/lang/String;)V", 21)==0) {
         
         JavaString* string = (JavaString*) popFromOperandStack(environment->thread);

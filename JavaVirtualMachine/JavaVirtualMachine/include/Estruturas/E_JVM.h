@@ -439,6 +439,16 @@ typedef struct Environment{
 
 
 //--------------------------------------------------------------------------------------------------
+//! Estrutura do auxiliar de comparação de pares para a TableSwitch
+/*!
+ * Estrura que apresenta um indicador de igualdade e o offset 
+ */
+typedef struct npair{
+    u4 match; //!< Indicador de igualdade entre o pc e o offset
+    u4 offset; //!< Offset
+}npair;
+
+//--------------------------------------------------------------------------------------------------
 //! Ponteiro para uma instrucao
 /*!
  * Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia

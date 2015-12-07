@@ -1,4 +1,5 @@
 <map id="src/MemoryUnit/M_OPTHREAD.c" name="src/MemoryUnit/M_OPTHREAD.c">
 <area shape="rect" id="node4" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="178,79,339,117"/>
-<area shape="rect" id="node5" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="183,165,334,191"/>
+<area shape="rect" id="node7" href="$_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="364,79,553,117"/>
+<area shape="rect" id="node5" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="283,165,434,191"/>
 </map>

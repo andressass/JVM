@@ -215,6 +215,13 @@ void javaLangExecuteMethod(const char* className, const char* methodName, const 
     else if (strncmp(className, "StringBuffer", 12)==0) {
         stringBufferExecuteMethod(&className[12], methodName, descriptorName, environment);
     }
+    //Metodos de java/lang/Object
+    else if ((strncmp(className, "Object", 6)==0)){
+        if(strncmp(methodName, "getClass", 8)==0)
+            return;
+        else
+            popFromOperandStack(environment->thread);
+    }
     else
         popFromOperandStack(environment->thread);
 }

@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "../../include/ExecutionEngine/I_DECODER.h"
 #include "../../include/Estruturas/OPCODES.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
@@ -20,6 +21,8 @@
 #include "../../include/ExecutionEngine/I_INSTOBJANDINVOKE.h"
 #include "../../include/ExecutionEngine/I_INSTCONVERSION.h"
 #include "../../include/ExecutionEngine/I_INSTRETURN.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
+#include "../../include/ExecutionEngine/I_INSTCOMPANDJMP.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -403,6 +406,8 @@ instruction decode(u1 bytecode){
             break;
         case OP_dup:
             return Dup;
+        case OP_pop:
+            return pop;
             break;
         case OP_getstatic:
             return getstatic;
@@ -494,10 +499,69 @@ instruction decode(u1 bytecode){
         case OP_i2s:
             return i2s;
             break;
+        case OP_lcmp:
+            return lcmp;
+            break;
+        case OP_fcmpl:
+            return fcmpl;
+            break;
+        case OP_fcmpg:
+            return fcmpg;
+            break;
+        case OP_dcmpl:
+            return dcmpl;
+            break;
+        case OP_dcmpg:
+            return dcmpg;
+            break;
+        case OP_ifeq:
+            return ifeq;
+            break;
+        case OP_ifne:
+            return ifne;
+            break;
+        case OP_iflt:
+            return iflt;
+            break;
+        case OP_ifge:
+            return ifge;
+            break;
+        case OP_ifgt:
+            return ifgt;
+            break;
+        case OP_ifle:
+            return ifle;
+            break;
+        case OP_if_icmpeq:
+            return if_icmpeq;
+            break;
+        case OP_if_icmpne:
+            return if_icmpne;
+            break;
+        case OP_if_icmplt:
+            return if_icmplt;
+            break;
+        case OP_if_icmpge:
+            return if_icmpge;
+            break;
+        case OP_if_icmpgt:
+            return if_icmpgt;
+            break;
+        case OP_if_icmple:
+            return if_icmple;
+            break;
+        case OP_if_acmpeq:
+            return if_acmpeq;
+            break;
+        case OP_if_acmpne:
+            return if_acmpne;
+            break;
         default:
             break;
     }
-    
+    char buffer[100];
+    sprintf(buffer, "Instrucao \"%s\" nao encontrada.", getOpcodeName(bytecode));
+    JVMstopAbrupt(buffer);
     return NULL;
 
 }

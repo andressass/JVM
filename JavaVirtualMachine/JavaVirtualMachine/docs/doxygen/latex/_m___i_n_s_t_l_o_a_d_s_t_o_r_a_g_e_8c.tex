@@ -1,0 +1,2544 @@
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.c}
+\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+T\+Y\+P\+E\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+A\+R\+R\+A\+Y.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+O\+P\+C\+O\+D\+E\+S.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2ab4f9c138984f97453adab108326dfc}{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af40e4bddc820c7f86fa6c7bc59761e43}{nop} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7dfb4f21b3fe08b2b0a49c616c8e1942}{aconst\+\_\+null} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a710a44c31215dca4f67634ea0bd77c15}{iconst\+\_\+m1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9baa4dd40402c0d90ae889f445067c5}{iconst\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3e841cdc866395038e7de1878c871858}{iconst\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2272da5d45cae81911b61fe6b3329dc8}{iconst\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a856d72ed3bcf70016db3891a9d1406fc}{iconst\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2d45144983d5edc8d2ef5378008edb74}{iconst\+\_\+4} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a11fc0fbf382bbf4ce9dd51b204c7eacb}{iconst\+\_\+5} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac27b323f768989a50b4a979f18414128}{lconst\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4eece8a685bba14e3c59bd1b7700a798}{lconst\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad9240148b53ef46e9fafcb0576952e2c}{fconst\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a957662afb17f70a4ed70d90e0a719252}{fconst\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2153941cee7f613939b0e01c7b066959}{fconst\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a15a627c8db1cfdb906087cc0f94789ec}{dconst\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac17ee652f1718dfe75bebb31180f6335}{dconst\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd894a58379543e12c8814664caf48a6}{bipush} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a673b6bcd0d569237229cd9680d407bd4}{sipush} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aaf974977939bcfc2c9bb8dfd98e45e08}{ldc} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac86f21e167fba2093a1e3d3e4c02973d}{ldc\+\_\+w} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad4ba719519a20052bce8e8ae37d9681f}{ldc2\+\_\+w} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6d3ab491b86b93853c1435d92a3e7c9a}{iload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3d0686edd7e6bf488671fc9f81b11aed}{lload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac8e33e372ba557102c3e1b6a6f1fbf44}{fload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a17536e1216f705713d854953d6e1a24d}{dload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afa9ebd4c9773398c387f5eff2a5dce3f}{aload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a008dd2f6263b48281d33e9780dd58f3a}{iload\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abf0433525a404822970871a151add16c}{iload\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae5a91fd42d717341f9c7d6d05680e326}{iload\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1ab08e32ae6f7fb1350c9243e0777a2}{iload\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abc346a8b28a78c9c093a5843191b26f1}{lload\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a05d5b9f3ea906831823e70a02f751e14}{lload\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f2bd686917a3ff415085b4ec70eedcb}{lload\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a758412e42d4ddb6617ad9a93c3475f62}{lload\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd53cff4b334ca9c1c48af4919d53837}{fload\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a94f3a8546d679ea5cac472ff7856cdb1}{fload\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3829fd0b740ecc963c6cb162f7880be0}{fload\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aad4ebe536d11cac8f6c5cd717344de61}{fload\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9e0994082fba2c4ae027009a345d545}{dload\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a382c785929ad5ef7be858f474d11f496}{dload\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9757f28665da79ddfba3d5f348430415}{dload\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac7b6e5ccbf0b5075ea907638c7c8366b}{dload\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a54409cb4692c3a9ed37456dae7ba4d26}{aload\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1212d02892717b9fb289e6d243ffdee}{aload\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab2d9711405a475c3548bfcd41f834a2f}{aload\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3f2be7a59109b91e40001e3f0fd7b06c}{aload\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af463dd86877e849cf10b5503936114e3}{iaload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f1bbea8a4411a946b0cb87e26bbde15}{laload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc00192bde005ef836a1cc1ead4091e0}{faload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a09cfe9add942a88a4a0850218943ca76}{daload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0b302e9c249e2fd309b859a59ab1489b}{aaload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afc35829f6e3f5da32790359e896486cc}{baload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2121ade4b4f7685d5a9d5be090fa1c89}{caload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae0ceeedf97d1c7db0bff0421863d0833}{saload} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa6c7ffce9cb4e4a48e155dd072850f11}{istore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4a8d0a9c74a06219bea1f076543ac902}{lstore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f126b27c9008bf68744de44469449fd}{fstore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a8d109eade06701a0d563c95a02a1b8eb}{dstore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_acc2206ffbf88d1718a114030c219e18c}{astore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2cdea476cb8c2b24e704e79b050cda9f}{istore\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae16111048c274e151125a0192b42f308}{istore\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9131f9a8ae88c6b6a97e3c3bb808eb7e}{istore\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4385fc41b67e044d15043f893a9f9f77}{istore\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aac87a9ec048dd0239f96bc16d2da4e0b}{lstore\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6efc765486890d423906ab67127ca3b6}{lstore\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1c5d146e096c106634321c84c4dfcdca}{lstore\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac9d65b5d18a2253cdfe36c3088f3d3ff}{lstore\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae65f97362a11d16b5a9f64bcd6fa246a}{fstore\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa1206a17b435ae4cad7ec9f30726f033}{fstore\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac64910305718b2c2478ba275a4038dee}{fstore\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a07297081ce07454f05d14973b31ad3da}{fstore\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bcc771f8a8ab685d2fbd53c3d2c702e}{dstore\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1844857a3fc124334baf75c055749634}{dstore\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7a530d605fcb2ffd0f762cd4527ca5ee}{dstore\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f5c4988f555dcb507d21784c59c3efe}{dstore\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae1a45d998c9c9f320e42862151eb16e2}{astore\+\_\+0} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc38bfe2a4adcf848a5ad04ba98162fe}{astore\+\_\+1} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a401cd5b1a3454fa889a9af0bdbb1acbf}{astore\+\_\+2} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af860ff991b51516b9efd803954872991}{astore\+\_\+3} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a57ce13ff39e04e88ed63f5db6802aa79}{iastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9d9dfef4eec9ec4a209f0f053fe2f2a9}{lastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae6b26dd56df480faf57a97c3e9f38018}{fastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bb1ce3b7358f240a9d1abd2a1ef289c}{dastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a676669c2b1dcce7a9c15e529ecc8c41b}{aastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6e8c70774a41290660956a8dc480316f}{bastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3ddf9679c77cf601ee2bf24b9679b711}{castore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af2bf3dcb3c1ed5f6785c4d4b5ccc6f1e}{sastore} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae9dc2489b27af5ec4257d1512ea896af}{wide} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f65a001f8c26cf831ad09bd58fb6b63}{Dup} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9b55570d32590cefe2383f69b1ecccef}{pop} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2ab4f9c138984f97453adab108326dfc}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}}
+\index{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2ab4f9c138984f97453adab108326dfc}
+
+
+\subsection{Funções}
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0b302e9c249e2fd309b859a59ab1489b}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aaload@{aaload}}
+\index{aaload@{aaload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aaload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aaload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0b302e9c249e2fd309b859a59ab1489b}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo reference. O index tambem eh desempilhado e deve ser do tipo int. O valor reference no componente do vetor eh recuperado no index e empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0b302e9c249e2fd309b859a59ab1489b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a676669c2b1dcce7a9c15e529ecc8c41b}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aastore@{aastore}}
+\index{aastore@{aastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a676669c2b1dcce7a9c15e529ecc8c41b}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo reference. O index deve ser do tipo int e value deve ser do tipo reference e tambem sao desempilhados. O reference value eh armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a676669c2b1dcce7a9c15e529ecc8c41b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7dfb4f21b3fe08b2b0a49c616c8e1942}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aconst\+\_\+null@{aconst\+\_\+null}}
+\index{aconst\+\_\+null@{aconst\+\_\+null}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aconst\+\_\+null(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aconst\+\_\+null (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7dfb4f21b3fe08b2b0a49c616c8e1942}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos uma referencia ao objeto null
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7dfb4f21b3fe08b2b0a49c616c8e1942_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afa9ebd4c9773398c387f5eff2a5dce3f}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aload@{aload}}
+\index{aload@{aload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afa9ebd4c9773398c387f5eff2a5dce3f}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o vetor de variaveis locais do frame corrente. A variavel local no index deve conter uma referencia. O objectref da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afa9ebd4c9773398c387f5eff2a5dce3f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a54409cb4692c3a9ed37456dae7ba4d26}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aload\+\_\+0@{aload\+\_\+0}}
+\index{aload\+\_\+0@{aload\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aload\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aload\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a54409cb4692c3a9ed37456dae7ba4d26}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 0. A variavel local no index deve conter uma referencia. O objectref da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a54409cb4692c3a9ed37456dae7ba4d26_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1212d02892717b9fb289e6d243ffdee}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aload\+\_\+1@{aload\+\_\+1}}
+\index{aload\+\_\+1@{aload\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aload\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aload\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1212d02892717b9fb289e6d243ffdee}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 1. A variavel local no index deve conter uma referencia. O objectref da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1212d02892717b9fb289e6d243ffdee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab2d9711405a475c3548bfcd41f834a2f}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aload\+\_\+2@{aload\+\_\+2}}
+\index{aload\+\_\+2@{aload\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aload\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aload\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab2d9711405a475c3548bfcd41f834a2f}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 2. A variavel local no index deve conter uma referencia. O objectref da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab2d9711405a475c3548bfcd41f834a2f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3f2be7a59109b91e40001e3f0fd7b06c}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!aload\+\_\+3@{aload\+\_\+3}}
+\index{aload\+\_\+3@{aload\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{aload\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void aload\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3f2be7a59109b91e40001e3f0fd7b06c}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 3. A variavel local no index deve conter uma referencia. O objectref da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3f2be7a59109b91e40001e3f0fd7b06c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_acc2206ffbf88d1718a114030c219e18c}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!astore@{astore}}
+\index{astore@{astore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{astore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void astore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_acc2206ffbf88d1718a114030c219e18c}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o vetor de variaveis locais do frame corrente. O objectref no topo da pilha de operandos deve ser do tipo return\+Address ou reference e eh desempilhado. O valor da variavel local no index eh setado para este objectref desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_acc2206ffbf88d1718a114030c219e18c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae1a45d998c9c9f320e42862151eb16e2}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!astore\+\_\+0@{astore\+\_\+0}}
+\index{astore\+\_\+0@{astore\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{astore\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void astore\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae1a45d998c9c9f320e42862151eb16e2}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 0. O objectref no topo da pilha de operandos deve ser do tipo return\+Address ou reference e eh desempilhado. O valor da variavel local no index eh setado para este objectref desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae1a45d998c9c9f320e42862151eb16e2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc38bfe2a4adcf848a5ad04ba98162fe}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!astore\+\_\+1@{astore\+\_\+1}}
+\index{astore\+\_\+1@{astore\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{astore\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void astore\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc38bfe2a4adcf848a5ad04ba98162fe}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 1. O objectref no topo da pilha de operandos deve ser do tipo return\+Address ou reference e eh desempilhado. O valor da variavel local no index eh setado para este objectref desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc38bfe2a4adcf848a5ad04ba98162fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a401cd5b1a3454fa889a9af0bdbb1acbf}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!astore\+\_\+2@{astore\+\_\+2}}
+\index{astore\+\_\+2@{astore\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{astore\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void astore\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a401cd5b1a3454fa889a9af0bdbb1acbf}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 2. O objectref no topo da pilha de operandos deve ser do tipo return\+Address ou reference e eh desempilhado. O valor da variavel local no index eh setado para este objectref desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a401cd5b1a3454fa889a9af0bdbb1acbf_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af860ff991b51516b9efd803954872991}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!astore\+\_\+3@{astore\+\_\+3}}
+\index{astore\+\_\+3@{astore\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{astore\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void astore\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af860ff991b51516b9efd803954872991}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 3. O objectref no topo da pilha de operandos deve ser do tipo return\+Address ou reference e eh desempilhado. O valor da variavel local no index eh setado para este objectref desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af860ff991b51516b9efd803954872991_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afc35829f6e3f5da32790359e896486cc}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!baload@{baload}}
+\index{baload@{baload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{baload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void baload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afc35829f6e3f5da32790359e896486cc}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo byte ou do tipo boolean. O index tambem eh desempilhado e deve ser do tipo int. O valor no componente do vetor eh recuperado no index e, caso seja do tipo byte, ele eh estendido com sinal ou, caso o valor seja do tipo booleano, ele eh estendido sem sinal. Nos dois casos ele eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afc35829f6e3f5da32790359e896486cc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6e8c70774a41290660956a8dc480316f}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!bastore@{bastore}}
+\index{bastore@{bastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{bastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void bastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6e8c70774a41290660956a8dc480316f}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo byte ou do tipo boolean. O index e value tambem sao desempilhados e devem ser do tipo int. Caso os componentes do vetor forem do tipo byte, o int value eh truncado para um byte ou, caso os componentes do vetor forem do tipo boolean, o int value eh truncado para seu bit de ordem baixa e, entao, estendido sem sinal para o tamanho de armazenamento para componentes de vetores boolen usados pela implementacao. O resultado eh armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6e8c70774a41290660956a8dc480316f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd894a58379543e12c8814664caf48a6}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!bipush@{bipush}}
+\index{bipush@{bipush}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{bipush(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void bipush (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd894a58379543e12c8814664caf48a6}
+Metodo responsavel por relizar uma instrucao que estende com sinal o byte imediato para um valor int e, então, o empilha na pilha de operandos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd894a58379543e12c8814664caf48a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2121ade4b4f7685d5a9d5be090fa1c89}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!caload@{caload}}
+\index{caload@{caload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{caload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void caload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2121ade4b4f7685d5a9d5be090fa1c89}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo char e fazer referencia a um vetor cujo os componentes sao do tipo char. O index tambem eh desempilhado e deve ser do tipo int. O valor char no componente do vetor eh recuperado no index e estendido sem sinal. Ele eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2121ade4b4f7685d5a9d5be090fa1c89_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3ddf9679c77cf601ee2bf24b9679b711}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!castore@{castore}}
+\index{castore@{castore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{castore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void castore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3ddf9679c77cf601ee2bf24b9679b711}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo char. O index e value tambem sao desempilhados e devem ser do tipo int. O int value eh truncado para um char e armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3ddf9679c77cf601ee2bf24b9679b711_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a09cfe9add942a88a4a0850218943ca76}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!daload@{daload}}
+\index{daload@{daload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{daload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void daload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a09cfe9add942a88a4a0850218943ca76}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo double. O index tambem eh desempilhado e deve ser do tipo int. O valor double no componente do vetor eh recuperado no index e empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a09cfe9add942a88a4a0850218943ca76_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bb1ce3b7358f240a9d1abd2a1ef289c}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dastore@{dastore}}
+\index{dastore@{dastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bb1ce3b7358f240a9d1abd2a1ef289c}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo double. O index deve ser do tipo int e value deve ser do tipo double e tambem sao desempilhados. O double value passa pela \char`\"{}value set conversion\char`\"{}, resultando em value\textquotesingle{}, e value\textquotesingle{} eh armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bb1ce3b7358f240a9d1abd2a1ef289c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a15a627c8db1cfdb906087cc0f94789ec}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dconst\+\_\+0@{dconst\+\_\+0}}
+\index{dconst\+\_\+0@{dconst\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dconst\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dconst\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a15a627c8db1cfdb906087cc0f94789ec}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor double 0
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a15a627c8db1cfdb906087cc0f94789ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac17ee652f1718dfe75bebb31180f6335}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dconst\+\_\+1@{dconst\+\_\+1}}
+\index{dconst\+\_\+1@{dconst\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dconst\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dconst\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac17ee652f1718dfe75bebb31180f6335}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor double 1
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac17ee652f1718dfe75bebb31180f6335_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a17536e1216f705713d854953d6e1a24d}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dload@{dload}}
+\index{dload@{dload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a17536e1216f705713d854953d6e1a24d}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, onde ambos os index e index+1 sao indices validos para o vetor de variaveis locais do frame corrente. A variavel local no index deve conter um double. O valor da variavel local no index eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a17536e1216f705713d854953d6e1a24d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9e0994082fba2c4ae027009a345d545}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dload\+\_\+0@{dload\+\_\+0}}
+\index{dload\+\_\+0@{dload\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dload\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dload\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9e0994082fba2c4ae027009a345d545}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 0 e 1. A variavel local no index deve conter um double. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9e0994082fba2c4ae027009a345d545_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a382c785929ad5ef7be858f474d11f496}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dload\+\_\+1@{dload\+\_\+1}}
+\index{dload\+\_\+1@{dload\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dload\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dload\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a382c785929ad5ef7be858f474d11f496}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 1 e 2. A variavel local no index deve conter um double. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a382c785929ad5ef7be858f474d11f496_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9757f28665da79ddfba3d5f348430415}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dload\+\_\+2@{dload\+\_\+2}}
+\index{dload\+\_\+2@{dload\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dload\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dload\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9757f28665da79ddfba3d5f348430415}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 2 e 3. A variavel local no index deve conter um double. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9757f28665da79ddfba3d5f348430415_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac7b6e5ccbf0b5075ea907638c7c8366b}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dload\+\_\+3@{dload\+\_\+3}}
+\index{dload\+\_\+3@{dload\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dload\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dload\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac7b6e5ccbf0b5075ea907638c7c8366b}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 3 e 4. A variavel local no index deve conter um double. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac7b6e5ccbf0b5075ea907638c7c8366b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a8d109eade06701a0d563c95a02a1b8eb}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dstore@{dstore}}
+\index{dstore@{dstore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dstore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dstore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a8d109eade06701a0d563c95a02a1b8eb}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, onde ambos os index e index+1 sao indices validos para o vetor de variaveis locais do frame corrente. O valor no topo da pilha de operandos deve ser do tipo double e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. Os valores das variavel locais no index e index+1 sao setados para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a8d109eade06701a0d563c95a02a1b8eb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bcc771f8a8ab685d2fbd53c3d2c702e}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dstore\+\_\+0@{dstore\+\_\+0}}
+\index{dstore\+\_\+0@{dstore\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dstore\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dstore\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bcc771f8a8ab685d2fbd53c3d2c702e}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 0 e 1. O valor no topo da pilha de operandos deve ser do tipo double e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. Os valores das variavel locais no index e index+1 sao setados para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2bcc771f8a8ab685d2fbd53c3d2c702e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1844857a3fc124334baf75c055749634}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dstore\+\_\+1@{dstore\+\_\+1}}
+\index{dstore\+\_\+1@{dstore\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dstore\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dstore\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1844857a3fc124334baf75c055749634}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 1 e 2. O valor no topo da pilha de operandos deve ser do tipo double e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. Os valores das variavel locais no index e index+1 sao setados para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1844857a3fc124334baf75c055749634_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7a530d605fcb2ffd0f762cd4527ca5ee}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dstore\+\_\+2@{dstore\+\_\+2}}
+\index{dstore\+\_\+2@{dstore\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dstore\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dstore\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7a530d605fcb2ffd0f762cd4527ca5ee}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 2 e 3. O valor no topo da pilha de operandos deve ser do tipo double e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. Os valores das variavel locais no index e index+1 sao setados para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a7a530d605fcb2ffd0f762cd4527ca5ee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f5c4988f555dcb507d21784c59c3efe}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!dstore\+\_\+3@{dstore\+\_\+3}}
+\index{dstore\+\_\+3@{dstore\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{dstore\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void dstore\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f5c4988f555dcb507d21784c59c3efe}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 3 e 4. O valor no topo da pilha de operandos deve ser do tipo double e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. Os valores das variavel locais no index e index+1 sao setados para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f5c4988f555dcb507d21784c59c3efe_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f65a001f8c26cf831ad09bd58fb6b63}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!Dup@{Dup}}
+\index{Dup@{Dup}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{Dup(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void Dup (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f65a001f8c26cf831ad09bd58fb6b63}
+Instrucao que duplica o topo da pilha
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f65a001f8c26cf831ad09bd58fb6b63_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc00192bde005ef836a1cc1ead4091e0}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!faload@{faload}}
+\index{faload@{faload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{faload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void faload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc00192bde005ef836a1cc1ead4091e0}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo float. O index tambem eh desempilhado e deve ser do tipo int. O valor float no componente do vetor eh recuperado no index e empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_adc00192bde005ef836a1cc1ead4091e0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae6b26dd56df480faf57a97c3e9f38018}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fastore@{fastore}}
+\index{fastore@{fastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae6b26dd56df480faf57a97c3e9f38018}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo float. O index deve ser do tipo int e value deve ser do tipo float e tambem sao desempilhados. O float value passa pela \char`\"{}value set conversion\char`\"{}, resultando em value\textquotesingle{}, e value\textquotesingle{} eh armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae6b26dd56df480faf57a97c3e9f38018_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad9240148b53ef46e9fafcb0576952e2c}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fconst\+\_\+0@{fconst\+\_\+0}}
+\index{fconst\+\_\+0@{fconst\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fconst\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fconst\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad9240148b53ef46e9fafcb0576952e2c}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor float 0
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad9240148b53ef46e9fafcb0576952e2c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a957662afb17f70a4ed70d90e0a719252}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fconst\+\_\+1@{fconst\+\_\+1}}
+\index{fconst\+\_\+1@{fconst\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fconst\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fconst\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a957662afb17f70a4ed70d90e0a719252}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor float 1
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a957662afb17f70a4ed70d90e0a719252_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2153941cee7f613939b0e01c7b066959}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fconst\+\_\+2@{fconst\+\_\+2}}
+\index{fconst\+\_\+2@{fconst\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fconst\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fconst\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2153941cee7f613939b0e01c7b066959}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor float 2
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2153941cee7f613939b0e01c7b066959_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac8e33e372ba557102c3e1b6a6f1fbf44}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fload@{fload}}
+\index{fload@{fload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac8e33e372ba557102c3e1b6a6f1fbf44}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o vetor de variaveis locais do frame corrente. A variavel local no index deve conter um float. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac8e33e372ba557102c3e1b6a6f1fbf44_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd53cff4b334ca9c1c48af4919d53837}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fload\+\_\+0@{fload\+\_\+0}}
+\index{fload\+\_\+0@{fload\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fload\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fload\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd53cff4b334ca9c1c48af4919d53837}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 0. A variavel local no index deve conter um float. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_afd53cff4b334ca9c1c48af4919d53837_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a94f3a8546d679ea5cac472ff7856cdb1}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fload\+\_\+1@{fload\+\_\+1}}
+\index{fload\+\_\+1@{fload\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fload\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fload\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a94f3a8546d679ea5cac472ff7856cdb1}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 1. A variavel local no index deve conter um float. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a94f3a8546d679ea5cac472ff7856cdb1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3829fd0b740ecc963c6cb162f7880be0}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fload\+\_\+2@{fload\+\_\+2}}
+\index{fload\+\_\+2@{fload\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fload\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fload\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3829fd0b740ecc963c6cb162f7880be0}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 2. A variavel local no index deve conter um float. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3829fd0b740ecc963c6cb162f7880be0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aad4ebe536d11cac8f6c5cd717344de61}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fload\+\_\+3@{fload\+\_\+3}}
+\index{fload\+\_\+3@{fload\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fload\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fload\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aad4ebe536d11cac8f6c5cd717344de61}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 3. A variavel local no index deve conter um float. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aad4ebe536d11cac8f6c5cd717344de61_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f126b27c9008bf68744de44469449fd}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fstore@{fstore}}
+\index{fstore@{fstore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fstore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fstore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f126b27c9008bf68744de44469449fd}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o vetor de variaveis locais do frame corrente. O valor no topo da pilha de operandos deve ser do tipo float e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. O valor da variavel local no index eh setado para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9f126b27c9008bf68744de44469449fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae65f97362a11d16b5a9f64bcd6fa246a}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fstore\+\_\+0@{fstore\+\_\+0}}
+\index{fstore\+\_\+0@{fstore\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fstore\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fstore\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae65f97362a11d16b5a9f64bcd6fa246a}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 0. O valor no topo da pilha de operandos deve ser do tipo float e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. O valor da variavel local no index eh setado para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae65f97362a11d16b5a9f64bcd6fa246a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa1206a17b435ae4cad7ec9f30726f033}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fstore\+\_\+1@{fstore\+\_\+1}}
+\index{fstore\+\_\+1@{fstore\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fstore\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fstore\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa1206a17b435ae4cad7ec9f30726f033}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 1. O valor no topo da pilha de operandos deve ser do tipo float e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. O valor da variavel local no index eh setado para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa1206a17b435ae4cad7ec9f30726f033_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac64910305718b2c2478ba275a4038dee}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fstore\+\_\+2@{fstore\+\_\+2}}
+\index{fstore\+\_\+2@{fstore\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fstore\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fstore\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac64910305718b2c2478ba275a4038dee}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 2. O valor no topo da pilha de operandos deve ser do tipo float e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. O valor da variavel local no index eh setado para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac64910305718b2c2478ba275a4038dee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a07297081ce07454f05d14973b31ad3da}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!fstore\+\_\+3@{fstore\+\_\+3}}
+\index{fstore\+\_\+3@{fstore\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{fstore\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void fstore\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a07297081ce07454f05d14973b31ad3da}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 3. O valor no topo da pilha de operandos deve ser do tipo float e eh desempilhado e passa pela \char`\"{}value set conversion\char`\"{}, resultando em valor\textquotesingle{}. O valor da variavel local no index eh setado para este valor\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a07297081ce07454f05d14973b31ad3da_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af463dd86877e849cf10b5503936114e3}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iaload@{iaload}}
+\index{iaload@{iaload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iaload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iaload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af463dd86877e849cf10b5503936114e3}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo int. O index tambem eh desempilhado e deve ser do tipo int. O valor int no componente do vetor eh recuperado no index e empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af463dd86877e849cf10b5503936114e3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a57ce13ff39e04e88ed63f5db6802aa79}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iastore@{iastore}}
+\index{iastore@{iastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a57ce13ff39e04e88ed63f5db6802aa79}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo int. O index e value tambem sao desempilhados e devem ser do tipo int. O int value eh armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a57ce13ff39e04e88ed63f5db6802aa79_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9baa4dd40402c0d90ae889f445067c5}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+0@{iconst\+\_\+0}}
+\index{iconst\+\_\+0@{iconst\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9baa4dd40402c0d90ae889f445067c5}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro 0
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ab9baa4dd40402c0d90ae889f445067c5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3e841cdc866395038e7de1878c871858}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+1@{iconst\+\_\+1}}
+\index{iconst\+\_\+1@{iconst\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3e841cdc866395038e7de1878c871858}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro 1
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3e841cdc866395038e7de1878c871858_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2272da5d45cae81911b61fe6b3329dc8}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+2@{iconst\+\_\+2}}
+\index{iconst\+\_\+2@{iconst\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2272da5d45cae81911b61fe6b3329dc8}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro 2
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2272da5d45cae81911b61fe6b3329dc8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a856d72ed3bcf70016db3891a9d1406fc}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+3@{iconst\+\_\+3}}
+\index{iconst\+\_\+3@{iconst\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a856d72ed3bcf70016db3891a9d1406fc}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro 3
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a856d72ed3bcf70016db3891a9d1406fc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2d45144983d5edc8d2ef5378008edb74}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+4@{iconst\+\_\+4}}
+\index{iconst\+\_\+4@{iconst\+\_\+4}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+4(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+4 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2d45144983d5edc8d2ef5378008edb74}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro 4
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2d45144983d5edc8d2ef5378008edb74_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a11fc0fbf382bbf4ce9dd51b204c7eacb}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+5@{iconst\+\_\+5}}
+\index{iconst\+\_\+5@{iconst\+\_\+5}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+5(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+5 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a11fc0fbf382bbf4ce9dd51b204c7eacb}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro 5
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a11fc0fbf382bbf4ce9dd51b204c7eacb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a710a44c31215dca4f67634ea0bd77c15}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iconst\+\_\+m1@{iconst\+\_\+m1}}
+\index{iconst\+\_\+m1@{iconst\+\_\+m1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iconst\+\_\+m1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iconst\+\_\+m1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a710a44c31215dca4f67634ea0bd77c15}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor inteiro -\/1
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a710a44c31215dca4f67634ea0bd77c15_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6d3ab491b86b93853c1435d92a3e7c9a}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iload@{iload}}
+\index{iload@{iload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6d3ab491b86b93853c1435d92a3e7c9a}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o vetor de variaveis locais do frame corrente. A variavel local no index deve conter um inteiro. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6d3ab491b86b93853c1435d92a3e7c9a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a008dd2f6263b48281d33e9780dd58f3a}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iload\+\_\+0@{iload\+\_\+0}}
+\index{iload\+\_\+0@{iload\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iload\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iload\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a008dd2f6263b48281d33e9780dd58f3a}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 0. A variavel local no index deve conter um inteiro. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a008dd2f6263b48281d33e9780dd58f3a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abf0433525a404822970871a151add16c}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iload\+\_\+1@{iload\+\_\+1}}
+\index{iload\+\_\+1@{iload\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iload\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iload\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abf0433525a404822970871a151add16c}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 1. A variavel local no index deve conter um inteiro. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abf0433525a404822970871a151add16c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae5a91fd42d717341f9c7d6d05680e326}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iload\+\_\+2@{iload\+\_\+2}}
+\index{iload\+\_\+2@{iload\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iload\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iload\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae5a91fd42d717341f9c7d6d05680e326}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 2. A variavel local no index deve conter um inteiro. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae5a91fd42d717341f9c7d6d05680e326_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1ab08e32ae6f7fb1350c9243e0777a2}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!iload\+\_\+3@{iload\+\_\+3}}
+\index{iload\+\_\+3@{iload\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{iload\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void iload\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1ab08e32ae6f7fb1350c9243e0777a2}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh o 3. A variavel local no index deve conter um inteiro. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af1ab08e32ae6f7fb1350c9243e0777a2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa6c7ffce9cb4e4a48e155dd072850f11}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!istore@{istore}}
+\index{istore@{istore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{istore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void istore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa6c7ffce9cb4e4a48e155dd072850f11}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o vetor de variaveis locais do frame corrente. O valor no topo da pilha de operandos deve ser do tipo int e eh desempilhado. O valor da variavel local no index eh setado para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aa6c7ffce9cb4e4a48e155dd072850f11_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2cdea476cb8c2b24e704e79b050cda9f}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!istore\+\_\+0@{istore\+\_\+0}}
+\index{istore\+\_\+0@{istore\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{istore\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void istore\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2cdea476cb8c2b24e704e79b050cda9f}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 0. O valor no topo da pilha de operandos deve ser do tipo int e eh desempilhado. O valor da variavel local no index eh setado para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2cdea476cb8c2b24e704e79b050cda9f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae16111048c274e151125a0192b42f308}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!istore\+\_\+1@{istore\+\_\+1}}
+\index{istore\+\_\+1@{istore\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{istore\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void istore\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae16111048c274e151125a0192b42f308}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 1. O valor no topo da pilha de operandos deve ser do tipo int e eh desempilhado. O valor da variavel local no index eh setado para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae16111048c274e151125a0192b42f308_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9131f9a8ae88c6b6a97e3c3bb808eb7e}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!istore\+\_\+2@{istore\+\_\+2}}
+\index{istore\+\_\+2@{istore\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{istore\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void istore\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9131f9a8ae88c6b6a97e3c3bb808eb7e}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 2. O valor no topo da pilha de operandos deve ser do tipo int e eh desempilhado. O valor da variavel local no index eh setado para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9131f9a8ae88c6b6a97e3c3bb808eb7e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4385fc41b67e044d15043f893a9f9f77}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!istore\+\_\+3@{istore\+\_\+3}}
+\index{istore\+\_\+3@{istore\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{istore\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void istore\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4385fc41b67e044d15043f893a9f9f77}
+Metodo responsavel por relizar uma instrucao onde o indice valido index para o vetor de variaveis locais do frame corrente eh 3. O valor no topo da pilha de operandos deve ser do tipo int e eh desempilhado. O valor da variavel local no index eh setado para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4385fc41b67e044d15043f893a9f9f77_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f1bbea8a4411a946b0cb87e26bbde15}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!laload@{laload}}
+\index{laload@{laload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{laload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void laload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f1bbea8a4411a946b0cb87e26bbde15}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo long. O index tambem eh desempilhado e deve ser do tipo int. O valor long no componente do vetor eh recuperado no index e empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f1bbea8a4411a946b0cb87e26bbde15_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9d9dfef4eec9ec4a209f0f053fe2f2a9}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lastore@{lastore}}
+\index{lastore@{lastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9d9dfef4eec9ec4a209f0f053fe2f2a9}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo long. O index deve ser do tipo int e value deve ser do tipo long e tambem sao desempilhados. O long value eh armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9d9dfef4eec9ec4a209f0f053fe2f2a9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac27b323f768989a50b4a979f18414128}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lconst\+\_\+0@{lconst\+\_\+0}}
+\index{lconst\+\_\+0@{lconst\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lconst\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lconst\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac27b323f768989a50b4a979f18414128}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor long 0
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac27b323f768989a50b4a979f18414128_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4eece8a685bba14e3c59bd1b7700a798}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lconst\+\_\+1@{lconst\+\_\+1}}
+\index{lconst\+\_\+1@{lconst\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lconst\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lconst\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4eece8a685bba14e3c59bd1b7700a798}
+Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o valor long 1
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4eece8a685bba14e3c59bd1b7700a798_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aaf974977939bcfc2c9bb8dfd98e45e08}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!ldc@{ldc}}
+\index{ldc@{ldc}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{ldc(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ldc (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aaf974977939bcfc2c9bb8dfd98e45e08}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, o qual eh um indice valido para o pool de constantes da classe corrente. O valor no pool de constantes pode ser uma constante do tipo int ou float ou uma referencia simbolica para um literal string. Caso for do tipo int ou float, deve emplilhar na pilha de operandos o valor numerico da constante e, caso seja uma referencia para uma instancia da classe String, esta referencia deve ser empilhada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aaf974977939bcfc2c9bb8dfd98e45e08_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad4ba719519a20052bce8e8ae37d9681f}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!ldc2\+\_\+w@{ldc2\+\_\+w}}
+\index{ldc2\+\_\+w@{ldc2\+\_\+w}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{ldc2\+\_\+w(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ldc2\+\_\+w (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad4ba719519a20052bce8e8ae37d9681f}
+Metodo responsavel por relizar uma instrucao que recebe como argumento os unsigned byte indexbyte1 e indexbyte2 que, quando montados em um unsigned de 16 bits, viram um indice valido para o pool de constantes da classe corrente, onde o valor do indice eh (indexbyte1 $<$$<$ 8) $\vert$ indexbyte2. O valor no pool de constantes pode ser uma constante do tipo long ou double. O valor numerico da constante eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ad4ba719519a20052bce8e8ae37d9681f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac86f21e167fba2093a1e3d3e4c02973d}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!ldc\+\_\+w@{ldc\+\_\+w}}
+\index{ldc\+\_\+w@{ldc\+\_\+w}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{ldc\+\_\+w(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void ldc\+\_\+w (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac86f21e167fba2093a1e3d3e4c02973d}
+Metodo responsavel por relizar uma instrucao que recebe como argumento os unsigned byte indexbyte1 e indexbyte2 que, quando montados em um unsigned de 16 bits, viram um indice valido para o pool de constantes da classe corrente. O valor no pool de constantes pode ser uma constante do tipo int ou float ou uma referencia simbolica para um literal string. Caso for do tipo int ou float, deve emplilhar na pilha de operandos o valor numerico da constante e, caso seja uma referencia para uma instancia da classe String, esta referencia deve ser empilhada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac86f21e167fba2093a1e3d3e4c02973d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3d0686edd7e6bf488671fc9f81b11aed}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lload@{lload}}
+\index{lload@{lload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3d0686edd7e6bf488671fc9f81b11aed}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, onde ambos os index e index+1 sao indices validos para o vetor de variaveis locais do frame corrente. A variavel local no index deve conter um long. O valor da variavel local no index eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a3d0686edd7e6bf488671fc9f81b11aed_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abc346a8b28a78c9c093a5843191b26f1}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lload\+\_\+0@{lload\+\_\+0}}
+\index{lload\+\_\+0@{lload\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lload\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lload\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abc346a8b28a78c9c093a5843191b26f1}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 0 e 1. A variavel local no index deve conter um long. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_abc346a8b28a78c9c093a5843191b26f1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a05d5b9f3ea906831823e70a02f751e14}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lload\+\_\+1@{lload\+\_\+1}}
+\index{lload\+\_\+1@{lload\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lload\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lload\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a05d5b9f3ea906831823e70a02f751e14}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 1 e 2. A variavel local no index deve conter um long. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a05d5b9f3ea906831823e70a02f751e14_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f2bd686917a3ff415085b4ec70eedcb}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lload\+\_\+2@{lload\+\_\+2}}
+\index{lload\+\_\+2@{lload\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lload\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lload\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f2bd686917a3ff415085b4ec70eedcb}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 2 e 3. A variavel local no index deve conter um long. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a0f2bd686917a3ff415085b4ec70eedcb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a758412e42d4ddb6617ad9a93c3475f62}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lload\+\_\+3@{lload\+\_\+3}}
+\index{lload\+\_\+3@{lload\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lload\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lload\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a758412e42d4ddb6617ad9a93c3475f62}
+Metodo responsavel por relizar uma instrucao que os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 3 e 4. A variavel local no index deve conter um long. O valor da variavel local eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a758412e42d4ddb6617ad9a93c3475f62_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4a8d0a9c74a06219bea1f076543ac902}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lstore@{lstore}}
+\index{lstore@{lstore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lstore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lstore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4a8d0a9c74a06219bea1f076543ac902}
+Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigned byte index, onde ambos os index e index+1 sao indices validos para o vetor de variaveis locais do frame corrente. O valor no topo da pilha de operandos deve ser do tipo long e eh desempilhado. Os valores das variavel locais no index e index+1 sao setados para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a4a8d0a9c74a06219bea1f076543ac902_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aac87a9ec048dd0239f96bc16d2da4e0b}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lstore\+\_\+0@{lstore\+\_\+0}}
+\index{lstore\+\_\+0@{lstore\+\_\+0}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lstore\+\_\+0(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lstore\+\_\+0 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aac87a9ec048dd0239f96bc16d2da4e0b}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 0 e 1. O valor no topo da pilha de operandos deve ser do tipo long e eh desempilhado. Os valores das variavel locais no index e index+1 sao setados para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_aac87a9ec048dd0239f96bc16d2da4e0b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6efc765486890d423906ab67127ca3b6}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lstore\+\_\+1@{lstore\+\_\+1}}
+\index{lstore\+\_\+1@{lstore\+\_\+1}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lstore\+\_\+1(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lstore\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6efc765486890d423906ab67127ca3b6}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 1 e 2. O valor no topo da pilha de operandos deve ser do tipo long e eh desempilhado. Os valores das variavel locais no index e index+1 sao setados para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a6efc765486890d423906ab67127ca3b6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1c5d146e096c106634321c84c4dfcdca}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lstore\+\_\+2@{lstore\+\_\+2}}
+\index{lstore\+\_\+2@{lstore\+\_\+2}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lstore\+\_\+2(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lstore\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1c5d146e096c106634321c84c4dfcdca}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 2 e 3. O valor no topo da pilha de operandos deve ser do tipo long e eh desempilhado. Os valores das variavel locais no index e index+1 sao setados para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a1c5d146e096c106634321c84c4dfcdca_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac9d65b5d18a2253cdfe36c3088f3d3ff}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!lstore\+\_\+3@{lstore\+\_\+3}}
+\index{lstore\+\_\+3@{lstore\+\_\+3}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{lstore\+\_\+3(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void lstore\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac9d65b5d18a2253cdfe36c3088f3d3ff}
+Metodo responsavel por relizar uma instrucao onde os indices validos index e index+1 para o vetor de variaveis locais do frame corrente sao o 3 e 4. O valor no topo da pilha de operandos deve ser do tipo long e eh desempilhado. Os valores das variavel locais no index e index+1 sao setados para este valor desempilhado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ac9d65b5d18a2253cdfe36c3088f3d3ff_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af40e4bddc820c7f86fa6c7bc59761e43}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!nop@{nop}}
+\index{nop@{nop}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{nop(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void nop (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af40e4bddc820c7f86fa6c7bc59761e43}
+Metodo responsavel por relizar uma instrucao que faz nada
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9b55570d32590cefe2383f69b1ecccef}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!pop@{pop}}
+\index{pop@{pop}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{pop(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void pop (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9b55570d32590cefe2383f69b1ecccef}
+Instrucao que desempilha o topo da pilha
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9b55570d32590cefe2383f69b1ecccef_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae0ceeedf97d1c7db0bff0421863d0833}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!saload@{saload}}
+\index{saload@{saload}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{saload(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void saload (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae0ceeedf97d1c7db0bff0421863d0833}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo char e fazer referencia a um vetor cujo os componentes sao do tipo short. O index tambem eh desempilhado e deve ser do tipo int. O valor short no componente do vetor eh recuperado no index e estendido com sinal para um valor int. Ele eh empilhado na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae0ceeedf97d1c7db0bff0421863d0833_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af2bf3dcb3c1ed5f6785c4d4b5ccc6f1e}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!sastore@{sastore}}
+\index{sastore@{sastore}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{sastore(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void sastore (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af2bf3dcb3c1ed5f6785c4d4b5ccc6f1e}
+Metodo responsavel por realizar uma instrucao que desempilha da pilha de operandos o arrayref, que deve ser do tipo reference e fazer referencia a um vetor cujo os componentes sao do tipo short. O index e value tambem sao desempilhados e devem ser do tipo int. O int value eh truncado para um short e armazenado como o componente do vetor indexado pelo index.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_af2bf3dcb3c1ed5f6785c4d4b5ccc6f1e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a673b6bcd0d569237229cd9680d407bd4}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!sipush@{sipush}}
+\index{sipush@{sipush}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{sipush(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void sipush (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a673b6bcd0d569237229cd9680d407bd4}
+Metodo responsavel por relizar uma instrucao que estende com sinal o valor imediato short (byte1 $<$$<$ 8) $\vert$ byte2 para um valor int e, então, o empilha na pilha de operandos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a673b6bcd0d569237229cd9680d407bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae9dc2489b27af5ec4257d1512ea896af}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!wide@{wide}}
+\index{wide@{wide}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+\subsubsection[{wide(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void wide (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae9dc2489b27af5ec4257d1512ea896af}
+Metodo responsavel por realizar uma instrucao que estende o indice de variavel local por bytes adicionais. Ela modifica o comportamento de outras instrucoes e assume um de dois formatos, dependendo da instrucao a ser modificada. O primeiro formato modifica uma das instrucoes iload, fload, aload, lload, dload, istore, fstore, astore, lstore, dstore, ou ret. O segundo formato se aplica apenas para a instrucao iinc. Em qualquer caso a instrucao wide eh seguida pelo opcode da instrucao a ser modificada e, logo apos ele, segue-\/se os unsigned bytes indexbyte1 e indexbyte2 que, quando montados em um unsigned de 16 bits, viram um indice valido para um vetor de variaveis locais no frame corrente, onde o valor do indice eh (indexbyte1 $<$$<$ 8) $\vert$ indexbyte2. Para as instrucoes lload, dload, lstore, or dstore, o indice index+1 seguinte ao calculo tambem eh um indice valido para o vetor de variaveis locais. No segundo formato, dois imediatos unsigned bytes constbyte1 e constbyte2 seguem indexbyte1 e indexbyte2. Eles tambem sao montados em uma constante signed 16-\/bit, onde o valor da constante eh (constbyte1 $<$$<$ 8) $\vert$ constbyte2.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente com a thread que contem a pilha J\+V\+M com o frame atual \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_ae9dc2489b27af5ec4257d1512ea896af_cgraph}
+\end{center}
+\end{figure}
+
+

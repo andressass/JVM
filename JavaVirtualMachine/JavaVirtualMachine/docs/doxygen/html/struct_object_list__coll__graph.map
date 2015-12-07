@@ -1,11 +1,11 @@
 <map id="ObjectList" name="ObjectList">
-<area shape="rect" id="node4" href="$struct_java_class.html" title="Estrutura da JavaClass. " alt="" coords="176,365,259,391"/>
-<area shape="rect" id="node2" href="$struct_object.html" title="Estrutura do Object. " alt="" coords="78,539,138,564"/>
-<area shape="rect" id="node3" href="$struct_handler.html" title="Estrutura da Handler. " alt="" coords="184,452,252,477"/>
-<area shape="rect" id="node5" href="$struct_fields.html" title="Estrutura da FieldsTable. " alt="" coords="324,279,381,304"/>
-<area shape="rect" id="node6" href="$struct_fields_table.html" title="Estrutura da FieldsTable. " alt="" coords="332,192,421,217"/>
-<area shape="rect" id="node7" href="$structfield_and_method.html" title="Estrutura de Campos e Metodos. " alt="" coords="246,92,360,117"/>
-<area shape="rect" id="node9" href="$structarq_class.html" title="um metodo. " alt="" coords="149,192,223,217"/>
-<area shape="rect" id="node8" href="$structattribute.html" title="Estrutura de Atributos. " alt="" coords="96,5,166,31"/>
-<area shape="rect" id="node10" href="$structconst_pool.html" title="Estrutura do Pool de Constantes. " alt="" coords="142,92,222,117"/>
+<area shape="rect" id="node4" href="$struct_java_class.html" title="Estrutura da JavaClass. " alt="" coords="144,365,227,391"/>
+<area shape="rect" id="node2" href="$struct_object.html" title="Estrutura do Object. " alt="" coords="64,539,124,564"/>
+<area shape="rect" id="node3" href="$struct_handler.html" title="Estrutura da Handler. " alt="" coords="152,452,220,477"/>
+<area shape="rect" id="node5" href="$struct_fields.html" title="Estrutura da FieldsTable. " alt="" coords="292,279,349,304"/>
+<area shape="rect" id="node6" href="$struct_fields_table.html" title="Estrutura da FieldsTable. " alt="" coords="300,192,389,217"/>
+<area shape="rect" id="node7" href="$structfield_and_method.html" title="Estrutura de Campos e Metodos. " alt="" coords="214,92,328,117"/>
+<area shape="rect" id="node9" href="$structarq_class.html" title="um metodo. " alt="" coords="117,192,191,217"/>
+<area shape="rect" id="node8" href="$structattribute.html" title="Estrutura de Atributos. " alt="" coords="64,5,134,31"/>
+<area shape="rect" id="node10" href="$structconst_pool.html" title="Estrutura do Pool de Constantes. " alt="" coords="110,92,190,117"/>
 </map>

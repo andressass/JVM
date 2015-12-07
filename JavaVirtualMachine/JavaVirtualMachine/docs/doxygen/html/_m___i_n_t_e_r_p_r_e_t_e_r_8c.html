@@ -104,8 +104,8 @@ Gráfico de dependência de inclusões para M_INTERPRETER.c:</div>
 <div class="center"><img src="_m___i_n_t_e_r_p_r_e_t_e_r_8c__incl.png" border="0" usemap="#src_2_execution_engine_2_m___i_n_t_e_r_p_r_e_t_e_r_8c" alt=""/></div>
 <map name="src_2_execution_engine_2_m___i_n_t_e_r_p_r_e_t_e_r_8c" id="src_2_execution_engine_2_m___i_n_t_e_r_p_r_e_t_e_r_8c">
 <area shape="rect" id="node3" href="_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="90,92,280,131"/>
-<area shape="rect" id="node5" href="_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="304,92,493,131"/>
-<area shape="rect" id="node6" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="518,92,679,131"/>
+<area shape="rect" id="node6" href="_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="304,92,493,131"/>
+<area shape="rect" id="node7" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="518,92,679,131"/>
 <area shape="rect" id="node4" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="323,179,474,204"/>
 </map>
 </div>
@@ -122,7 +122,7 @@ Funções</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Modulo do Interpretador da JVM. </p>
-<p>Interface responsavel por implentar os servicos relacionados ao interpretador da JVM. </p>
+<p>Modulo responsavel por implentar os servicos relacionados ao interpretador da JVM. </p>
 </div><h2 class="groupheader">Definições e macros</h2>
 <a class="anchor" id="ae59ceac0ebfc5e5227e7bb73c02032ac"></a>
 <div class="memitem">
@@ -157,26 +157,66 @@ Funções</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Obtem o opcode</p>
-<p>Decodifica o opcode</p>
-<p>Executa o a instrucao referente ao opcode </p>
+<p>Enquanto a pilha de frames nao estiver vazia:</p>
+<p>1.Obtem o opcode.</p>
+<p>2.Decodifica o opcode</p>
+<p>3.Executa o a instrucao referente ao opcode</p>
+<p>4.Atualizamos o valor de PC </p>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4_cgraph.png" border="0" usemap="#_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4_cgraph" alt=""/></div>
 <map name="_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4_cgraph" id="_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4_cgraph">
-<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="121,55,295,80"/>
-<area shape="rect" id="node8" href="_i___d_e_c_o_d_e_r_8h.html#a4e8de24d699f59f33b9ab369abd7d7b9" title="decode" alt="" coords="176,104,241,129"/>
-<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="343,55,513,80"/>
-<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="561,5,745,31"/>
-<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="610,55,696,80"/>
-<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="793,5,993,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="817,55,969,80"/>
-<area shape="rect" id="node9" href="_m___d_e_c_o_d_e_r_8c.html#ab46b5978371cf93b99f98a1e8c576c5b" title="iadd_GAMBIARRA" alt="" coords="361,104,495,129"/>
-<area shape="rect" id="node10" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="573,104,733,129"/>
-<area shape="rect" id="node12" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="580,153,726,179"/>
-<area shape="rect" id="node11" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="832,128,955,153"/>
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="121,548,295,573"/>
+<area shape="rect" id="node4" href="_i___d_e_c_o_d_e_r_8h.html#a4e8de24d699f59f33b9ab369abd7d7b9" title="decode" alt="" coords="176,1140,241,1165"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="343,5,513,31"/>
+<area shape="rect" id="node5" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#abfc7fc65fc5b975cda6efcbbbd16693c" title="iadd" alt="" coords="405,55,451,80"/>
+<area shape="rect" id="node6" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#ac4c358843ff2d838f43071efd5fdd81f" title="ladd" alt="" coords="405,104,451,129"/>
+<area shape="rect" id="node7" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a394c32f0924c8c3055850d3f30bbdfc9" title="fadd" alt="" coords="405,153,452,179"/>
+<area shape="rect" id="node8" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a569db44443a7b4040801c8386bd2725b" title="dadd" alt="" coords="403,203,454,228"/>
+<area shape="rect" id="node9" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#ab30e38eea76627b4e812e73488a9e677" title="isub" alt="" coords="405,252,451,277"/>
+<area shape="rect" id="node10" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#af1c8267f2e7c41aa10c1d7dff11f1569" title="lsub" alt="" coords="405,301,451,327"/>
+<area shape="rect" id="node11" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a569ef8ea2cbb8cc2b76bcc192f43de45" title="fsub" alt="" coords="405,351,451,376"/>
+<area shape="rect" id="node12" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a572a7ca1016e1fafe10cb6d49962b38a" title="dsub" alt="" coords="403,400,453,425"/>
+<area shape="rect" id="node13" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#ac3198ddea52000be6498cc827696d575" title="imul" alt="" coords="405,449,451,475"/>
+<area shape="rect" id="node14" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a4f7c2ff576fb131a70aeed63401cc437" title="lmul" alt="" coords="405,499,451,524"/>
+<area shape="rect" id="node15" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a30b4cd261323b43c2e609d96dfbeaec7" title="fmul" alt="" coords="405,548,451,573"/>
+<area shape="rect" id="node16" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#aee1aa0a677b1e74f84840014c786784b" title="dmul" alt="" coords="403,597,453,623"/>
+<area shape="rect" id="node17" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a54049a46079fa160ba7f7f4ae80bd210" title="idiv" alt="" coords="407,647,449,672"/>
+<area shape="rect" id="node18" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a1bd93be8fba00c6d42ceeb0da83e9e60" title="Ldiv" alt="" coords="405,696,451,721"/>
+<area shape="rect" id="node19" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a9d48de4759329d0978ba13950e9fddba" title="fdiv" alt="" coords="407,745,449,771"/>
+<area shape="rect" id="node20" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a95309687a4e22c75be269f5b454cb927" title="ddiv" alt="" coords="405,795,451,820"/>
+<area shape="rect" id="node21" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a37dea5e6dc92cc627853d8056a9b958c" title="irem" alt="" coords="405,844,452,869"/>
+<area shape="rect" id="node22" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a0aacd836a995ba5104398e16f3a28de6" title="lrem" alt="" coords="405,893,452,919"/>
+<area shape="rect" id="node23" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a785614ca4ebcfeb8c896667effaff7f3" title="frem" alt="" coords="404,943,452,968"/>
+<area shape="rect" id="node24" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a399898dcf19c5d2d9ea2c5edc68a54b6" title="Drem" alt="" coords="401,992,455,1017"/>
+<area shape="rect" id="node25" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a2d9f7c12f79a2ff3f3e2b7cf8fc0c1e1" title="ineg" alt="" coords="405,1041,451,1067"/>
+<area shape="rect" id="node26" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#aa26b1a44fe70268a3543f15433378ce8" title="lneg" alt="" coords="405,1091,451,1116"/>
+<area shape="rect" id="node27" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a34f4116bcb1f4efdc88cfdb319e80876" title="fneg" alt="" coords="405,1140,452,1165"/>
+<area shape="rect" id="node28" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a6ffefc2c2ab667c9d7b160ec89476246" title="dneg" alt="" coords="403,1189,454,1215"/>
+<area shape="rect" id="node29" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#ac59a06d24fbf160da946eb83f5da43d4" title="ishl" alt="" coords="407,1239,449,1264"/>
+<area shape="rect" id="node30" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a16f39d9fb69cd032d17b5ae569458b72" title="lshl" alt="" coords="407,1288,449,1313"/>
+<area shape="rect" id="node31" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#ad87e07086bd7462640e1192b53adf497" title="ishr" alt="" coords="407,1337,450,1363"/>
+<area shape="rect" id="node32" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a826e621af85a1356cd0d576cd065f8db" title="lshr" alt="" coords="407,1387,450,1412"/>
+<area shape="rect" id="node33" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a0ecbf7d325b3ded11b0c3eb89fe06017" title="iushr" alt="" coords="403,1436,453,1461"/>
+<area shape="rect" id="node34" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#ad5a9f4404aa97f29c364ff2c68578fb2" title="lushr" alt="" coords="403,1485,453,1511"/>
+<area shape="rect" id="node35" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a2da5cfa69e04db3a594747f1dc21b943" title="iand" alt="" coords="405,1535,451,1560"/>
+<area shape="rect" id="node36" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a01fcff8f9e2bcf2e1087ee27b88b480b" title="land" alt="" coords="405,1584,451,1609"/>
+<area shape="rect" id="node37" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a6033374d00340405b7d0337c4a6c2750" title="ior" alt="" coords="409,1633,447,1659"/>
+<area shape="rect" id="node38" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#a5f9fb8c7ce7eb12fb48af02559b754e1" title="lor" alt="" coords="409,1683,447,1708"/>
+<area shape="rect" id="node39" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#af9204f90364c64074f6ed01cfdafcfca" title="ixor" alt="" coords="407,1732,450,1757"/>
+<area shape="rect" id="node40" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#aabb6a818f365db8e7c8599ce877ff1cc" title="lxor" alt="" coords="407,1781,450,1807"/>
+<area shape="rect" id="node41" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html#adcb35027b6c120d736aeaedce5c57fe5" title="iinc" alt="" coords="407,1831,449,1856"/>
+<area shape="rect" id="node42" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#af6bfa0d22b6d806a189e7626aacaad8d" title="nop" alt="" coords="406,1880,450,1905"/>
+<area shape="rect" id="node43" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a9ea8f869d70504a109003e28a4632cf5" title="aconst_null" alt="" coords="384,1929,473,1955"/>
+<area shape="rect" id="node44" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a50bb270225e9a1cf150c539915b7358b" title="iconst_m1" alt="" coords="387,1979,469,2004"/>
+<area shape="rect" id="node45" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a517ea4a2ed9271bb681e0050b57b57f1" title="iconst_0" alt="" coords="393,2028,464,2053"/>
+<area shape="rect" id="node46" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a4c8beb042ea19e5084ccbd0934f4cde8" title="iconst_1" alt="" coords="393,2077,464,2103"/>
+<area shape="rect" id="node47" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#abab7e38f5471cca4c1e60411f4d040ed" title="iconst_2" alt="" coords="393,2127,464,2152"/>
+<area shape="rect" id="node48" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a0271938c3074940c1e95d2f54339939a" title="iconst_3" alt="" coords="393,2176,464,2201"/>
+<area shape="rect" id="node49" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a605a18b89949e8e1b6e422e2f303c5b0" title="iconst_4" alt="" coords="393,2225,464,2251"/>
+<area shape="rect" id="node50" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a2c95953ecaae921ddd79f708ebac135d" title="iconst_5" alt="" coords="393,2275,464,2300"/>
 </map>
 </div>
 </p>

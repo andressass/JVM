@@ -1,6 +1,7 @@
 <map id="src/ClassLoader/M_ECLASS.c" name="src/ClassLoader/M_ECLASS.c">
-<area shape="rect" id="node2" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="11,79,175,117"/>
-<area shape="rect" id="node7" href="$_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="165,165,315,204"/>
-<area shape="rect" id="node5" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="28,172,140,197"/>
-<area shape="rect" id="node6" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="92,252,243,277"/>
+<area shape="rect" id="node2" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="5,79,170,117"/>
+<area shape="rect" id="node8" href="$_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="215,165,365,204"/>
+<area shape="rect" id="node9" href="$_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de conversoes de tipos. " alt="" coords="390,165,561,204"/>
+<area shape="rect" id="node5" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="78,172,190,197"/>
+<area shape="rect" id="node6" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="215,252,366,277"/>
 </map>

@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„MaquinaVirtualJava“: Referência do Arquivo src/ExecutionEngine/M_INSTCONVERSION.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„MaquinaVirtualJava“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5f2449c44ec548a56e6c24cd817e8e53.html">ExecutionEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo M_INSTCONVERSION.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo que contem as instrucoes de conversao.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_i___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8h_source.html">../../include/ExecutionEngine/I_INSTCONVERSION.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___m_e_m_o_r_y_u_n_i_t_8h_source.html">../../include/MemoryUnit/I_MEMORYUNIT.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para M_INSTCONVERSION.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c__incl.png" border="0" usemap="#src_2_execution_engine_2_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c" alt=""/></div>
+<map name="src_2_execution_engine_2_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c" id="src_2_execution_engine_2_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c">
+<area shape="rect" id="node5" href="_i___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de instrucoes de conversao de tipos da JVM. " alt="" coords="266,92,456,131"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="480,92,642,131"/>
+<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="385,179,536,204"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:ad45e4237a00e62b0474747a3f52f7e6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#ad45e4237a00e62b0474747a3f52f7e6f">M_INSTCONVERSION_SERV</a></td></tr>
+<tr class="separator:ad45e4237a00e62b0474747a3f52f7e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ad70c26cd56ebf078f2feb3924ec33ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#ad70c26cd56ebf078f2feb3924ec33ed7">i2l</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ad70c26cd56ebf078f2feb3924ec33ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af955f12e8dbd4ad104159a273b575749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#af955f12e8dbd4ad104159a273b575749">i2f</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:af955f12e8dbd4ad104159a273b575749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae075d6b97e9f65aa2f1b072e932c4bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#ae075d6b97e9f65aa2f1b072e932c4bf4">i2d</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ae075d6b97e9f65aa2f1b072e932c4bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8a41d58a90e4f188c831d9c10fe5e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a4b8a41d58a90e4f188c831d9c10fe5e4">l2i</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a4b8a41d58a90e4f188c831d9c10fe5e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786be1ebacc8d646439fed8c95ca895b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a786be1ebacc8d646439fed8c95ca895b">l2f</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a786be1ebacc8d646439fed8c95ca895b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cc2bd38782a7c9e636cfbe7c3b2929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#af4cc2bd38782a7c9e636cfbe7c3b2929">l2d</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:af4cc2bd38782a7c9e636cfbe7c3b2929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f08efd22e5cdc65ce875fb30a030a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a9f08efd22e5cdc65ce875fb30a030a32">f2i</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a9f08efd22e5cdc65ce875fb30a030a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68d95a1be041a1b68a18ef8fc47e49b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#ab68d95a1be041a1b68a18ef8fc47e49b">f2l</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ab68d95a1be041a1b68a18ef8fc47e49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3f89af4fbea2612ad8f75de14a6078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a2f3f89af4fbea2612ad8f75de14a6078">f2d</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a2f3f89af4fbea2612ad8f75de14a6078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bb643ecb86d02d3fd694277ae757c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a82bb643ecb86d02d3fd694277ae757c4">d2i</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a82bb643ecb86d02d3fd694277ae757c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923b02fa9d2d0af9438d6dc8f68daf65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a923b02fa9d2d0af9438d6dc8f68daf65">d2l</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a923b02fa9d2d0af9438d6dc8f68daf65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b27b28e6b56eebb4a56ea5f76315e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a2b27b28e6b56eebb4a56ea5f76315e53">d2f</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a2b27b28e6b56eebb4a56ea5f76315e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633aaf788daee3ac619aa6759b496b9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a633aaf788daee3ac619aa6759b496b9e">i2b</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a633aaf788daee3ac619aa6759b496b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90750c6dc3d44c06edc8c8e87391e21e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#a90750c6dc3d44c06edc8c8e87391e21e">i2c</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a90750c6dc3d44c06edc8c8e87391e21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac8b1ccf2d13d2e3f11737ef599ed81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html#abac8b1ccf2d13d2e3f11737ef599ed81">i2s</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:abac8b1ccf2d13d2e3f11737ef599ed81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo que contem as instrucoes de conversao. </p>
+<p>Modulo responsavel por implementar as instrucoes de conversao entre tipos na JVM </p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="ad45e4237a00e62b0474747a3f52f7e6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_INSTCONVERSION_SERV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a2b27b28e6b56eebb4a56ea5f76315e53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void d2f </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um double em um float </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2b27b28e6b56eebb4a56ea5f76315e53_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="93,5,253,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="100,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="301,31,424,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a82bb643ecb86d02d3fd694277ae757c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void d2i </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um double em um int </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a82bb643ecb86d02d3fd694277ae757c4_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a923b02fa9d2d0af9438d6dc8f68daf65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void d2l </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um double em um long </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a923b02fa9d2d0af9438d6dc8f68daf65_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f3f89af4fbea2612ad8f75de14a6078"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void f2d </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um float em um double </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a2f3f89af4fbea2612ad8f75de14a6078_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="93,5,253,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="100,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="301,31,424,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f08efd22e5cdc65ce875fb30a030a32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void f2i </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um float em um int </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a9f08efd22e5cdc65ce875fb30a030a32_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab68d95a1be041a1b68a18ef8fc47e49b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void f2l </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um float em um long </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ab68d95a1be041a1b68a18ef8fc47e49b_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a633aaf788daee3ac619aa6759b496b9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2b </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um int em um byte </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a633aaf788daee3ac619aa6759b496b9e_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a90750c6dc3d44c06edc8c8e87391e21e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2c </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um int em um char </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a90750c6dc3d44c06edc8c8e87391e21e_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae075d6b97e9f65aa2f1b072e932c4bf4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um int em um double </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ae075d6b97e9f65aa2f1b072e932c4bf4_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af955f12e8dbd4ad104159a273b575749"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2f </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um int em um float </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af955f12e8dbd4ad104159a273b575749_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad70c26cd56ebf078f2feb3924ec33ed7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2l </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um int em um long </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_ad70c26cd56ebf078f2feb3924ec33ed7_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abac8b1ccf2d13d2e3f11737ef599ed81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2s </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um int em um short </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_abac8b1ccf2d13d2e3f11737ef599ed81_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af4cc2bd38782a7c9e636cfbe7c3b2929"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void l2d </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um long em um double </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_af4cc2bd38782a7c9e636cfbe7c3b2929_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,246,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a786be1ebacc8d646439fed8c95ca895b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void l2f </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um long em um float </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a786be1ebacc8d646439fed8c95ca895b_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b8a41d58a90e4f188c831d9c10fe5e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void l2i </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao para conversao de um long em um int </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4_cgraph" id="_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c_a4b8a41d58a90e4f188c831d9c10fe5e4_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="92,5,252,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="99,55,245,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="300,31,423,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

@@ -112,7 +112,9 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 <map name="include_2_estruturas_2_o_p_c_o_d_e_s_8hdep" id="include_2_estruturas_2_o_p_c_o_d_e_s_8hdep">
 <area shape="rect" id="node2" href="_m___e_c_l_a_s_s_8c.html" title="Modulo Exibidor de arquivos &quot;.class&quot;. " alt="" coords="5,99,208,124"/>
 <area shape="rect" id="node3" href="_o_p_c_o_d_e_s_8c.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="232,99,416,124"/>
-<area shape="rect" id="node4" href="_m___d_e_c_o_d_e_r_8c.html" title="src/ExecutionEngine\l/M_DECODER.c" alt="" coords="441,92,584,131"/>
+<area shape="rect" id="node4" href="_m___d_e_c_o_d_e_r_8c.html" title="Modulo do Decodificador da JVM. " alt="" coords="441,92,584,131"/>
+<area shape="rect" id="node5" href="_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="src/ExecutionEngine\l/M_INSTLOADSTORAGE.c" alt="" coords="607,92,793,131"/>
+<area shape="rect" id="node6" href="_m___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8c.html" title="src/Util/M_TYPECONVERSION.c" alt="" coords="817,99,1036,124"/>
 </map>
 </div>
 </div>
@@ -537,12 +539,12 @@ Definições e Macros</h2></td></tr>
 Funções</h2></td></tr>
 <tr class="memitem:a7032610407e47a7ec45a93ef7949e8c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a0aaaf2c37d182ce1836a1b8ff6099ed9">EXT20</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9">getOpcodeName</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode)</td></tr>
 <tr class="separator:a7032610407e47a7ec45a93ef7949e8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f96884d8c7b2dd66aff9b7297ee0a10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a0aaaf2c37d182ce1836a1b8ff6099ed9">EXT20</a> short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a6f96884d8c7b2dd66aff9b7297ee0a10">getOpcodeAttributesNumber</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode)</td></tr>
-<tr class="separator:a6f96884d8c7b2dd66aff9b7297ee0a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0578ded3254be37b41b92ebbe4973a8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a0aaaf2c37d182ce1836a1b8ff6099ed9">EXT20</a> short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a0578ded3254be37b41b92ebbe4973a8d">getOpcodeAttributesNumber</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode, <a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *arguments, <a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *codeBegin)</td></tr>
+<tr class="separator:a0578ded3254be37b41b92ebbe4973a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Biblioteca de servicos de Opcodes. </p>
-<p>Bliblioteca responsavel por prover as definicoes e metodos relacionados aos opcodes de uma JVM </p>
+<p>Biblioteca responsavel por prover as definicoes e metodos relacionados aos opcodes de uma JVM </p>
 </div><h2 class="groupheader">Definições e macros</h2>
 <a class="anchor" id="a0aaaf2c37d182ce1836a1b8ff6099ed9"></a>
 <div class="memitem">
@@ -3017,7 +3019,7 @@ Funções</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Funções</h2>
-<a class="anchor" id="a6f96884d8c7b2dd66aff9b7297ee0a10"></a>
+<a class="anchor" id="a0578ded3254be37b41b92ebbe4973a8d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3025,8 +3027,24 @@ Funções</h2></td></tr>
           <td class="memname"><a class="el" href="_o_p_c_o_d_e_s_8h.html#a0aaaf2c37d182ce1836a1b8ff6099ed9">EXT20</a> short getOpcodeAttributesNumber </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>&#160;</td>
-          <td class="paramname"><em>opcode</em></td><td>)</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> *&#160;</td>
+          <td class="paramname"><em>codeBegin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3034,6 +3052,8 @@ Funções</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">u1</td><td>opcode Codigo do opcode. </td></tr>
+    <tr><td class="paramname">arguments</td><td>Referencia para os argumentos da instrucao. </td></tr>
+    <tr><td class="paramname">codeBegin</td><td>Referencia o inicio do vetor de instrucoes. </td></tr>
   </table>
   </dd>
 </dl>

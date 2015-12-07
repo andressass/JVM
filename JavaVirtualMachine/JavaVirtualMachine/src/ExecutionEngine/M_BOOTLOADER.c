@@ -1,4 +1,4 @@
-//#################################################################################################
+    //#################################################################################################
 /*! \file M_BOOTLOADER.c
  *
  *  \brief Modulo de Inicializacao da JVM.
@@ -69,8 +69,8 @@ int main(int argc, const char * argv[]) {
     
     //Passamos o ambiente de execucao para o interpretador
     execute(environment);
-    
-    printf("\n_____________________");
+
+    printf("\n\n\n_____________________");
     printf("\n❆   ❆         ❆    ❆ ");
     printf("\n  ❆   /\\ ❆     ❆  ");
     printf("\n     /  \\   ❆      ❆");
@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
     printf("\n     |   |   _v_ ❆ ");
     printf("\n     |___|  |_|_|   ❆");
     printf("\n_____________________");
-    printf("\nFeliz Natal, Ladeira!\n\n");
-    
+    printf("\nFeliz Natal!\n\n");
+    printf("\n\n");
     return 0;
 }

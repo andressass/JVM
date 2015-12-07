@@ -244,6 +244,9 @@ int classInitializer(JavaClass* javaClass, Environment* environment){
     //Verificacao e carregamento de superclasses
     classSuperClassChecker(javaClass->arqClass, environment);
     
+    //Se a classe nao tiver o metodo init
+    if (!getMethodInfoFromClass(javaClass,  "<clinit>", "()V")) return InitializerSuccess;
+
     //Empilhamos o metodo <clinit> da classe
     environment->thread->PC--; //Metodo eh invocado sem ser chamado, precisa decrementar PC
     pushFrame(environment, getClassNameFromConstantPool(javaClass->arqClass->constant_pool, javaClass->arqClass->this_class), "<clinit>", "()V");
@@ -299,7 +302,7 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     
     classInitializer(javaClass, environment);
     
-    LECLASS_exibidor(javaClass->arqClass);
+    //  LECLASS_exibidor(javaClass->arqClass);
     
     //Retornamos a estrutura inicializada
     return javaClass;

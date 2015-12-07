@@ -91,20 +91,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">Referência do Arquivo M_DECODER.c</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Modulo do Decodificador da JVM.  
+<a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_i___d_e_c_o_d_e_r_8h_source.html">../../include/ExecutionEngine/I_DECODER.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_o_p_c_o_d_e_s_8h_source.html">../../include/Estruturas/OPCODES.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i___m_e_m_o_r_y_u_n_i_t_8h_source.html">../../include/MemoryUnit/I_MEMORYUNIT.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h_source.html">../../include/ExecutionEngine/I_INSTLOGARITH.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h_source.html">../../include/ExecutionEngine/I_INSTLOADSTORAGE.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_source.html">../../include/ExecutionEngine/I_INSTOBJANDINVOKE.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8h_source.html">../../include/ExecutionEngine/I_INSTCONVERSION.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___i_n_s_t_r_e_t_u_r_n_8h_source.html">../../include/ExecutionEngine/I_INSTRETURN.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___e_x_c_e_p_t_i_o_n_8h_source.html">../../include/ExecutionEngine/I_EXCEPTION.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para M_DECODER.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___d_e_c_o_d_e_r_8c__incl.png" border="0" usemap="#src_2_execution_engine_2_m___d_e_c_o_d_e_r_8c" alt=""/></div>
 <map name="src_2_execution_engine_2_m___d_e_c_o_d_e_r_8c" id="src_2_execution_engine_2_m___d_e_c_o_d_e_r_8c">
-<area shape="rect" id="node4" href="_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="465,92,654,131"/>
-<area shape="rect" id="node6" href="_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="105,92,255,131"/>
-<area shape="rect" id="node7" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="279,92,440,131"/>
-<area shape="rect" id="node5" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="284,179,435,204"/>
+<area shape="rect" id="node5" href="_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="1138,92,1328,131"/>
+<area shape="rect" id="node8" href="_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="61,92,211,131"/>
+<area shape="rect" id="node9" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="1352,92,1514,131"/>
+<area shape="rect" id="node10" href="_i___i_n_s_t_l_o_g_a_r_i_t_h_8h.html" title="Interface de instrucoes logico aritimeticas da JVM. " alt="" coords="1538,92,1728,131"/>
+<area shape="rect" id="node11" href="_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html" title="Interface de instrucoes de carga e armazenamento da JVM. " alt="" coords="1752,92,1941,131"/>
+<area shape="rect" id="node12" href="_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h.html" title="Interface de instrucoes de Manipulacao de Objetos e Invokes da JVM. " alt="" coords="285,92,474,131"/>
+<area shape="rect" id="node13" href="_i___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de instrucoes de conversao de tipos da JVM. " alt="" coords="498,92,688,131"/>
+<area shape="rect" id="node14" href="_i___i_n_s_t_r_e_t_u_r_n_8h.html" title="Interface de instrucoes de retorno da JVM. " alt="" coords="712,92,901,131"/>
+<area shape="rect" id="node15" href="_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="925,92,1114,131"/>
+<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="944,179,1095,204"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -115,12 +131,13 @@ Definições e Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:ab46b5978371cf93b99f98a1e8c576c5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___d_e_c_o_d_e_r_8c.html#ab46b5978371cf93b99f98a1e8c576c5b">iadd_GAMBIARRA</a> (<a class="el" href="struct_thread.html">Thread</a> *thread)</td></tr>
-<tr class="separator:ab46b5978371cf93b99f98a1e8c576c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15749fcec3df3d32d415e4940dd9b244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#a115594396e61533b63040ef3074bd622">instruction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___d_e_c_o_d_e_r_8c.html#a15749fcec3df3d32d415e4940dd9b244">decode</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> bytecode)</td></tr>
+<tr class="memitem:a15749fcec3df3d32d415e4940dd9b244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e___j_v_m_8h.html#a0000d84fd9007ff8ecae19f59d835517">instruction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___d_e_c_o_d_e_r_8c.html#a15749fcec3df3d32d415e4940dd9b244">decode</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> bytecode)</td></tr>
 <tr class="separator:a15749fcec3df3d32d415e4940dd9b244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Definições e macros</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo do Decodificador da JVM. </p>
+<p>Modulo responsavel pela implementacao os servicos relacionados a decodificacao de bytecodes em instrucoes. </p>
+</div><h2 class="groupheader">Definições e macros</h2>
 <a class="anchor" id="a24caf25c7e9c7e314cf44dd3d9bb6e1d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +156,7 @@ Funções</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#a115594396e61533b63040ef3074bd622">instruction</a> decode </td>
+          <td class="memname"><a class="el" href="_e___j_v_m_8h.html#a0000d84fd9007ff8ecae19f59d835517">instruction</a> decode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>&#160;</td>
           <td class="paramname"><em>bytecode</em></td><td>)</td>
@@ -155,47 +172,6 @@ Funções</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>Ponteiro para a instrucao referente ao bytecode </dd></dl>
-
-<p><div class="dynheader">
-Este é o diagrama das funções utilizadas por esta função:</div>
-<div class="dyncontent">
-<div class="center"><img src="_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244_cgraph.png" border="0" usemap="#_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244_cgraph" alt=""/></div>
-<map name="_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244_cgraph" id="_m___d_e_c_o_d_e_r_8c_a15749fcec3df3d32d415e4940dd9b244_cgraph">
-<area shape="rect" id="node2" href="_m___d_e_c_o_d_e_r_8c.html#ab46b5978371cf93b99f98a1e8c576c5b" title="iadd_GAMBIARRA" alt="" coords="118,31,252,56"/>
-<area shape="rect" id="node3" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="300,5,460,31"/>
-<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="307,55,454,80"/>
-<area shape="rect" id="node4" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="508,31,631,56"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ab46b5978371cf93b99f98a1e8c576c5b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iadd_GAMBIARRA </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_thread.html">Thread</a> *&#160;</td>
-          <td class="paramname"><em>thread</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Este é o diagrama das funções utilizadas por esta função:</div>
-<div class="dyncontent">
-<div class="center"><img src="_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b_cgraph.png" border="0" usemap="#_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b_cgraph" alt=""/></div>
-<map name="_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b_cgraph" id="_m___d_e_c_o_d_e_r_8c_ab46b5978371cf93b99f98a1e8c576c5b_cgraph">
-<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="187,5,347,31"/>
-<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="194,55,341,80"/>
-<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="395,31,518,56"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>

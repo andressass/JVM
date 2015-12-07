@@ -1250,12 +1250,18 @@ void wide(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
-EXT14 void Dup(Environment* environment){
+void Dup(Environment* environment){
 
     u4 value = popFromOperandStack(environment->thread);
     
     pushInOperandStack(environment->thread, value);
     pushInOperandStack(environment->thread, value);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void pop(Environment* environment){
+    popFromOperandStack(environment->thread);
 }
 
 

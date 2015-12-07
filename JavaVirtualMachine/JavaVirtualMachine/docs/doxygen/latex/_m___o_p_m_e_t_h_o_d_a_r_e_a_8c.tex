@@ -11,7 +11,10 @@ Modulo da area de metodos da J\+V\+M.
 {\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c\+:\nopagebreak
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+J\+A\+V\+A\+D\+E\+C\+O\+D\+E\+R.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,6 +53,8 @@ void $\ast$ \hyperlink{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a0aea804f599fa1ef117b1c55
 \item 
 void $\ast$ \hyperlink{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a3bda70916720cb411a1bfa1cc72b7e57}{get\+Object\+Attribute\+Reference} (\hyperlink{struct_object}{Object} $\ast$object, const char $\ast$attribute\+Name)
 \item 
+void \hyperlink{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a89e8b1ed88bdccd5ab1a9636c98b0ce7}{add\+Object\+Reference\+To\+Java\+Class} (\hyperlink{struct_object}{Object} $\ast$object, \hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class)
+\item 
 \hyperlink{struct_object}{Object} $\ast$ \hyperlink{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a16be39ddddc84f01fc139d178c1ccb62}{new\+Object\+From\+Class} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
 \end{DoxyCompactItemize}
 
@@ -85,7 +90,8 @@ Metodo que recebe uma referencia para uma classe e a adiciona na area de metodos
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -94,6 +100,23 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a89e8b1ed88bdccd5ab1a9636c98b0ce7}{}\index{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c@{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c}!add\+Object\+Reference\+To\+Java\+Class@{add\+Object\+Reference\+To\+Java\+Class}}
+\index{add\+Object\+Reference\+To\+Java\+Class@{add\+Object\+Reference\+To\+Java\+Class}!M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c@{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c}}
+\subsubsection[{add\+Object\+Reference\+To\+Java\+Class(\+Object $\ast$object, Java\+Class $\ast$java\+Class)}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Object\+Reference\+To\+Java\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a89e8b1ed88bdccd5ab1a9636c98b0ce7}
+Metodo que, da uma referencia para uma estrutura java\+Class e uma referencia a um objeto, adiciona este objeto na lista de objetos da classe. A adicao acontece na forma de empilhamento.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em object} & Referencia ao objeto adicionado \\
+\hline
+{\em java\+Class} & Referencia para a Estrutura java\+Class \\
+\hline
+\end{DoxyParams}
 \hypertarget{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a0588cafaa47270920828bd00e79e0e77}{}\index{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c@{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c}!find\+Java\+Class\+On\+Method\+Area@{find\+Java\+Class\+On\+Method\+Area}}
 \index{find\+Java\+Class\+On\+Method\+Area@{find\+Java\+Class\+On\+Method\+Area}!M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c@{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c}}
 \subsubsection[{find\+Java\+Class\+On\+Method\+Area(const char $\ast$qualified\+Name, Method\+Area $\ast$method\+Area)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Java\+Class}$\ast$ find\+Java\+Class\+On\+Method\+Area (
@@ -114,6 +137,18 @@ Metodo que recebe o nome de uma classe como parametro e retorna uma referencia p
 \begin{DoxyReturn}{Retorna}
 Endereco da estrutura \hyperlink{struct_java_class}{Java\+Class} (ou nulo se nao existe) 
 \end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_a0588cafaa47270920828bd00e79e0e77_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_m___o_p_m_e_t_h_o_d_a_r_e_a_8c_af88134591aa8a53277ff1f94c075a84b}{}\index{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c@{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c}!get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}}
 \index{get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}!M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c@{M\+\_\+\+O\+P\+M\+E\+T\+H\+O\+D\+A\+R\+E\+A.\+c}}
 \subsubsection[{get\+Byte\+Code\+From\+Method(method\+\_\+info $\ast$method\+Info, cp\+\_\+info $\ast$constant\+\_\+pool, int pc)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1} get\+Byte\+Code\+From\+Method (

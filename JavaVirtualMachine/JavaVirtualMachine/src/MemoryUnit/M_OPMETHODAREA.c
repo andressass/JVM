@@ -287,7 +287,7 @@ Object* newObjectFromClass(const char* className, Environment* environment ){
     object->handler->javaClass = javaClass;
     
     //Alocamos espaco na tabela de campos para o numero de campos
-    object->handler->fields = classInitializeFields(javaClass, 0x1111, ACC_STATIC);
+    object->handler->fields = classInitializeFields(javaClass, 0xFFFF, ACC_STATIC);
     
     //Adicionamos uma referencia ao objeto na lista de objetos da classe
     addObjectReferenceToJavaClass(object, javaClass);

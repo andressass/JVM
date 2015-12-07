@@ -1,0 +1,246 @@
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c}{}\section{Referência do Arquivo src/\+Util/\+M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.c}
+\label{_m___j_a_v_a_l_a_n_g_8c}\index{src/\+Util/\+M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{src/\+Util/\+M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$wchar.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+S\+T\+R\+I\+N\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+T\+Y\+P\+E\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___j_a_v_a_l_a_n_g_8c_a87343f73de774b6ce3c11e148e8ef0d8}{J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___j_a_v_a_l_a_n_g_8c_a475f507e1ed27e75014f6e80c57a75ba}{system\+Execute\+Method} (const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___j_a_v_a_l_a_n_g_8c_a428e52c90af52158a418e3759b74c8d4}{string\+Buffer\+Append} (const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___j_a_v_a_l_a_n_g_8c_aebb968376e314ba25f9363d975976172}{string\+Buffer\+Execute\+Method} (const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___j_a_v_a_l_a_n_g_8c_aa3c9a97f6e8f4342ceb45a78c36f4b85}{java\+Lang\+Execute\+Method} (const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___j_a_v_a_l_a_n_g_8c_ac3db52a4e623e7596979fa058f6013cf}{java\+Lang\+Get\+Static} (const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___j_a_v_a_l_a_n_g_8c_ab420bbd99a39cea81b5d501840a40da2}{java\+Lang\+New\+Object} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_a87343f73de774b6ce3c11e148e8ef0d8}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V@{J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V}}
+\index{J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V@{J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+A\+V\+A\+L\+A\+N\+G\+\_\+\+S\+E\+R\+V}\label{_m___j_a_v_a_l_a_n_g_8c_a87343f73de774b6ce3c11e148e8ef0d8}
+
+
+\subsection{Funções}
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_aa3c9a97f6e8f4342ceb45a78c36f4b85}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!java\+Lang\+Execute\+Method@{java\+Lang\+Execute\+Method}}
+\index{java\+Lang\+Execute\+Method@{java\+Lang\+Execute\+Method}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{java\+Lang\+Execute\+Method(const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void java\+Lang\+Execute\+Method (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___j_a_v_a_l_a_n_g_8c_aa3c9a97f6e8f4342ceb45a78c36f4b85}
+Metodo que decodifica e simula a execucao de um metodo da biblioteca java.\+lang
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser executado. \\
+\hline
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c_aa3c9a97f6e8f4342ceb45a78c36f4b85_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_ac3db52a4e623e7596979fa058f6013cf}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!java\+Lang\+Get\+Static@{java\+Lang\+Get\+Static}}
+\index{java\+Lang\+Get\+Static@{java\+Lang\+Get\+Static}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{java\+Lang\+Get\+Static(const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void java\+Lang\+Get\+Static (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{field\+Name, }
+\item[{const char $\ast$}]{field\+Descriptor, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___j_a_v_a_l_a_n_g_8c_ac3db52a4e623e7596979fa058f6013cf}
+Metodo que obtem o valor de um campo estatico da biblioteca java.\+lang e empilha na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do campo \\
+\hline
+{\em field\+Name} & Nome do campo a ser obtido. \\
+\hline
+{\em field\+Descriptor} & Descritor do campo a ser obtido. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c_ac3db52a4e623e7596979fa058f6013cf_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_ab420bbd99a39cea81b5d501840a40da2}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!java\+Lang\+New\+Object@{java\+Lang\+New\+Object}}
+\index{java\+Lang\+New\+Object@{java\+Lang\+New\+Object}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{java\+Lang\+New\+Object(const char $\ast$class\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void java\+Lang\+New\+Object (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___j_a_v_a_l_a_n_g_8c_ab420bbd99a39cea81b5d501840a40da2}
+Metodo que cria um objeto da biblioteca java.\+lang e empilha uma referencia na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do objeto a ser criado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c_ab420bbd99a39cea81b5d501840a40da2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_a428e52c90af52158a418e3759b74c8d4}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!string\+Buffer\+Append@{string\+Buffer\+Append}}
+\index{string\+Buffer\+Append@{string\+Buffer\+Append}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{string\+Buffer\+Append(const char $\ast$descriptor\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void string\+Buffer\+Append (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___j_a_v_a_l_a_n_g_8c_a428e52c90af52158a418e3759b74c8d4}
+Metodo que decodifica e simula a execucao do metodo de java.\+lang.\+String\+Buffer.\+append
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c_a428e52c90af52158a418e3759b74c8d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_aebb968376e314ba25f9363d975976172}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!string\+Buffer\+Execute\+Method@{string\+Buffer\+Execute\+Method}}
+\index{string\+Buffer\+Execute\+Method@{string\+Buffer\+Execute\+Method}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{string\+Buffer\+Execute\+Method(const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void string\+Buffer\+Execute\+Method (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___j_a_v_a_l_a_n_g_8c_aebb968376e314ba25f9363d975976172}
+Metodo que decodifica e simula a execucao de um metodo de java.\+lang.\+String\+Buffer
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser executado. \\
+\hline
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c_aebb968376e314ba25f9363d975976172_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___j_a_v_a_l_a_n_g_8c_a475f507e1ed27e75014f6e80c57a75ba}{}\index{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}!system\+Execute\+Method@{system\+Execute\+Method}}
+\index{system\+Execute\+Method@{system\+Execute\+Method}!M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c@{M\+\_\+\+J\+A\+V\+A\+L\+A\+N\+G.\+c}}
+\subsubsection[{system\+Execute\+Method(const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void system\+Execute\+Method (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___j_a_v_a_l_a_n_g_8c_a475f507e1ed27e75014f6e80c57a75ba}
+Metodo que decodifica e simula a execucao de um metodo de java.\+io.\+System
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser executado. \\
+\hline
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___j_a_v_a_l_a_n_g_8c_a475f507e1ed27e75014f6e80c57a75ba_cgraph}
+\end{center}
+\end{figure}
+
+

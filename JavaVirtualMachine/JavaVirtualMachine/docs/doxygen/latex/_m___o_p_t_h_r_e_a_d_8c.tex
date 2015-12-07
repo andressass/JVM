@@ -8,11 +8,13 @@ Modulo de threads da J\+V\+M.
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c\+:\nopagebreak
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{_m___o_p_t_h_r_e_a_d_8c__incl}
+\includegraphics[width=350pt]{_m___o_p_t_h_r_e_a_d_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Definições e Macros}
@@ -25,7 +27,7 @@ Gráfico de dependência de inclusões para M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c\
 \item 
 \hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{_m___o_p_t_h_r_e_a_d_8c_af6089452d2ad55a58ccf834d4b73e1af}{new\+Thread} ()
 \item 
-void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$Method\+Descriptor)
+\hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a269654553d82f082793dfae84359deb3}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$Method\+Descriptor)
 \item 
 void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ac6d7106961bbc47fa0f024aae9ab12f2}{free\+Frame} (\hyperlink{struct_frame}{Frame} $\ast$frame)
 \item 
@@ -34,6 +36,8 @@ void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ab4697379961f0fb312f3bb07ea1bdf74}{pop\+
 \hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a1141dd641cd42d7e58b1e82941d5f46f}{get\+Current\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
 \item 
 void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a9b96069e8c01ae07f6f134c387f367f0}{push\+In\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
+\item 
+void \hyperlink{_m___o_p_t_h_r_e_a_d_8c_a88d4f07abe10db2e0ba377b3d8515472}{push\+In\+Operand\+Stack\+From\+Frame} (\hyperlink{struct_frame}{Frame} $\ast$frame, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
 \item 
 \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{_m___o_p_t_h_r_e_a_d_8c_ae03176586e6491ce50aaac361a143937}{pop\+From\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread)
 \end{DoxyCompactItemize}
@@ -147,16 +151,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!push\+Frame@{push\+Frame}}
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_a269654553d82f082793dfae84359deb3}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!push\+Frame@{push\+Frame}}
 \index{push\+Frame@{push\+Frame}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
-\subsubsection[{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$\+Method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}void push\+Frame (
+\subsubsection[{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$\+Method\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frame}$\ast$ push\+Frame (
 \begin{DoxyParamCaption}
 \item[{{\bf Environment} $\ast$}]{environment, }
 \item[{const char $\ast$}]{class\+Name, }
 \item[{const char $\ast$}]{method\+Name, }
 \item[{const char $\ast$}]{method\+Descriptor}
 \end{DoxyParamCaption}
-)}\label{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_a269654553d82f082793dfae84359deb3}
 Metodo responsavel por criar e inicializar um novo frame para um metodo e o empilhar na pilha da thread.
 
 
@@ -170,6 +174,9 @@ Metodo responsavel por criar e inicializar um novo frame para um metodo e o empi
 {\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+referencia para o frame criado 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:
@@ -177,7 +184,7 @@ Este é o diagrama das funções utilizadas por esta função\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_m___o_p_t_h_r_e_a_d_8c_ac38653be789a51b5171663da538347f6_cgraph}
+\includegraphics[width=350pt]{_m___o_p_t_h_r_e_a_d_8c_a269654553d82f082793dfae84359deb3_cgraph}
 \end{center}
 \end{figure}
 
@@ -210,3 +217,20 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{_m___o_p_t_h_r_e_a_d_8c_a88d4f07abe10db2e0ba377b3d8515472}{}\index{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}!push\+In\+Operand\+Stack\+From\+Frame@{push\+In\+Operand\+Stack\+From\+Frame}}
+\index{push\+In\+Operand\+Stack\+From\+Frame@{push\+In\+Operand\+Stack\+From\+Frame}!M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c@{M\+\_\+\+O\+P\+T\+H\+R\+E\+A\+D.\+c}}
+\subsubsection[{push\+In\+Operand\+Stack\+From\+Frame(\+Frame $\ast$frame, u4 value)}]{\setlength{\rightskip}{0pt plus 5cm}void push\+In\+Operand\+Stack\+From\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame, }
+\item[{{\bf u4}}]{value}
+\end{DoxyParamCaption}
+)}\label{_m___o_p_t_h_r_e_a_d_8c_a88d4f07abe10db2e0ba377b3d8515472}
+Metodo que empilha um valor na pilha de operandos do frame passado como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \hyperlink{struct_frame}{Frame} em cuja pilha de operandos o valor sera empilhado \\
+\hline
+{\em value} & Valor a ser empilhado \\
+\hline
+\end{DoxyParams}

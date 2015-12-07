@@ -7,9 +7,11 @@ Modulo Exibidor de arquivos \char`\"{}.\+class\char`\"{}.
 
 {\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+O\+P\+C\+O\+D\+E\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+T\+Y\+P\+E\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+h\char`\"{}}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
 {\ttfamily \#include $<$wchar.\+h$>$}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,10 +26,6 @@ Gráfico de dependência de inclusões para M\+\_\+\+E\+C\+L\+A\+S\+S.\+c\+:\nop
 \subsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
-double \hyperlink{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{u4\+To\+Double} (\hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} high\+\_\+bytes, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} low\+\_\+bytes)
-\item 
-float \hyperlink{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{u4\+To\+F\+Loat} (\hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} bytes)
-\item 
 wchar\+\_\+t $\ast$ \hyperlink{_m___e_c_l_a_s_s_8c_a473033cabebd84af84798d9f73cd0e3e}{get\+Unicode\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
 \item 
 char $\ast$ \hyperlink{_m___e_c_l_a_s_s_8c_a7ff5b3edf6b2a9a643efc1c8627d1d29}{get\+U\+T\+F8\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
@@ -35,6 +33,8 @@ char $\ast$ \hyperlink{_m___e_c_l_a_s_s_8c_a7ff5b3edf6b2a9a643efc1c8627d1d29}{ge
 void \hyperlink{_m___e_c_l_a_s_s_8c_aaa897dfb9d5e0deeea00dc18db34cf41}{print\+Name\+And\+Type\+Info\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
 \item 
 char $\ast$ \hyperlink{_m___e_c_l_a_s_s_8c_a29b169a5ddc3af0fcc2b06ad09cbea65}{get\+Class\+Name\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
+\item 
+void \hyperlink{_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496}{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index, \hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool, char $\ast$$\ast$class\+\_\+name, char $\ast$$\ast$name, char $\ast$$\ast$descriptor)
 \item 
 \hyperlink{struct_exception_table}{Exception\+Table} $\ast$ \hyperlink{_m___e_c_l_a_s_s_8c_ad1e1e0de6f07a194faf650b3199f6f3d}{parse\+Exception\+Tables} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$exception\+Table\+List, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} exception\+\_\+table\+\_\+length)
 \item 
@@ -52,7 +52,7 @@ void \hyperlink{_m___e_c_l_a_s_s_8c_af83f52bf13173cfa11472ac09452a89e}{exibe\+Ac
 \item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_a225defb36bf20fecbf3fe701ca78f1a9}{exibe\+Interfaces} (\hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
 \item 
-void \hyperlink{_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3}{print\+Byte\+Code} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytecode)
+void \hyperlink{_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c}{print\+Byte\+Code} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytecode, \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytecodes)
 \item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_a63f3dcf8714a53825593901037416ee5}{print\+Byte\+Codes} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$bytecodes, \hyperlink{_e___j_v_m_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} code\+\_\+length)
 \item 
@@ -70,9 +70,9 @@ void \hyperlink{_m___e_c_l_a_s_s_8c_a473b09220e36cdb3909ec266a9e663ed}{exibe\+Ca
 \item 
 void \hyperlink{_m___e_c_l_a_s_s_8c_a45f75a1d6b171e2ba0dfa4be93bc5eff}{exibe\+Metodos} (\hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
 \item 
-\hyperlink{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado} \hyperlink{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195}{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor} (\hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\hyperlink{_e___j_v_m_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult} \hyperlink{_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7}{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor} (\hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
 \item 
-void \hyperlink{_m___e_c_l_a_s_s_8c_a5ec3318a40ba8a6b46b48d39545829f4}{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao} (\hyperlink{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado} \hyperlink{_e___j_v_m_8h_a053af61eb2c10b24ccb2db86bcba4b5f}{resultado}, const char $\ast$file\+Name)
+void \hyperlink{_m___e_c_l_a_s_s_8c_a2a35d7b72c380539f8cf0b57ba384ec3}{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao} (\hyperlink{_e___j_v_m_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult} resultado, const char $\ast$file\+Name)
 \end{DoxyCompactItemize}
 
 
@@ -234,7 +234,8 @@ Metodo que que realiza a exibicao do pool de constantes de uma estrutura Arq\+Cl
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -325,6 +326,44 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool@{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool}}
+\index{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool@{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
+\subsubsection[{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool(u2 index, cp\+\_\+info $\ast$constant\+\_\+pool, char $\ast$$\ast$class\+\_\+name, char $\ast$$\ast$name, char $\ast$$\ast$descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf u2}}]{index, }
+\item[{{\bf cp\+\_\+info} $\ast$}]{constant\+\_\+pool, }
+\item[{char $\ast$$\ast$}]{class\+\_\+name, }
+\item[{char $\ast$$\ast$}]{name, }
+\item[{char $\ast$$\ast$}]{descriptor}
+\end{DoxyParamCaption}
+)}\label{_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496}
+Metodo que, dado um indice valido de field\+\_\+info ou methdo\+\_\+info para um pool de constantes, procura e retorna por referencia o nome da classe do field/metd, o nome do field/metd, e o descritor do field/metd.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & Indice valido para o field\+Info. \\
+\hline
+{\em constant\+\_\+pool} & Referencia para o pool de constantes a ser utilizado. \\
+\hline
+{\em class\+\_\+name} & Referencia para um vetor de char a receber o nome da classe do field/metd \\
+\hline
+{\em name} & Referencia para um vetor de char a receber o nome do field/metd \\
+\hline
+{\em descriptor} & Referencia para um vetor de char a receber o descritor do field/metd \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c_a7db5115362d5b6bfb95134ea861a4496_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_m___e_c_l_a_s_s_8c_a473033cabebd84af84798d9f73cd0e3e}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!get\+Unicode\+From\+Constant\+Pool@{get\+Unicode\+From\+Constant\+Pool}}
 \index{get\+Unicode\+From\+Constant\+Pool@{get\+Unicode\+From\+Constant\+Pool}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
 \subsubsection[{get\+Unicode\+From\+Constant\+Pool(cp\+\_\+info $\ast$cp, u2 index)}]{\setlength{\rightskip}{0pt plus 5cm}wchar\+\_\+t$\ast$ get\+Unicode\+From\+Constant\+Pool (
@@ -376,30 +415,30 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_m___e_c_l_a_s_s_8c_a5ec3318a40ba8a6b46b48d39545829f4}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}}
+\hypertarget{_m___e_c_l_a_s_s_8c_a2a35d7b72c380539f8cf0b57ba384ec3}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}}
 \index{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao(resultado resultado, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao (
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao(\+O\+Presult resultado, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao (
 \begin{DoxyParamCaption}
-\item[{{\bf resultado}}]{resultado, }
+\item[{{\bf O\+Presult}}]{resultado, }
 \item[{const char $\ast$}]{file\+Name}
 \end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_a5ec3318a40ba8a6b46b48d39545829f4}
-Metodo responsavel por prover o servico de exibicao de resuldados de erro de operacoes
+)}\label{_m___e_c_l_a_s_s_8c_a2a35d7b72c380539f8cf0b57ba384ec3}
+Metodo responsavel por prover mensagens de resuldados de erro de operacoes do leitor \char`\"{}.\+class\char`\"{}
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em resultado} & Tipo resultado a ser decodificado e exibido \\
+{\em resultado} & Tipo resultado a ser decodificado \\
 \hline
-{\em resultado} & Nome do arquivo \\
+{\em file\+Name} & Nome do arquivo \\
 \hline
 \end{DoxyParams}
-\hypertarget{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}}
+\hypertarget{_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}}
 \index{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf resultado} L\+E\+C\+L\+A\+S\+S\+\_\+exibidor (
+\subsubsection[{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor(\+Arq\+Class $\ast$arq\+\_\+class)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+Presult} L\+E\+C\+L\+A\+S\+S\+\_\+exibidor (
 \begin{DoxyParamCaption}
 \item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
 \end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195}
+)}\label{_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7}
 Metodo responsavel por prover o servico de exibicao de uma estrutura \char`\"{}.\+class\char`\"{}
 
 
@@ -417,7 +456,7 @@ Este é o diagrama das funções utilizadas por esta função\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c_ad8f20307e97939faff0c1ac0fb4d1195_cgraph}
+\includegraphics[width=350pt]{_m___e_c_l_a_s_s_8c_a1a7d50b6cf53c6ad15a48844fde23db7_cgraph}
 \end{center}
 \end{figure}
 
@@ -496,18 +535,21 @@ Metodo que, dado uma referencia para uma lista de tabela de excecoes e seu respe
 \begin{DoxyReturn}{Retorna}
 Ponteiro para um vetor de tabela de excessoes preenchida 
 \end{DoxyReturn}
-\hypertarget{_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!print\+Byte\+Code@{print\+Byte\+Code}}
+\hypertarget{_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!print\+Byte\+Code@{print\+Byte\+Code}}
 \index{print\+Byte\+Code@{print\+Byte\+Code}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{print\+Byte\+Code(u1 $\ast$bytecode)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Byte\+Code (
+\subsubsection[{print\+Byte\+Code(u1 $\ast$bytecode, u1 $\ast$bytecodes)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Byte\+Code (
 \begin{DoxyParamCaption}
-\item[{{\bf u1} $\ast$}]{bytecode}
+\item[{{\bf u1} $\ast$}]{bytecode, }
+\item[{{\bf u1} $\ast$}]{bytecodes}
 \end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3}
+)}\label{_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c}
 Metodo que que realiza a exibicao de um bytecode
 
 
 \begin{DoxyParams}{Parâmetros}
 {\em bytecode} & Bytecode a ser exibido. \\
+\hline
+{\em bytecodes} & Inicio do vetor de bytecodes. \\
 \hline
 \end{DoxyParams}
 
@@ -517,7 +559,7 @@ Este é o diagrama das funções utilizadas por esta função\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{_m___e_c_l_a_s_s_8c_ae4b4434e6a302fb668d481c1b91c90e3_cgraph}
+\includegraphics[width=338pt]{_m___e_c_l_a_s_s_8c_a33756dcf2e8eccaf23570a5ee891cc8c_cgraph}
 \end{center}
 \end{figure}
 
@@ -605,7 +647,8 @@ Metodo que que realiza a exibicao das tabelas de excessoes de um Atributo C\+O\+
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -633,7 +676,8 @@ Metodo que que realiza a exibicao de um campo do pool de constantes
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -670,34 +714,3 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+Double@{u4\+To\+Double}}
-\index{u4\+To\+Double@{u4\+To\+Double}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{u4\+To\+Double(u4 high\+\_\+bytes, u4 low\+\_\+bytes)}]{\setlength{\rightskip}{0pt plus 5cm}double u4\+To\+Double (
-\begin{DoxyParamCaption}
-\item[{{\bf u4}}]{high\+\_\+bytes, }
-\item[{{\bf u4}}]{low\+\_\+bytes}
-\end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_a1635f324e84de6fd96505e01968b7333}
-Metodo que que realiza a conversao de um u4 (little-\/endian) para um double em big-\/endian order.
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em high\+\_\+bytes} & Bytes de mais alta ordem. \\
-\hline
-{\em low\+\_\+bytes} & Bytes de mais baixa ordem. \\
-\hline
-\end{DoxyParams}
-\hypertarget{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}{}\index{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}!u4\+To\+F\+Loat@{u4\+To\+F\+Loat}}
-\index{u4\+To\+F\+Loat@{u4\+To\+F\+Loat}!M\+\_\+\+E\+C\+L\+A\+S\+S.\+c@{M\+\_\+\+E\+C\+L\+A\+S\+S.\+c}}
-\subsubsection[{u4\+To\+F\+Loat(u4 bytes)}]{\setlength{\rightskip}{0pt plus 5cm}float u4\+To\+F\+Loat (
-\begin{DoxyParamCaption}
-\item[{{\bf u4}}]{bytes}
-\end{DoxyParamCaption}
-)}\label{_m___e_c_l_a_s_s_8c_ac1709d62d399fb8ed1300e6b237d4fcc}
-Metodo que que realiza a conversao de um u4 (little-\/endian) para um float em big-\/endian order.
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em bytes} & Bytes em u4. \\
-\hline
-\end{DoxyParams}

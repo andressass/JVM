@@ -1,8 +1,17 @@
 <map id="include/MemoryUnit/I_MEMORYUNIT.h" name="include/MemoryUnit/I_MEMORYUNIT.h">
 <area shape="rect" id="node2" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html" title="Modulo do Carregador de Classes da JVM. " alt="" coords="5,99,254,124"/>
 <area shape="rect" id="node3" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="278,92,424,131"/>
-<area shape="rect" id="node4" href="$_m___d_e_c_o_d_e_r_8c.html" title="src/ExecutionEngine\l/M_DECODER.c" alt="" coords="449,92,592,131"/>
-<area shape="rect" id="node5" href="$_m___i_n_t_e_r_p_r_e_t_e_r_8c.html" title="Modulo do Interpretador da JVM. " alt="" coords="616,92,764,131"/>
-<area shape="rect" id="node6" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="787,99,1048,124"/>
-<area shape="rect" id="node7" href="$_m___o_p_t_h_r_e_a_d_8c.html" title="Modulo de threads da JVM. " alt="" coords="1072,99,1294,124"/>
+<area shape="rect" id="node4" href="$_m___d_e_c_o_d_e_r_8c.html" title="Modulo do Decodificador da JVM. " alt="" coords="449,92,592,131"/>
+<area shape="rect" id="node5" href="$_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c.html" title="src/ExecutionEngine\l/M_INSTCOMPANDJMP.c" alt="" coords="616,92,793,131"/>
+<area shape="rect" id="node6" href="$_m___i_n_s_t_c_o_n_v_e_r_s_i_o_n_8c.html" title="Modulo que contem as instrucoes de conversao. " alt="" coords="816,92,990,131"/>
+<area shape="rect" id="node7" href="$_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="src/ExecutionEngine\l/M_INSTLOADSTORAGE.c" alt="" coords="1014,92,1200,131"/>
+<area shape="rect" id="node8" href="$_m___i_n_s_t_l_o_g_a_r_i_t_h_8c.html" title="Modulo que contem as instrucoes logicos aritmeticas. " alt="" coords="1224,92,1377,131"/>
+<area shape="rect" id="node9" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="src/ExecutionEngine\l/M_INSTOBJANDINVOKE.c" alt="" coords="1401,92,1589,131"/>
+<area shape="rect" id="node10" href="$_m___i_n_s_t_r_e_t_u_r_n_8c.html" title="src/ExecutionEngine\l/M_INSTRETURN.c" alt="" coords="1613,92,1756,131"/>
+<area shape="rect" id="node11" href="$_m___i_n_t_e_r_p_r_e_t_e_r_8c.html" title="Modulo do Interpretador da JVM. " alt="" coords="1780,92,1928,131"/>
+<area shape="rect" id="node12" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="1951,99,2212,124"/>
+<area shape="rect" id="node13" href="$_m___o_p_t_h_r_e_a_d_8c.html" title="Modulo de threads da JVM. " alt="" coords="2236,99,2458,124"/>
+<area shape="rect" id="node14" href="$_i___j_a_v_a_d_e_c_o_d_e_r_8c.html" title="Modulo decodificador de bibliotecas Java. " alt="" coords="2482,99,2668,124"/>
+<area shape="rect" id="node15" href="$_m___j_a_v_a_i_o_8c.html" title="src/Util/M_JAVAIO.c" alt="" coords="2692,99,2832,124"/>
+<area shape="rect" id="node16" href="$_m___j_a_v_a_l_a_n_g_8c.html" title="src/Util/M_JAVALANG.c" alt="" coords="2855,99,3018,124"/>
 </map>

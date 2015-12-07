@@ -1,0 +1,77 @@
+\hypertarget{_m___e_x_c_e_p_t_i_o_n_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.c}
+\label{_m___e_x_c_e_p_t_i_o_n_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___e_x_c_e_p_t_i_o_n_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_adecb8e0bb1e4c8694e4454d0652ec106}{E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_a7ebd6a93cb47f5b6d6a059d7f4554fad}{J\+V\+Mstop\+Abrupt} (const char $\ast$msg)
+\item 
+void \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_a68dfd26cc3bccc52a45cd8650e33e12c}{J\+V\+M\+Throw} (int exception, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_m___e_x_c_e_p_t_i_o_n_8c_adecb8e0bb1e4c8694e4454d0652ec106}{}\index{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}!E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V@{E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V}}
+\index{E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V@{E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V}!M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
+\subsubsection[{E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V}\label{_m___e_x_c_e_p_t_i_o_n_8c_adecb8e0bb1e4c8694e4454d0652ec106}
+
+
+\subsection{Funções}
+\hypertarget{_m___e_x_c_e_p_t_i_o_n_8c_a7ebd6a93cb47f5b6d6a059d7f4554fad}{}\index{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}!J\+V\+Mstop\+Abrupt@{J\+V\+Mstop\+Abrupt}}
+\index{J\+V\+Mstop\+Abrupt@{J\+V\+Mstop\+Abrupt}!M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
+\subsubsection[{J\+V\+Mstop\+Abrupt(const char $\ast$msg)}]{\setlength{\rightskip}{0pt plus 5cm}void J\+V\+Mstop\+Abrupt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{_m___e_x_c_e_p_t_i_o_n_8c_a7ebd6a93cb47f5b6d6a059d7f4554fad}
+Método responsavel por encerrar a J\+V\+M em caso de excessoes.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em msg} & Mensagem de erro a ser exibida \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___e_x_c_e_p_t_i_o_n_8c_a68dfd26cc3bccc52a45cd8650e33e12c}{}\index{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}!J\+V\+M\+Throw@{J\+V\+M\+Throw}}
+\index{J\+V\+M\+Throw@{J\+V\+M\+Throw}!M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
+\subsubsection[{J\+V\+M\+Throw(int exception, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void J\+V\+M\+Throw (
+\begin{DoxyParamCaption}
+\item[{int}]{exception, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___e_x_c_e_p_t_i_o_n_8c_a68dfd26cc3bccc52a45cd8650e33e12c}
+Pelo lancamento e tratamento de excessoes
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em exception} & codigo da excessao \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___e_x_c_e_p_t_i_o_n_8c_a68dfd26cc3bccc52a45cd8650e33e12c_cgraph}
+\end{center}
+\end{figure}
+
+

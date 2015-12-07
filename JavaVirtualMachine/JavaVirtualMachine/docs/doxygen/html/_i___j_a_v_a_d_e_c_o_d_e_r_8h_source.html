@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„MaquinaVirtualJava“: Código-Fonte de include/Util/I_JAVADECODER.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„MaquinaVirtualJava“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_95e22971b5dbae2382075a3453e365b4.html">Util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">I_JAVADECODER.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef I_JAVADECODER_h</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define I_JAVADECODER_h</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef JAVADECODER_SERV</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define EXT23</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">   16</a></span>&#160;<span class="preprocessor">#define EXT23 extern</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../../include/Estruturas/E_JVM.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span><a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <span class="keywordtype">int</span> <a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#abe8c187ee22a499ba9cb025af75022eb">javaLibIsFrom</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span><a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <span class="keywordtype">void</span> <a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ccdbf10d06719e58ee9212c9483d9c3">javaLibExecuteMethod</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* className, <span class="keyword">const</span> <span class="keywordtype">char</span>* methodName,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                <span class="keyword">const</span> <span class="keywordtype">char</span>* descriptorName, <a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span><a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <span class="keywordtype">void</span> <a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#ac9972d9ba812976d68fb9c4580fa01e5">javaLibGetStatic</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* className, <span class="keyword">const</span> <span class="keywordtype">char</span>* fieldName,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                <span class="keyword">const</span> <span class="keywordtype">char</span>* fieldDescriptor, <a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span><a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <span class="keywordtype">void</span> <a class="code" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a64003e9bca3927adae92fa0b14a0d051">javaLibNewObject</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* className, <a class="code" href="struct_environment.html">Environment</a>* environment);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_JAVADECODER_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="_i___j_a_v_a_d_e_c_o_d_e_r_8h_html_abe8c187ee22a499ba9cb025af75022eb"><div class="ttname"><a href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#abe8c187ee22a499ba9cb025af75022eb">javaLibIsFrom</a></div><div class="ttdeci">EXT23 int javaLibIsFrom(const char *name)</div><div class="ttdef"><b>Definition:</b> I_JAVADECODER.c:25</div></div>
+<div class="ttc" id="_i___j_a_v_a_d_e_c_o_d_e_r_8h_html_ac9972d9ba812976d68fb9c4580fa01e5"><div class="ttname"><a href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#ac9972d9ba812976d68fb9c4580fa01e5">javaLibGetStatic</a></div><div class="ttdeci">EXT23 void javaLibGetStatic(const char *className, const char *fieldName, const char *fieldDescriptor, Environment *environment)</div><div class="ttdef"><b>Definition:</b> I_JAVADECODER.c:52</div></div>
+<div class="ttc" id="struct_environment_html"><div class="ttname"><a href="struct_environment.html">Environment</a></div><div class="ttdoc">Estrutura do ambiente de execucao da JVM. </div><div class="ttdef"><b>Definition:</b> E_JVM.h:435</div></div>
+<div class="ttc" id="_i___j_a_v_a_d_e_c_o_d_e_r_8h_html_a1ab113de8f791abc2a2882ab516a2d8d"><div class="ttname"><a href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a></div><div class="ttdeci">#define EXT23</div><div class="ttdef"><b>Definition:</b> I_JAVADECODER.h:16</div></div>
+<div class="ttc" id="_i___j_a_v_a_d_e_c_o_d_e_r_8h_html_a64003e9bca3927adae92fa0b14a0d051"><div class="ttname"><a href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a64003e9bca3927adae92fa0b14a0d051">javaLibNewObject</a></div><div class="ttdeci">EXT23 void javaLibNewObject(const char *className, Environment *environment)</div><div class="ttdef"><b>Definition:</b> I_JAVADECODER.c:72</div></div>
+<div class="ttc" id="_i___j_a_v_a_d_e_c_o_d_e_r_8h_html_a1ccdbf10d06719e58ee9212c9483d9c3"><div class="ttname"><a href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ccdbf10d06719e58ee9212c9483d9c3">javaLibExecuteMethod</a></div><div class="ttdeci">EXT23 void javaLibExecuteMethod(const char *className, const char *methodName, const char *descriptorName, Environment *environment)</div><div class="ttdef"><b>Definition:</b> I_JAVADECODER.c:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

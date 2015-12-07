@@ -9,7 +9,8 @@ Modulo do Interpretador da J\+V\+M.
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+c\+:\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,7 +32,7 @@ void \hyperlink{_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4}
 \subsection{Descrição Detalhada}
 Modulo do Interpretador da J\+V\+M. 
 
-Interface responsavel por implentar os servicos relacionados ao interpretador da J\+V\+M. 
+Modulo responsavel por implentar os servicos relacionados ao interpretador da J\+V\+M. 
 
 \subsection{Definições e macros}
 \hypertarget{_m___i_n_t_e_r_p_r_e_t_e_r_8c_ae59ceac0ebfc5e5227e7bb73c02032ac}{}\index{M\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+c@{M\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+c}!I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R\+\_\+\+S\+E\+R\+V@{I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R\+\_\+\+S\+E\+R\+V}}
@@ -54,18 +55,22 @@ Metodo responsavel por executar um ambiente de execucao.
 {\em enviroment} & Estrutura contendo a thread e a area de metodos a ser executada \\
 \hline
 \end{DoxyParams}
-Obtem o opcode
+Enquanto a pilha de frames nao estiver vazia\+:
 
-Decodifica o opcode
+1.\+Obtem o opcode.
 
-Executa o a instrucao referente ao opcode 
+2.\+Decodifica o opcode
+
+3.\+Executa o a instrucao referente ao opcode
+
+4.\+Atualizamos o valor de P\+C 
 
 Este é o diagrama das funções utilizadas por esta função\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4_cgraph}
+\includegraphics[height=550pt]{_m___i_n_t_e_r_p_r_e_t_e_r_8c_aade1c6bed4ce553a22ed883372e346b4_cgraph}
 \end{center}
 \end{figure}
 

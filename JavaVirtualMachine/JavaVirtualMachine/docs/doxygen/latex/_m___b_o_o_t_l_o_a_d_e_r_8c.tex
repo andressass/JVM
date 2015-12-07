@@ -7,11 +7,15 @@ Modulo de Inicializacao da J\+V\+M.
 
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+S\+T\+R\+I\+N\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+A\+R\+R\+A\+Y.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c\+:\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,6 +24,8 @@ Gráfico de dependência de inclusões para M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+
 \end{figure}
 \subsection*{Funções}
 \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___b_o_o_t_l_o_a_d_e_r_8c_a0c05dc9fde50990e999856a28d5d77c2}{configure\+Class\+Main} (\hyperlink{struct_environment}{Environment} $\ast$environment, int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
 \item 
 int \hyperlink{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
@@ -31,6 +37,38 @@ Modulo de Inicializacao da J\+V\+M.
 Modulo responsavel por implementar os metodos relacionados a inicializacao de estruturas e da execucao do sistema. 
 
 \subsection{Funções}
+\hypertarget{_m___b_o_o_t_l_o_a_d_e_r_8c_a0c05dc9fde50990e999856a28d5d77c2}{}\index{M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c}!configure\+Class\+Main@{configure\+Class\+Main}}
+\index{configure\+Class\+Main@{configure\+Class\+Main}!M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c}}
+\subsubsection[{configure\+Class\+Main(\+Environment $\ast$environment, int argc, const char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}void configure\+Class\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment, }
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_m___b_o_o_t_l_o_a_d_e_r_8c_a0c05dc9fde50990e999856a28d5d77c2}
+Metodo que configura e empilha um novo frame para o metodo main da classe chamada pela J\+V\+M
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual \\
+\hline
+{\em argc} & Numero de argumentos do programa \\
+\hline
+{\em argv} & Vetor de vetores de char passados pelo usuario \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___b_o_o_t_l_o_a_d_e_r_8c_a0c05dc9fde50990e999856a28d5d77c2_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c}{}\index{M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c}!main@{main}}
 \index{main@{main}!M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c}}
 \subsubsection[{main(int argc, const char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
@@ -39,14 +77,14 @@ Modulo responsavel por implementar os metodos relacionados a inicializacao de es
 \item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
 )}\label{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c}
-
+Metodo inicial do sistema 
 
 Este é o diagrama das funções utilizadas por esta função\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\includegraphics[height=550pt]{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph}
 \end{center}
 \end{figure}
 

@@ -252,9 +252,6 @@ void putfield(Environment* environment){
     JavaClass* actual_class = environment->thread->vmStack->top->javaClass;
     method_info* actual_method = environment->thread->vmStack->top->method_info;
     
-    //Obtemos a referencia para o objeto
-    Object* objectRef = (Object*) popFromOperandStack(environment->thread);
-    
     //Calculamos o indice do fieldRef no pool
     u2 index = calculatePoolIndexFromCode(actual_method,
                                           actual_class->arqClass->constant_pool,
@@ -273,12 +270,14 @@ void putfield(Environment* environment){
     
     //Verificamos se eh de 32 ou 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
-        unsigned long long* value_reference = getObjectAttributeReference(objectRef, attribute_name);
-        unsigned long long value;
-        
         //Obtemos e concatenamos os bytes
+        unsigned long long value;
         value = popFromOperandStack(environment->thread);
         value = value << 32 | popFromOperandStack(environment->thread);
+        //Obtemos a referencia para o objeto
+        Object* objectRef = (Object*) popFromOperandStack(environment->thread);
+        
+        unsigned long long* value_reference = getObjectAttributeReference(objectRef, attribute_name);
         
         //Atualizamos o campo
         *value_reference = value;
@@ -286,7 +285,7 @@ void putfield(Environment* environment){
     else{
         //Obtemos o valor
         u4 value = popFromOperandStack(environment->thread);
-        
+        Object* objectRef = (Object*) popFromOperandStack(environment->thread);
         
         //Se eh de 8bits
         if (strcmp(attribute_descriptor, "B") == 0 || strcmp(attribute_descriptor, "C") == 0 ||
@@ -366,36 +365,37 @@ int isClassSubClassFromClass(char* className, char* supClassName, Environment* e
     return 0;
 }
 
-
 //--------------------------------------------------------------------------------------------------
 /*!
- * Metodo que, dada uma referencia para um objeto e uma estrutura javaClass, verifica se a classe do
- * objeto e a classe ou superclasse do metodo.
+ *  Metodo que verifica se existe o metodo existe na classe ou superclasse de uma classe passada e
+ * retorna uma referencia para o method_info e o nome da classe do metodo eh copiada para o 
+ * parametro method_class_name
  *
- * Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref
- *    eh a propria classe ou subclasse do metodo
- *
- *      6.1. Se a classe C do objeto for a classe do metodo, buscamos o metodo em C e invocamos
- *
- *      6.2. Se a C tiver uma superclasse, procuramos recursivamente e invocamos
- *
- *      6.3. Se nao, lancamos a excessao AbstractMethodError
- *
- * \param object Referencia para o objeto
- * \param method_class Referencia para a classe do metodo invocado
+ * \param objectClass Referencia para a classe do objeto
+ * \param method_name nome do metodo atual
+ * \param method_descriptor descritor do metodo atual
  * \param environment Ambiente de execucao
+ * \param method_class_name Nome da classe do metodo encontrado
+ * \return method_info do metodo, se nao lanca excessao
  */
-void verifyObjectClasses(Object* object, JavaClass* method_class, Environment* environment){
+method_info* isMethodInClassOrSuperClass(JavaClass* objectClass, char* method_name, char* method_descriptor, Environment* environment, char** method_class_name){
     
-    JavaClass* objectClass = object->handler->javaClass;
+    method_info* method = getMethodInfoFromClass(objectClass, method_name, method_descriptor);
+    if (method){
+        *method_class_name = getClassNameFromConstantPool(objectClass->arqClass->constant_pool,
+                                     objectClass->arqClass->this_class);
+        return method;
+    }
     
-    char* objectClassName = getClassNameFromConstantPool(objectClass->arqClass->constant_pool,
-                                                         objectClass->arqClass->this_class);
-    char* methodClassName = getClassNameFromConstantPool(method_class->arqClass->constant_pool, method_class->arqClass->this_class);
+    char* superClassName = getClassNameFromConstantPool(objectClass->arqClass->constant_pool,
+                                                        objectClass->arqClass->super_class);
     
-    //Objeto nao eh da classe ou subclasse da classe do metodo
-    if (!isClassSubClassFromClass(objectClassName, methodClassName, environment))
+    if (javaLibIsFrom(superClassName)) {
         JVMThrow(AbstractMethodError, environment);
+        return NULL;
+    }
+    //Verificamos recursivamente
+    else return isMethodInClassOrSuperClass(getClass(superClassName, environment), method_name, method_descriptor, environment, method_class_name);
 }
 
 
@@ -425,9 +425,6 @@ void invokevirtual(Environment* environment){
         return;
     }
     
-    //1. Resolvemos o a classe do metodo, obtendo uma referencia para javaClass
-    JavaClass* method_class = getClass(class_name, environment);
-    
     //4. Baseado no descritor do metodo, desempilhamos os parametros
     //Obtemos a quantidade de parametros a serem desempilhados
     int nParams = getParameterNumberFromMethodDescriptor(method_descriptor);
@@ -440,43 +437,19 @@ void invokevirtual(Environment* environment){
     Object* objectRef = (Object*) popFromOperandStack(environment->thread);
     if (objectRef == NULL) JVMThrow(NullPointerException, environment);
     
-    //Verificacoes de invokevirtual
-    verifyObjectClasses(objectRef, method_class, environment);
-    method_info* method = getMethodInfoFromClass(method_class, method_name, method_descriptor);
+
+    //6. Buscamos o metodo recursivamente na classe e superclasses do objeto
+    method_info* method = isMethodInClassOrSuperClass(objectRef->handler->javaClass, method_name, method_descriptor, environment, &class_name);
+    
     if ((method->access_flags & ACC_ABSTRACT)) JVMThrow(AbstractMethodError, environment);
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     newFrame->localVariablesVector[0] = (u4) objectRef;
     for (int i = 0; i < nParams; i++) newFrame->localVariablesVector[i+1] = params[i];
-}
-
-
-//--------------------------------------------------------------------------------------------------
-/*!
- *  Metodo que verifica se existe o metodo existe na classe ou superclasse de uma classe passada
- *
- * \param objectClass Referencia para a classe do objeto
- * \param method_name nome do metodo atual
- * \param method_descriptor descritor do metodo atual
- * \param environment Ambiente de execucao
- * \return 1 caso sim, 0 caso nao
- */
-int isMethodInClassOrSuperClass(JavaClass* objectClass, char* method_name, char* method_descriptor,
-                                Environment* environment){
-
-    if (getMethodInfoFromClass(objectClass, method_name, method_descriptor)) return 1;
-    
-    char* superClassName = getClassNameFromConstantPool(objectClass->arqClass->constant_pool,
-                                                        objectClass->arqClass->super_class);
-    
-    if (javaLibIsFrom(superClassName)) return 0;
-    //Verificamos recursivamente
-    else isMethodInClassOrSuperClass(getClass(superClassName, environment), method_name, method_descriptor, environment);
-    
-    return 0;
 }
 
 
@@ -488,16 +461,6 @@ int isMethodInClassOrSuperClass(JavaClass* objectClass, char* method_name, char*
  *      7.1. A flag ACC_SUPER esta setada para a classe atual
  *      7.2. A classe do metodo eh superclasse da classe atual
  *      7.3. O metodo nao eh um metodo <init>
- *
- *  8. Se as condicoes acima forem verdadeiras, o metodo a ser invocado eh selecionado pelo seguinte
- *      procedimento de busca. Consideramos C uma superclasse direta da classe atual:
- *
- *      8.1. Se C contiver um metodo de instancia com o mesmo nome e descritor do metodo a ser
- *              invocado. Invocamos o metodo e terminamos.
- *      8.2. Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente
- *              na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva.
- *      8.3. Se nao, AbstractMethodError.
- *
  *
  * \param object Referencia para o objeto
  * \param method_class Referencia para a classe do metodo invocado
@@ -521,11 +484,6 @@ void verifyInvokeSpecial(Object* objectRef, JavaClass* method_class, char* metho
     int isInit = strcmp(method_name, "<init>") == 0;
     
     if (!(isSuper && isSub && isInit)) return;
-    
-    JavaClass* objClass = objectRef->handler->javaClass;
-    
-    if (!isMethodInClassOrSuperClass(objClass, method_name, method_descriptor, environment))
-        JVMThrow(AbstractMethodError, environment);
 }
 
 
@@ -578,14 +536,19 @@ void invokespecial(Environment* environment){
     
     //6. Verificacoes de invokespecial
     verifyInvokeSpecial(objectRef, method_class, method_name, method_descriptor, environment);
-    method_info* method = getMethodInfoFromClass(method_class, method_name, method_descriptor);
+    
+    
+    //Buscamos o metodo recursivamente na classe e superclasses do objeto
+    method_info* method = isMethodInClassOrSuperClass(objectRef->handler->javaClass, method_name, method_descriptor, environment, &class_name);
+    
+    
     if ((method->access_flags & ACC_STATIC)) JVMThrow(IncompatibleClassChangeError, environment);
     if ((method->access_flags & ACC_ABSTRACT)) JVMThrow(AbstractMethodError, environment);
     
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
-    
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     newFrame->localVariablesVector[0] = (u4) objectRef;
@@ -594,29 +557,6 @@ void invokespecial(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que invoca um metodo de classe.
- * Recebe 2bytes para montagem de referencia para um metodo no pool de constantes.
- *
- *
- * 1. Resolvemos o a classe do metodo, obtendo uma referencia para javaClass
- *
- * 2. Resolvemos o nome do metodo, obtendo a referencia do method_info
- *
- * 4. Baseado no descritor do metodo, desempilhamos os parametros
- *
- *  7. Criamos um novo frame e empilhamos
- *
- *      7.1. Passamos os argumentos para o vetor de variaveis locais
- *              7.7.1 var_local_0 := argumento_1
- *              7.7.K var_local_[N-1] := argumento_N
- *
- *
- *  Excessoes:
- *      2. Se o metodo nao for estatico, lancamos IncompatibleClassChangeError
- *
- * \param thread Thread que contem a pilha JVM com o frame atual
- */
 void invokestatic(Environment* environment){
     
     char* method_name;
@@ -662,7 +602,7 @@ void invokestatic(Environment* environment){
     
     //7. Criamos um novo frame e empilhamos
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
-    
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     for (int i = 0; i < nParams; i++) newFrame->localVariablesVector[i] = params[i];
@@ -707,26 +647,30 @@ void invokeinterface(Environment* environment){
     
     //5. Desempilhamos uma referencia para o objeto (Objectref)
     Object* objectRef = (Object*) popFromOperandStack(environment->thread);
+    
+    environment->thread->PC++; //COUNT
+    environment->thread->PC++; //Byte 0
+    
     if (objectRef == NULL) JVMThrow(NullPointerException, environment);
     //TODO: Se a classe de Objectref nao implementa a interface, IncompatibleClassChangeError
     
     
     //6. Verificacoes de invokeinterface
     
-    //6.1. Se C contem um metodo de instancia com o mesmo nome e descritor, invocamos e terminamos.
-    method_info* method = getMethodInfoFromClass(objectRef->handler->javaClass, method_name, method_descriptor);
-    
     // 6.2. Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente
     //   na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva.
     //   6.3. Se nao, AbstractMethodError.
-    if (!isMethodInClassOrSuperClass(objectRef->handler->javaClass, method_name, method_descriptor, environment)) JVMThrow(AbstractMethodError, environment);;
+    method_info* method = isMethodInClassOrSuperClass(objectRef->handler->javaClass, method_name, method_descriptor, environment, &class_name);
+    
     if ((method->access_flags & ACC_ABSTRACT)) JVMThrow(AbstractMethodError, environment);
-    if ((method->access_flags & ACC_PUBLIC)) JVMThrow(IllegalAccessError, environment);
+    if (!(method->access_flags & ACC_PUBLIC)) JVMThrow(IllegalAccessError, environment);
     
     
     //7. Criamos um novo frame e empilhamos
+    //VERIFICAR METODO EM SUPERCLASSES DE FORMA RECURSIVA
+    class_name = getClassNameFromConstantPool(objectRef->handler->javaClass->arqClass->constant_pool, objectRef->handler->javaClass->arqClass->this_class);
     Frame* newFrame = pushFrame(environment, class_name, method_name, method_descriptor);
-    
+    environment->thread->PC--; //Pc é colocado para -1 devido ao incremento do interpretador
     
     //7.1. Passamos os argumentos para o vetor de variaveis locais
     newFrame->localVariablesVector[0] = (u4) objectRef;
