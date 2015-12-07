@@ -23,7 +23,7 @@ void JVMstopAbrupt(const char* msg){
     if(msg) printf("\nERRO:\n %s", msg);
     printf("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     
-    printf("\n\nForcando enceramento da JVM...\n\n");
+    printf("\n\nForcando encerramento da JVM...\n\n");
 
     //TODO Liberar todas as estruturas
     
