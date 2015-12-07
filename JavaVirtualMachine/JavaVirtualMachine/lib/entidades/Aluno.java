@@ -5,7 +5,7 @@ public class Aluno extends Pessoa {
     private String nome;
     private final int matricula = 12345;
     private double idade;
-    public int serie;
+    public long serie;
     
     
     public Aluno(int serie){

@@ -208,8 +208,8 @@ void getfield(Environment* environment){
     
     //Verificamos se eh de 32 ou 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
-        unsigned long long* value_reference = getObjectAttributeReference(objectRef, attribute_name);
-        unsigned long long value = *value_reference;
+        u8* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+        u8 value = *value_reference;
         
         u4 high_bytes = value >> 32;
         u4 low_bytes = value & 0xFFFFFFFF;
@@ -271,13 +271,13 @@ void putfield(Environment* environment){
     //Verificamos se eh de 32 ou 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
         //Obtemos e concatenamos os bytes
-        unsigned long long value;
+        u8 value;
         value = popFromOperandStack(environment->thread);
         value = value << 32 | popFromOperandStack(environment->thread);
         //Obtemos a referencia para o objeto
         Object* objectRef = (Object*) popFromOperandStack(environment->thread);
         
-        unsigned long long* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+        u8* value_reference = getObjectAttributeReference(objectRef, attribute_name);
         
         //Atualizamos o campo
         *value_reference = value;

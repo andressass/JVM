@@ -514,7 +514,7 @@ void if_acmpne(Environment *environment){
 
 void goto_(Environment *environment) {
     u2 index;
-    u4 pc = 0;
+    //u4 pc = 0;
     u1 byte;
 
     environment->thread->PC++;
@@ -531,7 +531,7 @@ void goto_(Environment *environment) {
 
 void jsr(Environment *environment) {
     u2 index;
-    u4 pc = 0;
+    //u4 pc = 0;
     u1 byte;
 
     environment->thread->PC++;
@@ -553,7 +553,7 @@ void ret() {
 }
 
 void tableswitch(Environment *environment) {
-    u4 i, pad, low, high, def, offset, index, opCode, pc;
+    u4 i, pad, low, high, def, offset, index, opCode; //, pc;
     u1 byte;
 
     opCode = environment->thread->vmStack->top->returnPC;
@@ -629,7 +629,7 @@ void tableswitch(Environment *environment) {
 }
 
 void lookupswitch(Environment *environment) {
-    u4 i, j, pad, npairs = 0, def = 0, key, found, opCode, pc;
+    u4 i, j, pad, npairs = 0, def = 0, key, found, opCode; //, pc;
     npair *pair, *auxiliar; // criar nova struct npair{ u4 match; u4 offset; }
     u1 byte;
     
@@ -728,7 +728,7 @@ void lookupswitch(Environment *environment) {
 
 void ifnull(Environment *environment) {
     u2 index;
-    u4 auxiliar1, pc = 0;
+    u4 auxiliar1; //pc = 0;
     u1 byte;
     
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
@@ -753,7 +753,7 @@ void ifnull(Environment *environment) {
 
 void ifnonnull(Environment *environment) {
     u2 index;
-    u4 auxiliar1, pc = 0;
+    u4 auxiliar1; // pc = 0;
     u1 byte;
     
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
@@ -780,7 +780,7 @@ void ifnonnull(Environment *environment) {
 
 void jsr_w(Environment *environment) {
     u8 index;
-    u4 pc = 0;
+    //u4 pc = 0;
     u1 byte;
     
     environment->thread->vmStack->top->returnPC++;
@@ -809,7 +809,7 @@ void jsr_w(Environment *environment) {
 
 void goto_w(Environment *environment) {
     u8 index;
-    u4 pc = 0;
+    //u4 pc = 0;
     u1 byte;
     
     environment->thread->vmStack->top->returnPC++;
