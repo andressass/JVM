@@ -24,11 +24,11 @@ void i2l(Environment* environment) {
 	aux3 = (signed) popFromOperandStack(environment->thread);
 	aux1 = aux3;
 	//CORRECAO: PRIMERIO O LOW
-    aux2 = aux1 & SHIFT_MASK_UNSI;
+  aux2 = aux1 & SHIFT_MASK_UNSI;
 	pushInOperandStack(environment->thread,aux2);
 
 	//CORRECAO: DEPOIS O HIGH
-    aux2 = aux1 >> 32;
+  aux2 = aux1 >> 32;
 	pushInOperandStack(environment->thread, aux2);
 }
 
@@ -61,20 +61,21 @@ void i2d(Environment* environment) {
 
 	memcpy(aux1, &aux2, sizeof(int64_t));
 
+	aux3 = *aux1 & SHIFT_MASK_UNSI;
+	pushInOperandStack(environment->thread,aux3);
+
 	aux3 = *aux1 >> 32;
 	pushInOperandStack(environment->thread,aux3);
 
-	aux3 = *aux1 & SHIFT_MASK_UNSI;
-	pushInOperandStack(environment->thread,aux3); 
 }
 
 void l2i(Environment* environment) {
 	u4 aux1;
 
-	aux1 = popFromOperandStack(environment->thread);
+	aux1 = (u4) popFromOperandStack(environment->thread);
 
 	popFromOperandStack(environment->thread);
-	pushInOperandStack(environment->thread,aux1); 
+	pushInOperandStack(environment->thread,aux1);
 }
 
 
@@ -94,7 +95,7 @@ void l2f(Environment* environment) {
 
 	memcpy(u4aux, &aux3, sizeof(u4));
 
-	pushInOperandStack(environment->thread,*u4aux); 
+	pushInOperandStack(environment->thread,*u4aux);
 }
 
 
@@ -117,7 +118,7 @@ void l2d(Environment* environment) {
 	pushInOperandStack(environment->thread,u4aux);
 
 	u4aux = *aux3 & SHIFT_MASK_UNSI;
-	pushInOperandStack(environment->thread,u4aux); 
+	pushInOperandStack(environment->thread,u4aux);
 }
 
 void f2i(Environment* environment) {
@@ -129,7 +130,7 @@ void f2i(Environment* environment) {
 
 	memcpy(&aux1, &aux2, sizeof(float));
 	aux3 = (int32_t) aux1;
-	pushInOperandStack(environment->thread,aux3); 
+	pushInOperandStack(environment->thread,aux3);
 }
 
 void f2l(Environment* environment) {
@@ -145,7 +146,7 @@ void f2l(Environment* environment) {
 	aux2 = aux1 & SHIFT_MASK_UNSI;
 
 	memcpy(&aux3, &aux2, sizeof(float));
-	pushInOperandStack(environment->thread,aux3); 
+	pushInOperandStack(environment->thread,aux3);
 }
 
 void f2d(Environment* environment) {
@@ -166,7 +167,7 @@ void f2d(Environment* environment) {
 	pushInOperandStack(environment->thread,aux3);
 
 	aux3 = aux5 & SHIFT_MASK_UNSI;
-	pushInOperandStack(environment->thread,aux3); 
+	pushInOperandStack(environment->thread,aux3);
 }
 
 void d2i(Environment* environment) {
@@ -182,7 +183,7 @@ void d2i(Environment* environment) {
 
 	memcpy(aux2, &aux1, sizeof(double));
 	aux3 = (int32_t) *aux2;
-	pushInOperandStack(environment->thread,aux3); 
+	pushInOperandStack(environment->thread,aux3);
 }
 
 void d2l(Environment* environment) {
@@ -201,7 +202,7 @@ void d2l(Environment* environment) {
 	aux0 = aux1 >> 32;
 	pushInOperandStack(environment->thread,aux0);
 	aux0 = aux1 & SHIFT_MASK_UNSI;
-	pushInOperandStack(environment->thread,aux0); 
+	pushInOperandStack(environment->thread,aux0);
 }
 
 void d2f(Environment* environment) {
@@ -221,7 +222,7 @@ void d2f(Environment* environment) {
 	aux0 = malloc(sizeof(u4));
 
 	memcpy(aux0, &aux3, sizeof(u4));
-	pushInOperandStack(environment->thread,*aux0); 
+	pushInOperandStack(environment->thread,*aux0);
 
 }
 
@@ -229,7 +230,7 @@ void i2b(Environment* environment) {
 	char aux1;
 
 	aux1 = (char) popFromOperandStack(environment->thread);
-	pushInOperandStack(environment->thread,(int32_t) aux1); 
+	pushInOperandStack(environment->thread,(int32_t) aux1);
 
 }
 
@@ -239,7 +240,7 @@ void i2c(Environment* environment) {
 
 	aux2 = popFromOperandStack(environment->thread);
 	aux1 = (char) aux2;
-	pushInOperandStack(environment->thread,aux1); 
+	pushInOperandStack(environment->thread,aux1);
 
 }
 
@@ -247,6 +248,6 @@ void i2s(Environment* environment) {
 	short aux1;
 
 	aux1 = (short) popFromOperandStack(environment->thread);
-	pushInOperandStack(environment->thread,(int32_t) aux1); 
+	pushInOperandStack(environment->thread,(int32_t) aux1);
 
 }
