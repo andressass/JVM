@@ -302,7 +302,7 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     
     classInitializer(javaClass, environment);
     
-    //  LECLASS_exibidor(javaClass->arqClass);
+    if (environment->debugFlags & DEBUG_ShowClassFiles) LECLASS_exibidor(javaClass->arqClass);
     
     //Retornamos a estrutura inicializada
     return javaClass;

@@ -110,15 +110,6 @@ method_info* getMethodInfoFromClass(JavaClass* javaClass,
 
 
 //--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que, dado um ponteiro para uma estrutura method_info e o pool de constantes contendo as
- * constantes relativas ao metodo, busca e retorna uma referencia para o atributo code, o qual 
- * estara preenchido.
- *
- * \param method Referencia para o method_info contendo o codigo
- * \param constant_pool Referencia para o pool de constantes da classe do metodo
- * \return Referencia para uma estrutura CodeAttribute referente ao metodo buscado
- */
 CodeAttribute* getCodeFromMethodInfo(method_info* method, cp_info* constant_pool){
     
     for (int i = 0; i< method->attributes_count; i++) {

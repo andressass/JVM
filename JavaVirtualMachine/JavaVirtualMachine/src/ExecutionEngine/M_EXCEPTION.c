@@ -14,6 +14,8 @@
 #include <string.h>
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include "../../include/MemoryUnit/I_MEMORYUNIT.h"
+#include "../../include/Estruturas/OPCODES.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -63,12 +65,41 @@ void JVMThrow(int exception, Environment* environment){
     }
     strcat(mensagem, "\n------------------------------------");
     strcat(mensagem, "\nClasse: ");
-    strcat(mensagem, getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->vmStack->top->javaClass->arqClass->this_class));
+    strcat(mensagem, getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool,
+                                                  environment->thread->vmStack->top->javaClass->arqClass->this_class));
     
     strcat(mensagem, "\nMetodo: ");
-    strcat(mensagem, getUTF8FromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->vmStack->top->method_info->name_index));
+    strcat(mensagem, getUTF8FromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool,
+                                             environment->thread->vmStack->top->method_info->name_index));
     strcat(mensagem, "\n------------------------------------");
     
     JVMstopAbrupt(mensagem);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void JVMPrintFrameInfo(Frame* frame, u1 opcode){
+
+    printf("\n------------------------------------");
+    
+    printf("\nClasse: %s\n", getClassNameFromConstantPool(frame->javaClass->arqClass->constant_pool,
+                                                          frame->javaClass->arqClass->this_class));
+    printf("\nMetodo: %s\n", getUTF8FromConstantPool(frame->javaClass->arqClass->constant_pool,
+                                                     frame->method_info->name_index));
+    
+    if (opcode) printf("\nOpcode: %s\n", getOpcodeName(opcode));
+    
+    CodeAttribute* code = getCodeFromMethodInfo(frame->method_info, frame->javaClass->arqClass->constant_pool);
+    
+    printf("\nPilha de Operandos:");
+    for (OperandStack* i = frame->opStk; i != NULL; i = i->nextStack) printf("\n| 0x%x", i->top);
+    
+    printf("\n\nVetor de Variaveis Locais:\n");
+
+    for (int i = 0; i < code->max_locals; i++)
+        printf(" 0x%x |", frame->localVariablesVector[i]);
+    
+    printf("\n------------------------------------");
+
 
 }

@@ -55,29 +55,29 @@ void printStreamPrintln(const char* descriptorName, Environment* environment){
     else if (strncmp(descriptorName, "(I)V", 4)==0 ||
              strncmp(descriptorName, "(S)V", 4)==0 ||
              strncmp(descriptorName, "(B)V", 4)==0)
-        printf("\n %d", (int) popFromOperandStack(environment->thread));
+        printf("\n%d", (int) popFromOperandStack(environment->thread));
     
     else if (strncmp(descriptorName, "(C)V", 4)==0)
-        printf("\n %c", (char) popFromOperandStack(environment->thread));
+        printf("\n%c", (char) popFromOperandStack(environment->thread));
     
     else if (strncmp(descriptorName, "(F)V", 4)==0)
-        printf("\n %.2f",  u4ToFLoat(popFromOperandStack(environment->thread)));
+        printf("\n%.2f",  u4ToFLoat(popFromOperandStack(environment->thread)));
     
     else if (strncmp(descriptorName, "(J)V", 4)==0){
         u8 bytesl = popFromOperandStack(environment->thread);
         u8 low_Bytes = popFromOperandStack(environment->thread);
         bytesl = bytesl << 32 | low_Bytes;
-        printf("\n %lld", bytesl);
+        printf("\n%lld", bytesl);
     }
     
     else if (strncmp(descriptorName, "(D)V", 4)==0){
         u4 high = popFromOperandStack(environment->thread);
         u4 low = popFromOperandStack(environment->thread);
-        printf("\n %.2lf", u4ToDouble(high, low));
+        printf("\n%.2lf", u4ToDouble(high, low));
     }
     
     else if (strncmp(descriptorName, "(Z)V", 4)==0)
-        printf("\n %s", ((int) popFromOperandStack(environment->thread)) == 0 ? "false" : "true");
+        printf("\n%s", ((int) popFromOperandStack(environment->thread)) == 0 ? "false" : "true");
     
     else
         popFromOperandStack(environment->thread);

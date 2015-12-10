@@ -816,11 +816,68 @@ void arraylength(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que inicializa um array multidimensional.
+ *
+ * \param total_dimensions Total de dimensoes do array a ser inicializado.
+ * \param current_dimension A dimensao atual do array a ser inicializado.
+ * \param count O vetor count que possui o quantidade de componentes em cada dimensao do array a ser inicializado.
+ * \param posicao A posicao do array em que sera inicializada com o valor inicial padrao do tipo dos componentes.
+ * \param type_array O tipo dos componentes do array a ser inicializado.
+ * \param array O array a ser inicializado.
+ */
+void initializeNDArray(int total_dimensions, int current_dimension, int* count ,int posicao,
+                     char type_array, void* array){
+    int i;
+    // Enquanto ainda nao chegar na ultima dimensao, continua na recusividade
+    while (current_dimension < total_dimensions) {
+        for (i = 0; i < count[current_dimension]; i++) {
+            current_dimension++;
+            posicao += i*count[current_dimension+1];
+            initializeNDArray(total_dimensions, current_dimension, count, posicao, type_array, array);
+        }
+        if (type_array == 'B' || type_array == 'Z') {
+            u1* b = (u1*) array+posicao+i;
+            *b = 0;
+        }
+        else if (type_array == 'C') {
+            u1* b = (u1*) array+posicao+i;
+            *b = '\0';
+        }
+        else if (type_array == 'S') {
+            u2* s = (u2*) array+posicao+i;
+            *s = 0;
+        }
+        else if (type_array == 'I') {
+            u4* i_f = (u4*) array+posicao+i;
+            *i_f = 0;
+        }
+        else if (type_array == 'F') {
+            u4* i_f = (u4*) array+posicao+i;
+            *i_f = 0.0f;
+        }
+        else if (type_array == 'J') {
+            u4* l_d  = (u4*) array+posicao+i;
+            *l_d = 0L;
+        }
+        else if (type_array == 'D') {
+            u4* l_d  = (u4*) array+posicao+i;
+            *l_d = 0.0;
+        }
+        posicao = 0;
+    }
+}
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+
+
+//--------------------------------------------------------------------------------------------------
 void multianewarray(Environment* environment){
     
-    //TODO:u2 index_result = calculatePoolIndexFromCode(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread);
+    u2 index_result = calculatePoolIndexFromCode(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread);
     
-    //TODO:u4 atype = (u4) getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool, index_result);
+    u4 atype = (u4) getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool, index_result);
     
     
     
@@ -841,7 +898,7 @@ void multianewarray(Environment* environment){
     int *count = (int*) malloc(sizeof(int) * dimensions_argument);
     
     //Desloca-se de todos os caracteres '[' que representam uma dimensao de array, para obter o caracter seguinte, que representara o tipo dos componentes do array.
-    //char type_components = atype+dimensions_argument;
+    char type_components = atype+dimensions_argument;
     
     //O primeiro count a ser desempilhado eh quantidade de componentes na ultima dimensao do array
     for (int i = ((u1)dimensions_argument)-1; i >= 0; i--) {
@@ -849,84 +906,38 @@ void multianewarray(Environment* environment){
         count[i] = popFromOperandStack(environment->thread);
     }
     
-    //O array multidimensional
-    //TODO:void* array;
-    
+    //Variavel auxiliar para se obter o tamanho total do array
     int total = 1;
     
     //Saira do loop quando for a ultima dimensao a ser alocada, pois n eh o numero de dimensoes menos uma.
-    for (int i = 1; i < ((u1)dimensions_argument)-1; i++) {
+    for (int i = 1; i < ((u1)dimensions_argument); i++) {
         //Se count igual a zero, nenhuma dimensao subsequente sera alocada.
-        if (count != 0) {
+        if (count[i] != 0) {
             //Cada dimensao sera multiplicada pela proxima dimensao, obtendo o tamanho total em um componente na primeira dimensao
             total *= count[i];
         }
         else break;
     }
     
-//TODO:    int n = (u1)dimensions_argument;
-//    
-//    *void allocateNDArray(int* length_dimension, dimensions, posicao){
-//        for (i = 0; i < length_dimension; i++) {
-//            dimensions--;
-//            if (n >= 0) {
-//                allocateNDArray(length_dimension+1, dimensions, posicao)
-//            }
-//            array+i;
-//        }
-//    }
-//    
-//    if (type_components == 'B' || type_components == 'Z') {
-//        array = (u1*) malloc(count[0]*total*sizeof(u1));
-//        array = (count)
-//        for(i = 0; i < count; i++){
-//            u1* b = (u1*) array+i;
-//            *b = 0;
-//        }
-//    }
-//
-//    else if (atype_argument == T_CHAR) {
-//        array = (u1*) malloc(sizeof(u1) * count);
-//        for(i = 0; i < count; i++){
-//            u1* b = (u1*) array+i;
-//            *b = '\u0000';
-//        }
-//    }
-//    else if (atype_argument == T_SHORT) {
-//        array = (u2*) malloc(sizeof(u2) * count);
-//        for(i = 0; i < count; i++){
-//            u2* s = (u2*) array+i;
-//            *s = 0;
-//        }
-//    }
-//    else if (atype_argument == T_INT) {
-//        array = (u4*) malloc(sizeof(u4) * count);
-//        for(i = 0; i < count; i++){
-//            u4* i_f = (u4*) array+i;
-//            *i_f = 0;
-//        }
-//    }
-//    else if (atype_argument == T_FLOAT) {
-//        array = (u4*) malloc(sizeof(u4) * count);
-//        for(i = 0; i < count; i++){
-//            u4* i_f = (u4*) array+i;
-//            *i_f = 0.0f;
-//        }
-//    }
-//    else if (atype_argument == T_LONG) {
-//        array = (u4*) malloc(sizeof(u4) * count * 2);
-//        for(i = 0; i < 2*count; i++){
-//            u4* l_d  = (u4*) array+i;
-//            *l_d = 0L;
-//        }
-//    }
-//    else if (atype_argument == T_DOUBLE) {
-//        array = (u4*) malloc(sizeof(u4) * count * 2);
-//        for(i = 0; i < 2*count; i++){
-//            u4* l_d  = (u4*) array+i;
-//            *l_d = 0.0;
-//        }
-//    }
+    //O array multidimensional
+    void* array;
+    
+    if (type_components == 'B' || type_components == 'Z' || type_components == 'C') {
+        array = (u1*) malloc(count[0] * total * sizeof(u1));
+        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+    }
+    else if (type_components == 'S') {
+        array = (u2*) malloc(count[0] * total * sizeof(u2));
+        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+    }
+    else if (type_components == 'I' || type_components == 'F') {
+        array = (u4*) malloc(count[0] * total * sizeof(u4));
+        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+    }
+    else if (type_components == 'J' || type_components == 'D') {
+        array = (u4*) malloc(count[0] * total * sizeof(u4) * 2);
+        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+    }
 }
 
 

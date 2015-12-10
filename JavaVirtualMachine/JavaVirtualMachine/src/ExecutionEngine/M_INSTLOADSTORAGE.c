@@ -270,7 +270,7 @@ void iload(Environment* environment){
                                               ,environment->thread->PC);
     
     
-    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument];
     
     pushInOperandStack(environment->thread, valor_numerico);
 }
@@ -285,8 +285,8 @@ void lload(Environment* environment){
                                               ,environment->thread->PC);
     
     
-    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
-    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_argument];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_argument];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_argument+1];
     
     pushInOperandStack(environment->thread, valor_numerico_low);
     pushInOperandStack(environment->thread, valor_numerico_high);
@@ -302,7 +302,7 @@ void fload(Environment* environment){
                                               ,environment->thread->PC);
     
     
-    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument];
     
     pushInOperandStack(environment->thread, valor_numerico);
 }
@@ -317,8 +317,8 @@ void dload(Environment* environment){
                                               ,environment->thread->PC);
     
     
-    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
-    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_argument];
+    u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_argument];
+    u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_argument+1];
     
     pushInOperandStack(environment->thread, valor_numerico_low);
     pushInOperandStack(environment->thread, valor_numerico_high);
@@ -334,7 +334,7 @@ void aload(Environment* environment){
                                               ,environment->thread->PC);
     
     
-    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument-1];
+    u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_argument];
     
     pushInOperandStack(environment->thread, valor_numerico);
 }
@@ -724,7 +724,7 @@ void istore(Environment* environment){
     
     u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico;
 }
 
 
@@ -739,8 +739,8 @@ void lstore(Environment* environment){
     u4 valor_numerico_high = popFromOperandStack(environment->thread);
     u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico_high;
-    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[index_argument+1] = valor_numerico_low;
 }
 
 
@@ -754,7 +754,7 @@ void fstore(Environment* environment){
     
     u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico;
 }
 
 
@@ -769,8 +769,8 @@ void dstore(Environment* environment){
     u4 valor_numerico_high = popFromOperandStack(environment->thread);
     u4 valor_numerico_low = popFromOperandStack(environment->thread);
     
-    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico_high;
-    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_low;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico_high;
+    environment->thread->vmStack->top->localVariablesVector[index_argument+1] = valor_numerico_low;
 }
 
 
@@ -784,7 +784,7 @@ void astore(Environment* environment){
     
     u4 valor_numerico = popFromOperandStack(environment->thread);
     
-    environment->thread->vmStack->top->localVariablesVector[index_argument-1] = valor_numerico;
+    environment->thread->vmStack->top->localVariablesVector[index_argument] = valor_numerico;
 }
 
 
@@ -1195,7 +1195,7 @@ void wide(Environment* environment){
     // PRIMEIRO FORMATO
     if (opcode_argument == OP_iload || opcode_argument == OP_fload || opcode_argument == OP_aload) {
         
-        u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_result-1];
+        u4 valor_numerico = environment->thread->vmStack->top->localVariablesVector[index_result];
         
         pushInOperandStack(environment->thread, valor_numerico);
     }
@@ -1203,12 +1203,12 @@ void wide(Environment* environment){
         
         u4 valor_numerico = popFromOperandStack(environment->thread);
         
-        environment->thread->vmStack->top->localVariablesVector[index_result-1] = valor_numerico;
+        environment->thread->vmStack->top->localVariablesVector[index_result] = valor_numerico;
     }
     else if (opcode_argument == OP_lload || opcode_argument == OP_dload) {
         
-        u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_result-1];
-        u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_result];
+        u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_result];
+        u4 valor_numerico_low = environment->thread->vmStack->top->localVariablesVector[index_result+1];
         
         pushInOperandStack(environment->thread, valor_numerico_low);
         pushInOperandStack(environment->thread, valor_numerico_high);
@@ -1218,8 +1218,8 @@ void wide(Environment* environment){
         u4 valor_numerico_high = popFromOperandStack(environment->thread);
         u4 valor_numerico_low = popFromOperandStack(environment->thread);
         
-        environment->thread->vmStack->top->localVariablesVector[index_result-1] = valor_numerico_high;
-        environment->thread->vmStack->top->localVariablesVector[index_result] = valor_numerico_low;
+        environment->thread->vmStack->top->localVariablesVector[index_result] = valor_numerico_high;
+        environment->thread->vmStack->top->localVariablesVector[index_result+1] = valor_numerico_low;
     }
     else if (opcode_argument == OP_ret) {
         //TODO:

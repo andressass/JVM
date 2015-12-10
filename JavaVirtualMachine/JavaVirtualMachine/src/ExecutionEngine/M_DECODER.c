@@ -436,6 +436,15 @@ instruction decode(u1 bytecode){
         case OP_new:
             return New;
             break;
+        case OP_anewarray:
+            return anewarray;
+        case OP_newarray:
+            return newarray;
+        case OP_arraylength:
+            return arraylength;
+        case OP_multianewarray:
+            return multianewarray;
+            break;
         case OP_ireturn:
             return ireturn;
             break;
@@ -555,9 +564,6 @@ instruction decode(u1 bytecode){
             break;
         case OP_if_acmpne:
             return if_acmpne;
-            break;
-        case OP_anewarray:
-            return anewarray;
             break;
         default:
             break;
