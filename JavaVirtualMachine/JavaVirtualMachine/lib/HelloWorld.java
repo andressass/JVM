@@ -7,17 +7,31 @@ public class HelloWorld {
     public static void main(String[] args) {
 //        // Prints "Hello, World" to the terminal window.
         
-        int[][][][] string = {
-            {
-                {{3,4},{3,4}},
-                {{3,4},{3,4}}},
-            {
-                {{3,4},{3,4}},
-                {{3,4},{3,4}}
-            }
-        };
-
-        System.out.println("Nome do aluno  : " + string[0][0][0][0]);
+//        int[][][][] string = {
+//            {
+//                {{3,4},{3,4}},
+//                {{3,4},{3,4}}},
+//            {
+//                {{3,4},{3,4}},
+//                {{3,4},{3,4}}
+//            }
+//        };
+//
+//        System.out.println("Nome do aluno  : " + string[0][0][0][0]);
+        
+        
+        int a = 1;
+        int b = 2;
+        long c = 3;
+        long d = 4;
+        long e = 5;
+        
+        System.out.println("Int a  : " + a);
+        System.out.println("Int b  : " + b);
+        System.out.println("Long c  : " + c);
+        System.out.println("Long d  : " + d);
+        System.out.println("Long e  : " + e);        
+        
         
 //        Aluno aluno = new Aluno(8);
 //        
@@ -37,7 +51,7 @@ public class HelloWorld {
 //        
 //        System.out.println("Soma : " + m.soma(2,3));
 //        System.out.println("PI : " + m.pi);
-//        
+        
         
     }
 }

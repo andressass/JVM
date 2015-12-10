@@ -51,5 +51,13 @@ EXT17 void JVMstopAbrupt(const char* msg);
  */
 EXT17 void JVMThrow(int exception, Environment* environment);
 
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Funcao que imprime informacoes relativas ao frame atual
+ *
+ * \param frame Frame a ser exibido
+ */
+EXT17 void JVMPrintFrameInfo(Frame* frame);
+
 
 #endif /* I_EXCEPTION_h */

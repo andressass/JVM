@@ -71,21 +71,21 @@ int main(int argc, const char * argv[]) {
     //Passamos o ambiente de execucao para o interpretador
     execute(environment);
 
-    printf("\n\n\n_____________________");
-    printf("\n❆   ❆         ❆    ❆ ");
-    printf("\n  ❆   /\\ ❆     ❆  ");
-    printf("\n     /  \\   ❆      ❆");
-    printf("\n ❆  /    \\     ");
-    printf("\n   /      \\   ❆  ❆");
-    printf("\n ❆ /      \\    ");
-    printf("\n❆ /        \\ ❆     ❆");
-    printf("\n  /        \\    ❆");
-    printf("\n /          \\ ❆ ");
-    printf("\n/____________\\     ❆");
-    printf("\n     |   |   _v_ ❆ ");
-    printf("\n     |___|  |_|_|   ❆");
-    printf("\n_____________________");
-    printf("\nFeliz Natal!\n\n");
+//    printf("\n\n\n_____________________");
+//    printf("\n❆   ❆         ❆    ❆ ");
+//    printf("\n  ❆   /\\ ❆     ❆  ");
+//    printf("\n     /  \\   ❆      ❆");
+//    printf("\n ❆  /    \\     ");
+//    printf("\n   /      \\   ❆  ❆");
+//    printf("\n ❆ /      \\    ");
+//    printf("\n❆ /        \\ ❆     ❆");
+//    printf("\n  /        \\    ❆");
+//    printf("\n /          \\ ❆ ");
+//    printf("\n/____________\\     ❆");
+//    printf("\n     |   |   _v_ ❆ ");
+//    printf("\n     |___|  |_|_|   ❆");
+//    printf("\n_____________________");
+//    printf("\nFeliz Natal!\n\n");
     printf("\n\n");
     return 0;
 }

@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "../../include/ExecutionEngine/I_INTERPRETER.h"
 #include "../../include/ExecutionEngine/I_DECODER.h"
+#include "../../include/ExecutionEngine/I_EXCEPTION.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 
 #define INTERPRETER_SERV
@@ -28,6 +29,8 @@ void execute(Environment* environment){
         
         //! 2.Decodifica o opcode
         instruction nextInstruction = decode(opcode);
+        
+        //JVMPrintFrameInfo(environment->thread->vmStack->top);
         
         //! 3.Executa o a instrucao referente ao opcode
         if(nextInstruction) nextInstruction(environment);

@@ -155,11 +155,13 @@ u4 popFromOperandStack(Thread* thread){
     
     //Salvamos uma referencia do elemento a ser desempilhado
     OperandStack* popped = currentFrame->opStk;
+    u4 value = popped->top;
     //Desempilhamos (como eh um vetor fixo de elementos, somente passamos a referencia para o
     // proximo elemento)
     currentFrame->opStk = currentFrame->opStk->nextStack;
+    popped->top = 0;
     
     //Retornamos o valor do elemento desempilhado
-    return popped->top;
+    return value;
 }
 
