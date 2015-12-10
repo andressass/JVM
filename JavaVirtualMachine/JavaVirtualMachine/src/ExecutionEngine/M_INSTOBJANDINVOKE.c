@@ -842,27 +842,27 @@ void initializeNDArray(int total_dimensions, int current_dimension, int* count ,
             *b = 0;
         }
         else if (type_array == 'C') {
-            u1* b = (u1*) array+i;
+            u1* b = (u1*) array+posicao+i;
             *b = '\0';
         }
         else if (type_array == 'S') {
-            u2* s = (u2*) array+i;
+            u2* s = (u2*) array+posicao+i;
             *s = 0;
         }
         else if (type_array == 'I') {
-            u4* i_f = (u4*) array+i;
+            u4* i_f = (u4*) array+posicao+i;
             *i_f = 0;
         }
         else if (type_array == 'F') {
-            u4* i_f = (u4*) array+i;
+            u4* i_f = (u4*) array+posicao+i;
             *i_f = 0.0f;
         }
         else if (type_array == 'J') {
-            u4* l_d  = (u4*) array+i;
+            u4* l_d  = (u4*) array+posicao+i;
             *l_d = 0L;
         }
         else if (type_array == 'D') {
-            u4* l_d  = (u4*) array+i;
+            u4* l_d  = (u4*) array+posicao+i;
             *l_d = 0.0;
         }
         posicao = 0;
