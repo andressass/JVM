@@ -19,7 +19,7 @@
 #include "../Estruturas/E_JVM.h"
 
 //--------------------------------------------------------------------------------------------------
-// Definicao de Excessoes
+// Definicao de Excessoes e Debugs
 //--------------------------------------------------------------------------------------------------
 
 #define NullPointerException            40 //!< Erro de referencia nula
@@ -29,6 +29,9 @@
 #define ArrayIndexOutOfBoundsException  44 //!< Erro acesso index array
 #define NegativeArraySizeException      45 //!< Erro de tamanho de array negativo
 
+#define DEBUG_ShowClassFiles            0b001 //!< Ativar exibidor.class
+#define DEBUG_DebugModus                0b010 //!< Imprimir frames por instrução
+#define DEBUG_ShowBonus                 0b100 //!< Imprimir bonus
 
 //--------------------------------------------------------------------------------------------------
 //Metodos
@@ -56,8 +59,9 @@ EXT17 void JVMThrow(int exception, Environment* environment);
  * Funcao que imprime informacoes relativas ao frame atual
  *
  * \param frame Frame a ser exibido
+ * \param opcode Opcode a ser impresso (NULL caso nao precise)
  */
-EXT17 void JVMPrintFrameInfo(Frame* frame);
+EXT17 void JVMPrintFrameInfo(Frame* frame, u1 opcode);
 
 
 #endif /* I_EXCEPTION_h */

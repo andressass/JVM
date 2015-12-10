@@ -15,6 +15,7 @@
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
+#include "../../include/Estruturas/OPCODES.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -77,7 +78,7 @@ void JVMThrow(int exception, Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
-void JVMPrintFrameInfo(Frame* frame){
+void JVMPrintFrameInfo(Frame* frame, u1 opcode){
 
     printf("\n------------------------------------");
     
@@ -85,6 +86,8 @@ void JVMPrintFrameInfo(Frame* frame){
                                                           frame->javaClass->arqClass->this_class));
     printf("\nMetodo: %s\n", getUTF8FromConstantPool(frame->javaClass->arqClass->constant_pool,
                                                      frame->method_info->name_index));
+    
+    if (opcode) printf("\nOpcode: %s\n", getOpcodeName(opcode));
     
     CodeAttribute* code = getCodeFromMethodInfo(frame->method_info, frame->javaClass->arqClass->constant_pool);
     

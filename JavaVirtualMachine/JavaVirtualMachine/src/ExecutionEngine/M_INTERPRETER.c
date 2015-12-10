@@ -12,6 +12,7 @@
 #include "../../include/ExecutionEngine/I_DECODER.h"
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
+#include "../../include/Estruturas/OPCODES.h"
 
 #define INTERPRETER_SERV
 
@@ -30,8 +31,12 @@ void execute(Environment* environment){
         //! 2.Decodifica o opcode
         instruction nextInstruction = decode(opcode);
         
-        //JVMPrintFrameInfo(environment->thread->vmStack->top);
-        
+        //! 2.1 Imprime frame em modo de debug
+        if(environment->debugFlags & DEBUG_DebugModus){
+            JVMPrintFrameInfo(environment->thread->vmStack->top, opcode);
+            printf("\n>");
+            getchar();
+        }
         //! 3.Executa o a instrucao referente ao opcode
         if(nextInstruction) nextInstruction(environment);
         
