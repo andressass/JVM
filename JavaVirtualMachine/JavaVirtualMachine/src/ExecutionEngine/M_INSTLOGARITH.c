@@ -700,10 +700,10 @@ void lshl(Environment* environment){
     u4 operandoPilha2 = 0;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
-    operandoPilha2 = popFromOperandStack(environment->thread);
+    //operandoPilha2 = popFromOperandStack(environment->thread);
     
     operando1_64 = (u8) operandoPilha1;
-    operando1_64 = (u8) (operando1_64 << 32) | operandoPilha2;
+    //operando1_64 = (u8) (operando1_64 << 32) | operandoPilha2;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
@@ -749,10 +749,10 @@ void lshr(Environment* environment){
     u4 operandoPilha2 = 0;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
-    operandoPilha2 = popFromOperandStack(environment->thread);
+    //operandoPilha2 = popFromOperandStack(environment->thread);
     
     operando1_64 = (u8) operandoPilha1;
-    operando1_64 = (u8) (operando1_64 << 32) | operandoPilha2;
+    //operando1_64 = (u8) (operando1_64 << 32) | operandoPilha2;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
@@ -804,10 +804,10 @@ void lushr(Environment* environment){
     u4 operandoPilha2 = 0;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
-    operandoPilha2 = popFromOperandStack(environment->thread);
+    //operandoPilha2 = popFromOperandStack(environment->thread);
     
     operando1_64 = (u8) operandoPilha1;
-    operando1_64 = (u8) (operando1_64 << 32) | operandoPilha2;
+    //operando1_64 = (u8) (operando1_64 << 32) | operandoPilha2;
     
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
