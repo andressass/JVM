@@ -37,7 +37,9 @@ void execute(Environment* environment){
             printf("\n>");
             getchar();
         }
+        
         //! 3.Executa o a instrucao referente ao opcode
+        //JVMPrintFrameInfo(environment->thread->vmStack->top, opcode);
         if(nextInstruction) nextInstruction(environment);
         
         //! 4.Atualizamos o valor de PC

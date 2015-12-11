@@ -3,7 +3,7 @@
  *
  *  \brief Interface de instrucoes de comparacao e desvio da JVM.
  *
- *  Interface responsavel por disponibilizar os servicos relacionados a instrucoes que realizam 
+ *  Interface responsavel por disponibilizar os servicos relacionados a instrucoes que realizam
  *  comparacoes e desvios.
  */
 //##################################################################################################
@@ -22,7 +22,7 @@
 
 //--------------------------------------------------------------------------------------------------
 /*!
- *  Instrucao responsavel por comparar dois longs vindos da pilha de operando 
+ *  Instrucao responsavel por comparar dois longs vindos da pilha de operando
  *  comparando se são iguais e lanca uma flag na propria
  *  pilha de operando
  *
@@ -32,7 +32,7 @@
 EXT15 void lcmp(Environment *environment);
 //--------------------------------------------------------------------------------------------------
 /*!
- *  Instrucao responsavel por comparar dois floats vindos da pilha de operando 
+ *  Instrucao responsavel por comparar dois floats vindos da pilha de operando
  *  compara vendo se segundo eh menor que o primeiro lanca uma flag na propria
  *  pilha de operando
  *
@@ -66,7 +66,7 @@ EXT15 void dcmpl(Environment *environment);
 //--------------------------------------------------------------------------------------------------
 /*!
  *  Instrucao responsavel por comparar dois doubles vindos da pilha de operando
- *  compara vendo se o segundo eh maior que o primeiro lanca uma flag na propria 
+ *  compara vendo se o segundo eh maior que o primeiro lanca uma flag na propria
  *  pilha de operando
  *
  * \param Environment
@@ -158,7 +158,7 @@ EXT15 void if_icmpne(Environment *environment);
 EXT15 void if_icmplt(Environment *environment);
 //--------------------------------------------------------------------------------------------------
 /*!
- *  Instrucao que compara se o segundo numero eh maior ou igual ao primeiro 
+ *  Instrucao que compara se o segundo numero eh maior ou igual ao primeiro
  *  e salta para a posicao
  *  determinada pelo indice
  *
@@ -204,5 +204,34 @@ EXT15 void if_acmpeq(Environment *environment);
  * \return void
  */
 EXT15 void if_acmpne(Environment *environment);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ *  Faz com que a execução pule para a instrução no endereço (pc + branchoffset),
+ *  onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2)
+ *  que vem imediatamente após o opcode de goto no bytecode.
+ *
+ * \param Environment
+ * \return void
+ */
+EXT15 void goto_(Environment *environment);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ *  Faz com que a execução pule para a instrução no endereço (pc + branchoffset),
+ *  onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2)
+ *  que vem imediatamente após o opcode de goto no bytecode.
+ *
+ * \param Environment
+ * \return void
+ */
+EXT15 void jsr(Environment *environment);
+EXT15 void ret(Environment *environment);
+EXT15 void tableswitch(Environment *environment);
+EXT15 void lookupswitch(Environment *environment);
+EXT15 void ifnull(Environment *environment);
+EXT15 void ifnonnull(Environment *environment);
+EXT15 void goto_w(Environment *environment);
+EXT15 void jsr_w(Environment *environment);
 
 #endif /* I_INSTCOMPANDJMP_h */

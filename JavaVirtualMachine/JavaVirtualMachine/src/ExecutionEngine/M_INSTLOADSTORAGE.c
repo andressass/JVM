@@ -143,7 +143,7 @@ void bipush(Environment* environment){
                           environment->thread->vmStack->top->javaClass->arqClass->constant_pool
                           ,environment->thread->PC);
     
-    int byte_signal_extend = byte_argument;
+    int byte_signal_extend = (signed char) byte_argument;
     
     pushInOperandStack(environment->thread, byte_signal_extend);
 }
@@ -164,7 +164,7 @@ void sipush(Environment* environment){
     
     short short_result = (byte1_argument << 8) | byte2_argument;
     
-    int short_signal_extend = short_result;
+    int short_signal_extend = (signed short) short_result;
     
     pushInOperandStack(environment->thread, short_signal_extend);
 }
@@ -550,7 +550,7 @@ void iaload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index));
+    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+ index*sizeof(u4)));
     
     pushInOperandStack(environment->thread, valor_numerico);
 }
@@ -570,8 +570,12 @@ void laload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico_high = *((u4*)((array_info->arrayAddress)+index));
-    u4 valor_numerico_low = *((u4*)((array_info->arrayAddress)+index+1));
+    u8* array = array_info->arrayAddress;
+    
+    u8 value = array[index];
+    
+    u4 valor_numerico_high = value >> 32;
+    u4 valor_numerico_low = (u4) value;
     
     pushInOperandStack(environment->thread, valor_numerico_low);
     pushInOperandStack(environment->thread, valor_numerico_high);
@@ -592,7 +596,7 @@ void faload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index));
+    u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index*sizeof(u4)));
     
     pushInOperandStack(environment->thread, valor_numerico);
 }
@@ -612,8 +616,12 @@ void daload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    u4 valor_numerico_high = *((u4*)((array_info->arrayAddress)+index));
-    u4 valor_numerico_low = *((u4*)((array_info->arrayAddress)+index+1));
+    u8* array = array_info->arrayAddress;
+    
+    u8 value = array[index];
+    
+    u4 valor_numerico_high = value >> 32;
+    u4 valor_numerico_low = (u4) value;
     
     pushInOperandStack(environment->thread, valor_numerico_low);
     pushInOperandStack(environment->thread, valor_numerico_high);
@@ -633,7 +641,9 @@ void aaload(Environment* environment){
     //Verificacao de erro de acesso de indice
     if (index >= array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
-    u4 valor_numerico = *((u4*)(array_info->arrayAddress)+index);
+    u4* array = array_info->arrayAddress;
+    
+    u4 valor_numerico = array[index];
     
     pushInOperandStack(environment->thread, valor_numerico);
 }
@@ -708,7 +718,7 @@ void saload(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    int valor_numerico_signal_extend = *((short*)((array_info->arrayAddress)+index));
+    int valor_numerico_signal_extend = *((signed short*)((array_info->arrayAddress)+index*sizeof(u2)));
     
     pushInOperandStack(environment->thread, valor_numerico_signal_extend);
 }
@@ -1000,7 +1010,7 @@ void iastore(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((u4*)((array_info->arrayAddress)+index)) = valor_numerico;
+    *((u4*)((array_info->arrayAddress)+index * sizeof(u4))) = valor_numerico;
 }
 
 
@@ -1021,8 +1031,12 @@ void lastore(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((u4*)((array_info->arrayAddress)+index)) = valor_numerico_high;
-    *((u4*)((array_info->arrayAddress)+index+1)) = valor_numerico_low;
+    u8 value = valor_numerico_high;
+    value = value<<32 | valor_numerico_low;
+    
+    u8* array = array_info->arrayAddress;
+    
+    array[index] = value;
 }
 
 
@@ -1042,7 +1056,7 @@ void fastore(Environment* environment){
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
     
-    *((u4*)((array_info->arrayAddress)+index)) = valor_numerico;
+    *((u4*)((array_info->arrayAddress) + index * sizeof(u4))) = valor_numerico;
 }
 
 
@@ -1062,9 +1076,12 @@ void dastore(Environment* environment){
     if (index > array_info->count) {
         //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
     }
+    u8 value = valor_numerico_high;
+    value = value<<32 | valor_numerico_low;
     
-    *((u4*)((array_info->arrayAddress)+index)) = valor_numerico_high;
-    *((u4*)((array_info->arrayAddress)+index+1)) = valor_numerico_low;
+    u8* array = array_info->arrayAddress;
+    
+    array[index] = value;
 }
 
 
@@ -1086,7 +1103,7 @@ void aastore(Environment* environment){
     
     //TODO: Otherwise, if arrayref is not null and the actual type of value is not assignment compatible (§2.6.7) with the actual type of the components of the array, aastore throws an ArrayStoreException.
     
-    *((u4*)((array_info->arrayAddress)+index)) = valor_numerico;
+    *((u4*)((array_info->arrayAddress)+ index * sizeof(u4))) = valor_numerico;
 }
 
 
@@ -1167,7 +1184,7 @@ void sastore(Environment* environment){
     
     u2 valor_numerico_short = valor_numerico_int;
     
-    *((u2*)((array_info->arrayAddress)+index)) = valor_numerico_short;
+    *((u2*)((array_info->arrayAddress)+ index * sizeof(u2))) = valor_numerico_short;
 }
 
 

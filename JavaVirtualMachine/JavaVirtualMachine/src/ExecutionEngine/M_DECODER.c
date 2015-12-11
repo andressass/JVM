@@ -27,7 +27,7 @@
 
 //--------------------------------------------------------------------------------------------------
 instruction decode(u1 bytecode){
-    
+
     switch (bytecode) {
         case OP_iadd:
             return iadd;
@@ -564,6 +564,33 @@ instruction decode(u1 bytecode){
             break;
         case OP_if_acmpne:
             return if_acmpne;
+            break;
+        case OP_goto:
+            return goto_;
+            break;
+        case OP_jsr:
+            return jsr;
+            break;
+        case OP_ret:
+            return ret;
+            break;
+        case OP_tableswitch:
+            return tableswitch;
+            break;
+        case OP_lookupswitch:
+            return lookupswitch;
+            break;
+        case OP_ifnull:
+            return ifnull;
+            break;
+        case OP_ifnonnull:
+            return ifnonnull;
+            break;
+        case OP_goto_w:
+            return goto_w;
+            break;
+        case OP_jsr_w:
+            return jsr_w;
             break;
         default:
             break;

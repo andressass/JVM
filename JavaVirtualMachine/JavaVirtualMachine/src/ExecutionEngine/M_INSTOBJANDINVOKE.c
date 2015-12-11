@@ -753,20 +753,20 @@ void newarray(Environment* environment){
         array = (u4*) malloc(sizeof(u4) * count);
         for(i = 0; i < count; i++){
             u4* i_f = (u4*) array+i;
-            *i_f = 0.0f;
+            *i_f = 0;
         }
     }
     else if (atype_argument == T_LONG) {
-        array = (u4*) malloc(sizeof(u4) * count * 2);
-        for(i = 0; i < 2*count; i++){
-            u4* l_d  = (u4*) array+i;
-            *l_d = 0L;
+        array = (u8*) malloc(sizeof(u8) * count);
+        for(i = 0; i < count; i++){
+            u8* l_d  = (u8*) array+i;
+            *l_d = 0;
         }
     }
     else if (atype_argument == T_DOUBLE) {
-        array = (u4*) malloc(sizeof(u4) * count * 2);
-        for(i = 0; i < 2*count; i++){
-            u4* l_d  = (u4*) array+i;
+        array = (u8*) malloc(sizeof(u8) * count);
+        for(i = 0; i < count; i++){
+            double* l_d  = (double*) array+i;
             *l_d = 0.0;
         }
     }
@@ -791,11 +791,10 @@ void anewarray(Environment* environment){
     
     if (count < 0) JVMThrow(NegativeArraySizeException, environment);
     
-    void* array = (u4*) malloc(sizeof(u4) * count);
+    u4* array = (u4*) malloc(sizeof(u4) * count);
     
     for(i = 0; i < count; i++){
-        u4* r = (u4*) array+i;
-        *r = (u4)NULL;
+        array[i] = (u4) NULL;
     }
     
     JavaArray* arrayref = newJavaArray(atype, count, array);
