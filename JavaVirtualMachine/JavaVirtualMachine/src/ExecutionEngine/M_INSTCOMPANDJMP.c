@@ -246,6 +246,7 @@ void ifge(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -272,6 +273,7 @@ void ifgt(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -325,6 +327,7 @@ void if_icmpeq(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -351,6 +354,7 @@ void if_icmpne(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -376,6 +380,7 @@ void if_icmplt(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -401,6 +406,7 @@ void if_icmpge(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -426,6 +432,7 @@ void if_icmpgt(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -451,6 +458,7 @@ void if_icmple(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -476,6 +484,7 @@ void if_acmpeq(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     offset = (u2)byte1;
@@ -501,7 +510,9 @@ void if_acmpne(Environment *environment){
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     
     environment->thread->PC++;
+
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    environment->thread->PC++;
 
     
     offset = (u2)byte1;
