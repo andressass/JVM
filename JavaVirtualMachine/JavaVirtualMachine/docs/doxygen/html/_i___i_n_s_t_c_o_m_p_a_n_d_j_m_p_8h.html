@@ -85,7 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Definições e Macros</a>  </div>
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
   <div class="headertitle">
 <div class="title">Referência do Arquivo I_INSTCOMPANDJMP.h</div>  </div>
 </div><!--header-->
@@ -94,12 +95,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <p>Interface de instrucoes de comparacao e desvio da JVM.  
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_e___j_v_m_8h_source.html">../Estruturas/E_JVM.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h_source.html">../Util/I_TYPECONVERSION.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___m_e_m_o_r_y_u_n_i_t_8h_source.html">../MemoryUnit/I_MEMORYUNIT.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para I_INSTCOMPANDJMP.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h__incl.png" border="0" usemap="#include_2_execution_engine_2_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h" alt=""/></div>
 <map name="include_2_execution_engine_2_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h" id="include_2_execution_engine_2_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h">
-<area shape="rect" id="node2" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="15,92,166,117"/>
+<area shape="rect" id="node2" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="48,165,199,191"/>
+<area shape="rect" id="node4" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de conversoes de tipos. " alt="" coords="23,92,225,117"/>
+<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="249,92,468,117"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -107,7 +112,8 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 <div class="dyncontent">
 <div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h__dep__incl.png" border="0" usemap="#include_2_execution_engine_2_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8hdep" alt=""/></div>
 <map name="include_2_execution_engine_2_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8hdep" id="include_2_execution_engine_2_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8hdep">
-<area shape="rect" id="node2" href="_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c.html" title="src/ExecutionEngine\l/M_INSTCOMPANDJMP.c" alt="" coords="5,92,182,131"/>
+<area shape="rect" id="node2" href="_m___d_e_c_o_d_e_r_8c.html" title="Modulo do Decodificador da JVM. " alt="" coords="5,92,148,131"/>
+<area shape="rect" id="node3" href="_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c.html" title="Modulo que contem as instrucoes de comparacao e salto incondicional. " alt="" coords="173,92,349,131"/>
 </map>
 </div>
 </div>
@@ -117,6 +123,65 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 Definições e Macros</h2></td></tr>
 <tr class="memitem:ac0d8c327c4abd16fa00d02b6f59100ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a>&#160;&#160;&#160;extern</td></tr>
 <tr class="separator:ac0d8c327c4abd16fa00d02b6f59100ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a93bed109df5c747c25de744392062b20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a93bed109df5c747c25de744392062b20">lcmp</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a93bed109df5c747c25de744392062b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c985d401df40ee92e5c8af0f874af7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a1c985d401df40ee92e5c8af0f874af7e">fcmpl</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a1c985d401df40ee92e5c8af0f874af7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764e9bee95a61457add85505fefdb808"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a764e9bee95a61457add85505fefdb808">fcmpg</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a764e9bee95a61457add85505fefdb808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a3fa66f759338ab1f9a897ddbefec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ae1a3fa66f759338ab1f9a897ddbefec4">dcmpl</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ae1a3fa66f759338ab1f9a897ddbefec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a3467512a7b0bee04e758a20bcafaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#af9a3467512a7b0bee04e758a20bcafaa">dcmpg</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:af9a3467512a7b0bee04e758a20bcafaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d018bb4e75634fb8080b921cb3fe02c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a3d018bb4e75634fb8080b921cb3fe02c">ifeq</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a3d018bb4e75634fb8080b921cb3fe02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a8c871ab0dea6013db5650d66d9bdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a51a8c871ab0dea6013db5650d66d9bdb">ifne</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a51a8c871ab0dea6013db5650d66d9bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf48aef56389186f9e1454d19ef1df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a3cf48aef56389186f9e1454d19ef1df0">iflt</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a3cf48aef56389186f9e1454d19ef1df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465f9d0a7b1832021683196e307b60a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a465f9d0a7b1832021683196e307b60a2">ifge</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a465f9d0a7b1832021683196e307b60a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb58aadd8b6e4f483a7d830ddf24509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a4eb58aadd8b6e4f483a7d830ddf24509">ifgt</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a4eb58aadd8b6e4f483a7d830ddf24509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be2e613449c29063ef516bf09cc2875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a2be2e613449c29063ef516bf09cc2875">ifle</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a2be2e613449c29063ef516bf09cc2875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11cb415fd2a5e6adf2b0949be670cf2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a11cb415fd2a5e6adf2b0949be670cf2c">if_icmpeq</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a11cb415fd2a5e6adf2b0949be670cf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ea8bcdd5c734fbb54fec5197f23d49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a21ea8bcdd5c734fbb54fec5197f23d49">if_icmpne</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a21ea8bcdd5c734fbb54fec5197f23d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e9820cfad06030e20a4751679a17f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a13e9820cfad06030e20a4751679a17f6">if_icmplt</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a13e9820cfad06030e20a4751679a17f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6743b791d50b40894a2ad6f132502657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a6743b791d50b40894a2ad6f132502657">if_icmpge</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a6743b791d50b40894a2ad6f132502657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048e80d46d58db777b1d5fcca48077c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a048e80d46d58db777b1d5fcca48077c7">if_icmpgt</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a048e80d46d58db777b1d5fcca48077c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad8871ab33beb51b7bb5eb6f8950ccdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#aad8871ab33beb51b7bb5eb6f8950ccdb">if_icmple</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:aad8871ab33beb51b7bb5eb6f8950ccdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8c4fb016d3475b28681caab2b85670"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a6e8c4fb016d3475b28681caab2b85670">if_acmpeq</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a6e8c4fb016d3475b28681caab2b85670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d57cfdb9b24953696574f95fc2c8e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a05d57cfdb9b24953696574f95fc2c8e3">if_acmpne</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a05d57cfdb9b24953696574f95fc2c8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f898333524763d7336412e976cdf05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ad0f898333524763d7336412e976cdf05">goto_</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ad0f898333524763d7336412e976cdf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9adf10651fdebfb98aaeb813d3e54a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a0b9adf10651fdebfb98aaeb813d3e54a">jsr</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a0b9adf10651fdebfb98aaeb813d3e54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a20e0762939d88991304f4bd57b879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ad9a20e0762939d88991304f4bd57b879">ret</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ad9a20e0762939d88991304f4bd57b879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62fff00c2f8d2834ccc509f47189f11a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a62fff00c2f8d2834ccc509f47189f11a">tableswitch</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a62fff00c2f8d2834ccc509f47189f11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c338654f24dfff00fdce57b93710bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ab8c338654f24dfff00fdce57b93710bc">lookupswitch</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ab8c338654f24dfff00fdce57b93710bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1dcdc7861cd545f9ce095211fe70f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a4a1dcdc7861cd545f9ce095211fe70f8">ifnull</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a4a1dcdc7861cd545f9ce095211fe70f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9344e48c0cff8c28d9e8c97fb84ae850"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a9344e48c0cff8c28d9e8c97fb84ae850">ifnonnull</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a9344e48c0cff8c28d9e8c97fb84ae850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4298d04bb7b44747310a15e6d3c54b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ace4298d04bb7b44747310a15e6d3c54b">goto_w</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:ace4298d04bb7b44747310a15e6d3c54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0581400a378955143b7b13842c2c6044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#a0581400a378955143b7b13842c2c6044">jsr_w</a> (<a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
+<tr class="separator:a0581400a378955143b7b13842c2c6044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Interface de instrucoes de comparacao e desvio da JVM. </p>
@@ -131,6 +196,1057 @@ Definições e Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="af9a3467512a7b0bee04e758a20bcafaa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void dcmpg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar dois doubles vindos da pilha de operando compara vendo se o segundo eh maior que o primeiro lanca uma flag na propria pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_af9a3467512a7b0bee04e758a20bcafaa_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_af9a3467512a7b0bee04e758a20bcafaa_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_af9a3467512a7b0bee04e758a20bcafaa_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_af9a3467512a7b0bee04e758a20bcafaa_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="115,5,275,31"/>
+<area shape="rect" id="node4" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="148,55,241,80"/>
+<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="121,104,268,129"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="323,55,445,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1a3fa66f759338ab1f9a897ddbefec4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void dcmpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar dois doubles vindos da pilha de operando compara vendo se o segundo eh menor que o primeiro lanca uma flag na propria pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ae1a3fa66f759338ab1f9a897ddbefec4_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ae1a3fa66f759338ab1f9a897ddbefec4_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ae1a3fa66f759338ab1f9a897ddbefec4_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ae1a3fa66f759338ab1f9a897ddbefec4_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="110,5,270,31"/>
+<area shape="rect" id="node4" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a876054124c75d44797a9812f9cd4c973" title="u4ToDouble" alt="" coords="144,55,236,80"/>
+<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="117,104,263,129"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="318,55,441,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a764e9bee95a61457add85505fefdb808"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void fcmpg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar dois floats vindos da pilha de operando compara vendo se o segundo eh maior que o primeiro lanca uma flag na propria pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a764e9bee95a61457add85505fefdb808_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a764e9bee95a61457add85505fefdb808_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a764e9bee95a61457add85505fefdb808_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a764e9bee95a61457add85505fefdb808_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="111,5,271,31"/>
+<area shape="rect" id="node4" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="149,55,233,80"/>
+<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="118,104,264,129"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="319,55,442,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c985d401df40ee92e5c8af0f874af7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void fcmpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar dois floats vindos da pilha de operando compara vendo se segundo eh menor que o primeiro lanca uma flag na propria pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a1c985d401df40ee92e5c8af0f874af7e_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a1c985d401df40ee92e5c8af0f874af7e_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a1c985d401df40ee92e5c8af0f874af7e_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a1c985d401df40ee92e5c8af0f874af7e_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="107,5,266,31"/>
+<area shape="rect" id="node4" href="_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html#a10278c8cd5623d003953e21fdc0515c9" title="u4ToFLoat" alt="" coords="144,55,229,80"/>
+<area shape="rect" id="node5" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="113,104,260,129"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="314,55,437,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0f898333524763d7336412e976cdf05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void goto_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad0f898333524763d7336412e976cdf05_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad0f898333524763d7336412e976cdf05_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad0f898333524763d7336412e976cdf05_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad0f898333524763d7336412e976cdf05_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="108,31,282,56"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="330,31,500,56"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="548,5,732,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="596,55,683,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="780,5,980,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="804,55,956,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ace4298d04bb7b44747310a15e6d3c54b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void goto_w </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ace4298d04bb7b44747310a15e6d3c54b_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ace4298d04bb7b44747310a15e6d3c54b_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ace4298d04bb7b44747310a15e6d3c54b_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ace4298d04bb7b44747310a15e6d3c54b_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="118,31,292,56"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="340,31,509,56"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="557,5,742,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="606,55,693,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="790,5,990,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="814,55,965,80"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e8c4fb016d3475b28681caab2b85670"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_acmpeq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se duas referencias sao iguais e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6e8c4fb016d3475b28681caab2b85670_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6e8c4fb016d3475b28681caab2b85670_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6e8c4fb016d3475b28681caab2b85670_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6e8c4fb016d3475b28681caab2b85670_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="136,29,310,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="143,79,303,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="358,29,528,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="576,5,760,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="625,55,711,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="808,5,1008,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="832,55,984,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="382,79,504,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a05d57cfdb9b24953696574f95fc2c8e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_acmpne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se duas referencias sao iguais e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a05d57cfdb9b24953696574f95fc2c8e3_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a05d57cfdb9b24953696574f95fc2c8e3_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a05d57cfdb9b24953696574f95fc2c8e3_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a05d57cfdb9b24953696574f95fc2c8e3_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="136,29,310,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="143,79,303,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="358,29,528,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="576,5,760,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="625,55,711,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="808,5,1008,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="832,55,984,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="382,79,504,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a11cb415fd2a5e6adf2b0949be670cf2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_icmpeq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se dois numeros sao iguais e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a11cb415fd2a5e6adf2b0949be670cf2c_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a11cb415fd2a5e6adf2b0949be670cf2c_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a11cb415fd2a5e6adf2b0949be670cf2c_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a11cb415fd2a5e6adf2b0949be670cf2c_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="132,29,306,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="139,79,299,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="354,29,523,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="571,5,756,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="620,55,707,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="804,5,1004,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="828,55,980,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="377,79,500,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6743b791d50b40894a2ad6f132502657"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_icmpge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se o segundo numero eh maior ou igual ao primeiro e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6743b791d50b40894a2ad6f132502657_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6743b791d50b40894a2ad6f132502657_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6743b791d50b40894a2ad6f132502657_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a6743b791d50b40894a2ad6f132502657_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="132,29,306,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="139,79,299,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="354,29,523,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="571,5,756,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="620,55,707,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="804,5,1004,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="828,55,980,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="377,79,500,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a048e80d46d58db777b1d5fcca48077c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_icmpgt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se o segundo numero eh maior que o primeiro e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a048e80d46d58db777b1d5fcca48077c7_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a048e80d46d58db777b1d5fcca48077c7_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a048e80d46d58db777b1d5fcca48077c7_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a048e80d46d58db777b1d5fcca48077c7_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="128,29,302,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="135,79,295,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="350,29,520,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="568,5,752,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="616,55,703,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="800,5,1000,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="824,55,976,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="373,79,496,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aad8871ab33beb51b7bb5eb6f8950ccdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_icmple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se o segundo numero eh menor ou igual ao primeiro e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_aad8871ab33beb51b7bb5eb6f8950ccdb_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_aad8871ab33beb51b7bb5eb6f8950ccdb_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_aad8871ab33beb51b7bb5eb6f8950ccdb_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_aad8871ab33beb51b7bb5eb6f8950ccdb_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="127,29,301,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="134,79,294,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="349,29,519,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="567,5,751,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="616,55,702,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="799,5,999,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="823,55,975,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="373,79,495,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a13e9820cfad06030e20a4751679a17f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_icmplt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se o segundo numero eh menor que o primeiro e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a13e9820cfad06030e20a4751679a17f6_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a13e9820cfad06030e20a4751679a17f6_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a13e9820cfad06030e20a4751679a17f6_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a13e9820cfad06030e20a4751679a17f6_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="124,29,298,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="131,79,291,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="346,29,515,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="563,5,747,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="612,55,699,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="795,5,995,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="820,55,971,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="369,79,492,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a21ea8bcdd5c734fbb54fec5197f23d49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void if_icmpne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao que compara se dois numeros sao diferentes e salta para a posicao determinada pelo indice</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a21ea8bcdd5c734fbb54fec5197f23d49_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a21ea8bcdd5c734fbb54fec5197f23d49_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a21ea8bcdd5c734fbb54fec5197f23d49_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a21ea8bcdd5c734fbb54fec5197f23d49_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="132,29,306,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="139,79,299,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="354,29,523,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="571,5,756,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="620,55,707,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="804,5,1004,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="828,55,980,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="377,79,500,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d018bb4e75634fb8080b921cb3fe02c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifeq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar o topo da pilha de operando comparar com zero e lancar a flag na pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3d018bb4e75634fb8080b921cb3fe02c_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3d018bb4e75634fb8080b921cb3fe02c_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3d018bb4e75634fb8080b921cb3fe02c_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3d018bb4e75634fb8080b921cb3fe02c_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="96,29,270,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="103,79,263,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="318,29,488,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="536,5,720,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="585,55,671,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="768,5,968,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="792,55,944,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="342,79,464,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a465f9d0a7b1832021683196e307b60a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar o topo da pilha de operando comparar com zero e lancar a flag na pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a465f9d0a7b1832021683196e307b60a2_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a465f9d0a7b1832021683196e307b60a2_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a465f9d0a7b1832021683196e307b60a2_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a465f9d0a7b1832021683196e307b60a2_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="96,29,270,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="103,79,263,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="318,29,488,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="536,5,720,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="585,55,671,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="768,5,968,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="792,55,944,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="342,79,464,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4eb58aadd8b6e4f483a7d830ddf24509"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifgt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar o topo da pilha de operando comparar com zero e lancar a flag na pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4eb58aadd8b6e4f483a7d830ddf24509_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4eb58aadd8b6e4f483a7d830ddf24509_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4eb58aadd8b6e4f483a7d830ddf24509_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4eb58aadd8b6e4f483a7d830ddf24509_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="92,29,266,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="99,79,259,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="314,29,484,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="581,55,667,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="338,79,461,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2be2e613449c29063ef516bf09cc2875"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar o topo da pilha de operando comparar com zero e lancar a flag na pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a2be2e613449c29063ef516bf09cc2875_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a2be2e613449c29063ef516bf09cc2875_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a2be2e613449c29063ef516bf09cc2875_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a2be2e613449c29063ef516bf09cc2875_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="92,29,266,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="99,79,259,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="314,29,484,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="337,79,460,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cf48aef56389186f9e1454d19ef1df0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void iflt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar o topo da pilha de operando comparar com zero e lancar a flag na pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3cf48aef56389186f9e1454d19ef1df0_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3cf48aef56389186f9e1454d19ef1df0_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3cf48aef56389186f9e1454d19ef1df0_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a3cf48aef56389186f9e1454d19ef1df0_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="92,29,266,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="99,79,259,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="314,29,484,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="337,79,460,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a51a8c871ab0dea6013db5650d66d9bdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar o topo da pilha de operando comparar com zero e lancar a flag na pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a51a8c871ab0dea6013db5650d66d9bdb_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a51a8c871ab0dea6013db5650d66d9bdb_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a51a8c871ab0dea6013db5650d66d9bdb_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a51a8c871ab0dea6013db5650d66d9bdb_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="96,29,270,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="103,79,263,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="318,29,488,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="536,5,720,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="585,55,671,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="768,5,968,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="792,55,944,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="342,79,464,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9344e48c0cff8c28d9e8c97fb84ae850"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifnonnull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a9344e48c0cff8c28d9e8c97fb84ae850_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a9344e48c0cff8c28d9e8c97fb84ae850_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a9344e48c0cff8c28d9e8c97fb84ae850_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a9344e48c0cff8c28d9e8c97fb84ae850_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="124,29,298,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="131,79,291,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="346,29,516,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="564,5,748,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="613,55,699,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="796,5,996,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="820,55,972,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="370,79,493,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a1dcdc7861cd545f9ce095211fe70f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ifnull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4a1dcdc7861cd545f9ce095211fe70f8_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4a1dcdc7861cd545f9ce095211fe70f8_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4a1dcdc7861cd545f9ce095211fe70f8_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a4a1dcdc7861cd545f9ce095211fe70f8_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="102,29,276,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="109,79,269,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="324,29,494,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="542,5,726,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="591,55,677,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="774,5,974,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="798,55,950,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="347,79,470,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b9adf10651fdebfb98aaeb813d3e54a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void jsr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0b9adf10651fdebfb98aaeb813d3e54a_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0b9adf10651fdebfb98aaeb813d3e54a_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0b9adf10651fdebfb98aaeb813d3e54a_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0b9adf10651fdebfb98aaeb813d3e54a_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="92,29,266,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="106,79,252,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="314,29,484,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="337,79,460,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0581400a378955143b7b13842c2c6044"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void jsr_w </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0581400a378955143b7b13842c2c6044_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0581400a378955143b7b13842c2c6044_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0581400a378955143b7b13842c2c6044_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a0581400a378955143b7b13842c2c6044_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="106,29,280,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="119,79,266,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="328,29,497,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="545,5,730,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="594,55,681,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="778,5,978,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="802,55,954,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="351,79,474,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a93bed109df5c747c25de744392062b20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void lcmp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se são iguais e lanca uma flag na propria pilha de operando</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a93bed109df5c747c25de744392062b20_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a93bed109df5c747c25de744392062b20_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a93bed109df5c747c25de744392062b20_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a93bed109df5c747c25de744392062b20_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="103,5,263,31"/>
+<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="109,55,256,80"/>
+<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="311,31,434,56"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8c338654f24dfff00fdce57b93710bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void lookupswitch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ab8c338654f24dfff00fdce57b93710bc_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ab8c338654f24dfff00fdce57b93710bc_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ab8c338654f24dfff00fdce57b93710bc_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ab8c338654f24dfff00fdce57b93710bc_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="151,29,325,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="158,79,318,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="373,29,543,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="591,5,775,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="639,55,726,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="823,5,1023,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="847,55,999,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="396,79,519,104"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9a20e0762939d88991304f4bd57b879"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void ret </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62fff00c2f8d2834ccc509f47189f11a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h.html#ac0d8c327c4abd16fa00d02b6f59100ae">EXT15</a> void tableswitch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_environment.html">Environment</a> *&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a62fff00c2f8d2834ccc509f47189f11a_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a62fff00c2f8d2834ccc509f47189f11a_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a62fff00c2f8d2834ccc509f47189f11a_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_a62fff00c2f8d2834ccc509f47189f11a_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="141,29,315,55"/>
+<area shape="rect" id="node8" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="148,79,308,104"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="363,29,532,55"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="580,5,765,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="629,55,716,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="813,5,1012,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="837,55,988,80"/>
+<area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="386,79,509,104"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>

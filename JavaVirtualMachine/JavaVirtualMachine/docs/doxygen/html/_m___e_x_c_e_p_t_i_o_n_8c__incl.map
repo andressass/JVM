@@ -1,6 +1,8 @@
 <map id="src/ExecutionEngine/M_EXCEPTION.c" name="src/ExecutionEngine/M_EXCEPTION.c">
-<area shape="rect" id="node5" href="$_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="310,179,500,217"/>
-<area shape="rect" id="node8" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="59,92,223,131"/>
-<area shape="rect" id="node6" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="303,265,454,291"/>
-<area shape="rect" id="node9" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="73,185,185,211"/>
+<area shape="rect" id="node5" href="$_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="458,179,648,217"/>
+<area shape="rect" id="node8" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="34,92,198,131"/>
+<area shape="rect" id="node10" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="510,92,671,131"/>
+<area shape="rect" id="node11" href="$_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="234,179,384,217"/>
+<area shape="rect" id="node6" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="355,265,506,291"/>
+<area shape="rect" id="node9" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="97,185,210,211"/>
 </map>

@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file M_TYPECONVERSION.h
+/*! \file M_TYPECONVERSION.c
  *
  *  \brief Interface de conversoes de tipos.
  *

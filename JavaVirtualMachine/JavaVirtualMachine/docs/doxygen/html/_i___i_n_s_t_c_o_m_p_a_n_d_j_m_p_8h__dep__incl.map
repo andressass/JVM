@@ -1,3 +1,4 @@
 <map id="include/ExecutionEngine/I_INSTCOMPANDJMP.h" name="include/ExecutionEngine/I_INSTCOMPANDJMP.h">
-<area shape="rect" id="node2" href="$_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c.html" title="src/ExecutionEngine\l/M_INSTCOMPANDJMP.c" alt="" coords="5,92,182,131"/>
+<area shape="rect" id="node2" href="$_m___d_e_c_o_d_e_r_8c.html" title="Modulo do Decodificador da JVM. " alt="" coords="5,92,148,131"/>
+<area shape="rect" id="node3" href="$_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c.html" title="Modulo que contem as instrucoes de comparacao e salto incondicional. " alt="" coords="173,92,349,131"/>
 </map>

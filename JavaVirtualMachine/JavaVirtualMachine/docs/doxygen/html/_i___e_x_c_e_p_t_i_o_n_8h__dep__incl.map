@@ -1,9 +1,11 @@
 <map id="include/ExecutionEngine/I_EXCEPTION.h" name="include/ExecutionEngine/I_EXCEPTION.h">
 <area shape="rect" id="node2" href="$_m___c_l_a_s_s_l_o_a_d_e_r_8c.html" title="Modulo do Carregador de Classes da JVM. " alt="" coords="5,99,254,124"/>
-<area shape="rect" id="node3" href="$_m___d_e_c_o_d_e_r_8c.html" title="Modulo do Decodificador da JVM. " alt="" coords="278,92,421,131"/>
-<area shape="rect" id="node4" href="$_m___e_x_c_e_p_t_i_o_n_8c.html" title="src/ExecutionEngine\l/M_EXCEPTION.c" alt="" coords="445,92,588,131"/>
-<area shape="rect" id="node5" href="$_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="src/ExecutionEngine\l/M_INSTLOADSTORAGE.c" alt="" coords="612,92,797,131"/>
-<area shape="rect" id="node6" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="src/ExecutionEngine\l/M_INSTOBJANDINVOKE.c" alt="" coords="821,92,1009,131"/>
-<area shape="rect" id="node7" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="1033,99,1293,124"/>
-<area shape="rect" id="node8" href="$_m___o_p_t_h_r_e_a_d_8c.html" title="Modulo de threads da JVM. " alt="" coords="1318,99,1539,124"/>
+<area shape="rect" id="node3" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="278,92,424,131"/>
+<area shape="rect" id="node4" href="$_m___d_e_c_o_d_e_r_8c.html" title="Modulo do Decodificador da JVM. " alt="" coords="449,92,592,131"/>
+<area shape="rect" id="node5" href="$_m___e_x_c_e_p_t_i_o_n_8c.html" title="Modulo de excessoes da JVM. " alt="" coords="616,92,759,131"/>
+<area shape="rect" id="node6" href="$_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="Modulo das Instrucoes de carga e armazenamento da JVM. " alt="" coords="782,92,968,131"/>
+<area shape="rect" id="node7" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="Interface de instrucoes de Manipulacao de Objetos e Invokes da JVM. " alt="" coords="991,92,1180,131"/>
+<area shape="rect" id="node8" href="$_m___i_n_t_e_r_p_r_e_t_e_r_8c.html" title="Modulo do Interpretador da JVM. " alt="" coords="1204,92,1352,131"/>
+<area shape="rect" id="node9" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="1375,99,1636,124"/>
+<area shape="rect" id="node10" href="$_m___o_p_t_h_r_e_a_d_8c.html" title="Modulo de threads da JVM. " alt="" coords="1660,99,1882,124"/>
 </map>

@@ -25,20 +25,20 @@ void lcmp(Environment *environment){
 
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
-    
+
     operando1 = (u8) operandoPilha1;
     operando1 = (u8) (operando1 << 32) | operandoPilha2;
-    
+
     long long operando1ComSinal = (long long)operando1;
-    
+
     operandoPilha1 = popFromOperandStack(environment->thread);
     operandoPilha2 = popFromOperandStack(environment->thread);
-    
+
     operando2 = (u8) operandoPilha1;
     operando2 = (u8) (operando2 << 32) | operandoPilha2;
-    
+
     long long operando2ComSinal = (long long) operando2;
-    
+
     if (operando2ComSinal > operando1ComSinal) {
         resultado = 1;
     }else if (operando2ComSinal == operando1ComSinal){
@@ -169,13 +169,13 @@ void ifeq(Environment *environment){
     short int offset;
     u4 operando = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -192,13 +192,13 @@ void ifne(Environment *environment){
     short int offset;
     u4 operando = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -215,13 +215,13 @@ void iflt(Environment *environment){
     short int offset;
     u4 operando = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -241,14 +241,14 @@ void ifge(Environment *environment){
     short int offset;
     u4 operando = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -268,14 +268,14 @@ void ifgt(Environment *environment){
     short int offset;
     u4 operando = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -295,13 +295,13 @@ void ifle(Environment *environment){
     short int offset;
     u4 operando = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -319,24 +319,24 @@ void ifle(Environment *environment){
 
 void if_icmpeq(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 == operando1){
         environment->thread->PC += offset;
@@ -346,24 +346,24 @@ void if_icmpeq(Environment *environment){
 void if_icmpne(Environment *environment){
 
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 != operando1){
         environment->thread->PC += offset;
@@ -372,24 +372,24 @@ void if_icmpne(Environment *environment){
 
 void if_icmplt(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 < operando1){
         environment->thread->PC += offset;
@@ -398,24 +398,24 @@ void if_icmplt(Environment *environment){
 
 void if_icmpge(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 >= operando1){
         environment->thread->PC += offset;
@@ -424,24 +424,24 @@ void if_icmpge(Environment *environment){
 
 void if_icmpgt(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 > operando1){
         environment->thread->PC += offset;
@@ -450,24 +450,24 @@ void if_icmpgt(Environment *environment){
 
 void if_icmple(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 <= operando1){
         environment->thread->PC += offset;
@@ -479,14 +479,14 @@ void if_acmpeq(Environment *environment){
     u4 operando1 = 0;
     u4 operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -505,16 +505,14 @@ void if_acmpne(Environment *environment){
     u4 operando1 = 0;
     u4 operando2 = 0;
     u1 byte1, byte2;
-    
+
     environment->thread->PC++;
     byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
+
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    environment->thread->PC++;
 
-    
     offset = (u2)byte1;
     offset = offset << 8;
     offset |= byte2;
@@ -549,99 +547,106 @@ void goto_(Environment *environment) {
 void jsr(Environment *environment) {
     short int index;
     //u4 pc = 0;
-    u1 byte;
+    u1 byte1, byte2;
 
     environment->thread->PC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index = (u2)byte;
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+
+    environment->thread->PC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index = (short int)byte1;
     index = index << 8;
+    index |= (short int)byte2;
 
     environment->thread->PC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index = (u2)byte;
-
     pushInOperandStack(environment->thread,environment->thread->vmStack->top->returnPC);
 
-    environment->thread->vmStack->top->returnPC += index - 2;
+    environment->thread->vmStack->top->returnPC += index - 3;
 }
 
 void ret(Environment *environment) {
-   // Pega indice da var local que vai ter um end
+  environment->thread->PC++;
+  u1 index_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
+                                            environment->thread->vmStack->top->javaClass->arqClass->constant_pool
+                                            ,environment->thread->PC);
+
+
+  environment->thread->PC = environment->thread->vmStack->top->localVariablesVector[index_argument];
 }
 
 void tableswitch(Environment *environment) {
-    u4 i, pad, low, high, def, offset, index, opCode; //, pc;
+    int32_t i, pad, low, high, def, offset, index, opCode;
     u1 byte;
-
-    opCode = environment->thread->vmStack->top->returnPC;
-
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
 
     low = 0;
     high = 0;
     def = 0;
     offset = 0;
 
-    environment->thread->vmStack->top->returnPC++;
-    pad = environment->thread->vmStack->top->returnPC % 4;
+    opCode = environment->thread->PC;
+    environment->thread->PC++;
+    pad = environment->thread->PC % 4;
 
+    // Conta os 4 bytepads
     if (pad != 0) {
-        for (i = 0; i < 4 - pad; i++) {
-            environment->thread->vmStack->top->returnPC++;
-        }
+      for (i = 0; i < 4 - pad; i++) {
+          environment->thread->PC++;
+      }
     }
 
+    // Carrega o default
     for (i = 0; i < 3; i++) {
-        def |= (u4)byte;
-        def = def << 8;
-        environment->thread->vmStack->top->returnPC++;
-        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      def |= (signed)byte;
+      def = def << 8;
+      environment->thread->PC++;
     }
 
-    def |= (u4)byte;
-    environment->thread->vmStack->top->returnPC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    def |= byte;
+    environment->thread->PC++;
 
+    // Carrega o low
     for (i = 0; i < 3; i++) {
-        low |= (u4)byte;
-        low = low << 8;
-        environment->thread->vmStack->top->returnPC++;
-        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      low |= (signed)byte;
+      low = low << 8;
+      environment->thread->PC++;
     }
 
-    low |= (u4)byte;
-    environment->thread->vmStack->top->returnPC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    low |= (signed)byte;
+    environment->thread->PC++;
 
+    // Carrega o high
     for (i = 0; i < 3; i++) {
-        high |= (u4)byte;
-        high = high << 8;
-        environment->thread->vmStack->top->returnPC++;
-        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      high |= (signed)byte;
+      high = high << 8;
+      environment->thread->PC++;
     }
 
-    high |= (u4)byte;
-
-    environment->thread->vmStack->top->returnPC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    high |= (signed)byte;
+    environment->thread->PC++;
 
-    index = popFromOperandStack(environment->thread);
-
-    if ((index < low) || (index > high)) {
-        environment->thread->vmStack->top->returnPC = def + opCode;
+    // Carrega o index da operand stack
+    index = (signed) popFromOperandStack(environment->thread);
+    if (( (signed)index <  (signed)low) || ( (signed)index >  (signed)high)) {
+        environment->thread->PC = def + opCode;
     } else {
         for (i = 0; i < index * 4; i++) {
-            environment->thread->vmStack->top->returnPC++;
-            byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+            environment->thread->PC++;
         }
         for (i = 0; i < 3; i++) {
-            offset |= (u4)byte;
-            offset = high << 8;
-            environment->thread->vmStack->top->returnPC++;
-            byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+          byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+          offset |= (signed)byte;
+          offset = offset << 8;
+          environment->thread->PC++;
         }
-        offset |= byte + opCode;
-        environment->thread->vmStack->top->returnPC = offset;
+        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+        offset |= (signed)byte + opCode;
+        environment->thread->PC = offset;
     }
 }
 
@@ -651,75 +656,71 @@ void lookupswitch(Environment *environment) {
     u1 byte;
 
 
-    opCode = environment->thread->vmStack->top->returnPC;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    opCode = environment->thread->PC;
+    environment->thread->PC++;
+    pad = environment->thread->PC % 4;
 
-    environment->thread->vmStack->top->returnPC++;
-    pad = environment->thread->vmStack->top->returnPC % 4;
-
+    // Conta os 4 bytepads
     if (pad != 0) {
-        for (i = 0; i < 4 - pad; i++) {
-            environment->thread->vmStack->top->returnPC++;
-        }
+      for (i = 0; i < 4 - pad; i++) {
+          environment->thread->PC++;
+      }
     }
 
+    // Carrega o default
     for (i = 0; i < 3; i++) {
-        def |= (u4)byte;
-        def = def << 8;
-        environment->thread->vmStack->top->returnPC++;
-        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+      def |= (signed)byte;
+      def = def << 8;
+      environment->thread->PC++;
     }
 
-    def |= (u4)byte;
-
-    environment->thread->vmStack->top->returnPC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    def |= byte;
+    environment->thread->PC++;
 
     for (i = 0; i < 3; i++) {
+        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
         npairs |= (u4)byte;
         npairs = npairs << 8;
-        environment->thread->vmStack->top->returnPC++;
-        byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+        environment->thread->PC++;
     }
-
-    npairs |= (u4)byte;
-
-    environment->thread->vmStack->top->returnPC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    npairs |= (u4)byte;
+    environment->thread->PC++;
 
+    // Aloca a area para os pares de chave + offset do case buscado
     pair = calloc(npairs, sizeof(npair));
     auxiliar = pair;
     auxiliar->match = 0;
 
+    // Monta os pares de chave + offset do case buscado
     for (i = 0; i < npairs; i++) {
         pair->match = 0;
 
         for (j = 0; j < 3; j++) {
+            byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
             pair->match |= (u4)byte;
             pair->match = pair->match << 8;
-            environment->thread->vmStack->top->returnPC++;
-            byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+            environment->thread->PC++;
         }
 
-
-        pair->match |= (u4)byte;
-
-        environment->thread->vmStack->top->returnPC++;
         byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+        pair->match |= (u4)byte;
+        environment->thread->PC++;
 
         pair->offset = 0;
 
         for (j = 0; j < 3; j++) {
+            byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
             pair->offset |= (u4)byte;
             pair->offset = pair->offset << 8;
-            environment->thread->vmStack->top->returnPC++;
-            byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+            environment->thread->PC++;
         }
-
-        pair->offset |= (u4)byte;
-
-        environment->thread->vmStack->top->returnPC++;
         byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+        pair->offset |= (u4)byte;
+        environment->thread->PC++;
+
         pair++;
     }
 
@@ -728,18 +729,18 @@ void lookupswitch(Environment *environment) {
     i = 0;
     /*pair = auxiliar;*/
 
+    // Procura a key correspondente ao case do par e encaminha a thread para seu offset
     while ((!found) && (i < npairs)) {
         if (key == auxiliar->match) {
             found = 1;
-            environment->thread->vmStack->top->returnPC = auxiliar->offset + opCode;
+            environment->thread->PC = auxiliar->offset + opCode;
         } else {
             i++;
             auxiliar++;
         }
     }
-
     if (!found) {
-        environment->thread->vmStack->top->returnPC = def + opCode;
+        environment->thread->PC = def + opCode;
     }
 }
 
@@ -747,16 +748,16 @@ void ifnull(Environment *environment) {
     short int index;
     u4 auxiliar1; //pc = 0;
     u1 byte;
-    
+
     environment->thread->PC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    
-    
+
+
     auxiliar1 = popFromOperandStack(environment->thread);
     index = (u2)byte;
 
     index = index << 8;
-    
+
     environment->thread->PC++;
     byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
     index |= (u2)byte;
@@ -799,55 +800,55 @@ void ifnonnull(Environment *environment) {
 void jsr_w(Environment *environment) {
     u8 index;
     //u4 pc = 0;
-    u1 byte;
+    u1 byte1, byte2, byte3, byte4;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index = (u8)byte;
+    environment->thread->PC++;
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index = (u8)byte1;
     index = index << 8;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index |= (u8)byte;
+    environment->thread->PC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index |= (u8)byte2;
     index = index << 8;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index |= (u8)byte;
+    environment->thread->PC++;
+    byte3 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index |= (u8)byte3;
     index = index << 8;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index |= (u8)byte;
+    environment->thread->PC++;
+    byte4 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index |= (u8)byte4;
 
     pushInOperandStack(environment->thread,environment->thread->vmStack->top->returnPC);
 
-    environment->thread->vmStack->top->returnPC += index - 4;
+    environment->thread->vmStack->top->returnPC += index - 5;
 }
 
 void goto_w(Environment *environment) {
     u8 index;
     //u4 pc = 0;
-    u1 byte;
+    u1 byte1, byte2, byte3, byte4;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index = (u8)byte;
+    environment->thread->PC++;
+    byte1 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index = (u8)byte1;
     index = index << 8;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index |= (u8)byte;
+    environment->thread->PC++;
+    byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index |= (u8)byte2;
     index = index << 8;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index |= (u8)byte;
+    environment->thread->PC++;
+    byte3 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index |= (u8)byte3;
     index = index << 8;
 
-    environment->thread->vmStack->top->returnPC++;
-    byte = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index |= (u8)byte;
+    environment->thread->PC++;
+    byte4 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+    index |= (u8)byte4;
 
-    environment->thread->vmStack->top->returnPC += index - 4;
+    environment->thread->vmStack->top->returnPC += index - 5;
 }

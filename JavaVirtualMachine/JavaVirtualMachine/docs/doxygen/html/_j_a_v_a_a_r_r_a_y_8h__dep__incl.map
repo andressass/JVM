@@ -1,6 +1,6 @@
 <map id="include/Estruturas/JAVAARRAY.h" name="include/Estruturas/JAVAARRAY.h">
 <area shape="rect" id="node2" href="$_j_a_v_a_a_r_r_a_y_8c.html" title="Biblioteca de arrays Java. " alt="" coords="5,99,198,124"/>
 <area shape="rect" id="node3" href="$_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="222,92,368,131"/>
-<area shape="rect" id="node4" href="$_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="src/ExecutionEngine\l/M_INSTLOADSTORAGE.c" alt="" coords="393,92,578,131"/>
-<area shape="rect" id="node5" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="src/ExecutionEngine\l/M_INSTOBJANDINVOKE.c" alt="" coords="602,92,790,131"/>
+<area shape="rect" id="node4" href="$_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="Modulo das Instrucoes de carga e armazenamento da JVM. " alt="" coords="393,92,578,131"/>
+<area shape="rect" id="node5" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="Interface de instrucoes de Manipulacao de Objetos e Invokes da JVM. " alt="" coords="602,92,790,131"/>
 </map>

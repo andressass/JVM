@@ -1,5 +1,5 @@
 <map id="include/Util/I_JAVADECODER.h" name="include/Util/I_JAVADECODER.h">
-<area shape="rect" id="node2" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="src/ExecutionEngine\l/M_INSTOBJANDINVOKE.c" alt="" coords="5,79,194,117"/>
+<area shape="rect" id="node2" href="$_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="Interface de instrucoes de Manipulacao de Objetos e Invokes da JVM. " alt="" coords="5,79,194,117"/>
 <area shape="rect" id="node3" href="$_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html" title="Modulo da area de metodos da JVM. " alt="" coords="217,85,478,111"/>
-<area shape="rect" id="node4" href="$_i___j_a_v_a_d_e_c_o_d_e_r_8c.html" title="Modulo decodificador de bibliotecas Java. " alt="" coords="502,85,687,111"/>
+<area shape="rect" id="node4" href="$_m___j_a_v_a_d_e_c_o_d_e_r_8c.html" title="Modulo decodificador de bibliotecas Java. " alt="" coords="502,85,695,111"/>
 </map>

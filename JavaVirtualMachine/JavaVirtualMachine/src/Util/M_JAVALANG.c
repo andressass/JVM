@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file I_JAVALANG.c
+/*! \file M_JAVALANG.c
  *
  *  \brief Modulo simulado da biblioteca java.lang
  *

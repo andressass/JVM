@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file I_EXCEPTION.c
+/*! \file M_EXCEPTION.c
  *
  *  \brief Modulo de excessoes da JVM.
  *

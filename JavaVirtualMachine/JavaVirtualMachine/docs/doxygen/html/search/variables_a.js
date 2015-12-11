@@ -2,6 +2,7 @@ var searchData=
 [
   ['magic',['magic',['../structarq_class.html#af2bde90f63d048e444c9437063394b4f',1,'arqClass']]],
   ['major_5fversion',['major_version',['../structarq_class.html#a0aeda33023ba35d892279365630779d3',1,'arqClass']]],
+  ['match',['match',['../structnpair.html#a638cc0bffebe3504c92ff603b2878625',1,'npair']]],
   ['max_5flocals',['max_locals',['../struct_code_attribute.html#a1407b9bddee5eca9e0b0b20fbf1a8f1f',1,'CodeAttribute']]],
   ['max_5fstack',['max_stack',['../struct_code_attribute.html#a61e8f2685ef2bb170d72e402a0e72ca2',1,'CodeAttribute']]],
   ['memoryaddress',['memoryAddress',['../struct_fields_table.html#a5c251342633df2e314a6b88c25f2a604',1,'FieldsTable']]],

@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file I_JAVADECODER.c
+/*! \file M_JAVADECODER.c
  *
  *  \brief Modulo decodificador de bibliotecas Java
  *

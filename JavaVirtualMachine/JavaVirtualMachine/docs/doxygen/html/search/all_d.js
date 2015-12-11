@@ -3,6 +3,7 @@ var searchData=
   ['object',['Object',['../struct_object.html',1,'Object'],['../struct_object_list.html#aae49442726f57917e2d6611c62f1e071',1,'ObjectList::object()'],['../_e___j_v_m_8h.html#a71c0c698be85fce6ae7d701b736c1a0a',1,'Object():&#160;E_JVM.h']]],
   ['objectlist',['ObjectList',['../struct_object_list.html',1,'ObjectList'],['../struct_java_class.html#af33546b53017ca696367a08e9e30b115',1,'JavaClass::objectList()'],['../_e___j_v_m_8h.html#a51d7e9eb1bade5cd0dac13bb3e32a9e8',1,'ObjectList():&#160;E_JVM.h']]],
   ['obter_5fentrada',['obter_entrada',['../_i_p___l_e_c_l_a_s_s_8h.html#a71742ecf4d2dd4d17ec28441f94ba9b1',1,'obter_entrada(const char *nome_arquivo):&#160;MP_LECLASS.c'],['../_m_p___l_e_c_l_a_s_s_8c.html#a925c22cc6ed034861fdb76cc5c19a049',1,'obter_entrada(const char *arq):&#160;MP_LECLASS.c']]],
+  ['offset',['offset',['../structnpair.html#a333020fa37335ccefe10f2050b24ca6a',1,'npair']]],
   ['op_5faaload',['OP_aaload',['../_o_p_c_o_d_e_s_8h.html#a0c31dde1f3491b973398da46a78a4368',1,'OPCODES.h']]],
   ['op_5faastore',['OP_aastore',['../_o_p_c_o_d_e_s_8h.html#ac8147159a195e7b3bd106c4f5e22e9b4',1,'OPCODES.h']]],
   ['op_5faconst_5fnull',['OP_aconst_null',['../_o_p_c_o_d_e_s_8h.html#a7628bbdaffa18ff7c3eb6333a80be26a',1,'OPCODES.h']]],

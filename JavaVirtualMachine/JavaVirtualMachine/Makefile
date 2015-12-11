@@ -8,26 +8,27 @@
 
 CC = gcc
 STD = -std=c99
-CLASS_LOADER_HEADER = include/ClassLoader/**.h
-CLASS_LOADER_SOURCES = src/ClassLoader/**.c
 
-ESTRUTURAS_HEADER = include/Estruturas/**.h
-ESTRUTURAS_SOURCES =  src/Estruturas/**.c
+CLASS_LOADER_HEADER = include/ClassLoader/*.h
+CLASS_LOADER_SOURCES = src/ClassLoader/*.c
 
-EXECUTION_ENGINE_HEADER = include/ExecutionEngine/**.h
+ESTRUTURAS_HEADER = include/Estruturas/*.h
+ESTRUTURAS_SOURCES =  src/Estruturas/*.c
+
+EXECUTION_ENGINE_HEADER = include/ExecutionEngine/*.h
 EXECUTION_ENGINE_SOURCES = src/ExecutionEngine/*.c
 
-MEMORY_UNIT_HEADER = include/MemoryUnit/**.h
-MEMORY_UNIT_SOURCES =  src/MemoryUnit/**.c
+MEMORY_UNIT_HEADER = include/MemoryUnit/*.h
+MEMORY_UNIT_SOURCES =  src/MemoryUnit/*.c
 
-UTIL_HEADER = include/Util/**.h
-UTIL_SOURCES = src/Util/**.c
+UTIL_HEADER = include/Util/*.h
+UTIL_SOURCES = src/Util/*.c
 
-CLASS_LOADER_GCH = include/ClassLoader/**.gch
-ESTRUTURAS_GCH = include/Estruturas/**.gch
-MEMORY_UNIT_GCH = include/MemoryUnit/**.gch
-EXECUTION_ENGINE_GCH = include/ExecutionEngine/**.gch
-UTIL_GCH = include/Util/**.gch
+CLASS_LOADER_GCH = include/ClassLoader/*.gch
+ESTRUTURAS_GCH = include/Estruturas/*.gch
+MEMORY_UNIT_GCH = include/MemoryUnit/*.gch
+EXECUTION_ENGINE_GCH = include/ExecutionEngine/*.gch
+UTIL_GCH = include/Util/*.gch
 
 HEADER = $(CLASS_LOADER_HEADER) $(ESTRUTURAS_HEADER) $(EXECUTION_ENGINE_HEADER) $(MEMORY_UNIT_HEADER) $(UTIL_HEADER)
 SOURCES = $(CLASS_LOADER_SOURCES) $(ESTRUTURAS_SOURCES) $(EXECUTION_ENGINE_SOURCES) $(MEMORY_UNIT_SOURCES) $(UTIL_SOURCES)
@@ -46,7 +47,6 @@ all_unix:
 
 all_win:
 	$(CC) $(STD) $(HEADER) $(SOURCES) -m32
-
 
 doxygen:
 

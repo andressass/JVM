@@ -3,9 +3,7 @@ package entidades;
 public abstract class Pessoa {
 
     private String nome;
-    private final int matricula = 12345;
-    private double idade;
-    public int serie;
+    protected double idade;
     
     
     public Pessoa(){
@@ -31,10 +29,4 @@ public abstract class Pessoa {
         return this.idade;
     }
     
-    public double getIdadeVerdadeira(){
-        
-        return idade + 20;
-    }
-    
-    public abstract int getMatricula();
 }

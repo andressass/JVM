@@ -11,8 +11,7 @@ Estrutura do ambiente de execucao da J\+V\+M.
 
 
 
-Diagrama de colaboração para Environment\+:
-\nopagebreak
+Diagrama de colaboração para Environment\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,7 +24,9 @@ Diagrama de colaboração para Environment\+:
 \hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{struct_environment_a9521ae1091a45875768bdbbe0a339014}{thread}
 \begin{DoxyCompactList}\small\item\em Referencia para a thread em execucao. \end{DoxyCompactList}\item 
 \hyperlink{struct_method_area}{Method\+Area} $\ast$ \hyperlink{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}{method\+Area}
-\begin{DoxyCompactList}\small\item\em Referencia para a area de metodos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Referencia para a area de metodos. \end{DoxyCompactList}\item 
+\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} \hyperlink{struct_environment_a8c0e2258ed60e94b0c7a66eac8e27e64}{debug\+Flags}
+\begin{DoxyCompactList}\small\item\em Flags de debug. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Descrição Detalhada}
@@ -34,6 +35,13 @@ Estrutura do ambiente de execucao da J\+V\+M.
 Estrura que apresenta um ambiente de execucao, a qual contem uma thread e uma area de metodos 
 
 \subsection{Campos}
+\hypertarget{struct_environment_a8c0e2258ed60e94b0c7a66eac8e27e64}{}\index{Environment@{Environment}!debug\+Flags@{debug\+Flags}}
+\index{debug\+Flags@{debug\+Flags}!Environment@{Environment}}
+\subsubsection[{debug\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1} Environment\+::debug\+Flags}\label{struct_environment_a8c0e2258ed60e94b0c7a66eac8e27e64}
+
+
+Flags de debug. 
+
 \hypertarget{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}{}\index{Environment@{Environment}!method\+Area@{method\+Area}}
 \index{method\+Area@{method\+Area}!Environment@{Environment}}
 \subsubsection[{method\+Area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Method\+Area}$\ast$ Environment\+::method\+Area}\label{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}

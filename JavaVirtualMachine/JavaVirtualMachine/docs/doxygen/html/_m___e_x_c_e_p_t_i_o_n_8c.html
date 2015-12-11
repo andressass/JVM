@@ -91,20 +91,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">Referência do Arquivo M_EXCEPTION.c</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Modulo de excessoes da JVM.  
+<a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_i___e_x_c_e_p_t_i_o_n_8h_source.html">../../include/ExecutionEngine/I_EXCEPTION.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i___l_e_c_l_a_s_s_8h_source.html">../../include/ClassLoader/I_LECLASS.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i___m_e_m_o_r_y_u_n_i_t_8h_source.html">../../include/MemoryUnit/I_MEMORYUNIT.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_o_p_c_o_d_e_s_8h_source.html">../../include/Estruturas/OPCODES.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para M_EXCEPTION.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___e_x_c_e_p_t_i_o_n_8c__incl.png" border="0" usemap="#src_2_execution_engine_2_m___e_x_c_e_p_t_i_o_n_8c" alt=""/></div>
 <map name="src_2_execution_engine_2_m___e_x_c_e_p_t_i_o_n_8c" id="src_2_execution_engine_2_m___e_x_c_e_p_t_i_o_n_8c">
-<area shape="rect" id="node5" href="_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="310,179,500,217"/>
-<area shape="rect" id="node8" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="59,92,223,131"/>
-<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="303,265,454,291"/>
-<area shape="rect" id="node9" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="73,185,185,211"/>
+<area shape="rect" id="node5" href="_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="458,179,648,217"/>
+<area shape="rect" id="node8" href="_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="34,92,198,131"/>
+<area shape="rect" id="node10" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="510,92,671,131"/>
+<area shape="rect" id="node11" href="_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="234,179,384,217"/>
+<area shape="rect" id="node6" href="_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="355,265,506,291"/>
+<area shape="rect" id="node9" href="_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="97,185,210,211"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -119,8 +126,13 @@ Funções</h2></td></tr>
 <tr class="separator:a7ebd6a93cb47f5b6d6a059d7f4554fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68dfd26cc3bccc52a45cd8650e33e12c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_x_c_e_p_t_i_o_n_8c.html#a68dfd26cc3bccc52a45cd8650e33e12c">JVMThrow</a> (int exception, <a class="el" href="struct_environment.html">Environment</a> *environment)</td></tr>
 <tr class="separator:a68dfd26cc3bccc52a45cd8650e33e12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ad43e7af421faf49b5eaeb2e549dc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___e_x_c_e_p_t_i_o_n_8c.html#a43ad43e7af421faf49b5eaeb2e549dc4">JVMPrintFrameInfo</a> (<a class="el" href="struct_frame.html">Frame</a> *frame, <a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> opcode)</td></tr>
+<tr class="separator:a43ad43e7af421faf49b5eaeb2e549dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Definições e macros</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo de excessoes da JVM. </p>
+<p>Modulo responsavel por implementar os servicos relacionados ao tratamento de excessoes lancadas pela JVM. </p>
+</div><h2 class="groupheader">Definições e macros</h2>
 <a class="anchor" id="adecb8e0bb1e4c8694e4454d0652ec106"></a>
 <div class="memitem">
 <div class="memproto">
@@ -134,6 +146,57 @@ Funções</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a43ad43e7af421faf49b5eaeb2e549dc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JVMPrintFrameInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_frame.html">Frame</a> *&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>&#160;</td>
+          <td class="paramname"><em>opcode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funcao que imprime informacoes relativas ao frame atual</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td><a class="el" href="struct_frame.html" title="Estrutura da Frame. ">Frame</a> a ser exibido </td></tr>
+    <tr><td class="paramname">opcode</td><td>Opcode a ser impresso (NULL caso nao precise) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4_cgraph.png" border="0" usemap="#_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4_cgraph" alt=""/></div>
+<map name="_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4_cgraph" id="_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4_cgraph">
+<area shape="rect" id="node2" href="_i___l_e_c_l_a_s_s_8h.html#a17f9ea96ae7e5b0bb5b9b7c94b7fb772" title="getClassNameFromConstantPool" alt="" coords="190,5,409,31"/>
+<area shape="rect" id="node5" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="457,56,642,81"/>
+<area shape="rect" id="node6" href="_o_p_c_o_d_e_s_8h.html#a7032610407e47a7ec45a93ef7949e8c9" title="getOpcodeName" alt="" coords="238,107,361,132"/>
+<area shape="rect" id="node7" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ac9971cea3dc974252142385cb20a00a6" title="getCodeFromMethodInfo" alt="" coords="215,156,384,181"/>
+<area shape="rect" id="node3" href="_m___e_c_l_a_s_s_8c.html#a7ff5b3edf6b2a9a643efc1c8627d1d29" title="getUTF8FromConstantPool" alt="" coords="457,7,642,32"/>
+<area shape="rect" id="node4" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="690,32,890,57"/>
+<area shape="rect" id="node8" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="506,156,593,181"/>
+<area shape="rect" id="node9" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="714,156,866,181"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a7ebd6a93cb47f5b6d6a059d7f4554fad"></a>
 <div class="memitem">
 <div class="memproto">
