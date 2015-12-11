@@ -406,8 +406,30 @@ instruction decode(u1 bytecode){
 //            break;
         case OP_dup:
             return Dup;
+            break;
+        case OP_dup_x1:
+            return dup_x1;
+            break;
+        case OP_dup_x2:
+            return dup_x2;
+            break;
+        case OP_dup2:
+            return Dup2;
+            break;
+        case OP_dup2_x1:
+            return dup2_x1;
+            break;
+        case OP_dup2_x2:
+            return dup2_x2;
+            break;
         case OP_pop:
             return pop;
+            break;
+        case OP_pop2:
+            return pop2;
+            break;
+        case OP_swap:
+            return swap;
             break;
         case OP_getstatic:
             return getstatic;

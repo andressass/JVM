@@ -62,7 +62,7 @@ int main(int argc, const char * argv[]) {
     char opcoes;
     u1 debugFlags = 0;
     
-    //Configuracoes de debug
+    //!Apresentamos e configuramos as opcoes de debug
     printf("Deseja ativar exibidor de .class?[N/s]:");
     scanf("%c", &opcoes);
     getchar();
@@ -76,18 +76,18 @@ int main(int argc, const char * argv[]) {
         debugFlags |= DEBUG_DebugModus;
     }
     
-    //Alocamos espaco para o ambiente de execucao
+    //!Alocamos espaco para o ambiente de execucao
     Environment* environment = (Environment*) malloc(sizeof(Environment));
     
-    //Criamos a area de metodos e a thread e as associamos ao enviroment
+    //!Criamos a area de metodos e a thread e as associamos ao enviroment
     environment->methodArea = newMethodArea();
     environment->thread = newThread();
     environment->debugFlags = debugFlags;
     
-    //Empilhamos o metodo main
+    //!Empilhamos o metodo main da classe passada como argumento
     configureClassMain(environment, argc, argv);
     
-    //Passamos o ambiente de execucao para o interpretador
+    //!Passamos o ambiente de execucao para o interpretador
     execute(environment);
 
     printf("\n\n");

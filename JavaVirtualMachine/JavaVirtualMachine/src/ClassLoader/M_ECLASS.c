@@ -322,7 +322,7 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("\n\tu1 tag: %d", cp->tag);
             printf("\n\tu4 high_bytes: 0x%x", cp->u.Double.high_bytes);
             printf("\n\tu4 low_bytes: 0x%x", cp->u.Double.low_bytes);
-            printf("\n\t(u8 bytes: %lf)", u4ToDouble(cp->u.Double.high_bytes, cp->u.Double.low_bytes));
+            printf("\n\t(u8 bytes: %f)", u4ToDouble(cp->u.Double.high_bytes, cp->u.Double.low_bytes));
             printf("\n}\n");
             cp++; // Ocupa 2 indices
             break;
@@ -410,7 +410,7 @@ void printByteCode(u1* bytecode, u1* bytecodes){
     
     u1 mnemonic = bytecode[0];
     
-    printf("\n\t\t\t%s", getOpcodeName(mnemonic));
+    printf("\n\t\t\t%2d. %s", bytecode-bytecodes, getOpcodeName(mnemonic));
     bytecode++;
     
     //Numero de atributos
@@ -615,7 +615,7 @@ void exibeCampMetd(field_or_method* fm, u2 count, cp_info* cp){
         
         printf("\n%d.{", i+1);
         //Exibimos as flags de acesso
-        printf("\n\tACCESS_FLAGS:\t\t %d ", fm->access_flags);
+        printf("\n\tACCESS_FLAGS:\t\t 0x%x ", fm[i].access_flags);
         printf("( ");
         exibeAccessFlags(fm[i].access_flags, 0);
         printf(")");
@@ -682,7 +682,7 @@ OPresult LECLASS_exibidor(ArqClass* arq_class){
     printf("\n----------------------------------------------------\n");
     exibeCtePool(arq_class);
     printf("\n----------------------------------------------------\n");
-    printf("ACCESS_FLAGS:\t %d ", arq_class->access_flags);
+    printf("ACCESS_FLAGS:\t 0x%X ", arq_class->access_flags);
     printf("( ");
     exibeAccessFlags(arq_class->access_flags, 1);
     printf(")");
