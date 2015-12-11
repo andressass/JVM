@@ -832,8 +832,8 @@ void initializeNDArray(int total_dimensions, int current_dimension, int* count ,
     current_dimension++;
     // Enquanto ainda nao chegar na ultima dimensao, continua na recusividade
     for (i = 0; i < count[current_dimension]; i++) {
-        posicao += i*count[current_dimension+1];
-        if (current_dimension != total_dimensions-1) {
+        if (current_dimension < total_dimensions-1) {
+            posicao = i*count[current_dimension+1];
             initializeNDArray(total_dimensions, current_dimension, count, posicao, type_array, array);
         }
         else {
@@ -865,9 +865,9 @@ void initializeNDArray(int total_dimensions, int current_dimension, int* count ,
                 u8* l_d  = (u8*) array+posicao+i;
                 *l_d = 0.0;
             }
-            return;
         }
     }
+    return;
 }
 //--------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------
@@ -898,9 +898,6 @@ void multianewarray(Environment* environment){
     //Vetor que armazena o tamanho de cada dimensao do array
     int *count = (int*) malloc(sizeof(int) * dimensions_argument);
     
-    //Desloca-se de todos os caracteres '[' que representam uma dimensao de array, para obter o caracter seguinte, que representara o tipo dos componentes do array.
-    char type_components = atype+dimensions_argument;
-    
     //O primeiro count a ser desempilhado eh quantidade de componentes na ultima dimensao do array
     for (int i = ((u1)dimensions_argument)-1; i >= 0; i--) {
         
@@ -923,6 +920,20 @@ void multianewarray(Environment* environment){
     //O array multidimensional
     void* array;
     
+    //Tipo dos componentes do multianewarray a ser criado
+    char type_components = '\0';
+    
+    int j = 0;
+    //Sai do loop quando jah tiver andado o numero de dimensoes + 1 caracteres, que serao teoricamente o numero de '[' mais o tipo dos componentes.
+    while (type_components == '\0') {
+        //Desloca-se de todos os caracteres '[' que representam uma dimensao de array, para obter o caracter seguinte, que representara o tipo dos componentes do array.
+        char aux = *((u4*)(atype+j));
+        if (aux != '[') {
+            type_components = aux;
+        }
+        j++;
+    }
+    
     if (type_components == 'B' || type_components == 'Z' || type_components == 'C') {
         array = (u1*) malloc(count[0] * total * sizeof(u1));
         initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
@@ -939,6 +950,8 @@ void multianewarray(Environment* environment){
         array = (u8*) malloc(count[0] * total * sizeof(u8));
         initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
     }
+    
+    pushInOperandStack(environment->thread, (u4) array);
 }
 
 

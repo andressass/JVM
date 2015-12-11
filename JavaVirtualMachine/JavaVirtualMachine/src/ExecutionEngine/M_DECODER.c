@@ -401,9 +401,9 @@ instruction decode(u1 bytecode){
         case OP_sastore:
             return sastore;
             break;
-        case OP_wide:
-            return wide;
-            break;
+//        case OP_wide:
+//            return wide;
+//            break;
         case OP_dup:
             return Dup;
         case OP_pop:
@@ -442,9 +442,9 @@ instruction decode(u1 bytecode){
             return newarray;
         case OP_arraylength:
             return arraylength;
-        case OP_multianewarray:
-            return multianewarray;
-            break;
+//        case OP_multianewarray:
+//            return multianewarray;
+//            break;
         case OP_ireturn:
             return ireturn;
             break;

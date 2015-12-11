@@ -1282,9 +1282,15 @@ void wide(Environment* environment){
         
         u4 index_forma2 = (u4)(index_result + constbyte_result);
         
-        index_forma2 = index_forma2;
+        environment->thread->PC++;
         
-        //TODO:
+        u1 Const = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+        
+        //environment->thread->PC++;
+        
+        char constSemSinal = (char) Const;
+        
+        environment->thread->vmStack->top->localVariablesVector[index_forma2] += constSemSinal;
     }
 }
 
