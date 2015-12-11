@@ -319,8 +319,8 @@ void ifle(Environment *environment){
 
 void if_icmpeq(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
     
     environment->thread->PC++;
@@ -335,8 +335,8 @@ void if_icmpeq(Environment *environment){
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 == operando1){
         environment->thread->PC += offset;
@@ -346,8 +346,8 @@ void if_icmpeq(Environment *environment){
 void if_icmpne(Environment *environment){
 
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
     
     environment->thread->PC++;
@@ -362,8 +362,8 @@ void if_icmpne(Environment *environment){
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 != operando1){
         environment->thread->PC += offset;
@@ -372,8 +372,8 @@ void if_icmpne(Environment *environment){
 
 void if_icmplt(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
     
     environment->thread->PC++;
@@ -388,8 +388,8 @@ void if_icmplt(Environment *environment){
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 < operando1){
         environment->thread->PC += offset;
@@ -398,8 +398,8 @@ void if_icmplt(Environment *environment){
 
 void if_icmpge(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
     
     environment->thread->PC++;
@@ -414,8 +414,8 @@ void if_icmpge(Environment *environment){
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 >= operando1){
         environment->thread->PC += offset;
@@ -424,8 +424,8 @@ void if_icmpge(Environment *environment){
 
 void if_icmpgt(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
     
     environment->thread->PC++;
@@ -440,8 +440,8 @@ void if_icmpgt(Environment *environment){
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 > operando1){
         environment->thread->PC += offset;
@@ -450,8 +450,8 @@ void if_icmpgt(Environment *environment){
 
 void if_icmple(Environment *environment){
     short int offset;
-    u4 operando1 = 0;
-    u4 operando2 = 0;
+    int operando1 = 0;
+    int operando2 = 0;
     u1 byte1, byte2;
     
     environment->thread->PC++;
@@ -466,8 +466,8 @@ void if_icmple(Environment *environment){
     offset |= byte2;
     offset -= 3;
 
-    operando1 = popFromOperandStack(environment->thread);
-    operando2 = popFromOperandStack(environment->thread);
+    operando1 =(int) popFromOperandStack(environment->thread);
+    operando2 =(int) popFromOperandStack(environment->thread);
 
     if(operando2 <= operando1){
         environment->thread->PC += offset;
@@ -512,8 +512,6 @@ void if_acmpne(Environment *environment){
     environment->thread->PC++;
 
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    environment->thread->PC++;
-
     
     offset = (u2)byte1;
     offset = offset << 8;
