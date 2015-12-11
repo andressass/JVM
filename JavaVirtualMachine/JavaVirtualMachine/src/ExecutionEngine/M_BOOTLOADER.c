@@ -75,12 +75,6 @@ int main(int argc, const char * argv[]) {
     if (opcoes == 'S' || opcoes == 's') {
         debugFlags |= DEBUG_DebugModus;
     }
-    printf("Modo natalino?[N/s]:");
-    scanf("%c", &opcoes);
-    getchar();
-    if (opcoes == 'S' || opcoes == 's') {
-        debugFlags |= DEBUG_ShowBonus;
-    }
     
     //Alocamos espaco para o ambiente de execucao
     Environment* environment = (Environment*) malloc(sizeof(Environment));
@@ -95,25 +89,7 @@ int main(int argc, const char * argv[]) {
     
     //Passamos o ambiente de execucao para o interpretador
     execute(environment);
-    
-    if (environment->debugFlags & DEBUG_ShowBonus) {
-        printf("\n\n\n_____________________");
-        printf("\n*   *         *    * ");
-        printf("\n  *   /\\ *     *  ");
-        printf("\n     /  \\   *      *");
-        printf("\n *  /    \\     ");
-        printf("\n   /      \\   *  *");
-        printf("\n * /      \\    ");
-        printf("\n* /        \\ *     *");
-        printf("\n  /        \\    *");
-        printf("\n /          \\ * ");
-        printf("\n/____________\\     *");
-        printf("\n     |   |   _v_ * ");
-        printf("\n     |___|  |_|_|   *");
-        printf("\n_____________________");
-        printf("\n    Feliz Natal!");
-        printf("\n_____________________");
-    }
+
     printf("\n\n");
     return 0;
 }
