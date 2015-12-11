@@ -829,42 +829,44 @@ void arraylength(Environment* environment){
 void initializeNDArray(int total_dimensions, int current_dimension, int* count ,int posicao,
                      char type_array, void* array){
     int i;
+    current_dimension++;
     // Enquanto ainda nao chegar na ultima dimensao, continua na recusividade
-    while (current_dimension < total_dimensions) {
-        for (i = 0; i < count[current_dimension]; i++) {
-            current_dimension++;
-            posicao += i*count[current_dimension+1];
+    for (i = 0; i < count[current_dimension]; i++) {
+        posicao += i*count[current_dimension+1];
+        if (current_dimension != total_dimensions-1) {
             initializeNDArray(total_dimensions, current_dimension, count, posicao, type_array, array);
         }
-        if (type_array == 'B' || type_array == 'Z') {
-            u1* b = (u1*) array+posicao+i;
-            *b = 0;
+        else {
+            if (type_array == 'B' || type_array == 'Z') {
+                u1* b = (u1*) array+posicao+i;
+                *b = 0;
+            }
+            else if (type_array == 'C') {
+                u1* b = (u1*) array+posicao+i;
+                *b = '\0';
+            }
+            else if (type_array == 'S') {
+                u2* s = (u2*) array+posicao+i;
+                *s = 0;
+            }
+            else if (type_array == 'I') {
+                u4* i_f = (u4*) array+posicao+i;
+                *i_f = 0;
+            }
+            else if (type_array == 'F') {
+                u4* i_f = (u4*) array+posicao+i;
+                *i_f = 0.0f;
+            }
+            else if (type_array == 'J') {
+                u8* l_d  = (u8*) array+posicao+i;
+                *l_d = 0L;
+            }
+            else if (type_array == 'D') {
+                u8* l_d  = (u8*) array+posicao+i;
+                *l_d = 0.0;
+            }
+            return;
         }
-        else if (type_array == 'C') {
-            u1* b = (u1*) array+posicao+i;
-            *b = '\0';
-        }
-        else if (type_array == 'S') {
-            u2* s = (u2*) array+posicao+i;
-            *s = 0;
-        }
-        else if (type_array == 'I') {
-            u4* i_f = (u4*) array+posicao+i;
-            *i_f = 0;
-        }
-        else if (type_array == 'F') {
-            u4* i_f = (u4*) array+posicao+i;
-            *i_f = 0.0f;
-        }
-        else if (type_array == 'J') {
-            u4* l_d  = (u4*) array+posicao+i;
-            *l_d = 0L;
-        }
-        else if (type_array == 'D') {
-            u4* l_d  = (u4*) array+posicao+i;
-            *l_d = 0.0;
-        }
-        posicao = 0;
     }
 }
 //--------------------------------------------------------------------------------------------------
@@ -923,19 +925,19 @@ void multianewarray(Environment* environment){
     
     if (type_components == 'B' || type_components == 'Z' || type_components == 'C') {
         array = (u1*) malloc(count[0] * total * sizeof(u1));
-        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
     }
     else if (type_components == 'S') {
         array = (u2*) malloc(count[0] * total * sizeof(u2));
-        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
     }
     else if (type_components == 'I' || type_components == 'F') {
         array = (u4*) malloc(count[0] * total * sizeof(u4));
-        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
     }
     else if (type_components == 'J' || type_components == 'D') {
-        array = (u4*) malloc(count[0] * total * sizeof(u4) * 2);
-        initializeNDArray(dimensions_argument, 0, count, 0, type_components, array);
+        array = (u8*) malloc(count[0] * total * sizeof(u8));
+        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
     }
 }
 
