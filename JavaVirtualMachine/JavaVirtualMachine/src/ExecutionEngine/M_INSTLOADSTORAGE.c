@@ -100,38 +100,61 @@ void lconst_1(Environment* environment){
 
 //--------------------------------------------------------------------------------------------------
 void fconst_0(Environment* environment){
+    float x = 0;
+    u4 Const;
     
-    pushInOperandStack(environment->thread, 0.0f);
+    memcpy(&Const, &x, sizeof(u4));
+    pushInOperandStack(environment->thread, Const);
 }
 
 
 //--------------------------------------------------------------------------------------------------
 void fconst_1(Environment* environment){
+    float x = 1;
+    u4 Const;
     
-    pushInOperandStack(environment->thread, 1.0f);
+    memcpy(&Const, &x, sizeof(u4));
+    pushInOperandStack(environment->thread, Const);
 }
 
 
 //--------------------------------------------------------------------------------------------------
 void fconst_2(Environment* environment){
+    float x = 2;
+    u4 Const;
     
-    pushInOperandStack(environment->thread, 2.0f);
+    memcpy(&Const, &x, sizeof(u4));
+    pushInOperandStack(environment->thread, Const);
 }
 
 
 //--------------------------------------------------------------------------------------------------
 void dconst_0(Environment* environment){
+    double x = 0;
+    long long Const;
     
-    pushInOperandStack(environment->thread, 0.0f);
-    pushInOperandStack(environment->thread, 0.0f);
+    memcpy(&Const, &x, sizeof(long long));
+    
+    u4 operandoPilha1 = (u4) ((Const & 0xFFFFFFFF00000000) >> 32);
+    u4 operandoPilha2 = (u4) Const & 0x00000000FFFFFFFF;
+    
+    pushInOperandStack(environment->thread, operandoPilha2);
+    pushInOperandStack(environment->thread, operandoPilha1);
 }
 
 
 //--------------------------------------------------------------------------------------------------
 void dconst_1(Environment* environment){
+    double x = 1;
+    long long Const;
     
-    pushInOperandStack(environment->thread, 1.0f); //parte baixa
-    pushInOperandStack(environment->thread, 0.0f); //parte alta
+    memcpy(&Const, &x, sizeof(long long));
+    
+    u4 operandoPilha1 = (u4) ((Const & 0xFFFFFFFF00000000) >> 32);
+    u4 operandoPilha2 = (u4) Const & 0x00000000FFFFFFFF;
+    
+    pushInOperandStack(environment->thread, operandoPilha2);
+    pushInOperandStack(environment->thread, operandoPilha1);
 }
 
 

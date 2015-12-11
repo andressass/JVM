@@ -539,9 +539,9 @@ void goto_(Environment *environment) {
 
     environment->thread->PC++;
     byte2 = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
-    index = (u2)byte2;
+    index = (short int)byte1;
     index = index << 8;
-    index |= (u2)byte1;
+    index |= (short int)byte2;
 
     environment->thread->PC += index - 3;
 }
