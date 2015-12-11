@@ -1,6 +1,8 @@
 <map id="src/ExecutionEngine/M_INTERPRETER.c" name="src/ExecutionEngine/M_INTERPRETER.c">
-<area shape="rect" id="node3" href="$_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="90,92,280,131"/>
-<area shape="rect" id="node6" href="$_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="304,92,493,131"/>
-<area shape="rect" id="node7" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="518,92,679,131"/>
-<area shape="rect" id="node4" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="323,179,474,204"/>
+<area shape="rect" id="node3" href="$_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="848,92,1037,131"/>
+<area shape="rect" id="node6" href="$_i___d_e_c_o_d_e_r_8h.html" title="Interface do Decodificador da JVM. " alt="" coords="234,92,424,131"/>
+<area shape="rect" id="node7" href="$_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="448,92,637,131"/>
+<area shape="rect" id="node8" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="662,92,823,131"/>
+<area shape="rect" id="node9" href="$_o_p_c_o_d_e_s_8h.html" title="Biblioteca de servicos de Opcodes. " alt="" coords="61,92,211,131"/>
+<area shape="rect" id="node4" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="467,179,618,204"/>
 </map>

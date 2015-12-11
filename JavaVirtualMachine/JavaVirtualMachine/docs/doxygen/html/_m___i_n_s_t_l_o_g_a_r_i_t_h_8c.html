@@ -195,9 +195,7 @@ Funções</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Modulo que contem as instrucoes logicos aritmeticas. </p>
-<p>Modulo que contem as instrucoes de retorno.</p>
-<p>Modulo responsavel por implementar as instrucoes de cunho logico e aritmetico</p>
-<p>Modulo responsavel por implementar as instrucoes que lidam com retorno de valores </p>
+<p>Modulo responsavel por implementar as instrucoes de cunho logico e aritmetico </p>
 </div><h2 class="groupheader">Definições e macros</h2>
 <a class="anchor" id="a51bbb234371728c4e544afb24a8ebecb"></a>
 <div class="memitem">
@@ -753,6 +751,8 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <p>Instrucao para incremento de inteiros de 32 bits local </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+    <tr><td class="paramname">int</td><td>será a constante que será somada </td></tr>
+    <tr><td class="paramname">u4</td><td>será o indice que será modificado </td></tr>
   </table>
   </dd>
 </dl>
@@ -763,9 +763,12 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba_cgraph.png" border="0" usemap="#_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba_cgraph" alt=""/></div>
 <map name="_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba_cgraph" id="_m___i_n_s_t_l_o_g_a_r_i_t_h_8c_a6b3298f526ae7ee214cdb133db917bba_cgraph">
-<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#ab99e0d31394f4494f264635c756a33d2" title="popFromOperandStack" alt="" coords="95,5,255,31"/>
-<area shape="rect" id="node4" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#a8b181262ccc3a1cabead6b1c89334210" title="pushInOperandStack" alt="" coords="101,55,248,80"/>
-<area shape="rect" id="node3" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="303,31,425,56"/>
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="95,31,269,56"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="317,31,486,56"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="534,5,719,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="583,55,670,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="767,5,967,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="791,55,942,80"/>
 </map>
 </div>
 </p>

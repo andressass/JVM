@@ -59,28 +59,28 @@ void configureClassMain(Environment* environment, int argc, const char* argv[]){
  */
 int main(int argc, const char * argv[]) {
 
-//    char opcoes;
+    char opcoes;
     u1 debugFlags = 0;
     
-//    //Configuracoes de debug
-//    printf("Deseja ativar exibidor de .class?[N/s]:");
-//    scanf("%c", &opcoes);
-//    getchar();
-//    if (opcoes == 'S' || opcoes == 's') {
-//        debugFlags |= DEBUG_ShowClassFiles;
-//    }
-//    printf("Modo debug?[N/s]:");
-//    scanf("%c", &opcoes);
-//    getchar();
-//    if (opcoes == 'S' || opcoes == 's') {
-//        debugFlags |= DEBUG_DebugModus;
-//    }
-//    printf("Modo natalino?[N/s]:");
-//    scanf("%c", &opcoes);
-//    getchar();
-//    if (opcoes == 'S' || opcoes == 's') {
-//        debugFlags |= DEBUG_ShowBonus;
-//    }
+    //Configuracoes de debug
+    printf("Deseja ativar exibidor de .class?[N/s]:");
+    scanf("%c", &opcoes);
+    getchar();
+    if (opcoes == 'S' || opcoes == 's') {
+        debugFlags |= DEBUG_ShowClassFiles;
+    }
+    printf("Modo debug?[N/s]:");
+    scanf("%c", &opcoes);
+    getchar();
+    if (opcoes == 'S' || opcoes == 's') {
+        debugFlags |= DEBUG_DebugModus;
+    }
+    printf("Modo natalino?[N/s]:");
+    scanf("%c", &opcoes);
+    getchar();
+    if (opcoes == 'S' || opcoes == 's') {
+        debugFlags |= DEBUG_ShowBonus;
+    }
     
     //Alocamos espaco para o ambiente de execucao
     Environment* environment = (Environment*) malloc(sizeof(Environment));

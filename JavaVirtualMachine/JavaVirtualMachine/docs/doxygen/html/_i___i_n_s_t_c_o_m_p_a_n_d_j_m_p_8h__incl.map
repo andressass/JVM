@@ -1,3 +1,5 @@
 <map id="include/ExecutionEngine/I_INSTCOMPANDJMP.h" name="include/ExecutionEngine/I_INSTCOMPANDJMP.h">
-<area shape="rect" id="node2" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="15,92,166,117"/>
+<area shape="rect" id="node2" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="48,165,199,191"/>
+<area shape="rect" id="node4" href="$_i___t_y_p_e_c_o_n_v_e_r_s_i_o_n_8h.html" title="Interface de conversoes de tipos. " alt="" coords="23,92,225,117"/>
+<area shape="rect" id="node5" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="249,92,468,117"/>
 </map>

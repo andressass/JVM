@@ -6,8 +6,7 @@ Estruturas da J\+V\+M.
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\\*
-Gráfico de dependência de inclusões para E\+\_\+\+J\+V\+M.\+h\+:
-\nopagebreak
+Gráfico de dependência de inclusões para E\+\_\+\+J\+V\+M.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -68,7 +67,9 @@ struct \hyperlink{struct_v_m_stack}{V\+M\+Stack}
 struct \hyperlink{struct_thread}{Thread}
 \begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
 struct \hyperlink{struct_environment}{Environment}
-\begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+V\+M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+V\+M. \end{DoxyCompactList}\item 
+struct \hyperlink{structnpair}{npair}
+\begin{DoxyCompactList}\small\item\em Estrutura do auxiliar de comparação de pares para a Table\+Switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Definições e Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -233,6 +234,8 @@ typedef struct \hyperlink{struct_thread}{Thread} \hyperlink{_e___j_v_m_8h_a4a082
 \begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
 typedef struct \hyperlink{struct_environment}{Environment} \hyperlink{_e___j_v_m_8h_a2939780e6e449ccdc63802638f1ec09c}{Environment}
 \begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+V\+M. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structnpair}{npair} \hyperlink{_e___j_v_m_8h_a04ba3fc66efc7ead5fabd5e6b3a435d6}{npair}
+\begin{DoxyCompactList}\small\item\em Estrutura do auxiliar de comparação de pares para a Table\+Switch. \end{DoxyCompactList}\item 
 typedef void($\ast$ \hyperlink{_e___j_v_m_8h_a0000d84fd9007ff8ecae19f59d835517}{instruction}) (\hyperlink{struct_environment}{Environment} $\ast$)
 \begin{DoxyCompactList}\small\item\em Ponteiro para uma instrucao. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -660,7 +663,14 @@ Estrutura utilizada para a representacao de \hypertarget{_e___j_v_m_8h_a3ab276e3
 
 Estrutura da \hyperlink{struct_method_area}{Method\+Area}. 
 
-\hypertarget{_e___j_v_m_8h_a71c0c698be85fce6ae7d701b736c1a0a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Object@{Object}}
+\hypertarget{_e___j_v_m_8h_a04ba3fc66efc7ead5fabd5e6b3a435d6}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!npair@{npair}}
+\index{npair@{npair}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
+\subsubsection[{npair}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf npair} {\bf npair}}\label{_e___j_v_m_8h_a04ba3fc66efc7ead5fabd5e6b3a435d6}
+
+
+Estrutura do auxiliar de comparação de pares para a Table\+Switch. 
+
+Estrura que apresenta um indicador de igualdade e o offset \hypertarget{_e___j_v_m_8h_a71c0c698be85fce6ae7d701b736c1a0a}{}\index{E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}!Object@{Object}}
 \index{Object@{Object}!E\+\_\+\+J\+V\+M.\+h@{E\+\_\+\+J\+V\+M.\+h}}
 \subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Object}  {\bf Object}}\label{_e___j_v_m_8h_a71c0c698be85fce6ae7d701b736c1a0a}
 

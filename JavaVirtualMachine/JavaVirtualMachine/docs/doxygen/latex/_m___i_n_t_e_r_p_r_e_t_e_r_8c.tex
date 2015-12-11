@@ -8,9 +8,10 @@ Modulo do Interpretador da J\+V\+M.
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+D\+E\+C\+O\+D\+E\+R.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+c\+:
-\nopagebreak
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+O\+P\+C\+O\+D\+E\+S.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -61,12 +62,13 @@ Enquanto a pilha de frames nao estiver vazia\+:
 
 2.\+Decodifica o opcode
 
+2.\+1 Imprime informações de frame em modo de debug
+
 3.\+Executa o a instrucao referente ao opcode
 
 4.\+Atualizamos o valor de P\+C 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

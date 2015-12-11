@@ -1,12 +1,18 @@
 \hypertarget{_m___e_x_c_e_p_t_i_o_n_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.c}
 \label{_m___e_x_c_e_p_t_i_o_n_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
+
+
+Modulo de excessoes da J\+V\+M.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c\+:
-\nopagebreak
+{\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+O\+P\+C\+O\+D\+E\+S.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,8 +30,15 @@ Gráfico de dependência de inclusões para M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\
 void \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_a7ebd6a93cb47f5b6d6a059d7f4554fad}{J\+V\+Mstop\+Abrupt} (const char $\ast$msg)
 \item 
 void \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_a68dfd26cc3bccc52a45cd8650e33e12c}{J\+V\+M\+Throw} (int exception, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+void \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4}{J\+V\+M\+Print\+Frame\+Info} (\hyperlink{struct_frame}{Frame} $\ast$frame, \hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} opcode)
 \end{DoxyCompactItemize}
 
+
+\subsection{Descrição Detalhada}
+Modulo de excessoes da J\+V\+M. 
+
+Modulo responsavel por implementar os servicos relacionados ao tratamento de excessoes lancadas pela J\+V\+M. 
 
 \subsection{Definições e macros}
 \hypertarget{_m___e_x_c_e_p_t_i_o_n_8c_adecb8e0bb1e4c8694e4454d0652ec106}{}\index{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}!E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V@{E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+E\+R\+V}}
@@ -34,6 +47,34 @@ void \hyperlink{_m___e_x_c_e_p_t_i_o_n_8c_a68dfd26cc3bccc52a45cd8650e33e12c}{J\+
 
 
 \subsection{Funções}
+\hypertarget{_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4}{}\index{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}!J\+V\+M\+Print\+Frame\+Info@{J\+V\+M\+Print\+Frame\+Info}}
+\index{J\+V\+M\+Print\+Frame\+Info@{J\+V\+M\+Print\+Frame\+Info}!M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
+\subsubsection[{J\+V\+M\+Print\+Frame\+Info(\+Frame $\ast$frame, u1 opcode)}]{\setlength{\rightskip}{0pt plus 5cm}void J\+V\+M\+Print\+Frame\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame, }
+\item[{{\bf u1}}]{opcode}
+\end{DoxyParamCaption}
+)}\label{_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4}
+Funcao que imprime informacoes relativas ao frame atual
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \hyperlink{struct_frame}{Frame} a ser exibido \\
+\hline
+{\em opcode} & Opcode a ser impresso (N\+U\+L\+L caso nao precise) \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___e_x_c_e_p_t_i_o_n_8c_a43ad43e7af421faf49b5eaeb2e549dc4_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_m___e_x_c_e_p_t_i_o_n_8c_a7ebd6a93cb47f5b6d6a059d7f4554fad}{}\index{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}!J\+V\+Mstop\+Abrupt@{J\+V\+Mstop\+Abrupt}}
 \index{J\+V\+Mstop\+Abrupt@{J\+V\+Mstop\+Abrupt}!M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c@{M\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+c}}
 \subsubsection[{J\+V\+Mstop\+Abrupt(const char $\ast$msg)}]{\setlength{\rightskip}{0pt plus 5cm}void J\+V\+Mstop\+Abrupt (
@@ -65,8 +106,7 @@ Pelo lancamento e tratamento de excessoes
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -73,6 +73,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "aastore:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char)  valor_numerico">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "execute:M_INTERPRETER.c">
          <PersistentStrings>
             <PersistentString
@@ -152,6 +160,9 @@
          contextName = "printStreamPrintln:M_JAVAIO.c">
       </ContextState>
       <ContextState
+         contextName = "popFromOperandStack:M_OPTHREAD.c">
+      </ContextState>
+      <ContextState
          contextName = "getUTF8FromConstantPool:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
@@ -172,6 +183,9 @@
                value = "">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "newarray:M_INSTOBJANDINVOKE.c">
       </ContextState>
       <ContextState
          contextName = "classPreparing:M_CLASSLOADER.c">
@@ -196,6 +210,14 @@
          contextName = "iconst_1:M_INSTLOADSTORAGE.c">
       </ContextState>
       <ContextState
+         contextName = "iastore:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "((u4*)((array_info-&gt;arrayAddress)+index))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "popFrame:M_OPTHREAD.c">
       </ContextState>
       <ContextState
@@ -217,6 +239,14 @@
          <PersistentStrings>
             <PersistentString
                value = "argv[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "iaload:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "u1 (array_info-&gt;arrayAddress[1])">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -256,9 +286,6 @@
       </ContextState>
       <ContextState
          contextName = "LECLASS_exibeErroOperacao:M_ECLASS.c">
-      </ContextState>
-      <ContextState
-         contextName = "stringBufferAppend:M_JAVALANG.c">
       </ContextState>
       <ContextState
          contextName = "decode:M_DECODER.c">

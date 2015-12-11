@@ -1,5 +1,10 @@
 \hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.c}
 \label{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
+
+
+Modulo das Instrucoes de carga e armazenamento da J\+V\+M.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
@@ -9,8 +14,7 @@
 {\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+T\+Y\+P\+E\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+A\+R\+R\+A\+Y.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+O\+P\+C\+O\+D\+E\+S.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c\+:
-\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -207,6 +211,11 @@ void \hyperlink{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a9b55570d32590cefe2383f69b
 \end{DoxyCompactItemize}
 
 
+\subsection{Descrição Detalhada}
+Modulo das Instrucoes de carga e armazenamento da J\+V\+M. 
+
+Modulo responsavel pela implementacao dos servicos relacionados a instrucoes que transferem valores entre o vetor de variaveis locais e a pilha de operandos de um frame de um metodo. 
+
 \subsection{Definições e macros}
 \hypertarget{_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c_a2ab4f9c138984f97453adab108326dfc}{}\index{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}!I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}}
 \index{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V}!M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+L\+O\+A\+D\+S\+T\+O\+R\+A\+G\+E.\+c}}
@@ -230,8 +239,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -256,8 +264,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -282,8 +289,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos u
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -308,8 +314,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -334,8 +339,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -360,8 +364,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -386,8 +389,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -412,8 +414,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -438,8 +439,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -464,8 +464,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -490,8 +489,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -516,8 +514,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -542,8 +539,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -568,8 +564,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -594,8 +589,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -620,8 +614,7 @@ Metodo responsavel por relizar uma instrucao que estende com sinal o byte imedia
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -646,8 +639,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -672,8 +664,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -698,8 +689,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -724,8 +714,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -750,8 +739,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -776,8 +764,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -802,8 +789,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -828,8 +814,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -854,8 +839,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -880,8 +864,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -906,8 +889,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -932,8 +914,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -958,8 +939,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -984,8 +964,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1010,8 +989,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1036,8 +1014,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1062,8 +1039,7 @@ Instrucao que duplica o topo da pilha
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1088,8 +1064,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1114,8 +1089,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1140,8 +1114,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1166,8 +1139,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1192,8 +1164,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1218,8 +1189,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1244,8 +1214,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1270,8 +1239,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1296,8 +1264,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1322,8 +1289,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1348,8 +1314,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1374,8 +1339,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1400,8 +1364,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1426,8 +1389,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1452,8 +1414,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1478,8 +1439,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1504,8 +1464,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1530,8 +1489,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1556,8 +1514,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1582,8 +1539,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1608,8 +1564,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1634,8 +1589,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1660,8 +1614,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1686,8 +1639,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1712,8 +1664,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1738,8 +1689,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1764,8 +1714,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1790,8 +1739,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1816,8 +1764,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1842,8 +1789,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1868,8 +1814,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1894,8 +1839,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1920,8 +1864,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1946,8 +1889,7 @@ Metodo responsavel por relizar uma instrucao onde o indice valido index para o v
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1972,8 +1914,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1998,8 +1939,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2024,8 +1964,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2050,8 +1989,7 @@ Metodo responsavel por relizar uma instrucao que empilha na pilha de operandos o
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2076,8 +2014,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2102,8 +2039,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento os unsign
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2128,8 +2064,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento os unsign
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2154,8 +2089,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2180,8 +2114,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2206,8 +2139,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2232,8 +2164,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2258,8 +2189,7 @@ Metodo responsavel por relizar uma instrucao que os indices validos index e inde
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2284,8 +2214,7 @@ Metodo responsavel por relizar uma instrucao que recebe como argumento o unsigne
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2310,8 +2239,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2336,8 +2264,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2362,8 +2289,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2388,8 +2314,7 @@ Metodo responsavel por relizar uma instrucao onde os indices validos index e ind
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2428,8 +2353,7 @@ Instrucao que desempilha o topo da pilha
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2454,8 +2378,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2480,8 +2403,7 @@ Metodo responsavel por realizar uma instrucao que desempilha da pilha de operand
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2506,8 +2428,7 @@ Metodo responsavel por relizar uma instrucao que estende com sinal o valor imedi
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -2532,8 +2453,7 @@ Metodo responsavel por realizar uma instrucao que estende o indice de variavel l
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

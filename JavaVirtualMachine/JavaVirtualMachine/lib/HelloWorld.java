@@ -6,11 +6,23 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 //        // Prints "Hello, World" to the terminal window.
-        
+//        
 //        int[][][][] string = {
 //            {
-//                {{3,4},{3,4}},
-//                {{3,4},{3,4}}},
+//                {
+//                    {3,4},
+//                    {3,4}
+//                },
+//                {
+//                    {
+//                        3,4
+//                    },
+//                    {
+//                        3,4
+//                    }
+//                }
+//            },
+//            
 //            {
 //                {{3,4},{3,4}},
 //                {{3,4},{3,4}}
@@ -18,6 +30,13 @@ public class HelloWorld {
 //        };
 //
 //        System.out.println("Nome do aluno  : " + string[0][0][0][0]);
+        
+//         String array[] = {"VACA","CACHORRO","PERIQUITO","PSKRANIA"};
+//
+//        System.out.println("Valor do array : " + array[0]);
+//        System.out.println("Valor do array : " + array[1]);
+//        System.out.println("Valor do array : " + array[2]);
+//        System.out.println("Valor do array : " + array[3]);
         
         
         Aluno aluno = new Aluno(8);
@@ -30,15 +49,14 @@ public class HelloWorld {
         System.out.println("Idade verdadeira do aluno : " + aluno.getIdadeVerdadeira());
         System.out.println("Matricula : " + aluno.getMatricula());
         System.out.println("Serie : " + aluno.serie);
-        
-
-        Matematica m;
-        
-        m= new Calc();
-        
-        System.out.println("Soma : " + m.soma(2,3));
-        System.out.println("PI : " + m.pi);
-        
+//
+//
+//        Matematica m;
+//        
+//        m= new Calc();
+//        
+//        System.out.println("Soma : " + m.soma(2,3));
+//        System.out.println("PI : " + m.pi);
         
     }
 }

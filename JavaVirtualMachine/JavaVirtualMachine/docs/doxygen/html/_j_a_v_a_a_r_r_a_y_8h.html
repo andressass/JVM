@@ -114,8 +114,8 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 <map name="include_2_estruturas_2_j_a_v_a_a_r_r_a_y_8hdep" id="include_2_estruturas_2_j_a_v_a_a_r_r_a_y_8hdep">
 <area shape="rect" id="node2" href="_j_a_v_a_a_r_r_a_y_8c.html" title="Biblioteca de arrays Java. " alt="" coords="5,99,198,124"/>
 <area shape="rect" id="node3" href="_m___b_o_o_t_l_o_a_d_e_r_8c.html" title="Modulo de Inicializacao da JVM. " alt="" coords="222,92,368,131"/>
-<area shape="rect" id="node4" href="_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="src/ExecutionEngine\l/M_INSTLOADSTORAGE.c" alt="" coords="393,92,578,131"/>
-<area shape="rect" id="node5" href="_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="src/ExecutionEngine\l/M_INSTOBJANDINVOKE.c" alt="" coords="602,92,790,131"/>
+<area shape="rect" id="node4" href="_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html" title="Modulo das Instrucoes de carga e armazenamento da JVM. " alt="" coords="393,92,578,131"/>
+<area shape="rect" id="node5" href="_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c.html" title="Interface de instrucoes de Manipulacao de Objetos e Invokes da JVM. " alt="" coords="602,92,790,131"/>
 </map>
 </div>
 </div>
@@ -156,8 +156,8 @@ Definições de Tipos</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:a469e146f208b829f565844b6d3f5eb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <a class="el" href="_j_a_v_a_a_r_r_a_y_8h.html#a0c90cb0f11f179f64891a28b1a44cf3b">JavaArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_j_a_v_a_a_r_r_a_y_8h.html#a469e146f208b829f565844b6d3f5eb04">newJavaArray</a> (<a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a> n_type, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> n_length)</td></tr>
-<tr class="separator:a469e146f208b829f565844b6d3f5eb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56d359c5214bf822b54a59eec4e7d4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <a class="el" href="_j_a_v_a_a_r_r_a_y_8h.html#a0c90cb0f11f179f64891a28b1a44cf3b">JavaArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_j_a_v_a_a_r_r_a_y_8h.html#ae56d359c5214bf822b54a59eec4e7d4b">newJavaArray</a> (<a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a> n_type, <a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a> n_length, void *n_arrayAddress)</td></tr>
+<tr class="separator:ae56d359c5214bf822b54a59eec4e7d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Biblioteca de arrays Java. </p>
@@ -288,21 +288,27 @@ Funções</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Funções</h2>
-<a class="anchor" id="a469e146f208b829f565844b6d3f5eb04"></a>
+<a class="anchor" id="ae56d359c5214bf822b54a59eec4e7d4b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="_i___j_a_v_a_d_e_c_o_d_e_r_8h.html#a1ab113de8f791abc2a2882ab516a2d8d">EXT23</a> <a class="el" href="_j_a_v_a_a_r_r_a_y_8h.html#a0c90cb0f11f179f64891a28b1a44cf3b">JavaArray</a>* newJavaArray </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a216a9f8b04b4f0af84a4ca9d1d85a6ca">u1</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#aedf6ddc03df8caaaccbb4c60b9a9b850">u4</a>&#160;</td>
           <td class="paramname"><em>n_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="_e___j_v_m_8h.html#a5f223212eef04d10a4550ded680cb1cf">u2</a>&#160;</td>
-          <td class="paramname"><em>n_length</em>&#160;</td>
+          <td class="paramname"><em>n_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>n_arrayAddress</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

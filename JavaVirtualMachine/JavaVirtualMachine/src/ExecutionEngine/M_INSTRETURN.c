@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file M_INSTLOGARITH.c
+/*! \file M_INSTRETURN.c
  *
  *  \brief Modulo que contem as instrucoes de retorno.
  *

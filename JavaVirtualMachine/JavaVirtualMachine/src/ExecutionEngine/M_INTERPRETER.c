@@ -31,15 +31,14 @@ void execute(Environment* environment){
         //! 2.Decodifica o opcode
         instruction nextInstruction = decode(opcode);
         
-        //! 2.1 Imprime frame em modo de debug
+        //! 2.1 Imprime informações de frame em modo de debug
         if(environment->debugFlags & DEBUG_DebugModus){
             JVMPrintFrameInfo(environment->thread->vmStack->top, opcode);
-            printf("\n>");
+            printf("\n>Pressione Enter para continuar...");
             getchar();
         }
         
         //! 3.Executa o a instrucao referente ao opcode
-        //JVMPrintFrameInfo(environment->thread->vmStack->top, opcode);
         if(nextInstruction) nextInstruction(environment);
         
         //! 4.Atualizamos o valor de PC

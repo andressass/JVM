@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file I_INSTOBJANDINVOKE.c
+/*! \file M_INSTOBJANDINVOKE.c
  *
  *  \brief Interface de instrucoes de Manipulacao de Objetos e Invokes da JVM.
  *
@@ -139,6 +139,7 @@ void putstatic(Environment* environment){
     //Verificamos se eh de 64 bits
     if (strcmp(attribute_descriptor, "J") == 0 || strcmp(attribute_descriptor, "D") == 0) {
         u8* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+        if (value_reference == NULL) JVMThrow(NullPointerException, environment);
         u8 value;
         
         //Obtemos e concatenamos os bytes
@@ -161,17 +162,20 @@ void putstatic(Environment* environment){
                  strcmp(attribute_descriptor, "Z") == 0){
             
             u1* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            if (value_reference == NULL) JVMThrow(NullPointerException, environment);
             *value_reference = (u1) value;
         }
 
         //Se eh de 16bits
         else if (strcmp(attribute_descriptor, "S") == 0){
             u2* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            if (value_reference == NULL) JVMThrow(NullPointerException, environment);
             *value_reference = (u2) value;
         }
         //Se eh de 32bits
         else {
          u4* value_reference = getClassAttributeReference(class_name, attribute_name, environment);
+            if (value_reference == NULL) JVMThrow(NullPointerException, environment);
             *value_reference = value;
         }
     }
@@ -278,7 +282,7 @@ void putfield(Environment* environment){
         Object* objectRef = (Object*) popFromOperandStack(environment->thread);
         
         u8* value_reference = getObjectAttributeReference(objectRef, attribute_name);
-        
+        if (value_reference == NULL) JVMThrow(NullPointerException, environment);
         //Atualizamos o campo
         *value_reference = value;
     }
@@ -292,17 +296,20 @@ void putfield(Environment* environment){
             strcmp(attribute_descriptor, "Z") == 0){
             
             u1* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            if (value_reference == NULL) JVMThrow(NullPointerException, environment);
             *value_reference = (u1) value;
         }
         
         //Se eh de 16bits
         else if (strcmp(attribute_descriptor, "S") == 0){
             u2* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            if (value_reference == NULL) JVMThrow(NullPointerException, environment);
             *value_reference = (u2) value;
         }
         //Se eh de 32bits
         else {
             u4* value_reference = getObjectAttributeReference(objectRef, attribute_name);
+            if (value_reference == NULL) JVMThrow(NullPointerException, environment);
             *value_reference = value;
         }
     }

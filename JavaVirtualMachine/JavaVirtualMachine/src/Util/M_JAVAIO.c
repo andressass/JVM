@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file I_JAVAIO.c
+/*! \file M_JAVAIO.c
  *
  *  \brief Modulo simulado da biblioteca java.io
  *

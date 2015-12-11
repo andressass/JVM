@@ -3,9 +3,9 @@ package entidades;
 public class Aluno extends Pessoa {
 
     private String nome;
-    private final int matricula = 12345;
-    private double idade;
+    private int matricula = 12345;
     public long serie;
+    protected double idade;
     
     
     public Aluno(int serie){
@@ -32,8 +32,30 @@ public class Aluno extends Pessoa {
         return this.idade;
     }
     
+
     public int getMatricula(){
         
         return this.matricula;
     }
+    
+    public int setMatricula(){
+        
+        return this.matricula;
+    }
+    
+    public void setSerie(long serie){
+        
+        this.serie = serie;
+    }
+    
+    public long getSerie(){
+        
+        return this.serie;
+    }
+    
+    public double getIdadeVerdadeira(){
+        
+        return this.idade + 20;
+    }
+
 }

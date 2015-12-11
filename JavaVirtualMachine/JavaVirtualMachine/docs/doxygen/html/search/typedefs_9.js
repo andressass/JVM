@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['stack',['Stack',['../_e___j_v_m_8h.html#acccdaeb94a63f3757825012007215c0d',1,'E_JVM.h']]],
-  ['string',['String',['../_e___j_v_m_8h.html#a9ffedfebd21a940154d9fb5f22968d68',1,'E_JVM.h']]]
+  ['object',['Object',['../_e___j_v_m_8h.html#a71c0c698be85fce6ae7d701b736c1a0a',1,'E_JVM.h']]],
+  ['objectlist',['ObjectList',['../_e___j_v_m_8h.html#a51d7e9eb1bade5cd0dac13bb3e32a9e8',1,'E_JVM.h']]],
+  ['operandstack',['OperandStack',['../_e___j_v_m_8h.html#a346a5006b3ffde66941ce40c277fbf86',1,'E_JVM.h']]],
+  ['opresult',['OPresult',['../_e___j_v_m_8h.html#aa7ceae3fd72b26a559a601910a17e2c3',1,'E_JVM.h']]]
 ];

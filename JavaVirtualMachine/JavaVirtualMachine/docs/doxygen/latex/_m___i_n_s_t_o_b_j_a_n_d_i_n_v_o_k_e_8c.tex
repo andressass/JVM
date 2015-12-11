@@ -1,5 +1,10 @@
 \hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c}{}\section{Referência do Arquivo src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.c}
 \label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c}\index{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{src/\+Execution\+Engine/\+M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+
+
+Interface de instrucoes de Manipulacao de Objetos e Invokes da J\+V\+M.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
@@ -10,8 +15,7 @@
 {\ttfamily \#include \char`\"{}../../include/\+Util/\+I\+\_\+\+J\+A\+V\+A\+D\+E\+C\+O\+D\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+A\+R\+R\+A\+Y.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+E\+\_\+\+J\+V\+M.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c\+:
-\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -60,9 +64,16 @@ void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1
 \item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a276c211291ee61d49360e444fe0c4a49}{arraylength} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a1d0c3eda84f10fd2a67ed57a04128df2}{initialize\+N\+D\+Array} (int total\+\_\+dimensions, int current\+\_\+dimension, int $\ast$count, int posicao, char type\+\_\+array, void $\ast$array)
+\item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617cb844d385}{multianewarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \end{DoxyCompactItemize}
 
+
+\subsection{Descrição Detalhada}
+Interface de instrucoes de Manipulacao de Objetos e Invokes da J\+V\+M. 
+
+Interface responsavel por implenetar os servicos relacionados a instrucoes de manupulacao de objetos e chamadas de metodos. 
 
 \subsection{Definições e macros}
 \hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_aa29fb9a742e3f346ca0f5ff35e259fd2}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V@{I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E\+\_\+\+S\+E\+R\+V}}
@@ -78,7 +89,7 @@ void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1dd8a89922}
-Metodo que cria um novo array de reference. O numero de componentes do array a ser criado count deve ser do tipo int e eh desempilhado da pilha de operandos. O metodo recebe como parametro os unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a constante pool de tempo de execucao da classe corrente, onde o valor do indice eh (indexbyte1 $<$$<$ 8) $\vert$ indexbyte2. O item da constante pool de tempo de execucao no indice deve ser uma referencia simbolica para um tipo class, array ou interface. O tipo nomeado da classe, array ou interface esta resolvido. Um novo array com componentes daquele tipo, de tamanho count, eh alocado e uma reference arrayref a ele eh empilhada na pilha de operandos. Cada um dos elementos do novo array sao inicializados para null, o valor padrao para tipos reference.
+Metodo que cria um novo array de reference. O numero de componentes do array a ser criado count deve ser do tipo int e eh desempilhado da pilha de operandos. O metodo recebe como parametro os unsigned indexbyte1 e indexbyte2 que, quando montados, viram um indice para a constante pool de tempo de execucao da classe corrente, onde o valor do indice eh (indexbyte1 $<$$<$ 8) $\vert$ indexbyte2. O item da constante pool de tempo de execucao no indice deve ser uma referencia simbolica para um tipo class, array ou interface. O tipo nomeado da classe, array ou interface eh resolvido. Um novo array com componentes daquele tipo, de tamanho count, eh alocado e uma reference arrayref a ele eh empilhada na pilha de operandos. Cada um dos elementos do novo array sao inicializados para null, o valor padrao para tipos reference.
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -87,8 +98,7 @@ Metodo que cria um novo array de reference. O numero de componentes do array a s
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -113,8 +123,7 @@ Metodo que obtem o tamanho do array. O arrayref deve ser do tipo reference e dev
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -148,8 +157,7 @@ Indice calculado como byte1 $<$$<$ 8 $\vert$ byte2
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -174,8 +182,7 @@ Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,8 +221,7 @@ Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,6 +230,35 @@ Este é o diagrama das funções utilizadas por esta função\+:
 \end{figure}
 
 
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a1d0c3eda84f10fd2a67ed57a04128df2}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!initialize\+N\+D\+Array@{initialize\+N\+D\+Array}}
+\index{initialize\+N\+D\+Array@{initialize\+N\+D\+Array}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{initialize\+N\+D\+Array(int total\+\_\+dimensions, int current\+\_\+dimension, int $\ast$count, int posicao, char type\+\_\+array, void $\ast$array)}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\+N\+D\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{total\+\_\+dimensions, }
+\item[{int}]{current\+\_\+dimension, }
+\item[{int $\ast$}]{count, }
+\item[{int}]{posicao, }
+\item[{char}]{type\+\_\+array, }
+\item[{void $\ast$}]{array}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a1d0c3eda84f10fd2a67ed57a04128df2}
+Metodo que inicializa um array multidimensional.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em total\+\_\+dimensions} & Total de dimensoes do array a ser inicializado. \\
+\hline
+{\em current\+\_\+dimension} & A dimensao atual do array a ser inicializado. \\
+\hline
+{\em count} & O vetor count que possui o quantidade de componentes em cada dimensao do array a ser inicializado. \\
+\hline
+{\em posicao} & A posicao do array em que sera inicializada com o valor inicial padrao do tipo dos componentes. \\
+\hline
+{\em type\+\_\+array} & O tipo dos componentes do array a ser inicializado. \\
+\hline
+{\em array} & O array a ser inicializado. \\
+\hline
+\end{DoxyParams}
 \hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_ab86956fa68a9150e4a8d5d47310961ba}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!invokeinterface@{invokeinterface}}
 \index{invokeinterface@{invokeinterface}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
 \subsubsection[{invokeinterface(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void invokeinterface (
@@ -235,17 +270,25 @@ Metodo que invoca um metodo de interface. Recebe 2bytes para montagem de referen
 
 
 \begin{DoxyEnumerate}
-\item Resolvemos o a interface do metodo, obtendo uma referencia para java\+Class
-\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
-\item Baseado no descritor do metodo, desempilhamos os parametros
-\item Desempilhamos uma referencia para o objeto (Objectref)
+\item Resolvemos o a interface do metodo, obtendo uma referencia para java\+Class.
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info.
+\item Baseado no descritor do metodo, desempilhamos os parametros.
+\item Desempilhamos uma referencia para o objeto (Objectref).
 \item Se C eh a classe de Objectref, selecionamos o metodo com o seguinte procedimento\+:
-
-6.\+1. Se C contem um metodo de instancia com o mesmo nome e descritor, invocamos e terminamos. 6.\+2. Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva. 6.\+3. Se nao, Abstract\+Method\+Error.
 \begin{DoxyEnumerate}
-\item Criamos um novo frame e empilhamos
+\item Se C contem um metodo de instancia com o mesmo nome e descritor, invocamos e terminamos.
+\item Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva.
+\item Se nao, Abstract\+Method\+Error.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
 
-7.\+1. Passamos os argumentos para o vetor de variaveis locais 7.\+1.\+1 var\+\_\+local\+\_\+0 \+:= Objectref 7.\+1.\+2 var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1 7.\+1.. var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N
+Criamos um novo frame e empilhamos.
+
+6.\+1. Passamos os argumentos para o vetor de variaveis locais\+:
+\begin{DoxyEnumerate}
+\item var\+\_\+local\+\_\+0 \+:= Objectref.
+\item var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1.
+\item var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N.
 \end{DoxyEnumerate}
 
 Excessoes\+:
@@ -256,7 +299,6 @@ Excessoes\+:
 \item Se o metodo nao for publico, Illegal\+Access\+Error
 \item Se o metodo for abstrato, lancamos Abstract\+Method\+Error
 \end{DoxyEnumerate}
-\end{DoxyEnumerate}
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -265,8 +307,7 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -286,31 +327,45 @@ Metodo que invoca um metodo de instancia. Tratamento especial para superclasse, 
 
 
 \begin{DoxyEnumerate}
-\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class
-\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
-\item Baseado no descritor do metodo, desempilhamos os parametros
-\item Desempilhamos uma referencia para o objeto (Objectref)
-\item Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref eh a propria classe ou subclasse do metodo
+\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class.
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info.
+\item Baseado no descritor do metodo, desempilhamos os parametros.
+\item Desempilhamos uma referencia para o objeto (Objectref).
+\item Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref eh a propria classe ou subclasse do metodo.
 \item O metodo eh selecionado para invocacao a nao ser que todas as seguintes condicoes sejam verdadeiras\+:
-
-7.\+1. A flag A\+C\+C\+\_\+\+S\+U\+P\+E\+R esta setada para a classe atual 7.\+2. A classe do metodo eh superclasse da classe atual 7.\+3. O metodo nao eh um metodo $<$init$>$ 7.\+4. A classe do metodo eh superclasse da classe atual
 \begin{DoxyEnumerate}
-\item Se as condicoes acima forem verdadeiras, o metodo a ser invocado eh selecionado pelo seguinte procedimento de busca. Consideramos C uma superclasse direta da classe atual\+:
+\item A flag A\+C\+C\+\_\+\+S\+U\+P\+E\+R esta setada para a classe atual.
+\item A classe do metodo eh superclasse da classe atual.
+\item O metodo nao eh um metodo $<$init$>$.
+\item A classe do metodo eh superclasse da classe atual.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
 
-8.\+1. Se C contiver um metodo de instancia com o mesmo nome e descritor do metodo a ser invocado. Invocamos o metodo e terminamos. 8.\+2. Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva. 8.\+3. Se nao, Abstract\+Method\+Error.
-\item Criamos um novo frame e empilhamos
+Se as condicoes acima forem verdadeiras, o metodo a ser invocado eh selecionado pelo seguinte procedimento de busca. Consideramos C uma superclasse direta da classe atual\+:
 
-9.\+1. Passamos os argumentos para o vetor de variaveis locais 9.\+1.\+1 var\+\_\+local\+\_\+0 \+:= Objectref 9.\+1.\+2 var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1 9.\+1.. var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N
+
+\begin{DoxyEnumerate}
+\item Se C contiver um metodo de instancia com o mesmo nome e descritor do metodo a ser invocado. Invocamos o metodo e terminamos.
+\item Se nao, se C tiver uma superclasse, o procedimento de busca eh realizado recursivamente na superclasse. O metodo a ser invocado eh o resultado do processo de busca recursiva.
+\item Se nao, Abstract\+Method\+Error.
+\end{DoxyEnumerate}
+
+Criamos um novo frame e empilhamos.
+
+9.\+1. Passamos os argumentos para o vetor de variaveis locais\+:
+\begin{DoxyEnumerate}
+\item var\+\_\+local\+\_\+0 \+:= Objectref.
+\item var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1.
+\item var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N.
 \end{DoxyEnumerate}
 
 Excessoes\+:
 \begin{DoxyEnumerate}
 \item Se o metodo eh $<$init$>$ e a classe na qual ele eh declarado nao eh a classe referida pela instrucao, lancamos No\+Such\+Method\+Error.
-\item Se o metodo for estatico, lancamos Incompatible\+Class\+Change\+Error
-\item Se nao encontrarmos o metodo, lacamos Abstract\+Method\+Error
-\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error
-\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception
-\end{DoxyEnumerate}
+\item Se o metodo for estatico, lancamos Incompatible\+Class\+Change\+Error.
+\item Se nao encontrarmos o metodo, lacamos Abstract\+Method\+Error.
+\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error.
+\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception.
 \end{DoxyEnumerate}
 
 
@@ -320,8 +375,7 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -341,18 +395,21 @@ Metodo que invoca um metodo de classe. Recebe 2bytes para montagem de referencia
 
 
 \begin{DoxyEnumerate}
-\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class
-\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
-\item Baseado no descritor do metodo, desempilhamos os parametros
+\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class.
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info.
+\item Baseado no descritor do metodo, desempilhamos os parametros.
+\item Criamos um novo frame e empilhamos.
 \begin{DoxyEnumerate}
-\item Criamos um novo frame e empilhamos
-
-7.\+1. Passamos os argumentos para o vetor de variaveis locais 7.\+7.\+1 var\+\_\+local\+\_\+0 \+:= argumento\+\_\+1 7.\+7.\+K var\+\_\+local\+\_\+\mbox{[}N-\/1\mbox{]} \+:= argumento\+\_\+\+N
+\item Passamos os argumentos para o vetor de variaveis locais\+:
+\begin{DoxyEnumerate}
+\item var\+\_\+local\+\_\+0 \+:= argumento\+\_\+1.
+\item var\+\_\+local\+\_\+\mbox{[}N-\/1\mbox{]} \+:= argumento\+\_\+\+N.
+\end{DoxyEnumerate}
 \end{DoxyEnumerate}
 
 Excessoes\+:
 \begin{DoxyEnumerate}
-\item Se o metodo nao for estatico, lancamos Incompatible\+Class\+Change\+Error
+\item Se o metodo nao for estatico, lancamos Incompatible\+Class\+Change\+Error.
 \end{DoxyEnumerate}
 \end{DoxyEnumerate}
 
@@ -363,8 +420,7 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -384,29 +440,31 @@ Metodo que invoca um metodo de instancia. Executa baseado na classe. Recebe 2byt
 
 
 \begin{DoxyEnumerate}
-\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class
-\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info
-\item Baseado no descritor do metodo, desempilhamos os parametros
-\item Desempilhamos uma referencia para o objeto (Objectref)
-\item Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref eh a propria classe ou subclasse do metodo
-
-6.\+1. Se a classe C do objeto for a classe do metodo, buscamos o metodo em C e invocamos
-
-6.\+2. Se a C tiver uma superclasse, procuramos recursivamente e invocamos
-
-6.\+3. Se nao, lancamos a excessao Abstract\+Method\+Error
+\item Resolvemos o a classe do metodo, obtendo uma referencia para java\+Class.
+\item Resolvemos o nome do metodo, obtendo a referencia do method\+\_\+info.
+\item Baseado no descritor do metodo, desempilhamos os parametros.
+\item Desempilhamos uma referencia para o objeto (Objectref).
+\item Se o metodo for protected da classe ou superclasse, verificamos se a classe de Objectref eh a propria classe ou subclasse do metodo\+:
 \begin{DoxyEnumerate}
-\item Criamos um novo frame e empilhamos
+\item Se a classe C do objeto for a classe do metodo, buscamos o metodo em C e invocamos.
+\item Se a C tiver uma superclasse, procuramos recursivamente e invocamos.
+\item Se nao, lancamos a excessao Abstract\+Method\+Error.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
 
-7.\+1. Passamos os argumentos para o vetor de variaveis locais 7.\+1.\+1 var\+\_\+local\+\_\+0 \+:= Objectref 7.\+1.\+2 var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1 7.\+1.\+K var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N
+Criamos um novo frame e empilhamos.
+
+6.\+1. Passamos os argumentos para o vetor de variaveis locais\+:
+\begin{DoxyEnumerate}
+\item var\+\_\+local\+\_\+0 \+:= Objectref.
+\item var\+\_\+local\+\_\+1 \+:= argumento\+\_\+1. K. var\+\_\+local\+\_\+\+N \+:= argumento\+\_\+\+N.
 \end{DoxyEnumerate}
 
 Excessoes\+:
 \begin{DoxyEnumerate}
-\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception
-\item Se o metodo nao for encontrado, lancamos Abstract\+Method\+Error
-\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error
-\end{DoxyEnumerate}
+\item Se Objectref eh nulo, lancamos Null\+Pointer\+Exception.
+\item Se o metodo nao for encontrado, lancamos Abstract\+Method\+Error.
+\item Se o metodo for abstrato, lancamos Abstract\+Method\+Error.
 \end{DoxyEnumerate}
 
 
@@ -416,8 +474,7 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -451,8 +508,7 @@ Metodo que verifica se uma classe eh subclasse de outra
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -492,8 +548,7 @@ method\+\_\+info do metodo, se nao lanca excessao
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -522,8 +577,7 @@ Um novo array multidimensional de tipo do array eh alocado. Se qualquer valor co
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -548,8 +602,7 @@ Metodo que cria uma nova instancia de classe e empilha a referencia na pilha de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -574,8 +627,7 @@ Metodo que cria um novo array. Ele recebe como parametro o tipo do array a ser c
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -600,8 +652,7 @@ Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -626,8 +677,7 @@ Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -666,8 +716,7 @@ O metodo eh selecionado para invocacao a nao ser que todas as seguintes condicoe
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:
-\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
