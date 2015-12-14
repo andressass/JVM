@@ -737,6 +737,11 @@ void LECLASS_exibeErroOperacao(OPresult resultado, const char* fileName){
             printf("\nDetectado erro de circularidade de classes. Arquivo: \"%s\".\n", fileName);
             break;
             
+            
+        case LinkageError_ClassNameIncompatible:
+            printf("\nNome da classe difere do nome do arquivo. Arquivo: \"%s\".\n", fileName);
+            break;
+            
         default:
             printf("\nErro de linkagem. Arquivo: \"%s\".\n", fileName);
             break;

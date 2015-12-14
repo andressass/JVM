@@ -23,9 +23,10 @@
  * Método que executa o processo de verificacao da corretude do codigo e compatibilidade da classe
  *
  * \param arqClass Referencia para uma estrutura de arquvo .class
+ * \param classFileName Nome do arquivo.class
  * \return Resultado de sucesso ou erros
  */
-int classVerifier(ArqClass* arqClass){
+int classVerifier(ArqClass* arqClass, const char* classFileName){
     
     //Se a classe estiver em uma versao > MajorVersion.MinorVersion
     if (arqClass->major_version > LECLASS_MAJ_Version) return LinkageError_UnsupportedClassVersionError;
@@ -35,6 +36,14 @@ int classVerifier(ArqClass* arqClass){
     //Se a classe for a sua propria superclasse
     if (strcmp(getClassNameFromConstantPool(arqClass->constant_pool, arqClass->super_class), getClassNameFromConstantPool(arqClass->constant_pool, arqClass->this_class)) == 0)
         return LinkageError_ClassCirculatityError;
+    
+    
+    //Se o nome do arquivo for diferente da classe
+    if (strcmp(classFileName, getClassNameFromConstantPool(arqClass->constant_pool, arqClass->this_class)) != 0)
+        return LinkageError_ClassNameIncompatible;
+
+    
+    
     
     return LinkageSuccess;
     
@@ -284,7 +293,7 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     
     //LINKING - VERIFYING - Verificamos a corretude do codigo da classe
     // Parte ja realizada na leitura do arquivo
-    opResult = classVerifier(arqClass);
+    opResult = classVerifier(arqClass, qualifiedName);
     if (opResult != LinkageSuccess) {
         LECLASS_exibeErroOperacao(opResult, fileName);
         JVMstopAbrupt(NULL);
@@ -298,11 +307,11 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     //INITIALIZATION - Executamos o o inicializador estatico <clinit>
     
     //Adicionamos a classe carregada na area de metodos
-    addJavaClassToMethodArea(javaClass, environment->methodArea);
+    if(environment) addJavaClassToMethodArea(javaClass, environment->methodArea);
     
-    classInitializer(javaClass, environment);
+    if(environment) classInitializer(javaClass, environment);
     
-    if (environment->debugFlags & DEBUG_ShowClassFiles) LECLASS_exibidor(javaClass->arqClass);
+    if (!environment) LECLASS_exibidor(javaClass->arqClass);
     
     //Retornamos a estrutura inicializada
     return javaClass;

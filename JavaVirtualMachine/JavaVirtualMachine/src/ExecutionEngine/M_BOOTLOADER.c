@@ -17,6 +17,7 @@
 #include "../../include/Estruturas/JAVAARRAY.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include "../../include/ClassLoader/I_CLASSLOADER.h"
 #include "../../include/ExecutionEngine/I_INTERPRETER.h"
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
@@ -63,11 +64,13 @@ int main(int argc, const char * argv[]) {
     u1 debugFlags = 0;
     
     //!Apresentamos e configuramos as opcoes de debug
-    printf("Deseja ativar exibidor de .class?[N/s]:");
+    printf("Executar (1) JVM ou (2) exibidor de .class?[1/2]:");
     scanf("%c", &opcoes);
     getchar();
-    if (opcoes == 'S' || opcoes == 's') {
-        debugFlags |= DEBUG_ShowClassFiles;
+    if (opcoes == '2') {
+        JavaClass* javaClass = loadCLass(argv[1], NULL);
+        free(javaClass);
+        return 0;
     }
     printf("Modo debug?[N/s]:");
     scanf("%c", &opcoes);
