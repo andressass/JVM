@@ -942,10 +942,73 @@ EXT14 void Dup(Environment* environment);
 
 //--------------------------------------------------------------------------------------------------
 /*!
+ * Instrucao que duplica o topo e insere dois valores abaixo
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void dup_x1(Environment* environment);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que duplica o topo e insere tres valores (de 32bits) abaixo
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void dup_x2(Environment* environment);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que duplica os dois elementos de 32 bits que estao no topo da pilha
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void Dup2(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que duplica os dois elementos de 32 bits que estao no topo da pilha e os
+ * insere tres valores (de 32bits) abaixo
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void dup2_x1(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que duplica os dois elementos de 32 bits que estao no topo da pilha e os
+ * insere quatro valores (de 32bits) abaixo
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void dup2_x2(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
  * Instrucao que desempilha o topo da pilha
  *
  * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
  */
 EXT14 void pop(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que desempilha dois elementos de 32bits do topo da pilha
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void pop2(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Instrucao que troca os dois elementos do topo da pilha
+ *
+ * \param environment Ambiente com a thread que contem a pilha JVM com o frame atual
+ */
+EXT14 void swap(Environment* environment);
 
 #endif /* I_INSTLOADSTORAGE_h */

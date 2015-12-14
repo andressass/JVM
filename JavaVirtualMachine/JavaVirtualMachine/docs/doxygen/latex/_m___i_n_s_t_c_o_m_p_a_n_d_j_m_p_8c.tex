@@ -212,7 +212,7 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a9ebb0537bbd835c25fa4046f75e93306}
-Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-\/bit (u2) que vem imediatamente após o opcode de goto no bytecode.
+Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 16-\/bit (u2) que vem imediatamente após o opcode de goto no bytecode.
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -240,6 +240,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a12e0d116ba6a994ecdf311d088d341b9}
+Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 64-\/bit (u8) que vem imediatamente após o opcode de goto no bytecode. Mesma operacao de goto, so que \textquotesingle{}wide\textquotesingle{} (offset maior)
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
@@ -650,6 +660,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_afd1db666577a810095a6a79975fd6ad0}
+Se o valor nao for nulo, os bytes seguintes são construidos para criar um offset, continuando a execucao no offset do opcode dessa instrucao, senao continua no proximo endereco apos essa instrucao
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
@@ -668,6 +688,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a4f5a4ccb45cbd476903a0d07150a9a8b}
+Se o valor for nulo, os bytes seguintes são construidos para criar um offset, continuando a execucao no offset do opcode dessa instrucao, senao continua no proximo endereco apos essa instrucao
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
@@ -686,7 +716,7 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a2220e70bae54582ae5959afd2f528ec2}
-Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-\/bit (u2) que vem imediatamente após o opcode de goto no bytecode.
+Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 16-\/bit (u2) que vem imediatamente após o opcode de jsr no bytecode. Após isso, salva o endereco atual no operand stack
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -714,6 +744,14 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a830feb68c79cc5b48e06861ee3fd0fb1}
+Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 64-\/bit (u8) que vem imediatamente após o opcode de jsr no bytecode. Após isso, salva o endereco atual no operand stack Mesma operacao de jsr, so que \textquotesingle{}wide\textquotesingle{} (com um offset maior) 
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
@@ -732,7 +770,7 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a5d4644e4ecf15dbccaa39daae6c6215b}
-Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se são iguais e lanca uma flag na propria pilha de operando
+Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se sao iguais e lanca uma flag na propria pilha de operando
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -760,6 +798,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a97744a353387b486be5081bb0fa884ad}
+Pega o primeiro opcode entre 0 e 3 bytes após a instrução e salva como seu default, após isso salva os 2 bytecodes seguintes como low e high respectivamente, depois pega um indice salvo na pilha de operandos e compara com o high e o low. Se o indice não estiver entre o low e o high, então o endereço de destino eh calculado como default+opcode inicial, senao adiciona o primeiro offset em \textquotesingle{}indice -\/ low\textquotesingle{} ao opcode inicial e salva no pc
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
@@ -778,6 +826,27 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_ac8c9b9e696ea0670b44e74b43f013d3c}
+Pela o bytecode seguinte, esse bytecode contem um indice. Salva o indice no registrador do pc, fazendo com que a execucao continue dali
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_ac8c9b9e696ea0670b44e74b43f013d3c_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a7fa7ef352b60bfdd34e8717a990ecf1b}{}\index{M\+\_\+\+I\+N\+S\+T\+C\+O\+M\+P\+A\+N\+D\+J\+M\+P.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+M\+P\+A\+N\+D\+J\+M\+P.\+c}!tableswitch@{tableswitch}}
 \index{tableswitch@{tableswitch}!M\+\_\+\+I\+N\+S\+T\+C\+O\+M\+P\+A\+N\+D\+J\+M\+P.\+c@{M\+\_\+\+I\+N\+S\+T\+C\+O\+M\+P\+A\+N\+D\+J\+M\+P.\+c}}
 \subsubsection[{tableswitch(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void tableswitch (
@@ -785,6 +854,16 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{{\bf Environment} $\ast$}]{environment}
 \end{DoxyParamCaption}
 )}\label{_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_a7fa7ef352b60bfdd34e8717a990ecf1b}
+Pega o primeiro opcode entre 0 e 3 bytes após a instrução e salva como seu default, após isso salva os 2 bytecodes seguintes como low e high respectivamente, depois pega um indice salvo na pilha de operandos e compara com o high e o low. Se o indice não estiver entre o low e o high, então o endereço de destino eh calculado como default+opcode inicial, senao adiciona o primeiro offset em \textquotesingle{}indice -\/ low\textquotesingle{} ao opcode inicial e salva no pc
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \hyperlink{struct_environment}{Environment}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
 
 
 Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak

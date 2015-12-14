@@ -241,6 +241,31 @@ EXT16 void New(Environment* environment);
 
 //--------------------------------------------------------------------------------------------------
 /*!
+ * Metodo que lanca uma excessao eu erro.
+ *
+ * 1. Desempilha uma referencia para um objeto instancia (ou subclasse de) Throwable.
+ *
+ * 2. O objeto eh lancado atraves de uma busca no metodo corrente pela primeira rotina de tratamento
+ *      de excessao que seja compativel com a classe do objeto:
+ *
+ *      1. Se a rotina for encontrada, PC eh resetado para a localizacao do codigo na qual a 
+ *          excessao sera tratada. A pilha de operandos eh limpa e a referencia para o objeto eh
+ *          empilhada de volta. A Execucao continua.
+ * 
+ *      2. Se a rotina nao for encontrada no frame atual, ele eh desempilhado. Se o novo frame do
+ *          topo existir, o objeto eh relancado. Se o frame nao existir, a thread atual eh 
+ *          encerrada.
+ *
+ *  3. Excessoes:
+        1. Se Objectref for null, NullPointerException eh lancado
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+EXT16 void athrow(Environment* environment);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
  * Metodo que cria um novo array. Ele recebe como parametro o tipo do array a ser criado atype e
  * desempilha o numero de elementos no array a ser criado count. O novo array, cujos componentes sao
  * do tipo atype e de tamanho count, eh alocado e uma reference arrayref a ele eh empilhada na pilha

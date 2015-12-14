@@ -17,6 +17,7 @@
 #include "../../include/Estruturas/JAVAARRAY.h"
 #include "../../include/MemoryUnit/I_MEMORYUNIT.h"
 #include "../../include/ClassLoader/I_LECLASS.h"
+#include "../../include/ClassLoader/I_CLASSLOADER.h"
 #include "../../include/ExecutionEngine/I_INTERPRETER.h"
 #include "../../include/ExecutionEngine/I_EXCEPTION.h"
 
@@ -62,12 +63,14 @@ int main(int argc, const char * argv[]) {
     char opcoes;
     u1 debugFlags = 0;
     
-    //Configuracoes de debug
-    printf("Deseja ativar exibidor de .class?[N/s]:");
+    //!Apresentamos e configuramos as opcoes de debug
+    printf("Executar (1) JVM ou (2) exibidor de .class?[1/2]:");
     scanf("%c", &opcoes);
     getchar();
-    if (opcoes == 'S' || opcoes == 's') {
-        debugFlags |= DEBUG_ShowClassFiles;
+    if (opcoes == '2') {
+        JavaClass* javaClass = loadCLass(argv[1], NULL);
+        free(javaClass);
+        return 0;
     }
     printf("Modo debug?[N/s]:");
     scanf("%c", &opcoes);
@@ -75,45 +78,21 @@ int main(int argc, const char * argv[]) {
     if (opcoes == 'S' || opcoes == 's') {
         debugFlags |= DEBUG_DebugModus;
     }
-    printf("Modo natalino?[N/s]:");
-    scanf("%c", &opcoes);
-    getchar();
-    if (opcoes == 'S' || opcoes == 's') {
-        debugFlags |= DEBUG_ShowBonus;
-    }
     
-    //Alocamos espaco para o ambiente de execucao
+    //!Alocamos espaco para o ambiente de execucao
     Environment* environment = (Environment*) malloc(sizeof(Environment));
     
-    //Criamos a area de metodos e a thread e as associamos ao enviroment
+    //!Criamos a area de metodos e a thread e as associamos ao enviroment
     environment->methodArea = newMethodArea();
     environment->thread = newThread();
     environment->debugFlags = debugFlags;
     
-    //Empilhamos o metodo main
+    //!Empilhamos o metodo main da classe passada como argumento
     configureClassMain(environment, argc, argv);
     
-    //Passamos o ambiente de execucao para o interpretador
+    //!Passamos o ambiente de execucao para o interpretador
     execute(environment);
-    
-    if (environment->debugFlags & DEBUG_ShowBonus) {
-        printf("\n\n\n_____________________");
-        printf("\n*   *         *    * ");
-        printf("\n  *   /\\ *     *  ");
-        printf("\n     /  \\   *      *");
-        printf("\n *  /    \\     ");
-        printf("\n   /      \\   *  *");
-        printf("\n * /      \\    ");
-        printf("\n* /        \\ *     *");
-        printf("\n  /        \\    *");
-        printf("\n /          \\ * ");
-        printf("\n/____________\\     *");
-        printf("\n     |   |   _v_ * ");
-        printf("\n     |___|  |_|_|   *");
-        printf("\n_____________________");
-        printf("\n    Feliz Natal!");
-        printf("\n_____________________");
-    }
+
     printf("\n\n");
     return 0;
 }

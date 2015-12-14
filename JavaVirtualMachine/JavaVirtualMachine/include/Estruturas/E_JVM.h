@@ -22,6 +22,7 @@
 #define LinkageError_UnsupportedClassVersionError   2 //!< Arquivo possui versao nao suportada
 #define LinkageError_ClassCirculatityError          3 //!< Classe seria a sua propria superclasse
 #define LinkageError_NoClassDefFoundError           4 //!< Erro de abertura do arquivo
+#define LinkageError_ClassNameIncompatible          5 //!< Nome da classe diferente do nome do arquivo
 
 //Erros do inicializador de classes
 #define InitializerSuccess                          10 //!< Sucesso na operacao

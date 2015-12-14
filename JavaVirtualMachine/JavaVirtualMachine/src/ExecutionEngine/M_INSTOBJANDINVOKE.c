@@ -714,6 +714,76 @@ void New(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que lanca uma excessao eu erro.
+ *
+ * 1. Desempilha uma referencia para um objeto instancia (ou subclasse de) Throwable.
+ *
+ * 2. O objeto eh lancado atraves de uma busca no metodo corrente pela primeira rotina de tratamento
+ *      de excessao que seja compativel com a classe do objeto:
+ *
+ *      1. Se a rotina for encontrada, PC eh resetado para a localizacao do codigo na qual a
+ *          excessao sera tratada. A pilha de operandos eh limpa e a referencia para o objeto eh
+ *          empilhada de volta. A Execucao continua.
+ *
+ *      2. Se a rotina nao for encontrada no frame atual, ele eh desempilhado. Se o novo frame do
+ *          topo existir, o objeto eh relancado. Se o frame nao existir, a thread atual eh
+ *          encerrada.
+ *
+ *  3. Excessoes:
+ 1. Se Objectref for null, NullPointerException eh lancado
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+void athrow(Environment* environment){
+
+    Object* objectRef = (Object*) popFromOperandStack(environment->thread);
+    if (objectRef == NULL) JVMThrow(NullPointerException, environment);
+    
+    char* objectRefClass = getClassNameFromConstantPool(objectRef->handler->javaClass->arqClass->constant_pool,
+                                                        objectRef->handler->javaClass->arqClass->this_class);
+    
+    //Verificamos para cada frame existente na pilha
+    while (environment->thread->vmStack->top != NULL) {
+        
+        CodeAttribute* code = getCodeFromMethodInfo(environment->thread->vmStack->top->method_info,
+                                                    environment->thread->vmStack->top->javaClass->arqClass->constant_pool);
+        
+        //Percorremos a tabela de excessoes
+        for (int i = 0; i < code->exception_table_length; i++) {
+            
+            char* classType = getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool,
+                                                      code->exception_table[i].catch_type);
+            
+            //Verificamos se a rotina de tratamento de excessao bate com as especificacoes
+            if (strcmp(classType, objectRefClass) == 0 &&
+                environment->thread->PC >= code->exception_table[i].start_pc &&
+                environment->thread->PC <= code->exception_table[i].end_pc){
+                
+                //Resetamos PC para a rotina de tratamento
+                environment->thread->PC = code->exception_table[i].handler_pc - 1;
+                
+                //Limpamos a pilha de operandos
+                free (environment->thread->vmStack->top->opStk);
+                environment->thread->vmStack->top->opStk = (OperandStack*) calloc(code->max_stack+1, sizeof(OperandStack));
+                
+                //Empilhamos a referencia para o objeto
+                pushInOperandStack(environment->thread, (u4) objectRef);
+                
+                return;
+                
+            }
+        }
+        //Se o metodo atual nao tiver uma rotina de tratamento de excessoes, o desempilhamos
+        popFrame(environment->thread);
+    }
+    //Caso nao existam mais frames, encerramos o programa.
+    JVMstopAbrupt("Tratamento para a excessao nao encontrado");
+    
+}
+
+
+//--------------------------------------------------------------------------------------------------
 void newarray(Environment* environment){
     
     void* array;

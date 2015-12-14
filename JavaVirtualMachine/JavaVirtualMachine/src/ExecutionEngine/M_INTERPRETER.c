@@ -25,8 +25,8 @@ void execute(Environment* environment){
 
         //! 1.Obtem o opcode.
         u1 opcode = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
-                                          environment->thread->vmStack->top->javaClass->arqClass->constant_pool
-                                          ,environment->thread->PC);
+                                          environment->thread->vmStack->top->javaClass->arqClass->constant_pool,
+                                          environment->thread->PC);
         
         //! 2.Decodifica o opcode
         instruction nextInstruction = decode(opcode);
@@ -34,7 +34,7 @@ void execute(Environment* environment){
         //! 2.1 Imprime informações de frame em modo de debug
         if(environment->debugFlags & DEBUG_DebugModus){
             JVMPrintFrameInfo(environment->thread->vmStack->top, opcode);
-            printf("\n>Pressione Enter para continuar...");
+            printf("\n> Pressione Enter para continuar...");
             getchar();
         }
         

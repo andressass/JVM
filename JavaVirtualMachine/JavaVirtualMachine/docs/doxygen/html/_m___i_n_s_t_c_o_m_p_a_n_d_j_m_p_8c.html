@@ -351,7 +351,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
@@ -390,6 +390,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 64-bit (u8) que vem imediatamente após o opcode de goto no bytecode. Mesma operacao de goto, so que 'wide' (offset maior)</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -995,6 +1003,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Se o valor nao for nulo, os bytes seguintes são construidos para criar um offset, continuando a execucao no offset do opcode dessa instrucao, senao continua no proximo endereco apos essa instrucao</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1028,6 +1044,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Se o valor for nulo, os bytes seguintes são construidos para criar um offset, continuando a execucao no offset do opcode dessa instrucao, senao continua no proximo endereco apos essa instrucao</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1061,7 +1085,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 16-bit (u2) que vem imediatamente após o opcode de jsr no bytecode. Após isso, salva o endereco atual no operand stack</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
@@ -1102,6 +1126,13 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 64-bit (u8) que vem imediatamente após o opcode de jsr no bytecode. Após isso, salva o endereco atual no operand stack Mesma operacao de jsr, so que 'wide' (com um offset maior) </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1135,7 +1166,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se são iguais e lanca uma flag na propria pilha de operando</p>
+<p>Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se sao iguais e lanca uma flag na propria pilha de operando</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
@@ -1171,6 +1202,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pega o primeiro opcode entre 0 e 3 bytes após a instrução e salva como seu default, após isso salva os 2 bytecodes seguintes como low e high respectivamente, depois pega um indice salvo na pilha de operandos e compara com o high e o low. Se o indice não estiver entre o low e o high, então o endereço de destino eh calculado como default+opcode inicial, senao adiciona o primeiro offset em 'indice - low' ao opcode inicial e salva no pc</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1204,6 +1243,29 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pela o bytecode seguinte, esse bytecode contem um indice. Salva o indice no registrador do pc, fazendo com que a execucao continue dali</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_ac8c9b9e696ea0670b44e74b43f013d3c_cgraph.png" border="0" usemap="#_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_ac8c9b9e696ea0670b44e74b43f013d3c_cgraph" alt=""/></div>
+<map name="_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_ac8c9b9e696ea0670b44e74b43f013d3c_cgraph" id="_m___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8c_ac8c9b9e696ea0670b44e74b43f013d3c_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="92,31,266,56"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="314,31,484,56"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -1220,6 +1282,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pega o primeiro opcode entre 0 e 3 bytes após a instrução e salva como seu default, após isso salva os 2 bytecodes seguintes como low e high respectivamente, depois pega um indice salvo na pilha de operandos e compara com o high e o low. Se o indice não estiver entre o low e o high, então o endereço de destino eh calculado como default+opcode inicial, senao adiciona o primeiro offset em 'indice - low' ao opcode inicial e salva no pc</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>

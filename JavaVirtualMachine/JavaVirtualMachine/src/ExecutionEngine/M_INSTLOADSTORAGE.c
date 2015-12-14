@@ -1306,10 +1306,98 @@ void Dup(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
+void dup_x1(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void dup_x2(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    u4 value3 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value3);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void Dup2(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void dup2_x1(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    u4 value3 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value3);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void dup2_x2(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    u4 value3 = popFromOperandStack(environment->thread);
+    u4 value4 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value4);
+    pushInOperandStack(environment->thread, value3);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
 void pop(Environment* environment){
     popFromOperandStack(environment->thread);
 }
 
 
+//--------------------------------------------------------------------------------------------------
+void pop2(Environment* environment){
+    popFromOperandStack(environment->thread);
+    popFromOperandStack(environment->thread);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void swap(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value2);
+}
 
 
