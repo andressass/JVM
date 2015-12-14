@@ -458,12 +458,18 @@ instruction decode(u1 bytecode){
         case OP_new:
             return New;
             break;
+        case OP_athrow:
+            return athrow;
+            break;
         case OP_anewarray:
             return anewarray;
+            break;
         case OP_newarray:
             return newarray;
+            break;
         case OP_arraylength:
             return arraylength;
+            break;
 //        case OP_multianewarray:
 //            return multianewarray;
 //            break;

@@ -1,6 +1,7 @@
 import entidades.Aluno;
 import entidades.Matematica;
 import entidades.Calc;
+import entidades.MathExc;
 
 public class HelloWorld {
     
@@ -18,34 +19,33 @@ public class HelloWorld {
 
 
     public static void main(String[] args) {
-//        // Prints "Hello, World" to the terminal window.
-//        
-//        int[][][][] string = {
-//            {
-//                {
-//                    {3,4},
-//                    {3,4}
-//                },
-//                {
-//                    {
-//                        3,4
-//                    },
-//                    {
-//                        3,4
-//                    }
-//                }
-//            },
-//            
-//            {
-//                {{3,4},{3,4}},
-//                {{3,4},{3,4}}
-//            }
-//        };
-//
-//        System.out.println("Nome do aluno  : " + string[0][0][0][0]);
         
-//         String array[] = {"VACA","CACHORRO","PERIQUITO","PSKRANIA"};
-//
+        double[][][][] string = {
+            {
+                {
+                    {3.32,4},
+                    {3,4}
+                },
+                {
+                    {
+                        3,4
+                    },
+                    {
+                        3,4
+                    }
+                }
+            },
+            
+            {
+                {{3,4},{3,4}},
+                {{3,4},{3,4}}
+            }
+        };
+
+        System.out.println("Nome do aluno  : " + string[0][0][0][0]);
+        
+         //String array[] = {"VACA","CACHORRO","PERIQUITO","PSKRANIA"};
+
 //        System.out.println("Valor do array : " + array[0]);
 //        System.out.println("Valor do array : " + array[1]);
 //        System.out.println("Valor do array : " + array[2]);

@@ -91,16 +91,7 @@ void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
 
 
 //--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que, dado uma referencia para uma lista de tabela de excecoes e seu respectivo tamanho, 
- * cria, preenche e retorna uma referencia para um vetor de estruturas exception table.
- *
- * \param code Ponteiro para o vetor que contem as excetion_tables
- * \param exception_table_length Numero de elementos na tabela de excessoes
- * \param cp ponteiro para o pool de constantes
- * \return Ponteiro para um vetor de tabela de excessoes preenchida
- */
-ExceptionTable* parseExceptionTables(u1* exceptionTableList, u2 exception_table_length){
+ExceptionTable* parseExceptionTable(u1* exceptionTableList, u2 exception_table_length){
     
     u1* c = exceptionTableList;
     ExceptionTable* exceptionTable = (ExceptionTable*)
@@ -151,7 +142,7 @@ CodeAttribute* parseCode(u1* info){
     code->exception_table_length = info[index++];
     code->exception_table_length = code->exception_table_length << 8 | info[index++];
     
-    code->exception_table = parseExceptionTables(&info[index], code->exception_table_length);
+    code->exception_table = parseExceptionTable(&info[index], code->exception_table_length);
     
     index += code->exception_table_length * 4 * sizeof(u2); //Tamanho da Tabela de excessao = 4*u2
     
@@ -513,7 +504,7 @@ void printCodeExceptions(ExceptionTable* excTable, u2 exception_table_length, cp
         printf("\n\t\t\tCATCH_TYPE: %d", excTable[i].catch_type);
         
         printf("\n(((((((((((((((\n");
-        printFromPool(&cp[excTable[i].catch_type], cp);
+        printFromPool(&cp[excTable[i].catch_type-1], cp);
         printf(")))))))))))))))\n");
         printf("\n\t\t\t}");
     }
