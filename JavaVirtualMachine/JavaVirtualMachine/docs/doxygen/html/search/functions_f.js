@@ -5,5 +5,6 @@ var searchData=
   ['sipush',['sipush',['../_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#a242812ff2a366a2c7ceda74af4755e08',1,'sipush(Environment *environment):&#160;M_INSTLOADSTORAGE.c'],['../_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html#a673b6bcd0d569237229cd9680d407bd4',1,'sipush(Environment *environment):&#160;M_INSTLOADSTORAGE.c']]],
   ['stringbufferappend',['stringBufferAppend',['../_m___j_a_v_a_l_a_n_g_8c.html#a428e52c90af52158a418e3759b74c8d4',1,'M_JAVALANG.c']]],
   ['stringbufferexecutemethod',['stringBufferExecuteMethod',['../_m___j_a_v_a_l_a_n_g_8c.html#aebb968376e314ba25f9363d975976172',1,'M_JAVALANG.c']]],
+  ['swap',['swap',['../_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#aeadfdf12b24fc781a0ad2f16d73bf86a',1,'swap(Environment *environment):&#160;M_INSTLOADSTORAGE.c'],['../_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html#ad164e93372b4f5a76c6283b07788936f',1,'swap(Environment *environment):&#160;M_INSTLOADSTORAGE.c']]],
   ['systemexecutemethod',['systemExecuteMethod',['../_m___j_a_v_a_l_a_n_g_8c.html#a475f507e1ed27e75014f6e80c57a75ba',1,'M_JAVALANG.c']]]
 ];

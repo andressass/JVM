@@ -19,5 +19,6 @@ var searchData=
   ['stringbufferexecutemethod',['stringBufferExecuteMethod',['../_m___j_a_v_a_l_a_n_g_8c.html#aebb968376e314ba25f9363d975976172',1,'M_JAVALANG.c']]],
   ['stringref',['StringRef',['../struct_string_ref.html',1,'']]],
   ['super_5fclass',['super_class',['../structarq_class.html#a7bd81d496166908031c40895ed667ada',1,'arqClass']]],
+  ['swap',['swap',['../_i___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8h.html#aeadfdf12b24fc781a0ad2f16d73bf86a',1,'swap(Environment *environment):&#160;M_INSTLOADSTORAGE.c'],['../_m___i_n_s_t_l_o_a_d_s_t_o_r_a_g_e_8c.html#ad164e93372b4f5a76c6283b07788936f',1,'swap(Environment *environment):&#160;M_INSTLOADSTORAGE.c']]],
   ['systemexecutemethod',['systemExecuteMethod',['../_m___j_a_v_a_l_a_n_g_8c.html#a475f507e1ed27e75014f6e80c57a75ba',1,'M_JAVALANG.c']]]
 ];

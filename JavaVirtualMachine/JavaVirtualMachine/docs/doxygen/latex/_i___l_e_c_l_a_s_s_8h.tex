@@ -42,6 +42,8 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 \item 
 \hyperlink{_i___l_e_c_l_a_s_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4} void \hyperlink{_i___l_e_c_l_a_s_s_8h_a7d14ce1c96d9eba505f3603ef9388f2a}{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index, \hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool, char $\ast$$\ast$class\+\_\+name, char $\ast$$\ast$name, char $\ast$$\ast$descriptor)
 \item 
+\hyperlink{_i___l_e_c_l_a_s_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4} \hyperlink{struct_exception_table}{Exception\+Table} $\ast$ \hyperlink{_i___l_e_c_l_a_s_s_8h_a870fe8a399d82e863b8a751fdb03c6ea}{parse\+Exception\+Table} (\hyperlink{_e___j_v_m_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$exception\+Table\+List, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} exception\+\_\+table\+\_\+length)
+\item 
 \hyperlink{_i___l_e_c_l_a_s_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4} wchar\+\_\+t $\ast$ \hyperlink{_i___l_e_c_l_a_s_s_8h_aa7df4b4fdc7c7a6a53016cc43cacdd5d}{get\+Unicode\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
 \item 
 \hyperlink{_i___l_e_c_l_a_s_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4} char $\ast$ \hyperlink{_i___l_e_c_l_a_s_s_8h_a2f0494480554264bc6bffe77a79d43e3}{get\+U\+T\+F8\+From\+Constant\+Pool} (\hyperlink{_e___j_v_m_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{_e___j_v_m_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
@@ -221,7 +223,8 @@ Resultado da operacao
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -305,11 +308,12 @@ Estrutura code\+Attribute preenchida
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=295pt]{_i___l_e_c_l_a_s_s_8h_a9ba001f7d66e4441849f1a58d32ec2d1_cgraph}
+\includegraphics[width=290pt]{_i___l_e_c_l_a_s_s_8h_a9ba001f7d66e4441849f1a58d32ec2d1_cgraph}
 \end{center}
 \end{figure}
 
@@ -347,4 +351,26 @@ Metodo que, dado uma referencia para um vetor de informacoes de um atributo do t
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
 Estrutura \hyperlink{struct_exception_attribute}{Exception\+Attribute} preenchida 
+\end{DoxyReturn}
+\hypertarget{_i___l_e_c_l_a_s_s_8h_a870fe8a399d82e863b8a751fdb03c6ea}{}\index{I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}!parse\+Exception\+Table@{parse\+Exception\+Table}}
+\index{parse\+Exception\+Table@{parse\+Exception\+Table}!I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h@{I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h}}
+\subsubsection[{parse\+Exception\+Table(u1 $\ast$exception\+Table\+List, u2 exception\+\_\+table\+\_\+length)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T4} {\bf Exception\+Table}$\ast$ parse\+Exception\+Table (
+\begin{DoxyParamCaption}
+\item[{{\bf u1} $\ast$}]{exception\+Table\+List, }
+\item[{{\bf u2}}]{exception\+\_\+table\+\_\+length}
+\end{DoxyParamCaption}
+)}\label{_i___l_e_c_l_a_s_s_8h_a870fe8a399d82e863b8a751fdb03c6ea}
+Metodo que, dado uma referencia para uma lista de tabela de excecoes e seu respectivo tamanho, cria, preenche e retorna uma referencia para um vetor de estruturas exception table.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em code} & Ponteiro para o vetor que contem as excetion\+\_\+tables \\
+\hline
+{\em exception\+\_\+table\+\_\+length} & Numero de elementos na tabela de excessoes \\
+\hline
+{\em cp} & ponteiro para o pool de constantes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para um vetor de tabela de excessoes preenchida 
 \end{DoxyReturn}

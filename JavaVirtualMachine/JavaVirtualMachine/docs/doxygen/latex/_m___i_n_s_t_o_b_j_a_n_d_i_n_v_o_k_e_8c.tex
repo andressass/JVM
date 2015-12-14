@@ -58,13 +58,15 @@ void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_ab86956fa68a9150e4a8d5d4
 \item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a949b10b4378c135e0dc21ea174518c7a}{New} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a8b33d407ff72a02d419365997a0de88a}{athrow} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a82485bf3564751a58743babf35a236db}{newarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a0571ff6828e1cef3b0890b1dd8a89922}{anewarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a276c211291ee61d49360e444fe0c4a49}{arraylength} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
-void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a1d0c3eda84f10fd2a67ed57a04128df2}{initialize\+N\+D\+Array} (int total\+\_\+dimensions, int current\+\_\+dimension, int $\ast$count, int posicao, char type\+\_\+array, void $\ast$array)
+void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6f7ca2f66813e7545fc55d44ad05145e}{initialize\+N\+D\+Array} (int total\+\_\+dimensions, int current\+\_\+dimension, int $\ast$count, int posicao, char type\+\_\+array, \hyperlink{_j_a_v_a_a_r_r_a_y_8h_a0c90cb0f11f179f64891a28b1a44cf3b}{Java\+Array} $\ast$arrayref)
 \item 
 void \hyperlink{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a04312abad890aec1935a617cb844d385}{multianewarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \end{DoxyCompactItemize}
@@ -98,7 +100,8 @@ Metodo que cria um novo array de reference. O numero de componentes do array a s
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -132,6 +135,47 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a8b33d407ff72a02d419365997a0de88a}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!athrow@{athrow}}
+\index{athrow@{athrow}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
+\subsubsection[{athrow(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}void athrow (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a8b33d407ff72a02d419365997a0de88a}
+Metodo que lanca uma excessao eu erro.
+
+
+\begin{DoxyEnumerate}
+\item Desempilha uma referencia para um objeto instancia (ou subclasse de) Throwable.
+\item O objeto eh lancado atraves de uma busca no metodo corrente pela primeira rotina de tratamento de excessao que seja compativel com a classe do objeto\+:
+\begin{DoxyEnumerate}
+\item Se a rotina for encontrada, P\+C eh resetado para a localizacao do codigo na qual a excessao sera tratada. A pilha de operandos eh limpa e a referencia para o objeto eh empilhada de volta. A Execucao continua.
+\item Se a rotina nao for encontrada no frame atual, ele eh desempilhado. Se o novo frame do topo existir, o objeto eh relancado. Se o frame nao existir, a thread atual eh encerrada.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+Excessoes\+:
+\begin{DoxyEnumerate}
+\item Se Objectref for null, Null\+Pointer\+Exception eh lancado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyEnumerate}
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a8b33d407ff72a02d419365997a0de88a_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_accb897a7fa952d484ea2be4f668cbde7}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!calculate\+Pool\+Index\+From\+Code@{calculate\+Pool\+Index\+From\+Code}}
 \index{calculate\+Pool\+Index\+From\+Code@{calculate\+Pool\+Index\+From\+Code}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
 \subsubsection[{calculate\+Pool\+Index\+From\+Code(method\+\_\+info $\ast$method, cp\+\_\+info $\ast$constant\+\_\+pool, Thread $\ast$thread)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} calculate\+Pool\+Index\+From\+Code (
@@ -157,7 +201,8 @@ Indice calculado como byte1 $<$$<$ 8 $\vert$ byte2
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -182,7 +227,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -221,7 +267,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -230,18 +277,18 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a1d0c3eda84f10fd2a67ed57a04128df2}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!initialize\+N\+D\+Array@{initialize\+N\+D\+Array}}
+\hypertarget{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6f7ca2f66813e7545fc55d44ad05145e}{}\index{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}!initialize\+N\+D\+Array@{initialize\+N\+D\+Array}}
 \index{initialize\+N\+D\+Array@{initialize\+N\+D\+Array}!M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c@{M\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+c}}
-\subsubsection[{initialize\+N\+D\+Array(int total\+\_\+dimensions, int current\+\_\+dimension, int $\ast$count, int posicao, char type\+\_\+array, void $\ast$array)}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\+N\+D\+Array (
+\subsubsection[{initialize\+N\+D\+Array(int total\+\_\+dimensions, int current\+\_\+dimension, int $\ast$count, int posicao, char type\+\_\+array, Java\+Array $\ast$arrayref)}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\+N\+D\+Array (
 \begin{DoxyParamCaption}
 \item[{int}]{total\+\_\+dimensions, }
 \item[{int}]{current\+\_\+dimension, }
 \item[{int $\ast$}]{count, }
 \item[{int}]{posicao, }
 \item[{char}]{type\+\_\+array, }
-\item[{void $\ast$}]{array}
+\item[{{\bf Java\+Array} $\ast$}]{arrayref}
 \end{DoxyParamCaption}
-)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a1d0c3eda84f10fd2a67ed57a04128df2}
+)}\label{_m___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8c_a6f7ca2f66813e7545fc55d44ad05145e}
 Metodo que inicializa um array multidimensional.
 
 
@@ -307,7 +354,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -375,7 +423,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -420,7 +469,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -474,7 +524,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -508,7 +559,8 @@ Metodo que verifica se uma classe eh subclasse de outra
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -548,7 +600,8 @@ method\+\_\+info do metodo, se nao lanca excessao
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -603,7 +656,8 @@ Metodo que cria uma nova instancia de classe e empilha a referencia na pilha de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -628,7 +682,8 @@ Metodo que cria um novo array. Ele recebe como parametro o tipo do array a ser c
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -653,7 +708,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -678,7 +734,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -717,7 +774,8 @@ O metodo eh selecionado para invocacao a nao ser que todas as seguintes condicoe
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

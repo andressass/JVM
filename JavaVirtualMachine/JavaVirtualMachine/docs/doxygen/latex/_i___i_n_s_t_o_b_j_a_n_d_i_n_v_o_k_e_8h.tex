@@ -46,6 +46,8 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 \item 
 \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_ae0929388114a01a98077f45b6d52c92c}{E\+X\+T16} void \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a89eca58b188200501fc3af2d17b295fc}{New} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
+\hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_ae0929388114a01a98077f45b6d52c92c}{E\+X\+T16} void \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a710b3bfb537b13acd539d488b2b7bd46}{athrow} (\hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
 \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_ae0929388114a01a98077f45b6d52c92c}{E\+X\+T16} void \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a1fb051fae254af45bc1a1113456f96c2}{newarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
 \item 
 \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_ae0929388114a01a98077f45b6d52c92c}{E\+X\+T16} void \hyperlink{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a27b4506f134d5afa1d8f915bee9eb6c7}{anewarray} (\hyperlink{struct_environment}{Environment} $\ast$environment)
@@ -84,7 +86,8 @@ Metodo que cria um novo array de reference. O numero de componentes do array a s
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -118,6 +121,47 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a710b3bfb537b13acd539d488b2b7bd46}{}\index{I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h@{I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h}!athrow@{athrow}}
+\index{athrow@{athrow}!I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h@{I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h}}
+\subsubsection[{athrow(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T16} void athrow (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\label{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a710b3bfb537b13acd539d488b2b7bd46}
+Metodo que lanca uma excessao eu erro.
+
+
+\begin{DoxyEnumerate}
+\item Desempilha uma referencia para um objeto instancia (ou subclasse de) Throwable.
+\item O objeto eh lancado atraves de uma busca no metodo corrente pela primeira rotina de tratamento de excessao que seja compativel com a classe do objeto\+:
+\begin{DoxyEnumerate}
+\item Se a rotina for encontrada, P\+C eh resetado para a localizacao do codigo na qual a excessao sera tratada. A pilha de operandos eh limpa e a referencia para o objeto eh empilhada de volta. A Execucao continua.
+\item Se a rotina nao for encontrada no frame atual, ele eh desempilhado. Se o novo frame do topo existir, o objeto eh relancado. Se o frame nao existir, a thread atual eh encerrada.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+Excessoes\+:
+\begin{DoxyEnumerate}
+\item Se Objectref for null, Null\+Pointer\+Exception eh lancado
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_a710b3bfb537b13acd539d488b2b7bd46_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_i___i_n_s_t_o_b_j_a_n_d_i_n_v_o_k_e_8h_ad25d9177787b1d55a3831be8a3bc8508}{}\index{I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h@{I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h}!getfield@{getfield}}
 \index{getfield@{getfield}!I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h@{I\+\_\+\+I\+N\+S\+T\+O\+B\+J\+A\+N\+D\+I\+N\+V\+O\+K\+E.\+h}}
 \subsubsection[{getfield(\+Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T16} void getfield (
@@ -134,7 +178,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -159,7 +204,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,7 +262,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -284,7 +331,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -329,7 +377,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -383,7 +432,8 @@ Excessoes\+:
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -438,7 +488,8 @@ Metodo que cria uma nova instancia de classe e empilha a referencia na pilha de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -463,7 +514,8 @@ Metodo que cria um novo array. Ele recebe como parametro o tipo do array a ser c
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -488,7 +540,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de objeto no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -513,7 +566,8 @@ Metodo que, dada uma referencia de 2bytes para um atributo de classe no pool de 
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
