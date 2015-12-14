@@ -662,7 +662,7 @@ void aaload(Environment* environment){
         //TODO: throw NullPointerException;
     }
     //Verificacao de erro de acesso de indice
-    if (index >= array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u4* array = array_info->arrayAddress;
     

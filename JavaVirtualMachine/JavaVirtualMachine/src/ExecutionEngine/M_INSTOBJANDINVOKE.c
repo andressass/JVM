@@ -834,14 +834,14 @@ void arraylength(Environment* environment){
  * \param array O array a ser inicializado.
  */
 void initializeNDArray(int total_dimensions, int current_dimension, int* count ,int posicao,
-                     char type_array, void* array){
+                     char type_array, JavaArray* arrayref){
     int i;
     current_dimension++;
     // Enquanto ainda nao chegar na ultima dimensao, continua na recusividade
     for (i = 0; i < count[current_dimension]; i++) {
         if (current_dimension < total_dimensions-1) {
-            posicao = i*count[current_dimension+1];
-            initializeNDArray(total_dimensions, current_dimension, count, posicao, type_array, array);
+            posicao += i*count[current_dimension+1];
+            initializeNDArray(total_dimensions, current_dimension, count, posicao, type_array, arrayref);
         }
         else {
             if (type_array == 'B' || type_array == 'Z') {
@@ -911,21 +911,18 @@ void multianewarray(Environment* environment){
         count[i] = popFromOperandStack(environment->thread);
     }
     
-    //Variavel auxiliar para se obter o tamanho total do array
-    int total = 1;
-    
-    //Saira do loop quando for a ultima dimensao a ser alocada, pois n eh o numero de dimensoes menos uma.
-    for (int i = 1; i < ((u1)dimensions_argument); i++) {
-        //Se count igual a zero, nenhuma dimensao subsequente sera alocada.
-        if (count[i] != 0) {
-            //Cada dimensao sera multiplicada pela proxima dimensao, obtendo o tamanho total em um componente na primeira dimensao
-            total *= count[i];
-        }
-        else break;
-    }
-    
-    //O array multidimensional
-    void* array;
+//    //Variavel auxiliar para se obter o tamanho total do array
+//    int total = 1;
+//    
+//    //Saira do loop quando for a ultima dimensao a ser alocada, pois n eh o numero de dimensoes menos uma.
+//    for (int i = 1; i < ((u1)dimensions_argument); i++) {
+//        //Se count igual a zero, nenhuma dimensao subsequente sera alocada.
+//        if (count[i] != 0) {
+//            //Cada dimensao sera multiplicada pela proxima dimensao, obtendo o tamanho total em um componente na primeira dimensao
+//            total *= count[i];
+//        }
+//        else break;
+//    }
     
     //Tipo dos componentes do multianewarray a ser criado
     char type_components = '\0';
@@ -933,32 +930,62 @@ void multianewarray(Environment* environment){
     int j = 0;
     //Sai do loop quando jah tiver andado o numero de dimensoes + 1 caracteres, que serao teoricamente o numero de '[' mais o tipo dos componentes.
     while (type_components == '\0') {
+        
         //Desloca-se de todos os caracteres '[' que representam uma dimensao de array, para obter o caracter seguinte, que representara o tipo dos componentes do array.
         char aux = *((u4*)(atype+j));
         if (aux != '[') {
+            
             type_components = aux;
         }
         j++;
     }
     
-    if (type_components == 'B' || type_components == 'Z' || type_components == 'C') {
-        array = (u1*) malloc(count[0] * total * sizeof(u1));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
-    }
-    else if (type_components == 'S') {
-        array = (u2*) malloc(count[0] * total * sizeof(u2));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
-    }
-    else if (type_components == 'I' || type_components == 'F') {
-        array = (u4*) malloc(count[0] * total * sizeof(u4));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
-    }
-    else if (type_components == 'J' || type_components == 'D') {
-        array = (u8*) malloc(count[0] * total * sizeof(u8));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
+    //Aloca espaco para o vetor que possui os JavaArray de cada dimensao do array multidimensional a ser criado
+    //Obs.: Na primeira dimensao havera um array em que a quantidade de componentes eh obtida atraves do count[0]. Em cada componente deste array, havera um array da segunda dimensao em que a quantidade dos componentes que possui eh count[1] e assim por diante.
+    JavaArray** vetor_arrayref =(JavaArray**) malloc(sizeof(JavaArray*) * dimensions_argument-1);
+    
+    //Aloca espaco para o array na primeira dimensao
+    vetor_arrayref[0]  = newJavaArray(T_INT, count[0], NULL);
+    
+    int* array;
+    
+    //Inicia o loop a partir da segunda dimensao, se tiver, e vai ateh a penultima dimensao, se tiver, pois apenas na inicializacao que o array da ultima dimensao sera alocado como do tipo dos componentes do array multidimensional.
+    for (int i = 1; i < dimensions_argument-1; i++) {
+        
+        //Como existe uma proxima dimensao, apenas agora o array da dimensao anterior sera alocado como do tipo int, e nao como do tipo dos componentes do array multidimensional, jah que ele nao eh a ultima dimensao.
+        array =(int*) malloc(sizeof(int) * count[i-1]);
+        vetor_arrayref[i-1]->arrayAddress = array;
+        
+        //Aloca espaco para o array da dimensao corrente.
+        vetor_arrayref[i]  = newJavaArray(T_INT, count[i], NULL);
+        
+        //Cada componente da dimensao anterior tera um array da dimensao corrente.
+        for (j = 0; j < count[i-1]; j++) {
+            JavaArray** aarray = vetor_arrayref[i-1]->arrayAddress;
+            aarray[j] = vetor_arrayref[i];
+        }
     }
     
-    pushInOperandStack(environment->thread, (u4) array);
+    initializeNDArray(dimensions_argument, -1, count, 0, type_components, arrayref);
+    
+//    if (type_components == 'B' || type_components == 'Z' || type_components == 'C') {
+//        array = (u1*) malloc(count[0] * total * sizeof(u1));
+//        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
+//    }
+//    else if (type_components == 'S') {
+//        array = (u2*) malloc(count[0] * total * sizeof(u2));
+//        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
+//    }
+//    else if (type_components == 'I' || type_components == 'F') {
+//        array = (u4*) malloc(count[0] * total * sizeof(u4));
+//        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
+//    }
+//    else if (type_components == 'J' || type_components == 'D') {
+//        array = (u8*) malloc(count[0] * total * sizeof(u8));
+//        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
+//    }
+    
+    pushInOperandStack(environment->thread, (u4) arrayref);
 }
 
 

@@ -442,9 +442,9 @@ instruction decode(u1 bytecode){
             return newarray;
         case OP_arraylength:
             return arraylength;
-//        case OP_multianewarray:
-//            return multianewarray;
-//            break;
+        case OP_multianewarray:
+            return multianewarray;
+            break;
         case OP_ireturn:
             return ireturn;
             break;
