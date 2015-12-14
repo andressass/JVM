@@ -437,6 +437,7 @@ typedef struct Environment{
     Thread *thread; //!< Referencia para a thread em execucao
     MethodArea* methodArea; //!< Referencia para a area de metodos
     u1 debugFlags; //!< Flags de debug
+    char* path; //!< Diretorio raiz do ambiente de execucao
 }Environment;
 
 
