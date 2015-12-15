@@ -43,6 +43,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "istore_1:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;localVariablesVector[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "printFromPool:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
@@ -54,21 +62,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "newObjectFromClass:M_OPMETHODAREA.c">
+      </ContextState>
+      <ContextState
          contextName = "addJavaClassToMethodArea:M_OPMETHODAREA.c">
          <PersistentStrings>
             <PersistentString
                value = "methodArea-&gt;classTable[1]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "newObjectFromClass:M_OPMETHODAREA.c">
-      </ContextState>
-      <ContextState
-         contextName = "istore_1:M_INSTLOADSTORAGE.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;localVariablesVector[1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -84,13 +84,13 @@
          contextName = "execute:M_INTERPRETER.c">
          <PersistentStrings>
             <PersistentString
-               value = "(cp_info*)environment-&gt;thread-&gt;vmStack-&gt;top-&gt;opStk-&gt;top">
-            </PersistentString>
-            <PersistentString
                value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;localVariablesVector[1];">
             </PersistentString>
             <PersistentString
                value = "*(u4 *)0x25032c4">
+            </PersistentString>
+            <PersistentString
+               value = "(cp_info*)environment-&gt;thread-&gt;vmStack-&gt;top-&gt;opStk-&gt;top">
             </PersistentString>
             <PersistentString
                value = "getOpcodeName(opcode)">
@@ -123,13 +123,13 @@
          contextName = "putstatic:M_INSTOBJANDINVOKE.c">
          <PersistentStrings>
             <PersistentString
+               value = "(u4*) getClassAttributeReference(&quot;HelloWorld&quot;, &quot;float1&quot;, environment)">
+            </PersistentString>
+            <PersistentString
                value = "environment-&gt;thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;staticFields-&gt;fieldsTable[1];">
             </PersistentString>
             <PersistentString
                value = "*(u4 *)0x25032c4">
-            </PersistentString>
-            <PersistentString
-               value = "(u4*) getClassAttributeReference(&quot;HelloWorld&quot;, &quot;float1&quot;, environment)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -180,12 +180,17 @@
          contextName = "configureClassMain:M_BOOTLOADER.c">
          <PersistentStrings>
             <PersistentString
-               value = "">
+               value = "argv[1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "newarray:M_INSTOBJANDINVOKE.c">
+         contextName = "iastore:M_INSTLOADSTORAGE.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "((u4*)((array_info-&gt;arrayAddress)+index))">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "classPreparing:M_CLASSLOADER.c">
@@ -199,10 +204,10 @@
          contextName = "ldc:M_INSTLOADSTORAGE.c">
          <PersistentStrings>
             <PersistentString
-               value = "thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;arqClass-&gt;constant_pool[17-1]">
+               value = "u4ToFLoat(valor_numerico);">
             </PersistentString>
             <PersistentString
-               value = "u4ToFLoat(valor_numerico);">
+               value = "thread-&gt;vmStack-&gt;top-&gt;javaClass-&gt;arqClass-&gt;constant_pool[17-1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -210,15 +215,13 @@
          contextName = "iconst_1:M_INSTLOADSTORAGE.c">
       </ContextState>
       <ContextState
-         contextName = "iastore:M_INSTLOADSTORAGE.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "((u4*)((array_info-&gt;arrayAddress)+index))">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "newarray:M_INSTOBJANDINVOKE.c">
       </ContextState>
       <ContextState
          contextName = "popFrame:M_OPTHREAD.c">
+      </ContextState>
+      <ContextState
+         contextName = "athrow:M_INSTOBJANDINVOKE.c">
       </ContextState>
       <ContextState
          contextName = "exibeCtePool:M_ECLASS.c">
@@ -260,13 +263,13 @@
          contextName = "printByteCode:M_ECLASS.c">
          <PersistentStrings>
             <PersistentString
-               value = "bytecode[0]">
+               value = "getOpcodeAttributesNumber(mnemonic)">
             </PersistentString>
             <PersistentString
                value = "getOpcodeName(mnemonic)">
             </PersistentString>
             <PersistentString
-               value = "getOpcodeAttributesNumber(mnemonic)">
+               value = "bytecode[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

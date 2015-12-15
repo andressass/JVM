@@ -26,7 +26,9 @@ Gráfico de dependência de inclusões para M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+
 \subsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86}{class\+Verifier} (\hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$\hyperlink{structarq_class}{arq\+Class})
+const char $\ast$ \hyperlink{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a528bd4efbccfae4ae3660a8615736f70}{get\+Unqualified\+Class\+Name} (const char $\ast$qualified\+Name)
+\item 
+int \hyperlink{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a580f0211b5f0b6be854c641f331515bd}{class\+Verifier} (\hyperlink{_e___j_v_m_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$\hyperlink{structarq_class}{arq\+Class}, const char $\ast$class\+File\+Name)
 \item 
 int \hyperlink{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a02df0931e81324fde210a906cf53ab5a}{class\+Get\+Field\+Descriptor\+Size} (char $\ast$descriptor)
 \item 
@@ -165,7 +167,8 @@ Estrutura \hyperlink{structarq_class}{arq\+Class} preenchida com os dados da cla
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,7 +227,8 @@ Estrutura \hyperlink{structarq_class}{arq\+Class} preenchida com os dados da cla
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -233,18 +237,21 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86}{}\index{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}!class\+Verifier@{class\+Verifier}}
+\hypertarget{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a580f0211b5f0b6be854c641f331515bd}{}\index{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}!class\+Verifier@{class\+Verifier}}
 \index{class\+Verifier@{class\+Verifier}!M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}}
-\subsubsection[{class\+Verifier(\+Arq\+Class $\ast$arq\+Class)}]{\setlength{\rightskip}{0pt plus 5cm}int class\+Verifier (
+\subsubsection[{class\+Verifier(\+Arq\+Class $\ast$arq\+Class, const char $\ast$class\+File\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}int class\+Verifier (
 \begin{DoxyParamCaption}
-\item[{{\bf Arq\+Class} $\ast$}]{arq\+Class}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+Class, }
+\item[{const char $\ast$}]{class\+File\+Name}
 \end{DoxyParamCaption}
-)}\label{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86}
+)}\label{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a580f0211b5f0b6be854c641f331515bd}
 Método que executa o processo de verificacao da corretude do codigo e compatibilidade da classe
 
 
 \begin{DoxyParams}{Parâmetros}
 {\em \hyperlink{structarq_class}{arq\+Class}} & Referencia para uma estrutura de arquvo .class \\
+\hline
+{\em class\+File\+Name} & Nome qualificado do arquivo.\+class \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
@@ -252,15 +259,33 @@ Resultado de sucesso ou erros
 \end{DoxyReturn}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a1fbbe9c6a1bc42ea240b70f843713b86_cgraph}
+\includegraphics[width=350pt]{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a580f0211b5f0b6be854c641f331515bd_cgraph}
 \end{center}
 \end{figure}
 
 
+\hypertarget{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a528bd4efbccfae4ae3660a8615736f70}{}\index{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}!get\+Unqualified\+Class\+Name@{get\+Unqualified\+Class\+Name}}
+\index{get\+Unqualified\+Class\+Name@{get\+Unqualified\+Class\+Name}!M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}}
+\subsubsection[{get\+Unqualified\+Class\+Name(const char $\ast$qualified\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\+Unqualified\+Class\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name}
+\end{DoxyParamCaption}
+)}\label{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a528bd4efbccfae4ae3660a8615736f70}
+Método que, dado um nome qualificado de classe, retorna o nome da classe sem o path ou pacote
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Nome da classe. 
+\end{DoxyReturn}
 \hypertarget{_m___c_l_a_s_s_l_o_a_d_e_r_8c_a3d6c57aa492bd9a7e57694a9a98fcd0b}{}\index{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}!load\+C\+Lass@{load\+C\+Lass}}
 \index{load\+C\+Lass@{load\+C\+Lass}!M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c@{M\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+c}}
 \subsubsection[{load\+C\+Lass(const char $\ast$qualified\+Name, Environment $\ast$environment)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Java\+Class}$\ast$ load\+C\+Lass (
@@ -285,7 +310,8 @@ $<$ Resultado das operacoes (checagem de erros)
 
 L\+O\+A\+D\+I\+N\+G -\/ Fazemos a leitura do arquivo .class 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

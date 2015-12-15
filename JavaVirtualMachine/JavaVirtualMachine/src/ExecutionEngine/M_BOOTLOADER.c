@@ -31,6 +31,18 @@
  * \param argv Vetor de vetores de char passados pelo usuario
  */
 void configureClassMain(Environment* environment, int argc, const char* argv[]){
+
+    //Separamos o path do diretorio raiz do nome da classe
+    int pathLen = 0;
+    char* path = (char*) malloc((strlen(argv[1]) +1) * sizeof(char));
+    strcpy(path, argv[1]);
+    
+    for (int i = 0; i < strlen(path); i++)
+        if (path[i] == '/' || path[i] == '\\') pathLen = i+1;
+    
+    path[pathLen] = '\0';
+    argv[1] = & argv[1][pathLen];
+    environment->path = path;
     
     //Empilhamos o metodo main a ser inicializado
     Frame* newFrame = pushFrame(environment, argv[1], "main", "([Ljava/lang/String;)V");

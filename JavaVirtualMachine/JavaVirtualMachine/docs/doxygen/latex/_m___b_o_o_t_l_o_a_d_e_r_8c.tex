@@ -13,9 +13,11 @@ Modulo de Inicializacao da J\+V\+M.
 {\ttfamily \#include \char`\"{}../../include/\+Estruturas/\+J\+A\+V\+A\+A\+R\+R\+A\+Y.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Memory\+Unit/\+I\+\_\+\+M\+E\+M\+O\+R\+Y\+U\+N\+I\+T.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+L\+E\+C\+L\+A\+S\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Class\+Loader/\+I\+\_\+\+C\+L\+A\+S\+S\+L\+O\+A\+D\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+I\+N\+T\+E\+R\+P\+R\+E\+T\+E\+R.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}../../include/\+Execution\+Engine/\+I\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N.\+h\char`\"{}}\\*
-Gráfico de dependência de inclusões para M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c\+:\nopagebreak
+Gráfico de dependência de inclusões para M\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -59,7 +61,8 @@ Metodo que configura e empilha um novo frame para o metodo main da classe chamad
 \end{DoxyParams}
 
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -76,13 +79,22 @@ Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
 \item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
 )}\label{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c}
-Metodo inicial do sistema 
+Metodo inicial do sistema Apresentamos e configuramos as opcoes de debug
 
-Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+Alocamos espaco para o ambiente de execucao
+
+Criamos a area de metodos e a thread e as associamos ao enviroment
+
+Empilhamos o metodo main da classe passada como argumento
+
+Passamos o ambiente de execucao para o interpretador 
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\includegraphics[width=350pt]{_m___b_o_o_t_l_o_a_d_e_r_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph}
 \end{center}
 \end{figure}
 
