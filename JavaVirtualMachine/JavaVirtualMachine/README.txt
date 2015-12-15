@@ -31,7 +31,6 @@ Para compilar digite:
 
 
 Para executar digite:
-NOTA: É necessário estar em no diretório contento a(s) classe(s)
 
 	Em sistemas unix:
 		$ /.jvm <arquivo_class> <String de caracteres>

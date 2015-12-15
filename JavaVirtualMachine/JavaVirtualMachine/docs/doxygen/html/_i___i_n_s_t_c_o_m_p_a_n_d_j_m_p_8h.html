@@ -361,7 +361,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
@@ -380,7 +380,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="548,5,732,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="596,55,683,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="780,5,980,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="804,55,956,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="807,55,952,80"/>
 </map>
 </div>
 </p>
@@ -400,6 +400,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 64-bit (u8) que vem imediatamente após o opcode de goto no bytecode. Mesma operacao de goto, so que 'wide' (offset maior)</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -411,7 +419,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="557,5,742,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="606,55,693,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="790,5,990,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="814,55,965,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="817,55,962,80"/>
 </map>
 </div>
 </p>
@@ -451,7 +459,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="576,5,760,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="625,55,711,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="808,5,1008,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="832,55,984,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="836,55,981,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="382,79,504,104"/>
 </map>
 </div>
@@ -492,7 +500,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="576,5,760,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="625,55,711,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="808,5,1008,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="832,55,984,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="836,55,981,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="382,79,504,104"/>
 </map>
 </div>
@@ -533,7 +541,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="571,5,756,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="620,55,707,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="804,5,1004,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="828,55,980,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="831,55,976,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="377,79,500,104"/>
 </map>
 </div>
@@ -574,7 +582,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="571,5,756,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="620,55,707,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="804,5,1004,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="828,55,980,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="831,55,976,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="377,79,500,104"/>
 </map>
 </div>
@@ -615,7 +623,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="568,5,752,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="616,55,703,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="800,5,1000,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="824,55,976,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="827,55,972,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="373,79,496,104"/>
 </map>
 </div>
@@ -656,7 +664,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="567,5,751,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="616,55,702,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="799,5,999,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="823,55,975,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="827,55,972,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="373,79,495,104"/>
 </map>
 </div>
@@ -697,7 +705,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="563,5,747,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="612,55,699,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="795,5,995,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="820,55,971,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="823,55,968,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="369,79,492,104"/>
 </map>
 </div>
@@ -738,7 +746,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="571,5,756,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="620,55,707,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="804,5,1004,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="828,55,980,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="831,55,976,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="377,79,500,104"/>
 </map>
 </div>
@@ -779,7 +787,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="536,5,720,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="585,55,671,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="768,5,968,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="792,55,944,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="796,55,941,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="342,79,464,104"/>
 </map>
 </div>
@@ -820,7 +828,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="536,5,720,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="585,55,671,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="768,5,968,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="792,55,944,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="796,55,941,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="342,79,464,104"/>
 </map>
 </div>
@@ -861,7 +869,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="581,55,667,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="792,55,937,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="338,79,461,104"/>
 </map>
 </div>
@@ -902,7 +910,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="791,55,936,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="337,79,460,104"/>
 </map>
 </div>
@@ -943,7 +951,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="791,55,936,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="337,79,460,104"/>
 </map>
 </div>
@@ -984,7 +992,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="536,5,720,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="585,55,671,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="768,5,968,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="792,55,944,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="796,55,941,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="342,79,464,104"/>
 </map>
 </div>
@@ -1005,6 +1013,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Se o valor nao for nulo, os bytes seguintes são construidos para criar um offset, continuando a execucao no offset do opcode dessa instrucao, senao continua no proximo endereco apos essa instrucao</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1017,7 +1033,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="564,5,748,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="613,55,699,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="796,5,996,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="820,55,972,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="824,55,969,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="370,79,493,104"/>
 </map>
 </div>
@@ -1038,6 +1054,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Se o valor for nulo, os bytes seguintes são construidos para criar um offset, continuando a execucao no offset do opcode dessa instrucao, senao continua no proximo endereco apos essa instrucao</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1050,7 +1074,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="542,5,726,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="591,55,677,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="774,5,974,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="798,55,950,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="801,55,947,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="347,79,470,104"/>
 </map>
 </div>
@@ -1071,7 +1095,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Faz com que a execução pule para a instrução no endereço (pc + branchoffset), onde pc é o endereço do opcode no bytecode e branchoffset é um inteiro 16-bit (u2) que vem imediatamente após o opcode de goto no bytecode.</p>
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 16-bit (u2) que vem imediatamente após o opcode de jsr no bytecode. Após isso, salva o endereco atual no operand stack</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
@@ -1091,7 +1115,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="788,55,940,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="791,55,936,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="337,79,460,104"/>
 </map>
 </div>
@@ -1112,6 +1136,13 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Faz com que a execucao pule para a instrucao no endereco (pc + branchoffset), onde pc eh o endereco do opcode no bytecode e branchoffset eh um inteiro 64-bit (u8) que vem imediatamente após o opcode de jsr no bytecode. Após isso, salva o endereco atual no operand stack Mesma operacao de jsr, so que 'wide' (com um offset maior) </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1124,7 +1155,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="545,5,730,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="594,55,681,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="778,5,978,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="802,55,954,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="805,55,950,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="351,79,474,104"/>
 </map>
 </div>
@@ -1145,7 +1176,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se são iguais e lanca uma flag na propria pilha de operando</p>
+<p>Instrucao responsavel por comparar dois longs vindos da pilha de operando comparando se sao iguais e lanca uma flag na propria pilha de operando</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
@@ -1181,6 +1212,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pega o primeiro opcode entre 0 e 3 bytes após a instrução e salva como seu default, após isso salva os 2 bytecodes seguintes como low e high respectivamente, depois pega um indice salvo na pilha de operandos e compara com o high e o low. Se o indice não estiver entre o low e o high, então o endereço de destino eh calculado como default+opcode inicial, senao adiciona o primeiro offset em 'indice - low' ao opcode inicial e salva no pc</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1193,7 +1232,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="591,5,775,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="639,55,726,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="823,5,1023,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="847,55,999,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="850,55,995,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="396,79,519,104"/>
 </map>
 </div>
@@ -1214,6 +1253,29 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pela o bytecode seguinte, esse bytecode contem um indice. Salva o indice no registrador do pc, fazendo com que a execucao continue dali</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad9a20e0762939d88991304f4bd57b879_cgraph.png" border="0" usemap="#_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad9a20e0762939d88991304f4bd57b879_cgraph" alt=""/></div>
+<map name="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad9a20e0762939d88991304f4bd57b879_cgraph" id="_i___i_n_s_t_c_o_m_p_a_n_d_j_m_p_8h_ad9a20e0762939d88991304f4bd57b879_cgraph">
+<area shape="rect" id="node2" href="_i___m_e_m_o_r_y_u_n_i_t_8h.html#aeaafe607caff7308a1107566306f01e9" title="getByteCodeFromMethod" alt="" coords="92,31,266,56"/>
+<area shape="rect" id="node3" href="_m___o_p_m_e_t_h_o_d_a_r_e_a_8c.html#a3841fc84f6e1ee36e4a4d70bd91acc63" title="getCodeFromMethodInfo" alt="" coords="314,31,484,56"/>
+<area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="532,5,716,31"/>
+<area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="580,55,667,80"/>
+<area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="764,5,964,31"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="791,55,936,80"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -1230,6 +1292,14 @@ Este é o diagrama das funções utilizadas por esta função:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pega o primeiro opcode entre 0 e 3 bytes após a instrução e salva como seu default, após isso salva os 2 bytecodes seguintes como low e high respectivamente, depois pega um indice salvo na pilha de operandos e compara com o high e o low. Se o indice não estiver entre o low e o high, então o endereço de destino eh calculado como default+opcode inicial, senao adiciona o primeiro offset em 'indice - low' ao opcode inicial e salva no pc</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_environment.html" title="Estrutura do ambiente de execucao da JVM. ">Environment</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 
 <p><div class="dynheader">
 Este é o diagrama das funções utilizadas por esta função:</div>
@@ -1242,7 +1312,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 <area shape="rect" id="node4" href="_i___l_e_c_l_a_s_s_8h.html#a2f0494480554264bc6bffe77a79d43e3" title="getUTF8FromConstantPool" alt="" coords="580,5,765,31"/>
 <area shape="rect" id="node6" href="_i___l_e_c_l_a_s_s_8h.html#a9ba001f7d66e4441849f1a58d32ec2d1" title="parseCode" alt="" coords="629,55,716,80"/>
 <area shape="rect" id="node5" href="_m___e_c_l_a_s_s_8c.html#a473033cabebd84af84798d9f73cd0e3e" title="getUnicodeFromConstantPool" alt="" coords="813,5,1012,31"/>
-<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#ad1e1e0de6f07a194faf650b3199f6f3d" title="parseExceptionTables" alt="" coords="837,55,988,80"/>
+<area shape="rect" id="node7" href="_m___e_c_l_a_s_s_8c.html#acf425dcb53df1c73dfe01c05ec49a637" title="parseExceptionTable" alt="" coords="840,55,985,80"/>
 <area shape="rect" id="node9" href="_m___o_p_t_h_r_e_a_d_8c.html#a1141dd641cd42d7e58b1e82941d5f46f" title="getCurrentFrame" alt="" coords="386,79,509,104"/>
 </map>
 </div>

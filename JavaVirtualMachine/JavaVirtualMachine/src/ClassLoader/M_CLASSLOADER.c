@@ -20,12 +20,30 @@
 
 //--------------------------------------------------------------------------------------------------
 /*!
+ * Método que, dado um nome qualificado de classe, retorna o nome da classe sem o path ou pacote
+ *
+ * \param qualifiedName Nome qualificado da classe.
+ * \return Nome da classe.
+ */
+const char* getUnqualifiedClassName(const char*  qualifiedName){
+    const char* result = qualifiedName;
+    
+    for (int i = 0; i < strlen(qualifiedName); i++) {
+        if (qualifiedName[i] == '/' || qualifiedName[i] == '\\' ) result = &qualifiedName[++i];
+    }
+    return result;
+}
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
  * Método que executa o processo de verificacao da corretude do codigo e compatibilidade da classe
  *
  * \param arqClass Referencia para uma estrutura de arquvo .class
+ * \param classFileName Nome qualificado do arquivo.class
  * \return Resultado de sucesso ou erros
  */
-int classVerifier(ArqClass* arqClass){
+int classVerifier(ArqClass* arqClass, const char* classFileName){
     
     //Se a classe estiver em uma versao > MajorVersion.MinorVersion
     if (arqClass->major_version > LECLASS_MAJ_Version) return LinkageError_UnsupportedClassVersionError;
@@ -36,6 +54,14 @@ int classVerifier(ArqClass* arqClass){
     if (strcmp(getClassNameFromConstantPool(arqClass->constant_pool, arqClass->super_class), getClassNameFromConstantPool(arqClass->constant_pool, arqClass->this_class)) == 0)
         return LinkageError_ClassCirculatityError;
     
+    
+    //Se o nome do arquivo for diferente da classe
+    const char* fileClass = getUnqualifiedClassName(classFileName);
+    const char* class = getUnqualifiedClassName(getClassNameFromConstantPool(arqClass->constant_pool, arqClass->this_class));
+    
+    if (strcmp(fileClass, class) != 0)
+        return LinkageError_ClassNameIncompatible;
+
     return LinkageSuccess;
     
 }
@@ -266,9 +292,12 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     //!LOADING - Fazemos a leitura do arquivo .class
     char* classExtension = ".class";
     
-    //Nome completo do arquivo
-    char* fileName = (char*)malloc((strlen(qualifiedName)+strlen(classExtension)+1) * sizeof(char));
-    strcpy(fileName, qualifiedName);
+    //Nome completo do arquivo com path
+    char* path = environment ? environment->path : "";
+    char* fileName = (char*)malloc((strlen(qualifiedName)+
+                                    strlen(classExtension)+strlen(path) + 1) * sizeof(char));
+    strcpy(fileName, path);
+    strcat(fileName, qualifiedName);
     strcat(fileName, classExtension);
     
     //Lemos o arquivo .class
@@ -284,7 +313,7 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     
     //LINKING - VERIFYING - Verificamos a corretude do codigo da classe
     // Parte ja realizada na leitura do arquivo
-    opResult = classVerifier(arqClass);
+    opResult = classVerifier(arqClass, qualifiedName);
     if (opResult != LinkageSuccess) {
         LECLASS_exibeErroOperacao(opResult, fileName);
         JVMstopAbrupt(NULL);
@@ -298,11 +327,11 @@ JavaClass* loadCLass(const char* qualifiedName, Environment* environment){
     //INITIALIZATION - Executamos o o inicializador estatico <clinit>
     
     //Adicionamos a classe carregada na area de metodos
-    addJavaClassToMethodArea(javaClass, environment->methodArea);
+    if(environment) addJavaClassToMethodArea(javaClass, environment->methodArea);
     
-    classInitializer(javaClass, environment);
+    if(environment) classInitializer(javaClass, environment);
     
-    if (environment->debugFlags & DEBUG_ShowClassFiles) LECLASS_exibidor(javaClass->arqClass);
+    if (!environment) LECLASS_exibidor(javaClass->arqClass);
     
     //Retornamos a estrutura inicializada
     return javaClass;

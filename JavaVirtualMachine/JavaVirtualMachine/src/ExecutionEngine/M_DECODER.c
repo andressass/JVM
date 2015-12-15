@@ -401,13 +401,35 @@ instruction decode(u1 bytecode){
         case OP_sastore:
             return sastore;
             break;
-        case OP_wide:
-            return wide;
-            break;
+//        case OP_wide:
+//            return wide;
+//            break;
         case OP_dup:
             return Dup;
+            break;
+        case OP_dup_x1:
+            return dup_x1;
+            break;
+        case OP_dup_x2:
+            return dup_x2;
+            break;
+        case OP_dup2:
+            return Dup2;
+            break;
+        case OP_dup2_x1:
+            return dup2_x1;
+            break;
+        case OP_dup2_x2:
+            return dup2_x2;
+            break;
         case OP_pop:
             return pop;
+            break;
+        case OP_pop2:
+            return pop2;
+            break;
+        case OP_swap:
+            return swap;
             break;
         case OP_getstatic:
             return getstatic;
@@ -436,12 +458,18 @@ instruction decode(u1 bytecode){
         case OP_new:
             return New;
             break;
+        case OP_athrow:
+            return athrow;
+            break;
         case OP_anewarray:
             return anewarray;
+            break;
         case OP_newarray:
             return newarray;
+            break;
         case OP_arraylength:
             return arraylength;
+            break;
         case OP_multianewarray:
             return multianewarray;
             break;

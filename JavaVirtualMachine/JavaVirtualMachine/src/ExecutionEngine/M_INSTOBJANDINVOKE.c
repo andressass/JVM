@@ -714,6 +714,76 @@ void New(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo que lanca uma excessao eu erro.
+ *
+ * 1. Desempilha uma referencia para um objeto instancia (ou subclasse de) Throwable.
+ *
+ * 2. O objeto eh lancado atraves de uma busca no metodo corrente pela primeira rotina de tratamento
+ *      de excessao que seja compativel com a classe do objeto:
+ *
+ *      1. Se a rotina for encontrada, PC eh resetado para a localizacao do codigo na qual a
+ *          excessao sera tratada. A pilha de operandos eh limpa e a referencia para o objeto eh
+ *          empilhada de volta. A Execucao continua.
+ *
+ *      2. Se a rotina nao for encontrada no frame atual, ele eh desempilhado. Se o novo frame do
+ *          topo existir, o objeto eh relancado. Se o frame nao existir, a thread atual eh
+ *          encerrada.
+ *
+ *  3. Excessoes:
+ 1. Se Objectref for null, NullPointerException eh lancado
+ *
+ * \param environment Ambiente de execucao atual.
+ */
+void athrow(Environment* environment){
+
+    Object* objectRef = (Object*) popFromOperandStack(environment->thread);
+    if (objectRef == NULL) JVMThrow(NullPointerException, environment);
+    
+    char* objectRefClass = getClassNameFromConstantPool(objectRef->handler->javaClass->arqClass->constant_pool,
+                                                        objectRef->handler->javaClass->arqClass->this_class);
+    
+    //Verificamos para cada frame existente na pilha
+    while (environment->thread->vmStack->top != NULL) {
+        
+        CodeAttribute* code = getCodeFromMethodInfo(environment->thread->vmStack->top->method_info,
+                                                    environment->thread->vmStack->top->javaClass->arqClass->constant_pool);
+        
+        //Percorremos a tabela de excessoes
+        for (int i = 0; i < code->exception_table_length; i++) {
+            
+            char* classType = getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool,
+                                                      code->exception_table[i].catch_type);
+            
+            //Verificamos se a rotina de tratamento de excessao bate com as especificacoes
+            if (strcmp(classType, objectRefClass) == 0 &&
+                environment->thread->PC >= code->exception_table[i].start_pc &&
+                environment->thread->PC <= code->exception_table[i].end_pc){
+                
+                //Resetamos PC para a rotina de tratamento
+                environment->thread->PC = code->exception_table[i].handler_pc - 1;
+                
+                //Limpamos a pilha de operandos
+                free (environment->thread->vmStack->top->opStk);
+                environment->thread->vmStack->top->opStk = (OperandStack*) calloc(code->max_stack+1, sizeof(OperandStack));
+                
+                //Empilhamos a referencia para o objeto
+                pushInOperandStack(environment->thread, (u4) objectRef);
+                
+                return;
+                
+            }
+        }
+        //Se o metodo atual nao tiver uma rotina de tratamento de excessoes, o desempilhamos
+        popFrame(environment->thread);
+    }
+    //Caso nao existam mais frames, encerramos o programa.
+    JVMstopAbrupt("Tratamento para a excessao nao encontrado");
+    
+}
+
+
+//--------------------------------------------------------------------------------------------------
 void newarray(Environment* environment){
     
     void* array;
@@ -829,52 +899,107 @@ void arraylength(Environment* environment){
  * \param total_dimensions Total de dimensoes do array a ser inicializado.
  * \param current_dimension A dimensao atual do array a ser inicializado.
  * \param count O vetor count que possui o quantidade de componentes em cada dimensao do array a ser inicializado.
- * \param posicao A posicao do array em que sera inicializada com o valor inicial padrao do tipo dos componentes.
  * \param type_array O tipo dos componentes do array a ser inicializado.
- * \param array O array a ser inicializado.
+ * \param arrayref O JavaArray da primeira dimensao do array multidimensional a ser inicializado.
  */
-void initializeNDArray(int total_dimensions, int current_dimension, int* count ,int posicao,
-                     char type_array, void* array){
+void initializeNDArray(int total_dimensions, int current_dimension, int* count ,
+                     char type_array, JavaArray* arrayref){
     int i;
     current_dimension++;
-    // Enquanto ainda nao chegar na ultima dimensao, continua na recusividade
+    JavaArray** n_array;
+    
     for (i = 0; i < count[current_dimension]; i++) {
-        posicao += i*count[current_dimension+1];
-        if (current_dimension != total_dimensions-1) {
-            initializeNDArray(total_dimensions, current_dimension, count, posicao, type_array, array);
+        
+        // Enquanto ainda nao chegar na ultima dimensao, continua na recusividade
+        if (current_dimension < total_dimensions-1) {
+
+            if (i == 0) {
+                
+                //Como existe uma proxima dimensao, apenas agora o array da dimensao corrente sera alocado como do tipo int, e nao como do tipo dos componentes do array multidimensional, jah que ele nao eh a ultima dimensao.
+                arrayref->arrayAddress = (u4*) malloc(sizeof(u4) * count[current_dimension]);
+            }
+            n_array = arrayref->arrayAddress;
+            //Cada componente da dimensao corrente tera um array da proxima dimensao.
+            n_array[i] = newJavaArray(T_INT, count[current_dimension+1], NULL);
+            initializeNDArray(total_dimensions, current_dimension, count, type_array, n_array[i]);
         }
         else {
+            
             if (type_array == 'B' || type_array == 'Z') {
-                u1* b = (u1*) array+posicao+i;
-                *b = 0;
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u1*) malloc(sizeof(u1) * count[current_dimension]);
+                }
+                u1* b = (u1*) arrayref->arrayAddress;
+                b[i] = 0;
             }
             else if (type_array == 'C') {
-                u1* b = (u1*) array+posicao+i;
-                *b = '\0';
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u1*) malloc(sizeof(u1) * count[current_dimension]);
+                }
+                u1* c = (u1*) arrayref->arrayAddress;
+                c[i] = '\0';
             }
             else if (type_array == 'S') {
-                u2* s = (u2*) array+posicao+i;
-                *s = 0;
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u2*) malloc(sizeof(u2) * count[current_dimension]);
+                }
+                u2* s = (u2*) arrayref->arrayAddress;
+                s[i] = 0;
             }
             else if (type_array == 'I') {
-                u4* i_f = (u4*) array+posicao+i;
-                *i_f = 0;
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u4*) malloc(sizeof(u4) * count[current_dimension]);
+                }
+                u4* _i = (u4*) arrayref->arrayAddress;
+                _i[i] = 0;
             }
             else if (type_array == 'F') {
-                u4* i_f = (u4*) array+posicao+i;
-                *i_f = 0.0f;
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u4*) malloc(sizeof(u4) * count[current_dimension]);
+                }
+                u4* f = (u4*) arrayref->arrayAddress;
+                f[i] = 0.0f;
             }
             else if (type_array == 'J') {
-                u8* l_d  = (u8*) array+posicao+i;
-                *l_d = 0L;
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u8*) malloc(sizeof(u8) * count[current_dimension]);
+                }
+                u8* l  = (u8*) arrayref->arrayAddress;
+                l[i] = 0L;
             }
             else if (type_array == 'D') {
-                u8* l_d  = (u8*) array+posicao+i;
-                *l_d = 0.0;
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u8*) malloc(sizeof(u8) * count[current_dimension]);
+                }
+                u8* d  = (u8*) arrayref->arrayAddress;
+                d[i] = 0.0;
             }
-            return;
+            else {
+                
+                if (i == 0) {
+                    
+                    arrayref->arrayAddress = (u4*) malloc(sizeof(u4) * count[current_dimension]);
+                }
+                u4* a = (u4*) arrayref->arrayAddress;
+                a[i] = (u4)NULL;
+            }
         }
     }
+    return;
 }
 //--------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------
@@ -887,15 +1012,7 @@ void multianewarray(Environment* environment){
     
     u4 atype = (u4) getClassNameFromConstantPool(environment->thread->vmStack->top->javaClass->arqClass->constant_pool, index_result);
     
-    
-    
-    //TODO: RESOLVER A REFERENCIA SIMBOLICA DOS TIPO CLASS, ARRAY E INTERFACE
-    
-    //TODO: During resolution of the symbolic reference to the class, array, or interface type, any of the exceptions documented in Section 5.4.3.1 can be thrown.
-    
     //TODO: Otherwise, if the current class does not have permission to access the element type of the resolved array class, multianewarray throws an IllegalAccessError.
-    
-    //TODO: Otherwise, if any of the dimensions values on the operand stack are less than zero, the multianewarray instruction throws a NegativeArraySizeException.
     
     environment->thread->PC++;
     u1 dimensions_argument = getByteCodeFromMethod(environment->thread->vmStack->top->method_info,
@@ -905,47 +1022,38 @@ void multianewarray(Environment* environment){
     //Vetor que armazena o tamanho de cada dimensao do array
     int *count = (int*) malloc(sizeof(int) * dimensions_argument);
     
-    //Desloca-se de todos os caracteres '[' que representam uma dimensao de array, para obter o caracter seguinte, que representara o tipo dos componentes do array.
-    char type_components = atype+dimensions_argument;
-    
     //O primeiro count a ser desempilhado eh quantidade de componentes na ultima dimensao do array
     for (int i = ((u1)dimensions_argument)-1; i >= 0; i--) {
         
         count[i] = popFromOperandStack(environment->thread);
-    }
-    
-    //Variavel auxiliar para se obter o tamanho total do array
-    int total = 1;
-    
-    //Saira do loop quando for a ultima dimensao a ser alocada, pois n eh o numero de dimensoes menos uma.
-    for (int i = 1; i < ((u1)dimensions_argument); i++) {
-        //Se count igual a zero, nenhuma dimensao subsequente sera alocada.
-        if (count[i] != 0) {
-            //Cada dimensao sera multiplicada pela proxima dimensao, obtendo o tamanho total em um componente na primeira dimensao
-            total *= count[i];
+        if (count[i] < 0) {
+            JVMThrow(NegativeArraySizeException, environment);
         }
-        else break;
     }
     
-    //O array multidimensional
-    void* array;
+    //Tipo dos componentes do multianewarray a ser criado
+    char type_components = '\0';
     
-    if (type_components == 'B' || type_components == 'Z' || type_components == 'C') {
-        array = (u1*) malloc(count[0] * total * sizeof(u1));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
+    int j = 0;
+    //Sai do loop quando jah tiver andado o numero de dimensoes + 1 caracteres, que serao teoricamente o numero de '[' mais o tipo dos componentes.
+    while (type_components == '\0') {
+        
+        //Desloca-se de todos os caracteres '[' que representam uma dimensao de array, para obter o caracter seguinte, que representara o tipo dos componentes do array.
+        char aux = *((u4*)(atype+j));
+        if (aux != '[') {
+            
+            type_components = aux;
+        }
+        j++;
     }
-    else if (type_components == 'S') {
-        array = (u2*) malloc(count[0] * total * sizeof(u2));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
-    }
-    else if (type_components == 'I' || type_components == 'F') {
-        array = (u4*) malloc(count[0] * total * sizeof(u4));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
-    }
-    else if (type_components == 'J' || type_components == 'D') {
-        array = (u8*) malloc(count[0] * total * sizeof(u8));
-        initializeNDArray(dimensions_argument, -1, count, 0, type_components, array);
-    }
+    
+    //Aloca espaco para o JavaArray da primeira dimensao do array multidimensional a ser criado
+    //Obs.: Na primeira dimensao havera um array em que a quantidade de componentes eh obtida atraves do count[0]. Em cada componente deste array, havera um array da segunda dimensao em que a quantidade dos componentes que possui eh count[1] e assim por diante.
+    JavaArray* arrayref = newJavaArray(T_INT, count[0], NULL);
+    
+    initializeNDArray(dimensions_argument, -1, count, type_components, arrayref);
+    
+    pushInOperandStack(environment->thread, (u4) arrayref);
 }
 
 

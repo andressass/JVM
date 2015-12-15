@@ -73,7 +73,7 @@ void printStreamPrintln(const char* descriptorName, Environment* environment){
     else if (strncmp(descriptorName, "(D)V", 4)==0){
         u4 high = popFromOperandStack(environment->thread);
         u4 low = popFromOperandStack(environment->thread);
-        printf("\n%.2lf", u4ToDouble(high, low));
+        printf("\n%.2f", u4ToDouble(high, low));
     }
     
     else if (strncmp(descriptorName, "(Z)V", 4)==0)

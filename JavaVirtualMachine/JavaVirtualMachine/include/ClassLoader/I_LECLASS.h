@@ -96,6 +96,19 @@ EXT4 void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
 
 //--------------------------------------------------------------------------------------------------
 /*!
+ * Metodo que, dado uma referencia para uma lista de tabela de excecoes e seu respectivo tamanho,
+ * cria, preenche e retorna uma referencia para um vetor de estruturas exception table.
+ *
+ * \param code Ponteiro para o vetor que contem as excetion_tables
+ * \param exception_table_length Numero de elementos na tabela de excessoes
+ * \param cp ponteiro para o pool de constantes
+ * \return Ponteiro para um vetor de tabela de excessoes preenchida
+ */
+EXT4 ExceptionTable* parseExceptionTable(u1* exceptionTableList, u2 exception_table_length);
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
  * Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura
  * CONST_UTF8 apontada pelo indice passado
  *

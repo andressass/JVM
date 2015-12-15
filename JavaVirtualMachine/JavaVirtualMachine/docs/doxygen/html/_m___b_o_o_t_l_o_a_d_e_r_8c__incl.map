@@ -1,10 +1,11 @@
 <map id="src/ExecutionEngine/M_BOOTLOADER.c" name="src/ExecutionEngine/M_BOOTLOADER.c">
-<area shape="rect" id="node5" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="579,265,729,304"/>
-<area shape="rect" id="node7" href="$_j_a_v_a_s_t_r_i_n_g_8h.html" title="Biblioteca de strings Java. " alt="" coords="451,179,601,217"/>
-<area shape="rect" id="node9" href="$_j_a_v_a_a_r_r_a_y_8h.html" title="Biblioteca de arrays Java. " alt="" coords="227,179,377,217"/>
-<area shape="rect" id="node10" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="964,179,1126,217"/>
-<area shape="rect" id="node11" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="57,92,222,131"/>
-<area shape="rect" id="node13" href="$_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="486,92,676,131"/>
-<area shape="rect" id="node14" href="$_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="700,92,889,131"/>
-<area shape="rect" id="node12" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="41,185,153,211"/>
+<area shape="rect" id="node5" href="$_e___j_v_m_8h.html" title="Estruturas da JVM. " alt="" coords="693,265,844,304"/>
+<area shape="rect" id="node7" href="$_j_a_v_a_s_t_r_i_n_g_8h.html" title="Biblioteca de strings Java. " alt="" coords="420,179,570,217"/>
+<area shape="rect" id="node9" href="$_j_a_v_a_a_r_r_a_y_8h.html" title="Biblioteca de arrays Java. " alt="" coords="245,179,396,217"/>
+<area shape="rect" id="node10" href="$_i___m_e_m_o_r_y_u_n_i_t_8h.html" title="Interface da Unidade de Memoria da JVM. " alt="" coords="594,179,756,217"/>
+<area shape="rect" id="node11" href="$_i___l_e_c_l_a_s_s_8h.html" title="Interface do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="80,92,244,131"/>
+<area shape="rect" id="node13" href="$_i___c_l_a_s_s_l_o_a_d_e_r_8h.html" title="Interface do Carregador de Classes da JVM. " alt="" coords="780,179,944,217"/>
+<area shape="rect" id="node14" href="$_i___i_n_t_e_r_p_r_e_t_e_r_8h.html" title="Interface do Interpretador da JVM. " alt="" coords="643,92,833,131"/>
+<area shape="rect" id="node15" href="$_i___e_x_c_e_p_t_i_o_n_8h.html" title="Interface de excessoes da JVM. " alt="" coords="856,92,1046,131"/>
+<area shape="rect" id="node12" href="$_i_p___l_e_c_l_a_s_s_8h.html" title="Interface de Persistencia do Leitor e Exibidor de arquivos &quot;.class&quot;. " alt="" coords="59,185,171,211"/>
 </map>

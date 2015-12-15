@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/JavaVirtualMachine/JavaVirtualMachine/lib"
+      customWorkingDirectory = "/Users/user/Documents/UnB/2015-2/SB/Exerci&#x301;cio/JVM/JavaVirtualMachine/JavaVirtualMachine"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       enableAddressSanitizer = "YES"
@@ -65,12 +65,16 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "HelloWorld"
+            argument = "lib/HelloWorld"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "String de entrada de numero 1"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "entidades/Aluno"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

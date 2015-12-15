@@ -566,12 +566,8 @@ void iaload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u4 valor_numerico = *((u4*)((array_info->arrayAddress)+ index*sizeof(u4)));
     
@@ -586,12 +582,8 @@ void laload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u8* array = array_info->arrayAddress;
     
@@ -612,12 +604,8 @@ void faload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u4 valor_numerico = *((u4*)((array_info->arrayAddress)+index*sizeof(u4)));
     
@@ -632,12 +620,8 @@ void daload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u8* array = array_info->arrayAddress;
     
@@ -658,11 +642,9 @@ void aaload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
     //Verificacao de erro de acesso de indice
-    if (index >= array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u4* array = array_info->arrayAddress;
     
@@ -681,12 +663,8 @@ void baload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     // Se o valor no componente do vetor for do tipo byte
     if (array_info->atype == T_BYTE) {
@@ -714,12 +692,8 @@ void caload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u4 valor_numerico_zero_extend = *((u1*)((array_info->arrayAddress)+index));
     
@@ -734,12 +708,8 @@ void saload(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     int valor_numerico_signal_extend = *((signed short*)((array_info->arrayAddress)+index*sizeof(u2)));
     
@@ -1026,12 +996,8 @@ void iastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     *((u4*)((array_info->arrayAddress)+index * sizeof(u4))) = valor_numerico;
 }
@@ -1047,12 +1013,8 @@ void lastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u8 value = valor_numerico_high;
     value = value<<32 | valor_numerico_low;
@@ -1072,12 +1034,8 @@ void fastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     *((u4*)((array_info->arrayAddress) + index * sizeof(u4))) = valor_numerico;
 }
@@ -1093,12 +1051,9 @@ void dastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
+    
     u8 value = valor_numerico_high;
     value = value<<32 | valor_numerico_low;
     
@@ -1117,12 +1072,8 @@ void aastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     //TODO: Otherwise, if arrayref is not null and the actual type of value is not assignment compatible (§2.6.7) with the actual type of the components of the array, aastore throws an ArrayStoreException.
     
@@ -1141,12 +1092,8 @@ void bastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     // Se componentes do vetor forem do tipo byte
     if (array_info->atype == T_BYTE) {
@@ -1176,12 +1123,8 @@ void castore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u1 valor_numerico_char = valor_numerico_int;
     
@@ -1198,12 +1141,8 @@ void sastore(Environment* environment){
     
     JavaArray* array_info = (JavaArray*) popFromOperandStack(environment->thread);
     
-    if (array_info->arrayAddress == NULL) {
-        //TODO: throw NullPointerException;
-    }
-    if (index > array_info->count) {
-        //TODO: Otherwise, if index is not within the bounds of the array referenced by arrayref, the iaload instruction throws an ArrayIndexOutOfBoundsException.
-    }
+    if (array_info->arrayAddress == NULL) JVMThrow(NullPointerException, environment);
+    if (index > array_info->count) JVMThrow(ArrayIndexOutOfBoundsException, environment);
     
     u2 valor_numerico_short = valor_numerico_int;
     
@@ -1245,6 +1184,9 @@ void wide(Environment* environment){
         
         environment->thread->vmStack->top->localVariablesVector[index_result] = valor_numerico;
     }
+    else if (opcode_argument == OP_ret) {
+        environment->thread->PC = environment->thread->vmStack->top->localVariablesVector[index_result];
+    }
     else if (opcode_argument == OP_lload || opcode_argument == OP_dload) {
         
         u4 valor_numerico_high = environment->thread->vmStack->top->localVariablesVector[index_result];
@@ -1260,9 +1202,6 @@ void wide(Environment* environment){
         
         environment->thread->vmStack->top->localVariablesVector[index_result] = valor_numerico_high;
         environment->thread->vmStack->top->localVariablesVector[index_result+1] = valor_numerico_low;
-    }
-    else if (opcode_argument == OP_ret) {
-        //TODO:
     }
     
     // SEGUNDO FORMATO
@@ -1282,9 +1221,15 @@ void wide(Environment* environment){
         
         u4 index_forma2 = (u4)(index_result + constbyte_result);
         
-        index_forma2 = index_forma2;
+        environment->thread->PC++;
         
-        //TODO:
+        u1 Const = getByteCodeFromMethod(environment->thread->vmStack->top->method_info, environment->thread->vmStack->top->javaClass->arqClass->constant_pool, environment->thread->PC);
+        
+        //environment->thread->PC++;
+        
+        char constSemSinal = (char) Const;
+        
+        environment->thread->vmStack->top->localVariablesVector[index_forma2] += constSemSinal;
     }
 }
 
@@ -1300,10 +1245,98 @@ void Dup(Environment* environment){
 
 
 //--------------------------------------------------------------------------------------------------
+void dup_x1(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void dup_x2(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    u4 value3 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value3);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void Dup2(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void dup2_x1(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    u4 value3 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value3);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void dup2_x2(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    u4 value3 = popFromOperandStack(environment->thread);
+    u4 value4 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value4);
+    pushInOperandStack(environment->thread, value3);
+    pushInOperandStack(environment->thread, value2);
+    pushInOperandStack(environment->thread, value1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
 void pop(Environment* environment){
     popFromOperandStack(environment->thread);
 }
 
 
+//--------------------------------------------------------------------------------------------------
+void pop2(Environment* environment){
+    popFromOperandStack(environment->thread);
+    popFromOperandStack(environment->thread);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+void swap(Environment* environment){
+    
+    u4 value1 = popFromOperandStack(environment->thread);
+    u4 value2 = popFromOperandStack(environment->thread);
+    
+    pushInOperandStack(environment->thread, value1);
+    pushInOperandStack(environment->thread, value2);
+}
 
 

@@ -91,16 +91,7 @@ void getFieldOrMethodInfoAttributesFromConstantPool(u2 index,
 
 
 //--------------------------------------------------------------------------------------------------
-/*!
- * Metodo que, dado uma referencia para uma lista de tabela de excecoes e seu respectivo tamanho, 
- * cria, preenche e retorna uma referencia para um vetor de estruturas exception table.
- *
- * \param code Ponteiro para o vetor que contem as excetion_tables
- * \param exception_table_length Numero de elementos na tabela de excessoes
- * \param cp ponteiro para o pool de constantes
- * \return Ponteiro para um vetor de tabela de excessoes preenchida
- */
-ExceptionTable* parseExceptionTables(u1* exceptionTableList, u2 exception_table_length){
+ExceptionTable* parseExceptionTable(u1* exceptionTableList, u2 exception_table_length){
     
     u1* c = exceptionTableList;
     ExceptionTable* exceptionTable = (ExceptionTable*)
@@ -151,7 +142,7 @@ CodeAttribute* parseCode(u1* info){
     code->exception_table_length = info[index++];
     code->exception_table_length = code->exception_table_length << 8 | info[index++];
     
-    code->exception_table = parseExceptionTables(&info[index], code->exception_table_length);
+    code->exception_table = parseExceptionTable(&info[index], code->exception_table_length);
     
     index += code->exception_table_length * 4 * sizeof(u2); //Tamanho da Tabela de excessao = 4*u2
     
@@ -322,7 +313,7 @@ void printFromPool(cp_info* cp, cp_info* constant_pool){
             printf("\n\tu1 tag: %d", cp->tag);
             printf("\n\tu4 high_bytes: 0x%x", cp->u.Double.high_bytes);
             printf("\n\tu4 low_bytes: 0x%x", cp->u.Double.low_bytes);
-            printf("\n\t(u8 bytes: %lf)", u4ToDouble(cp->u.Double.high_bytes, cp->u.Double.low_bytes));
+            printf("\n\t(u8 bytes: %f)", u4ToDouble(cp->u.Double.high_bytes, cp->u.Double.low_bytes));
             printf("\n}\n");
             cp++; // Ocupa 2 indices
             break;
@@ -410,7 +401,7 @@ void printByteCode(u1* bytecode, u1* bytecodes){
     
     u1 mnemonic = bytecode[0];
     
-    printf("\n\t\t\t%s", getOpcodeName(mnemonic));
+    printf("\n\t\t\t%2d. %s", bytecode-bytecodes, getOpcodeName(mnemonic));
     bytecode++;
     
     //Numero de atributos
@@ -513,7 +504,7 @@ void printCodeExceptions(ExceptionTable* excTable, u2 exception_table_length, cp
         printf("\n\t\t\tCATCH_TYPE: %d", excTable[i].catch_type);
         
         printf("\n(((((((((((((((\n");
-        printFromPool(&cp[excTable[i].catch_type], cp);
+        printFromPool(&cp[excTable[i].catch_type-1], cp);
         printf(")))))))))))))))\n");
         printf("\n\t\t\t}");
     }
@@ -615,7 +606,7 @@ void exibeCampMetd(field_or_method* fm, u2 count, cp_info* cp){
         
         printf("\n%d.{", i+1);
         //Exibimos as flags de acesso
-        printf("\n\tACCESS_FLAGS:\t\t %d ", fm->access_flags);
+        printf("\n\tACCESS_FLAGS:\t\t 0x%x ", fm[i].access_flags);
         printf("( ");
         exibeAccessFlags(fm[i].access_flags, 0);
         printf(")");
@@ -682,7 +673,7 @@ OPresult LECLASS_exibidor(ArqClass* arq_class){
     printf("\n----------------------------------------------------\n");
     exibeCtePool(arq_class);
     printf("\n----------------------------------------------------\n");
-    printf("ACCESS_FLAGS:\t %d ", arq_class->access_flags);
+    printf("ACCESS_FLAGS:\t 0x%X ", arq_class->access_flags);
     printf("( ");
     exibeAccessFlags(arq_class->access_flags, 1);
     printf(")");
@@ -744,6 +735,11 @@ void LECLASS_exibeErroOperacao(OPresult resultado, const char* fileName){
             
         case LinkageError_ClassCirculatityError:
             printf("\nDetectado erro de circularidade de classes. Arquivo: \"%s\".\n", fileName);
+            break;
+            
+            
+        case LinkageError_ClassNameIncompatible:
+            printf("\nNome da classe difere do nome do arquivo. Arquivo: \"%s\".\n", fileName);
             break;
             
         default:
