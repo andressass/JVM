@@ -635,7 +635,7 @@ void tableswitch(Environment *environment) {
     if (( (signed)index <  (signed)low) || ( (signed)index >  (signed)high)) {
         environment->thread->PC = def + opCode;
     } else {
-        for (i = 0; i < index * 4; i++) {
+        for (i = 0; i < (index-1) * 4; i++) {
             environment->thread->PC++;
         }
         for (i = 0; i < 3; i++) {
